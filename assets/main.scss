@@ -1,0 +1,5 @@
+---
+# Concatenate the css files into a single file. Use scss as well.
+---
+
+{% include_relative _partials/css/bootstrap.css %}
