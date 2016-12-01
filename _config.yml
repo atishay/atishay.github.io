@@ -13,27 +13,28 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@domain.com
+title: Atishay Jain
+email: contact@atishay.me
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Personal website of Atishay Jain, developer at Adobe Systems with over 6 years of experience developing a wide range of
+  Adobe products, right from your favorite desktop apps and websites(full stack) to mobile. I have worked on a variety of platforms
+  and technology domains. I love solving problems and believe in searching for the best way to solve a problem before diving in.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://atishay.me" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: atishay811
+github_username:  atishay
+domain: atishay.info
 
 # Build settings
 markdown: kramdown
 theme: minima
+color: lightblue # can be coffee, green. greensea, lightblue, mblue, orange, red, wisteria
 gems:
     - jekyll-mentions
     - jemoji
     - jekyll-redirect-from
     - jekyll-sitemap
     - jekyll-feed
-    - jekyll-seo-tag
     - jekyll-coffeescript
     - jekyll-paginate
 exclude:
@@ -49,3 +50,4 @@ gist:
     noscript: false
 kramdown:
     math_engine: mathjax
+exclude: [README.md, TODO.md]
