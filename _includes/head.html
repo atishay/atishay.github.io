@@ -5,9 +5,12 @@
   <title>{% if page.title %}{{ page.title + ' - ' | escape }} {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 400 | escape }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <!-- Canonical URL for SEO -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <!-- XML Feed -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  <meta name="application-name" content="Atishay Jain website"/>
+  <!-- Favicons & things like that -->
+  <meta name="application-name" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 400 | escape }}"/>
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ "/assets/img/favicon/apple-touch-icon-57x57.png" | relative_url }}" />
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "/assets/img/favicon/apple-touch-icon-114x114.png" | relative_url }}" />
@@ -26,7 +29,9 @@
   <meta name="msapplication-square70x70logo" content="{{ "assets/img/favicon/mstile-70x70.png" | relative_url }}" />
   <meta name="msapplication-square150x150logo" content="{{ "assets/img/favicon/mstile-150x150.png" | relative_url }}" />
   <meta name="msapplication-wide310x150logo" content="{{ "assets/img/favicon/mstile-310x150.png" | relative_url }}" />
-  <meta name="msapplication-square310x310logo" content="{{ "assets/img/favicon/mstile-310x310.png" | relative_url }}" /> {% if jekyll.environment == 'production' and site.google_analytics %}
+  <meta name="msapplication-square310x310logo" content="{{ "assets/img/favicon/mstile-310x310.png" | relative_url }}" />
+  <!-- Google analytics if needed -->
+  {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
   {% endif %}
 </head>

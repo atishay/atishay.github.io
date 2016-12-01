@@ -51,3 +51,12 @@ gist:
 kramdown:
     math_engine: mathjax
 exclude: [README.md, TODO.md]
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: [html, head, body]
