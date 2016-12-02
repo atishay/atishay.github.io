@@ -319,13 +319,13 @@ i:hover {
 }
 
 /* ScrollToTop */
-.back-to-top {
+.scrollUp {
   display: none;
   position: fixed;
   bottom: 18px;
   right: 15px;
 }
-.back-to-top i {
+.scrollUp i {
   display: block;
   font-size: 18px;
   width: 36px;
@@ -1291,7 +1291,10 @@ ul li > ul > li.active > a {
   padding: 0;
 }
 #other-services .nav-tabs li a i {
-  background: #81868e;
+  background-color: #81868e;
+  background-repeat: no-repeat !important;
+  background-size: 40% !important;
+  background-position: 50% 50% !important;
   font-size: 20px;
   text-align: center;
   color: #fff;
@@ -1309,7 +1312,6 @@ ul li > ul > li.active > a {
 #other-services .nav-tabs li a:hover i,
 #other-services .nav-tabs li a:focus,
 #other-services .nav-tabs li a.active i {
-
 }
 #other-services .tab-content {
   margin: 10px 0px 0px 80px;
@@ -1403,7 +1405,7 @@ ul li > ul > li.active > a {
   position: relative;
 }
 #pricing {
-  background: url(../img/backgrounds/facts-bg.jpg);
+  background: url(/assets/img/home/proficiency.jpg);
 }
 #pricing .section-title {
   color: #fff;
@@ -3225,7 +3227,8 @@ ul.contact-info2 i.fa {
     min-height: 73px;
   }
   nav.navbar.navbar-light button.navbar-toggler {
-    background: #EEE none repeat scroll 0 0;
+    /*background: #EEE none repeat scroll 0 0;*/
+    background-color: #EEE;
     border-radius: 0 !important;
     margin-top: 17px;
     margin-right: 20px;
@@ -3481,7 +3484,7 @@ ul.contact-info2 i.fa {
   width: 40px;
   height: 40px;
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
 }
 
 .icon-fill {

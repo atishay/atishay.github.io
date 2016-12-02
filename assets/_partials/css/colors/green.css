@@ -367,7 +367,7 @@ h2.widget-title {
 .btn-common::before {
   background: #7aa427 none repeat scroll 0 0;
 }
-.back-to-top i {
+.scrollUp i {
   background-color: #9C3;
 }
 #carousel-area .carousel-item .carousel-caption {
