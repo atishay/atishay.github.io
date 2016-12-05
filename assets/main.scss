@@ -4,7 +4,7 @@
 // TODO Figure out what we can live without. We want lesser code here.
 {% include_relative _partials/css/bootstrap.min.css %}
 {% include_relative _partials/css/tether.css %}
-{% include_relative _partials/css/main.css %}
+{% include_relative _partials/css/main.scss %}
 {% include_relative _partials/css/responsive.css %}
 {% include_relative _partials/css/font-awesome.min.css %}
 {% include_relative _partials/extras/owl/owl.carousel.css %}
