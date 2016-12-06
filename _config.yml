@@ -24,6 +24,9 @@ url: "http://atishay.me" # the base hostname & protocol for your site, e.g. http
 twitter_username: atishay811
 github_username:  atishay
 domain: atishay.info
+defaults:
+    layout: post
+permalink: /blog/:year/:month/:day/:title
 
 # Build settings
 markdown: kramdown
@@ -56,7 +59,7 @@ compress_html:
   comments: ["<!-- ", " -->"]
   endings: all
   ignore:
-    envs: [local]
+    envs: [local, development]
   blanklines: false
   profile: false
   startings: [html, head, body]

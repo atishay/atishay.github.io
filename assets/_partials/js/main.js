@@ -221,7 +221,7 @@ $(function() {
     return false;
   });
   //Smooth scrolling anchors
-  $('.same-page[href*="#"]:not([href="#"])').click(function() {
+  $('body').on('click', '.same-page[href*="#"]:not([href="#"])', function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -249,4 +249,27 @@ $(function() {
     pieChart.drawPieChart(pieInfo);
     pieChart.css({height: 'auto'});
   });
+
+
+  !function(exports) {
+    exports.submitGoogleForm = submitGoogleForm;
+
+    function submitGoogleForm(form) {
+        try {
+            var data = [].slice.call(form).map(function(control) {
+                return 'value' in control && control.name ? control.name + '=' + (control.value === undefined ? '' : control.value) : '';
+            }).join('&');
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('POST', form.action + '/formResponse', true);
+            xhr.setRequestHeader('Accept', 'application/xml, text/xml, */*; q=0.01');
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
+            xhr.send(data);
+        } catch (e) {}
+
+        form.parentNode.className += ' submitted';
+
+        return false;
+    }
+  }(typeof module === 'undefined' ? window : module.exports);
 });

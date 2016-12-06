@@ -81,7 +81,7 @@
   #portfolio .portfolio-items.col-3 .gap {
     width: 50%;
   }
-  #other-services .other-service-item .service-content h3 {
+  #awards .other-service-item .service-content h3 {
     font-size: 18px;
   }
   #progress {
@@ -122,10 +122,10 @@
   #team .team-item {
     margin: 30px 0;
   }
-  .pricing-table {
+  .proficiency-table {
     margin: 60px 0;
   }
-  .pricing-table h3 {
+  .proficiency-table h3 {
     font-size: 24px;
   }
   footer .footer-widget {
@@ -275,10 +275,10 @@
   #team .team-item {
     margin: 30px 0;
   }
-  .pricing-table {
+  .proficiency-table {
     margin: 60px 0;
   }
-  .pricing-table h3 {
+  .proficiency-table h3 {
     font-size: 24px;
   }
   #tabs .nav-tabs li a {
@@ -411,7 +411,7 @@
   #portfolio .controls .btn {
     margin: 5px 2px;
   }
-  #other-services .other-service-item .service-content h3 {
+  #awards .other-service-item .service-content h3 {
     font-size: 15px;
   }
   #progress {
@@ -475,10 +475,10 @@
   #clients #clients-scroller .owl-controls {
     display: none;
   }
-  .pricing-table {
+  .proficiency-table {
     margin: 60px 0;
   }
-  .pricing-table h3 {
+  .proficiency-table h3 {
     font-size: 24px;
   }
   #team .team-item {

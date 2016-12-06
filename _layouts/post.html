@@ -1,0 +1,5 @@
+---
+layout: base
+---
+{% include header.html %}
+{{ content }}

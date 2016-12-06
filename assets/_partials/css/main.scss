@@ -1274,24 +1274,24 @@ ul li > ul > li.active > a {
   margin-top: 30px;
   color: #000;
 }
-#other-services {
+#awards {
   background: #fff;
 }
-#other-services .nav-tabs {
+#awards .nav-tabs {
   border-bottom: none;
   padding-top: 70px;
   float: left;
 }
-#other-services .nav-tabs li {
+#awards .nav-tabs li {
   float: none;
 }
-#other-services .nav-tabs li a {
+#awards .nav-tabs li a {
   border: none;
   background: transparent;
   margin: 0;
   padding: 0;
 }
-#other-services .nav-tabs li a i {
+#awards .nav-tabs li a i {
   background-color: #81868e;
   background-repeat: no-repeat !important;
   background-size: 40% !important;
@@ -1310,34 +1310,34 @@ ul li > ul > li.active > a {
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-#other-services .nav-tabs li a:hover i,
-#other-services .nav-tabs li a:focus,
-#other-services .nav-tabs li a.active i {
+#awards .nav-tabs li a:hover i,
+#awards .nav-tabs li a:focus,
+#awards .nav-tabs li a.active i {
 }
-#other-services .tab-content {
+#awards .tab-content {
   margin: 10px 0px 0px 80px;
 }
-#other-services .service-content h3 {
+#awards .service-content h3 {
   font-size: 20px;
   margin-top: 25px;
   margin-bottom: 25px;
 /*  text-transform: uppercase;*/
 }
-#other-services .service-content p.lead {
+#awards .service-content p.lead {
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 25px;
 }
-#other-services .service-content p {
+#awards .service-content p {
   font-size: 14px;
 }
-#other-services .other-service-item {
+#awards .other-service-item {
   padding-bottom: 30px;
 }
-#other-services .other-service-item .icon {
+#awards .other-service-item .icon {
   float: left;
 }
-#other-services .other-service-item .icon .icon-medium {
+#awards .other-service-item .icon .icon-medium {
   background: #E74C3C;
   font-size: 24px;
   text-align: center;
@@ -1353,18 +1353,18 @@ ul li > ul > li.active > a {
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-#other-services .other-service-item .service-content {
+#awards .other-service-item .service-content {
   padding-left: 100px;
 }
-#other-services .other-service-item .service-content h3 {
+#awards .other-service-item .service-content h3 {
 
   font-size: 24px;
   clear: inherit;
 }
-#other-services .other-service-item .service-content p {
+#awards .other-service-item .service-content p {
   padding: 0px 36px 0px 0px;
 }
-#other-services .other-service-item:hover .icon-medium {
+#awards .other-service-item:hover .icon-medium {
   -webkit-transform: rotateY(360deg);
   -moz-transform: rotateY(360deg);
   -o-transform: rotateY(360deg);
@@ -1375,7 +1375,7 @@ ul li > ul > li.active > a {
   transition: all 0.6s linear;
   background: #666;
 }
-#other-services img {
+#awards img {
   max-width: 100%;
   padding: 22px;
 }
@@ -1406,87 +1406,87 @@ ul li > ul > li.active > a {
   transition: all 0.6s linear;
   position: relative;
 }
-#pricing {
+#proficiency {
   background: url(/assets/img/home/proficiency.jpg);
 }
-#pricing .section-title {
+#proficiency .section-title {
   color: #fff;
 }
-#pricing .section-subcontent {
+#proficiency .section-subcontent {
   color: #fff;
 }
-.pricing-table-1 {
+.proficiency-table-1 {
   background: #fff;
   margin: 0 15px;
 }
-.pricing-table-1 .table-header {
+.proficiency-table-1 .table-header {
   padding: 30px 0;
   color: #fff;
 
 }
-.pricing-table-1 .table-header h3 {
+.proficiency-table-1 .table-header h3 {
   font-size: 30px;
   font-weight: 400;
 }
-.pricing-table-1 .plan {
+.proficiency-table-1 .plan {
   border-bottom: 1px solid rgba(189, 195, 199, 0.5);
 }
-.pricing-table-1 .plan .price {
+.proficiency-table-1 .plan .price {
   font-size: 24px;
 }
-.pricing-table-1 .plan .period {
+.proficiency-table-1 .plan .period {
   font-size: 18px;
   color: #999;
   text-transform: uppercase;
 }
-.pricing-table-1 .plan-info {
+.proficiency-table-1 .plan-info {
   margin-top: 30px;
 }
-.pricing-table-1 .plan-info p {
+.proficiency-table-1 .plan-info p {
   color: #bdc3c7;
   font-size: 16px;
   line-height: 30px;
 }
-.pricing-table-1 .button-area {
+.proficiency-table-1 .button-area {
   padding: 30px 0 45px 0;
 }
-#pricing-block-x {
+#proficiency-block-x {
   background: #ecf0f1;
 }
-.pricing-table-x {
+.proficiency-table-x {
   background: rgba(0, 0, 0, 0.7);
   margin: 0 15px;
   padding: 15px 30px;
 }
-.pricing-table-x .table-header {
+.proficiency-table-x .table-header {
   padding: 15px 0;
   color: #fff;
 }
-.pricing-table-x .table-header h3 {
+.proficiency-table-x .table-header h3 {
   font-size: 30px;
   font-weight: 400;
 }
-.pricing-table-x .plan .price {
+.proficiency-table-x .plan .price {
   font-size: 30px;
 
 }
-.pricing-table-x .plan .period {
+.proficiency-table-x .plan .period {
   font-size: 18px;
   color: rgba(231, 76, 60, 0.7);
   text-transform: uppercase;
 }
-.pricing-table-x .plan-info {
+.proficiency-table-x .plan-info {
   margin-top: 30px;
 }
-.pricing-table-x .plan-info p {
+.proficiency-table-x .plan-info p {
   color: #fff;
   font-size: 16px;
   line-height: 16px;
 }
-.pricing-table-x .plan-info p i {
+.proficiency-table-x .plan-info p i {
   margin-right: 5px;
 }
-.pricing-table-x .button-area {
+.proficiency-table-x .button-area {
   padding: 30px 0 40px 0;
 }
 #cool-facts {
@@ -2965,13 +2965,13 @@ ul.contact-info2 i.fa {
 .blog-pagination {
   text-align: center;
 }
-.pricing-table2 {
+.proficiency-table2 {
   padding: 15px 30px;
 }
-.single-pricing-2 {
+.single-proficiency-2 {
   border: 1px solid #dedede;
 }
-.single-pricing-2 .plan-name {
+.single-proficiency-2 .plan-name {
   color: #959595;
   display: block;
   font-size: 24px;
@@ -2979,13 +2979,13 @@ ul.contact-info2 i.fa {
   line-height: 30px;
   padding: 20px 0;
 }
-.single-pricing-2 .plan-name small {
+.single-proficiency-2 .plan-name small {
   display: block;
   font-size: 12px;
   font-weight: 700;
   line-height: normal;
 }
-.single-pricing-2 .plan-price {
+.single-proficiency-2 .plan-price {
   background: #f2f2f2 none repeat scroll 0 0;
   font-size: 48px;
   margin-bottom: 30px;
@@ -3000,35 +3000,35 @@ ul.contact-info2 i.fa {
   background: #3498db !important;
   color: #fff !important;
 }
-.single-pricing-2 .plan-price .currency {
+.single-proficiency-2 .plan-price .currency {
   font-size: 50%;
   font-weight: 700;
   left: -0.01em;
   top: -0.9em;
 }
-.single-pricing-2 .plan-price sub {
+.single-proficiency-2 .plan-price sub {
   font-size: 18px;
   font-weight: 700;
 }
-.single-pricing-2 ul {
+.single-proficiency-2 ul {
   background: #fff none repeat scroll 0 0;
   margin-bottom: 0;
   padding: 0;
 }
-.single-pricing-2 ul li {
+.single-proficiency-2 ul li {
   border-top: 1px dashed #dedede;
   font-weight: 500;
   padding: 12px 29px;
   text-align: center;
 }
-.single-pricing-2 ul li:first-child {
+.single-proficiency-2 ul li:first-child {
   border-top: 0;
 }
-.pricing2-button {
+.proficiency2-button {
     padding: 20px 0;
     text-align: center;
 }
-.pricing2-button .btn {
+.proficiency2-button .btn {
     padding: 12px 55px;
     text-transform: uppercase;
 }
@@ -3127,7 +3127,7 @@ ul.contact-info2 i.fa {
   .top_search {
     display: none;
   }
-  .pricing-table-x .plan-info p {
+  .proficiency-table-x .plan-info p {
     font-size: 12px;
   }
   #team .team-item figure figcaption .content-white {
@@ -3161,14 +3161,14 @@ ul.contact-info2 i.fa {
   #copyright p, #copyright a {
     font-size: 10px !important;
   }
-  .single-pricing-2 .btn {
+  .single-proficiency-2 .btn {
     padding: 10px 15px;
     font-size: 10px;
   }
-  .single-pricing-2 .plan-price {
+  .single-proficiency-2 .plan-price {
     font-size: 35px;
   }
-  .single-pricing-2 ul li {
+  .single-proficiency-2 ul li {
     font-size: 12px;
   }
   ul.nav-tabs li a {
@@ -3180,10 +3180,10 @@ ul.contact-info2 i.fa {
   .btn-md {
     padding: 12px 14px;
   }
-  .pricing-table h3 {
+  .proficiency-table h3 {
     font-size: 24px !important;
   }
-  .single-pricing-2 .plan-name {
+  .single-proficiency-2 .plan-name {
     font-size: 18px;
   }
   .sup-desc-wrap .sup-meta-wrap .sup-description {
@@ -3286,16 +3286,16 @@ ul.contact-info2 i.fa {
   .controls {
     padding: 0;
   }
-  .pricing-table-x .table-header h3 {
+  .proficiency-table-x .table-header h3 {
     font-size: 18px;
   }
   .plan-info > p {
     font-size: 12px !important;
   }
-  .pricing-table-x .button-area {
+  .proficiency-table-x .button-area {
     padding: 14px 0 40px;
   }
-  .pricing-table-x {
+  .proficiency-table-x {
     margin: 20px 15px;
   }
   .service2-single-service .fa {
@@ -3317,12 +3317,12 @@ ul.contact-info2 i.fa {
     font-size: 16px;
     line-height: 24px;
   }
-  #other-services .service-content p.lead {
+  #awards .service-content p.lead {
     font-size: 12px;
     line-height: 28px;
     margin-bottom: 7px;
   }
-  #other-services .service-content p {
+  #awards .service-content p {
     font-size: 12px;
   }
     .about2-intro-image {
