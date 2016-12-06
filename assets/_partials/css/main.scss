@@ -2036,7 +2036,7 @@ footer #copyright .copyright-text,
 footer #copyright .nav-inline {
   margin-top: 15px;
 }
-.social-footer a .fa {
+.connections a .fa {
   font-size: 14px;
   height: 35px;
   line-height: 35px;
@@ -2716,6 +2716,13 @@ h2.widget-title {
 }
 .blog-post blockquote {
   margin: 40px 0;
+  quotes: '\201c' '\201d';
+  &:before {
+    content: open-quote;
+    font-size: 60px;
+    float: left;
+    padding-right: 20px;
+  }
 }
 .blog-post h3 {
   margin-top: 30px;
@@ -3147,7 +3154,7 @@ ul.contact-info2 i.fa {
   .footer-widget p {
     font-size: 12px;
   }
-  .social-footer a .fa {
+  .connections a .fa {
     height: 25px;
     line-height: 25px;
     width: 25px;
@@ -3587,6 +3594,14 @@ ul.contact-info2 i.fa {
       border-left: 5px solid transparent;
       border-top: 6px solid rgba(255,255,255,.95);
       line-height: 0;
+}
+
+pre code {
+  padding: 0.2rem 0.4rem;
+  font-size: 90%;
+  color: #bd4147;
+  // background-color: #f7f7f9;
+  // border-radius: 0.25rem;
 }
 
 .pie-parent .sublead {
