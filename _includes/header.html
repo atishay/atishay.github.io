@@ -1,49 +1,50 @@
-  <!-- Header area wrapper starts -->
-    <header id="header-wrap">
-        <!-- Navbar Starts -->
-        <nav class="navbar navbar-light" data-spy="affix" data-offset-top="50">
-          <div class="container">
-            <button class='navbar-toggler hidden-md-up pull-xs-right' data-target='#main-menu' data-toggle='collapse' type='button'>
+<!-- Header area wrapper starts -->
+  <header id="header-wrap">
+      <!-- Navbar Starts -->
+      <nav class="navbar navbar-light" data-spy="affix" data-offset-top="50">
+        <div class="container">
+          <button class='navbar-toggler hidden-md-up pull-xs-right' data-target='#main-menu' data-toggle='collapse' type='button'>
 
-            </button>
-            <!-- Brand -->
-            <a class="navbar-brand" href="{{ "/" | relative_url}}">
-              <img src="{{ "/assets/img/logo.svg" | relative_url}}" alt="">
-            </a>
-            <div class="collapse navbar-toggleable-sm pull-xs-left pull-md-right" id="main-menu">
-              <!-- Navbar Starts -->
-              <ul class="nav nav-inline">
-                {% if page.isHome %}
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}" role="button" aria-haspopup="true" aria-expanded="false">
-                    Résumé
-                  </a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item same-page" href="#experience">Experience</a>
-                    <a class="dropdown-item same-page" href="#internships">Internships</a>
-                    <a class="dropdown-item same-page" href="#education">Education</a>
-                    <a class="dropdown-item same-page" href="#patents">Patents &amp; Publications</a>
-                    <a class="dropdown-item same-page" href="#awards">Projects &amp; Awards</a>
-                    <a class="dropdown-item same-page" href="#proficiency">Proficiency</a>
-                  </div>
-                {% else %}
-                  <li class="nav-item">
-                    <a class="nav-link active" href="{{ "/" | relative_url}}" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" role="button" aria-expanded="false" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}">Résumé</a>
-                  </li>
-                {% endif %}
+          </button>
+          <!-- Brand -->
+          <a class="navbar-brand" href="{{ "/" | relative_url}}">
+            <img src="{{ "/assets/img/logo.svg" | relative_url}}" alt="">
+          </a>
+          <div class="collapse navbar-toggleable-sm pull-xs-left pull-md-right" id="main-menu">
+            <!-- Navbar Starts -->
+            <ul class="nav nav-inline">
+              {% if page.isHome %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}" role="button" aria-haspopup="true" aria-expanded="false">
+                  Résumé
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item same-page" href="#experience">Experience</a>
+                  <a class="dropdown-item same-page" href="#internships">Internships</a>
+                  <a class="dropdown-item same-page" href="#education">Education</a>
+                  <a class="dropdown-item same-page" href="#patents">Patents &amp; Publications</a>
+                  <a class="dropdown-item same-page" href="#awards">Projects &amp; Awards</a>
+                  <a class="dropdown-item same-page" href="#proficiency">Proficiency</a>
+                </div>
+              {% else %}
                 <li class="nav-item">
-                  <a class="nav-link" role="button" aria-expanded="false" href="#">Blog</a>
+                  <a class="nav-link active" href="{{ "/" | relative_url}}" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link same-page" role="button" aria-expanded="false" href="{{ "#contact-us" | relative_url}}">Contact</a>
+                  <a class="nav-link" role="button" aria-expanded="false" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}">Résumé</a>
                 </li>
-              </ul>
-            </div>
+              {% endif %}
+<!--               <li class="nav-item">
+                <a class="nav-link" role="button" aria-expanded="false" href="#">Blog</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link same-page" role="button" aria-expanded="false" href="{{ "#contact-us" | relative_url}}">Contact</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-        <!-- Navbar Ends -->
-    </header>
-    <!-- Header-wrap Section End -->
+        </div>
+      </nav>
+      <!-- Navbar Ends -->
+  </header>
+  <!-- Header-wrap Section End -->
+<!-- Header-wrap Section End -->
