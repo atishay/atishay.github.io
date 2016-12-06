@@ -7,7 +7,7 @@ layout: compress
   <body>
   {{ content }}
   </body>
-    {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
   {% endif %}
 </html>

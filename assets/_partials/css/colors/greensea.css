@@ -68,13 +68,13 @@ a:hover{
 #portfolio .portfolio-items figure figcaption:hover{
   background: rgba(153, 204, 51, 0.9);
 }
-#other-services .other-service-item .icon .icon-medium{
+#awards .other-service-item .icon .icon-medium{
   background: #1ABC9C;
 }
-#other-services .other-service-item:hover .icon-medium{
+#awards .other-service-item:hover .icon-medium{
   background: #666;
 }
-#other-services .other-service-item .service-content h3{
+#awards .other-service-item .service-content h3{
   color: #1ABC9C;
 }
 #progress .icon-effect{
@@ -157,16 +157,16 @@ a:hover{
 #team-block-2 .team-member:hover{
   border-color: #1ABC9C;
 }
-.pricing-table-1 .table-header{
+.proficiency-table-1 .table-header{
   background: #1ABC9C;
 }
-#pricing-block-2{
+#proficiency-block-2{
   background: #1ABC9C;
 }
-.pricing-table-x .plan .price{
+.proficiency-table-x .plan .price{
   color: #1ABC9C;
 }
-.pricing-table-x .plan .period{
+.proficiency-table-x .plan .period{
   color: rgba(153, 204, 51, 0.7);
 }
 .panel-default .panel-heading a{
@@ -385,7 +385,7 @@ h2.widget-title {
 .split .details-list h3 {
   color: #1ABC9C;
 }
-#other-services .nav-tabs li a:hover i, #other-services .nav-tabs li a:focus, #other-services .nav-tabs li a.active i {
+#awards .nav-tabs li a:hover i, #awards .nav-tabs li a:focus, #awards .nav-tabs li a.active i {
   background: #1ABC9C none repeat scroll 0 0;
 }
 .btn-common.active {

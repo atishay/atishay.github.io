@@ -1,55 +1,8 @@
 ---
-layout: default
+layout: base
+isHome: true
 ---
-  <!-- Header area wrapper starts -->
-    <header id="header-wrap">
-        <!-- Navbar Starts -->
-        <nav class="navbar navbar-light" data-spy="affix" data-offset-top="50">
-          <div class="container">
-            <button class='navbar-toggler hidden-md-up pull-xs-right' data-target='#main-menu' data-toggle='collapse' type='button'>
-
-            </button>
-            <!-- Brand -->
-            <a class="navbar-brand" href="index.html">
-              <img src="assets/img/logo.svg" alt="">
-            </a>
-            <div class="collapse navbar-toggleable-sm pull-xs-left pull-md-right" id="main-menu">
-              <!-- Navbar Starts -->
-              <ul class="nav nav-inline">
-                <li class="nav-item dropdown">
-                  <a class="nav-link active" href="index.html" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" role="button" aria-expanded="false" href="assets/pdf/CV-Atishay.pdf">CV</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link same-page" href="#experience" role="button" aria-expanded="false">
-                    Experience
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link same-page" href="#education" role="button" aria-expanded="false">
-                    Education
-                  </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link same-page" href="#patents" role="button" aria-expanded="false">
-                    Patents and Publications
-                  </a>
-                </li>
-
-                <li class="nav-item dropdown">
-                  <a class="nav-link" role="button" aria-expanded="false" href="#">Blog</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" role="button" aria-expanded="false" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-        <!-- Navbar Ends -->
-    </header>
+    {% include header.html %}
     <!-- Header-wrap Section End -->
     <!-- Main Carousel Section -->
     <section id="carousel-area">
@@ -68,7 +21,7 @@ layout: default
                 Not Just Code
               </h2>
               <h3>Software is the solution to a problem, carefully planned and implemented by a team.</h3>
-              <a class="btn btn-lg btn-common" href="assets/pdf/CV-Atishay.pdf">
+              <a class="btn btn-lg btn-common" href="assets/pdf/Atishay-Jain.pdf">
                 <i class="fa fa-download">
                 </i>
                 Download my CV
@@ -84,7 +37,7 @@ layout: default
               <h3>
                 Use the tool which fits the puzzle best. Never start with a solution.
               </h3>
-              <a class="btn btn-common btn-lg " href="assets/pdf/CV-Atishay.pdf">
+              <a class="btn btn-common btn-lg " href="assets/pdf/Atishay-Jain.pdf">
                 <i class="fa fa-download">
                 </i>
                 Download my CV
@@ -100,7 +53,7 @@ layout: default
               <h3>
                 Is this the best solution the customer will pay for?
               </h3>
-              <a class="btn btn-common btn-lg " href="assets/pdf/CV-Atishay.pdf">
+              <a class="btn btn-common btn-lg " href="assets/pdf/Atishay-Jain.pdf">
                 <i class="fa fa-download">
                 </i>
                 Download my CV
@@ -429,7 +382,7 @@ layout: default
       <div class="container">
         <div class="row">
           <h1 class="section-title wow fadeIn animated" data-wow-delay=".2s">
-           Patents and Publications
+           Patents &amp; Publications
           </h1>
           <p class="section-subcontent">I love experimenting with emerging technology. <br>Most of my experiments still await a sponsorship to be productized. Here lies the selection that could get through.</p>
           <div class="col-md-12">
@@ -513,7 +466,7 @@ In various implementations, a computing device is configured to provide a live p
     <!-- Patents and Publications area Ends -->
 
     <!-- Other Services Section -->
-    <section id="other-services" class="section">
+    <section id="awards" class="section">
       <div class="container">
       <!-- Container Starts -->
         <div class="row">
@@ -625,8 +578,8 @@ Award (2014), FWA Mobile of the Day (2013).</li>
     </section>
     <!-- Other Services Section End -->
 
-    <!-- Pricing Table Section -->
-    <section id="pricing" class="section">
+    <!-- proficiency Table Section -->
+    <section id="proficiency" class="section">
       <div class="container">
         <div class="row">
           <h1 class="section-title wow fadeInUpQuick" data-wow-delay=".2s">
@@ -634,7 +587,7 @@ Award (2014), FWA Mobile of the Day (2013).</li>
           </h1>
           <p class="section-subcontent wow fadeInUpQuick" data-wow-delay=".3s">After knowing the basics of programming, one should know the assumptions and constraints of the domain.<br> It doesn't matter what language or tooling is needed. You can get upto speed quickly.</p>
           <div class="col-md-4 wow fadeInUpQuick" data-wow-delay=".5s">
-            <div class="pricing-table pricing-table-x">
+            <div class="proficiency-table proficiency-table-x">
               <div class="table-header">
                 <h3>
                   Web
@@ -684,7 +637,7 @@ Award (2014), FWA Mobile of the Day (2013).</li>
           </div>
 
           <div class="col-md-4 wow fadeInUpQuick" data-wow-delay="1s">
-            <div class="pricing-table pricing-table-x">
+            <div class="proficiency-table proficiency-table-x">
               <div class="table-header highlight">
                 <h3>
                   Mobile
@@ -730,7 +683,7 @@ Award (2014), FWA Mobile of the Day (2013).</li>
           </div>
 
           <div class="col-md-4 wow fadeInUpQuick" data-wow-delay="1.5s">
-            <div class="pricing-table pricing-table-x">
+            <div class="proficiency-table proficiency-table-x">
               <div class="table-header">
                 <h3>
                   Desktop
@@ -778,7 +731,7 @@ Award (2014), FWA Mobile of the Day (2013).</li>
         </div>
       </div>
     </section>
-    <!-- Pricing Table  End -->
+    <!-- proficiency Table  End -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="section">
@@ -1399,18 +1352,18 @@ Award (2014), FWA Mobile of the Day (2013).</li>
           </div><!-- Footer Widget Ends -->
 
           <!-- Footer Widget Starts -->
-          <div class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".8s">
+          <div id="contact-us" class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".8s">
             <h3 class="small-title">
               CONTACT
             </h3>
             <div class="contact-us">
-              <!-- <p>Please don't spam me.</p> -->
-              <form>
+              <form method="POST"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSfmhy33Qdqwwi8nqDOxJMdCyRh6Z3CWhwE9Iosa7UKO8wNt6A/formResponse">
               <div class="form-group">
-                <input type="email" class="form-control" id="contactName" placeholder="Your email">
+                <input type="email" autocomplete="email" aria-label="Your email address" class="form-control" id="contactName" name="emailAddress" required="true" placeholder="Your email">
               </div>
               <div class="form-group">
-                <textarea class="form-control" id="contactContent" placeholder="Your message" rows="5"></textarea>
+              <textarea id="contactContent" class="form-control" placeholder="Your message" rows="5" tabindex="0" aria-label="Message" required="true" name="entry.1809318382"></textarea>
               </div>
               <button type="submit" class="btn btn-common">Submit</button>
             </form>
