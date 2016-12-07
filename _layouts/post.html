@@ -11,15 +11,19 @@ layout: base
             <article class="blog-post-wrapper">
               <!-- Author Info -->
               <header class="author-info">
-                <div class="tag-posted-in">
+                {% if page.categories and page.categories.size > 0 %}
+                <div class="tag-posted-in pull-right">
                   <ul class="list-unstyled">
-                    <li><i class="fa fa-tag"></i> <a href="#">User Experience</a></li>
+                  {% for cat in page.categories %}
+                    <li>{% if forloop.first %} <i class="fa fa-folder-o"></i> {% endif %} <a href="/folders#{{cat|slugize}}">{{ cat | capitalize }}</a> {% unless forloop.last %} / {% endunless %}</li>
+                  {% endfor %}
                   </ul>
                 </div>
+                {% endif %}
                 <div class="author-posted">
                   <div class="media">
                     <div class="media-left">
-                      <a href="#"><img class="img-circle img-responsive" src="assets/img/blog/avatar/avatar1.jpg" alt=""></a>
+                      <img class="blog-author-image img-circle img-responsive" src="{{ "/assets/img/blog/avatar.jpg" | relative_url }}" alt="Atishay Jain">
                     </div>
                     <div class="media-body">
                       <span class="author-name"><a href="#"><b>Atishay Jain</b></a></span><br>
@@ -43,13 +47,22 @@ layout: base
                 <div class="blog-post clearfix">
                     {{ content }}
                 </div>
+                {% if page.tags %}
+                <div class="tag-posted-in text-xs-right">
+                  <ul class="list-unstyled">
+                  {% for tag in page.tags %}
+                    <li><i class="fa fa-tag"></i> <a href="/tag/{{tag|slugize}}">{{ tag }}</a></li>
+                  {% endfor %}
+                  </ul>
+                </div>
+                {% endif %}
               </section>
             </article>
             <div class="portfolio-controls clearfix mb-30">
                <nav>
                   <ul>
-                    <li class="pull-left wow slideInLeft" data-wow-delay="0.3s"><a class="btn btn-outline btn-md" href="#"><i class="fa fa-angle-left"></i></a></li>
-                    <li class="pull-right wow slideInRight" data-wow-delay="0.3s"><a class="btn btn-outline btn-md" href="#"><i class="fa fa-angle-right"></i></a></li>
+                    <li class="pull-left wow slideInLeft" data-wow-delay="0.3s"><a class="btn btn-outline btn-md{% unless page.previous %} disabled {% endunless %}" href="{{page.previous.url}}"><i class="fa fa-angle-left"></i></a></li>
+                    <li class="pull-right wow slideInRight" data-wow-delay="0.3s"><a class="btn btn-outline btn-md{% unless page.next %} disabled {% endunless %}" href="{{page.next.url}}"><i class="fa fa-angle-right"></i></a></li>
                   </ul>
                 </nav>
             </div>
@@ -286,17 +299,15 @@ layout: base
                 <h2 class="widget-title">Tag clouds</h2>
                 <div class="clearfix">
                   <ul>
-                    <li><a href="#">Download</a></li>
-                    <li><a href="#">PSD</a></li>
-                    <li><a href="#">Coding</a></li>
-                    <li><a href="#">UI</a></li>
-                    <li><a href="#">Sublime</a></li>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Hosting</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Arts</a></li>
-                    <li><a href="#">Marketing</a></li>
-                    <li><a href="#">Technology</a></li>
+{% assign tags = site.tags | sort %}
+{% for tag in tags %}
+ <li>
+    <a href="/tag/{{ tag | first | slugify }}/"
+        style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+            {{ tag[0] | replace:'-', ' ' }}
+    </a>
+</li>
+{% endfor %}
                 </ul>
                 </div>
               </aside>
