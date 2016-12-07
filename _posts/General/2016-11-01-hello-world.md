@@ -3,6 +3,8 @@ layout: post
 title: "Hello World"
 cover: hello.jpg
 coverTitle: "First blog post on the Atishay Jain website"
+tags: [Welcome, Hello World, Thoughts]
+categories: [General]
 ---
 
 The first output of every computer program has traditionally been hello world. That feels like the right way to restart a blog. I have had a website and blogs at multiple times in the past. Most of it is safeguarded by the wonderful folks at (archive.org)[]. While resurrecting a website and a blog for myself, I have had some questions that you non-blogger should ask yourself:
