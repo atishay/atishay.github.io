@@ -1,0 +1,77 @@
+---
+layout: base
+---
+  <!-- Google Map Shortcode -->
+  <section class="google-map-section-shotcode">
+    <div id="google-map-contact">
+      <div style="overflow:hidden;width:1920px;height:400px;resize:none;max-width:100%;"><div id="gmap_display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=San+Francisco+Bay+Area+California,+US&amp;key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div>
+    </div>
+  </section>
+  <!-- End -->
+
+  <!-- Contact Section -->
+  <section class="contact-form-section section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-50 text-xs-center contact-title-text wow fadeIn" data-wow-delay="0.3s">
+          <h2>Contact Me</h2>
+          <p>I am very open to suggestions, feedback and opportunities. If you find anything factually incorrect, copyright violation, or any other issue with the website, I would be happy to sort it out. </p>
+        </div>
+        <div class="col-md-4 contact-info-section">
+          <div class="contact-widget office-location wow slideInLeft" data-wow-delay="0.4s">
+            <h2>Location</h2>
+            <address>
+              <i class="fa fa-map-marker icon-box icon-xs"></i>San Francisco Bay Area, California<br>
+              <i class="fa fa-phone icon-box icon-xs"></i> On request<br>
+              <i class="fa fa-envelope icon-box icon-xs"></i>contact [at] atishay [dot] me
+            </address>
+          </div>
+          <div class="contact-widget office-location wow slideInLeft" data-wow-delay="0.4s">
+            <h2>Contact Hours</h2>
+            <address>
+              <p><i class="fa fa-clock-o icon-box icon-xs"></i> <span>Mon - Fri:</span> 9.00 AM - 6.00 PM, PST/PDT</p>
+            </address>
+          </div>
+          <div class="contact-widget social-contact wow slideInLeft" data-wow-delay="0.4s">
+            <h2>Social Links</h2>
+            <a href="#"><i class="fa fa-facebook icon-round icon-xs"></i></a>
+            <a href="#"><i class="fa fa-linkedin icon-round icon-xs"></i></a>
+            <a href="#"><i class="fa fa-google-plus icon-round icon-xs"></i></a>
+            <a href="#"><i class="fa fa-github icon-round icon-xs"></i></a>
+          </div>
+        </div>
+        <div class="col-md-7 col-md-offset-1 contact-form contact-info-section">
+          <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+            <div class="form-group wow slideInRight" data-wow-delay="0.3s">
+              <label for="name" class="sr-only">Name</label>
+              <input type="text" placeholder="Your Name" id="name" class="form-control contact-control" name="name" required data-error="Please enter your name">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group wow slideInRight" data-wow-delay="0.4s">
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" placeholder="Your Email" id="email" class="form-control contact-control" name="email" required data-error="Please enter your Email">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group wow slideInRight" data-wow-delay="0.5s">
+              <label for="subject" class="sr-only">Subject</label>
+              <input type="text" placeholder="Your Subject" id="msg_subject" class="form-control contact-control" name="subject" required data-error="Please enter your message subject">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form-group wow slideInRight" data-wow-delay="0.6s">
+              <label for="message" class="sr-only">Message</label>
+              <textarea placeholder="Your Message" rows="7" id="message" class="form-control" name="message" required data-error="Write your message"></textarea>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <button class="btn btn-common btn-lg wow bounceInUp" data-wow-delay="0.8s" type="submit" id="form-submit"><i class="fa fa-envelope"></i> Submit</button>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section End -->
