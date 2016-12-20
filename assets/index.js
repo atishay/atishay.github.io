@@ -2,6 +2,7 @@
 # Concatenate all minified JavaScript files
 ---
 {% include_relative _partials/js/jquery-min.js %}
+{% include_relative _partials/js/moment.min.js %}
 {% if jekyll.environment == 'production' %}
 {% include_relative _partials/js/tether.min.js %}
 {% include_relative _partials/js/bootstrap.min.js %}

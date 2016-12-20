@@ -27,7 +27,7 @@ layout: base
                     </div>
                     <div class="media-body">
                       <span class="author-name"><a href="#"><b>Atishay Jain</b></a></span><br>
-                      <span class="published-time"><i class="fa fa-calendar"></i> 18 hrs ago</span>
+                      <span class="published-time"><i class="fa fa-calendar"></i> <span class="moment">{{ page.date | date_to_xmlschema}}</span></span>
                     </div>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ layout: base
                 </nav>
             </div>
             <!-- About Author -->
-            <section class="about-author-section mt-10">
+<!--             <section class="about-author-section mt-10">
                 <div class="media wow fadeIn" data-wow-delay="0.3s">
                   <div class="media-left">
                     <a href="#"><img class="img-circle img-responsive" src="assets/img/blog/avatar/avatarBig1.jpg" alt=""></a>
@@ -85,8 +85,8 @@ layout: base
                   <a class="wow bounceIn" data-wow-delay="0.8s" href="#"><i class="fa fa-dribbble icon-box icon-sm"></i></a>
                   <a class="wow bounceIn" data-wow-delay="0.9s" href="#"><i class="fa fa-behance icon-box icon-sm"></i></a>
                 </div>
-            </section>
-            <div class="similar-post mt-30 clearfix">
+            </section> -->
+<!--             <div class="similar-post mt-30 clearfix">
               <h3 class="small-title mb-40 wow fadeIn" data-wow-delay="0.3s">Similar Post</h3>
               <div class="col-md-3 no-pdl wow fadeIn" data-wow-delay="0.4s">
                 <a href="#"><img src="assets/img/blog/home-items/img4.jpg" alt="" class="img-responsive"></a>
@@ -104,8 +104,8 @@ layout: base
                 <a href="#"><img src="assets/img/blog/home-items/img7.jpg" alt="" class="img-responsive"></a>
                 <a href="#"><h2>Css Advance</h2></a>
               </div>
-            </div>
-            <div class="comments-area clearfix mt-50 wow fadeInUp" data-wow-delay="0.3s">
+            </div> -->
+            <!-- <div class="comments-area clearfix mt-50 wow fadeInUp" data-wow-delay="0.3s">
               <h3 class="small-title"><i class="fa fa-comment"></i> Comments</h3>
               <ul class="media-left comment-list mt-30">
                 <li class="media">
@@ -176,20 +176,20 @@ layout: base
                         <label class="sr-only" for="username">Name</label>
                         <input type="text" placeholder="Full Name" id="username" required="" class="form-control">
                       </div>
-                    </div><!-- /.col-md-4  -->
+                    </div>
                     <div class="col-md-4 ">
                       <div class="form-group">
                         <label class="sr-only" for="useremail">Email</label>
                         <input type="email" placeholder="Email Address" id="useremail" required="" class="form-control">
                       </div>
-                    </div><!-- /.col-md-4  -->
+                    </div>
                     <div class="col-md-4">
                       <div class="form-group">
                         <label class="sr-only" for="userurl">Website</label>
                         <input type="text" placeholder="Your Website" id="userurl" required="" class="form-control">
                       </div>
                     </div>
-                  </div><!-- /.col-md-4  -->
+                  </div>
                   <div class="form-group">
                     <label class="sr-only" for="usermessage">Message</label>
                     <textarea placeholder="Type here message" id="usermessage" rows="7" required="" class="form-control"></textarea>
@@ -197,7 +197,7 @@ layout: base
                   <button class="btn btn-common" type="submit"><i class="fa fa-comment"></i> Post Comment</button>
               </form>
               </div>
-            </div>
+             </div> -->
           </div>
           <!-- End -->
 
@@ -205,19 +205,22 @@ layout: base
           <div class="col-md-3">
             <div class="sidebar-area">
               <!-- Search Bar -->
-              <aside class="widget search-bar wow fadeInUp" data-wow-delay="0.3s">
+<!--               <aside class="widget search-bar wow fadeInUp" data-wow-delay="0.3s">
                 <form>
                   <input type="text" placeholder="Search" class="form-control">
                   <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-              </aside>
+              </aside> -->
               <!-- Text Widgets -->
+              {% for excerpt in page.excerpt %}
+              {% assign split = excerpt | split: ':'%}
               <aside class="widget text-widgets wow fadeInUp" data-wow-delay="0.3s">
-                <h2 class="widget-title">Text Widget</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur dolorem fuga ad corrupti, ullam, eos natus, repellat officiis sit labore a aspernatur quisquam. In, unde.</p>
+                <h2 class="widget-title">{{split[0]}}</h2>
+                <p>{{ split[1] }}</p>
               </aside>
+              {% endfor %}
               <!-- Recent Post Widgets -->
-              <aside class="widget popular-post wow fadeInUp" data-wow-delay="0.3s">
+<!--               <aside class="widget popular-post wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">Popular Post</h2>
                 <ul>
                   <li>
@@ -265,9 +268,9 @@ layout: base
                     </div>
                   </li>
                 </ul>
-              </aside>
+              </aside> -->
               <!-- Category -->
-              <aside class="widget flickr-widget wow fadeInUp" data-wow-delay="0.3s">
+<!--               <aside class="widget flickr-widget wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">Flickr Feed</h2>
                 <div class="plain-flicker-gallery">
                   <a href="#" title="Pan Masala"><img src="assets/img/flicker/img1.jpg" alt=""></a>
@@ -280,9 +283,9 @@ layout: base
                   <a href="#" title="Sports Template for Joomla"><img src="assets/img/flicker/img2.jpg" alt=""></a>
                   <a href="#" title="Apple Keyboard"><img src="assets/img/flicker/img3.jpg" alt=""></a>
                 </div>
-              </aside>
+              </aside> -->
               <!-- Subscribe Widget -->
-              <aside class="widget subscribe-widget wow fadeInUp" data-wow-delay="0.3s">
+<!--               <aside class="widget subscribe-widget wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">Subscribe</h2>
                 <div class="subscribe-area">
                   <p>Subscribe to our news latter to get regular update and blog posts.</p>
@@ -293,7 +296,7 @@ layout: base
                     <button type="submit" class="mt-10 btn btn-common btn-block">Subscribe</button>
                   </form>
                 </div>
-              </aside>
+              </aside> -->
               <!-- Tag Cloud -->
               <aside class="widget tag-cloud wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">Tag clouds</h2>

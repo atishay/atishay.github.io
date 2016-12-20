@@ -248,6 +248,10 @@ $(function() {
     pieChart.css({height: 'auto'});
   });
 
+  $('.moment').get().forEach(function (dt) {
+    $(dt).text(moment($(dt).text()).fromNow());
+  });
+
 
   !function(exports) {
     exports.submitGoogleForm = submitGoogleForm;
