@@ -252,6 +252,33 @@ $(function() {
     $(dt).text(moment($(dt).text()).fromNow());
   });
 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89338714-1', 'auto');
+  ga('send', 'pageview');
+
+  if ($('#disqus_thread').get(0)) {
+    //https://help.disqus.com/customer/portal/articles/565624   - Comment count on home page if needed
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+    var disqus_config = function () {
+    this.page.url = '{{page.url | prepend:site.url}}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'atishay'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = '//atishay.disqus.com/embed.js';
+    s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+  }
 
   !function(exports) {
     exports.submitGoogleForm = submitGoogleForm;
