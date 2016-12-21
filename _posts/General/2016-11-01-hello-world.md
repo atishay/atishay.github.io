@@ -5,7 +5,7 @@ cover: hello.jpg
 coverTitle: "First blog post on the Atishay Jain website"
 tags: [Welcome, Hello World, Thoughts]
 categories: [General]
-excerpt: Welcome: I doubt if any eyes would fall upon this piece of writing. But if you do, I welcome you to this place. Please do fill out comments so that I know that you were here. Analytics just finds bots nowadays and the way it is going, we might have just bots to talk to all around us in the future. A human touch in the comments section would be very inspirational.
+excerpt: Welcome# I doubt if any eyes would fall upon this piece of writing. But if you do, I welcome you to this place. Please do fill out comments so that I know that you were here. Analytics just finds bots nowadays and the way it is going, we might have just bots to talk to all around us in the future. A human touch in the comments section would be very inspirational.
 ---
 
 The first output of every computer program has traditionally been hello world. That feels like the right way to restart a blog. I have had a website and blogs at multiple times in the past. Most of it is safeguarded by the wonderful folks at (archive.org)[]. While resurrecting a website and a blog for myself, I have had some questions that you non-blogger should ask yourself:

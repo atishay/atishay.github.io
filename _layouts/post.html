@@ -215,7 +215,7 @@ layout: base
                 </form>
               </aside> -->
               <!-- Text Widgets -->
-              {% assign split = page.excerpt | split: ':'%}
+              {% assign split = page.excerpt | split: '#'%}
               <aside class="widget text-widgets wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">{{split[0]}}</h2>
                 <p>{{ split[1] }}</p>
