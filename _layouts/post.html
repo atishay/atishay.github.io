@@ -215,13 +215,11 @@ layout: base
                 </form>
               </aside> -->
               <!-- Text Widgets -->
-              {% for excerpt in page.excerpt %}
-              {% assign split = excerpt | split: ':'%}
+              {% assign split = page.excerpt | split: ':'%}
               <aside class="widget text-widgets wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">{{split[0]}}</h2>
                 <p>{{ split[1] }}</p>
               </aside>
-              {% endfor %}
               <!-- Recent Post Widgets -->
 <!--               <aside class="widget popular-post wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">Popular Post</h2>
