@@ -6,7 +6,7 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 400 | escape }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <!-- Canonical URL for SEO -->
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend:site.url }}">
   <!-- XML Feed -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <!-- Favicons & things like that -->
