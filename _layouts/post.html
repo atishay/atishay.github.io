@@ -106,7 +106,6 @@ layout: base
               </div>
             </div> -->
 <div id="disqus_thread"></div>
-<script id="dsq-count-scr" src="//atishay.disqus.com/count.js" async></script>
 <script>
 //https://help.disqus.com/customer/portal/articles/565624   - Comment count on home page if needed
 /**
@@ -114,13 +113,14 @@ layout: base
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
 var disqus_config = function () {
-this.page.url = 'http://atishay.me';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.url = '{{page.url | prepend:site.url}}';  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = 'atishay'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
-(function() { // DON'T EDIT BELOW THIS LINE
+(function() {
 var d = document, s = d.createElement('script');
 s.src = '//atishay.disqus.com/embed.js';
+s.async = true;
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
