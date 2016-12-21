@@ -40,6 +40,8 @@ gems:
     - jekyll-feed
     - jekyll-coffeescript
     - jekyll-paginate
+feed:
+  path: atom.xml
 exclude:
   - Gemfile
   - Gemfile.lock
