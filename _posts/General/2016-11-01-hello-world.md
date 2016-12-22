@@ -3,12 +3,12 @@ layout: post
 title: "Hello World"
 cover: hello.jpg
 coverTitle: "First blog post on the Atishay Jain website"
-tags: [Welcome, Hello World, Thoughts]
-categories: [General]
-excerpt: Welcome# I doubt if any eyes would fall upon this piece of writing. But if you do, I welcome you to this place. Please do fill out comments so that I know that you were here. Analytics just finds bots nowadays and the way it is going, we might have just bots to talk to all around us in the future. A human touch in the comments section would be very inspirational.
+tags: [Thoughts]
+excerpt: Welcome to my blog. Its great to be blogging again. In my first post I discuss my motivations to blog.
+sidebar: Trivia# The first known instance of the usage of the words "hello" and "world" together in computer literature occurred earlier, in Kernighan's 1972 Tutorial Introduction to the Language B. Later Kernighan and Ritchie's seminal book "The C Programming Language" popularized as the first program of a computer language. Further - The hello world program for a browser is a txt file with the word 'Hello World'. Read more about the history of hello world at (Wikipedia)[https://www.wikiwand.com/en/%22Hello,_World!%22_program]
 ---
 
-The first output of every computer program has traditionally been hello world. That feels like the right way to restart a blog. I have had a website and blogs at multiple times in the past. Most of it is safeguarded by the wonderful folks at (archive.org)[]. While resurrecting a website and a blog for myself, I have had some questions that you non-blogger should ask yourself:
+The first output of every computer program has traditionally been hello world. That feels like the right way to restart a blog. I have had a website and blogs at multiple times in the past. While resurrecting a website and a blog for myself, I have had some questions that you non-blogger should ask yourself:
 
 > Why blog? Why now? What has changed?
 
