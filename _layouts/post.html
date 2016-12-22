@@ -195,7 +195,8 @@ layout: base
                   </div>
                   <div class="form-group">
                     <label class="sr-only" for="usermessage">Message</label>
-                    <textarea placeholder="Type here message" id="usermessage" rows="7" required="" class="form-control"></textarea>
+                    <textarea placeholder="
+                    Type here message" id="usermessage" rows="7" required="" class="form-control"></textarea>
                   </div>
                   <button class="btn btn-common" type="submit"><i class="fa fa-comment"></i> Post Comment</button>
               </form>
@@ -219,7 +220,7 @@ layout: base
               {% assign split = page.sidebar | split: '#'%}
               <aside class="widget text-widgets wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">{{split[0]}}</h2>
-                <p>{{ split[1] }}</p>
+                <p>{{ split[1] | markdownify}}</p>
               </aside>
               {% endif %}
               <aside class="widget text-widgets wow fadeInUp" data-wow-delay="0.3s">
