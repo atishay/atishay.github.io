@@ -26,8 +26,8 @@ layout: base
             </p>
             <div class="blog-one-footer">
               <a href="{{post.url}}">Read More</a>
-              {% for cat in post.categories %}
-                {% if forloop.first %} <i class="fa fa-folder-o"></i> {% endif %} <a href="/folders/{{cat|slugize}}">{{ cat | capitalize }}</a> {% unless forloop.last %} &amp; {% endunless %}
+              {% for tag in post.tags %}
+                {% if forloop.first %} <i class="fa fa-folder-o"></i> {% endif %} <a href="/tag/{{tag|slugize}}">{{ tag | replace:'-', ' ' | capitalize }}</a> {% unless forloop.last %} &amp; {% endunless %}
               {% endfor %}
             </div>
           </div>

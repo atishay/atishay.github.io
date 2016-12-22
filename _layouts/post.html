@@ -11,15 +11,6 @@ layout: base
             <article class="blog-post-wrapper">
               <!-- Author Info -->
               <header class="author-info">
-                {% if page.categories and page.categories.size > 0 %}
-                <div class="tag-posted-in pull-right">
-                  <ul class="list-unstyled">
-                  {% for cat in page.categories %}
-                    <li>{% if forloop.first %} <i class="fa fa-folder-o"></i> {% endif %} <a href="/folders#{{cat|slugize}}">{{ cat | capitalize }}</a> {% unless forloop.last %} / {% endunless %}</li>
-                  {% endfor %}
-                  </ul>
-                </div>
-                {% endif %}
                 <div class="author-posted">
                   <div class="media">
                     <div class="media-left">
@@ -51,7 +42,7 @@ layout: base
                 <div class="tag-posted-in text-xs-right">
                   <ul class="list-unstyled">
                   {% for tag in page.tags %}
-                    <li><i class="fa fa-tag"></i> <a href="/tag/{{tag|slugize}}">{{ tag }}</a></li>
+                    <li><i class="fa fa-tag"></i> <a href="/tag/{{tag|slugize}}">{{ tag | replace:'-', ' ' | capitalize }}</a></li>
                   {% endfor %}
                   </ul>
                 </div>
@@ -314,7 +305,7 @@ layout: base
  <li>
     <a href="/tag/{{ tag | first | slugify }}/"
         style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
-            {{ tag[0] | replace:'-', ' ' }}
+            {{ tag[0] | replace:'-', ' ' | capitalize }}
     </a>
 </li>
 {% endfor %}
