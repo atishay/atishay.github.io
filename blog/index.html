@@ -22,7 +22,7 @@ layout: base
           <div class="blog-item-text">
             <h3 class="small-title"><a href="{{post.url}}">{{post.title}}</a></h3>
             <p>
-              {{post.excerpt}}
+              {{post.excerpt | markdownify}}
             </p>
             <div class="blog-one-footer">
               <a href="{{post.url}}">Read More</a>

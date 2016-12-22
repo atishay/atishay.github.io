@@ -29,17 +29,13 @@
         <!-- Footer Widget Starts -->
         <div class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".5s">
           <h3 class="small-title">
-            BLOG
+            Recent Blog Posts
           </h3>
-          Coming soon..
-<!--           <div class="plain-flicker-gallery">
-            <a href="#" title="Pan Masala"><img src="assets/img/flicker/img1.jpg" alt=""></a>
-            <a href="#" title="Sports Template for Joomla"><img src="assets/img/flicker/img2.jpg" alt=""></a>
-            <a href="#" title="Apple Keyboard"><img src="assets/img/flicker/img3.jpg" alt=""></a>
-            <a href="#" title="Hard Working"><img src="assets/img/flicker/img4.jpg" alt=""></a>
-            <a href="#" title="Smile"><img src="assets/img/flicker/img5.jpg" alt=""></a>
-            <a href="#" title="Puzzle"><img src="assets/img/flicker/img6.jpg" alt=""></a>
-          </div> -->
+          <div>
+            {% for post in site.posts limit:5 %}
+              <a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a> - <span class="published-time"><span class="moment">{{ post.date | date_to_xmlschema}}</span></span><br>
+            {% endfor %}
+          </div>
         </div><!-- Footer Widget Ends -->
 
         <!-- Footer Widget Starts -->
