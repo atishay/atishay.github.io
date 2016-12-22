@@ -27,6 +27,8 @@ domain: atishay.info
 defaults:
     layout: post
 permalink: /blog/:year/:month/:day/:title
+paginate: 9
+paginate_path: "/blog/page:num/"
 
 # Build settings
 markdown: kramdown

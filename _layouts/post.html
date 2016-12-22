@@ -215,10 +215,15 @@ layout: base
                 </form>
               </aside> -->
               <!-- Text Widgets -->
-              {% assign split = page.excerpt | split: '#'%}
+              {% if page.sidebar %}
+              {% assign split = page.sidebar | split: '#'%}
               <aside class="widget text-widgets wow fadeInUp" data-wow-delay="0.3s">
                 <h2 class="widget-title">{{split[0]}}</h2>
                 <p>{{ split[1] }}</p>
+              </aside>
+              {% endif %}
+              <aside class="widget text-widgets wow fadeInUp" data-wow-delay="0.3s">
+                <h2 class="widget-title">Request for Comments</h2><p>I doubt if any eyes would fall upon this piece of writing. But if you do, I welcome you to this place. Please do fill out comments so that I know that you were here. Analytics just finds bots nowadays and the way it is going, we might have just bots to talk to all around us in the future. A human touch in the comments section would be very inspirational.</p>
               </aside>
               <!-- Recent Post Widgets -->
 <!--               <aside class="widget popular-post wow fadeInUp" data-wow-delay="0.3s">
@@ -300,7 +305,7 @@ layout: base
               </aside> -->
               <!-- Tag Cloud -->
               <aside class="widget tag-cloud wow fadeInUp" data-wow-delay="0.3s">
-                <h2 class="widget-title">Tag clouds</h2>
+                <h2 class="widget-title">Tag cloud</h2>
                 <div class="clearfix">
                   <ul>
 {% assign tags = site.tags | sort %}
