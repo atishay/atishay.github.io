@@ -1,73 +1,72 @@
 ---
 layout: base
 ---
-    <!-- Blog Section -->
-    <section id="blog" class="section">
-      <!-- Container Starts -->
-      <div class="container">
-        <!-- Row Starts -->
-        <div class="row">
-          <h1 class="section-title wow fadeInUpQuick">
-            THE BLOG
-          </h1>
-          <p class="section-subcontent">Welcome to my blog. Here I post my thoughts, glimpses on what I work on and other interesting stuff that I find.</p>
-          {% for post in paginator.posts %}
-          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <!-- Blog Item Starts -->
-            <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.3s">
-              <div class="blog-item-img">
-                <a href="{{post.url}}">
-                  <img src="/assets/img/blog/{{post.cover | escape}}" alt="{{post.title}}">
-                </a>
-              </div>
-              <div class="blog-item-text">
-                <h3 class="small-title"><a href="{{post.url}}">{{post.title}}</a></h3>
-                <p>
-                  {{post.excerpt}}
-                </p>
-                <div class="blog-one-footer">
-                  <a href="{{post.url}}">Read More</a>
-                  {% for cat in post.categories %}
-                    {% if forloop.first %} <i class="fa fa-folder-o"></i> {% endif %} <a href="/folders/{{cat|slugize}}">{{ cat | capitalize }}</a> {% unless forloop.last %} &amp; {% endunless %}
-                  {% endfor %}
-                </div>
-              </div>
-            </div><!-- Blog Item Wrapper Ends-->
+<!-- Blog Section -->
+<section id="blog" class="section">
+  <!-- Container Starts -->
+  <div class="container">
+    <!-- Row Starts -->
+    <div class="row">
+      <h1 class="section-title wow fadeInUpQuick">
+        THE BLOG
+      </h1>
+      <p class="section-subcontent">Welcome to my blog. Here I post my thoughts, glimpses on what I work on and other interesting stuff that I find.</p>
+      {% for post in paginator.posts %}
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.3s">
+          <div class="blog-item-img">
+            <a href="{{post.url}}">
+              <img src="/assets/img/blog/{{post.cover | escape}}" alt="{{post.title}}">
+            </a>
           </div>
-          {% endfor %}
-        </div>
-        <div class="row">
-          <div class="blog-pagination clearfix wow fadeInUp animated col-xs-12" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
-              <nav aria-label="..." class="">
-                <ul class="pagination">
-                  <li class="page-item {% unless paginator.previous_page %} disabled{% endunless %}">
-                    <a class="page-link" href="{{ paginator.previous_page_path }}" tabindex="-1" aria-label="Previous">
-                      <i class="fa fa-angle-left"></i>
-                       Prev
-                      <span class="sr-only">Previous</span>
-                    </a>
-                  </li>
-                  {% if paginator.previous_page %}
-                  <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path }}">{{ paginator.page | minus: 1}}</a></li>
-                  {% endif %}
-                  <li class="page-item active">
-                    <a class="page-link" href="#">{{ paginator.page }}<span class="sr-only">(current)</span></a>
-                  </li>
-                  {% if paginator.next_page %}
-                  <li class="page-item"><a class="page-link" href="{{paginator.next_page_path}}">{{ paginator.page | plus: 1}}</a></li>
-                  {% endif %}
-
-                  <li class="page-item {% unless paginator.next_page %}disabled{% endunless %}">
-                    <a class="page-link" href="{{paginator.next_page_path}}" aria-label="Next">
-                      Next
-                      <i class="fa fa-angle-right"></i>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+          <div class="blog-item-text">
+            <h3 class="small-title"><a href="{{post.url}}">{{post.title}}</a></h3>
+            <p>
+              {{post.excerpt}}
+            </p>
+            <div class="blog-one-footer">
+              <a href="{{post.url}}">Read More</a>
+              {% for cat in post.categories %}
+                {% if forloop.first %} <i class="fa fa-folder-o"></i> {% endif %} <a href="/folders/{{cat|slugize}}">{{ cat | capitalize }}</a> {% unless forloop.last %} &amp; {% endunless %}
+              {% endfor %}
             </div>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- blog Section End -->
+      {% endfor %}
+    </div>
+    <div class="row">
+      <div class="blog-pagination clearfix wow fadeInUp animated col-xs-12" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">
+          <nav aria-label="..." class="">
+            <ul class="pagination">
+              <li class="page-item {% unless paginator.previous_page %} disabled{% endunless %}">
+                <a class="page-link" href="{{ paginator.previous_page_path }}" tabindex="-1" aria-label="Previous">
+                  <i class="fa fa-angle-left"></i>
+                   Prev
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              {% if paginator.previous_page %}
+              <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path }}">{{ paginator.page | minus: 1}}</a></li>
+              {% endif %}
+              <li class="page-item active">
+                <a class="page-link" href="#">{{ paginator.page }}<span class="sr-only">(current)</span></a>
+              </li>
+              {% if paginator.next_page %}
+              <li class="page-item"><a class="page-link" href="{{paginator.next_page_path}}">{{ paginator.page | plus: 1}}</a></li>
+              {% endif %}
+
+              <li class="page-item {% unless paginator.next_page %}disabled{% endunless %}">
+                <a class="page-link" href="{{paginator.next_page_path}}" aria-label="Next">
+                  Next
+                  <i class="fa fa-angle-right"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- blog Section End -->
