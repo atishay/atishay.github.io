@@ -25,10 +25,7 @@ layout: base
               </header>
               <!-- Featured Content -->
               <section class="featured-wrapper">
-                <a href="#">
-                  <img src="{{page.image | escape}}"
-                alt=" {% if page.description %} {{page.description | escape}} {% else %} {{page.title | escape}} {% endif %}">
-                </a>
+                  <div style="background-image: url({{page.image | escape}});"></div>
               </section>
               <!-- Post Content -->
               <section class="blog-post-content" id="post">
