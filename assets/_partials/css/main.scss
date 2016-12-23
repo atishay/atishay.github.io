@@ -2612,6 +2612,9 @@ span.published-time i.fa {
 .blog-post-wrapper.format-qoute {
   border: none !important;
 }
+.blog-post>p {
+  text-indent: 30px;
+}
 .blog-pagination nav ul.pagination li.page-item a {
     border-radius: 0;
     margin-right: 15px !important;
