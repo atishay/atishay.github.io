@@ -2613,8 +2613,8 @@ span.published-time i.fa {
   border: none !important;
 }
 .blog-post>p {
-  text-indent: 30px;
-  &:first-child:first-letter { color:#992E00; float: left; font-size: 75px; line-height: 60px;  font-family: Georgia; }
+  &:not(:first-child) { text-indent: 30px; }
+  &:first-child:first-letter { color:#992E00; margin-top:7px; margin-right:5px; float: left; font-size: 75px; line-height: 60px;  font-family: Georgia; }
 }
 .blog-pagination nav ul.pagination li.page-item a {
     border-radius: 0;

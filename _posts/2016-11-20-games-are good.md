@@ -15,10 +15,13 @@ Here is another speech for toastmasters, CC#02. I vouch for games - Computer Gam
 Mom's always like to complain.
 
 
-Stone age moms - Why do you always go out to play? You'll get yourself killed.
-Nineteenth century moms - Go out and play. What's there in these stupid books.
-Twentieth century moms - You're turning into idiots in front of the idiot box. Read some books.
-Twenty first century moms - Stop with these video games and mobile phones. Spend time with your family. Watch some TV.
+ *Stone age moms* - Why do you always go out to play? You'll get yourself killed.
+
+ *Nineteenth century moms* - Go out and play. What's there in these stupid books.
+
+ *Twentieth century moms* - You're turning into idiots in front of the idiot box. Read some books.
+
+ *Twenty first century moms* - Stop with these video games and mobile phones. Spend time with your family. Watch some TV.
 
 
 Even the news is against games - "8 year old Louisiana boy shoots his elderly caretaker because of playing games.". Fellow toastmasters and honored guests. Today I discuss the other side of the story. Games are good. They are the most immersive form of entertainment and there are reasons we shouldn't be so pessimistic about them. I will talk about how they have been revolutionizing learning, sports, engineering, acumen and team building.
