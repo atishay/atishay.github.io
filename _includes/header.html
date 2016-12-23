@@ -13,6 +13,9 @@
           <div class="collapse navbar-toggleable-sm pull-xs-left pull-md-right" id="main-menu">
             <!-- Navbar Starts -->
             <ul class="nav nav-inline">
+              <li class="nav-item">
+                <a class="nav-link active" href="{{ "/" | relative_url}}" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+              </li>
               {% if page.isHome %}
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}" role="button" aria-haspopup="true" aria-expanded="false">
@@ -27,9 +30,6 @@
                   <a class="dropdown-item same-page" href="#proficiency">Proficiency</a>
                 </div>
               {% else %}
-                <li class="nav-item">
-                  <a class="nav-link active" href="{{ "/" | relative_url}}" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link" role="button" aria-expanded="false" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}">Résumé</a>
                 </li>

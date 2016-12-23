@@ -3638,3 +3638,12 @@ pre code {
     float: left;
     margin-right: 20px;
 }
+
+@media (max-width: 767px) {
+  .tab-content>.tab-pane.force-visible-sm-down {
+      display: block !important;
+      position: static !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+  }
+}
