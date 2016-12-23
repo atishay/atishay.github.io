@@ -26,8 +26,8 @@ layout: base
               <!-- Featured Content -->
               <section class="featured-wrapper">
                 <a href="#">
-                  <img src="/assets/img/blog/{{page.cover | escape}}"
-                alt=" {% if page.coverTitle %} {{page.coverTitle | escape}} {% else %} {{page.title | escape}} {% endif %}">
+                  <img src="{{page.image | escape}}"
+                alt=" {% if page.description %} {{page.description | escape}} {% else %} {{page.title | escape}} {% endif %}">
                 </a>
               </section>
               <!-- Post Content -->
