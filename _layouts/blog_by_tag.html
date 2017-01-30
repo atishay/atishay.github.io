@@ -26,7 +26,7 @@ layout: base
             <div class="blog-one-footer">
               <a href="{{post.url}}">Read More</a>
               {% for tag in post.tags %}
-                {% if forloop.first %} <i class="fa fa-tag"></i> {% endif %} <a href="/tag/{{tag|slugize}}">{{ tag | replace:'-', ' ' | capitalize }}</a> {% unless forloop.last %} &amp; {% endunless %}
+                {% if forloop.first %} <i class="fa fa-tag"></i> {% endif %} <a href="/tag/{{tag|slugize}}">{{ tag | replace:'-', ' ' | capitalize }}</a> {% unless forloop.last %} <i class="fa fa-tag"></i> {% endunless %}
               {% endfor %}
             </div>
           </div>
