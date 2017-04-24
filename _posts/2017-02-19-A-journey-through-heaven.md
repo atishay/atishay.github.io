@@ -2,9 +2,9 @@
 layout: post
 title: "A journey through heaven"
 image: /assets/img/blog/kashmir.jpg
-description: "I have had my share of travels and places around the world tat I have seen. Never before I had and never again will I find a more exotic destination."
+description: "I have had my share of travels and places around the world that I have seen. Never before I had and never again will I find a more exotic destination."
 tags: [toastmasters]
-excerpt: The most important time in our lives is the present losing which is not worth any future.
+excerpt: This is the most exotic travel destination on the planet, matched by no other.
 sidebar: The Destination#Described as the heaven on earth, this place is breathtaking. It is a shame that it is caught up in a conflict that prevents people to see this wonder. Luckily that is preserving the natural beauty for generations ahead.
 imgSrc: "Self Taken - Thank you Shubham"
 ---
