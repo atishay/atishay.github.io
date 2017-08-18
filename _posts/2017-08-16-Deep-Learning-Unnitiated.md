@@ -3,7 +3,7 @@ layout: post
 title: "Easy Deep Learning Part I - Basic Mathematics"
 image: /assets/img/blog/deep.jpg
 description: "The maths behind it is really simple. A middle school student can get it. Now the implementation details are a whole new story."
-tags: [deep learning]
+tags: [Deep Learning]
 excerpt: A small post to describe deep learning to someone with very basic mathematics.
 imgSrc: "[Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)"
 ---

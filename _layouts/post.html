@@ -39,7 +39,7 @@ layout: base
                 <div class="tag-posted-in text-xs-right">
                   <ul class="list-unstyled">
                   {% for tag in page.tags %}
-                    <li><i class="fa fa-tag"></i> <a href="/tag/{{tag|slugize}}">{{ tag | replace:'-', ' ' | capitalize }}</a></li>
+                    <li><i class="fa fa-tag"></i> <a href="/tag/{{tag|slugify}}">{{ tag | replace:'-', ' ' | capitalize }}</a></li>
                   {% endfor %}
                   </ul>
                 </div>
