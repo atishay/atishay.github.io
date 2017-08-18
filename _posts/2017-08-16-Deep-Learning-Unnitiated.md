@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deep Learning - Understand the Problem"
+title: "Deep Learning - The basics"
 image: /assets/img/blog/deep.jpg
 description: "The maths behind it is really simple. A middle school student can get it. Now the implementation details are a whole new story."
 tags: [deep learning]
