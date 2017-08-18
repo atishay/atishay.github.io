@@ -4,7 +4,7 @@ title: "Deep Learning - The basics"
 image: /assets/img/blog/deep.jpg
 description: "The maths behind it is really simple. A middle school student can get it. Now the implementation details are a whole new story."
 tags: [deep learning]
-excerpt: A small post to describe deep learning to someone who knows very basic mathematics and .
+excerpt: A small post to describe deep learning to someone with very basic mathematics.
 imgSrc: "[Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)"
 ---
 
