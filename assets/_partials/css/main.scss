@@ -2739,9 +2739,11 @@ h2.widget-title {
 }
 
 .blog-post ul li {
-    font-size: 15px;
+    font-size: 14px;
     padding: 6px 0;
-    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+
 }
 .blog-post ol li {
     font-size: 15px;
@@ -2762,9 +2764,18 @@ h2.widget-title {
 .blog-post .cover {
   width: 100%;
 }
-.blog-post pre {
+.blog-post pre, .blog-post .mjx-chtml {
   background: #eee none repeat scroll 0 0;
   margin: 20px 0;
+}
+.blog-post .mjx-chtml * {
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+.blog-post .mjx-chtml {
+  padding: 5px;
+  font-size: 90% !important;
+  margin: 5px 0;
+  text-align: left !important;
 }
 .about-author-section {
   border: 1px solid #eee;
@@ -3602,12 +3613,12 @@ ul.contact-info2 i.fa {
       line-height: 0;
 }
 
-pre code {
+pre code, .mjx-chtml  {
   padding: 0.2rem 0.4rem;
   font-size: 90%;
   color: #bd4147;
   // background-color: #f7f7f9;
-  // border-radius: 0.25rem;
+  border-radius: 0.25rem;
 }
 
 .pie-parent .sublead {
