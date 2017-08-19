@@ -37,7 +37,7 @@ paginate_path: "/blog/page:num/"
 markdown: kramdown
 theme: minima
 color: lightblue # can be coffee, green. greensea, lightblue, mblue, orange, red, wisteria
-gems:
+plugins:
     - jekyll-mentions
     - jemoji
     - jekyll-redirect-from
