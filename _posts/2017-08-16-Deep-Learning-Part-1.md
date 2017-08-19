@@ -79,9 +79,11 @@ The input `X` to the function is an image. Now a question to you - mathematicall
 
 #### The true equation
 So lets get back to the original equation - `f(🐱) = Probability of being a cat.` Now here the image, `🐱` is 3 million numbers. Naturally A has to have 3 million numbers as well. So the true equation actually will become:
+
 $$
 a_1x_1 + a_2x_2 \dots a_nx_n + b = y
 $$
+
 But we can live in matrix form. This makes the life easier. We can write it like - `AX + b = y` where `A` and `X` are matrices, `X` representing an image and `A` a set of parameters. I know matrices get into complicated land. But you don't need to know. You might have noticed I used capital `X` and a small `Y` and similarly capital `A` and small `b`. That was the idea all along. Capitals are matrices.
 
 #### Why `AX + b`?
