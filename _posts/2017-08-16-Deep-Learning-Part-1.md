@@ -42,6 +42,8 @@ Nothing has changed. This is another way of saying the same thing. Now lets chan
 
 ```
 X = 🐱
+```
+```
 y = Probability of being a cat.
 ```
 Now our problem becomes:
