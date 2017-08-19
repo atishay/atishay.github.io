@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "Easy Deep Learning Part I - Basic Mathematics"
+title: "Easy Deep Learning Part I - Defining the problem"
 image: /assets/img/blog/deep.jpg
 description: "The maths behind it is really simple. A middle school student can get it. Now the implementation details are a whole new story."
 tags: [Deep Learning]
-excerpt: A small post to describe deep learning to someone with very basic mathematics.
+math: true
+excerpt: Understand deep learning starting with high school mathematics.
 imgSrc: "[Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)"
 ---
 
-This is the first art of an intended multi-art series on deep learning as I sort my thoughts around the learnings in the last 1 year and put them here for my memories and help fellow humans get rid of the fear of the mechanical brain.
+This is the first part of an intended multi-part series on deep learning as I sort my thoughts around the learnings in the last 1 year and put them here for my memories and help fellow humans get rid of the fear of the mechanical brain.
 
 #### Disclaimer
 Before you go on to read my post, do understand that this is a set of intuitions to make a layman understand the concepts. Some of the concepts have been modified, wrangled and some have been omitted just for the ease of understanding. Take all of what comes next with a grain of salt. I do start with the very basics but do build up very quickly. So if you find something to slow and boring just skip a few paragraphs.
@@ -23,24 +24,24 @@ For the sake of understanding lets pick up a problem of classifying an image. He
 Lets start with the very basics of framing this problem into something a little more mathematical:
 
 ```
-Ax + b = y
+AX + b = y
 ```
 
 This is very simple mathematics from middle school. I hope you remember solving equations like `3x + 5 = 14` and coming up with the solution that `x = 3`. Lets look at another form of the same function:
 
 ```
-f(x) = y
+f(X) = y
 ```
 where
 
 ```
-f(x) = Ax + b
+f(X) = AX + b
 ```
 
-Nothing has changed. This is another way of saying the same thing. Now lets change the x and the y to be a little more difficult. I mean as difficult to need machine learning:
+Nothing has changed. This is another way of saying the same thing. Now lets change the X and the y to be a little more difficult. I mean as difficult to need machine learning:
 
 ```
-x = 🐱
+X = 🐱
 y = Probability of being a cat.
 ```
 Now our problem becomes:
@@ -49,18 +50,18 @@ Now our problem becomes:
 f(🐱) = Probability of being a cat.
 ```
 
-I hope you are still here with me. We looking for a function `f(x)` such that if `x` is a photograph the function would return the likelihood that it contains a cat according to the knowledge that is built into the function.
+I hope you are still here with me. We looking for a function `f(X)` such that if `X` is a photograph the function would return the likelihood that it contains a cat according to the knowledge that is built into the function.
 
 #### Probabilities
 You would be imagining why the right hand side of the equation are probabilities. They could be discrete yes or no answers. You normally want `f(🐱)` to say "Yes this is a cat." In the early days (1950s) that approach was tried in something called a "Perceptron". It is very easy to guess why those would not work. We all know there is no white and black. There are millions of illusions, cats that hide in the environment, dogs that look like cats and so on. If we can't be a 100% sure, why should we expect the mathematical equations to be. It is more practical to ask how likely the equations match and then we can improve the formula to give us better values.
 
 #### Twist
 
-There is one twist to the equation above that needs to be clarified before we go ahead. The question that I want you to think about is what are we trying to find? In traditional mathematics the answer is always `x` or `y`. But in this case the situation is slightly different. We do need to find `y` for a given `x`. That is given an image what is the probability that is a cat. But we don't know the values for `A` and `b`. Instead we have some samples that have the correct `x` and `y`, and based on those samples we will first find `A` and `b`. Then we go back and look for `y` for another `x` whose value we do not know.
+There is one twist to the equation above that needs to be clarified before we go ahead. The question that I want you to think about is what are we trying to find? In traditional mathematics the answer is always `X` or `y`. But in this case the situation is slightly different. We do need to find `y` for a given `X`. That is given an image what is the probability that is a cat. But we don't know the values for `A` and `b`. Instead we have some samples that have the correct `X` and `y`, and based on those samples we will first find `A` and `b`. Then we go back and look for `y` for another `X` whose value we do not know.
 
-Let me rephrase this for folks that might find it a little bit confusing. (And yes it is.) `A` and `b` are the known constants of the equation which will help us find `y` for a given `x`. If we know `f(x)` we can plug in any `x` and find the corresponding `y`. But we do not know the magical A and b. So we first use the known values of `x` and `y` to find approximate values of A and b.
+Let me rephrase this for folks that might find it a little bit confusing. (And yes it is.) `A` and `b` are the known constants of the equation which will help us find `y` for a given `X`. If we know `f(X)` we can plug in any `X` and find the corresponding `y`. But we do not know the magical A and b. So we first use the known values of `X` and `y` to find approximate values of A and b.
 
-The key takeaway is that there are two core phases in a deep learning setup - The *training phase* and the *testing* phase. In the training phase we use the known set of `x` and `y` to find out the parameters `A` and `b`. Then in the testing phase we use those to test the function created to get the value `y` for the given image `x`.
+The key takeaway is that there are two core phases in a deep learning setup - The **training phase** and the **testing** phase. In the training phase we use the known set of `X` and `y` to find out the parameters `A` and `b`. Then in the testing phase we use those to test the function created to get the value `y` for the given image `X`.
 
 #### Brain Analogies
 
@@ -72,15 +73,20 @@ There is one thing to note. A lot of the research was initially based on how the
 
 #### Inside of an image
 
-The input `x` to the function is an image. Now a question to you - mathematically - What is an image? An image is a set of pixels. A pixel is a box of color. A 1 megapixel image contains 1 million pixels. Now what is a pixel - A pixel is a set of three colors - Red, Green and Blue. Remember your art classes - Primary Colors. All colors can be made by mixing by various amounts of these primary colors. Due to the way computers are designed each color is represented by a number between 0-255. No other reason - just limitations of the machine. So a 1 megapixel image would be 3 million numbers between 0 and 255.
+The input `X` to the function is an image. Now a question to you - mathematically - What is an image? An image is a set of pixels. A pixel is a box of color. A 1 megapixel image contains 1 million pixels. Now what is a pixel - A pixel is a set of three colors - Red, Green and Blue. Remember your art classes - Primary Colors. All colors can be made by mixing by various amounts of these primary colors. Due to the way computers are designed each color is represented by a number between 0-255. No other reason - just limitations of the machine. So a 1 megapixel image would be 3 million numbers between 0 and 255.
 
 #### The true equation
 So lets get back to the original equation - `f(🐱) = Probability of being a cat.` Now here the image, `🐱` is 3 million numbers. Naturally A has to have 3 million numbers as well. So the true equation actually will become:
-<div class="highlighter-rouge">
-<pre class="highlight" style="color:#bd4147; padding-left: 5px">
-a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub> ..... a<sub>n</sub>x<sub>n</sub> + b = y
-</pre>
-</div>
-But we can live in matrix form. This makes the life easier. We can write it like - `Ax + b = y` where `A` and `x` are matrices, `x` representing an image and `A` a set of parameters. I know matrices get into complicated land. But you don't need to know.
+$$
+a_1x_1 + a_2x_2 \dots a_nx_n + b = y
+$$
+But we can live in matrix form. This makes the life easier. We can write it like - `AX + b = y` where `A` and `X` are matrices, `X` representing an image and `A` a set of parameters. I know matrices get into complicated land. But you don't need to know. You might have noticed I used capital `X` and a small `Y` and similarly capital `A` and small `b`. That was the idea all along. Capitals are matrices.
 
-So that is the problem that deep learning solves. Finds a million sets of parameters A for each pixel in the image to classify the image correctly. Then we use those million parameters to answer the same question for another unknown image. This representation is not complete but I hope you got the basic idea. Stay tuned for the next post where we complete the equation above and get onto some real fun.
+#### Why `AX + b`?
+I know you might be wondering, where did this equation come from? And why only this? Now is a good time for me answer that question. And the answer is very simple. Since we know an image has a million pixels and we want each pixel to count, we are really looking for the simplest equation possible. Really who can be good with a million numbers. And there is one more desire that we have - each pixel can have a different weight. A portion of the image defining the sky is not as helpful in determining if the image is a cat but a whisker surely is. So we need different weights for each pixel. That gives us a bare minimum equation where we have `AX`. Now adding a `b` has some very little cost. It is just a number. But you will see later this `b` gives us a lot of power during the training phase. We can use `b` to balance out some of the initial values of `A` and make the results cleaner and easier to work with.
+
+#### Summary
+
+The problem that deep learning solves is (in image classification) - Find a million sets of parameters A using multiple training images that classify them correctly. Then use those million parameters to answer the same question for an unknown image.
+
+**NOTE:** If you are about to talk about this somewhere, let me clarify that the above equation is incomplete to an extent that it is wrong. Do read the next part to get the mathematics to a conclusion. The split here is for a quick coffee break.
