@@ -33,7 +33,7 @@
           </h3>
           <div>
             {% for post in site.posts limit:7 %}
-              <a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a> - <span class="published-time"><span class="moment">{{ post.date | date_to_xmlschema}}</span></span><br>
+                            <a href="{{post.url}}" title="{{post.title}}">{{post.title | split: '-' | first}}</a> - <span class="published-time"><span class="moment">{{ post.date | date_to_xmlschema}}</span></span><br>
             {% endfor %}
           </div>
         </div><!-- Footer Widget Ends -->
