@@ -2,14 +2,14 @@
 layout: post
 title: "Easy Deep Learning Part II - Finishing Problem Definition"
 image: /assets/img/blog/deep2.jpg
-description: "The solutions that led to deep learning are very intuitive. It grows very organically into what it actually comes out to be."
+description: "We finish the mathematical equation of the core component of the deep learning network, realizing the extent of the problem and its solutions."
 math: true
 tags: [Deep Learning]
 excerpt: Continue the deep learning discussion with focus on completing the intuition.
 imgSrc: "[Pixabay](https://pixabay.com/en/smartphone-hand-photo-montage-faces-1445489/)"
 ---
 
-This is the second part of an intended multi-part series on deep learning. You can read Part 1 [here]({% post_url 2017-08-16-Deep-Learning-Part-1 %}).
+This is the second part of an multi-part series on deep learning. You can read Part 1 [here]({% post_url 2017-08-16-Deep-Learning-Part-1 %}). In this post we complete the minimum equation of an image classifier that takes an image and gives us the likelihood that it is that of a cat.
 
 #### Recap
 In the previous section we defined our deep learning task of detecting if an image is of a cat via the equation:
@@ -59,6 +59,6 @@ Back to middle school/high school mathematics. For finding out 1 million variabl
 The point I want to put across is that getting a perfect answer is hopeless and going in such an endeavor is likely to be doomed. So we have to go into approximations and find the approximate values of `A` & `b` that do the job for us. There are many possible imperfect answers and we find one of those that is good enough. Two runs of the same network can give different training weights `A` and `b` and both of them are approximate.
 
 #### Summary
-We have come a long way from where we started although the maths doesn't look much different. But now that you are here, you would be realizing that deep learning is no magic and we are not messing up with the brain. It is high school mathematics just scaled to a million parameters. We went through how a neuron can be defined as the simple equation - `g(Ax + b)` and where this equation came from.
+We have come a long way from where we started although the maths doesn't look much different. But now that you are here, you would be realizing that deep learning is no magic and we are not messing up with the brain. It is high school mathematics just scaled to a million parameters. We went through how a neuron can be defined as the simple equation - `g(Ax + b)` where `A` is a set of weights for each pixel, `b` is a bias we added to help have some control initially and `g` is the activation function like softmax that converts output weight to a probability.
 
 Stay tuned for the next part where the real fun will begin as we will go into the `training` phase of the network.
