@@ -2,14 +2,14 @@
 layout: post
 title: "Easy Deep Learning Part I - Defining the problem"
 image: /assets/img/blog/deep.jpg
-description: "The maths behind it is really simple. A middle school student can get it. Now the implementation details are a whole new story."
+description: "Deep learning is a complex name to a much simpler set of mathematical equations. Here we start with defining what the problem is."
 tags: [Deep Learning]
 math: true
 excerpt: Understand deep learning starting with high school mathematics.
 imgSrc: "[Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)"
 ---
 
-This is the first part of an intended multi-part series on deep learning as I sort my thoughts around the learnings in the last 1 year and put them here for my memories and help fellow humans get rid of the fear of the mechanical brain.
+This is the first part of a multi-part series on deep learning as I sort my thoughts around the learnings in the last 1 year and put them here for my memories and help fellow humans get rid of the fear of the mechanical brain. In this part we describe what deep learning is and start formulating an equation for the image classification problem in deep learning.
 
 #### Disclaimer
 Before you go on to read my post, do understand that this is a set of intuitions to make a layman understand the concepts. Some of the concepts have been modified, wrangled and some have been omitted just for the ease of understanding. Take all of what comes next with a grain of salt. I do start with the very basics but do build up very quickly. So if you find something to slow and boring just skip a few paragraphs.
