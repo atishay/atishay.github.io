@@ -20,25 +20,17 @@ Let me start by calming all fear. You might have heard a lot about AI replacing 
 #### A sample problem
 For the sake of understanding lets pick up a problem of classifying an image. Here given an image we want to know if the image is of a cat. The same concepts apply to other pattern matching problems. This is the signature problem of artificial intelligence, one of the most complicated pattern recognition that humans and animals do so easily millions of times in a day. Again not superhuman machines coming to kill us all, just a small piece of the way our eyes work.
 
+#### What is an image?
+The question for you - mathematically - What is an image? An image is a set of pixels. A pixel is a box of color. A 1 megapixel image contains 1 million pixels. Now what is a pixel - A pixel is a set of three colors - Red, Green and Blue. Remember your art classes - Primary Colors. All colors can be made by mixing by various amounts of these primary colors. Due to the way computers are designed each color is represented by a number between 0-255. No other reason - just limitations of the machine. So a 1 megapixel image would be 3 million numbers between 0 and 255.
+Now thinking a mathematical equation with 3 million number is a little two difficult. So instead let us put them in a variable `X`(we will later see how `X` is 3 billion numbers).
+
 #### Basic Mathematics
-Lets start with the very basics of framing this problem into something a little more mathematical:
+Now with the `X` we just defined, we need an equation to find `y` given `X`. Lets start with the simplest equation possible.
 
 ```
-AX + b = y
-```
-
-This is very simple mathematics from middle school. I hope you remember solving equations like `3x + 5 = 14` and coming up with the solution that `x = 3`. Lets look at another form of the same function:
-
-```
-f(X) = y
+y = f(X)
 ```
 where
-
-```
-f(X) = AX + b
-```
-
-Nothing has changed. This is another way of saying the same thing. Now lets change the X and the y to be a little more difficult. I mean as difficult to need machine learning:
 
 ```
 X = 🐱
@@ -46,15 +38,28 @@ X = 🐱
 ```
 y = Probability of being a cat.
 ```
-Now our problem becomes:
-
+Now we need the simplest `f(X)` possible(we are dealing with a million numbers). Here is the simplest one(see below for why):
 ```
-f(🐱) = Probability of being a cat.
+f(X) = AX + b
 ```
 
-I hope you are still here with me. We looking for a function `f(X)` such that if `X` is a photograph the function would return the likelihood that it contains a cat according to the knowledge that is built into the function.
+This is very simple mathematics from middle school. I hope you remember solving equations like `3x + 5 = y` where `x = 3`. Then we figure out that `y = 14`. This is the same thing.
 
-#### Probabilities
+I hope you are still here with me. We looking for a function `f(X)` such that if `X` is a photograph the function would return the likelihood that it contains a cat according to the knowledge that is built into the function. We came up with one possibility.
+
+#### The true equation
+Here is the equation: `f(🐱) = Probability of being a cat.` Now here the image, `🐱` is 3 million numbers. Naturally A has to have 3 million numbers as well. So the true equation actually will become:
+
+$$
+a_1x_1 + a_2x_2 \dots a_nx_n + b = y
+$$
+
+But we can live in matrix form. This makes the life easier. We can write it like - `AX + b = y` where `A` and `X` are matrices, `X` representing an image and `A` a set of parameters. I know matrices get into complicated land. But you don't need to go deep right now. You might have noticed I used capital `X` and a small `y` and similarly capital `A` and small `b`. That was the idea all along. Capitals are matrices.
+
+#### Why `AX + b`?
+I know you might be wondering, where did this equation come from? And why only this? How come this is the simplest one? Now is a good time for me answer that question. And the answer is very simple. We know an image has a million pixels and we want each pixel to count. There is one desire that we also have - each pixel should have the possibility of a different weight. A portion of the image defining the sky is not as helpful in determining if the image is a cat but a whisker surely is. So we need different weights for each pixel. That gives us a bare minimum equation where we have `AX`. Now adding a `b` has some very little cost. It is just a number. But you will see later this `b` gives us a lot of power and control. We can use `b` to balance out some of the initial values of `A` and make the results cleaner and easier to work with.
+
+#### Why Probabilities?
 You would be imagining why the right hand side of the equation are probabilities. They could be discrete yes or no answers. You normally want `f(🐱)` to say "Yes this is a cat." In the early days (1950s) that approach was tried in something called a "Perceptron". It is very easy to guess why those would not work. We all know there is no white and black. There are millions of illusions, cats that hide in the environment, dogs that look like cats and so on. If we can't be a 100% sure, why should we expect the mathematical equations to be. It is more practical to ask how likely the equations match and then we can improve the formula to give us better values.
 
 #### Twist
@@ -73,25 +78,9 @@ Take an example. Say you get a model of the Statue of Liberty. It looks like the
 
 There is one thing to note. A lot of the research was initially based on how the brain works (though we have diverged quite a lot), and therefore a lot of terms come from that world. The training and testing are terms like these which can refer to a brain learning something and then proving the learning. There is nothing to be worry about. No messing up with the gooey stuff in one's head apart from sharpening it with new learnings.
 
-#### Inside of an image
-
-The input `X` to the function is an image. Now a question to you - mathematically - What is an image? An image is a set of pixels. A pixel is a box of color. A 1 megapixel image contains 1 million pixels. Now what is a pixel - A pixel is a set of three colors - Red, Green and Blue. Remember your art classes - Primary Colors. All colors can be made by mixing by various amounts of these primary colors. Due to the way computers are designed each color is represented by a number between 0-255. No other reason - just limitations of the machine. So a 1 megapixel image would be 3 million numbers between 0 and 255.
-
-#### The true equation
-So lets get back to the original equation - `f(🐱) = Probability of being a cat.` Now here the image, `🐱` is 3 million numbers. Naturally A has to have 3 million numbers as well. So the true equation actually will become:
-
-$$
-a_1x_1 + a_2x_2 \dots a_nx_n + b = y
-$$
-
-But we can live in matrix form. This makes the life easier. We can write it like - `AX + b = y` where `A` and `X` are matrices, `X` representing an image and `A` a set of parameters. I know matrices get into complicated land. But you don't need to go deep right now. You might have noticed I used capital `X` and a small `y` and similarly capital `A` and small `b`. That was the idea all along. Capitals are matrices.
-
-#### Why `AX + b`?
-I know you might be wondering, where did this equation come from? And why only this? Now is a good time for me answer that question. And the answer is very simple. Since we know an image has a million pixels and we want each pixel to count, we are really looking for the simplest equation possible. A more complicated function might really be too much. Who can be good with a million numbers? And there is one more desire that we have - each pixel should have the possibility of a different weight. A portion of the image defining the sky is not as helpful in determining if the image is a cat but a whisker surely is. So we need different weights for each pixel. That gives us a bare minimum equation where we have `AX`. Now adding a `b` has some very little cost. It is just a number. But you will see later this `b` gives us a lot of power during the training phase. We can use `b` to balance out some of the initial values of `A` and make the results cleaner and easier to work with.
-
 #### Summary
 
-The problem that deep learning solves is (in image classification) - Find a million sets of parameters A using multiple training images that classify them correctly. Then use those million parameters to answer the same question for an unknown image. We started trying to formulate this problem as an equation where we could give value to each pixel of the image and came up with `AX + b` as the minimum equation to get this task done.
+The problem that deep learning solves is (in image classification) - Find a million sets of parameters A using multiple training images that classify them correctly. Then use those million parameters to answer the same question for an unknown image. We started trying to formulate this problem as an equation where we could give weights to each pixel of the image and came up with `AX + b` as the minimum equation to get this task done.
 
 **NOTE:** If you are about to talk about this somewhere, let me clarify that the above equation is incomplete to an extent that it is wrong. Do read the next part to get the mathematics to a conclusion. The split here is for a quick coffee break.
 
