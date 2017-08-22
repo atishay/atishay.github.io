@@ -61,4 +61,4 @@ The point I want to put across is that getting a perfect answer is hopeless and 
 #### Summary
 We have come a long way from where we started although the maths doesn't look much different. But now that you are here, you would be realizing that deep learning is no magic and we are not messing up with the brain. It is high school mathematics just scaled to a million parameters. We went through how a neuron can be defined as the simple equation - `g(Ax + b)` where `A` is a set of weights for each pixel, `b` is a bias we added to help have some control initially and `g` is the activation function like softmax that converts output weight to a probability.
 
-Stay tuned for the next part where the real fun will begin as we will go into the `training` phase of the network.
+In the next part we will go into the `training` phase of the network describing how to use the equation we just came up with. To go to the next part click [here]({% post_url 2017-08-21-Deep-Learning-Part-3 %}).
