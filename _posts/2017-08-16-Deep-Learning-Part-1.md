@@ -47,6 +47,9 @@ This is very simple mathematics from middle school. I hope you remember solving 
 
 I hope you are still here with me. We looking for a function `f(X)` such that if `X` is a photograph the function would return the likelihood that it contains a cat according to the knowledge that is built into the function. We came up with one possibility.
 
+#### Statistics
+This is the same equation as fitting a line though a set of points in X as used in linear regression with statistics. Machine learning is stats on steroids.
+
 #### The true equation
 Here is the equation: `f(🐱) = Probability of being a cat.` Now here the image, `🐱` is 3 million numbers. Naturally A has to have 3 million numbers as well. So the true equation actually will become:
 
@@ -82,6 +85,6 @@ There is one thing to note. A lot of the research was initially based on how the
 
 The problem that deep learning solves is (in image classification) - Find a million sets of parameters A using multiple training images that classify them correctly. Then use those million parameters to answer the same question for an unknown image. We started trying to formulate this problem as an equation where we could give weights to each pixel of the image and came up with `AX + b` as the minimum equation to get this task done.
 
-**NOTE:** If you are about to talk about this somewhere, let me clarify that the above equation is incomplete to an extent that it is wrong. Do read the next part to get the mathematics to a conclusion. The split here is for a quick coffee break.
+**NOTE:** If you are about to talk about this somewhere, let me clarify that the above equation is incomplete to an extent that it is wrong. For statistics, this may be good enough, not for deep learning. Do read the next part to get the mathematics to a conclusion. The split here is for a quick coffee break.
 
 You can continue onto the next post [here]({% post_url 2017-08-18-Deep-Learning-Part-2 %}) where we complete the equation we started working on.

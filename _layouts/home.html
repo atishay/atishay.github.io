@@ -821,7 +821,7 @@ layout: base
         <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.3s">
           <div class="blog-item-img">
             <a href="{{post.url}}">
-              <img src="{{post.image | escape}}" alt=" {% if post.description %} {{post.description | strip | escape}} {% else %} {{page.title | strip | escape}} {% endif %}">
+              <img src="{{post.image | escape}}" alt=" {% if post.excerpt %} {{post.excerpt | strip | escape}} {% else %} {{page.title | strip | escape}} {% endif %}">
             </a>
           </div>
           <div class="blog-item-text">
