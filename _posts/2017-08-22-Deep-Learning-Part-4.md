@@ -2,8 +2,7 @@
 layout: post
 title: "Easy Deep Learning Part IV - Working code"
 image: /assets/img/blog/deep4.jpg
-description: "Time for some action. Our first deep learning model - handwriting recognition"
-math: true
+description: "Drawing MNIST - handwriting recognition with Deep Learning"
 tags: [Deep Learning]
 excerpt: Time for some action. Our first deep learning model - handwriting recognition
 imgSrc: "[Flickr](https://www.flickr.com/photos/mrsdkrebs/9728631593)"
@@ -30,11 +29,14 @@ So make some compromises:
 
 #### Libraries
 This is a very biased topic. I don't want to go in the benefits and disadvantages of a library. Any ways, if you are not doing research but instead just tweaking something that is already there(which you should be doing), there is no point in arguing about it. All are good enough. The biggest guns in the market are with caffe (facebook), tensorflow(google) and CNTK(microsoft). Again the goals of all these libraries are different. They are made for modifying the core of the networks, and messing up with the stuff like calculus which you don't need to go into just right now.
-For the sake of simplicity, I use (keras)[http://www.keras.io]. This is one of the simplest to use libraries with the minimal amount of code you need to write. The library is built over CNTK, tensorflow and theano and therefore you can go deep into lower level if you so desire. This library also enables me to export models that you can visualize in Javascript.
+For the sake of simplicity, I use (keras)[http://www.keras.io]. This is one of the simplest to use libraries with the minimal amount of code you need to write. The library is built over CNTK, tensorflow and theano and therefore you can go deep into lower level if you so desire. This library also enables me to export models that you can visualize in Javascript. Since it is built over tensorflow, you can export its models to mobile and run them there.
+
+#### MNIST
+The MNIST data set is a data set of black and white (saves us the RGB channels) images of handwritten numbers(not cat pictures) from 0-9 all labelled correctly. They are available as 28x28 pixel images (not 1 megapixel). It is a very popular data set for tring out complicated networks as the problem is just perfect - not too heavy to require huge amount of processing time, not simple to be solvable easily by other means and not too complicated so that it can be solved by the simplest of neural networks.
 
 #### Installation
 From the python website install python. Remember to enable pip(or use get-pip.py to download pip). Then run `pip install keras` to get keras.
-You can now run python files by `python filename`. Google is your friend here (better than me) and you can always go to [keras.io](http://keras.io).
+You can now run python files by `python filename`. Google is your friend here (better than me) and you can always go to [keras.io](http://keras.io) to find the latest installation instructions.
 
 #### Code
 1. **Import the python modules to use**
@@ -85,7 +87,7 @@ loss_and_metrics = model.evaluate(x_test, y_test, batch_size=128)
 print loss_and_metrics
 ```
 
-This should give you an accuracy of 92-93%. Just like that.
+This should give you an accuracy of `92-93%`. Just like that.
 
 Here is the full code:
 
