@@ -51,7 +51,7 @@ Now `A'A` is a constant and `A'b + b'` is another. And we haven't earned anythin
 Well that is why we found the formal method with calculus. There is a chain rule in calculus that makes this very simple as we multiply gradients until we get to the right weights to update.
 
 #### Shall we make it deeeeeeeeeeeep
-Mostly deeper networks do produce better results. But there is a limit. You can see this in organizations from our analogy too. The longer the management hierarchy, the more is the signal loss from the lower down to the higher ups. In a neural network during the back propagation steps, each time we go a layer deep we have to multiply with the weights of the next layer. After a few hundred layers the product of these weights make the updates so small that the initial few layers live on with their starting random weights for a long time. The data requirement increases with the depth of the network. If we really want it deep, it gets a lot more hungry. That is why the state of the art networks take weeks to finish training on the fastest GPUs and need huge data sets. There is one more reason attached to the same thing. The number of parameters in A & b as they increase, well the model has a lot of leeway and after some time, it actually gets enough parameters to fit the entire data set in the if this image then this kind of a equation. Then we have the same old over fitting problem. So going deep is good, until some depth.
+Mostly deeper networks do produce better results. But there is a limit. You can see this in organizations from our analogy too. The longer the management hierarchy, the more is the signal loss from the lower down to the higher ups. In a neural network during the back propagation steps, each time we go a layer deep we have to multiply with the weights of the next layer. After a few hundred layers the product of these weights make the updates so small that the initial few layers live on with their starting random weights for a long time. This is one form of the so called **Vanishing GRadient** problem. The data requirement increases with the depth of the network. If we really want it deep, it gets a lot more hungry. That is why the state of the art networks take weeks to finish training on the fastest GPUs and need huge data sets. There is one more reason attached to the same thing. The number of parameters in A & b as they increase, well the model has a lot of leeway and after some time, it actually gets enough parameters to fit the entire data set in the if this image then this kind of a equation. Then we have the same old over fitting problem. So going deep is good, until some depth.
 
 #### Lets see some code
 Well, the beauty of the libraries that we use is that, going deep is fairly easy if we do the basic thing. The only code change that `keras` really minimal.
@@ -59,14 +59,15 @@ Well, the beauty of the libraries that we use is that, going deep is fairly easy
 ```python
 model = Sequential([
     Dense(units=1000,input_dim=784),
+    Activation('softmax'),
     Dense(units=10, input_dim=1000),
     Activation('softmax'),
 ])
 ```
 
-We have brought 1000 teams that see the initial data and we take input from those 1000 outputs. This might not give too much of an improvement and in the next post we will go over why.
+We have brought 1000 teams that see the initial data and we take input from those 1000 outputs. This will run very slow. We will get to speeding it up and improving it in the next post.
 
 #### Summary
 In this post we talked about how we can all more variables and allow the equation (from now on called a model) to be more complicated by having a chain of layers. We also discussed why it seems like a good idea and how we can get the model made deeper in keras.
 
-In the next post we will talk about how to solve some of the problems and roadblocks we hit by depth and some common tricks we can use to get improvements.
+In the [next post]({% post_url 2017-08-29-Deep-Learning-Part-6 %}) we will talk about how to solve some of the problems and roadblocks we hit by depth and some common tricks we can use to get improvements.
