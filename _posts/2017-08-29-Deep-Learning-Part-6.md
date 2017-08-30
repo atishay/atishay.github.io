@@ -4,7 +4,7 @@ title: "Easy Deep Learning Part VI - Contracts, Options and Futures"
 image: /assets/img/blog/deep6.jpg
 description: "Talk about parameter changes, initialization, dropout and other regularization."
 tags: [Deep Learning]
-excerpt: Lets make the network actually deeper. Understand how the maths changes - Or does it?
+excerpt: Defaults are good, but playing with them can eek out the next 2% that we are looking for.
 imgSrc: "[Pixabay](https://pixabay.com/en/doors-choices-choose-open-decision-1767563/)"
 ---
 
