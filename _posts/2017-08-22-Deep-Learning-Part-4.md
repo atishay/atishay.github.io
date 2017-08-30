@@ -117,4 +117,4 @@ loss_and_metrics = model.evaluate(x_test, y_test, batch_size=128)
 print loss_and_metrics
 ```
 
-Now that we have working code, we can really zoom ahead. You know the basics. Give me some time to build upon it. Up until next time, enjoy playing with the model, drawing digits by hand and sending them to the network.
+Now that we have working code, we can really zoom ahead. You know the basics. Give me some time to build upon it. In [part 5]({% post_url 2017-08-24-Deep-Learning-Part-5 %}) we will talked about deeper networks, how and why.
