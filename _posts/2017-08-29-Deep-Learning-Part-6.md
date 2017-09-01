@@ -73,4 +73,4 @@ print loss_and_metrics
 #### Summary
 We are a long way from the `AX + b` that we started with, but the changes are all minimal and incremental and conceptually nothing much has changed. Here we talked about some of the options that we have while starting with the model how to tweak the defaults.
 
-In the next part we will figure out the way to use some of the local information in the image and get some great improvements via another of the buzzwords - Convolutional Neural Networks.
+In the [next part]({% post_url 2017-08-30-Deep-Learning-Part-7 %}) we will figure out the way to use some of the local information in the image and get some great improvements via another of the buzzwords - Convolutional Neural Networks.
