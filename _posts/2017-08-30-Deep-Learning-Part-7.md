@@ -4,7 +4,7 @@ title: "Easy Deep Learning Part VII - Convolutional Neural Networks"
 image: /assets/img/blog/deep7.jpg
 description: "Introduce convolutional neural networks - the why and how local information gets captured."
 tags: [Deep Learning]
-excerpt: CovNets and local information can really make results better. A simple solution to a simple problem.
+excerpt: CovNets and local information can really make results better. Simple Problem - Simple Solution.
 imgSrc: "[UnSplash](https://unsplash.com/search/photos/swirl?photo=aQcE3gDSSTY)"
 ---
 
