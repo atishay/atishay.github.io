@@ -45,4 +45,4 @@ There is one more concept that needs to be understood before going to code. This
 The concepts of dividing local stuff and then putting a manager onto global stuff is not just applicable to images. Words are formed by looking at nearby characters, sentences via words and paragraphs via sentences. So this logic can be used on sentences of text. This logic can also be used with voice as that also consists of a similar pattern. I hope you can imagine how these simple concepts change everything.
 
 #### Summary
-Here we discussed the intuition and some concepts around Convolutions and why having local information passed onto the next layer is a good idea. In the next post we will apply this to the CIFAR data set and show some results from the convolutional neural networks that can really amaze us all.
+Here we discussed the intuition and some concepts around Convolutions and why having local information passed onto the next layer is a good idea. In the [next post]({% post_url 2017-09-18-Deep-Learning-Part-8 %}) we will apply this to the CIFAR data set and show some results from the convolutional neural networks that can really amaze us all.
