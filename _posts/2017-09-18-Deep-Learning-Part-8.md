@@ -10,6 +10,9 @@ imgSrc: "[Pixabay](https://pixabay.com/en/collage-africa-big-5-animals-lion-1803
 
 This is the eighth part of an intended multi-part series on deep learning. You should read [Part 1]({% post_url 2017-08-16-Deep-Learning-Part-1 %}), [Part 2]({% post_url 2017-08-18-Deep-Learning-Part-2 %}), [Part 3]({% post_url 2017-08-21-Deep-Learning-Part-3 %}), [Part 4]({% post_url 2017-08-22-Deep-Learning-Part-4 %}), [Part 5]({% post_url 2017-08-24-Deep-Learning-Part-5 %}), [Part 6]({% post_url 2017-08-29-Deep-Learning-Part-6 %}), [Part 7]({% post_url 2017-08-30-Deep-Learning-Part-7 %}) before heading over here.
 
+#### Recap
+In the previous posts we introduced neural networks, what they are and how they work as well as convolutional neural networks that provide methods to look at local information and generate the next layer by collecting information from a set of 9 neighbors.
+
 #### CIFAR-10
 We have played a lot with MNIST and now it is time to introduce a much more complicated CIFAR data set. With this, we will finally fulfill the detection of "is a cat" that we discussed in our early post. In comparison to modern day data sets, CIFAR-10 is very simple. It does have a bigger brother CIFAR-100, but for now we will not talk about it. This data set consists of 50k images of 10 types of objects - airplane, automobile, bird, cat, deer, dog, frog, horse, ship and truck. This one though just has 10 classes, is a lot more complicated. All 8s look very similar but all birds are very different. Automobiles have variety of shapes and sizes, colors etc that make this a much more difficult problem. CIFAR provides 32x32x3 colored images to test against.
 
@@ -58,5 +61,8 @@ print loss_and_metrics
 ```
 
 This code should look almost the same as the first code we wrote for MNIST apart from the fact that we are using ConvNets. We start by a 3x3 conv layer, add some dropout, add a Maxpool to reduce to a 16x16 image, then convert it to a a flat list of numbers to feed into the same dense network as before. We use MaxPool as without that it would be a lot slower. It is a good time to discuss performance. Dense layers are heavy. They involve a lot of computations. They are good as they can take information to anywhere but we need to be extra careful not to use too many of them as they really slow it down. Softmax is also a heavy operation and a good advice is to reduce the number of parameters to manageable levels before involving in the complex softmax method.
+
+#### Summary
+In this post we built a very simple convolutional neural network to classify the Cifar 10 images into various categories. We realized how simple the neural network engines make it to model a complicated piece of the network by just one function call.
 
 It came out to be a short post as we did not go through many of the optimizations. The reason why we did this will be very clear when we will in the next post use the model zoo to solve CIFAR-10.
