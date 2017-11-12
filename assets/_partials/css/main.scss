@@ -3659,6 +3659,39 @@ pre code, .mjx-chtml {
     margin-right: 20px;
 }
 
+#image-area {
+  height:500px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#blur-container {
+  position: relative;
+  background: inherit;
+  overflow: hidden;
+}
+#blur-container > div {
+  z-index: 5;
+  position: relative;
+  padding: 30px;
+  text-align: center;
+}
+#blur-container::before {
+  content: " ";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  bottom: -25px;
+  right: -25px;
+  background: inherit;
+  box-shadow: inset 0 0 0 200px rgba(255,255,255,0.4);
+  filter: blur(10px);
+}
+
 @media (max-width: 767px) {
   .tab-content>.tab-pane.force-visible-sm-down {
       display: block !important;
