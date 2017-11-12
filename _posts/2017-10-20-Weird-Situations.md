@@ -3,7 +3,7 @@ layout: post
 title: "Weird Situations in life - Table Topics"
 image: /assets/img/blog/weird.jpg
 description: "Table topics questions used at a themed meeting around weird situations in life."
-tags: [toastmasters]
+tags: [toastmasters, tabletopic]
 excerpt: Table topics questions used at a themed meeting around weird situations in life.
 imgSrc: "[Pixabay](https://pixabay.com/en/mistake-spill-slip-up-accident-876597/)"
 ---
