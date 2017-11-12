@@ -3692,6 +3692,19 @@ pre code, .mjx-chtml {
   filter: blur(10px);
 }
 
+@media all and (max-device-width: 1024px) {
+     #image-area {
+          background-attachment: scroll;
+     }
+     #blur-container::before {
+       content: ""
+     }
+     #blur-container {
+       background: rgba(255,255,255,0.6);
+     }
+}
+
+
 @media (max-width: 767px) {
   .tab-content>.tab-pane.force-visible-sm-down {
       display: block !important;
