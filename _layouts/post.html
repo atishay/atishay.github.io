@@ -309,6 +309,22 @@ layout: base
                 </ul>
                 </div>
               </aside>
+              <!-- Cover Image attribution -->
+               {% if page.imgSrc %}
+                <aside class="widget wow fadeInUp" data-wow-delay="0.3s">
+                  <h2 class="widget-title">Attribution</h2>
+                  {{page.imgSrc | markdownify}}
+                </aside>
+               {% endif %}
+              <aside class="widget text-widgets wow fadeInUp" data-wow-delay="0.3s">
+                <h2 class="widget-title">License</h2>
+                <p>The contents of this post are available under Creative Commons license. You are free to use them commercially given that you provide the right attribution. You can read more about the license at the
+                  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons website.</a>
+                </p>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                  <img src="/assets/img/blog/ccbysa.png"></img>
+                </a>
+              </aside>
             </div>
           </div>
           <!-- End -->

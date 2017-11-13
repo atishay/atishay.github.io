@@ -5,7 +5,7 @@ image: /assets/img/blog/american-culture.jpg
 description: "Table topics questions used at a themed meeting around the american culture."
 tags: [toastmasters, tabletopic]
 excerpt: Table topics questions used at a themed meeting around the american culture.
-imgSrc: "[Unsplash](https://unsplash.com/photos/Tdwu35bCUj0)"
+imgSrc: "Image by Luke Michael from [Unsplash](https://unsplash.com/photos/Tdwu35bCUj0)"
 ---
 
 Welcome to the culture special. America is a melting pot of diverse cultures and the american culture has picked up elements from a lot of them and evolved them into something totally unique and american. Today I will be celebrating the American culture with all of you through multiple questions where you can speak what your heart feels:

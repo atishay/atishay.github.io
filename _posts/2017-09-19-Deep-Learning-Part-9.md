@@ -5,7 +5,7 @@ image: /assets/img/blog/deep9.jpg
 description: "The real power of deep learning is reuse - Stand on the shoulder of giants."
 tags: [Deep Learning]
 excerpt: The real power of deep learning is reuse - Stand on the shoulder of giants.
-imgSrc: "[Pixabay](https://pixabay.com/en/architecture-building-infrastructure-2602013/)"
+imgSrc: "Image by StockSnap from [Pixabay](https://pixabay.com/en/architecture-building-infrastructure-2602013/)"
 ---
 
 This is the eighth part of an intended multi-part series on deep learning. You should read [Part 1]({% post_url 2017-08-16-Deep-Learning-Part-1 %}), [Part 2]({% post_url 2017-08-18-Deep-Learning-Part-2 %}), [Part 3]({% post_url 2017-08-21-Deep-Learning-Part-3 %}), [Part 4]({% post_url 2017-08-22-Deep-Learning-Part-4 %}), [Part 5]({% post_url 2017-08-24-Deep-Learning-Part-5 %}), [Part 6]({% post_url 2017-08-29-Deep-Learning-Part-6 %}), [Part 7]({% post_url 2017-08-30-Deep-Learning-Part-7 %}), [Part 8]({% post_url 2017-09-18-Deep-Learning-Part-8 %})before heading over here.

@@ -5,7 +5,7 @@ image: /assets/img/blog/weird.jpg
 description: "Table topics questions used at a themed meeting around weird situations in life."
 tags: [toastmasters, tabletopic]
 excerpt: Table topics questions used at a themed meeting around weird situations in life.
-imgSrc: "[Pixabay](https://pixabay.com/en/mistake-spill-slip-up-accident-876597/)"
+imgSrc: "Image by Steve Buissinne from [Pixabay](https://pixabay.com/en/mistake-spill-slip-up-accident-876597/)"
 ---
 
 Toastmasters' table topics are fun. You are picked up unprepared and told to speak on things you never thought you would speak on. We have been working hard to make it more interesting - getting people to really think on the fly by not letting them tapping into their speeches and past table topics by providing interesting situations to speak about. Here are some sample questions I created for a session I hosted. Enjoy.

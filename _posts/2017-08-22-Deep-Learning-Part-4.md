@@ -5,7 +5,7 @@ image: /assets/img/blog/deep4.jpg
 description: "Drawing MNIST - handwriting recognition with Deep Learning"
 tags: [Deep Learning]
 excerpt: Time for some action. Our first deep learning model - handwriting recognition
-imgSrc: "[Flickr](https://www.flickr.com/photos/mrsdkrebs/9728631593)"
+imgSrc: "Image by Denise Krebs from [Flickr](https://www.flickr.com/photos/mrsdkrebs/9728631593)"
 ---
 
 This is the fourth part of an intended multi-part series on deep learning. You should read [Part 1]({% post_url 2017-08-16-Deep-Learning-Part-1 %}), [Part 2]({% post_url 2017-08-18-Deep-Learning-Part-2 %}), [Part 3]({% post_url 2017-08-21-Deep-Learning-Part-3 %}) before heading over here.
