@@ -3659,6 +3659,33 @@ pre code, .mjx-chtml {
     margin-right: 20px;
 }
 
+#box-404 {
+  position: relative;
+}
+
+#detail-404 {
+  position: absolute;
+  left: 30%;
+  width: 50%;
+  top: 30%;
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  #detail-404 {
+    top: 25%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  #detail-404 {
+    top: 23%;
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
 #image-area {
   height:500px;
   background-attachment: fixed;
