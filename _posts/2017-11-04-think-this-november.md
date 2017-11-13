@@ -5,7 +5,7 @@ image: /assets/img/blog/november.jpg
 description: "This November before going onto shop, think about the repercussions of your actions"
 tags: [toastmasters]
 excerpt: This November before going onto shop, think about the repercussions of your actions.
-imgSrc: "[Pixabay](https://pixabay.com/en/wallet-cash-credit-card-pocket-1013789/)"
+imgSrc: "Image by Steve Buissinne from [Pixabay](https://pixabay.com/en/wallet-cash-credit-card-pocket-1013789/)"
 ---
 This is for my CC#09 - Emotional Topic, persuade with power:
 

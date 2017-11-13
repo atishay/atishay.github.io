@@ -6,7 +6,7 @@ description: "Wishing a happy 100th birthday to my grandfather."
 tags: [life]
 excerpt: A century is a lot of time. Happy 100th birthday to my grandfather. It is a feat.
 sidebar: 100 Years#A hundred years is a lot of time. I am honored to be attending the 100th birthday of my grandfather. It is a feat as well as a feast to remember. A lot has changed in the last century. A lot will in the next one. It is a feat that you lived so long. Congratulations.
-imgSrc: "[Freepik](http://www.freepik.com/free-vector/balloon-party-background_780957.htm)"
+imgSrc: "Image background from [Freepik](http://www.freepik.com/free-vector/balloon-party-background_780957.htm)"
 ---
 
 What was life like a hundred years back? Lets go back to 1917. Lets start with the luxurious you need to forgo - Phones, Laptops, Internet and anything smart or connected. I know you figured that out. Lets continue - lights, lamps, motors, air conditioners, heaters, fans and everything that runs with electricity. That should've hurt. Electricity was only in cities and for the rich. I can't imagine life without electricity. There are so many things tied to it. Forget taps. We can't have tanks on the roofs that supply water to them. Forget anything that you do at night. Apart from candle light dinners. Lets add more to the pain - forget cars and scooters. Learn to ride a horse. Ramp up your walking stamina. Horses are not for everybody and every-time.

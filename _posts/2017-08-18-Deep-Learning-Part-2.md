@@ -6,7 +6,7 @@ description: "We finish the mathematical equation of the core component of the d
 math: true
 tags: [Deep Learning]
 excerpt: Continue the deep learning discussion with focus on completing the intuition.
-imgSrc: "[UnSplash](https://unsplash.com/search/photos/brain-cell?photo=rmWtVQN5RzU)"
+imgSrc: "Image by Jesse Orrico from [UnSplash](https://unsplash.com/photos/rmWtVQN5RzU)"
 ---
 
 This is the second part of an multi-part series on deep learning. You can read Part 1 [here]({% post_url 2017-08-16-Deep-Learning-Part-1 %}). In this post we complete the minimum equation of an image classifier that takes an image and gives us the likelihood that it is that of a cat.

@@ -5,7 +5,7 @@ image: /assets/img/blog/deep6.jpg
 description: "Talk about parameter changes, initialization, dropout and other regularization."
 tags: [Deep Learning]
 excerpt: Defaults are good, but playing with them can eek out the next 2% that we are looking for.
-imgSrc: "[Pixabay](https://pixabay.com/en/doors-choices-choose-open-decision-1767563/)"
+imgSrc: "Image by Arek Socha from [Pixabay](https://pixabay.com/en/doors-choices-choose-open-decision-1767563/)"
 ---
 
 This is the sixth part of an intended multi-part series on deep learning. You should read [Part 1]({% post_url 2017-08-16-Deep-Learning-Part-1 %}), [Part 2]({% post_url 2017-08-18-Deep-Learning-Part-2 %}), [Part 3]({% post_url 2017-08-21-Deep-Learning-Part-3 %}), [Part 4]({% post_url 2017-08-22-Deep-Learning-Part-4 %}), [Part 5]({% post_url 2017-08-24-Deep-Learning-Part-5 %}) before heading over here.

@@ -6,7 +6,7 @@ description: "When Queen Victoria set up schools in India she didn't realize wha
 tags: [toastmasters, life]
 excerpt: When Queen Victoria set up schools in India she didn't realize what a chain reaction she triggered.
 sidebar: The Original#The speech is modified from the original by Kenny Sebastian on [Kendriya Vidyalayas](https://www.youtube.com/watch?v=Cdsnc70Un14). I have tried to do what 3 Idiots did to Five Point Someone. Lets see if you like it. Apologies to my school and especially Pundit Sir. I know the humor is base an lowly. Do forgive me for using your name in an enactment. I know you can take some humor in your stride.
-imgSrc: "[Pixabay](https://pixabay.com/en/school-old-plate-learning-1223872/)"
+imgSrc: "Image by Devanth from [Pixabay](https://pixabay.com/en/school-old-plate-learning-1223872/)"
 ---
 
 Long Long ago there was a princess...that's the only way Disney taught us to start a story. Anyways, this princess became a queen...and what a queen... the queen that the modern feminists would be jealous of... The day she sneezed the world stock market fell 100 points. Her laughter was a boost of a hundred and when she got angry.... Let’s not talk about that.... I know what &lg;audience member&gt; is thinking. I too wish my ancestors took biology seriously. Tracking her health and making some bucks. I won't be standing here like this. Her name was Victoria and she also happen to be the biggest known business tycoon.

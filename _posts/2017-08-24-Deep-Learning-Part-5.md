@@ -5,7 +5,7 @@ image: /assets/img/blog/deep5.jpg
 description: "Making the network deeper"
 tags: [Deep Learning]
 excerpt: Lets make the network actually deeper. Understand how the maths changes - Or does it?
-imgSrc: "[Pixabay](https://pixabay.com/en/the-well-the-depth-of-the-bricked-1378979/)"
+imgSrc: "Image by mh-grafik from [Pixabay](https://pixabay.com/en/the-well-the-depth-of-the-bricked-1378979/)"
 ---
 
 This is the fourth part of an intended multi-part series on deep learning. You should read [Part 1]({% post_url 2017-08-16-Deep-Learning-Part-1 %}), [Part 2]({% post_url 2017-08-18-Deep-Learning-Part-2 %}), [Part 3]({% post_url 2017-08-21-Deep-Learning-Part-3 %}), [Part 4]({% post_url 2017-08-22-Deep-Learning-Part-4 %}) before heading over here.

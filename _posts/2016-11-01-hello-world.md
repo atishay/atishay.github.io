@@ -6,7 +6,7 @@ description: "First blog post on the Atishay Jain website"
 tags: [thoughts]
 excerpt: Welcome to my blog. Its great to be blogging again. In my first post I discuss my motivations to blog.
 sidebar: Trivia# The first known instance of the usage of the words "hello" and "world" together in computer literature occurred earlier, in Kernighan's 1972 Tutorial Introduction to the Language B. Later Kernighan and Ritchie's seminal book "The C Programming Language" popularized as the first program of a computer language. Further - The hello world program for a browser is a txt file with the word 'Hello World'. Read more about the history of hello world at [Wikipedia](https://www.wikiwand.com/en/%22Hello,_World!%22_program).
-imgSrc: "[Flickr](https://www.flickr.com/photos/oskay/472097903)"
+imgSrc: "Image by Windell Oskay from [Flickr](https://www.flickr.com/photos/oskay/472097903)"
 ---
 
 The first output of every computer program has traditionally been hello world. That feels like the right way to restart a blog. I have had a website and blogs at multiple times in the past. While resurrecting a website and a blog for myself, I have had some questions that you non-blogger should ask yourself:

@@ -6,7 +6,7 @@ description: "Deep learning is a complex name to a much simpler set of mathemati
 tags: [Deep Learning]
 math: true
 excerpt: Understand deep learning starting with high school mathematics.
-imgSrc: "[Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)"
+imgSrc: "Image by Damir Belavić from [Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)"
 ---
 
 This is the first part of a multi-part series on deep learning as I sort my thoughts around the learnings in the last 1 year and put them here for my memories and help fellow humans get rid of the fear of the mechanical brain. In this part we describe what deep learning is and start formulating an equation for the image classification problem in deep learning.
