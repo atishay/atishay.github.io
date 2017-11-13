@@ -80,10 +80,10 @@ a:hover{
 #progress .icon-effect{
   color: #34495E;
 }
-#clients #clients-scroller .owl-pagination .owl-page.active span{
+#clients #clients-scroller .owl-dots .owl-dot.active span{
   background: #34495E;
 }
-#clients #clients-scroller .owl-pagination .owl-page span{
+#clients #clients-scroller .owl-dots .owl-dot span{
   border-color: #34495E;
 }
 #testimonial #testimonial-carousel .carousel-control{
@@ -277,10 +277,10 @@ a:hover{
 #testimonial .testimonial-footer {
   color: #34495E;
 }
-#testimonial .owl-pagination .owl-page span {
+#testimonial .owl-dots .owl-dot span {
   border: 1px solid #34495E;
 }
-#testimonial .owl-pagination .owl-page.active span {
+#testimonial .owl-dots .owl-dot.active span {
   background: #34495E none repeat scroll 0 0;
 }
 #testimonial .testimonial-footer a {
@@ -290,10 +290,10 @@ a:hover{
 #single-testimonial-item .testimonial-footer a {
     color: #34495E;
 }
-#single-testimonial-item .owl-pagination .owl-page.active span {
+#single-testimonial-item .owl-dots .owl-dot.active span {
   background: #34495E none repeat scroll 0 0;
 }
-#single-testimonial-item .owl-pagination .owl-page span {
+#single-testimonial-item .owl-dots .owl-dot span {
   border: 1px solid #34495E;
 }
 #color-client-scroller .client-item-wrapper {
