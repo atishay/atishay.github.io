@@ -3705,6 +3705,12 @@ pre code, .mjx-chtml {
     margin-right: 20px;
 }
 
+@media (min-width: 740px){
+  .wow {
+    opacity: 0;
+  }
+}
+
 #box-404 {
   position: relative;
 }

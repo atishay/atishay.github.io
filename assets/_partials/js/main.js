@@ -1,4 +1,12 @@
-$(function() {
+
+// var wow = new WOW({
+//   //disabled for mobile
+//   mobile: false
+// });
+// wow.init();
+
+
+$(function () {
   //Dropdown Menus
   $('.dropdown').hover(
     function () {
@@ -6,9 +14,18 @@ $(function() {
     },
     function () {
       $(this).removeClass('open');
-    }
-    );
+    });
 
+  if ($(window).width() >= 740) {
+    function afterReveal(el) {
+      el.addEventListener('animationend', function (event) {
+        $('.wow').each(function () {
+          $(this).css('opacity', 1);
+        });
+      });
+    }
+    new WOW({ callback: afterReveal }).init();
+  }
 
 
   // //Search
