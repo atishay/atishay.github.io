@@ -9,7 +9,7 @@ layout: base
       <h1 class="section-title wow fadeInUpQuick">
         {{ page.tag | capitalize }}
       </h1>
-      <p class="section-subcontent">Here you can view filtered posts with the tag - {{ page.tag }}.</p>
+      <p class="section-subcontent wow fadeInUpQuick">Here you can view filtered posts with the tag - {{ page.tag }}.</p>
       {% for post in site.tags[page.tag] %}
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.3s">
