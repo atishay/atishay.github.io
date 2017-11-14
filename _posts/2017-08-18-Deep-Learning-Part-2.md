@@ -7,6 +7,8 @@ math: true
 tags: [Deep Learning]
 excerpt: Continue the deep learning discussion with focus on completing the intuition.
 imgSrc: "Image by Jesse Orrico from [UnSplash](https://unsplash.com/photos/rmWtVQN5RzU)"
+related: ['dl1', 'dl3', 'dl4', 'dl5']
+identifier: dl2
 ---
 
 This is the second part of an multi-part series on deep learning. You can read Part 1 [here]({% post_url 2017-08-16-Deep-Learning-Part-1 %}). In this post we complete the minimum equation of an image classifier that takes an image and gives us the likelihood that it is that of a cat.

@@ -6,6 +6,8 @@ description: "The best models have some real clever tricks to get through the la
 tags: [Deep Learning]
 excerpt: The best models have some real clever tricks to get through the last mile. They are worth learning.
 imgSrc: "Image by Jarosław Igras [Pixabay](https://pixabay.com/en/the-intersection-way-investment-2683894/)"
+related: ['dl9']
+identifier: dl10
 ---
 
 #### Recap

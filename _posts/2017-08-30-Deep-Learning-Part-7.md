@@ -7,6 +7,8 @@ tags: [Deep Learning]
 excerpt: CovNets and local information can really make results better. Simple Problem - Simple Solution.
 imgSrc: "Image by
 Nick Hillier from [UnSplash](https://unsplash.com/photos/aQcE3gDSSTY)"
+related: ['dl6', 'dl8', 'dl9', 'dl10']
+identifier: dl7
 ---
 
 This is the seventh part of an intended multi-part series on deep learning. You should read [Part 1]({% post_url 2017-08-16-Deep-Learning-Part-1 %}), [Part 2]({% post_url 2017-08-18-Deep-Learning-Part-2 %}), [Part 3]({% post_url 2017-08-21-Deep-Learning-Part-3 %}), [Part 4]({% post_url 2017-08-22-Deep-Learning-Part-4 %}), [Part 5]({% post_url 2017-08-24-Deep-Learning-Part-5 %}), [Part 6]({% post_url 2017-08-29-Deep-Learning-Part-6 %}) before heading over here.

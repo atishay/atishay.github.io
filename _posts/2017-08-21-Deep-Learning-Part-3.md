@@ -7,6 +7,8 @@ math: true
 tags: [Deep Learning]
 excerpt: Complete our model by going into training and backtracking.
 imgSrc: "Image by Gerd Altmann from [Pixabay](https://pixabay.com/en/smartphone-hand-photo-montage-faces-1445489/)"
+related: ['dl2', 'dl4', 'dl5', 'dl6']
+identifier: dl3
 ---
 
 This is the third part of an intended multi-part series on deep learning. You should read [Part 1]({% post_url 2017-08-16-Deep-Learning-Part-1 %}) and [Part 2]({% post_url 2017-08-18-Deep-Learning-Part-2 %}) before heading over here.

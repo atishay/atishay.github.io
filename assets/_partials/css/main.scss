@@ -2939,6 +2939,23 @@ h2.widget-title {
   padding: 0;
   height: 300px;
 }
+
+#google-map-contact > div {
+  height: 400px;
+}
+
+@media screen and (max-width: 1024px) {
+  #google-map-contact > div {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #google-map-contact > div {
+    height: 200px;
+  }
+}
+
 #google-map-contact2 {
   padding: 0;
   height: 200px;
