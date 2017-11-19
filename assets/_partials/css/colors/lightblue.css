@@ -442,3 +442,6 @@ h2.widget-title {
 #main-menu ul .dropdown .dropdown-menu a:hover, #main-menu .dropdown .dropdown-menu a .active {
   color: #00D3F9;
 }
+.top_search_con input:focus {
+    border: 1px solid #00D3F9;
+}

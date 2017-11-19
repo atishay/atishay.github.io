@@ -54,6 +54,7 @@ body {
   line-height: 25px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  overflow-x: hidden;
 }
 .form-group .help-block {
   color: red;
@@ -151,6 +152,7 @@ button {
 .btn:hover,
 button:hover {
   color: #fff;
+  cursor: pointer;
 }
 .section {
   padding: 80px 0;
@@ -227,7 +229,12 @@ button:hover {
 .btn-radius {
   border-radius: 5px;
 }
-
+.media-left{
+  padding-right: 10px;
+}
+.img-circle{
+  border-radius: 50%;
+}
 .input-group .form-control {
   border-radius: 30px 0 0 30px;
 }
@@ -636,6 +643,7 @@ i:hover {
   margin: 0 5px;
   background: rgba(253, 254, 255, 0.80);
   border: none;
+  cursor: pointer;
   transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
