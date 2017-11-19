@@ -3845,3 +3845,11 @@ pre code, .mjx-chtml {
       opacity: 1 !important;
   }
 }
+
+#header-wrap {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background: white;
+    width: 100%;
+}
