@@ -19,7 +19,7 @@
           </button>
           <!-- Brand -->
           <a class="navbar-brand" href="{{ "/" | relative_url}}">
-            <img src="{{ "/assets/img/logo.svg" | relative_url}}" width="130px" height="47px" alt="Atishay.me Logo">
+            <img src="{{ "/assets/img/logo.svg" | relative_url}}?{{site.time | date: '%s%N'}}" width="130px" height="47px" alt="Atishay.me Logo">
           </a>
           <div class="collapse navbar-toggleable-sm pull-xs-left pull-md-right" id="main-menu">
             <!-- Navbar Starts -->
@@ -29,7 +29,7 @@
               </li>
               {% if page.isHome %}
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}" role="button" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}?{{site.time | date: '%s%N'}}" role="button" aria-haspopup="true" aria-expanded="false">
                   Résumé
                 </a>
                 <div class="dropdown-menu">
@@ -42,7 +42,7 @@
                 </div>
               {% else %}
                 <li class="nav-item">
-                  <a class="nav-link" role="button" aria-expanded="false" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}">Résumé</a>
+                  <a class="nav-link" role="button" aria-expanded="false" href="{{ "/assets/pdf/Atishay-Jain.pdf" | relative_url }}?{{site.time | date: '%s%N'}}">Résumé</a>
                 </li>
               {% endif %}
               <li class="nav-item">

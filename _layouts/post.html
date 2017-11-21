@@ -14,7 +14,7 @@ layout: base
                 <div class="author-posted">
                   <div class="media">
                     <div class="media-left">
-                      <img class="blog-author-image img-circle img-responsive" src="{{ "/assets/img/blog/avatar.jpg" | relative_url }}" alt="Atishay Jain">
+                      <img class="blog-author-image img-circle img-responsive" src="{{ "/assets/img/blog/avatar.jpg" | relative_url }}?{{site.time | date: '%s%N'}}" alt="Atishay Jain">
                     </div>
                     <div class="media-body">
                       <span class="author-name"><a href="/"><b>Atishay Jain</b></a></span><br>
@@ -25,7 +25,7 @@ layout: base
               </header>
               <!-- Featured Content -->
               <section class="featured-wrapper">
-                  <div style="background-image: url({{page.image | escape}});"></div>
+                  <div style="background-image: url({{page.image | escape}}?{{site.time | date: '%s%N'}});"></div>
               </section>
               <!-- Post Content -->
               <section class="blog-post-content" id="post">
@@ -105,7 +105,7 @@ layout: base
                   <div class="col-md-3 no-pdl wow fadeIn" data-wow-delay="0.4s">
                     <div class="blog-item-img">
                       <a href="{{ site.baseurl }}{{ post.url }}">
-                        <img src="{{ site.baseurl }}{{post.image | escape}}" alt="{{ post.title }}" class="img-responsive">
+                        <img src="{{ site.baseurl }}{{post.image | escape}}?{{site.time | date: '%s%N'}}" alt="{{ post.title }}" class="img-responsive">
                       </a>
                     </div>
                     <a href="{{ site.baseurl }}{{ post.url }}">
@@ -360,7 +360,7 @@ layout: base
                   <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons website.</a>
                 </p>
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-                  <img src="{{"/assets/img/blog/ccbysa.png" | relative_url }}"></img>
+                  <img src="{{"/assets/img/blog/ccbysa.png" | relative_url }}?{{site.time | date: '%s%N'}}"></img>
                 </a>
               </aside>
             </div>
