@@ -103,9 +103,11 @@ layout: base
                 {% if sameTagCount >= minCommonTags or page.related contains post.identifier %}
                   {% if maxRelatedCounter < maxRelated or page.related contains post.identifier %}
                   <div class="col-md-3 no-pdl wow fadeIn" data-wow-delay="0.4s">
-                    <a href="{{ site.baseurl }}{{ post.url }}">
-                      <img src="{{ site.baseurl }}{{post.image | escape}}" alt="{{ post.title }}" class="img-responsive">
-                    </a>
+                    <div class="blog-item-img">
+                      <a href="{{ site.baseurl }}{{ post.url }}">
+                        <img src="{{ site.baseurl }}{{post.image | escape}}" alt="{{ post.title }}" class="img-responsive">
+                      </a>
+                    </div>
                     <a href="{{ site.baseurl }}{{ post.url }}">
                       <h2>{{ post.title }}</h2>
                     </a>

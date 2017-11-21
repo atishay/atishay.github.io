@@ -3853,3 +3853,17 @@ pre code, .mjx-chtml {
     background: white;
     width: 100%;
 }
+
+
+.blog-item-img {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
