@@ -31,7 +31,7 @@
   <meta name="msapplication-square150x150logo" content="{{ "assets/img/favicon/mstile-150x150.png" | relative_url }}" />
   <meta name="msapplication-wide310x150logo" content="{{ "assets/img/favicon/mstile-310x150.png" | relative_url }}" />
   <meta name="msapplication-square310x310logo" content="{{ "assets/img/favicon/mstile-310x310.png" | relative_url }}" />
-  <script type="text/javascript" async src="{{ "/assets/index.js" | relative_url }}"></script>
+  <script type="text/javascript" async src="{{ "/assets/index.js" | relative_url }}?{{site.time | date: '%s%N'}}"></script>
   {%if page.math %}
   <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'></script>
   {% endif %}
