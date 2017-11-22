@@ -4,8 +4,6 @@ layout: null
 
 const staticCacheName = "cache-{{site.time | date: '%s%N'}}";
 
-console.log("installing service worker");
-
 const filesToCache = [
 {% for page in site.html_pages %}
     '{{ page.url }}',
