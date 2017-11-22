@@ -1,6 +1,9 @@
 ---
 # Concatenate all minified JavaScript files
 ---
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/worker.js');
+}
 {% include_relative _partials/js/jquery-min.js %}
 {% include_relative _partials/js/popper.min.js %}
 {% if jekyll.environment == 'production' %}
