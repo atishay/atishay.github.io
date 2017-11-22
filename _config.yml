@@ -61,7 +61,7 @@ gist:
     noscript: false
 kramdown:
     math_engine: mathjax
-exclude: [README.md, TODO.md]
+exclude: [README.md, TODO.md, CODE_OF_CONDUCT.md, TODO.md, package.json, package-lock.json]
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
