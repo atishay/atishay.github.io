@@ -11,8 +11,12 @@ const filesToCache = [
 {% for post in site.posts %}
     '{{ post.url }}',
 {% endfor %}
+
+{% assign types = ".pdf,.eot,.ttf,.otf,.txt" | split: "," %}
 {% for file in site.static_files %}
-    '{{ file.path }}?{{site.time | date: '%s%N'}}',
+    {% unless types contains file.extname  %}
+        '{{ file.path }}?{{site.time | date: '%s%N'}}',
+    {% endunless %}
 {% endfor %}
 ];
 

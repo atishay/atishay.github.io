@@ -61,7 +61,7 @@ gist:
     noscript: false
 kramdown:
     math_engine: mathjax
-exclude: [README.md, TODO.md, CODE_OF_CONDUCT.md, TODO.md, package.json, package-lock.json, pre-commit.sh, params.json, LICENSE, CNAME, node_modules/*, Gemfile, Gemfile.lock]
+exclude: [README.md, TODO.md, CODE_OF_CONDUCT.md, TODO.md, package.json, package-lock.json, pre-push.sh, params.json, LICENSE, CNAME, node_modules/*, Gemfile, Gemfile.lock]
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]
