@@ -30,7 +30,7 @@ github_username:  atishay
 domain: atishay.info
 twitter:
   username: atishay811
-logo: /assets/img/logo.svg
+logo: /assets/img/logo.png
 defaults:
     layout: post
 permalink: /blog/:year/:month/:day/:title
