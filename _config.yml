@@ -56,6 +56,7 @@ exclude:
   - Gemfile.lock
 sass:
     style: compressed
+    sass_dir: assets/_partials/scss
 lsi: false
 safe: true
 incremental: false
