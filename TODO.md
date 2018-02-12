@@ -2,6 +2,7 @@ TODO
 ----------
 
 * Update JS libraries.
+    * Font Awesome 5.
 * Ensure canonical URLs work properly on github pages.
 * Rich metadata for google and others. Opengraph etc.
 * Add pre-commit hook with build steps and minification.

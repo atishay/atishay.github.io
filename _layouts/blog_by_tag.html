@@ -6,13 +6,13 @@ layout: base
   <div class="container">
     <!-- Row Starts -->
     <div class="row">
-      <h1 class="section-title wow fadeInUpQuick">
+      <h1 class="section-title wow fadeInUp">
         {{ page.tag | capitalize }}
       </h1>
-      <p class="section-subcontent wow fadeInUpQuick">Here you can view filtered posts with the tag - {{ page.tag }}.</p>
+      <p class="section-subcontent wow fadeInUp">Here you can view filtered posts with the tag - {{ page.tag }}.</p>
       {% for post in site.tags[page.tag] %}
       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.3s">
+        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="{{forloop.index | minus: 1 |modulo:3 | times:0.3 | plus: 0.1}}s">
           <div class="blog-item-img">
             <a href="{{post.url}}">
               <img src="{{post.image | escape}}?{{site.time | date: '%s%N'}}" alt="{{post.excerpt | escape}}">
