@@ -13,7 +13,7 @@ What was life like a hundred years back? Lets go back to 1917. Lets start with t
 
 Lets revise some history. The World War I was in progress. The Britishers ruled half of the planet. A conquerer could sell you for money. Slavery was rampant in a major part of the world. Malaria could wipe out a city. Medicine was less successful than a coin toss. The average man never saw old age. A rupee was worth more than ten thousand today (at least in terms of salary if not purchasing power). Common men only traveled across continents for one sole reason - to die in war.
 
-<img class="col-md-12 col-lg-6 img-fluid rounded" src="{{ site.url }}/assets/img/blog/babaji.jpg">
+<img class="col-md-12 col-lg-6 img-fluid rounded" alt="Babaji" src="{{ site.url }}/assets/img/blog/babaji.jpg">
 You were born in 1917 in the cold winters of the first world war. You were in your twenties when the second one broke through. Not many able men in their twenties survived the apocalypse. Yet you carried on in a small village that was not even in any of the maps (luckily nowadays Google maps puts up everything. I can mark your house in it) - without much of the health care innovations seeping in, not even notice from any of the corrupt government officers that were busy filling their own coffers.
 
 I congratulate you my grandfather to have lived through some of the toughest times to live through. You really need a of lot to survive - good health, peaceful times and a huge lot of luck. I know you didn't get all that, but somehow struggled through the tumults to live the day that very few live up to. I am blessed to have grown up under your blessings and hope to stay blessed for the rest of my life.
