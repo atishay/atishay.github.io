@@ -1,11 +1,3 @@
-
-// var wow = new WOW({
-//   //disabled for mobile
-//   mobile: false
-// });
-// wow.init();
-
-
 $(function () {
   //Dropdown Menus
   $('.dropdown').hover(
@@ -26,6 +18,34 @@ $(function () {
     }
     new WOW({ callback: afterReveal }).init();
   }
+
+  // Check for guitar links
+  if ($('.guitar').get()) {
+    $.getScript('/assets/js/raphael.min.js', function () {
+      $.getScript('/assets/js/jtab.min.js', function () {
+        $('.guitar').each(function () {
+          window.jtab.render($(this), $(this).text());
+          var svg = $(this).find('svg');
+          var width = svg.width();
+          var height = svg.height();
+          $(this).find('div').css('height', 'auto');
+          svg.attr('viewBox', '0 0 ' + width + ' ' + height);
+          // svg.attr('preserveAspectRatio', 'xMid yMid meet');
+          svg.css('height', 'auto');
+          svg.css('max-width', '100%');
+        });
+      });
+    });
+  }
+  var loadedMath = false;
+  $('script[type]').each(function () {
+    if (this.type.indexOf('math/tex') !== -1) {
+      if (!loadedMath) {
+        loadedMath = true;
+        $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML');
+      }
+    }
+  });
 
 
   // //Search
@@ -51,14 +71,6 @@ $(function () {
   //       $(this).find('input').val('');
   //     });
   //   });
-
-
-  //WOW Scroll Spy
-  // var wow = new WOW({
-  //     //disabled for mobile
-  //     mobile: false
-  // });
-  // wow.init();
 
 
   //Owl Carousel
@@ -226,8 +238,6 @@ $(function () {
   // }, {
   //   accY: -100
   // });
-
-
 
   // Back Top Link
   var offset = 200;
