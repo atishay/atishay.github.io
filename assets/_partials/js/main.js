@@ -51,7 +51,7 @@ $(function () {
       $('.videoPlayer').each(function () {
         var id = 'id' + Math.random().toString().replace('.', '');
         $(this).attr('id', id)
-        const player = new window.Plyr('#' + id, {
+        var player = new window.Plyr('#' + id, {
           iconUrl: '/assets/img/plyr.svg',
           blankUrl: undefined,
           poster: $('this').data('poster')
