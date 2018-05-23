@@ -21,19 +21,17 @@ $(function () {
 
   // Check for guitar links
   if ($('.guitar').get()) {
-    $.getScript('/assets/js/raphael.min.js', function () {
-      $.getScript('/assets/js/jtab.min.js', function () {
-        $('.guitar').each(function () {
-          window.jtab.render($(this), $(this).text());
-          var svg = $(this).find('svg');
-          var width = svg.width();
-          var height = svg.height();
-          $(this).find('div').css('height', 'auto');
-          svg.attr('viewBox', '0 0 ' + width + ' ' + height);
-          // svg.attr('preserveAspectRatio', 'xMid yMid meet');
-          svg.css('height', 'auto');
-          svg.css('max-width', '100%');
-        });
+    $.getScript('/assets/guitar.js', function () {
+      $('.guitar').each(function () {
+        window.jtab.render($(this), $(this).text());
+        var svg = $(this).find('svg');
+        var width = svg.width();
+        var height = svg.height();
+        $(this).find('div').css('height', 'auto');
+        svg.attr('viewBox', '0 0 ' + width + ' ' + height);
+        // svg.attr('preserveAspectRatio', 'xMid yMid meet');
+        svg.css('height', 'auto');
+        svg.css('max-width', '100%');
       });
     });
   }
@@ -46,6 +44,21 @@ $(function () {
       }
     }
   });
+
+  if ($('.videoPlayer').get()) {
+    $('head').append('<link rel="stylesheet" type="text/css" href="/assets/video.css" />');
+    $.getScript('/assets/video.js', function () {
+      $('.videoPlayer').each(function () {
+        var id = 'id' + Math.random().toString().replace('.', '');
+        $(this).attr('id', id)
+        const player = new window.Plyr('#' + id, {
+          iconUrl: '/assets/img/plyr.svg',
+          blankUrl: undefined,
+          poster: $('this').data('poster')
+        })
+      })
+    });
+  }
 
 
   // //Search
