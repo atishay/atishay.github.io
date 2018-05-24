@@ -60,6 +60,8 @@ I simplified the above for myself. The most common one would have 50% the symbol
 
 # Video
 Here is the video:
-<div class="videoPlayer plyr__video-embed">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/M_vkUvQWAKs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="video-container">
+  <div class="videoPlayer plyr__video-embed">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/M_vkUvQWAKs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
 </div>
