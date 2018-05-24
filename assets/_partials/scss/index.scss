@@ -1,3 +1,40 @@
 .plyr {
     border-radius: 8px;
 }
+ .post {
+  -webkit-animation: fadeInUpPost 1.5s;
+  -moz-animation: fadeInUpPost 1.5s;
+  -ms-animation: fadeInUpPost 1.5s;
+  -o-animation: fadeInUpPost 1.5s;
+  animation: fadeInUpPost 1.5s;
+ }
+
+
+ @-webkit-keyframes fadeInUpPost {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes fadeInUpPost {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

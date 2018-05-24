@@ -53,7 +53,7 @@ $(function () {
         $(this).attr('id', id)
         var player = new window.Plyr('#' + id, {
           iconUrl: '/assets/img/plyr.svg',
-          blankUrl: undefined,
+          blankUrl: '/assets/img/blank.mp4',
           poster: $('this').data('poster')
         })
       })
