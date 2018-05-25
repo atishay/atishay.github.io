@@ -28,10 +28,14 @@ The strumming pattern is `|↓|`.
 ```
     (Em)   (Em)
     Chura Liya
-    (A)       (A)         (Em)        (Em)
-|:  Bahaar Banke Aaoon Kabhi Tumhaari Duniya Mein
-    (A)       (A)         (C)         (Em)
-    Guzar Na Jaaye Yeh Din Kahin Isi Tamanna Mein :|(2)
+    (A)       (A)
+|:  Bahaar Banke Aaoon
+    (Em)        (Em)
+    Kabhi Tumhaari Duniya Mein
+    (A)       (A)
+    Guzar Na Jaaye Yeh Din
+    (C)         (Em)
+    Kahin Isi Tamanna Mein :|(2)
 
       (B7)(B7)(B7)(B7)(B7)(B7)(B7)
     Tum Mere Ho, Ho Tum Mere Ho
