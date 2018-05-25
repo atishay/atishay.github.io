@@ -37,3 +37,11 @@ Games have been taking the world forward. They are the pioneers that brought GPU
 
 
 Games do have side effects. After a certain rate of exposure, the virtual world starts to feel real and the real world virtual. There are only 24 hours in the day and there are other tasks that need time allocation. Very few earn money via games. We have failed as a society to channel our entertainment to create something valuable. We need to move more of our learning to be done via playing. We need to realize that just like bad books and bad movies there are bad games. That doesn't mean the medium is bad. The next time you find your little one asking to play a game, influence him in playing something that is useful and fun rather than restricting access. Games are the phenomenon that we can't prevent. Better to channel them.
+
+# Video
+Here is the video:
+<div class="video-container">
+  <div class="videoPlayer plyr__video-embed">
+  <iframe src="https://www.youtube.com/embed/mIxu6DQDa0U?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+  </div>
+</div>
