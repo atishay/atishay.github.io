@@ -62,6 +62,6 @@ I simplified the above for myself. The most common one would have 50% the symbol
 Here is the video:
 <div class="video-container">
   <div class="videoPlayer plyr__video-embed">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/M_vkUvQWAKs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/M_vkUvQWAKs?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
   </div>
 </div>
