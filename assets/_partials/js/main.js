@@ -54,8 +54,9 @@ $(function () {
         var player = new window.Plyr('#' + id, {
           iconUrl: '/assets/img/plyr.svg',
           blankUrl: '/assets/img/blank.mp4',
+          fullscreen: { enabled: true, fallback: true, iosNative: false },
           poster: $('this').data('poster')
-        })
+        });
       })
     });
   }
