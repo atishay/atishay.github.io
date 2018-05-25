@@ -328,7 +328,7 @@
 
 .plyr__video-embed iframe {
     border: 0;
-    height: 100% !important;
+    height: 100%;
     left: 0;
     position: absolute;
     top: 0;
@@ -336,7 +336,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 100% !important;
+    width: 100%
 }
 
 .plyr--full-ui .plyr__video-embed iframe {
