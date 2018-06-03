@@ -2,7 +2,7 @@
 layout: post
 title: "Chura Liya"
 image: /assets/img/blog/chura.jpg
-tags: [guitar]
+tags: [Guitar]
 excerpt: "My foray into the guitar - Chura Liya (Yadoon Ki Baraat)"
 imgSrc: "Image by Josué González from [Pixabay](https://pixabay.com/en/guitar-landscape-wood-musician-3373539/)"
 guitar: true
