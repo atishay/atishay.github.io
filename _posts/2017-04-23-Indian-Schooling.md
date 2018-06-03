@@ -39,4 +39,10 @@ You know why India sucks at sports. Because we learn different games. You should
 
 When Queen Victoria started schools in India, she was looking at instilling the following traits – Discipline, loyalty and obedience. She never realized that these traits are as essential to success as are perseverance and intuition. Those factories haven’t stopped running but instead over the age have picked up new and efficient techniques. The classic management case of innovation from the bottom. India is now the leading exporter of engineers on this planet. Give it a few decades and there will be scientists, entrepreneurs and many more.
 
-
+# Video
+Here is the video:
+<div class="video-container">
+  <div class="videoPlayer plyr__video-embed">
+  <iframe src="https://www.youtube.com/embed/Q3SUUumNODE?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+  </div>
+</div>
