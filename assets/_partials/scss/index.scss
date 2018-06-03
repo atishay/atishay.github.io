@@ -52,3 +52,15 @@
     user-select: none;
     width: 100% !important;
 }
+
+@media (min-width: 769px) {
+    .blog-content:nth-child(3n + 1) {
+        clear: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-content:nth-child(n) {
+        clear: left;
+    }
+}
