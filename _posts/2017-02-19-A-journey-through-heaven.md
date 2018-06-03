@@ -28,3 +28,10 @@ The place is magical - plain water is better than wine. The air is clean and pur
 
 Let me help you more in guessing this place. There is also a frozen lake for a week long trek. There is a gigantic region of huge volcanic rocks that you can drive over, right to the mountain of magnet. There is a city build over a lake. This place has been untouched for centuries and mankind is making sure that it remains like that. We have shoot at sight orders by three nuclear powers. All vie for a piece of it. Who can blame them. There is magic in Kashmir.
 
+# Video
+Here is the video:
+<div class="video-container">
+  <div class="videoPlayer plyr__video-embed">
+  <iframe src="https://www.youtube.com/embed/FCNHkFr0YRY?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+  </div>
+</div>
