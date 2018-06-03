@@ -25,3 +25,5 @@ The world economy is dependent on American household consumption. The end of the
 
 
 Shopping without a need is a pure waste of money. Save it and it will be there in bad times, invest it and it will grow. Donate it and folks like Abdullah, Peng and Kwento would have better lives. Spend it on the same things that you bought last year and the world would continue like it has been. November is the time the stores clean up their trash, it should be the time we clean our minds and not our wallets. Think this November, about these other folks, before swiping the card. Think !! Think !!
+
+Unfortunately, this speech was not recorded. I don't have a recording to share.
