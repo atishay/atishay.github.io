@@ -34,6 +34,16 @@ layout: base
                 </div>
                 <div class="blog-post clearfix">
                     {{ content }}
+                    {% if page.youtube %}
+                    <h3 id="video">Video</h3>
+                    <p>Here is the video:</p>
+                    <div class="video-container">
+                      <div class="videoPlayer plyr__video-embed">
+                        <iframe src="https://www.youtube.com/embed/{{page.youtube}}?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+                          allowfullscreen="" allowtransparency="" allow="autoplay"></iframe>
+                      </div>
+                    </div>
+                    {% endif %}
                 </div>
                 {% if page.tags %}
                 <div class="tag-posted-in text-xs-right">

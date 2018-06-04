@@ -6,6 +6,7 @@ description: "Trying reverse psychology to promote toastmasters. Conviction by c
 tags: [toastmasters]
 excerpt: Trying reverse psychology to promote toastmasters. Conviction by contradiction.
 imgSrc: "Image by freestocks-photos from [Pixabay](https://pixabay.com/en/audio-concert-mic-microphone-music-2941753/)"
+youtube: 84U5Uwx8yLY
 ---
 
 Friends. You know America maintains a list of banned organizations that we as residents are not allowed to join. How many of you think toastmasters should in there? How many are with me on this - toastmasters should be banned. I am surprised. Are you sure... No one. Do you all think the weapon of public speaking should not be licensed? Well, I need to open your eyes.
