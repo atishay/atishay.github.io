@@ -6,6 +6,7 @@ description: "The entertaining speech about the need for electricity in life and
 tags: [toastmasters]
 excerpt: The entertaining speech about the need for electricity in life and life without it.
 imgSrc: "Image by Morgan4uall from [Pixabay](https://pixabay.com/en/bulb-light-energy-strand-penumbra-2287759/)"
+youtube: oiV6FnM68A8
 ---
 
 Friends, do you remember the speeches last week? One of them had a pyramid called Maslow's need hierarchy theory. Does anyone remember the Physiological need - the bottom most part of the pyramid? .....How about the internet - Does anyone feel the internet is a basic necessity of human life. I am going to challenge your thoughts. How about electricity - the basis for everything. I am going to describe today a day from back in college when I went almost powerless - fighting for the lowest step of the need hierarchy.
