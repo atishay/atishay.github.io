@@ -6,6 +6,7 @@ description: "My final CC speech for toastmasters - on how to finish CC by playi
 tags: [toastmasters]
 excerpt: My final CC speech for toastmasters - on how to finish CC by playing smart
 imgSrc: "Image by Estée Janssens from [Unsplash](https://unsplash.com/photos/zEqkUMiMxMI)"
+youtube: ijqGqD0qfUw
 ---
 
 Here are the contents of my CC#10. Timed right before the new year, this speech explores setting up successful goals and achieving them.
