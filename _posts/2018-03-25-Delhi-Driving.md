@@ -7,6 +7,7 @@ tags: [toastmasters]
 excerpt: Driving in Delhi requires is really different, a unique andrewarding experience you could ever imagine.
 sidebar: The Original#The speech is modified from the original by Amit Tandon on [Traffic in Delhi](https://www.youtube.com/watch?v=xKLl7vo4jcY). This speech target a very different set of audience. Hope no feelings were hurt and the changes were all for the better.
 imgSrc: "Image by Mapbox from [Flickr](https://www.flickr.com/photos/mapbox/32989254824). The auto from [JS Auto](http://www.jsauto.co.in)"
+youtube: XOlXuXrhKaM
 ---
 
 How many people here have been to Delhi? You need not be proud of that. Even I am from Delhi. You guys should know what IST is. IST is the only time zone on this planet where the clock hits 10:30 for the 10:00 clock meeting to start. And it is not our fault. The Delhi traffic is unpredictable. If google says it will take 15 minutes to cross a stretch of 2 kilometers, it could take anything from 5 minutes to 5 hours. How can you plan anything? Today I will talk about this unique beast called the Delhi traffic. It is very different from 101.
