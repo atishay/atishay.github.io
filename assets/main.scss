@@ -10,3 +10,6 @@
 {% include_relative _partials/css/main.scss %}
 {% include_relative _partials/css/syntax.css %}
 {% include_relative _partials/css/colors/{{site.color}}.css %}
+
+// Import overrides
+@import "index.scss";

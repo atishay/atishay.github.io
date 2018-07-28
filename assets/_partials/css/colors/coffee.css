@@ -1,6 +1,9 @@
 a{
   color: #998675;
 }
+.github-corner svg {
+  fill: #998675;
+}
 a:hover{
   color: #795a3f;
 }

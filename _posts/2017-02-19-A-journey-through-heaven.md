@@ -7,6 +7,7 @@ tags: [toastmasters]
 excerpt: This is the most exotic travel destination on the planet, matched by no other.
 sidebar: The Destination#Described as the heaven on earth, this place is breathtaking. It is a shame that it is caught up in a conflict that prevents people to see this wonder. Luckily that is preserving the natural beauty for generations ahead.
 imgSrc: "Self Taken - Thank you Shubham Jain"
+youtube: 0UD96RvqgGc
 ---
 
 Imagine a huge beautiful lake with crystal clear water you could drink. Add an island in the middle that can be accessed via a passage made of ice. No motorboats, no sailboats, not even a wooden plank. To all that add a huge swath of land with lush green grass that extends to as long as the eyes can see. Mountains colored red and yellow with flowers sitting at the horizon. Light rustling of distant flowing water interrupted occasionally with the heavy bustling of the mountain wind. Cool breeze flows through your hair reminding you that it is reality and no dream. Not even a walking trail in sight, no signboards and no proof of the existence of animal life, forget humanity. Wild edible strawberries growing near your feet. Eat as much as you like.
@@ -27,4 +28,3 @@ The place is magical - plain water is better than wine. The air is clean and pur
 
 
 Let me help you more in guessing this place. There is also a frozen lake for a week long trek. There is a gigantic region of huge volcanic rocks that you can drive over, right to the mountain of magnet. There is a city build over a lake. This place has been untouched for centuries and mankind is making sure that it remains like that. We have shoot at sight orders by three nuclear powers. All vie for a piece of it. Who can blame them. There is magic in Kashmir.
-
