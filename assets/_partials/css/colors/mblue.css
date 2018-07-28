@@ -394,7 +394,7 @@ h2.widget-title {
 .btn-common.active {
   background: #526b84 none repeat scroll 0 0;
 }
-.sup-desc-wrap .sup-link .left-link, .sup-desc-wrap .sup-link .right-link {
+.sup-desc-wrap .sup-link .left-link, .sup-desc-wrap .sup-link .right-link,  .sup-desc-wrap .sup-link .read-more {
   background: #34495E none repeat scroll 0 0;
   border: 1px solid #34495E;
 }

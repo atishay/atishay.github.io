@@ -64,3 +64,27 @@
         clear: left;
     }
 }
+
+.sup-desc-wrap .sup-link .read-more {
+    font-size: 10px;
+    line-height: normal;
+    outline: none;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+    padding: 4px;
+    text-align: center;
+    display: inline-block;
+    transform: translateY(-50px);
+    transition: all 400ms ease;
+}
+
+.portfolio-item:hover .sup-link .read-more {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.sup-desc-wrap .sup-meta-wrap .sup-description {
+    text-align: left;
+    color: #000;
+}
