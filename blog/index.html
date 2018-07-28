@@ -7,13 +7,14 @@ layout: base
   <div class="container">
     <!-- Row Starts -->
     <div class="row">
-      <h1 class="section-title wow fadeInUpQuick">
-        THE BLOG
+      <h1 class="section-title wow fadeInUp">
+        MY BLOG
       </h1>
-      <p class="section-subcontent wow fadeInUpQuick">Welcome to my blog. Here I post my thoughts, glimpses on what I work on and other interesting stuff that I find.</p>
+      <p class="section-subcontent wow fadeInUp">Welcome to my blog. Here I post my thoughts, glimpses on what I work on and other interesting stuff that I find.</p>
+      <span>
       {% for post in paginator.posts %}
-      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="0.3s">
+      <div class="blog-content col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="{{forloop.index | minus: 1 |modulo:3 | times:0.3 | plus: 0.1}}s">
           <div class="blog-item-img">
             <a href="{{post.url}}">
               <img src="{{post.image | escape}}?{{site.time | date: '%s%N'}}" alt="{{post.excerpt | escape}}">
@@ -34,6 +35,7 @@ layout: base
         </div>
       </div>
       {% endfor %}
+      </span>
     </div>
     <div class="row">
       <div class="blog-pagination clearfix wow fadeInUp animated col-xs-12" data-wow-delay="0.3s" style="visibility: visible;-webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; animation-delay: 0.3s;">

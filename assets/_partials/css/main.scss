@@ -40,7 +40,13 @@
   src: local('Muli Regular'), local('Muli-Regular'), url('/assets/fonts/muli-latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
-/*You can add your won color also */
+
+$img-version: random(999999999999999);
+@function img-url($url) {
+  @return url("#{$url}?v=#{$img-version}");
+}
+
+/*You can add your own color also */
 body {
   font-family: 'Open Sans', sans-serif;
   background: #fff;
@@ -1455,10 +1461,6 @@ ul li > ul > li.active > a {
   -o-transition: all 0.6s linear;
   transition: all 0.6s linear;
   position: relative;
-}
-$img-version: random(999999999999999);
-@function img-url($url) {
-  @return url("#{$url}?v=#{$img-version}");
 }
 $url: "/assets/img/home/proficiency.jpg";
 
@@ -3875,3 +3877,20 @@ pre code, .mjx-chtml {
     bottom: 0;
   }
 }
+
+
+@-webkit-keyframes fadeInUpMenu {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+

@@ -1,11 +1,3 @@
-
-// var wow = new WOW({
-//   //disabled for mobile
-//   mobile: false
-// });
-// wow.init();
-
-
 $(function () {
   //Dropdown Menus
   $('.dropdown').hover(
@@ -25,6 +17,48 @@ $(function () {
       });
     }
     new WOW({ callback: afterReveal }).init();
+  }
+
+  // Check for guitar links
+  if ($('.guitar').get()) {
+    $.getScript('/assets/guitar.js', function () {
+      $('.guitar').each(function () {
+        window.jtab.render($(this), $(this).text());
+        var svg = $(this).find('svg');
+        var width = svg.width();
+        var height = svg.height();
+        $(this).find('div').css('height', 'auto');
+        svg.attr('viewBox', '0 0 ' + width + ' ' + height);
+        // svg.attr('preserveAspectRatio', 'xMid yMid meet');
+        svg.css('height', 'auto');
+        svg.css('max-width', '100%');
+      });
+    });
+  }
+  var loadedMath = false;
+  $('script[type]').each(function () {
+    if (this.type.indexOf('math/tex') !== -1) {
+      if (!loadedMath) {
+        loadedMath = true;
+        $.getScript('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML');
+      }
+    }
+  });
+
+  if ($('.videoPlayer').get()) {
+    $('head').append('<link rel="stylesheet" type="text/css" href="/assets/video.css" />');
+    $.getScript('/assets/video.js', function () {
+      $('.videoPlayer').each(function () {
+        var id = 'id' + Math.random().toString().replace('.', '');
+        $(this).attr('id', id)
+        var player = new window.Plyr('#' + id, {
+          iconUrl: '/assets/img/plyr.svg',
+          blankUrl: '/assets/img/blank.mp4',
+          fullscreen: { enabled: true, fallback: true, iosNative: false },
+          poster: $('this').data('poster')
+        });
+      })
+    });
   }
 
 
@@ -51,14 +85,6 @@ $(function () {
   //       $(this).find('input').val('');
   //     });
   //   });
-
-
-  //WOW Scroll Spy
-  // var wow = new WOW({
-  //     //disabled for mobile
-  //     mobile: false
-  // });
-  // wow.init();
 
 
   //Owl Carousel
@@ -227,8 +253,6 @@ $(function () {
   //   accY: -100
   // });
 
-
-
   // Back Top Link
   var offset = 200;
   var duration = 500;
@@ -333,8 +357,9 @@ $(function () {
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
     var disqus_config = function () {
-    this.page.url = '{{page.url | prepend:site.url}}';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'atishay'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+
+      this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = 'atishay'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() {
