@@ -20,8 +20,12 @@ Source code for my personal website: http://atishay.me.
 * http://www.zigbee.org/zigbee-for-developers/zigbee3-0/
 * https://pixabay.com/en/communication-internet-1439132/
 * https://pixabay.com/en/golden-gate-bridge-san-francisco-388917/
+### Projects
 * Cover of https://www.youtube.com/watch?v=UTb4tfrvnG4
-* Inspiration for AOE Image: https://naldzgraphics.net/video-game-logo-in-photoshop/
+* Inspiration for AOE Image:
+    * https://naldzgraphics.net/video-game-logo-in-photoshop/
+    * https://pixabay.com/en/war-venue-war-apocalypse-494345/
+
 
 ### Image on the 404 page
 * https://pixabay.com/en/ripped-paper-torn-through-broken-2034945/
