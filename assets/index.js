@@ -9,6 +9,7 @@ if (navigator.serviceWorker) {
 {% if jekyll.environment == 'production' %}
 {% include_relative _partials/js/bootstrap.min.js %}
 {% include_relative _partials/js/jquery.drawPieChart.min.js %}
+{% include_relative _partials/js/jquery.mixitup.min.js %}
 {% include_relative _partials/js/wow.min.js %}
 {% include_relative _partials/js/owl.carousel.min.js %}
 {% include_relative _partials/js/main.min.js %}
@@ -20,5 +21,7 @@ if (navigator.serviceWorker) {
 {% include_relative _partials/js/wow.js %}
 // OWL Carousel allows multiple items in a single carousel
 {% include_relative _partials/js/owl.carousel.js %}
+// Mix it up for portfolio carousel
+{% include_relative _partials/js/jquery.mixitup.min.js %}
 {% include_relative _partials/js/main.js %}
 {% endif %}

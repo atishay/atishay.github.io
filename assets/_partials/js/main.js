@@ -222,7 +222,7 @@ $(function () {
   // });
 
   // Include MixitUp if this is needed.
-  // $('#portfolio-list').mixItUp();
+  $('#portfolio-list').mixItUp();
 
   // Testimonial
   // $('testimonial-carousel').carousel();
