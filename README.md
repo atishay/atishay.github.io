@@ -22,10 +22,11 @@ Source code for my personal website: http://atishay.me.
 * https://pixabay.com/en/golden-gate-bridge-san-francisco-388917/
 ### Projects
 * Cover of https://www.youtube.com/watch?v=UTb4tfrvnG4
+* http://www.72pxdesigns.com/template/12-free-iphone-6-psd-mockups/
 * Inspiration for AOE Image:
     * https://naldzgraphics.net/video-game-logo-in-photoshop/
     * https://pixabay.com/en/war-venue-war-apocalypse-494345/
-
+* Ball Game: https://pixabay.com/en/billiards-bullet-game-billiard-ball-1200558/
 
 ### Image on the 404 page
 * https://pixabay.com/en/ripped-paper-torn-through-broken-2034945/
