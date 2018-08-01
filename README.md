@@ -27,9 +27,8 @@ Source code for my personal website: http://atishay.me.
     * https://naldzgraphics.net/video-game-logo-in-photoshop/
     * https://pixabay.com/en/war-venue-war-apocalypse-494345/
 * Ball Game: https://pixabay.com/en/billiards-bullet-game-billiard-ball-1200558/
+* Sabse Bada Rupaiya https://pixabay.com/en/indian-currency-money-cash-rupee-1343428/
+
 
 ### Image on the 404 page
 * https://pixabay.com/en/ripped-paper-torn-through-broken-2034945/
-
-
-

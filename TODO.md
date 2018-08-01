@@ -10,3 +10,4 @@ https://mockuper.net/mockup/168/iPhone-6-and-iPad-elegant
 
 https://mockuphone.com/#ios
 
+Scroll indicator: https://www.jqueryscript.net/demo/jQuery-Plugin-For-Scroll-Position-Indicator-Progress-Tracker/
