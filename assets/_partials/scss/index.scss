@@ -109,15 +109,18 @@
 
 .portfolio-content {
     padding: 16px;
+    padding-top: 5px;
 }
 
-span.portfolio-title {
+.portfolio-title {
     margin-bottom: 16px;
-    color: #000;
-    text-align: center;
     h4 {
-        font-size: 1.2 rem;
+        font-size: 1.2rem;
     }
+}
+
+.portfolio-title:not(:hover) {
+    color: #000;
 }
 
 .portfolio-description-1,
@@ -125,8 +128,7 @@ span.portfolio-title {
     font-size: 12px;
     text-align: left;
     line-height: 16px;
-    color: #606f7b;
-    font-weight: normal;
+    color: #606f7b; // font-weight: normal;
 }
 
 .portfolio-link {
@@ -134,8 +136,52 @@ span.portfolio-title {
     text-transform: uppercase;
     font-size: 12px;
     border-top: 1px solid #dae1e7;
+    padding: 7px 0;
 }
 
-.portfolio-item:not(:hover) .portfolio-link {
-    color: #b8c2cc;
+.portfolio-img {
+    width: 100%;
+    padding-bottom: 66.70%;
+    img {
+        position: absolute;
+    }
+    &::after {
+        display: block;
+        width: 100%;
+        height: 0;
+        content: ' ';
+        border: 30px solid #fff;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-top-color: #0000;
+        border-left-color: #0000;
+        border-right-color: #0000;
+        border-left-width: 0;
+        border-right-width: 600px;
+    }
+}
+
+@media (min-width: 992px) {
+    #portfolio .mix:nth-child(4n + 1) {
+        clear: left;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    #portfolio .mix:nth-child(3n + 1) {
+        clear: left;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    #portfolio .mix:nth-child(2n + 1) {
+        clear: left;
+    }
+}
+
+@media (max-width: 575px) {
+    #portfolio .mix:nth-child(n) {
+        clear: left;
+    }
 }
