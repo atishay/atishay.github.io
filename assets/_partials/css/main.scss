@@ -3784,6 +3784,11 @@ pre code, .mjx-chtml {
   justify-content: center;
   transform: translate3d(0, 0, 0);
 }
+@-moz-document url-prefix() {
+  #image-area {
+    transform: none;
+  }
+}
 #blur-container {
   position: relative;
   background: inherit;
