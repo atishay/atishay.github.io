@@ -1,4 +1,5 @@
 $(function () {
+  $('html').removeClass('no-js');
   //Dropdown Menus
   $('.dropdown').hover(
     function () {
