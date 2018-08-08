@@ -602,7 +602,7 @@ layout: base
       <!-- Portfolio Controller/Buttons -->
       <div class="col-md-12">
         <div class="controls text-center">
-          <a class="filter btn btn-common active" data-filter="all">
+          <a class="filter btn btn-common active" tabindex="1" data-filter="all">
             All
           </a>
           <a class="filter btn btn-common" data-filter=".adobe">
@@ -612,7 +612,10 @@ layout: base
             Games
           </a>
           <a class="filter btn btn-common" data-filter=".media">
-            Movies
+            Design
+          </a>
+          <a class="filter btn btn-common" data-filter=".code">
+            Code
           </a>
         </div>
       </div>
@@ -642,7 +645,7 @@ layout: base
         <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix media" style="display: inline-block;" data-bound="">
           <div class="portfolio-item">
             <a class="portfolio-img" href="#">
-              <img src="assets/img/home/26.jpg" alt="26 January">
+              <img src="assets/img/home/26.png" alt="26 January">
             </a>
             <div class="portfolio-content">
               <a class="portfolio-title small-title" href="#">
@@ -745,6 +748,25 @@ layout: base
               </a>
               <p class="portfolio-description-1">My first short film. Wrote the screenplay, did some parts of the direction and editing.</p>
               <p class="portfolio-description-2">A stupid plot producing an unexpected but genius result.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" href="">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix code personal" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" href="#">
+              <img src="assets/img/home/all.png" alt="All Autocomplete">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" href="#">
+                <h4>All Autocomplete</h4>
+              </a>
+              <p class="portfolio-description-1">Open Source extensions to Visual Studio Code that provides autocompletion/intellisense items based on all open files in the editor.</p>
+              <p class="portfolio-description-2">FOSS extension with over 25k downloads with community driven features. Pull Requests welcome.</p>
             </div>
             <div class="portfolio-link">
               <a class="read-more" href="">

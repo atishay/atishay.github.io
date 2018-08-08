@@ -448,3 +448,6 @@ h2.widget-title {
 .top_search_con input:focus {
     border: 1px solid #9C3;
 }
+.portfolio-item .portfolio-img img {
+  background-color: #9C3;
+}
