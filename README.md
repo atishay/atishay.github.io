@@ -26,7 +26,6 @@ Source code for my personal website: http://atishay.me.
 * 26 January: From the movie + https://graphictwister.com/samsung-smart-tv-mockup/
 * Inspiration for AOE Image:
     * https://naldzgraphics.net/video-game-logo-in-photoshop/
-    * https://pixabay.com/en/war-venue-war-apocalypse-494345/
 * Ball Game: https://pixabay.com/en/billiards-bullet-game-billiard-ball-1200558/
 * Sabse Bada Rupaiya https://pixabay.com/en/indian-currency-money-cash-rupee-1343428/
 * All Autocomplete: https://www.graphberry.com/item/multiple-web-screens-perspective-psd-mockup
