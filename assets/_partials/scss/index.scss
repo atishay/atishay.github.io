@@ -185,3 +185,7 @@
         clear: left;
     }
 }
+
+.filter.btn-common:not([href]) {
+    color: #FFF;
+}

@@ -445,3 +445,6 @@ h2.widget-title {
 #main-menu ul .dropdown .dropdown-menu a:hover, #main-menu .dropdown .dropdown-menu a .active {
   color: #34495E;
 }
+.portfolio-item .portfolio-img img {
+  background-color: #34495E;
+}
