@@ -3714,11 +3714,19 @@ pre code, .mjx-chtml {
 .pie-details {
   padding-top: 20px;
   list-style: none;
-  .color {
+  .colorbox {
     display: inline-block;
     width: 12px;
     height: 12px;
     margin-right: 5px;
+    position: relative;
+    .color {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
   }
 }
 
