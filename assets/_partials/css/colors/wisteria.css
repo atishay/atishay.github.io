@@ -448,3 +448,9 @@ h2.widget-title {
 .portfolio-item .portfolio-img img {
   background-color: #9B59B6;
 }
+.pieChart circle {
+  fill: #9B59B6;
+}
+.pie-details .colorbox {
+  background: #9B59B6;
+}
