@@ -27,7 +27,11 @@ Source code for my personal website: http://atishay.me.
 * Inspiration for AOE Image:
     * https://naldzgraphics.net/video-game-logo-in-photoshop/
 * Ball Game: https://pixabay.com/en/billiards-bullet-game-billiard-ball-1200558/
-* Sabse Bada Rupaiya https://pixabay.com/en/indian-currency-money-cash-rupee-1343428/
+* Sabse Bada Rupaiya https://www.freepik.com/free-psd/blue-letterpress-logo-mockup_708290.htm#term=text%20effects&page=1&position=15
+https://www.behance.net/gallery/20133265/Free-Movie-Theater-Mockup
+* Wasim Mujahideen:
+    * https://wegraphics.net/downloads/film-poster-psd-template/
+    * https://graphicburger.com/down/?q=bus-stop-billboard-mockup
 * All Autocomplete: https://www.graphberry.com/item/multiple-web-screens-perspective-psd-mockup
 * This website: https://freeui.design/the-screens-free-psd-mockup-template/
 
