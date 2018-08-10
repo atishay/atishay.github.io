@@ -1203,7 +1203,7 @@ ul li > ul > li.active > a {
   transition: opacity 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .portfoli-content:before {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   top: 15px;
   left: 15px;
   bottom: 15px;
@@ -3714,11 +3714,19 @@ pre code, .mjx-chtml {
 .pie-details {
   padding-top: 20px;
   list-style: none;
-  .color {
+  .colorbox {
     display: inline-block;
     width: 12px;
     height: 12px;
     margin-right: 5px;
+    position: relative;
+    .color {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
   }
 }
 
@@ -3783,6 +3791,11 @@ pre code, .mjx-chtml {
   align-items: center;
   justify-content: center;
   transform: translate3d(0, 0, 0);
+}
+@-moz-document url-prefix() {
+  #image-area {
+    transform: none;
+  }
 }
 #blur-container {
   position: relative;

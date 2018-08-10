@@ -394,7 +394,7 @@ h2.widget-title {
 .btn-common.active {
   background: #cc4b4b none repeat scroll 0 0;
 }
-.sup-desc-wrap .sup-link .left-link, .sup-desc-wrap .sup-link .right-link {
+.sup-desc-wrap .sup-link .left-link, .sup-desc-wrap .sup-link .right-link,  .sup-desc-wrap .sup-link .read-more {
   background: #ff5959 none repeat scroll 0 0;
   border: 1px solid #ff5959;
 }
@@ -444,4 +444,13 @@ h2.widget-title {
 }
 #main-menu ul .dropdown .dropdown-menu a:hover, #main-menu .dropdown .dropdown-menu a .active {
   color: #ff5959;
+}
+.portfolio-item .portfolio-img img {
+  background-color: #ff5959;
+}
+.pieChart circle {
+  fill: #ff5959;
+}
+.pie-details .colorbox {
+  background: #ff5959;
 }

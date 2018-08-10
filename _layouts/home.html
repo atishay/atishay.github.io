@@ -80,7 +80,7 @@ layout: base
           <div class="content-inner">
             <h2 class="title">Welcome</h2>
             <p class="lead">
-              Hi, I am Atishay. I am a developer at Adobe Systems in the San Francisco Bay area with over <script>document.write(new Date().getFullYear() - 2010);</script> years of experience developing a wide range of Adobe products, right from your favorite desktop apps and websites(full stack) to mobile. I have worked on a variety of platforms and technology domains. I love solving problems and believe in exploring the entire solution space to find the best for our customers.
+              Hi, I am Atishay. I am a Senior Computer Scientist at Adobe Systems in the San Francisco Bay area with over <script>document.write(new Date().getFullYear() - 2010);</script> years of experience developing a wide range of Adobe products, right from your favorite desktop apps and websites(full stack) to mobile. I have worked on a variety of platforms and technology domains. I love solving problems and believe in exploring the entire solution space to find the best for our customers.
             </p>
             <p>Welcome to my website. Here you can find the most accurate information about me and the best ways to contact me.</p>
           </div>
@@ -118,7 +118,7 @@ layout: base
         <h1 class="section-title">
           Experience
         </h1>
-        <p class="section-subcontent">Computer Scientist at Adobe Systems Incorporated</p>
+        <p class="section-subcontent">Senior Computer Scientist at Adobe Systems Incorporated</p>
       </div>
       <div class="col-xs-3 col-md-2 col-lg-1">
         <h1 class="section-title wow fadeInUp"><img class="img-fluid" src='assets/img/home/adobe.svg?{{site.time | date: '%s%N'}}'></h1>
@@ -469,7 +469,7 @@ layout: base
     <!-- Container Starts -->
     <div class="row">
       <h1 class="section-title wow fadeInUp">
-        Projects &amp; Awards
+        Awards
       </h1>
       <p class="section-subcontent">Don't live for appreciation, but accept it humbly if given. <br> Here is a selection of mine.</p>
       <div class="col-sm-12 col-md-6">
@@ -560,27 +560,27 @@ layout: base
           <div class="pieChart col-lg-6 col-md-12 col-sm-6 col-xs-12"></div>
           <ul class="pie-details col-lg-6 col-md-12 col-sm-6 col-xs-12 container">
             <li class="col-xs-6 col-sm-12">
-              <span class="color" style="background-color: #B3E8F9;"></span> <span class="text">Happy Customers</span>
+              <span class="colorbox"><span class="color" style="background-color: rgba(0, 0, 0, 0.6);"></span></span> <span class="text">Happy Customers</span>
               <div class="sr-only">20</div>
             </li>
             <li class="col-xs-6 col-sm-12">
-              <span class="color" style="background-color: #93E1FD;"></span> <span class="text">Engaging Technology</span>
+              <span class="colorbox"><span class="color" style="background-color: rgba(0, 0, 0, 0.5);"></span></span> <span class="text">Engaging Technology</span>
               <div class="sr-only">20</div>
             </li>
             <li class="col-xs-6 col-sm-12">
-              <span class="color" style="background-color: #7BBED4;"></span> <span class="text">Good Compensation</span>
+              <span class="colorbox"><span class="color" style="background-color: rgba(0, 0, 0, 0.4)"></span> </span><span class="text">Good Compensation</span>
               <div class="sr-only">15</div>
             </li>
             <li class="col-xs-6 col-sm-12">
-              <span class="color" style="background-color: #00B1EA;"></span> <span class="text">Ethical Work</span>
+              <span class="colorbox"><span class="color" style="background-color: rgba(0, 0, 0, 0.3);"></span></span> <span class="text">Ethical Work</span>
               <div class="sr-only">15</div>
             </li>
             <li class="col-xs-6 col-sm-12">
-              <span class="color" style="background-color: #005875;"></span> <span class="text">Growth Potential</span>
+              <span class="colorbox"><span class="color" style="background-color: rgba(0, 0, 0, 0.2);"></span></span> <span class="text">Growth Potential</span>
               <div class="sr-only">15</div>
             </li>
             <li class="col-xs-6 col-sm-12">
-              <span class="color" style="background-color: #0A3446;"></span> <span class="text">Good Work/Life Balance</span>
+              <span class="colorbox"><span class="color" style="background-color: rgba(0, 0, 0, 0.1);"></span></span> <span class="text">Good Work/Life Balance</span>
               <div class="sr-only">15</div>
             </li>
           </ul>
@@ -590,6 +590,226 @@ layout: base
   </div>
 </section>
 <!-- Awards Section End -->
+<!-- Portfolio Section Begin -->
+<section class="portfolio-3-column-section section-padding" id="portfolio">
+  <!-- Container Starts -->
+  <div class="container">
+    <h1 class="section-title wow fadeInUpQuick animated" style="visibility: visible;">
+      Projects
+    </h1>
+    <p class="section-subcontent">Below is a selection of some of my popular projects, their short descriptions and useful links.</p>
+    <div class="row">
+      <!-- Portfolio Controller/Buttons -->
+      <div class="col-md-12">
+        <div class="controls text-center">
+          <a class="filter btn btn-common active" tabindex="1" data-filter="all">
+            All
+          </a>
+          <a class="filter btn btn-common" data-filter=".adobe">
+            Adobe
+          </a>
+          <a class="filter btn btn-common" data-filter=".games">
+            Games
+          </a>
+          <a class="filter btn btn-common" data-filter=".media">
+            Design
+          </a>
+          <a class="filter btn btn-common" data-filter=".code">
+            Code
+          </a>
+        </div>
+      </div>
+      <!-- Portfolio Controller/Buttons Ends-->
+
+      <!-- Portfolio Recent Projects -->
+      <div id="portfolio-list" class="row">
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix adobe" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+              <a class="portfolio-img" target="_blank" href="http://blogs.adobe.com/contentcorner/2015/05/02/capture-and-its-vector-experience-magic-with-adobe-shape-cc/">
+              <img src="assets/img/home/shape.jpg" alt="Adobe Shape CC">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" target="_blank" href="http://blogs.adobe.com/contentcorner/2015/05/02/capture-and-its-vector-experience-magic-with-adobe-shape-cc/">
+                <h4>Adobe Shape CC</h4>
+              </a>
+              <p class="portfolio-description-1">Realtime raster to vector conversion. Right from your iPhone or iPad. Inity made for iPhone 4+, it was merged into Adobe Capture on iOS and Android.</p>
+              <p class="portfolio-description-2">Briefly after its launch, this app was selected by Apple to be a part of the demo iPhones shown to the users at the Apple Stores. With almost a million downloads, Adobe Shape made into the marquee feature of Adobe Capture.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" target="_blank"  href="http://blogs.adobe.com/contentcorner/2015/05/02/capture-and-its-vector-experience-magic-with-adobe-shape-cc/">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix media" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" target="_blank" href="https://vimeo.com/16069535">
+              <img src="assets/img/home/26.png" alt="26 January">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" target="_blank" href="https://vimeo.com/16069535">
+                <h4>26 January</h4>
+              </a>
+              <p class="portfolio-description-1">Short film developed in college. A satirical piece on the state of humans and the Indian society.</p>
+              <p class="portfolio-description-2">Was built specifically for participating in contests. Wonderful acting by some of the veterans of the Thapar movie club.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" target="_blank" href="https://vimeo.com/16069535">
+                Watch
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix adobe" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" href="http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html">
+              <img src="assets/img/home/kuler.jpg" alt="Adobe Kuler">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" href="http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html">
+                <h4>Adobe Kuler</h4>
+              </a>
+              <p class="portfolio-description-1">Augmented Reality Color capture application. Captures colors from video and images into themes. Also features a color wheel and color theme sliders.</p>
+              <p class="portfolio-description-2">Winner of multiple awards like the IxDA interaction design awards, Communication Arts interactive design awards and FWA app of th day. Had a million downloads before being merged into adobe capture.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" target="_blank"  href="http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix media personal" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" href="https://vimeo.com/16035249">
+              <img src="assets/img/home/wasim.jpg" target="_blank" alt="Wasim Mujahideen">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" target="_blank" href="https://vimeo.com/16035249">
+                <h4>Wasim Mujahideen</h4>
+              </a>
+              <p class="portfolio-description-1">Short film shot during college of a guy wrongly accused just because of his name.</p>
+              <p class="portfolio-description-2">Won IIT R Thomso 2008 in short film category but I don't have a proof for it. You can still enjoy the performance by Thapar Movie Club</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" target="_blank" href="https://vimeo.com/16035249">
+                Watch
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix games personal" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" href="assets/download/Empires I.zip">
+              <img src="assets/img/home/aoe.png" alt="Age of Empires Custom Campaigns">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" href="assets/download/Empires I.zip">
+                <h4>AOE Campaigns</h4>
+              </a>
+              <p class="portfolio-description-1">Over 50 scenarios in two custom campaigns for Age Of Empires I and II.</p>
+              <p class="portfolio-description-2">Were created when I was 15. Published in the SKOAR game magazine in 2006. The campaigns were accompanied with introductory voice-overs.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" href="assets/download/Empires I.zip">
+                Download AOE 1
+              </a>
+              |
+              <a class="read-more" href="assets/download/Empires II.zip">
+                Download AOE 2
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix media personal" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" href="assets/pdf/Bond forever.pdf?{{site.time | date: '%s%N'}}">
+              <img src="assets/img/home/bond.jpg" alt="Bond Forever - Screenplay">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" href="assets/pdf/Bond forever.pdf?{{site.time | date: '%s%N'}}">
+                <h4>Bond Forever</h4>
+              </a>
+              <p class="portfolio-description-1">Screenplay of a children movie about Carbon Bond fighting with the evil Sulphora.</p>
+              <p class="portfolio-description-2">Created while learning 3D design and rendering. Was intended to be a short film but never got to real work, only a screenplay.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" href="assets/pdf/Bond forever.pdf?{{site.time | date: '%s%N'}}">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix games personal" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" href="assets/download/Ball in the Hole.exe">
+              <img src="assets/img/home/ball.png" alt="Flash Game - Ball in the hole">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" href="assets/download/Ball in the Hole.exe">
+                <h4>Flash Game - Ball in the Hole</h4>
+              </a>
+              <p class="portfolio-description-1">Twist to the classic maze game where you control the acceleration and not the speed.</p>
+              <p class="portfolio-description-2">Created when I was a kid. Lost source code. It has over 30 levels with a proper dragon level in the end, bonus level on every 5 levels and clear instructions on how to play. Windows only. Relive the glorious days of simple indie flash games.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" href="assets/download/Ball in the Hole.exe">
+                Download
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix media personal" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" target="_blank" href="https://vimeo.com/1587575">
+              <img src="assets/img/home/rupee.png" alt="Sabse Bada Rupaiya">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" target="_blank" href="https://vimeo.com/1587575">
+                <h4>Sabse Bada Rupaiya</h4>
+              </a>
+              <p class="portfolio-description-1">My first short film. Wrote the screenplay, did some parts of the direction and editing.</p>
+              <p class="portfolio-description-2">A stupid plot producing an unexpected but genius result.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" target="_blank" href="https://vimeo.com/1587575">
+                Watch
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 mix code personal" style="display: inline-block;" data-bound="">
+          <div class="portfolio-item">
+            <a class="portfolio-img" target="_blank" href="https://marketplace.visualstudio.com/items?itemName=Atishay-Jain.All-Autocomplete">
+              <img src="assets/img/home/all.png" alt="All Autocomplete">
+            </a>
+            <div class="portfolio-content">
+              <a class="portfolio-title small-title" target="_blank" href="https://marketplace.visualstudio.com/items?itemName=Atishay-Jain.All-Autocomplete">
+                <h4>All Autocomplete</h4>
+              </a>
+              <p class="portfolio-description-1">Open Source extensions to Visual Studio Code that provides autocompletion/intellisense items based on all open files in the editor.</p>
+              <p class="portfolio-description-2">FOSS extension with over 25k downloads with community driven features. Pull Requests welcome.</p>
+            </div>
+            <div class="portfolio-link">
+              <a class="read-more" target="_blank" href="https://marketplace.visualstudio.com/items?itemName=Atishay-Jain.All-Autocomplete">
+                View
+              </a>
+            </div>
+          </div>
+        </div>
+      <!-- End Portfolio Recent Projects -->
+      <!-- <div class="col-md-12">
+        <div class="loadmore-button">
+          <a href="#" class="btn btn-common">
+            <i class="fa fa-arrows"></i> Show More</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- Container Ends -->
+</section>
+<!-- Portfolio Section End -->
 <!-- proficiency Table Section -->
 <section id="proficiency" class="section">
   <div class="container">
@@ -637,7 +857,7 @@ layout: base
             </p>
             <p>
               <i class="fa fa-check"></i>
-              ES5, ES6, Webpack, ESLint, Babel
+              TS, ES5, ES6, Webpack, ESLint, Babel
             </p>
           </div>
         </div>

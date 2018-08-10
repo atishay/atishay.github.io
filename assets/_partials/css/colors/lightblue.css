@@ -394,7 +394,7 @@ h2.widget-title {
 .btn-common.active {
   background: #00D3F9 none repeat scroll 0 0;
 }
-.sup-desc-wrap .sup-link .left-link, .sup-desc-wrap .sup-link .right-link {
+.sup-desc-wrap .sup-link .left-link, .sup-desc-wrap .sup-link .right-link,  .sup-desc-wrap .sup-link .read-more {
   background: #00D3F9 none repeat scroll 0 0;
   border: 1px solid #00D3F9;
 }
@@ -447,4 +447,14 @@ h2.widget-title {
 }
 .top_search_con input:focus {
     border: 1px solid #00D3F9;
+}
+
+.portfolio-item .portfolio-img img {
+  background-color: #00D3F9;
+}
+.pieChart circle {
+  fill: #00D3F9;
+}
+.pie-details .colorbox {
+  background: #00D3F9;
 }
