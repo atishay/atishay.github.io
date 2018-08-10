@@ -26,7 +26,7 @@ Source code for my personal website: http://atishay.me.
 * 26 January: From the movie + https://graphictwister.com/samsung-smart-tv-mockup/
 * Inspiration for AOE Image:
     * https://naldzgraphics.net/video-game-logo-in-photoshop/
-* Ball Game: https://pixabay.com/en/billiards-bullet-game-billiard-ball-1200558/
+* Ball Game: https://www.elegantthemes.com/blog/freebie-of-the-week/free-thinkpad-psd-mockup-templates
 * Sabse Bada Rupaiya
     * https://www.behance.net/gallery/20133265/Free-Movie-Theater-Mockup
 * Wasim Mujahideen:
