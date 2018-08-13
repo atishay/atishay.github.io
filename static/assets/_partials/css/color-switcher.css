@@ -1,0 +1,119 @@
+/* Color Style Switcher */
+#color-style-switcher div h3 {
+    color: #333;
+    font-size: 19px;
+    margin: 8px 3px 12px;
+}
+#color-style-switcher {
+    background: #fff;
+    color: #333;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    left: -189px;
+    position: fixed;
+    top: 250px;
+    width: 195px;
+    z-index: 9999;
+}
+#color-style-switcher div {
+    padding: 5px 10px;
+}
+#color-style-switcher .bottom {
+    background: none repeat scroll 0 0 rgba(0,0,0,.7);
+    color: #252525;
+    padding: 0;
+}
+#color-style-switcher .bottom a.settings {
+    background-color: #fff;
+    box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.08);
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 40px;
+    padding: 3px;
+}
+#color-style-switcher .bottom a i{
+    font-size: 24px;
+    line-height: 35px;
+    padding-left: 4px;
+}
+#color-style-switcher select {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border: 1px solid #FFFFFF;
+    line-height: 1;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    width: 150px;
+}
+ul.colors {
+    list-style: none outside none;
+    margin: 0 0 10px;
+    overflow: hidden;
+	padding:0;
+}
+ul.colors li {
+    float: left;
+    margin: 2px;
+}
+ul.colors li a {
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    width: 35px;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+ul.colors li a.active {
+    position: relative;
+}
+ul.colors li a.active:after {
+    color: #fff;
+    content:"\f00c";
+    font-family: "FontAwesome";
+    font-size: 10px;
+    right: 12px;
+    position: absolute;
+    top: 9px;
+}
+ul.colors li a.color1.active:after, ul.colors li a.color8.active:after{
+    color:#FFFFFF;
+}
+@media only screen and (max-width: 500px) {
+    #color-style-switcher {
+        display: none;
+    }
+}
+
+/* Color Style Switcher  End */
+
+
+
+/* Colors */
+
+/* light-version */
+ul.colors .color1 {
+    background: #9C3 ; /* default black */
+}
+ul.colors .color2 {
+    background: #ff5959;  /* blue */
+}
+ul.colors .color3 {
+     background: #00D3F9;  /* deep-purple */
+}
+ul.colors .color4 {
+     background: #F60;  /* green */
+}
+ul.colors .color5 {
+     background: #9B59B6;  /* orange */
+}
+ul.colors .color6 {
+     background: #1ABC9C;  /* red */
+}
+ul.colors .color7 {
+     background: #998675;  /* blue-grey */
+}
+ul.colors .color8 {
+     background: #34495E;  /* default ambar */
+}

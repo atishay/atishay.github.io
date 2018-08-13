@@ -1,0 +1,90 @@
+
+  <!-- Footer Section -->
+  <footer>
+    <!-- Container Starts -->
+    <div class="container">
+      <!-- Row Starts -->
+      <div class="row section">
+        <!-- Footer Widget Starts -->
+        <div class="footer-widget col-md-3 col-xs-12 wow fadeIn">
+          <h3 class="small-title">
+            ABOUT
+          </h3>
+          <p>
+            <img class="img-thumbnail rounded footer-image" src='/assets/img/footer_me.jpg?{{site.time | date: '%s%N'}}'>
+            Personal Website of Atishay Jain, Computer Scientist at Adobe Systems. I am a developer living in the San Francisco Bay area and love solving problems via technology, design, writing, talking or any other means possible.
+          </p>
+        </div><!-- Footer Widget Ends -->
+
+        <!-- Footer Widget Starts -->
+        <div class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".2s">
+          <h3 class="small-title">
+            Disclaimer
+          </h3>
+          <p>
+          The content of this website is mine and mine alone. It is not affiliated with any of my present or past employers, institutes or acquaintances. If you find anything offensive or any copyright infringements, please report them. I apologize in advance for any such errors. For more details please refer to the <a href="{{ "/privacy" | relative_url }}">Privacy Policy</a> and <a href="{{ "/terms" | relative_url }}">Terms of Use</a>.
+          </p>
+        </div><!-- Footer Widget Ends -->
+
+        <!-- Footer Widget Starts -->
+        <div class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".5s">
+          <h3 class="small-title">
+            Recent Blog Posts
+          </h3>
+          <div>
+            {% for post in site.posts limit:7 %}
+                            <a href="{{post.url}}" title="{{post.title}}">{{post.title | split: '-' | first}}</a> - <span class="published-time"><span class="moment">{{ post.date | date_to_xmlschema}}</span></span><br>
+            {% endfor %}
+          </div>
+        </div><!-- Footer Widget Ends -->
+
+        <!-- Footer Widget Starts -->
+        <div id="contact-us" class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".8s">
+          <h3 class="small-title">
+            CONTACT
+          </h3>
+          <div class="contact-us">
+            <p><a target="_blank" href="mailto:contact@atishay.me"><i class="fa fa-envelope icon-box icon-xs"></i> <span>contact [at] atishay [dot] me</span> </a></p>
+            <p><a target="_blank" href="https://linkedin.com/in/atishay"><i class="fa fa-linkedin icon-box icon-xs"></i> <span>linkedin.com/in/atishay</span> </a></p>
+            <p><a target="_blank" href="https://facebook.com/atishay811"><i class="fa fa-facebook icon-box icon-xs"></i> <span>facebook.com/atishay811</span> </a></p>
+            <p><a target="_blank" href="https://github.com/atishay"><i class="fa fa-github icon-box icon-xs"></i> <span>github.com/atishay</span> </a></p>
+            <p><a target="_blank" href="{{site.url}}/atom.xml"><i class="fa fa-rss icon-box icon-xs"></i> <span>atishay.me/atom.xml</span> </a></p>
+          </div>
+        </div><!-- Footer Widget Ends -->
+      </div><!-- Row Ends -->
+    </div><!-- Container Ends -->
+    <!-- Copyright -->
+    <div id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="copyright-text">
+              &copy; 2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>, Atishay Jain.
+              Theme based on
+              <a href="https://graygrids.com/item/engage-free-bootstrap-4-template/" target="_blank" rel="nofollow" class="footer-link">Engage</a>
+              by
+              <a href="https://graygrids.com" rel="nofollow" target="_blank" class="footer-link">Gray Grids</a>
+              . Images from
+              <a href="http://pixabay.com" class="footer-link" rel="nofollow" target="_blank">Pixabay</a>
+              ,
+              <a href="http://flickr.com" rel="nofollow" target="_blank" class="footer-link">Flickr</a>
+              . Icons from
+              <a href="http://flaticon.com" rel="nofollow" class="footer-link">FlatIcon</a>
+              &amp; <a href="http://iconfinder.com" rel="nofollow" class="footer-link">IconFinder</a>
+              . Last Updated
+              <span class="moment">{{site.time | date_to_xmlschema}}</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright  End-->
+
+  </footer>
+  <!-- Footer Section End-->
+
+  <!-- Go To Top Link -->
+  <a href="#" class="scrollUp">
+    <i class="fa fa-angle-up">
+    </i>
+  </a>

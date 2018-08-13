@@ -1,0 +1,15 @@
+---
+# Concatenate the css files into a single file. Use scss as well.
+---
+// TODO Figure out what we can live without. We want lesser code here.
+{% include_relative _partials/css/bootstrap.min.css %}
+{% include_relative _partials/css/responsive.css %}
+{% include_relative _partials/css/font-awesome.min.css %}
+{% include_relative _partials/extras/owl/owl.carousel.css %}
+{% include_relative _partials/extras/animate.css %}
+{% include_relative _partials/css/main.scss %}
+{% include_relative _partials/css/syntax.css %}
+{% include_relative _partials/css/colors/{{site.color}}.css %}
+
+// Import overrides
+@import "index.scss";

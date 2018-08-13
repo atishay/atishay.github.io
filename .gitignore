@@ -1,4 +1,3 @@
-_site
-.sass-cache
-.jekyll-metadata
-node_modules
+themes/ananke
+themes/jekyll
+.DS_Store
