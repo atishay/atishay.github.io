@@ -1,5 +1,0 @@
----
-# Concatenate the css files into a single file. Use scss as well.
----
-// TODO Figure out what we can live without. We want lesser code here.
-{% include_relative _partials/css/plyr/{{site.color}}.css %}
