@@ -1,6 +1,0 @@
-baseURL = "https://atishay.me"
-disablePathToLower = true
-languageCode = "en-us"
-title = "Atishay Jain"
-theme = "ananke"
-ignoreFiles = [ ".github/", "old/", ".gitignore", "LICENSE", "README.md", "CNAME" ]

@@ -1,0 +1,22 @@
+{{ $iconSVG := resources.Get "image/favicon.svg" }}
+{{ $icon := resources.Get "image/favicon.png" }}
+        <meta name="msapplication-TileColor" content="{{.Site.Params.color}}" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ ($icon.Resize "57x57").RelPermalink }}" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ ($icon.Resize "114x114").RelPermalink }}" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ ($icon.Resize "72x72").RelPermalink }}" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ ($icon.Resize "144x144").RelPermalink }}" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ ($icon.Resize "60x60").RelPermalink }}" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ ($icon.Resize "120x120").RelPermalink }}" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ ($icon.Resize "76x76").RelPermalink }}" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ ($icon.Resize "152x152").RelPermalink }}" />
+        <link rel="icon" type="image/svg" href="{{ $iconSVG.RelPermalink }}" />
+        <link rel="icon" type="image/png" sizes="196x196" href="{{ ($icon.Resize "196x196").RelPermalink }}" />
+        <link rel="icon" type="image/png" sizes="96x96" href="{{ ($icon.Resize "96x96").RelPermalink }}" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ ($icon.Resize "32x32").RelPermalink }}" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ ($icon.Resize "16x16").RelPermalink }}" />
+        <link rel="icon" type="image/png" sizes="128x128" href="{{ ($icon.Resize "128x128").RelPermalink }}" />
+        <meta name="msapplication-TileImage" content="{{ ($icon.Resize "144x144").RelPermalink }}" />
+        <meta name="msapplication-square70x70logo" content="{{ ($icon.Resize "70x70").RelPermalink }}" />
+        <meta name="msapplication-square150x150logo" content="{{ ($icon.Resize "150x150").RelPermalink }}" />
+        <meta name="msapplication-square310x310logo" content="{{ ($icon.Resize "310x310").RelPermalink }}" />
