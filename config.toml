@@ -3,4 +3,4 @@ disablePathToLower = true
 languageCode = "en-us"
 title = "Atishay Jain"
 theme = "ananke"
-ignoreFiles = [ "old/", ".gitignore", "CODE_OF_CONDUCT.md", "LICENSE", "README.md", "TODO.md", "CNAME" ]
+ignoreFiles = [ ".github/", "old/", ".gitignore", "LICENSE", "README.md", "CNAME" ]
