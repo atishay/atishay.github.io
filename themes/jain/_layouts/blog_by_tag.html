@@ -1,0 +1,40 @@
+---
+layout: base
+---
+<section id="blog" class="section">
+  <!-- Container Starts -->
+  <div class="container">
+    <!-- Row Starts -->
+    <div class="row">
+      <h1 class="section-title wow fadeInUp">
+        {{ page.tag | capitalize }}
+      </h1>
+      <p class="section-subcontent wow fadeInUp">Here you can view filtered posts with the tag - {{ page.tag }}.</p>
+      <span>
+      {% for post in site.tags[page.tag] %}
+      <div class="blog-content col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="blog-item-wrapper wow fadeIn" data-wow-delay="{{forloop.index | minus: 1 |modulo:3 | times:0.3 | plus: 0.1}}s">
+          <div class="blog-item-img">
+            <a href="{{post.url}}">
+              <img src="{{post.image | escape}}?{{site.time | date: '%s%N'}}" alt="{{post.excerpt | escape}}">
+            </a>
+          </div>
+          <div class="blog-item-text">
+            <h3 class="small-title"><a href="{{post.url}}">{{post.title | split: '-' | first}}</a></h3>
+            <p>
+              {{post.excerpt | markdownify}}
+            </p>
+            <div class="blog-one-footer">
+              <a href="{{post.url}}">Read More</a>
+              {% for tag in post.tags %}
+                {% if forloop.first %} <i class="fa fa-tag"></i> {% endif %} <a href="/tag/{{tag|slugify}}">{{ tag | replace:'-', ' ' | capitalize }}</a> {% unless forloop.last %} <i class="fa fa-tag"></i> {% endunless %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      </span>
+    </div>
+  </div>
+</section>
