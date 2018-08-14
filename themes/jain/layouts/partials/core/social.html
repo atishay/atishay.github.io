@@ -142,3 +142,21 @@
     "url": "{{.Permalink}}"
 }
 </script>
+
+{{if isset .Params "video" }}
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "VideoObject",
+        "name": "{{.Title}}",
+        "description": "{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description}}{{ . }}{{ end }}{{ end }}{{ end }}",
+        "contentUrl": "{{.Params.Video}}",
+        {{/* TODO: When we get to the first video
+        "thumbnailUrl": "http://www.example.com/thumbnail.jpg",
+        "uploadDate": "2015-04-05T08:00:00+02:00", "duration": "PT1M33S",
+        "embedUrl": "http://www.example.com/embed?videoetc",
+        "interactionCount": "2347"
+        */}}
+    }
+</script>
+{{ end }}
