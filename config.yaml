@@ -6,7 +6,7 @@ theme: "jain"
 canonifyURLs: true
 # Does not set the sitemap yet.
 # enableRobotsTXT: true
-ignoreFiles: [ ".github/", "old/", ".gitignore", "LICENSE", "README.md" ]
+ignoreFiles: [ ".github/", ".gitignore", "LICENSE.md", "README.md" ]
 
 params:
     author: "Atishay Jain<contact@atishay.me>"
