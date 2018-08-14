@@ -114,12 +114,15 @@
     "@type": "WebSite",
 {{ else if eq .Page.Kind "section"}}
     "@type": "Blog",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"{{.Permalink}}"},
 {{ else if (and (eq .Page.Kind "page") (eq .Section "blog") ) }}
     "@type": "BlogPosting",
     "wordCount": {{.WordCount}},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"{{.Permalink}}"},
 {{ else }}
     "@type": "Article",
     "wordCount": {{.WordCount}},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"{{.Permalink}}"},
 {{ end }}
     "@context": "http://schema.org",
 {{- with .Params.image }}
