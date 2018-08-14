@@ -3,6 +3,9 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
 />
 
+
+{{/* See AlternativeOutputFormats */}}
+
 {{/* Open Graph */}}
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
@@ -60,15 +63,10 @@
 {{ end }}{{ end }}
 
 {{/* Twitter Card */}}
-<meta name="twitter:card" content="summary" />
-{{ with .Site.Author.twitter }}
-<meta name="twitter:site" content="@{{ . }}" />
-<meta name="twitter:creator" content="@{{ . }}" />
-{{ end }}
 
-<!-- {{- with $.Params.images -}}
+{{- with .Params.image -}}
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
+<meta name="twitter:image" content="{{ . | absURL }}"/>
 {{ else -}}
 {{- $images := $.Resources.ByType "image" -}}
 {{- $featured := $images.GetMatch "*feature*" -}}
@@ -77,9 +75,9 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ $featured.Permalink }}"/>
 {{- else -}}
-{{- with $.Site.Params.images -}}
+{{- with $.Site.Params.image -}}
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
+<meta name="twitter:image" content="{{ . | absURL }}"/>
 {{ else -}}
 <meta name="twitter:card" content="summary"/>
 {{- end -}}
@@ -87,14 +85,10 @@
 {{- end }}
 <meta name="twitter:title" content="{{ .Title }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
-{{ with .Site.Social.twitter -}}
-<meta name="twitter:site" content="@{{ . }}"/>
-{{ end -}}
-{{ range .Site.Authors }}
-{{ with .twitter -}}
-<meta name="twitter:creator" content="@{{ . }}"/>
-{{ end -}}
-{{ end -}} -->
+{{ with .Site.Author.twitter }}
+<meta name="twitter:site" content="@{{ . }}" />
+<meta name="twitter:creator" content="@{{ . }}" />
+{{ end }}
 
 {{/* Google News */}}
 {{ if .IsPage }}{{ with .Params.tags }}
@@ -103,24 +97,30 @@
 
 {{/* Google Rich Snippets */}}
 <script type="application/ld+json">
-    {
-        "url": "http://localhost:4000/",
-        "headline": "Atishay Jain",
-        "publisher": {
-            "@type": "Organization",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "http://localhost:4000/assets/img/logo.png"
-            },
-            "name": "Atishay Jain"
+{
+    "url": "{{.Permalink}}",
+    "headline": "{{ .Title }}",
+    "publisher": {
+        "@type": "Organization",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ (resources.Get "image/logo.svg" | resources.Minify).RelPermalink }}"
         },
-        "author": {
-            "@type": "Person",
-            "name": "Atishay Jain"
-        },
-        "description": "Personal website of Atishay Jain, developer at Adobe Systems with over 8 years of experience developing a wide range of Adobe products, right from your favorite desktop apps and websites(full stack) to mobile. I have worked on a variety of platforms and technology domains. I love solving problems and believe in searching for the best way to solve a problem before diving in.",
-        "name": "Atishay Jain",
-        "@type": "WebSite",
-        "@context": "http://schema.org"
-    }
+        "name": "{{ .Site.Author.name }}"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Author.name }}"
+    },
+    "description": "{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description}}{{ . }}{{ end }}{{ end }}{{ end }}",
+    "name": "{{ .Site.Title }}",
+{{ if eq .Page.Kind "home" }}
+    "@type": "WebSite",
+{{ end }}
+    "@context": "http://schema.org",
+{{- with .Params.image }}
+    "image":"{{ . }}",
+{{ end }}
+
+}
 </script>

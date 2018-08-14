@@ -3,6 +3,7 @@ disablePathToLower: true
 languageCode: "en-us"
 title: "Atishay Jain"
 theme: "jain"
+canonifyURLs: true
 # Does not set the sitemap yet.
 # enableRobotsTXT: true
 ignoreFiles: [ ".github/", "old/", ".gitignore", "LICENSE", "README.md" ]
@@ -18,13 +19,12 @@ author:
     github: "atishay"
     email: "contact@atishay.me"
     linkedin: "atishay"
+    name: "Atishay Jain"
 
 permalinks:
-  post: "/blog/:year/:month/:day/:title"
+  blog: "/blog/:year/:month/:day/:slug"
 
 sitemap:
     changefreq: "monthly"
     priority: 0.5
     filename: "sitemap.xml"
-
-# https://github.com/tannerlinsley/valleydesignbuild/blob/master/src/data/_authors/joe.toml
