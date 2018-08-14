@@ -1,0 +1,28 @@
+<header>
+    <nav role="navigation">
+        <a role="button" href="/">
+            {{ $iconSVG := resources.Get "image/logo.svg" | resources.Minify }}
+            <img src="{{$iconSVG.Permalink}}" width="130px" height="47px" alt="{{ .Site.Title }} Logo">
+        </a>
+        <ul role="menu">
+            <li>
+                <a role="menuitem" href="">Home</a>
+            </li>
+            <!-- <li>
+                <a role="menuitem" href="/assets/pdf/Atishay-Jain.pdf?1533909696789814000">Résumé</a>
+            </li> -->
+            <li>
+                <a role="menuitem" href="{{ ref . "/blog/_index.md" }}">Blog</a>
+            </li>
+            <li>
+                <a role="menuitem" href="{{ref . "/contact.md"}}">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    {{with .Site.Params.github }}
+    <a href="{{.}}" role="link" class="github-corner" aria-label="View source on Github">
+        {{ $iconSVG := resources.Get "image/octocat.svg" | resources.Minify }}
+        {{ $iconSVG.Content | safeHTML }}
+    </a>
+    {{ end }}
+</header>
