@@ -1,4 +1,4 @@
-{{ $iconSVG := resources.Get "image/favicon.svg" }}
+{{ $iconSVG := resources.Get "image/favicon.svg" | resources.Minify }}
 {{ $icon := resources.Get "image/favicon.png" }}
         <meta name="msapplication-TileColor" content="{{.Site.Params.color}}" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -19,4 +19,5 @@
         <meta name="msapplication-TileImage" content="{{ ($icon.Resize "144x144").RelPermalink }}" />
         <meta name="msapplication-square70x70logo" content="{{ ($icon.Resize "70x70").RelPermalink }}" />
         <meta name="msapplication-square150x150logo" content="{{ ($icon.Resize "150x150").RelPermalink }}" />
+        <!-- <meta name="msapplication-wide310x150logo" content="/assets/img/favicon/mstile-310x150.png" /> -->
         <meta name="msapplication-square310x310logo" content="{{ ($icon.Resize "310x310").RelPermalink }}" />
