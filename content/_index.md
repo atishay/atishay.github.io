@@ -1,7 +1,8 @@
 ---
 menu:
     top:
-        name: "Home"
+        name: "home"
         weight: 1
+        title: "Home"
 
 ---

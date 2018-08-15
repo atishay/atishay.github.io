@@ -2,3 +2,4 @@ themes/ananke
 themes/jekyll
 .DS_Store
 public/
+node_modules/

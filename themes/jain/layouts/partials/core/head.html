@@ -32,7 +32,9 @@
     {{ block "social" . }}
       {{ partial "core/social.html" . }}
     {{end }}
-
+{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+{{ $css := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}
+    <link rel="stylesheet" href="{{$css.Permalink}}" integrity="{{$css.Data.Integrity}}" />
     <!-- {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }} -->

@@ -1,0 +1,31 @@
+@import "../../node_modules/include-media/dist/_include-media.scss";
+
+$breakpoints: (xs: 320px, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+:root {
+    --max-width: 100%;
+    --header-height: 75px;
+}
+
+@include media(">=sm") {
+    :root {
+        --max-width: 540px;
+    }
+}
+
+@include media(">=md") {
+    :root {
+        --max-width: 720px;
+    }
+}
+
+@include media(">=lg") {
+    :root {
+        --max-width: 960px;
+    }
+}
+
+@include media(">=xl") {
+    :root {
+        --max-width: 1140px;
+    }
+}
