@@ -4,19 +4,23 @@
             {{ $iconSVG := resources.Get "image/logo.svg" | resources.Minify }}
             <img src="{{$iconSVG.Permalink}}" width="130px" height="47px" alt="{{ .Site.Title }} Logo">
         </a>
-        <ul role="menu">
-            <li>
-                <a role="menuitem" href="">Home</a>
+        <ul role="menubar">
+ {{/* TODO: HasMenuCurrent */}}
+{{ $currentPage := . }}
+{{ range .Site.Menus.top }}
+            <li role="menuitem" class="{{ if $currentPage.HasMenuCurrent "top" . }}active{{ end }}">
+                <a href="{{.URL}}">{{ .Name }}</a>
+                {{ if .HasChildren }}
+                    <ul role="menu">
+{{ range .Children }}
+                    <li class="{{ if $currentPage.IsMenuCurrent "top" . }}active{{ end }}">
+                        <a href="{{ .URL }}">{{ .Name }}</a>
+                    </li>
+{{ end }}
+                    </ul>
+                {{ end }}
             </li>
-            <!-- <li>
-                <a role="menuitem" href="/assets/pdf/Atishay-Jain.pdf?1533909696789814000">Résumé</a>
-            </li> -->
-            <li>
-                <a role="menuitem" href="{{ ref . "/blog/_index.md" }}">Blog</a>
-            </li>
-            <li>
-                <a role="menuitem" href="{{ref . "/contact.md"}}">Contact</a>
-            </li>
+{{ end }}
         </ul>
     </nav>
     {{with .Site.Params.github }}
