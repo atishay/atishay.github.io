@@ -1,7 +1,9 @@
 ---
 title: "Welcome to Atishay's blog"
-aliases:
-    - /blog/
+menu:
+    top:
+        name: "Blog"
+        weight: 90
 ---
 
 Atishay's blog.
