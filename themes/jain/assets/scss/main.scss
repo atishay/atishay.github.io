@@ -1,6 +1,9 @@
 @import "variables.scss";
 * {
     box-sizing: border-box;
+    transition: all 0.2s linear;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -18,8 +21,88 @@ header {
     width: 100%;
     padding: 0 calc( (100% - var(--max-width)) /2 + 15px);
     border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    align-items: center;
+    min-height: var(--header-height);
+    color: #333;
 }
 
-.top-menu {
- list-style: none;
+// Logo
+.logo {
+    img {
+        width: 130px;
+        height: 47px;
+    }
 }
+
+// Menu
+
+.top-menu {
+    display: inline-flex;
+    font-weight: 400;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.top-menu-item {
+    list-style: none;
+    &.active>a, &:hover>a {
+        color: var(--theme-color);
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    @include media(">=lg") {
+        padding: 10px 20px;
+    }
+    @include media("<lg") {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}
+
+// End Menu
+
+// GitHub Corner
+
+.github-corner svg {
+    width: var(--header-height);
+    height: var(--header-height);
+    color:#fff;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+    fill: var(--theme-color);
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+
+@include media("<sm") {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+// End Github Corner

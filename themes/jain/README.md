@@ -12,3 +12,8 @@ Tested With Hugo Version: Hugo 0.46
 
 ## Menus
 * `top` - Top menu shown in the header
+
+
+## Browsers
+
+* This theme uses all modern CSS like CSS Variables, CSS Grid and flexbox. Do not expect this to support older browsers.
