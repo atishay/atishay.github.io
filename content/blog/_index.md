@@ -2,8 +2,9 @@
 title: "Welcome to Atishay's blog"
 menu:
     top:
-        name: "Blog"
+        name: "blog"
         weight: 90
+        title: "Blog"
 ---
 
 Atishay's blog.

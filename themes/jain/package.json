@@ -1,0 +1,29 @@
+{
+  "name": "atishay.me",
+  "version": "1.0.0",
+  "description": "Atishay Jain's Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atishay/atishay.github.io.git"
+  },
+  "keywords": [
+    "Atishay",
+    "Jain",
+    "Personal",
+    "Website",
+    "Hugo"
+  ],
+  "author": "Atishay Jain <contact@atishay.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atishay/atishay.github.io/issues"
+  },
+  "homepage": "https://github.com/atishay/atishay.github.io#readme",
+  "dependencies": {
+    "include-media": "^1.4.9"
+  }
+}

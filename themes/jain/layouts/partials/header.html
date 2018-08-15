@@ -8,13 +8,13 @@
  {{/* TODO: HasMenuCurrent */}}
 {{ $currentPage := . }}
 {{ range .Site.Menus.top }}
-            <li role="menuitem" class="{{ if $currentPage.HasMenuCurrent "top" . }}active{{ end }}">
-                <a href="{{.URL}}">{{ .Name }}</a>
+                <li role="menuitem" class="{{ if or ($currentPage.HasMenuCurrent " top " .) ($currentPage.IsMenuCurrent "top" .) }}active{{ end }}">
+                <a href="{{.URL}}">{{ .Title }}</a>
                 {{ if .HasChildren }}
                     <ul role="menu">
 {{ range .Children }}
                     <li class="{{ if $currentPage.IsMenuCurrent "top" . }}active{{ end }}">
-                        <a href="{{ .URL }}">{{ .Name }}</a>
+                        <a href="{{ .URL }}">{{ .Title }}</a>
                     </li>
 {{ end }}
                     </ul>
