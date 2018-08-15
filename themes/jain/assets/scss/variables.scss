@@ -3,7 +3,8 @@
 $breakpoints: (xs: 320px, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 :root {
     --max-width: 100%;
-    --header-height: 75px;
+    --header-height: 60px;
+    --theme-color: #00D3F9;
 }
 
 @include media(">=sm") {
@@ -20,6 +21,7 @@ $breakpoints: (xs: 320px, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
 
 @include media(">=lg") {
     :root {
+        --header-height: 75px;
         --max-width: 960px;
     }
 }

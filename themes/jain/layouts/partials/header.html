@@ -1,28 +1,26 @@
-<header>
-    <nav role="navigation">
-        <a role="button" href="/">
-            {{ $iconSVG := resources.Get "image/logo.svg" | resources.Minify }}
-            <img src="{{$iconSVG.Permalink}}" width="130px" height="47px" alt="{{ .Site.Title }} Logo">
-        </a>
-        <ul role="menubar">
+<header role="navigation">
+    <a role="button" class="logo" href="{{.Site.BaseURL}}">
+        {{ $iconSVG := resources.Get "image/logo.svg" | resources.Minify }}
+        <img src="{{$iconSVG.Permalink}}" alt="{{ .Site.Title }} Logo">
+    </a>
+    <ul role="menubar" class="top-menu">
  {{/* TODO: HasMenuCurrent */}}
 {{ $currentPage := . }}
 {{ range .Site.Menus.top }}
-                <li role="menuitem" class="{{ if or ($currentPage.HasMenuCurrent "top" .) ($currentPage.IsMenuCurrent "top" .) }}active{{ end }}">
-                <a href="{{.URL}}">{{ .Title }}</a>
-                {{ if .HasChildren }}
-                    <ul role="menu">
+        <li role="menuitem" class="top-menu-item {{ if or ($currentPage.HasMenuCurrent "top" .) ($currentPage.IsMenuCurrent "top" .) }}active{{ end }}">
+            <a href="{{.URL}}">{{ .Title | upper }}</a>
+            {{ if .HasChildren }}
+                <ul role="menu">
 {{ range .Children }}
-                    <li class="{{ if $currentPage.IsMenuCurrent "top" . }}active{{ end }}">
-                        <a href="{{ .URL }}">{{ .Title }}</a>
-                    </li>
+                <li class="{{ if $currentPage.IsMenuCurrent "top" . }}active{{ end }}">
+                    <a href="{{ .URL }}">{{ .Title | upper }}</a>
+                </li>
 {{ end }}
-                    </ul>
-                {{ end }}
-            </li>
+                </ul>
+            {{ end }}
+        </li>
 {{ end }}
-        </ul>
-    </nav>
+    </ul>
     {{with .Site.Params.github }}
     <a href="{{.}}" role="link" class="github-corner" aria-label="View source on Github">
         {{ $iconSVG := resources.Get "image/octocat.svg" | resources.Minify }}
