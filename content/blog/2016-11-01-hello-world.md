@@ -16,8 +16,7 @@ tags:
 title: Hello World
 menu:
     top:
-        parent: "Blog"
-        name: "hello world"
+        parent: "blog"
         weight: 90
 ---
 
