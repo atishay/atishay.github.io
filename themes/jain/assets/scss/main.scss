@@ -23,44 +23,128 @@ header {
     align-items: center;
     min-height: var(--header-height);
     color: #333;
+    flex-wrap: wrap;
 }
 
 // Logo
 .logo {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
     img {
         width: 130px;
         height: 47px;
     }
 }
 
+// Hamburger Icon
+$hamburger-size: calc(8px + var(--header-height) / 2);
+
+.hamburger {
+    display: block;
+    width: $hamburger-size;
+    height: $hamburger-size;
+    margin: calc(calc(var(--header-height) - #{$hamburger-size}) / 2) 0;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    // hide this
+    opacity: 0;
+    // and place it over the hamburger
+    z-index: 2;
+}
+
+.hamburger~.icon {
+    display: block;
+    width: $hamburger-size;
+    height: $hamburger-size;
+    position: relative;
+    background: #EEE;
+    z-index: 1;
+    padding: 4px;
+    fill: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hamburger:checked~.icon {
+    .bar:nth-of-type(2) {
+        opacity:0;
+    }
+    .bar:nth-of-type(3) {
+        transform: translateY(+5px) translateX(4px) rotateZ(-225deg);
+        transform-origin: center;
+    }
+    .bar:nth-of-type(1) {
+        transform: translateY(-5px) translateX(2px) rotateZ(225deg);
+        transform-origin: center;
+    }
+}
+
+.hamburger:checked~.top-menu {
+    max-height: 100vh;
+    opacity: 1;
+    padding: 15px 0;
+}
+
 // Menu
 
 .top-menu {
-    display: inline-flex;
     font-weight: 400;
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 .top-menu-item {
     list-style: none;
-    &.active>a, &:hover>a {
+    &.active>a,
+    &:hover>a {
         color: var(--theme-color);
     }
     a {
         text-decoration: none;
         color: inherit;
-    }
-    @include media(">=lg") {
-        padding: 10px 20px;
-    }
-    @include media("<lg") {
-        padding: 5px 8px;
-        font-size: 12px;
+        display: inline-block;
+        width: 100%;
+
+        @include media(">=lg") {
+            padding: 10px 20px;
+        }
+        @include media("<lg") {
+            padding: 5px 8px;
+            font-size: 12px;
+        }
+        @include media("<sm") {
+            padding: 12px 0px;
+            font-size: 12px;
+        }
     }
 }
 
-// End Menu
+@include media("<sm") {
+    .top-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.3s ease-out;
+    }
+}
+
+@include media(">=sm") {
+    .hamburger,
+    .hamburger~.icon {
+        display: none;
+    }
+    .top-menu {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
 
 // GitHub Corner
 
@@ -103,4 +187,3 @@ header {
     }
 }
 
-// End Github Corner

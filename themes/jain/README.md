@@ -13,6 +13,9 @@ Tested With Hugo Version: Hugo 0.46
 ## Menus
 * `top` - Top menu shown in the header
 
+## Settings
+* `Site.Params.CSP` Set true to enable CSP. *Please test with production environment flag with this*. In production prevents live reload.
+* `Site.Params.custom_css` Custom CSS File for overrides
 
 ## Browsers
 
