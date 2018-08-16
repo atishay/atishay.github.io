@@ -1,6 +1,7 @@
 @import "../../node_modules/include-media/dist/_include-media.scss";
 
 $breakpoints: (xs: 320px, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$divider: #e4e4e4;
 :root {
     --max-width: 100%;
     --header-height: 60px;

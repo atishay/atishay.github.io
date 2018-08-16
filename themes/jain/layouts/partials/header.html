@@ -20,7 +20,7 @@
         <li role="menuitem" class="top-menu-item {{ if or ($currentPage.HasMenuCurrent "top" .) ($currentPage.IsMenuCurrent "top" .) }}active{{ end }}">
             <a href="{{.URL}}">{{ .Title | upper }}</a>
             {{ if .HasChildren }}
-                <ul role="menu">
+                <ul class="sub-menu" role="menu">
 {{ range .Children }}
                 <li class="{{ if $currentPage.IsMenuCurrent "top" . }}active{{ end }}">
                     <a href="{{ .URL }}">{{ .Title | upper }}</a>
