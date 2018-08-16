@@ -14,10 +14,6 @@ sidebar: Trivia# The first known instance of the usage of the words "hello" and 
 tags:
 - thoughts
 title: Hello World
-menu:
-    top:
-        parent: "blog"
-        weight: 90
 ---
 
 The first output of every computer program has traditionally been hello world. That feels like the right way to restart a blog. I have had a website and blogs at multiple times in the past. While resurrecting a website and a blog for myself, I have had some questions that you non-blogger should ask yourself:

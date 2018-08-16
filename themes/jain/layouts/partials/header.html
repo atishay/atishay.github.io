@@ -1,10 +1,20 @@
 <header role="navigation">
+    {{/*
+        Checkbox Hack for pure CSS Hamburger menu
+        https://codepen.io/erikterwan/pen/EVzeRP
+
+    */}}
+    <input class="hamburger" role="button"  type="checkbox" aria-label="Menu Button" />
+    <a class="icon" role="none" aria-hidden="true">
+    {{ $hamburger := resources.Get "image/hamburger.svg" | resources.Minify }}
+        {{ $hamburger.Content | safeHTML }}
+    </a>
+    {{/* End Checkbox hack code. Uses the parallel <ul as well> */}}
     <a role="button" class="logo" href="{{.Site.BaseURL}}">
-        {{ $iconSVG := resources.Get "image/logo.svg" | resources.Minify }}
-        <img src="{{$iconSVG.Permalink}}" alt="{{ .Site.Title }} Logo">
+        {{ $logoSVG := resources.Get "image/logo.svg" | resources.Minify }}
+        <img src="{{$logoSVG.Permalink}}" alt="{{ .Site.Title }} Logo">
     </a>
     <ul role="menubar" class="top-menu">
- {{/* TODO: HasMenuCurrent */}}
 {{ $currentPage := . }}
 {{ range .Site.Menus.top }}
         <li role="menuitem" class="top-menu-item {{ if or ($currentPage.HasMenuCurrent "top" .) ($currentPage.IsMenuCurrent "top" .) }}active{{ end }}">

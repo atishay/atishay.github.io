@@ -16,8 +16,8 @@
       <meta name="robots" content="noindex, nofollow">
     {{ end }}
 
-    {{ range .Site.Params.custom_css }}
-      <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+    {{ if eq .Site.Params.CSP true }}
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' {{ if ne (getenv "HUGO_ENV") "production" | and (ne .Site.Params.env "production") }} 'unsafe-inline'; connect-src ws:{{ end }}; child-src 'none'; object-src 'none'">
     {{ end }}
 
     {{ block "favicon" . }}
@@ -35,6 +35,10 @@
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}
     <link rel="stylesheet" href="{{$css.Permalink}}" integrity="{{$css.Data.Integrity}}" />
+
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+    {{ end }}
     <!-- {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       {{ template "_internal/google_analytics_async.html" . }}
     {{ end }} -->

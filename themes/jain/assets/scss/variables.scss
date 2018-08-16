@@ -5,6 +5,7 @@ $breakpoints: (xs: 320px, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
     --max-width: 100%;
     --header-height: 60px;
     --theme-color: #00D3F9;
+
 }
 
 @include media(">=sm") {
