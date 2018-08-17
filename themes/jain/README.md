@@ -11,7 +11,7 @@ Tested With Hugo Version: Hugo 0.46
 * `assets/image/logo.svg` - Logo - Aspect Ratio - (130x47 - Hugo does not support getting image size for svg)
 
 ## Menus
-* `top` - Top menu shown in the header. Supports one nested level of submenus.
+* `top` - Top menu shown in the header. Supports one nested level of submenus. Uses the Section name to find the appropriate top level item to highlight.
 
 ## Template blocks
 * `favicon` - Present in the `<head>` tag. Defaults to basic favicon and basic apple touch icon support.

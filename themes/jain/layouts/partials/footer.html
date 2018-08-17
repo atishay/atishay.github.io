@@ -1,0 +1,3 @@
+{{ $header := resources.Get "js/header.js" }}
+{{ $js := $header | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
