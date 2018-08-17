@@ -1,14 +1,12 @@
 header {
+    @include container;
     position: sticky;
     top: 0;
     background: rgba(255, 255, 255, 0.95);
-    width: 100%;
-    padding: 0 calc( (100% - var(--max-width)) /2 + 15px);
     border-bottom: 1px solid $divider;
     display: flex;
     align-items: center;
     min-height: var(--header-height);
-    color: #333;
     flex-wrap: wrap;
 }
 

@@ -33,3 +33,8 @@ $divider: #e4e4e4;
         --max-width: 1140px;
     }
 }
+
+@mixin container {
+    width: 100%;
+    padding: 0 calc( (100% - var(--max-width)) /2 + 15px);
+}
