@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy
 subtitle: We take privacy seriously.
+type: simple
 ---
 
 This Privacy Policy governs the manner in which Atishay Jain's website collects, uses, maintains and discloses information collected from users (each, a "User") of the https://atishay.me website ("Site").
