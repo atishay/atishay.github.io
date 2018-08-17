@@ -13,6 +13,13 @@ Tested With Hugo Version: Hugo 0.46
 ## Menus
 * `top` - Top menu shown in the header. Supports one nested level of submenus.
 
+## Template blocks
+* `favicon` - Present in the `<head>` tag. Defaults to basic favicon and basic apple touch icon support.
+* `social` - All the data for open graph, twitter cards and JSON-LD. Contains sub-blocks
+    * `opengraph` - For Open Graph tags
+    * `meta` - General meta tags like description and canonical url.
+    * `jsonld` - JSON-LD for Google.
+
 ## Settings
 * `Site.Params.CSP` Set true to enable CSP. *Please test with production environment flag with this*. In production prevents live reload.
 * `Site.Params.custom_css` Custom CSS File for overrides

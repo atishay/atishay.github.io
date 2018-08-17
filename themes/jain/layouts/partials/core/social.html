@@ -1,3 +1,4 @@
+ {{ block "meta" . }}
  {{/* General SEO */}}
 <link rel="canonical" href="{{.Permalink}}" />
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
@@ -5,6 +6,9 @@
 {{with .Site.Author.name}}
 <meta name="author" content="{{ . }}">
 {{end}}
+{{ end }}
+
+{{ block "opengraph" . }}
 {{/* Open Graph */}}
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
@@ -60,8 +64,9 @@
 {{- with .Params.tags }}{{ range first 6 . }}
 <meta property="article:tag" content="{{ . }}" />
 {{ end }}{{ end }}
+{{ end }}
 
-{{/* Twitter Card */}}
+{{ block "twitter" .}}
 
 {{- with .Params.image -}}
 <meta name="twitter:card" content="summary_large_image"/>
@@ -88,13 +93,14 @@
 <meta name="twitter:site" content="@{{ . }}" />
 <meta name="twitter:creator" content="@{{ . }}" />
 {{ end }}
+{{ end }}
 
 {{/* Google News */}}
 {{ if .IsPage }}{{ with .Params.tags }}
   <meta name="news_keywords" content="{{ range $i, $kw := first 10 . }}{{ if $i }},{{ end }}{{ $kw }}{{ end }}" />
 {{ end }}{{ end }}
 
-{{/* Google Rich Snippets */}}
+{{ block "jsonld" . }}
 <script type="application/ld+json">
 {
     "headline": "{{ .Title }}",
@@ -164,4 +170,5 @@
         */}}
     }
 </script>
+{{ end }}
 {{ end }}
