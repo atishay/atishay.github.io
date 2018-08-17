@@ -5,6 +5,11 @@ Theme used for Atishay Jain's personal website.
 
 Tested With Hugo Version: Hugo 0.46
 
+## Layout Types
+* `Default` No neeed to enter thetype parameter. Default is a blog post.
+* `Simple` Used for pages where the content does not have a sidebar, just header, rendered markdown and footer. Supoprtted front matter additions
+    * `subtitle` For subtitle.
+
 ## Images
 * `assets/image/favicon.png` - Favicon PNG Version
 * `assets/image/favicon.svg` - Favicon SVG Version (Hugo does not support SVG to PNG)
@@ -22,7 +27,12 @@ Tested With Hugo Version: Hugo 0.46
 
 ## Settings
 * `Site.Params.CSP` Set true to enable CSP. *Please test with production environment flag with this*. In production prevents live reload.
-* `Site.Params.custom_css` Custom CSS File for overrides
+* `Site.Params.custom_css` - Custom CSS File for overrides.
+* `Site.Params.github` - Github link for the octocat on top right.
+* `Site.Params.custom_css` - Custom CSS Overrides file.
+* `Site.Author` - Contains `facebook`, `twitter`, `github`, `email`,  `linkedin` and `name` fields.
+* `Site.Params.color` - Default theme color.
+* `Site.Params.description` - Default Description.
 
 ## Browsers
 
