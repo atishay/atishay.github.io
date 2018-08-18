@@ -37,9 +37,9 @@ You can instruct your browser to refuse all cookies or to indicate when a cookie
 
 Examples of Cookies we use:
 
-*   _Session Cookies_ We use Session Cookies to operate our Service.
-*   _Preference Cookies_ We use Preference Cookies to remember your preferences and various settings.
-*   _Security Cookies_ We use Security Cookies for security purposes.
+*   **Session Cookies:** We use Session Cookies to operate our Service.
+*   **Preference Cookies:** We use Preference Cookies to remember your preferences and various settings.
+*   **Security Cookies:** We use Security Cookies for security purposes.
 
 Use of Data
 -----------
@@ -94,7 +94,7 @@ These third parties have access to your Personal Data only to perform these task
 
 We may use third-party Service Providers to monitor and analyze the use of our Service.
 
-*   _Google Analytics_ Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.
+*   **Google Analytics** Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.
 
     You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.
 
