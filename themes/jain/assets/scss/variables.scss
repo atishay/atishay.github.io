@@ -35,6 +35,8 @@ $divider: #e4e4e4;
 }
 
 @mixin container {
+    $padding: calc( (100% - var(--max-width)) /2 + 15px);
     width: 100%;
-    padding: 0 calc( (100% - var(--max-width)) /2 + 15px);
+    padding-left: $padding;
+    padding-right: $padding;
 }
