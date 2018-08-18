@@ -3,7 +3,7 @@ Jain
 
 Theme used for Atishay Jain's personal website.
 
-Tested With Hugo Version: Hugo 0.46
+Tested With Hugo Version: Hugo 0.47
 
 ## Layout Types
 * `Default` No neeed to enter thetype parameter. Default is a blog post.

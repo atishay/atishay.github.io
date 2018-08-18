@@ -2,8 +2,8 @@
 <html>
     {{- partial "core/head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
+        {{- partialCached "header.html" . .Section -}}
         {{- block "main" . }}{{- end }}
-        {{- partial "footer.html" . -}}
+        {{- partialCached "footer.html" . -}}
     </body>
 </html>
