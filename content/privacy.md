@@ -21,9 +21,7 @@ We collect several different types of information for various purposes to provid
 
 #### Personal Data
 
-While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
-
-*   Cookies and Usage Data
+While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to cookies and usage data.
 
 #### Usage Data
 
