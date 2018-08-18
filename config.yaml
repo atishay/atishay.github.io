@@ -4,6 +4,7 @@ languageCode: "en-us"
 title: "Atishay Jain"
 theme: "jain"
 canonifyURLs: true
+minify: true
 # Does not set the sitemap yet.
 # enableRobotsTXT: true
 ignoreFiles:
