@@ -3,4 +3,16 @@
  **/
 .simple {
     @include container;
+    .title {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+        color: #222;
+    }
+
+    .subtitle {
+        display: block;
+        text-align: center;
+        padding-bottom: 30px;
+    }
 }
