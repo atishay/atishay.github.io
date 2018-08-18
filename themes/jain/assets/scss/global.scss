@@ -60,12 +60,13 @@ a {
     }
 }
 
-em {
+strong {
     font-style: normal;
-    font-weight: 600;
-    &:after {
-        content: ":";
-    }
+    font-weight: 500;
+}
+
+em {
+
 }
 
 ::selection {
