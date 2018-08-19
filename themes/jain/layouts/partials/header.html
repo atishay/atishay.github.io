@@ -42,6 +42,7 @@
         </li>
 {{ end }}
     </ul>
+ {{ $scratch.Delete "fallback" }}
     {{with .Site.Params.github }}
     <a href="{{.}}" role="link" class="github-corner" aria-label="View source on Github">
         {{ $iconSVG := resources.Get "image/octocat.svg" | resources.Minify }}
