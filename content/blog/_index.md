@@ -1,5 +1,4 @@
 ---
-title: "Welcome to Atishay's blog"
 menu:
     top:
         name: "blog"
