@@ -50,4 +50,14 @@
     </a>
     {{ end }}
 </header>
-
+{{/* https://css-tricks.com/markup-for-breadcrumbs/
+ https://jsonld.com/breadcrumb/
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }} {{ $.Scratch.Add "path" .Site.BaseURL }}
+<nav class="breadcrumbs">
+        <a href="/">home</a>
+    {{ range $index, $element := split $url "/" }} {{ $.Scratch.Add "path" $element }} {{ if ne $element "" }}
+        <a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a>
+    {{ $.Scratch.Add "path" "/" }} {{ end }} {{ end }}
+</nav>
+    {{ $.Scratch.delete "path" }}
+    */}}

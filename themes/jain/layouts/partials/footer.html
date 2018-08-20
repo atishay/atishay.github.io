@@ -2,12 +2,35 @@
 {{ $js := $header | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 <footer>
-
+            {{ range .Site.Params.Footer}}
             <section>
                 <h2>
-                    About
+                {{ .title }}
                 </h2>
+                {{ with .description }}
+                <p>
+                {{ . | markdownify }}
+                </p>
+                {{ end }}
+                {{$page := .}}
+                {{ if gt .recentCount -1 }}
+                {{ $.Scratch.Set "count" .recentCount }}
+                {{ else }}
+                {{ $.Scratch.Set "count" 10 }}
+                {{ end }}
+                {{ with .recents }}
+                    <ul>
+                    {{ range first ($.Scratch.Get "count") (where $.Site.Pages "Section" "blog") }}
+<li>
+<a href={{.Permalink}}>{{ .Title }}</a> -
+<time datetime="{{ .PublishDate }}">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate}}</time>
+</li>
+                    {{ end }}
+                    </ul>
+                {{ end }}
+                {{ $.Scratch.Delete "count" }}
             </section>
+            {{ end }}
                 {{/*
                     <p>
                     <img class="img-thumbnail rounded footer-image" src='/assets/img/footer_me.jpg?{{site.time | date: ' %s%N '}}'> Personal Website of Atishay Jain, Computer Scientist at Adobe Systems. I am a developer living in the

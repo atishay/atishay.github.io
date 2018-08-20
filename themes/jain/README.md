@@ -25,6 +25,17 @@ Tested With Hugo Version: Hugo 0.47
     * `meta` - General meta tags like description and canonical url.
     * `jsonld` - JSON-LD for Google.
 
+## Footer
+
+* The footer contains 4 sections that can be specified in the front matter.
+* The first section is called about and the second is called disclaimer but the text cn be modified in the settings as an array in `Site.Params.Footer` with the following options
+    * `title` - Title of the section.
+    * `description` - In Markdown
+    * `image` - Show an image in the section (by default pulled to the left with 50% width).
+    * `recent` - Name of the section to show recents from.
+    * `recentCount` - Count for the recent range.
+
+
 ## Settings
 * `Site.Params.CSP` Set true to enable CSP. *Please test with production environment flag with this*. In production prevents live reload.
 * `Site.Params.custom_css` - Custom CSS File for overrides.
