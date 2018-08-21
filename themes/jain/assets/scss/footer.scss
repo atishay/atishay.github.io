@@ -1,9 +1,12 @@
 footer {
     $footer-color: #7C7C7C;
-    @include container;
     background: #282828;
     color : $footer-color;
-
+    &>* {
+        @include container;
+            padding-top: 30px;
+            padding-bottom: 30px;
+    }
     h2 {
         color: #CCC;
     }
@@ -14,5 +17,8 @@ footer {
             text-shadow: none;
         }
     }
-
+    #copyright {
+        text-align: center;
+        background: #1D1D1D;
+    }
 }

@@ -2,152 +2,94 @@
 {{ $js := $header | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 <footer>
-            {{ range .Site.Params.Footer}}
-            <section>
-                <h2>
-                {{ .title }}
-                </h2>
-                {{ with .description }}
-                <p>
-                {{ . | markdownify }}
-                </p>
-                {{ end }}
-                {{$page := .}}
-                {{ if gt .recentCount -1 }}
-                {{ $.Scratch.Set "count" .recentCount }}
-                {{ else }}
-                {{ $.Scratch.Set "count" 10 }}
-                {{ end }}
-                {{ with .recents }}
-                    <ul>
-                    {{ range first ($.Scratch.Get "count") (where $.Site.Pages "Section" "blog") }}
-<li>
-<a href={{.Permalink}}>{{ .Title }}</a> -
-<time datetime="{{ .PublishDate }}">{{ dateFormat "Monday, Jan 2, 2006" .PublishDate}}</time>
-</li>
-                    {{ end }}
-                    </ul>
-                {{ end }}
-                {{ $.Scratch.Delete "count" }}
-            </section>
+    <div>
+    {{ range .Site.Params.Footer}}
+    <section>
+        <h2>
+        {{ .title }}
+        </h2>
+        {{ with .description }}
+        <p>
+        {{ . | markdownify }}
+        </p>
+        {{ end }}
+        {{$page := .}}
+        {{ if gt .recentCount -1 }}
+        {{ $.Scratch.Set "count" .recentCount }}
+        {{ else }}
+        {{ $.Scratch.Set "count" 10 }}
+        {{ end }}
+        {{ with .recents }}
+        <ul>
+            {{ range first ($.Scratch.Get "count") (where (where $.Site.Pages "Section" "blog") ".Kind" "==" "page" )}}
+            <li>
+                <a href={{.Permalink}}>{{ .Title }}</a> -
+                <time datetime="{{ .PublishDate }}">{{ dateFormat "Monday, Jan 2, 2006." .PublishDate}}</time>
+            </li>
             {{ end }}
-                {{/*
-                    <p>
-                    <img class="img-thumbnail rounded footer-image" src='/assets/img/footer_me.jpg?{{site.time | date: ' %s%N '}}'> Personal Website of Atishay Jain, Computer Scientist at Adobe Systems. I am a developer living in the
-                    San Francisco Bay area and love solving problems via technology, design, writing, talking or any other
-                    means possible.
-                </p>
-            </div>
-            <!-- Footer Widget Ends -->
+        </ul>
+        {{ end }} {{ $.Scratch.Delete "count" }} {{ with .contact }}
+        <ul class="contact-us">
+            {{ with $.Site.Author.email }}
+            <li>
+                <a target="_blank" href="mailto:{{ . }}">
+                    <i class="icon-envelope"></i>
+                    {{$middle := replaceRE "^.*@" "" .}}
+                    <span>{{replaceRE "@.*$" "" .}} [at] {{ replaceRE "\\..*" "" $middle }} [dot] {{ replaceRE "^.*\\." "" . }}</span>
+                </a>
+            </li>
+            {{ end }} {{ with $.Site.Author.linkedin }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    <i class="icon-linkedin"></i>
+                    <span>{{ replaceRE "https://" "" . }}</span>
+                </a>
+            </li>
+            {{ end }} {{ with $.Site.Author.github }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    <i class="icon-github"></i>
+                    <span>{{ replaceRE "https://" "" . }}</span>
+                </a>
+            </li>
+            {{ end }} {{ with $.Site.Author.twitter }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    <i class="icon-twitter"></i>
+                    <span>{{ replaceRE "https://" "" . }}</span>
+                </a>
+            </li>
+            {{ end }} {{ with $.Site.Author.facebook }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    <i class="icon-facebook"></i>
+                    <span>{{ replaceRE "https://" "" . }}</span>
+                </a>
+            </li>
+            {{ end }}
 
-            <!-- Footer Widget Starts -->
-            <div class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".2s">
-                <h3 class="small-title">
-                    Disclaimer
-                </h3>
-                <p>
-                    The content of this website is mine and mine alone. It is not affiliated with any of my present or past employers, institutes
-                    or acquaintances. If you find anything offensive or any copyright infringements, please report them.
-                    I apologize in advance for any such errors. For more details please refer to the
-                    <a
-                        href="{{ " /privacy " | relative_url }}">Privacy Policy</a> and
-                        <a href="{{ " /terms " | relative_url }}">Terms of Use</a>.
-                </p>
-            </div>
-            <!-- Footer Widget Ends -->
-
-            <!-- Footer Widget Starts -->
-            <div class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".5s">
-                <h3 class="small-title">
-                    Recent Blog Posts
-                </h3>
-                <div>
-                    {% for post in site.posts limit:7 %}
-                    <a href="{{post.url}}" title="{{post.title}}">{{post.title | split: '-' | first}}</a> -
-                    <span class="published-time">
-                        <span class="moment">{{ post.date | date_to_xmlschema}}</span>
-                    </span>
-                    <br> {% endfor %}
-                </div>
-            </div>
-            <!-- Footer Widget Ends -->
-
-            <!-- Footer Widget Starts -->
-            <div id="contact-us" class="footer-widget col-md-3 col-xs-12 wow fadeIn" data-wow-delay=".8s">
-                <h3 class="small-title">
-                    CONTACT
-                </h3>
-                <div class="contact-us">
-                    <p>
-                        <a target="_blank" href="mailto:contact@atishay.me">
-                            <i class="fa fa-envelope icon-box icon-xs"></i>
-                            <span>contact [at] atishay [dot] me</span>
-                        </a>
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://linkedin.com/in/atishay">
-                            <i class="fa fa-linkedin icon-box icon-xs"></i>
-                            <span>linkedin.com/in/atishay</span>
-                        </a>
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://facebook.com/atishay811">
-                            <i class="fa fa-facebook icon-box icon-xs"></i>
-                            <span>facebook.com/atishay811</span>
-                        </a>
-                    </p>
-                    <p>
-                        <a target="_blank" href="https://github.com/atishay">
-                            <i class="fa fa-github icon-box icon-xs"></i>
-                            <span>github.com/atishay</span>
-                        </a>
-                    </p>
-                    <p>
-                        <a target="_blank" href="{{site.url}}/atom.xml">
-                            <i class="fa fa-rss icon-box icon-xs"></i>
-                            <span>atishay.me/atom.xml</span>
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <!-- Footer Widget Ends -->
-        </div>
-        <!-- Row Ends -->
+        </ul>
+        {{ end }}
+    </section>
+    {{ end }}
     </div>
-    <!-- Container Ends -->
-    <!-- Copyright -->
     <div id="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <p class="copyright-text">
-                        &copy; 2016
-                        <script>
-                            new Date().getFullYear() > 2016 && document.write("-" + new Date().getFullYear());
-                        </script>, Atishay Jain. Theme based on
-                        <a href="https://graygrids.com/item/engage-free-bootstrap-4-template/" target="_blank" rel="nofollow" class="footer-link">Engage</a>
-                        by
-                        <a href="https://graygrids.com" rel="nofollow" target="_blank" class="footer-link">Gray Grids</a>
-                        . Images from
-                        <a href="http://pixabay.com" class="footer-link" rel="nofollow" target="_blank">Pixabay</a>
-                        ,
-                        <a href="http://flickr.com" rel="nofollow" target="_blank" class="footer-link">Flickr</a>
-                        . Icons from
-                        <a href="http://flaticon.com" rel="nofollow" class="footer-link">FlatIcon</a>
-                        &amp;
-                        <a href="http://iconfinder.com" rel="nofollow" class="footer-link">IconFinder</a>
-                        . Last Updated
-                        <span class="moment">{{site.time | date_to_xmlschema}}</span>
-                    </p>
-                </div>
-            </div>
-        </div>
+        &copy; 2016 -
+        <time datetime="{{ now }}">{{ dateFormat "2006" now}}</time>, Atishay Jain. Images from
+        <a href="http://pixabay.com" class="footer-link" rel="nofollow" target="_blank">Pixabay</a>
+        ,
+        <a href="http://flickr.com" rel="nofollow" target="_blank" class="footer-link">Flickr</a>
+        . Icons from
+        <a href="http://flaticon.com" rel="nofollow" class="footer-link">FlatIcon</a>
+        &amp;
+        <a href="http://iconfinder.com" rel="nofollow" class="footer-link">IconFinder</a>. Last Updated -
+        <time datetime="{{ now }}">{{ dateFormat "Monday, Jan 2, 2006." now}}</time>
     </div>
- */}}
 
 </footer>
-{{/* Goto top link */}}
+{{/* Goto top link
 <a href="#" class="scrollUp">
     <i class="fa fa-angle-up">
     </i>
 </a>
+*/}}

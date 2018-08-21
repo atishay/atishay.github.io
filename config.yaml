@@ -26,13 +26,17 @@ params:
         - title: Recent Blog Posts
           recents: blog
           recentCount: 7
+        - title: Contact Us
+          contact: true
+
+
 
 author:
-    facebook: "atishay811"
-    twitter: "atishay811"
-    github: "atishay"
+    facebook: "https://facebook.com/atishay811"
+    twitter: "https://twitter.com/atishay811"
+    github: "https://github.com/atishay"
     email: "contact@atishay.me"
-    linkedin: "atishay"
+    linkedin: "https://linkedin.com/in/atishay"
     name: "Atishay Jain"
 
 permalinks:
