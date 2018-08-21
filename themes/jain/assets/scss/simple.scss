@@ -3,6 +3,7 @@
  **/
 .simple {
     @include container;
+    flex: 1; // Stretch to fill space if needed.
     .title {
         text-align: center;
         color: #222;
