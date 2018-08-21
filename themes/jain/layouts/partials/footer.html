@@ -4,7 +4,7 @@
 {{ $js := slice $time $header | resources.Concat $main | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 <footer>
-    <div class="footer-main">
+    <div class="items-{{len .Site.Params.Footer}}">
     {{ range .Site.Params.Footer}}
     <section>
         <h2>
@@ -75,7 +75,7 @@
     </section>
     {{ end }}
     </div>
-    <div id="copyright">
+    <section id="copyright">
         &copy; 2016 -
         <time class="now" datetime="{{ now }}">{{ dateFormat "2006" now}}</time>, Atishay Jain. Images from
         <a href="http://pixabay.com" class="footer-link" rel="nofollow" target="_blank">Pixabay</a>
@@ -86,7 +86,7 @@
         &amp;
         <a href="http://iconfinder.com" rel="nofollow" class="footer-link">IconFinder</a>. Last Updated -
         <time datetime="{{ now }}">{{ dateFormat "Monday, Jan 2, 2006." now}}</time>
-    </div>
+    </section>
 
 </footer>
 {{/* Goto top link
