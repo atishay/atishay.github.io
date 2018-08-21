@@ -26,7 +26,7 @@
             {{ range first ($.Scratch.Get "count") (where (where $.Site.Pages "Section" "blog") ".Kind" "==" "page" )}}
             <li>
                 <a href={{.Permalink}}>{{ .Title }}</a> -
-                <time datetime="{{ .PublishDate }}">{{ dateFormat "Monday, Jan 2, 2006." .PublishDate}}</time>
+<time datetime="{{ .PublishDate.Format "02 Jan 06 15:04 -0700" }}">{{ .PublishDate.Format "Monday, Jan 2, 2006."}}</time>
             </li>
             {{ end }}
         </ul>
@@ -35,7 +35,7 @@
             {{ with $.Site.Author.email }}
             <li>
                 <a target="_blank" href="mailto:{{ . }}">
-                    <i class="icon-envelope"></i>
+ {{ $icon := resources.Get "image/line-awesome/fa-envelope.svg" | resources.Minify }} {{ $icon.Content | safeHTML }}
                     {{$middle := replaceRE "^.*@" "" .}}
                     <span>{{replaceRE "@.*$" "" .}} [at] {{ replaceRE "\\..*" "" $middle }} [dot] {{ replaceRE "^.*\\." "" . }}</span>
                 </a>
@@ -43,28 +43,29 @@
             {{ end }} {{ with $.Site.Author.linkedin }}
             <li>
                 <a target="_blank" href="{{ . }}">
-                    <i class="icon-linkedin"></i>
+ {{ $icon := resources.Get "image/line-awesome/fa-linkedin.svg" | resources.Minify }} {{ $icon.Content | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
                 </a>
             </li>
             {{ end }} {{ with $.Site.Author.github }}
             <li>
                 <a target="_blank" href="{{ . }}">
-                    <i class="icon-github"></i>
+                    {{ $icon := resources.Get "image/line-awesome/fa-github.svg" | resources.Minify }} {{ $icon.Content | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
                 </a>
             </li>
             {{ end }} {{ with $.Site.Author.twitter }}
             <li>
                 <a target="_blank" href="{{ . }}">
-                    <i class="icon-twitter"></i>
+                    {{ $icon := resources.Get "image/line-awesome/fa-twitter.svg" | resources.Minify }} {{ $icon.Content | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
                 </a>
             </li>
             {{ end }} {{ with $.Site.Author.facebook }}
             <li>
                 <a target="_blank" href="{{ . }}">
-                    <i class="icon-facebook"></i>
+                    {{ $icon := resources.Get "image/line-awesome/fa-facebook.svg" | resources.Minify }}
+                    {{ $icon.Content | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
                 </a>
             </li>
@@ -77,14 +78,7 @@
     </div>
     <section id="copyright">
         &copy; 2016 -
-        <time class="now" datetime="{{ now }}">{{ dateFormat "2006" now}}</time>, Atishay Jain. Images from
-        <a href="http://pixabay.com" class="footer-link" rel="nofollow" target="_blank">Pixabay</a>
-        ,
-        <a href="http://flickr.com" rel="nofollow" target="_blank" class="footer-link">Flickr</a>
-        . Icons from
-        <a href="http://flaticon.com" rel="nofollow" class="footer-link">FlatIcon</a>
-        &amp;
-        <a href="http://iconfinder.com" rel="nofollow" class="footer-link">IconFinder</a>. Last Updated -
+        <time class="now" datetime="{{ now }}">{{ dateFormat "2006" now}}</time>, {{.Site.Title}}. Last Updated -
         <time datetime="{{ now }}">{{ dateFormat "Monday, Jan 2, 2006." now}}</time>
     </section>
 

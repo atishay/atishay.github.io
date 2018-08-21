@@ -180,15 +180,24 @@ $hamburger-size: calc(8px + var(--header-height) / 2);
 }
 
 // GitHub Corner
-.github-corner svg {
-    width: var(--header-height);
-    height: var(--header-height);
-    color: #fff;
+.github-corner {
+    svg {
+        width: var(--header-height);
+        height: var(--header-height);
+        color: #fff;
+        fill: var(--theme-color);
+        position: absolute;
+        top: 0;
+        border: 0;
+        right: 0;
+    }
+    .octo-arm {
+        transform-origin: 130px 106px;
+    }
     position: absolute;
     top: 0;
     border: 0;
     right: 0;
-    fill: var(--theme-color);
 }
 
 .github-corner:hover .octo-arm {
