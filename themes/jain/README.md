@@ -34,6 +34,7 @@ Tested With Hugo Version: Hugo 0.47
     * `image` - Show an image in the section (by default pulled to the left with 50% width).
     * `recent` - Name of the section to show recents from.
     * `recentCount` - Count for the recent range.
+    * `contact` - Optimized version of the contact us snippets. The order and contents are not customizable as you can still use markdown to make a custom version.
 
 
 ## Settings
