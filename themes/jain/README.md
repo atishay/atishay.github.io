@@ -27,8 +27,8 @@ Tested With Hugo Version: Hugo 0.47
 
 ## Footer
 
-* The footer contains 4 sections that can be specified in the front matter.
-* The first section is called about and the second is called disclaimer but the text cn be modified in the settings as an array in `Site.Params.Footer` with the following options
+* The footer contains up to sections that can be specified in the front matter. The template has special column arrangement for the sectioning as defined below.
+* There can be modified in the settings as an array in `Site.Params.Footer` with the following options
     * `title` - Title of the section.
     * `description` - In Markdown
     * `image` - Show an image in the section (by default pulled to the left with 50% width).
@@ -36,6 +36,19 @@ Tested With Hugo Version: Hugo 0.47
     * `recentCount` - Count for the recent range.
     * `contact` - Optimized version of the contact us snippets. The order and contents are not customizable as you can still use markdown to make a custom version.
 
+## Column arrangements
+CSS Grids are used for column arrangements in the most logical manner.
+* 1 - Single Item
+* 2 - Two items till `md`
+* 3 - Three items till `lg`
+* 4 - 4 items till `xl`, 2 2 till `md`
+* 5 - 2 3 till `lg`, 2 2 1 till `md`
+* 6 - 3 3 till `lg`, 2 2 2 till `md`
+* 7 - 3 4 till `xl`, 3 3 1 till `lg`, 2 2 2 1 till `md`
+* 8 - 4 4 till `xl`, 2 2 2 2 till `md`
+* 9 - 3 3 3 till `lg`
+
+8 and 9 can be further improved if needed.
 
 ## Settings
 * `Site.Params.CSP` Set true to enable CSP. *Please test with production environment flag with this*. In production prevents live reload.

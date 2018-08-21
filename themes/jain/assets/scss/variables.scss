@@ -45,8 +45,8 @@ $divider: #e4e4e4;
     display: grid;
     grid-template-columns: 1fr;
     @include media(">=md") {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "one two" "three four" "five six" "seven seven";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "one one two two" "three three four four" "five five six six" ". seven seven .";
     }
     @include media(">=lg") {
         grid-template-columns: 1fr 1fr 1fr;
@@ -89,8 +89,8 @@ $divider: #e4e4e4;
     grid-template-columns: 1fr;
 
     @include media(">=md") {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "one two" "three four" "five five";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "one one two two" "three three four four" ". five five .";
     }
     @include media(">=lg") {
           grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -141,6 +141,12 @@ $divider: #e4e4e4;
         grid-template-columns: 1fr 1fr 1fr;
     }
     grid-column-gap: 20px;
+}
+
+.items-6 {
+    @include media(">=md") {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .items-2 {
