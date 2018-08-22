@@ -1,11 +1,12 @@
 function getNewTime(value){var d=new Date(value);var now=new Date();var seconds=Math.round(Math.abs((now.getTime()-d.getTime())/1000));var minutes=Math.round(Math.abs(seconds/60));var hours=Math.round(Math.abs(minutes/60));var days=Math.round(Math.abs(hours/24));var months=Math.round(Math.abs(days/30.416));var years=Math.round(Math.abs(days/365));if(seconds<=45){return 'a few seconds ago';}else if(seconds<=90){return 'a minute ago';}else if(minutes<=45){return minutes+' minutes ago';}else if(minutes<=90){return 'an hour ago';}else if(hours<=22){return hours+' hours ago';}else if(hours<=36){return 'a day ago';}else if(days<=25){return days+' days ago';}else if(days<=45){return 'a month ago';}else if(days<=345){return months+' months ago';}else if(days<=545){return 'a year ago';}else{return years+' years ago';}}
-Array.from(document.getElementsByTagName('time')).forEach((x)=>{console.log(x,x.getAttribute('datetime'));if(x.className==='now'){x.innerText=new Date().getFullYear();}else{x.innerText=getNewTime(x.getAttribute('datetime'));}});(()=>{"use strict";let lastKnownScrollY=0;let currentScrollY=0;let ticking=false;const idOfHeader='header';let eleHeader=null;let eleCheckbox=null;const classes={pinned:'header-pin',unpinned:'header-unpin',};function onScroll(){currentScrollY=window.pageYOffset;requestTick();}
-function requestTick(){if(eleCheckbox.checked){return;}
-if(!ticking){requestAnimationFrame(update);}
+Array.from(document.getElementsByTagName('time')).forEach((x)=>{if(x.className==='now'){x.innerText=new Date().getFullYear();}else{x.innerText=getNewTime(x.getAttribute('datetime'));}});(()=>{"use strict";let lastKnownScrollY=0;let currentScrollY=0;let ticking=false;let eleHeader=null;let eleScrollUp=null;let eleCheckbox=null;const classes={pinned:'header-pin',unpinned:'header-unpin',};function onScroll(){currentScrollY=window.pageYOffset;requestTick();}
+function requestTick(){if(!ticking){requestAnimationFrame(update);}
 ticking=true;}
-function update(){if(eleCheckbox.checked){ticking=false;return;}
-if(currentScrollY+document.documentElement.clientHeight>=document.documentElement.scrollHeight){pin();}else if(currentScrollY<lastKnownScrollY){pin();}else if(currentScrollY>lastKnownScrollY){unpin();}
-lastKnownScrollY=currentScrollY;ticking=false;}
+function update(){ticking=false;if(currentScrollY>=200){enableScrollUp();}else{disableScrollUp();}
+if(!eleCheckbox.checked){if(currentScrollY+document.documentElement.clientHeight>=document.documentElement.scrollHeight){pin();}else if(currentScrollY<lastKnownScrollY){pin();}else if(currentScrollY>lastKnownScrollY){unpin();}
+lastKnownScrollY=currentScrollY;}}
+function enableScrollUp(){if(eleScrollUp.classList.contains('hidden')){eleScrollUp.classList.remove('hidden');}}
+function disableScrollUp(){if(!eleScrollUp.classList.contains('hidden')){eleScrollUp.classList.add('hidden');}}
 function pin(){if(eleHeader.classList.contains(classes.unpinned)){eleHeader.classList.remove(classes.unpinned);eleHeader.classList.add(classes.pinned);}}
 function unpin(){if(eleHeader.classList.contains(classes.pinned)||!eleHeader.classList.contains(classes.unpinned)){eleHeader.classList.remove(classes.pinned);eleHeader.classList.add(classes.unpinned);}}
-window.onload=()=>{eleCheckbox=document.getElementsByClassName('hamburger')[0];eleHeader=document.getElementById('header');document.addEventListener('scroll',onScroll,false);}})();
+window.onload=()=>{eleCheckbox=document.getElementsByClassName('hamburger')[0];eleHeader=document.getElementById('header');eleScrollUp=document.getElementsByClassName('scrollUp')[0];document.addEventListener('scroll',onScroll,false);onScroll();}})();

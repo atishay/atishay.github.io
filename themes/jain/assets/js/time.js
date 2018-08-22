@@ -34,7 +34,6 @@ function getNewTime(value) {
 }
 
 Array.from(document.getElementsByTagName('time')).forEach((x) => {
-    console.log(x, x.getAttribute('datetime'));
     if (x.className === 'now') {
         x.innerText = new Date().getFullYear();
     } else {

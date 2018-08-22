@@ -5,8 +5,8 @@
     let lastKnownScrollY = 0;
     let currentScrollY = 0;
     let ticking = false;
-    const idOfHeader = 'header';
     let eleHeader = null;
+    let eleScrollUp = null;
     let eleCheckbox = null;
     const classes = {
         pinned: 'header-pin',
@@ -17,28 +17,40 @@
         requestTick();
     }
     function requestTick() {
-        if (eleCheckbox.checked) {
-            return;
-        }
         if (!ticking) {
             requestAnimationFrame(update);
         }
         ticking = true;
     }
     function update() {
-        if (eleCheckbox.checked) {
-            ticking = false;
-            return;
-        }
-        if (currentScrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
-            pin();
-        } else if (currentScrollY < lastKnownScrollY) {
-            pin();
-        } else if (currentScrollY > lastKnownScrollY) {
-            unpin();
-        }
-        lastKnownScrollY = currentScrollY;
         ticking = false;
+        // Scroll to top hiding.
+        if (currentScrollY >= 200) {
+            enableScrollUp();
+        } else {
+            disableScrollUp();
+        }
+        // Header hiding
+        if (!eleCheckbox.checked) {
+            if (currentScrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+                pin();
+            } else if (currentScrollY < lastKnownScrollY) {
+                pin();
+            } else if (currentScrollY > lastKnownScrollY) {
+                unpin();
+            }
+            lastKnownScrollY = currentScrollY;
+        }
+    }
+    function enableScrollUp() {
+        if (eleScrollUp.classList.contains('hidden')) {
+            eleScrollUp.classList.remove('hidden');
+        }
+    }
+    function disableScrollUp() {
+        if (!eleScrollUp.classList.contains('hidden')) {
+            eleScrollUp.classList.add('hidden');
+        }
     }
     function pin() {
         if (eleHeader.classList.contains(classes.unpinned)) {
@@ -55,6 +67,8 @@
     window.onload = () => {
         eleCheckbox = document.getElementsByClassName('hamburger')[0];
         eleHeader = document.getElementById('header');
+        eleScrollUp = document.getElementsByClassName('scrollUp')[0];
         document.addEventListener('scroll', onScroll, false);
+        onScroll();
     }
 })();

@@ -3,6 +3,10 @@
 {{ $main := resources.Get "js/main.js" }}
 {{ $js := slice $time $header | resources.Concat $main | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+<a href="#top" class="scrollUp">
+    {{ $icon := resources.Get "image/line-awesome/fa-angle-up.svg" | resources.Minify }}
+    {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
+</a>
 <footer>
     <div class="items-{{len .Site.Params.Footer}}">
     {{ range .Site.Params.Footer}}
@@ -35,7 +39,7 @@
             {{ with $.Site.Author.email }}
             <li>
                 <a target="_blank" href="mailto:{{ . }}">
- {{ $icon := resources.Get "image/line-awesome/fa-envelope.svg" | resources.Minify }} {{ $icon.Content | safeHTML }}
+ {{ $icon := resources.Get "image/line-awesome/fa-envelope.svg" | resources.Minify }} {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
                     {{$middle := replaceRE "^.*@" "" .}}
                     <span>{{replaceRE "@.*$" "" .}} [at] {{ replaceRE "\\..*" "" $middle }} [dot] {{ replaceRE "^.*\\." "" . }}</span>
                 </a>
@@ -43,21 +47,24 @@
             {{ end }} {{ with $.Site.Author.linkedin }}
             <li>
                 <a target="_blank" href="{{ . }}">
- {{ $icon := resources.Get "image/line-awesome/fa-linkedin.svg" | resources.Minify }} {{ $icon.Content | safeHTML }}
+                    {{ $icon := resources.Get "image/line-awesome/fa-linkedin.svg" | resources.Minify }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
                 </a>
             </li>
             {{ end }} {{ with $.Site.Author.github }}
             <li>
                 <a target="_blank" href="{{ . }}">
-                    {{ $icon := resources.Get "image/line-awesome/fa-github.svg" | resources.Minify }} {{ $icon.Content | safeHTML }}
+                    {{ $icon := resources.Get "image/line-awesome/fa-github.svg" | resources.Minify }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
                 </a>
             </li>
             {{ end }} {{ with $.Site.Author.twitter }}
             <li>
                 <a target="_blank" href="{{ . }}">
-                    {{ $icon := resources.Get "image/line-awesome/fa-twitter.svg" | resources.Minify }} {{ $icon.Content | safeHTML }}
+                    {{ $icon := resources.Get "image/line-awesome/fa-twitter.svg" | resources.Minify }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
                 </a>
             </li>
@@ -65,7 +72,7 @@
             <li>
                 <a target="_blank" href="{{ . }}">
                     {{ $icon := resources.Get "image/line-awesome/fa-facebook.svg" | resources.Minify }}
-                    {{ $icon.Content | safeHTML }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
                 </a>
             </li>
@@ -79,13 +86,7 @@
     <section id="copyright">
         &copy; 2016 -
         <time class="now" datetime="{{ now }}">{{ dateFormat "2006" now}}</time>, {{.Site.Title}}. Last Updated -
-        <time datetime="{{ now }}">{{ dateFormat "Monday, Jan 2, 2006." now}}</time>
+<time datetime="{{ now.Format " 02 Jan 06 15:04 -0700 " }}">{{ dateFormat "Monday, Jan 2, 2006." now}}</time>
     </section>
 
 </footer>
-{{/* Goto top link
-<a href="#" class="scrollUp">
-    <i class="fa fa-angle-up">
-    </i>
-</a>
-*/}}
