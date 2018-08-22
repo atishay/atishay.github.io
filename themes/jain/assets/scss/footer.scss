@@ -42,15 +42,6 @@ footer {
     }
 }
 
-@keyframes delay-load {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 .scrollUp {
     position: fixed;
     display: block;
@@ -68,5 +59,8 @@ footer {
     &.hidden {
         opacity: 0;
     }
-    animation: delay-load 2s;
+}
+
+.no-js .scrollUp {
+    opacity: 0;
 }

@@ -1,5 +1,9 @@
+// Remove the no-js class from the html tag that is meant for the noscript mode.
+document.getElementsByTagName('html')[0].classList.remove('no-js');
 
 // Insired by https://www.sysleaf.com/js-toggle-header-on-scroll/
+// Also puts scroll to top hiding behavior in the same JS function to reuse
+// Handing for scroll and animation frame.
 (() => {
     "use strict";
     let lastKnownScrollY = 0;
@@ -8,6 +12,7 @@
     let eleHeader = null;
     let eleScrollUp = null;
     let eleCheckbox = null;
+    let hitCount = 0;
     const classes = {
         pinned: 'header-pin',
         unpinned: 'header-unpin',
@@ -24,14 +29,17 @@
     }
     function update() {
         ticking = false;
-        // Scroll to top hiding.
+        // Scroll to top hiding/showing.
         if (currentScrollY >= 200) {
             enableScrollUp();
         } else {
             disableScrollUp();
         }
         // Header hiding
-        if (!eleCheckbox.checked) {
+        // Ignore first 5 hits for safari reload in the center of the page
+        // It is good enough with 2. First is the Js load,
+        // Second is safari's scroll to position.
+        if (!eleCheckbox.checked && hitCount > 2) {
             if (currentScrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
                 pin();
             } else if (currentScrollY < lastKnownScrollY) {
@@ -39,8 +47,9 @@
             } else if (currentScrollY > lastKnownScrollY) {
                 unpin();
             }
-            lastKnownScrollY = currentScrollY;
         }
+        lastKnownScrollY = currentScrollY;
+        hitCount++;
     }
     function enableScrollUp() {
         if (eleScrollUp.classList.contains('hidden')) {
@@ -72,3 +81,16 @@
         onScroll();
     }
 })();
+
+
+// Handling clicking on scrollToTop
+// Should remove once Safari and Edge support
+// CSS Based scroll behavior: https://caniuse.com/#feat=css-scroll-behavior
+document.getElementsByClassName('scrollUp')[0].addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+});
