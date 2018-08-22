@@ -1,8 +1,8 @@
-document.getElementsByTagName('html')[0].classList.remove('no-js');(()=>{"use strict";let lastKnownScrollY=0;let currentScrollY=0;let ticking=false;let eleHeader=null;let eleScrollUp=null;let eleCheckbox=null;let hitCount=0;const classes={pinned:'header-pin',unpinned:'header-unpin',};function onScroll(){currentScrollY=window.pageYOffset;requestTick();}
+document.getElementsByTagName('html')[0].classList.remove('no-js');(()=>{const consideredTop=200;let lastKnownScrollY=0;let currentScrollY=0;let ticking=false;let eleHeader=null;let eleScrollUp=null;let eleCheckbox=null;let hitCount=0;const classes={pinned:'header-pin',unpinned:'header-unpin',};function onScroll(){currentScrollY=window.pageYOffset;requestTick();}
 function requestTick(){if(!ticking){requestAnimationFrame(update);}
 ticking=true;}
-function update(){ticking=false;if(currentScrollY>=200){enableScrollUp();}else{disableScrollUp();}
-if(!eleCheckbox.checked&&hitCount>2){if(currentScrollY+document.documentElement.clientHeight>=document.documentElement.scrollHeight){pin();}else if(currentScrollY<lastKnownScrollY){pin();}else if(currentScrollY>lastKnownScrollY){unpin();}}
+function update(){ticking=false;if(currentScrollY>=consideredTop){enableScrollUp();}else{disableScrollUp();}
+if(!eleCheckbox.checked&&hitCount>2){if(currentScrollY+document.documentElement.clientHeight>=document.documentElement.scrollHeight||currentScrollY<consideredTop){pin();}else if(currentScrollY<lastKnownScrollY){pin();}else if(currentScrollY>lastKnownScrollY){unpin();}}
 lastKnownScrollY=currentScrollY;hitCount++;}
 function enableScrollUp(){if(eleScrollUp.classList.contains('hidden')){eleScrollUp.classList.remove('hidden');}}
 function disableScrollUp(){if(!eleScrollUp.classList.contains('hidden')){eleScrollUp.classList.add('hidden');}}
