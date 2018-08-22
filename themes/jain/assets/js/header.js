@@ -1,11 +1,11 @@
 // Remove the no-js class from the html tag that is meant for the noscript mode.
 document.getElementsByTagName('html')[0].classList.remove('no-js');
 
-// Insired by https://www.sysleaf.com/js-toggle-header-on-scroll/
+// Inspired by https://www.sysleaf.com/js-toggle-header-on-scroll/
 // Also puts scroll to top hiding behavior in the same JS function to reuse
 // Handing for scroll and animation frame.
 (() => {
-    "use strict";
+    const consideredTop = 200;
     let lastKnownScrollY = 0;
     let currentScrollY = 0;
     let ticking = false;
@@ -30,17 +30,17 @@ document.getElementsByTagName('html')[0].classList.remove('no-js');
     function update() {
         ticking = false;
         // Scroll to top hiding/showing.
-        if (currentScrollY >= 200) {
+        if (currentScrollY >= consideredTop) {
             enableScrollUp();
         } else {
             disableScrollUp();
         }
         // Header hiding
-        // Ignore first 5 hits for safari reload in the center of the page
+        // Ignore first 2 hits for safari reload in the center of the page
         // It is good enough with 2. First is the Js load,
         // Second is safari's scroll to position.
         if (!eleCheckbox.checked && hitCount > 2) {
-            if (currentScrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+            if (currentScrollY + document.documentElement.clientHeight >= document.documentElement.scrollHeight || currentScrollY < consideredTop) {
                 pin();
             } else if (currentScrollY < lastKnownScrollY) {
                 pin();
