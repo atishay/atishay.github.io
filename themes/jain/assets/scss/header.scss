@@ -1,5 +1,6 @@
 header {
     @include container;
+    position: -webkit-sticky; // Remove once PostCSS is configured.
     position: sticky;
     top: 0;
     background: rgba(255, 255, 255, 0.95);
