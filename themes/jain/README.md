@@ -61,4 +61,7 @@ CSS Grids are used for column arrangements in the most logical manner.
 
 ## Browsers
 
-* This theme uses all modern CSS like CSS Variables, CSS Grid and flexbox. Do not expect this to support older browsers.
+* This theme uses all modern CSS like CSS Variables, CSS Grid and flexbox. Do not expect this to support older browsers. Care has been taken to support modern browsers with polyfills where makes sense.
+
+## Posts
+* Use Hugo Page Bundles for posts. The theme expects each page to have a beautiful image.
