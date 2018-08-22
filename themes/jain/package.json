@@ -25,6 +25,8 @@
   "homepage": "https://github.com/atishay/atishay.github.io#readme",
   "dependencies": {
     "include-media": "^1.4.9",
-    "line-awesome": "github:icons8/line-awesome"
+    "line-awesome": "github:icons8/line-awesome",
+    "smoothscroll-polyfill": "^0.4.3",
+    "turbolinks": "^5.2.0"
   }
 }
