@@ -1,4 +1,48 @@
 .post {
-    margin-top: calc(var(--header-height)/2);
-    @include container;
+    margin: calc(var(--header-height)/2);
+    padding: var(--content-padding);
+    @include container-margin;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    &:hover {
+        background: white;
+    }
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    main {
+        &>p {
+            &:not(:first-of-type) {
+                text-indent: 30px;
+            }
+            &:first-of-type:first-letter {
+                color: #992E00;
+                margin-top: 7px;
+                margin-right: 5px;
+                float: left;
+                font-size: 75px;
+                line-height: 60px;
+                // TODO Can we get a better font with just 26 letters.
+                // We can load that using async for blog posts.
+                font-family: serif;
+            }
+        }
+    }
+}
+
+// On the header hidden state, there is no header on the top
+// So we can go all the way.
+@include media(">=md") {
+    #post-anchor {
+        margin-top: calc(-1 * var(--header-height));
+        padding-bottom: var(--header-height);
+    }
+}
+.background {
+    object-fit: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }

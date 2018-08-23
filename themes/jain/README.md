@@ -52,6 +52,7 @@ CSS Grids are used for column arrangements in the most logical manner.
 
 ## Settings
 * `Site.Params.CSP` Set true to enable CSP. *Please test with production environment flag with this*. In production prevents live reload.
+* `Site.Params._topSubMenu` Setting to optimize the header generation speed. If the top menu has no submenu, set this to false.
 * `Site.Params.custom_css` - Custom CSS File for overrides.
 * `Site.Params.github` - Github link for the octocat on top right.
 * `Site.Params.custom_css` - Custom CSS Overrides file.

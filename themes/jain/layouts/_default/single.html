@@ -1,12 +1,18 @@
 {{ define "main" }}
-<img src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
+<img class="background" width="0" height="0" alt="Page Background" role="none" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
 <section class="post">
-{{/*
-    Lazy load and srcset images: https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
-*/}}
+    <main>
 {{with .Resources.GetMatch "cover.*"}}
-<img src="{{(.Fill " 800x450 ").RelPermalink}}" />
+<img src="{{(.Fill " 800x300 ").RelPermalink}}" />
 {{end}}
+<div role="none" id="post-anchor"></div>
+<h1 id="post-title">
+    <a href="#post-anchor">{{.Title}}</a>
+</h1>
 {{- .Content -}}
+</main>
+<aside>
+
+</aside>
 </section>
 {{ end }}
