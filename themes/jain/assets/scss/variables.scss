@@ -6,7 +6,7 @@ $divider: #e4e4e4;
     --max-width: 100%;
     --header-height: 60px;
     --theme-color: #00D3F9;
-
+    --content-padding: 15px;
 }
 
 @include media(">=sm") {
@@ -35,10 +35,20 @@ $divider: #e4e4e4;
 }
 
 @mixin container {
-    $padding: calc( (100% - var(--max-width)) /2 + 15px);
+    $padding: calc( (100% - var(--max-width)) /2 + var(--content-padding));
     width: 100%;
     padding-left: $padding;
     padding-right: $padding;
+}
+
+@mixin container-margin {
+    $margin: calc((100% - var(--max-width))/2);
+    width: 100%;
+    padding-left: var(--content-padding);
+    padding-right: var(--content-padding);
+    margin-left: $margin;
+    margin-right: $margin;
+    max-width: var(--max-width);
 }
 
 .items-7 {
