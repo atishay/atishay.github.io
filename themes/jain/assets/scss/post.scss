@@ -1,0 +1,4 @@
+.post {
+    margin-top: calc(var(--header-height)/2);
+    @include container;
+}
