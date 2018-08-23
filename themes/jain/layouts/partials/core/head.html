@@ -16,7 +16,7 @@
     {{ end }}
 
     {{ if eq .Site.Params.CSP true }}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; {{ if ne (getenv "HUGO_ENV") "production" | and (ne .Site.Params.env "production") }}connect-src ws:;{{ end }} child-src 'none'; object-src 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; {{ if ne (getenv "HUGO_ENV") "production" | and (ne .Site.Params.env "production") }}connect-src ws:;{{ end }} worker-src 'none'; frame-src 'none'; object-src 'none'">
     {{ end }}
 
     {{ block "favicon" . }}
@@ -32,7 +32,7 @@
     {{ end }}
 
     {{ block "social" . }}
-      {{ partial "core/social.html" . }}
+      {{- partial "core/social.html" . -}}
     {{end }}
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}

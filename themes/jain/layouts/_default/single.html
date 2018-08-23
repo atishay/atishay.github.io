@@ -1,8 +1,12 @@
 {{ define "main" }}
+<img src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
 <section class="post">
 {{/*
     Lazy load and srcset images: https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/
 */}}
+{{with .Resources.GetMatch "cover.*"}}
+<img src="{{(.Fill " 800x450 ").RelPermalink}}" />
+{{end}}
 {{- .Content -}}
 </section>
 {{ end }}
