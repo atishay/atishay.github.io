@@ -30,7 +30,7 @@ Tested With Hugo Version: Hugo 0.47
 * The footer contains up to sections that can be specified in the front matter. The template has special column arrangement for the sectioning as defined below.
 * There can be modified in the settings as an array in `Site.Params.Footer` with the following options
     * `title` - Title of the section.
-    * `description` - In Markdown
+    * `content` - In Markdown
     * `image` - Show an image in the section (by default pulled to the left with 50% width).
     * `recent` - Name of the section to show recents from.
     * `recentCount` - Count for the recent range.
@@ -59,6 +59,7 @@ CSS Grids are used for column arrangements in the most logical manner.
 * `Site.Author` - Contains `facebook`, `twitter`, `github`, `email`,  `linkedin` and `name` fields.
 * `Site.Params.color` - Default theme color.
 * `Site.Params.description` - Default Description.
+* `Site.Params.sidebar` - Shared sidebar for all posts. Will be available under the post specific sidebar.
 
 ## Browsers
 
@@ -67,5 +68,6 @@ CSS Grids are used for column arrangements in the most logical manner.
 ## Posts
 * Use Hugo Page Bundles for posts. The theme expects each page to have a beautiful image.
 
-### sidebar
-* You can add stuff to the page sidebar by using a the front matter and passing a list to `sidebar` with `title` and `content` properties. `content` can be markdown.
+## Top Matter
+* sidebar - You can add stuff to the page sidebar by using a the front matter and passing a list to `sidebar` with `title` and `content` properties. `content` can be markdown.
+* attribution - Creating a attribution field. You should use the sidebar for this well. Present for legacy reasons.
