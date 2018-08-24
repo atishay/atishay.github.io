@@ -20,7 +20,19 @@
   {{- partial "post/info" . -}}
   {{range .Params.sidebar}}
   <section class="sidebar">
-    {{with .title}}<h2>{{ . }}</h2>{{end}}
+    {{with .title}}<h2>{{ . | humanize }}</h2>{{end}}
+    {{with .content}}<p>{{ . | markdownify }}</p>{{end}}
+  </section>
+  {{ end }}
+  {{ with .Params.attribution }}
+  <section class="sidebar">
+      <h2>Attribution</h2>
+      <p>{{ . | markdownify }}</p>
+  </section>
+  {{ end }}
+  {{range $.Site.Params.sidebar}}
+  <section class="sidebar">
+    {{with .title}}<h2>{{ . | humanize }}</h2>{{end}}
     {{with .content}}<p>{{ . | markdownify }}</p>{{end}}
   </section>
   {{ end }}

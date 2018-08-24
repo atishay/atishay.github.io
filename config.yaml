@@ -22,14 +22,17 @@ params:
     _topSubmenu: false
     footer:
         - title: About
-          description: Personal Website of Atishay Jain, Computer Scientist at Adobe Systems. I am a developer living in the San Francisco Bay area and love solving problems via technology, design, writing, talking or any other means possible.
+          content: Personal Website of Atishay Jain, Computer Scientist at Adobe Systems. I am a developer living in the San Francisco Bay area and love solving problems via technology, design, writing, talking or any other means possible.
         - title: Disclaimer
-          description: The content of this website is mine and mine alone. It is not affiliated with any of my present or past employers, institutes or acquaintances. If you find anything offensive or any copyright infringements, please report them to me. I apologize in advance for any such errors. For more details please refer to the [Privacy Policy](/privacy) and [Terms of Use](/terms).
+          content: The content of this website is mine and mine alone. It is not affiliated with any of my present or past employers, institutes or acquaintances. If you find anything offensive or any copyright infringements, please report them to me. I apologize in advance for any such errors. For more details please refer to the [Privacy Policy](/privacy) and [Terms of Use](/terms).
         - title: Recent Blog Posts
           recents: blog
           recentCount: 7
         - title: Contact Us
           contact: true
+    sidebar:
+      - title: license
+        content: The contents of this post are available under Creative Commons Shared Alike license. You are free to use them commercially given that you provide the right attribution. You can read more about the license at the [Creative Commons website](http://creativecommons.org/licenses/by-sa/4.0/). <br> ![Creative Commons Shared Alike License](/image/ccbysa.png)
 
 
 author:
