@@ -6,7 +6,9 @@ excerpt: Passwords are a part of our life. It is better to learn how to deal wit
   them rather than suffer because of not learning.
 image: /assets/img/blog/password.jpg
 imgSrc: Image by Gino Crescoli from [Pixabay](https://pixabay.com/en/password-app-application-business-2781614/)
-sidebar: Inspiration#The famous [XKCD](https://xkcd.com/936/) piece about bad passwords.
+sidebar:
+  - title: Inspiration
+    content: The famous [XKCD](https://xkcd.com/936/) piece about bad passwords.
 tags:
 - toastmasters
 title: Passwords

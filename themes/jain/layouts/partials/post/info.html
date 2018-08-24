@@ -1,0 +1,32 @@
+<section class="info">
+  <h2>Info</h2>
+  <table>
+    <tbody>
+    <tr>
+      <td colspan="2">
+        <p>{{.Description}}</p>
+      </td>
+    </tr>
+    <tr>
+    <th class="published" title="Published">{{ $icon := resources.Get "image/line-awesome/fa-calendar.svg" | resources.Minify }}{{ replace $icon.Content "<svg " "<svg width=\"20px\" " | safeHTML }}<span>Published</span></th>
+    <td>
+      <time datetime="{{ .PublishDate.Format " 2006-01-02T15:04:05Z07:00 " }}">{{ .PublishDate.Format "Monday, Jan 2, 2006."}}</time>
+    </td>
+  </tr>
+  <tr>
+    <th class="tags" title="Tags">{{ $icon := resources.Get "image/line-awesome/fa-tags.svg" | resources.Minify }}{{ replace $icon.Content "<svg " "<svg width=\"20px\" " | safeHTML }}<span>Tags</span></th>
+    <td> {{ range .Params.tags }}
+      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
+      {{ end }}</td>
+  </tr>
+ {{with .Params.category}}
+  <tr>
+    <th title="Category">{{ $icon := resources.Get "image/line-awesome/fa-caret-square-o-right.svg" | resources.Minify }}{{ replace $icon.Content "<svg " "<svg width=\"20px\" " | safeHTML }}<span>Category</span></th>
+    <td>
+      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
+    </td>
+  </tr>
+ {{end}}
+</tbody>
+</table>
+</section>
