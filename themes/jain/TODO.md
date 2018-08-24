@@ -2,7 +2,7 @@
 * Image Preloading
 * Picture tag and image resizing
 * ImageOptim
-* WebP or jp2
+* [WebP or jp2](http://www.useragentman.com/blog/2015/01/14/using-webp-jpeg2000-jpegxr-apng-now-with-picturefill-and-modernizr/)
 * Scroll Animations
 * Scroll Progress indicator
 * Word Count and Reading time

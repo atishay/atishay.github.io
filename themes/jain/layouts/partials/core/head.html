@@ -1,47 +1,47 @@
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
-  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    {{ .Hugo.Generator }}
-    {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-      <meta name="robots" content="index, follow">
-    {{ else }}
-      <meta name="robots" content="noindex, nofollow">
-    {{ end }}
 
-    {{ if eq .Site.Params.CSP true }}
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; {{ if ne (getenv "HUGO_ENV") "production" | and (ne .Site.Params.env "production") }}connect-src ws:;{{ end }} worker-src 'none'; frame-src 'none'; object-src 'none'">
-    {{ end }}
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+{{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+<title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+{{ .Hugo.Generator }}
+{{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+  <meta name="robots" content="index, follow">
+{{ else }}
+  <meta name="robots" content="noindex, nofollow">
+{{ end }}
 
-    {{ block "favicon" . }}
-      {{ $iconSVG := resources.Get "image/favicon.svg" | resources.Minify }} {{ $icon := resources.Get "image/favicon.png" }}
-      <link rel="apple-touch-icon-precomposed" href="{{ ($icon.Resize " 180x180 ").RelPermalink }}" />
-      <link rel="icon" type="image/svg" href="{{ $iconSVG.RelPermalink }}" />
-      <link rel="icon" type="image/png" href="{{ ($icon.Resize " 196x196 ").RelPermalink }}" />
-    {{ end }}
+{{ if eq .Site.Params.CSP true }}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; {{ if ne (getenv "HUGO_ENV") "production" | and (ne .Site.Params.env "production") }}connect-src ws:;{{ end }} worker-src 'none'; frame-src 'none'; object-src 'none'">
+{{ end }}
 
-    {{ if .RSSLink }}
-      <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-      <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
+{{ block "favicon" . }}
+  {{ $iconSVG := resources.Get "image/favicon.svg" | resources.Minify }} {{ $icon := resources.Get "image/favicon.png" }}
+  <link rel="apple-touch-icon-precomposed" href="{{ ($icon.Resize " 180x180 ").RelPermalink }}" />
+  <link rel="icon" type="image/svg" href="{{ $iconSVG.RelPermalink }}" />
+  <link rel="icon" type="image/png" href="{{ ($icon.Resize " 196x196 ").RelPermalink }}" />
+{{ end }}
 
-    {{ block "social" . }}
-      {{- partial "core/social.html" . -}}
-    {{end }}
+{{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}
+
+{{ block "social" . }}
+  {{- partial "core/social.html" . -}}
+{{end }}
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $css := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}
-    <link rel="stylesheet" href="{{$css.Permalink}}" integrity="{{$css.Data.Integrity}}" />
+<link rel="stylesheet" href="{{$css.Permalink}}" integrity="{{$css.Data.Integrity}}" />
 
-    {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
-    {{ end }}
-    <!-- {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-      {{ template "_internal/google_analytics_async.html" . }}
-    {{ end }} -->
-  </head>
+{{ range .Site.Params.custom_css }}
+<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+{{ end }}
+<!-- {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{ end }} -->
+

@@ -15,18 +15,22 @@
                 text-indent: 30px;
             }
             &:first-of-type:first-letter {
-                color: #992E00;
+                color: var(--theme-color); //#992E00;
                 margin-top: 7px;
                 margin-right: 5px;
                 float: left;
                 font-size: 75px;
                 line-height: 60px;
-                // TODO Can we get a better font with just 26 letters.
-                // We can load that using async for blog posts.
-                font-family: serif;
+                font-family: NouveauDropCaps, serif;
             }
         }
     }
+}
+
+@font-face {
+    font-family: "NouveauDropCaps";
+    src: url(/fonts/NouveauDropCaps.woff2) format("woff2");
+    unicode-range: U+41-5A;
 }
 
 // On the header hidden state, there is no header on the top
@@ -37,6 +41,7 @@
         padding-bottom: var(--header-height);
     }
 }
+
 .background {
     object-fit: cover;
     position: fixed;
