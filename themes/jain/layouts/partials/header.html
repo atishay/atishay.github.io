@@ -1,11 +1,11 @@
-<header id="header" role="navigation">
+<header id="header">
     {{/*
         Checkbox Hack for pure CSS Hamburger menu
         https://codepen.io/erikterwan/pen/EVzeRP
 
     */}}
     <input class="hamburger" role="button"  type="checkbox" aria-label="Menu Button" />
-    <a class="icon" role="none" aria-hidden="true">
+    <a class="icon" aria-hidden="true">
     {{ $hamburger := resources.Get "image/hamburger.svg" | resources.Minify }}
         {{ $hamburger.Content | safeHTML }}
     </a>
@@ -44,7 +44,7 @@
     </ul>
  {{ $scratch.Delete "fallback" }}
     {{with .Site.Params.github }}
-    <a href="{{.}}" role="link" class="github-corner" aria-label="View source on Github">
+    <a href="{{.}}" class="github-corner" aria-label="View source on Github">
         {{ $iconSVG := resources.Get "image/octocat.svg" | resources.Minify }}
         {{ $iconSVG.Content | safeHTML }}
     </a>

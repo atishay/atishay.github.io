@@ -3,7 +3,6 @@ date: "2016-11-01T00:00:00Z"
 description: First blog post on the Atishay Jain website
 excerpt: Welcome to my blog. Its great to be blogging again. In my first post I discuss
   my motivations to blog.
-image: /assets/img/blog/hello.jpg
 imgSrc: Image by Windell Oskay from [Flickr](https://www.flickr.com/photos/oskay/472097903)
 sidebar: Trivia# The first known instance of the usage of the words "hello" and "world"
   together in computer literature occurred earlier, in Kernighan's 1972 Tutorial Introduction

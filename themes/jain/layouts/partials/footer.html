@@ -32,7 +32,7 @@
             {{ range first ($.Scratch.Get "count") (where (where $.Site.Pages "Section" "blog") ".Kind" "==" "page" )}}
             <li>
                 <a href={{.Permalink}}>{{ .Title }}</a> -
-<time datetime="{{ .PublishDate.Format "02 Jan 06 15:04 -0700" }}">{{ .PublishDate.Format "Monday, Jan 2, 2006."}}</time>
+<time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "Monday, Jan 2, 2006."}}</time>
             </li>
             {{ end }}
         </ul>
@@ -85,10 +85,10 @@
     </section>
     {{ end }}
     </div>
-    <section id="copyright">
+    <div id="copyright">
         &copy; 2016 -
-        <time class="now" datetime="{{ now }}">{{ dateFormat "2006" now}}</time>, {{.Site.Title}}. Last Updated -
-<time datetime="{{ now.Format " 02 Jan 06 15:04 -0700 " }}">{{ dateFormat "Monday, Jan 2, 2006." now}}</time>
-    </section>
+        <time class="now" datetime="{{ now.Format "2006-01-02T15:04:05Z07:00" }}">{{ dateFormat "2006" now}}</time>, {{.Site.Title}}. Last Updated -
+<time datetime="{{ now.Format "2006-01-02T15:04:05Z07:00" }}">{{ dateFormat "Monday, Jan 2, 2006." now}}</time>
+    </div>
 
 </footer>
