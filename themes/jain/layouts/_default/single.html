@@ -3,12 +3,14 @@
 {{ end }}
 
 {{ define "main" }}
-<img class="background" width="0" height="0" alt="Page Background" role="none" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" alt="Background Image" />
-<section class="post">
+<img class="background" width="0" height="0" alt="Page Background" role="presentation" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
+<div class="post">
 <main>
 <div class="post-anchor">
 {{- with .Resources.GetMatch "cover.*" -}}
+<div class="banner-holder">
 <img width="800" height="500" alt={{.Title}} role="banner" class="banner" src="{{(.Fill " 800x500 ").RelPermalink}}" />
+</div>
 {{end}}
 <h1>{{.Title}}</h1>
 </div>
@@ -17,5 +19,5 @@
 <aside>
 
 </aside>
-</section>
+</div>
 {{- end -}}
