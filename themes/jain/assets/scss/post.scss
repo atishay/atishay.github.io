@@ -1,3 +1,5 @@
+@import "triangle.scss";
+
 .post {
     margin: calc(var(--header-height)/2);
     padding: var(--content-padding);
@@ -25,6 +27,48 @@
             }
         }
     }
+    .banner {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    .post-anchor {
+        position: relative;
+        h1 {
+            $height: 100px;
+            $color: var(--theme-color);
+            $left-detach: 12px;
+            position: absolute;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            bottom: 40px;
+            box-shadow: 2px 0px 10px #000;
+            text-shadow: 0 1px 2px #000;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+            }
+
+            height: $height;
+            background: $color;
+            color: #fff;
+            left: -$left-detach;
+            &:before {
+                @include triangle($left-detach, #000, down-right);
+                top: -$left-detach;
+                left: 0;
+            }
+
+            &:after {
+                @include triangle($height ($height/3), $color, right);
+                right: -($height/3);
+                top: 0;
+            }
+        }
+    }
 }
 
 @font-face {
@@ -35,12 +79,12 @@
 
 // On the header hidden state, there is no header on the top
 // So we can go all the way.
-@include media(">=md") {
-    #post-anchor {
-        margin-top: calc(-1 * var(--header-height));
-        padding-bottom: var(--header-height);
-    }
-}
+// @include media(">=md") {
+//     #post-anchor {
+//         margin-top: calc(-1 * var(--header-height));
+//         padding-bottom: var(--header-height);
+//     }
+// }
 
 .background {
     object-fit: cover;

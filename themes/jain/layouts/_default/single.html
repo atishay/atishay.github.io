@@ -3,16 +3,15 @@
 {{ end }}
 
 {{ define "main" }}
-<img class="background" width="0" height="0" alt="Page Background" role="none" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
+<img class="background" width="0" height="0" alt="Page Background" role="none" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" alt="Background Image" />
 <section class="post">
-    <main>
+<main>
+<div class="post-anchor">
 {{- with .Resources.GetMatch "cover.*" -}}
-<img src="{{(.Fill " 800x300 ").RelPermalink}}" />
+<img width="800" height="500" alt={{.Title}} role="banner" class="banner" src="{{(.Fill " 800x500 ").RelPermalink}}" />
 {{end}}
-<div role="none" id="post-anchor"></div>
-<h1 id="post-title">
-    <a href="#post-anchor">{{.Title}}</a>
-</h1>
+<h1>{{.Title}}</h1>
+</div>
 {{- .Content -}}
 </main>
 <aside>
