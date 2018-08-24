@@ -2,15 +2,17 @@
 date: "2018-03-25T00:00:00Z"
 description: Driving in Delhi requires is really different, a unique and rewarding
   experience you could ever imagine.
-excerpt: Driving in Delhi requires is really different, a unique andrewarding experience
+excerpt: Driving in Delhi requires is really different, a unique and rewarding experience
   you could ever imagine.
 image: /assets/img/blog/traffic.png
 imgSrc: Image by Mapbox from [Flickr](https://www.flickr.com/photos/mapbox/32989254824).
   The auto from [JS Auto](http://www.jsauto.co.in)
-sidebar: The Original#The speech is modified from the original by Amit Tandon on [Traffic
-  in Delhi](https://www.youtube.com/watch?v=xKLl7vo4jcY). This speech target a very
-  different set of audience. Hope no feelings were hurt and the changes were all for
-  the better.
+sidebar:
+  - title: The Original
+    content: The speech is modified from the original by Amit Tandon on [Traffic
+      in Delhi](https://www.youtube.com/watch?v=xKLl7vo4jcY). This speech target a very
+      different set of audience. Hope no feelings were hurt and the changes were all for
+      the better.
 tags:
 - toastmasters
 title: Delhi Driving

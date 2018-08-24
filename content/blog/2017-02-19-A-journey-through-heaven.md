@@ -5,9 +5,11 @@ description: I have had my share of travels and places around the world that I h
 excerpt: This is the most exotic travel destination on the planet, matched by no other.
 image: /assets/img/blog/kashmir.jpg
 imgSrc: Self Taken - Thank you Shubham Jain
-sidebar: The Destination#Described as the heaven on earth, this place is breathtaking.
-  It is a shame that it is caught up in a conflict that prevents people to see this
-  wonder. Luckily that is preserving the natural beauty for generations ahead.
+sidebar:
+  - title: The Destination
+    content: Described as the heaven on earth, this place is breathtaking.
+      It is a shame that it is caught up in a conflict that prevents people to see this
+      wonder. Luckily that is preserving the natural beauty for generations ahead.
 tags:
 - toastmasters
 title: A journey through heaven

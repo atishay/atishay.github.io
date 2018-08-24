@@ -5,10 +5,12 @@ excerpt: A century is a lot of time. Happy 100th birthday to my grandfather. It 
   a feat.
 image: /assets/img/blog/birthday.jpg
 imgSrc: Image background from [Freepik](http://www.freepik.com/free-vector/balloon-party-background_780957.htm)
-sidebar: 100 Years#A hundred years is a lot of time. I am honored to be attending
-  the 100th birthday of my grandfather. It is a feat as well as a feast to remember.
-  A lot has changed in the last century. A lot will in the next one. It is a feat
-  that you lived so long. Congratulations.
+sidebar:
+  - title: 100 Years
+    content: A hundred years is a lot of time. I am honored to be attending
+      the 100th birthday of my grandfather. It is a feat as well as a feast to remember.
+      A lot has changed in the last century. A lot will in the next one. It is a feat
+      that you lived so long. Congratulations.
 tags:
 - life
 title: 100 years - Happy birthday

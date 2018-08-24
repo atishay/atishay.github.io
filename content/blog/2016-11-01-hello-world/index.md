@@ -1,17 +1,20 @@
 ---
 date: "2016-11-01T00:00:00Z"
-description: First blog post on the Atishay Jain website
-excerpt: Welcome to my blog. Its great to be blogging again. In my first post I discuss
+description: Welcome to my blog. Its great to be blogging again. In my first post I discuss
   my motivations to blog.
 imgSrc: Image by Windell Oskay from [Flickr](https://www.flickr.com/photos/oskay/472097903)
-sidebar: Trivia# The first known instance of the usage of the words "hello" and "world"
-  together in computer literature occurred earlier, in Kernighan's 1972 Tutorial Introduction
-  to the Language B. Later Kernighan and Ritchie's seminal book "The C Programming
-  Language" popularized as the first program of a computer language. Further - The
-  hello world program for a browser is a txt file with the word 'Hello World'. Read
-  more about the history of hello world at [Wikipedia](https://www.wikiwand.com/en/%22Hello,_World!%22_program).
+sidebar:
+  - title: Trivia
+    content: The first known instance of the usage of the words "hello" and "world"
+      together in computer literature occurred earlier, in Kernighan's 1972 Tutorial Introduction to the Language B. Later Kernighan and Ritchie's seminal book "The C Programming
+      Language" popularized as the first program of a computer language. Further - The
+      hello world program for a browser is a txt file with the word 'Hello World'. Read
+      more about the history of hello world at [Wikipedia](https://www.wikiwand.com/en/%22Hello,_World!%22_program).
 tags:
 - thoughts
+- hello
+- blogging
+category: thoughts
 title: Hello World
 menu:
   top:

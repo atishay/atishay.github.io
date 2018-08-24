@@ -6,11 +6,13 @@ excerpt: When Queen Victoria set up schools in India she didn't realize what a c
   reaction she triggered.
 image: /assets/img/blog/school.jpg
 imgSrc: Image by Devanth from [Pixabay](https://pixabay.com/en/school-old-plate-learning-1223872/)
-sidebar: The Original#The speech is modified from the original by Kenny Sebastian
-  on [Kendriya Vidyalayas](https://www.youtube.com/watch?v=Cdsnc70Un14). I have tried
-  to do what 3 Idiots did to Five Point Someone. Lets see if you like it. Apologies
-  to my school and especially Pundit Sir. I know the humor is base an lowly. Do forgive
-  me for using your name in an enactment. I know you can take some humor in your stride.
+sidebar:
+  - title: The Original
+    content: The speech is modified from the original by Kenny Sebastian
+      on [Kendriya Vidyalayas](https://www.youtube.com/watch?v=Cdsnc70Un14). I have tried
+      to do what 3 Idiots did to Five Point Someone. Lets see if you like it. Apologies
+      to my school and especially Pundit Sir. I know the humor is base an lowly. Do forgive
+      me for using your name in an enactment. I know you can take some humor in your stride.
 tags:
 - toastmasters
 - life

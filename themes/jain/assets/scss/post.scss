@@ -104,6 +104,33 @@
             text-shadow: 0 1px 2px #000;
         }
     }
+    aside {
+        padding: 0 15px;
+        text-align: left;
+        th, td, p {
+            text-align: left;
+            font-size: 0.8rem;
+        }
+        th {
+            padding: 0 12px 0 0;
+            svg {
+                vertical-align: middle;
+                margin: 0 5px 0 0;
+            }
+            white-space: nowrap;
+            @include media("<=xl", ">lg") {
+                font-size: 0;
+            }
+        }
+        h2 {
+            margin: 0 0 8px;
+            font-size: 1.4rem;
+        }
+        section {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+    }
 }
 
 @font-face {

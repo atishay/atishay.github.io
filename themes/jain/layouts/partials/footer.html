@@ -3,7 +3,7 @@
 {{/* Remove this polyfill once Safari supports scroll behavior: https://caniuse.com/#feat=css-scroll-behavior */}}
 {{ $smoothScroll := resources.Get "js/smoothscroll/smoothscroll.min.js" | resources.Minify }}
 {{ $main := resources.Get "js/main.js" }}
-{{ $js := slice $time $header $smoothScroll | resources.Concat $main | resources.Fingerprint "sha512" }}
+{{ $js := slice $time $header $smoothScroll $main | resources.Concat "js/main.js" | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 <a href="#top" class="scrollUp">
     {{ $icon := resources.Get "image/line-awesome/fa-angle-up.svg" | resources.Minify }}

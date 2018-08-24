@@ -6,15 +6,17 @@ excerpt: A popular folk lore from India about proud kings bringing down the coun
   for vangeance.
 image: /assets/img/blog/vanity.jpg
 imgSrc: Image by Ameya Clicks from [Wikipedia](https://commons.wikimedia.org/wiki/File:Prithviraj_Chauhan_Memorial_by_Ameya_Clicks.jpg)
-sidebar: The Lore#[Prithviraj Raso](https://en.wikipedia.org/wiki/Prithviraj_Raso)
-  is very popular in contemporary indian literature. Honed upon years of updates by
-  various kingdoms in the state of Rajasthan, the story has deviated from history.
-  The Rajputs are the most resilient and powerful folks in India who survived multiple
-  raids by the invaders springing back up each time they were defeated. They never
-  were able to get to their former glory and capture Delhi. They have the exaggerated
-  account of their last king of Delhi who was betrayed, cheated by dishonorable tactics
-  by not only the enemies he had pardoned but also by his own allies to extract out
-  needless vengeance.
+sidebar:
+  - title: The Lore
+    content: "[Prithviraj Raso](https://en.wikipedia.org/wiki/Prithviraj_Raso)
+      is very popular in contemporary indian literature. Honed upon years of updates by
+      various kingdoms in the state of Rajasthan, the story has deviated from history.
+      The Rajputs are the most resilient and powerful folks in India who survived multiple
+      raids by the invaders springing back up each time they were defeated. They never
+      were able to get to their former glory and capture Delhi. They have the exaggerated
+      account of their last king of Delhi who was betrayed, cheated by dishonorable tactics
+      by not only the enemies he had pardoned but also by his own allies to extract out
+      needless vengeance."
 tags:
 - toastmasters
 title: Vanity and Vengeance
