@@ -85,6 +85,21 @@ em {
 
 }
 
+blockquote {
+    margin: 40px 0;
+    quotes: "“" "‘";
+    font-family:  cursive;
+    font-size: 1.5em;
+}
+
+blockquote:before {
+    font-family: _serif;
+    content: open-quote;
+    font-size: 60px;
+    float: left;
+    padding-right: 20px;
+}
+
 ::selection {
     background: var(--theme-color);
     color: #FFF;
