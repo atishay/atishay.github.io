@@ -1,5 +1,41 @@
 @import "triangle.scss";
 
+@mixin post-header ($height) {
+    $left-detach: 12px;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $height/3;
+    bottom: $height/3 + 20px;
+    // box-shadow: 2px 0px 10px #000;
+    filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 1));
+
+    text-shadow: 0 1px 2px #000;
+    font-size: $height/3;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+    }
+
+    height: $height;
+    background: var(--theme-color);
+    color: #fff;
+    left: -$left-detach;
+    &:before {
+        @include triangle($left-detach, #000, down-right);
+        top: -$left-detach;
+        left: 0;
+    }
+
+    &:after {
+        @include triangle($height ($height/3), var(--theme-color), right);
+        right: -($height/3);
+        top: 0;
+    }
+}
+
 .post {
     margin: calc(var(--header-height)/2);
     padding: var(--content-padding);
@@ -9,8 +45,10 @@
     &:hover {
         background: white;
     }
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    @include media('>=lg') {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
     main {
         &>p {
             &:not(:first-of-type) {
@@ -27,46 +65,38 @@
             }
         }
     }
-    .banner {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
     .post-anchor {
         position: relative;
-        h1 {
-            $height: 100px;
-            $color: var(--theme-color);
-            $left-detach: 12px;
+        margin: 0 0 40px;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100%;
+        padding-bottom: 5/8 * 100%;
+        .banner {
+            width: 100%;
+            height: auto;
             position: absolute;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
-            bottom: 40px;
-            box-shadow: 2px 0px 10px #000;
+            top: 0;
+            left: 0;
+        }
+        &:hover .banner {
+            transform: scale(1.1);
+        }
+        h1 {
+            @include media('>=xs') {
+                @include post-header(60px);
+            }
+
+            @include media('>=lg') {
+                @include post-header(80px);
+            }
+
+            @include media('>=xl') {
+                @include post-header(100px);
+            }
+        }
+        h1::selection {
             text-shadow: 0 1px 2px #000;
-            &:before,
-            &:after {
-                content: "";
-                position: absolute;
-            }
-
-            height: $height;
-            background: $color;
-            color: #fff;
-            left: -$left-detach;
-            &:before {
-                @include triangle($left-detach, #000, down-right);
-                top: -$left-detach;
-                left: 0;
-            }
-
-            &:after {
-                @include triangle($height ($height/3), $color, right);
-                right: -($height/3);
-                top: 0;
-            }
         }
     }
 }
