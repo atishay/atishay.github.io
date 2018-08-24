@@ -5,7 +5,7 @@ description: Driving in Delhi requires is really different, a unique and rewardi
 excerpt: Driving in Delhi requires is really different, a unique and rewarding experience
   you could ever imagine.
 image: /assets/img/blog/traffic.png
-imgSrc: Image by Mapbox from [Flickr](https://www.flickr.com/photos/mapbox/32989254824).
+attribution: Image by Mapbox from [Flickr](https://www.flickr.com/photos/mapbox/32989254824).
   The auto from [JS Auto](http://www.jsauto.co.in)
 sidebar:
   - title: The Original

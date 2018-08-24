@@ -5,7 +5,7 @@ description: Deep learning is a complex name to a much simpler set of mathematic
 excerpt: Understand deep learning starting with high school mathematics.
 identifier: dl1
 image: /assets/img/blog/deep.jpg
-imgSrc: Image by Damir Belavić from [Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)
+attribution: Image by Damir Belavić from [Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)
 math: true
 related:
 - dl2

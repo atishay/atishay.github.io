@@ -4,7 +4,7 @@ description: Table topics questions used at a themed meeting around first time i
   life.
 excerpt: Table topics questions used at a themed meeting around first time in life.
 image: /assets/img/blog/first.jpg
-imgSrc: Image by Kelly Sikkema from [Unsplash](https://unsplash.com/photos/hE5kJhgBndo)
+attribution: Image by Kelly Sikkema from [Unsplash](https://unsplash.com/photos/hE5kJhgBndo)
 tags:
 - toastmasters
 - tabletopic

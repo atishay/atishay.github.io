@@ -5,7 +5,7 @@ description: We finish the mathematical equation of the core component of the de
 excerpt: Continue the deep learning discussion with focus on completing the intuition.
 identifier: dl2
 image: /assets/img/blog/deep2.jpg
-imgSrc: Image by Jesse Orrico from [UnSplash](https://unsplash.com/photos/rmWtVQN5RzU)
+attribution: Image by Jesse Orrico from [UnSplash](https://unsplash.com/photos/rmWtVQN5RzU)
 math: true
 related:
 - dl1

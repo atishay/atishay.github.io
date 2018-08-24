@@ -5,7 +5,7 @@ excerpt: Defaults are good, but playing with them can eek out the next 2% that w
   are looking for.
 identifier: dl6
 image: /assets/img/blog/deep6.jpg
-imgSrc: Image by Arek Socha from [Pixabay](https://pixabay.com/en/doors-choices-choose-open-decision-1767563/)
+attribution: Image by Arek Socha from [Pixabay](https://pixabay.com/en/doors-choices-choose-open-decision-1767563/)
 related:
 - dl8
 - dl5

@@ -5,7 +5,7 @@ description: A popular folk lore from India about proud kings bringing down the 
 excerpt: A popular folk lore from India about proud kings bringing down the country
   for vangeance.
 image: /assets/img/blog/vanity.jpg
-imgSrc: Image by Ameya Clicks from [Wikipedia](https://commons.wikimedia.org/wiki/File:Prithviraj_Chauhan_Memorial_by_Ameya_Clicks.jpg)
+attribution: Image by Ameya Clicks from [Wikipedia](https://commons.wikimedia.org/wiki/File:Prithviraj_Chauhan_Memorial_by_Ameya_Clicks.jpg)
 sidebar:
   - title: The Lore
     content: "[Prithviraj Raso](https://en.wikipedia.org/wiki/Prithviraj_Raso)

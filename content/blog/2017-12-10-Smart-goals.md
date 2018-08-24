@@ -4,7 +4,7 @@ description: My final CC speech for toastmasters - on how to finish CC by playin
   smart
 excerpt: My final CC speech for toastmasters - on how to finish CC by playing smart
 image: /assets/img/blog/smart.jpg
-imgSrc: Image by Estée Janssens from [Unsplash](https://unsplash.com/photos/zEqkUMiMxMI)
+attribution: Image by Estée Janssens from [Unsplash](https://unsplash.com/photos/zEqkUMiMxMI)
 tags:
 - toastmasters
 title: SMART

@@ -3,7 +3,7 @@ date: "2017-11-19T00:00:00Z"
 description: Trying reverse psychology to promote toastmasters. Conviction by contradiction.
 excerpt: Trying reverse psychology to promote toastmasters. Conviction by contradiction.
 image: /assets/img/blog/ban.jpg
-imgSrc: Image by freestocks-photos from [Pixabay](https://pixabay.com/en/audio-concert-mic-microphone-music-2941753/)
+attribution: Image by freestocks-photos from [Pixabay](https://pixabay.com/en/audio-concert-mic-microphone-music-2941753/)
 tags:
 - toastmasters
 title: Toastmasters should be banned

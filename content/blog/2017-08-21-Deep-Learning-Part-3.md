@@ -5,7 +5,7 @@ description: Now that we know the equation, it is the time figure out how to fil
 excerpt: Complete our model by going into training and backtracking.
 identifier: dl3
 image: /assets/img/blog/deep3.jpg
-imgSrc: Image by Gerd Altmann from [Pixabay](https://pixabay.com/en/smartphone-hand-photo-montage-faces-1445489/)
+attribution: Image by Gerd Altmann from [Pixabay](https://pixabay.com/en/smartphone-hand-photo-montage-faces-1445489/)
 math: true
 related:
 - dl2

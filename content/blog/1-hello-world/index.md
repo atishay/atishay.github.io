@@ -2,7 +2,7 @@
 date: "2016-11-01T00:00:00Z"
 description: Welcome to my blog. Its great to be blogging again. In my first post I discuss
   my motivations to blog.
-imgSrc: Image by Windell Oskay from [Flickr](https://www.flickr.com/photos/oskay/472097903)
+attribution: Image by Windell Oskay from [Flickr](https://www.flickr.com/photos/oskay/472097903)
 sidebar:
   - title: Trivia
     content: The first known instance of the usage of the words "hello" and "world"

@@ -4,7 +4,7 @@ description: I have had my share of travels and places around the world that I h
   seen. Never before I had and never again will I find a more exotic destination.
 excerpt: This is the most exotic travel destination on the planet, matched by no other.
 image: /assets/img/blog/kashmir.jpg
-imgSrc: Self Taken - Thank you Shubham Jain
+attribution: Self Taken - Thank you Shubham Jain
 sidebar:
   - title: The Destination
     content: Described as the heaven on earth, this place is breathtaking.

@@ -5,7 +5,7 @@ description: When Queen Victoria set up schools in India she didn't realize what
 excerpt: When Queen Victoria set up schools in India she didn't realize what a chain
   reaction she triggered.
 image: /assets/img/blog/school.jpg
-imgSrc: Image by Devanth from [Pixabay](https://pixabay.com/en/school-old-plate-learning-1223872/)
+attribution: Image by Devanth from [Pixabay](https://pixabay.com/en/school-old-plate-learning-1223872/)
 sidebar:
   - title: The Original
     content: The speech is modified from the original by Kenny Sebastian

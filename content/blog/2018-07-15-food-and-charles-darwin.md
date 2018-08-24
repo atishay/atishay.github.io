@@ -5,7 +5,7 @@ description: An application of Darwin's theory of evolution on the discovery of 
 excerpt: An application of Darwin's theory of evolution on the discovery of bread
   by mankind - from cavemen to farmers
 image: /assets/img/blog/bread.jpg
-imgSrc: Image by Mogens Petersen  from [Pixabay](https://pixabay.com/en/bread-baker-craft-food-oven-1643951/)
+attribution: Image by Mogens Petersen  from [Pixabay](https://pixabay.com/en/bread-baker-craft-food-oven-1643951/)
 tags:
 - toastmasters
 title: Bread and Charles Darwin

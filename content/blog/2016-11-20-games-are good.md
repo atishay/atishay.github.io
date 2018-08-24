@@ -4,7 +4,7 @@ description: Computer games - Games are good.
 excerpt: I vouch for games - Computer Games that have been cursed by parents for little
   apparent reason.
 image: /assets/img/blog/games.jpg
-imgSrc: Image from [Pexels](https://www.pexels.com/photo/reflection-playstation-pad-gaming-18174/)
+attribution: Image from [Pexels](https://www.pexels.com/photo/reflection-playstation-pad-gaming-18174/)
 sidebar:
   - title: Trivia
     content: Games have a history of being closely attached to the technology revolution.

@@ -4,7 +4,7 @@ description: The real power of deep learning is reuse - Stand on the shoulder of
 excerpt: The real power of deep learning is reuse - Stand on the shoulder of giants.
 identifier: dl9
 image: /assets/img/blog/deep9.jpg
-imgSrc: Image by StockSnap from [Pixabay](https://pixabay.com/en/architecture-building-infrastructure-2602013/)
+attribution: Image by StockSnap from [Pixabay](https://pixabay.com/en/architecture-building-infrastructure-2602013/)
 related:
 - dl8
 - dl10
