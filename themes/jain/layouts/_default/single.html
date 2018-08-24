@@ -1,8 +1,12 @@
+{{ define "head" }}
+<link rel="preload" href="/fonts/NouveauDropCaps.woff2" as="font">
+{{ end }}
+
 {{ define "main" }}
 <img class="background" width="0" height="0" alt="Page Background" role="none" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
 <section class="post">
     <main>
-{{with .Resources.GetMatch "cover.*"}}
+{{- with .Resources.GetMatch "cover.*" -}}
 <img src="{{(.Fill " 800x300 ").RelPermalink}}" />
 {{end}}
 <div role="none" id="post-anchor"></div>
@@ -15,4 +19,4 @@
 
 </aside>
 </section>
-{{ end }}
+{{- end -}}

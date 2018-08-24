@@ -43,5 +43,7 @@ https://zippypixels.com/product/mockups/packaging/free-customizable-card-box-moc
 ### Image on the 404 page
 * https://pixabay.com/en/ripped-paper-torn-through-broken-2034945/
 
-# Blog Cover
-* https://pixabay.com/en/desktop-tidy-clean-mockup-white-2325627/
+## Blog
+* Cover https://pixabay.com/en/desktop-tidy-clean-mockup-white-2325627/
+* Font https://www.1001fonts.com/nouveau-drop-caps-font.html
+
