@@ -4,7 +4,7 @@ description: Drawing MNIST - handwriting recognition with Deep Learning
 excerpt: Time for some action. Our first deep learning model - handwriting recognition
 identifier: dl4
 image: /assets/img/blog/deep4.jpg
-imgSrc: Image by Denise Krebs from [Flickr](https://www.flickr.com/photos/mrsdkrebs/9728631593)
+attribution: Image by Denise Krebs from [Flickr](https://www.flickr.com/photos/mrsdkrebs/9728631593)
 related:
 - dl3
 - dl5

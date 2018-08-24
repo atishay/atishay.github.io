@@ -3,7 +3,7 @@ date: "2018-05-17T00:00:00Z"
 excerpt: My foray into the guitar - Chura Liya (Yadoon Ki Baraat)
 guitar: true
 image: /assets/img/blog/chura.jpg
-imgSrc: Image by Josué González from [Pixabay](https://pixabay.com/en/guitar-landscape-wood-musician-3373539/)
+attribution: Image by Josué González from [Pixabay](https://pixabay.com/en/guitar-landscape-wood-musician-3373539/)
 tags:
 - Guitar
 title: Chura Liya

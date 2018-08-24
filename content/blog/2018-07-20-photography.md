@@ -5,7 +5,7 @@ description: A planned speech on role playing an artist and scientist on photogr
 excerpt: A planned speech on role playing an artist and scientist on photography.
   Never used. Free for you
 image: /assets/img/blog/photo.jpg
-imgSrc: Image by PublicDomainPictures  from [Pixabay](https://pixabay.com/en/photo-camera-photography-old-retro-219958/)
+attribution: Image by PublicDomainPictures  from [Pixabay](https://pixabay.com/en/photo-camera-photography-old-retro-219958/)
 tags:
 - toastmasters
 title: The art and science of Photography

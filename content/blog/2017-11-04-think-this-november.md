@@ -5,7 +5,7 @@ description: This November before going onto shop, think about the repercussions
 excerpt: This November before going onto shop, think about the repercussions of your
   actions.
 image: /assets/img/blog/november.jpg
-imgSrc: Image by Steve Buissinne from [Pixabay](https://pixabay.com/en/wallet-cash-credit-card-pocket-1013789/)
+attribution: Image by Steve Buissinne from [Pixabay](https://pixabay.com/en/wallet-cash-credit-card-pocket-1013789/)
 tags:
 - toastmasters
 title: Think this November

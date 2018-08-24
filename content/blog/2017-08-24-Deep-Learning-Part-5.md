@@ -5,7 +5,7 @@ excerpt: Lets make the network actually deeper. Understand how the maths changes
   Or does it?
 identifier: dl5
 image: /assets/img/blog/deep5.jpg
-imgSrc: Image by mh-grafik from [Pixabay](https://pixabay.com/en/the-well-the-depth-of-the-bricked-1378979/)
+attribution: Image by mh-grafik from [Pixabay](https://pixabay.com/en/the-well-the-depth-of-the-bricked-1378979/)
 related:
 - dl4
 - dl8

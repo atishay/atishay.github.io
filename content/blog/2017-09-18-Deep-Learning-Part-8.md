@@ -6,7 +6,7 @@ excerpt: Using CovNets in Keras is as easy as it gets. This post shows some samp
   code.
 identifier: dl8
 image: /assets/img/blog/deep8.jpg
-imgSrc: Image by skeeze from [Pixabay](https://pixabay.com/en/collage-africa-big-5-animals-lion-1803066/)
+attribution: Image by skeeze from [Pixabay](https://pixabay.com/en/collage-africa-big-5-animals-lion-1803066/)
 related:
 - dl7
 - dl9

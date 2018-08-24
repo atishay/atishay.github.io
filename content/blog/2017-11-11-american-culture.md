@@ -3,7 +3,7 @@ date: "2017-11-11T00:00:00Z"
 description: Table topics questions used at a themed meeting around the american culture.
 excerpt: Table topics questions used at a themed meeting around the american culture.
 image: /assets/img/blog/american-culture.jpg
-imgSrc: Image by Luke Michael from [Unsplash](https://unsplash.com/photos/Tdwu35bCUj0)
+attribution: Image by Luke Michael from [Unsplash](https://unsplash.com/photos/Tdwu35bCUj0)
 tags:
 - toastmasters
 - tabletopic

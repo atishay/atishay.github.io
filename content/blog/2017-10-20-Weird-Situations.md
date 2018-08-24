@@ -5,7 +5,7 @@ description: Table topics questions used at a themed meeting around weird situat
 excerpt: Table topics questions used at a themed meeting around weird situations in
   life.
 image: /assets/img/blog/weird.jpg
-imgSrc: Image by Steve Buissinne from [Pixabay](https://pixabay.com/en/mistake-spill-slip-up-accident-876597/)
+attribution: Image by Steve Buissinne from [Pixabay](https://pixabay.com/en/mistake-spill-slip-up-accident-876597/)
 tags:
 - toastmasters
 - tabletopic

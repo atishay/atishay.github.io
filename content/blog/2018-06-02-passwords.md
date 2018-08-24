@@ -5,7 +5,7 @@ description: Passwords are a part of our life. It is better to learn how to deal
 excerpt: Passwords are a part of our life. It is better to learn how to deal with
   them rather than suffer because of not learning.
 image: /assets/img/blog/password.jpg
-imgSrc: Image by Gino Crescoli from [Pixabay](https://pixabay.com/en/password-app-application-business-2781614/)
+attribution: Image by Gino Crescoli from [Pixabay](https://pixabay.com/en/password-app-application-business-2781614/)
 sidebar:
   - title: Inspiration
     content: The famous [XKCD](https://xkcd.com/936/) piece about bad passwords.

@@ -6,7 +6,7 @@ excerpt: The best models have some real clever tricks to get through the last mi
   They are worth learning.
 identifier: dl10
 image: /assets/img/blog/deep10.jpg
-imgSrc: Image by Jarosław Igras [Pixabay](https://pixabay.com/en/the-intersection-way-investment-2683894/)
+attribution: Image by Jarosław Igras [Pixabay](https://pixabay.com/en/the-intersection-way-investment-2683894/)
 related:
 - dl9
 tags:

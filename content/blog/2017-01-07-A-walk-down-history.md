@@ -4,7 +4,7 @@ description: Wishing a happy 100th birthday to my grandfather.
 excerpt: A century is a lot of time. Happy 100th birthday to my grandfather. It is
   a feat.
 image: /assets/img/blog/birthday.jpg
-imgSrc: Image background from [Freepik](http://www.freepik.com/free-vector/balloon-party-background_780957.htm)
+attribution: Image background from [Freepik](http://www.freepik.com/free-vector/balloon-party-background_780957.htm)
 sidebar:
   - title: 100 Years
     content: A hundred years is a lot of time. I am honored to be attending

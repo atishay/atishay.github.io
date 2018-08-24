@@ -5,7 +5,7 @@ description: The entertaining speech about the need for electricity in life and 
 excerpt: The entertaining speech about the need for electricity in life and life without
   it.
 image: /assets/img/blog/powerless.jpg
-imgSrc: Image by Morgan4uall from [Pixabay](https://pixabay.com/en/bulb-light-energy-strand-penumbra-2287759/)
+attribution: Image by Morgan4uall from [Pixabay](https://pixabay.com/en/bulb-light-energy-strand-penumbra-2287759/)
 tags:
 - toastmasters
 title: Powerless

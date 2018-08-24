@@ -6,7 +6,7 @@ excerpt: CovNets and local information can really make results better. Simple Pr
   - Simple Solution.
 identifier: dl7
 image: /assets/img/blog/deep7.jpg
-imgSrc: Image by Nick Hillier from [UnSplash](https://unsplash.com/photos/aQcE3gDSSTY)
+attribution: Image by Nick Hillier from [UnSplash](https://unsplash.com/photos/aQcE3gDSSTY)
 related:
 - dl6
 - dl8
