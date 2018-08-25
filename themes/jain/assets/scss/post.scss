@@ -42,6 +42,7 @@
     @include container-margin;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
+    // box-shadow: 0 0 2px #aaa;
     &:hover {
         background: white;
     }
@@ -70,7 +71,7 @@
         margin: 0 0 40px;
         border-radius: 5px;
         width: 100%;
-        padding-bottom: 5/8 * 100%;
+        padding-bottom: 400/800 * 100%;
         .banner {
             width: 100%;
             height: auto;
@@ -184,4 +185,5 @@
     left: 0;
     top: 0;
     z-index: -1;
+    opacity: 0.2;
 }
