@@ -106,9 +106,10 @@
     }
     aside {
         padding: 0 15px;
-        text-align: left;
-        th, td, p {
+        * {
             text-align: left;
+        }
+        th, td, p {
             font-size: 0.8rem;
         }
         th {
@@ -118,7 +119,10 @@
                 margin: 0 5px 0 0;
             }
             white-space: nowrap;
-            @include media("<=xl", ">lg") {
+            @include media("<xl", ">=lg") {
+                font-size: 0;
+            }
+            @include media("<md", ">=sm") {
                 font-size: 0;
             }
         }
@@ -129,6 +133,30 @@
         section {
             padding: 10px 0;
             border-bottom: 1px dashed #ddd;
+            .info {
+                font-size: 10px;
+                float: right;
+            }
+        }
+        @include media('<lg', '>=sm') {
+            columns: 2;
+            border-top: 1px solid #ddd;
+            section {
+                border-bottom: none;
+            }
+        }
+        .tag-cloud {
+            line-height: 2.0rem;
+        }
+        .tag-cloud>a {
+            white-space: nowrap;
+            color: #666;
+            padding: 2px;
+            border-radius: 2px;
+            &:hover {
+                color: var(--theme-color);
+                text-decoration: underline;
+            }
         }
     }
 }
