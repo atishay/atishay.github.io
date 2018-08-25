@@ -24,4 +24,3 @@
 * Comments via Google Sheets CSV download
 * Underline in header.
 * Blog archive tree.
-* Tag Cloud
