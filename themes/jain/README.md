@@ -70,4 +70,3 @@ CSS Grids are used for column arrangements in the most logical manner.
 
 ## Top Matter
 * sidebar - You can add stuff to the page sidebar by using a the front matter and passing a list to `sidebar` with `title` and `content` properties. `content` can be markdown.
-* attribution - Creating a attribution field. You should use the sidebar for this well. Present for legacy reasons.

@@ -3,8 +3,6 @@ date: "2016-11-20T00:00:00Z"
 description: Computer games - Games are good.
 excerpt: I vouch for games - Computer Games that have been cursed by parents for little
   apparent reason.
-image: /assets/img/blog/games.jpg
-attribution: Image from [Pexels](https://www.pexels.com/photo/reflection-playstation-pad-gaming-18174/)
 sidebar:
   - title: Trivia
     content: Games have a history of being closely attached to the technology revolution.
@@ -12,6 +10,8 @@ sidebar:
       can do often leading to revolutions. Unsurprisingly, games introduced many to the
       world of programming. Considering what they give, the drawbacks are minor enough
       to let the medium thrive.
+  - title: attribution
+    content: Image from [Pexels](https://www.pexels.com/photo/reflection-playstation-pad-gaming-18174/)
 tags:
 - toastmasters
 title: Games are good

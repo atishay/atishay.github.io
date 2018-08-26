@@ -49,6 +49,22 @@
     @include media('>=lg') {
         display: grid;
         grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "main aside"
+            "more aside"
+            "comments aside";
+        main {
+            grid-area: main;
+        }
+        aside {
+            grid-area: aside;
+        }
+        .more {
+            grid-area: more;
+        }
+        .comments {
+            grid-area: comments;
+        }
     }
     main {
         &>p {
@@ -108,7 +124,9 @@
         }
     }
     aside {
-        padding: 0 calc(2*var(--content-padding));
+        @include media(">=lg") {
+            padding: 0 calc(2*var(--content-padding));
+        }
         line-height: 30px;
         * {
             text-align: left;
@@ -141,9 +159,13 @@
         @include media('<lg', '>=sm') {
             columns: 2;
             border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
             section {
                 border-bottom: none;
             }
+        }
+        @include media('<sm') {
+            border-top: 1px dashed #ddd;
         }
         .tag-cloud {
             line-height: 2.0rem;
@@ -166,15 +188,6 @@
     src: url(/fonts/NouveauDropCaps.woff2) format("woff2");
     unicode-range: U+41-5A;
 }
-
-// On the header hidden state, there is no header on the top
-// So we can go all the way.
-// @include media(">=md") {
-//     #post-anchor {
-//         margin-top: calc(-1 * var(--header-height));
-//         padding-bottom: var(--header-height);
-//     }
-// }
 
 .background {
     object-fit: cover;
