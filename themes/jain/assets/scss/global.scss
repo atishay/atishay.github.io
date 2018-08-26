@@ -105,3 +105,64 @@ blockquote:before {
     color: #FFF;
     text-shadow: none;
 }
+
+
+input, textarea {
+    background: #f2f2f2 none repeat scroll 0 0;
+    color: #333;
+    font-size: 15px;
+    padding: 12px;
+    touch-action: manipulation;
+    box-shadow: none;
+    border:none;
+    background-image:none;
+    border: 1px solid rgba(0,0,0,0.15);
+    &:focus {
+        border-color: var(--theme-color);
+        outline: none;
+    };
+}
+
+button {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 0px;
+    font-weight: 400;
+    color: var(--theme-color);
+    font-size: 16px;
+    padding: 13px 30px;
+    user-select: none;
+    text-transform: none;
+    border: transparent;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--theme-color);
+    transition: color .3s;
+    z-index: 2;
+    &:focus {
+        outline: none;
+    }
+    &:hover, &:focus {
+        color: #fff;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: var(--theme-color);
+        height: 150px;
+        width: calc(100% + 60px);
+        border-radius: 50%;
+        top: 100%;
+        left: 100%;
+        transition: all .5s;
+    }
+    &:hover:before,
+    &:focus:before {
+        top: -30px;
+        left: -30px;
+    }
+}

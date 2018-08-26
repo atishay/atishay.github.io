@@ -38,29 +38,61 @@
   </section>
   {{ end }}
 </aside>
+ {{ $related := .Site.RegularPages.RelatedIndices . "tags" "date" "category" | first 5 }}
+  {{ with $related }}
 <section class="more">
   <h2>Similar Posts</h2>
+  <ul>
+ {{ range . }}
+<li>
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</li>
+{{ end }}
+</ul>
 </section>
+{{ end }}
 {{ $ID := .UniqueID }}
 {{ with $.Site.Params.comment }}
 <section class="comments">
   <h2>Comments</h2>
+ {{ $comments := getCSV "," ( printf "https://docs.google.com/feeds/download/spreadsheets/Export?key=%s&exportFormat=csv" .sheet ) }}
+ <ul>
+ {{ range $r := $comments }}
+  {{ if eq (index $r 3) $ID}}
+  {{ $.Scratch.Set "hasComment" true }}
+  <li>
+    {{ $time := index $r 0}}
+    <time datetime="{{$time}}">{{(time $time).Format "Monday, Jan 2, 2006."}}</time>
+    <img src="https://www.gravatar.com/avatar/{{ md5 (index $r 1) }}?s=100&d=identicon">
+    <span class="commenter-name">{{ index $r 2 }}</span>
+    <div class="commenter-comment">{{ index $r 4 | emojify }}</div>
+  </li>
+  {{ end }}
+ {{ end }}
+  {{ if ne ($.Scratch.Get "hasComment") true }}
+  <li>
+    No comments yet. Be the first to post.
+  </li>
+  {{ end }}
+ {{ $.Scratch.Delete "hasComment" }}
+ </ul>
   <h3>Post a new comment</h3>
+<p>We get avatars from
+  <a href="https://www.gravatar.com">Gravatar</a>. You can use emojis as per the <a href="https://www.webfx.com/tools/emoji-cheat-sheet/">Emoji cheat sheet.</a></p>
 <form action="https://docs.google.com/forms/d/e/{{.form}}/formResponse">
   {{- with .name -}}
-  <input type="name" autocomplete="given-name" placeholder="Name" name="{{.}}">
+  <input class="comment-name" required type="name" autocomplete="given-name" placeholder="Name" name="{{.}}">
   {{- end -}}
  {{- with .email -}}
-  <input required type="email" autocomplete="email" placeholder="Email address" name={{.}}>
+  <input class="comment-email`" required type="email" autocomplete="email" placeholder="Email address" name={{.}}>
   {{- end -}}
   {{- with .post -}}
-  <input name="entry.524983228" type="hidden" value="{{$ID}}">
+  <input class="comment-id" name="entry.524983228" type="hidden" value="{{$ID}}">
   {{- end -}}
   {{- with .comment -}}
-  <textarea name="{{.}}" placeholder="Your comment" required>
-  </textarea>
+  <textarea class="comment-text" name="{{.}}" placeholder="Your comment" required></textarea>
   {{- end -}}
-  <button type="submit">Submit</button>
+  <button type="submit">Post Comment</button>
 </form>
 </section>
 {{- end -}}
