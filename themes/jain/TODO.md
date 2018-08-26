@@ -24,3 +24,4 @@
 * Comments via Google Sheets CSV download
 * Underline in header.
 * Blog archive tree.
+* add word count and reading time to info.

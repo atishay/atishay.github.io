@@ -41,10 +41,19 @@ params:
         post: entry.524983228
         comment: entry.8861571
 
-      # <img src="https://www.gravatar.com/avatar/{{ md5 "your@email.com" }}?s=100&d=identicon">
-      # https://docs.google.com/feeds/download/spreadsheets/Export?key=1gzXCakB9twLVlni9yuSZtQBNyp1ae_q_F1eqmPYekVc&exportFormat=csv
-
-
+cacheDir: cache
+enableEmoji: true
+related:
+  threshold: 0
+  includeNewer: true
+  toLower: true
+  indices:
+  - name: category
+    weight: 100
+  - name: tags
+    weight: 50
+  - name: date
+    weight: 10
 author:
     facebook: "https://facebook.com/atishay811"
     twitter: "https://twitter.com/atishay811"
