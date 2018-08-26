@@ -1,0 +1,13 @@
+ {{ $related := .Site.RegularPages.RelatedIndices . "tags" "date" "category" | first 5 }}
+  {{ with $related }}
+<section class="more">
+  <h2>Similar Posts</h2>
+  <ul>
+ {{ range . }}
+<li>
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+</li>
+{{ end }}
+</ul>
+</section>
+{{ end }}
