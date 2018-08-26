@@ -24,28 +24,8 @@
     {{with .content}}<p>{{ . | markdownify }}</p>{{end}}
   </section>
   {{ end }}
+  {{- partial "post/tag-cloud" . -}}
   {{ with .Params.attribution }}
-  <section class="sidebar tag-cloud">
- {{/* https://www.sidorenko.io/post/2017/07/nice-tagcloud-with-hugo/ */}}
-<h2>Tag Cloud
-  <small class="info">
-    <a href="{{ "/tags/" | relLangURL }}">See full list</a>
-  </small>
-</h2>
-  {{ if not (eq (len $.Site.Taxonomies.tags) 0) }}
-{{ $fontUnit := "rem" }}
-{{ $largestFontSize := 2.0 }}
-{{ $smallestFontSize := 1.0 }}
-{{ $max := len (index $.Site.Taxonomies.tags.ByCount 0).Pages }}
-{{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
-    {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-        {{ $count := len $taxonomy.Pages }}
-        {{ $weight := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }} {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weight) ) }}
-        <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" style="font-size:{{$currentFontSize}}{{$fontUnit}}">{{ $name }}</a>
-    {{ end }}
-{{ end }}
-
-  </section>
   <section class="sidebar">
       <h2>Attribution</h2>
       <p>{{ . | markdownify }}</p>
@@ -58,5 +38,31 @@
   </section>
   {{ end }}
 </aside>
+<section class="more">
+  <h2>Similar Posts</h2>
+</section>
+{{ $ID := .UniqueID }}
+{{ with $.Site.Params.comment }}
+<section class="comments">
+  <h2>Comments</h2>
+  <h3>Post a new comment</h3>
+<form action="https://docs.google.com/forms/d/e/{{.form}}/formResponse">
+  {{- with .name -}}
+  <input type="name" autocomplete="given-name" placeholder="Name" name="{{.}}">
+  {{- end -}}
+ {{- with .email -}}
+  <input required type="email" autocomplete="email" placeholder="Email address" name={{.}}>
+  {{- end -}}
+  {{- with .post -}}
+  <input name="entry.524983228" type="hidden" value="{{$ID}}">
+  {{- end -}}
+  {{- with .comment -}}
+  <textarea name="{{.}}" placeholder="Your comment" required>
+  </textarea>
+  {{- end -}}
+  <button type="submit">Submit</button>
+</form>
+</section>
+{{- end -}}
 </div>
 {{- end -}}

@@ -1,15 +1,15 @@
 ---
 date: "2016-11-12T00:00:00Z"
-description: My toastmaster's icebreaker
-excerpt: My first toastmaster's speech, the icebreaker. Here I introduce myself via
+description: My first toastmaster's speech, the icebreaker. Here I introduce myself via
   a short but interesting story.
-attribution: Image by Mystics Art Design from [Pixabay](https://pixabay.com/en/book-old-clouds-tree-birds-bank-863418/)
 sidebar:
   - title: Icebreaker
     content: Icebreaker is the first and the most important speech at toastmasters.
       The concept is that you will be introducing yourself to people all your life. You
       will also have to introduce yourself publicly if you end up becoming a speaker.
       It is a speech you give many times in life.
+  - title: attribution
+    content: Image by Mystics Art Design from [Pixabay](https://pixabay.com/en/book-old-clouds-tree-birds-bank-863418/)
 tags:
 - toastmasters
 title: Déjà vu

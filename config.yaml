@@ -33,6 +33,16 @@ params:
     sidebar:
       - title: license
         content: The contents of this post are available under Creative Commons Shared Alike license. You are free to use them commercially given that you provide the right attribution. You can read more about the license at the [Creative Commons website](http://creativecommons.org/licenses/by-sa/4.0/). <br> ![Creative Commons Shared Alike License](/image/ccbysa.png)
+    comment:
+        sheet: 1gzXCakB9twLVlni9yuSZtQBNyp1ae_q_F1eqmPYekVc
+        form: 1FAIpQLSdjkSleb2kSkQGWebNU7ZTPT7osqjj0EPc0g6Zl4Qud--jAaw
+        email: emailAddress
+        name: entry.1199094986
+        post: entry.524983228
+        comment: entry.8861571
+
+      # <img src="https://www.gravatar.com/avatar/{{ md5 "your@email.com" }}?s=100&d=identicon">
+      # https://docs.google.com/feeds/download/spreadsheets/Export?key=1gzXCakB9twLVlni9yuSZtQBNyp1ae_q_F1eqmPYekVc&exportFormat=csv
 
 
 author:
