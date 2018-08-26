@@ -33,6 +33,9 @@ layout: base
                   <h2 class="blog-post-title"><a href="#post">{{page.title}}</a></h2>
                 </div>
                 <div class="blog-post clearfix">
+                  {% if page.pre %}
+                  <i>{{page.pre | markdownify}}</i>
+                  {% endif %}
                     {{ content }}
                     {% if page.youtube %}
                     <h3 id="video">Video</h3>
