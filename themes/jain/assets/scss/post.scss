@@ -38,8 +38,8 @@
 
 .post {
     margin: calc(var(--header-height)/2);
-    padding: var(--content-padding);
     @include container-margin;
+    padding: calc(2*var(--content-padding));
     background: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     // box-shadow: 0 0 2px #aaa;
@@ -52,6 +52,8 @@
     }
     main {
         &>p {
+            font-size: 16px;
+            line-height: 30px;
             &:not(:first-of-type) {
                 text-indent: 30px;
             }
@@ -60,8 +62,8 @@
                 margin-top: 7px;
                 margin-right: 5px;
                 float: left;
-                font-size: 75px;
-                line-height: 60px;
+                font-size: 80px;
+                line-height: 80px;
                 font-family: NouveauDropCaps, serif;
             }
         }
@@ -106,12 +108,10 @@
         }
     }
     aside {
-        padding: 0 15px;
+        padding: 0 calc(2*var(--content-padding));
+        line-height: 30px;
         * {
             text-align: left;
-        }
-        th, td, p {
-            font-size: 0.8rem;
         }
         th {
             padding: 0 12px 0 0;
@@ -129,10 +129,9 @@
         }
         h2 {
             margin: 0 0 8px;
-            font-size: 1.4rem;
         }
         section {
-            padding: 10px 0;
+            padding: 20px 0;
             border-bottom: 1px dashed #ddd;
             .info {
                 font-size: 10px;
@@ -185,5 +184,4 @@
     left: 0;
     top: 0;
     z-index: -1;
-    opacity: 0.2;
 }
