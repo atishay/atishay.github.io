@@ -1,7 +1,4 @@
 footer {
-    li, p, a {
-        font-size: 0.9rem;
-    }
     $footer-color: #7C7C7C;
     background: #282828;
     color : $footer-color;
@@ -12,7 +9,6 @@ footer {
     }
     h2 {
         color: #CCC;
-        font-size: 1.3rem;
     }
     p, li {
         color: $footer-color;
