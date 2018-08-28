@@ -25,7 +25,7 @@
  </ul>
   <h3>Post a new comment</h3>
 <p>We get avatars from
-  <a href="https://www.gravatar.com">Gravatar</a>. You can use emojis as per the <a href="https://www.webfx.com/tools/emoji-cheat-sheet/">Emoji cheat sheet.</a></p>
+  <a target="_blank" href="https://www.gravatar.com">Gravatar</a>. You can use emojis as per the <a target="_blank" href="https://www.webfx.com/tools/emoji-cheat-sheet/">Emoji cheat sheet.</a></p>
 <form action="https://docs.google.com/forms/d/e/{{.form}}/formResponse">
   {{- with .name -}}
   <input class="comment-name" required type="name" autocomplete="given-name" placeholder="Name" name="{{.}}">
@@ -37,7 +37,7 @@
   <input class="comment-id" name="entry.524983228" type="hidden" value="{{$ID}}">
   {{- end -}}
   {{- with .comment -}}
-  <textarea class="comment-text" name="{{.}}" placeholder="Your comment" required></textarea>
+  <textarea rows="10" class="comment-text" name="{{.}}" placeholder="Your comment" required></textarea>
   {{- end -}}
   <button type="submit">Post Comment</button>
 </form>

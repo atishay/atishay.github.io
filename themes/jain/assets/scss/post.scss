@@ -185,6 +185,49 @@
             }
         }
     }
+    .buttons {
+        margin: 20px 0;
+    }
+    .next {
+        float: right;
+    }
+
+    .comments {
+        ul {
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            @include media(">=sm") {
+                grid-template-areas:
+                    "input1 input2"
+                    "comment comment"
+                    "button .";
+            }
+            @include media("<sm") {
+                grid-template-areas: "input1 input1" "input2 input2" "comment comment" "button button";
+            }
+        }
+        input:first-child {
+            grid-area: input1;
+        }
+        input:nth-child(2) {
+            grid-area: input2;
+        }
+        textarea {
+            grid-area: comment;
+        }
+        button {
+            grid-area: button;
+            justify-self: flex-start;
+        }
+    }
 }
 
 @font-face {
