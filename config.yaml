@@ -48,7 +48,7 @@ related:
   includeNewer: true
   toLower: true
   indices:
-  - name: category
+  - name: categories
     weight: 100
   - name: tags
     weight: 50
@@ -64,6 +64,7 @@ author:
 
 permalinks:
   blog: "/blog/:year/:month/:day/:slug"
+Paginate: 9
 
 sitemap:
     changefreq: "monthly"

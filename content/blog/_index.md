@@ -1,4 +1,5 @@
 ---
+title: My Blog
 menu:
     top:
         name: "blog"
@@ -6,4 +7,4 @@ menu:
         title: "Blog"
 ---
 
-Atishay's blog.
+Welcome to my blog. Here I post my thoughts, glimpses on what I work on and other interesting stuff that I find.

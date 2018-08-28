@@ -15,7 +15,8 @@ tags:
 - thoughts
 - hello
 - blogging
-category: thoughts
+categories:
+  - thoughts
 title: Hello World
 ---
 
