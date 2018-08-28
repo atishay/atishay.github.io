@@ -1,4 +1,4 @@
- {{ $related := .Site.RegularPages.RelatedIndices . "tags" "date" "category" | first 5 }}
+ {{ $related := .Site.RegularPages.RelatedIndices . "tags" "date" "categories" | first 5 }}
   {{ with $related }}
 <section class="more">
   <h2>Similar Posts</h2>

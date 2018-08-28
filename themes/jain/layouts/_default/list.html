@@ -1,4 +1,15 @@
 {{ define "main" }}
+{{.Title}}
 {{- .Content -}}
-List
+<ul>
+    {{ range .Paginator.Pages }}
+    {{- with .Resources.GetMatch "cover.*" -}}
+<div class="banner-holder">
+    <img width="800" height="400" alt={{.Title}} role="banner" class="banner" src="{{(.Fill " 800x400 ").RelPermalink}}" />
+</div>
+    {{end}}
+    <li>{{.Title}}</li>
+    {{ end }}
+</ul>
+{{ template "_internal/pagination.html" . }}
 {{ end }}
