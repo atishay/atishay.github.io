@@ -123,7 +123,7 @@ input, textarea {
     };
 }
 
-button {
+button, .button {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -136,7 +136,6 @@ button {
     text-transform: none;
     border: transparent;
     display: inline-block;
-    margin: 20px;
     position: relative;
     overflow: hidden;
     border: 2px solid var(--theme-color);
@@ -147,6 +146,7 @@ button {
     }
     &:hover, &:focus {
         color: #fff;
+        filter: none;
     }
     &:before {
         content: "";
@@ -164,5 +164,9 @@ button {
     &:focus:before {
         top: -30px;
         left: -30px;
+    }
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
     }
 }
