@@ -17,6 +17,10 @@
 {{- .Content -}}
 </main>
 {{- partial "post/sidebar.html" . -}}
+<section class="buttons">
+<a class="button {{if not .PrevInSection}} disabled{{end}}" href="{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}">Older</a>
+<a class="button {{if not .NextInSection}} disabled{{end}}" href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">Newer</a>
+</section>
 {{- partial "post/similar.html" . -}}
 {{- partial "post/comments.html" . -}}
 </div>

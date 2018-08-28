@@ -51,6 +51,7 @@
         grid-template-columns: 3fr 1fr;
         grid-template-areas:
             "main aside"
+            "buttons aside"
             "more aside"
             "comments aside";
         main {
@@ -58,6 +59,9 @@
         }
         aside {
             grid-area: aside;
+        }
+        .buttons {
+            grid-area: buttons;
         }
         .more {
             grid-area: more;
