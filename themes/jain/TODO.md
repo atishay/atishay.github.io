@@ -19,9 +19,10 @@
 * Video Tags
 * Turbolinks
 * Credits page
+* Emoticons Page
 * Color Switching
 * [Lazy Load images](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/)
-* Comments via Google Sheets CSV download
+* After comments stay on the same page via Javascript.
 * Underline in header.
 * Blog archive tree.
 * add word count and reading time to info.
