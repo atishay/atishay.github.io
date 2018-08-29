@@ -7,11 +7,13 @@
  {{ range $r := $comments }}
   {{ if eq (index $r 3) $ID}}
   {{ $.Scratch.Set "hasComment" true }}
-  <li>
+  <li class="comment">
     {{ $time := index $r 0}}
-    <time datetime="{{$time}}">{{(time $time).Format "Monday, Jan 2, 2006."}}</time>
-    <img src="https://www.gravatar.com/avatar/{{ md5 (index $r 1) }}?s=100&d=identicon">
+    <img width="100px" height="100px" src="https://www.gravatar.com/avatar/{{ md5 (index $r 1) }}?s=100&d=identicon" alt="{{ index $r 2 }}">
     <span class="commenter-name">{{ index $r 2 }}</span>
+    {{ $icon := resources.Get "image/line-awesome/fa-calendar.svg" | resources.Minify }}
+    {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
+    <time datetime="{{$time}}">{{(time $time).Format "Monday, Jan 2, 2006."}}</time>
     <div class="commenter-comment">{{ index $r 4 | emojify }}</div>
   </li>
   {{ end }}

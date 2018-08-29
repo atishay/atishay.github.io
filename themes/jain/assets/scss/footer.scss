@@ -36,7 +36,7 @@ footer {
         height: 32px;
         vertical-align: middle;
         fill: #fff;
-        background: var(--theme-color);
+        background: rgba(var(--theme-color), 1.0);
         border-radius: 4px;
         margin: 4px 10px 4px 0;
         padding: 3px;
@@ -53,7 +53,7 @@ footer {
     bottom: 28px;
     box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.3);
     svg {
-        background-color: var(--theme-color);
+        background-color: rgba(var(--theme-color), 1.0);
         padding: 5px;
         fill: white;
     }

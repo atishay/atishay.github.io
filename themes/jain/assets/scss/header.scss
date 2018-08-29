@@ -112,7 +112,7 @@ $hamburger-size: calc(8px + var(--header-height) / 2);
     align-items: center;
     &.active>a,
     &:hover>a {
-        color: var(--theme-color);
+        color: rgba(var(--theme-color), 1.0);
     }
     a {
         text-decoration: none;
@@ -157,7 +157,7 @@ $hamburger-size: calc(8px + var(--header-height) / 2);
         }
         &.active>a,
         &:hover>a {
-            color: var(--theme-color);
+            color: rgba(var(--theme-color), 1.0);
         }
         &:not(:last-child) {
             border-bottom: 1px dotted $divider;
@@ -187,7 +187,7 @@ $hamburger-size: calc(8px + var(--header-height) / 2);
         width: var(--header-height);
         height: var(--header-height);
         color: #fff;
-        fill: var(--theme-color);
+        fill: rgba(var(--theme-color), 1.0);
         position: absolute;
         top: 0;
         border: 0;

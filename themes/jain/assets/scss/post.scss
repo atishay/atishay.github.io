@@ -20,7 +20,7 @@
     }
 
     height: $height;
-    background: var(--theme-color);
+    background: rgba(var(--theme-color), 1.0);
     color: #fff;
     left: -$left-detach;
     &:before {
@@ -30,8 +30,8 @@
     }
 
     &:after {
-        @include triangle($height ($height/3), var(--theme-color), right);
-        right: -($height/3);
+        @include triangle($height ($height/3), rgba(var(--theme-color), 1.0), right);
+        right: ceil(-$height/3);
         top: 0;
     }
 }
@@ -78,7 +78,7 @@
                 text-indent: 30px;
             }
             &:first-of-type:first-letter {
-                color: var(--theme-color); //#992E00;
+                color: rgba(var(--theme-color), 1.0); //#992E00;
                 margin-top: 7px;
                 margin-right: 5px;
                 float: left;
@@ -176,11 +176,11 @@
         }
         .tag-cloud>a {
             white-space: nowrap;
-            color: #666;
+            color: $text-color;
             padding: 2px;
             border-radius: 2px;
             &:hover {
-                color: var(--theme-color);
+                color: rgba(var(--theme-color), 1.0);
                 text-decoration: underline;
             }
         }
@@ -234,6 +234,39 @@
     font-family: "NouveauDropCaps";
     src: url(/fonts/NouveauDropCaps.woff2) format("woff2");
     unicode-range: U+41-5A;
+}
+
+.comment {
+    min-height: 120px;
+    img {
+        margin: 5px 20px 0 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid $divider;
+        float: left;
+    }
+    svg {
+        fill: $text-color;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+    }
+    time {
+        font-size: 12px;
+    }
+}
+.commenter-comment {
+    background: rgba(var(--theme-color), 0.1);
+    margin-left: 120px;
+    min-height: 80px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.commenter-name {
+    font-weight: 400;
+    padding: 0 20px 0 0;
 }
 
 .background {
