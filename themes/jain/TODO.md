@@ -25,4 +25,3 @@
 * After comments stay on the same page via Javascript.
 * Underline in header.
 * Blog archive tree.
-* add word count and reading time to info.
