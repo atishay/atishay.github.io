@@ -25,3 +25,5 @@
 * After comments stay on the same page via Javascript.
 * Underline in header.
 * Blog archive tree.
+* https://github.com/thedaviddias/Front-End-Performance-Checklist
+* Move styles from tag cloud to CSS files.

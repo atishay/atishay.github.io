@@ -4,9 +4,10 @@
   <h2>Comments</h2>
  {{ $comments := getCSV "," ( printf "https://docs.google.com/feeds/download/spreadsheets/Export?key=%s&exportFormat=csv" .sheet ) }}
  <ul>
+  {{ $hasComment := false }}
  {{ range $r := $comments }}
   {{ if eq (index $r 3) $ID}}
-  {{ $.Scratch.Set "hasComment" true }}
+  {{ $hasComment := true }}
   <li class="comment">
     {{ $time := index $r 0}}
     <img width="100px" height="100px" src="https://www.gravatar.com/avatar/{{ md5 (index $r 1) }}?s=100&d=identicon" alt="{{ index $r 2 }}">
@@ -18,12 +19,11 @@
   </li>
   {{ end }}
  {{ end }}
-  {{ if ne ($.Scratch.Get "hasComment") true }}
+  {{ if ne $hasComment true }}
   <li>
     No comments yet. Be the first to post.
   </li>
   {{ end }}
- {{ $.Scratch.Delete "hasComment" }}
  </ul>
   <h3>Post a new comment</h3>
 <p>We get avatars from

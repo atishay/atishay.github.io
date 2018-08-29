@@ -17,18 +17,17 @@
     <ul role="menubar" class="top-menu">
 {{ $currentPage := . }}
 {{/* Finding the best category to pin the current page to. */}}
-{{ $scratch := .Scratch }}
-{{ $scratch.Set "fallback" "home" }}
+{{ $fallback := "home" }}
 {{ range .Site.Menus.top }}
 {{ if or ($currentPage.HasMenuCurrent "top" .) ($currentPage.IsMenuCurrent "top" .) }}
-{{$scratch.Set "fallback" .Name}}
+{{$fallback = .Name}}
 {{else if eq $currentPage.Section .Name}}
-{{$scratch.Set "fallback" .Name}}
+{{$fallback = .Name}}
 {{end}}
 {{ end}}
 {{/* Current Category is now found. We just need to fit inside it */}}
 {{ range .Site.Menus.top }}
-<li role="menuitem" class="top-menu-item {{ if eq ($scratch.Get "fallback") .Name }}active{{ end }}">
+<li role="menuitem" class="top-menu-item {{ if eq $fallback .Name }}active{{ end }}">
             <a href="{{.URL}}">{{ .Title | upper }}</a>
             {{ if .HasChildren }}
                 <ul class="sub-menu" role="menu">
@@ -42,7 +41,6 @@
         </li>
 {{ end }}
     </ul>
- {{ $scratch.Delete "fallback" }}
     {{with .Site.Params.github }}
     <a href="{{.}}" class="github-corner" aria-label="View source on Github">
         {{ $iconSVG := resources.Get "image/octocat.svg" | resources.Minify }}

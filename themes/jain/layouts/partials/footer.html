@@ -22,21 +22,20 @@
         </p>
         {{ end }}
         {{$page := .}}
+        {{$count := 100}}
         {{ if gt .recentCount -1 }}
-        {{ $.Scratch.Set "count" .recentCount }}
-        {{ else }}
-        {{ $.Scratch.Set "count" 10 }}
+        {{ $count = .recentCount }}
         {{ end }}
         {{ with .recents }}
         <ul>
-            {{ range first ($.Scratch.Get "count") (where (where $.Site.Pages "Section" "blog") ".Kind" "==" "page" )}}
+            {{ range first ($count) (where (where $.Site.Pages "Section" "blog") ".Kind" "==" "page" )}}
             <li>
                 <a href={{.Permalink}}>{{ .Title }}</a> -
 <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">{{ .PublishDate.Format "Monday, Jan 2, 2006."}}</time>
             </li>
             {{ end }}
         </ul>
-        {{ end }} {{ $.Scratch.Delete "count" }} {{ with .contact }}
+        {{ end }} {{ with .contact }}
         <ul class="contact-us">
             {{ with $.Site.Author.email }}
             <li>
