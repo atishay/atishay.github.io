@@ -1,11 +1,18 @@
- {{ $related := .Site.RegularPages.RelatedIndices . "tags" "date" "categories" | first 5 }}
+ {{ $related := .Site.RegularPages.RelatedIndices . "tags" "date" "categories" | first 3 }}
   {{ with $related }}
 <section class="more">
-  <h2>Similar Posts</h2>
-  <ul>
+  <h2>You may also enjoy</h2>
+  <ul class="items-{{len $related}}">
  {{ range . }}
 <li>
-  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <div class="img-container">
+    <a href="{{.RelPermalink}}">
+    {{- with .Resources.GetMatch "cover.*" -}}
+    <img alt="{{.Title}}" src="{{(.Fill " 200x150 ").RelPermalink}}" />
+    {{- end -}}
+    </a>
+  </div>
+  <a href="{{ .RelPermalink }}">{{ .Title }}<br><small>{{ $icon := resources.Get "image/line-awesome/fa-hourglass-1.svg" | resources.Minify }}{{ replace $icon.Content "<svg" "<svg width=\"16px\"" | safeHTML }}{{.ReadingTime}} minutes</small></svg></a>
 </li>
 {{ end }}
 </ul>

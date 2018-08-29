@@ -6,7 +6,8 @@ $text-color: #666;
 :root {
     --max-width: 100%;
     --header-height: 60px;
-    --theme-color: 0, 211, 249;
+    --theme-color-rgb: 0, 211, 249;
+    --theme-color: rgba(var(--theme-color-rgb), 1.0);
     --content-padding: 15px;
 }
 

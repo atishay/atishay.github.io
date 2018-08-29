@@ -70,7 +70,7 @@ p {
 
 a {
     text-decoration: none;
-    color: rgba(var(--theme-color), 1.0);
+    color: var(--theme-color);
     &:hover {
         filter: brightness(85%);
     }
@@ -101,7 +101,7 @@ blockquote:before {
 }
 
 ::selection {
-    background: rgba(var(--theme-color), 1.0);
+    background: var(--theme-color);
     color: #FFF;
     text-shadow: none;
 }
@@ -118,7 +118,7 @@ input, textarea {
     background-image:none;
     border: 1px solid rgba(0,0,0,0.15);
     &:focus {
-        border-color: rgba(var(--theme-color), 1.0);
+        border-color: var(--theme-color);
         outline: none;
     };
 }
@@ -129,7 +129,7 @@ button, .button {
     vertical-align: middle;
     border-radius: 0px;
     font-weight: 400;
-    color: rgba(var(--theme-color), 1.0);
+    color: var(--theme-color);
     font-size: 16px;
     padding: 13px 30px;
     user-select: none;
@@ -138,7 +138,7 @@ button, .button {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    border: 2px solid rgba(var(--theme-color), 1.0);
+    border: 2px solid var(--theme-color);
     transition: color .3s;
     z-index: 2;
     &:focus {
@@ -152,7 +152,7 @@ button, .button {
         content: "";
         position: absolute;
         z-index: -1;
-        background: rgba(var(--theme-color), 1.0);
+        background: var(--theme-color);
         height: 150px;
         width: calc(100% + 60px);
         border-radius: 50%;
