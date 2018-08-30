@@ -1,0 +1,36 @@
+/**
+ * Specific types for page type simple and list.
+ **/
+.list, .simple {
+    @include container;
+    flex: 1; // Stretch to fill space if needed.
+    .title {
+        text-align: center;
+        color: #222;
+    }
+
+    .subtitle {
+        display: block;
+        text-align: center;
+        padding-bottom: 30px;
+        font-style: italic;
+    }
+}
+
+// We want a wrapping behavior with blog post items.
+// Therefore it is a new item type.
+
+.blog-posts {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.blog-post {
+    list-style: none;
+    text-align: left;
+    width: 33%;
+    display: block;
+}
