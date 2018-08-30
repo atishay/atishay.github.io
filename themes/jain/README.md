@@ -70,3 +70,6 @@ CSS Grids are used for column arrangements in the most logical manner.
 
 ## Top Matter
 * sidebar - You can add stuff to the page sidebar by using a the front matter and passing a list to `sidebar` with `title` and `content` properties. `content` can be markdown.
+
+## Shortcodes
+* `fig` Same as `figure`, but added support for responsive resizing of images.

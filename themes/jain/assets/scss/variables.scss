@@ -170,6 +170,30 @@ $text-color: #666;
     grid-column-gap: 20px;
 }
 
-.itmes-1 {
+.items-1 {
     display: block;
+}
+
+.float-3 {
+    width: 100%;
+    @include media(">=lg") {
+        width: 33%;
+    }
+    float: left;
+}
+
+figure {
+    border: 1px solid $divider;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 15px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+figcaption {
+    padding: 0 5px;
+    text-align: center;
 }
