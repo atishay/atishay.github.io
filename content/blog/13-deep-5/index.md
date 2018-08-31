@@ -77,4 +77,4 @@ We have brought 1000 teams that see the initial data and we take input from thos
 ## Summary
 In this post we talked about how we can all more variables and allow the equation (from now on called a model) to be more complicated by having a chain of layers. We also discussed why it seems like a good idea and how we can get the model made deeper in keras.
 
-In the [next post]({% post_url 2017-08-29-Deep-Learning-Part-6 %}) we will talk about how to solve some of the problems and roadblocks we hit by depth and some common tricks we can use to get improvements.
+In the [next post]({{< ref "/blog/14-deep-6" >}}) we will talk about how to solve some of the problems and roadblocks we hit by depth and some common tricks we can use to get improvements.

@@ -48,12 +48,13 @@
     }
     @include media('>=lg') {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        // Fix for the pre tag stretching the width: https://stackoverflow.com/questions/45468633/pre-tag-causing-page-to-scroll-horizontally-in-css-grid
+        grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas:
-            "main aside"
-            "buttons aside"
-            "more aside"
-            "comments aside";
+            "main main aside"
+            "buttons buttons aside"
+            "more more aside"
+            "comments comments aside";
         main {
             grid-area: main;
         }
