@@ -152,10 +152,12 @@
             }
         }
         h2 {
+            // Taken padding from section as a hack for column wrapping.
+            padding-top: 20px;
             margin: 0 0 8px;
         }
         section {
-            padding: 20px 0;
+            padding: 0 0 20px;
             border-bottom: 1px dashed #ddd;
             .info {
                 font-size: 10px;
