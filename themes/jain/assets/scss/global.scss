@@ -133,6 +133,43 @@ input, textarea {
             padding-left: 10px;
         }
     }
+
+table::-webkit-scrollbar {
+    border: none;
+}
+
+table::-webkit-scrollbar-button {
+    background-color: #666;
+}
+
+table::-webkit-scrollbar-track {
+    background-color: #646464;
+    border: none;
+}
+
+table::-webkit-scrollbar-track-piece {
+    background-color: #272822;
+    border: none;
+}
+
+table::-webkit-scrollbar-thumb {
+    background-color: #666;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+table::-webkit-scrollbar-corner {
+    background-color: #646464;
+}
+
+table::-webkit-resizer {
+    background-color: #666;
+}
+}
+.highlight {
+    // Needed to prevent rendering artifacts in safari.
+    padding-bottom: 3px;
+    background-color: #272822;
 }
 
 button, .button {
