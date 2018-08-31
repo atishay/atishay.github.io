@@ -34,6 +34,7 @@ We realized that the traditional way of solving equations does not work well wit
 ## Technical Considerations
 I hope you feel the same as me right now that deep learning as a concept is not very difficult. We use a very simple equation, fill it up with random numbers and slowly tweak that until we are done. The challenge comes up with the implementation. In any practical use case we are talking about a few million multiplications per image. Now that means we need a beefy GPU as running those multiplications one by one will turn out to be very slow. Add to that, we need floating point numbers (not integers) which take more space (4 bytes by default). Therefore for a single 1 megapixel image we are talking about 3GB of GPU memory to store `A` alone. Still it takes hours to train. The ImageNet model that is used to recognize images takes a month on a cluster of 5 of the fastest GPU available.
 So make some compromises:
+
 * We take small images and most of the time their size is a power of 2.
 * We train in batches. Since gradient calculation is very expensive, we run the forward pass for multiple images at a time and once one set of images goes through we calculate the overall loss across all those images and push that back into the equation.
 * Deep learning libraries do most of the heavy lifting for us and automatically divide between the various machines, effectively use the GPU, and also calculate the gradient to run the back propagation. We just define the model.
@@ -128,4 +129,4 @@ loss_and_metrics = model.evaluate(x_test, y_test, batch_size=128)
 print loss_and_metrics
 ```
 
-Now that we have working code, we can really zoom ahead. You know the basics. Give me some time to build upon it. In [part 5]() we will talked about deeper networks, how and why.
+Now that we have working code, we can really zoom ahead. You know the basics. Give me some time to build upon it. In [part 5]({{< ref "/blog/13-deep-5" >}}) we will talked about deeper networks, how and why.
