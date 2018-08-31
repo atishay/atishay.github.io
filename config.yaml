@@ -3,7 +3,6 @@ disablePathToLower: true
 languageCode: "en-us"
 title: "Atishay Jain"
 theme: "jain"
-canonifyURLs: true
 disablePathToLower: false
 minify: true
 # Does not set the sitemap yet.
@@ -74,3 +73,11 @@ taxonomies:
   category: categories
   tag: tags
   series: series
+
+canonifyURLs: false
+blackfriday:
+  hrefTargetBlank: true
+  nofollowLinks: true
+  noreferrerLinks: true
+  extensions:
+    - hardLineBreak

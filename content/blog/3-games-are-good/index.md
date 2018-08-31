@@ -11,6 +11,7 @@ sidebar:
 tags:
 - toastmasters
 title: Games are good
+coverAnchor: Bottom
 youtube: mIxu6DQDa0U
 categories:
 - toastmasters

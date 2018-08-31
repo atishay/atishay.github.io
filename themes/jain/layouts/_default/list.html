@@ -5,11 +5,7 @@
 <ul class="blog-posts">
     {{ range .Paginator.Pages }}
 <li class="blog-post">
-{{- with .Resources.GetMatch "cover.*" -}}
-<div class="banner-holder">
-    <img width="800" height="400" alt={{.Title}} role="banner" class="banner" src="{{(.Fill " 800x400 ").RelPermalink}}" />
-</div>
-{{end}}
+    {{- partial "util/cover.html" (dict "class" "banner-holder" "page" . "width" 800 "height" 400) -}}
     <a href="{{.RelPermalink}}">{{.Title}}</a>
     </li>
     {{ end }}

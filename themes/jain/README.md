@@ -69,7 +69,8 @@ CSS Grids are used for column arrangements in the most logical manner.
 * Use Hugo Page Bundles for posts. The theme expects each page to have a beautiful image.
 
 ## Top Matter
-* sidebar - You can add stuff to the page sidebar by using a the front matter and passing a list to `sidebar` with `title` and `content` properties. `content` can be markdown.
+* `sidebar` - You can add stuff to the page sidebar by using a the front matter and passing a list to `sidebar` with `title` and `content` properties. `content` can be markdown.
+* `coverAnchor` - Add anchoring position for the cover image.
 
 ## Shortcodes
 * `fig` Same as `figure`, but added support for responsive resizing of images.
