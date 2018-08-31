@@ -5,14 +5,10 @@
   <ul class="items-{{len $related}}">
  {{ range . }}
 <li>
-  <div class="img-container">
     <a href="{{.RelPermalink}}">
-    {{- with .Resources.GetMatch "cover.*" -}}
-    <img alt="{{.Title}}" src="{{(.Fill " 200x150 ").RelPermalink}}" />
-    {{- end -}}
+      {{- partial "util/cover.html" (dict "class" "img-container" "page" . "width" 400 "height" 300) -}}
     </a>
-  </div>
-  <a href="{{ .RelPermalink }}">{{ .Title }}<br><small>{{ $icon := resources.Get "image/line-awesome/fa-hourglass-1.svg" | resources.Minify }}{{ replace $icon.Content "<svg" "<svg width=\"16px\"" | safeHTML }}{{.ReadingTime}} minutes</small></svg></a>
+  <a class="description" href="{{ .RelPermalink }}">{{ .Title }}<br><small>{{ $icon := resources.Get "image/line-awesome/fa-hourglass-1.svg" | resources.Minify }}{{ replace $icon.Content "<svg" "<svg width=\"16px\"" | safeHTML }}{{.ReadingTime}} minutes</small></svg></a>
 </li>
 {{ end }}
 </ul>
