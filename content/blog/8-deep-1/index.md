@@ -2,20 +2,21 @@
 date: "2017-08-16T00:00:00Z"
 description: Deep learning is a complex name to a much simpler set of mathematical
   equations. Here we start with defining what the problem is.
-excerpt: Understand deep learning starting with high school mathematics.
-identifier: dl1
-image: /assets/img/blog/deep.jpg
-attribution: Image by Damir Belavić from [Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)
-math: true
-related:
-- dl2
-- dl3
-- dl4
-- dl5
+sidebar:
+  - title: High school mathematics.
+    content: Deep learning is actually high school mathematics, just done so many times over and over that it can make sense of anything.
+  - title: attribution
+    content: Image by Damir Belavić from [Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)
 tags:
 - Deep Learning
-title: Easy Deep Learning Part I - Defining the problem
+title: Easy Deep Learning Part I
+series: ["Deep Learning"]
+slug: deep-learning-part-1
+categories:
+- deep learning
 ---
+
+# Defining the problem
 
 This is the first part of a multi-part series on deep learning as I sort my thoughts around the learnings in the last 1 year and put them here for my memories and help fellow humans get rid of the fear of the mechanical brain. In this part we describe what deep learning is and start formulating an equation for the image classification problem in deep learning.
 
@@ -95,4 +96,4 @@ The problem that deep learning solves is (in image classification) - Find a mill
 
 **NOTE:** If you are about to talk about this somewhere, let me clarify that the above equation is incomplete to an extent that it is wrong. For statistics, this may be good enough, not for deep learning. Do read the next part to get the mathematics to a conclusion. The split here is for a quick coffee break.
 
-You can continue onto the next post [here]({% post_url 2017-08-18-Deep-Learning-Part-2 %}) where we complete the equation we started working on.
+In the [next post]({{< ref "/blog/9-deep-2" >}}) we complete the equation we started working on.

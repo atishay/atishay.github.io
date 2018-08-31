@@ -27,3 +27,7 @@
 * Blog archive tree.
 * https://github.com/thedaviddias/Front-End-Performance-Checklist
 * Move styles from tag cloud to CSS files.
+* Add support for more in series instead of related.
+* Youtube Videos support.
+* Math support
+* Code support

@@ -14,9 +14,9 @@ tags:
 - toastmasters
 title: Déjà vu
 youtube: LV738Xq4cJ0
-menu:
-  top:
-    parent: blog
+categories:
+- toastmasters
+
 ---
 
 Here are the contents from my first speech at toastmasters. This one is for the CC Manual (CC#01). I did get the ice breaker and the best speech of the day ribbon for this. I know if you read this, your first speech is coming up. Don't worry. I have a tip for you. Bind your story in a theme, like I have done with Déjà Vu. This gives something for the audience to remember and also gives you pointers to remember what to say next. Practice, till you are comfortable. Don't worry. It will all be good.

@@ -12,6 +12,8 @@ tags:
 - toastmasters
 title: Games are good
 youtube: mIxu6DQDa0U
+categories:
+- toastmasters
 ---
 
 Here is another speech for toastmasters, CC#02. I vouch for games - Computer Games that have been cursed by parents for little apparent reason.

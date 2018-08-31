@@ -2,18 +2,19 @@
 date: "2017-02-19T00:00:00Z"
 description: I have had my share of travels and places around the world that I have
   seen. Never before I had and never again will I find a more exotic destination.
-excerpt: This is the most exotic travel destination on the planet, matched by no other.
-image: /assets/img/blog/kashmir.jpg
-attribution: Self Taken - Thank you Shubham Jain
 sidebar:
   - title: The Destination
     content: Described as the heaven on earth, this place is breathtaking.
       It is a shame that it is caught up in a conflict that prevents people to see this
-      wonder. Luckily that is preserving the natural beauty for generations ahead.
+      wonder. Luckily that is preserving the natural beauty for generations ahead. This is the most exotic travel destination on the planet, matched by no other.
+  - title: attribution
+    content: Self Taken - Thank you Shubham Jain.
 tags:
 - toastmasters
 title: A journey through heaven
 youtube: 0UD96RvqgGc
+categories:
+- toastmasters
 ---
 
 Imagine a huge beautiful lake with crystal clear water you could drink. Add an island in the middle that can be accessed via a passage made of ice. No motorboats, no sailboats, not even a wooden plank. To all that add a huge swath of land with lush green grass that extends to as long as the eyes can see. Mountains colored red and yellow with flowers sitting at the horizon. Light rustling of distant flowing water interrupted occasionally with the heavy bustling of the mountain wind. Cool breeze flows through your hair reminding you that it is reality and no dream. Not even a walking trail in sight, no signboards and no proof of the existence of animal life, forget humanity. Wild edible strawberries growing near your feet. Eat as much as you like.
