@@ -74,10 +74,16 @@ taxonomies:
   tag: tags
   series: series
 
-canonifyURLs: false
+canonifyURLs: true
 blackfriday:
-  hrefTargetBlank: true
-  nofollowLinks: true
-  noreferrerLinks: true
+  # Fix after https://github.com/gohugoio/hugo/issues/2424
+  # Verify inline links and use canonifyURLs as false;
+  # hrefTargetBlank: true
+  # nofollowLinks: true
+  # noreferrerLinks: true
   extensions:
     - hardLineBreak
+
+pygmentsCodefences: true
+pygmentsUseClasses: true
+pygmentsOptions: "linenos=true"

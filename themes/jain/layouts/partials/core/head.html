@@ -34,7 +34,9 @@
   {{- partial "core/social.html" . -}}
 {{end }}
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $css := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}
+{{ $syntax := resources.Get "css/syntax.css" }}
+{{ $main := resources.Get "scss/main.scss" | toCSS $options }}
+{{ $css := slice $main $syntax | resources.Concat "index.css" | resources.Minify | resources.Fingerprint "sha512" }}
 <link rel="stylesheet" href="{{$css.Permalink}}" integrity="{{$css.Data.Integrity}}" />
 
 {{ range .Site.Params.custom_css }}
