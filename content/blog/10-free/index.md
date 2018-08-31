@@ -2,20 +2,20 @@
 date: "2017-08-20T00:00:00Z"
 description: If you really love free stuff this one is for you. I share an experience
   of a free health checkup.
-excerpt: If you really love free stuff this one is for you. I share an experience
-  of a free health checkup.
-image: /assets/img/blog/free.jpg
-attribution: Image by Darko Stojanovic from [Pixabay](https://pixabay.com/en/medic-hospital-laboratory-medical-563423/)
 sidebar:
   - title: The Contents
     content: The contents of this speech were revised considerably by a senior
       member of this group, the biggest benefit of toastmasters. By getting help, I really
       learned a lot.
+  - title: attribution
+    content: Image by Darko Stojanovic from [Pixabay](https://pixabay.com/en/medic-hospital-laboratory-medical-563423/)
 tags:
 - toastmasters
 - life
 title: Free
 youtube: VMTouI-bgWk
+categories:
+- toastmasters
 ---
 
 This time I have two versions of the speech the initial draft which makes a good read but gets a beating when we get to the understanding and the final one that I delivered.
@@ -30,12 +30,12 @@ Free is a marketing term - Fools Ready for Easy Extortion. There is a star at th
 
 I was about the learn their price, the hard way. Right as I entered a sexy salesgi…, attendant gave me this (Take out paper). I am good with form filling. Throwaway email… Done. Correct Phone number at the bottom. Just in case. No extra check marks. Careful with that opt-out. Do I mention the sick leave for the giant's game? Na. And don’t forget to leave a few blanks . . .  she would come over. (Fold paper) She did – no ad on the internet can match this. This is like a salesman telling you that the car is free. (Aside with smiling face) Sir, we only charge for the brakes. I happily parted five-hundred-dollars.
 
-Now I was a lab rat – oversized gown, labelled collar and always scared. (Fidgety eyes)“Those machines. Hope they won’t turn me into a frog.” For the next one hour, I was a voodoo doll pinched to punish. Then came optometry. <Point at someone at the audience> Ok Sir, do you know English? Is A better or A? A or A? <I think A>. Okay. Let’s go with B… And then the last one – masters of trickery. “Have you eaten.” After two hours of this ordeal who would say yes. "Good". Trick question - No food. Had it been a yes, (in muted voice) “You would have won another day off from work.”
+Now I was a lab rat – oversized gown, labelled collar and always scared. (Fidgety eyes)“Those machines. Hope they won’t turn me into a frog.” For the next one hour, I was a voodoo doll pinched to punish. Then came optometry. <Point at someone at the audience> Ok Sir, do you know English? Is A better or A? A or A? {I think A}. Okay. Let’s go with B… And then the last one – masters of trickery. “Have you eaten.” After two hours of this ordeal who would say yes. "Good". Trick question - No food. Had it been a yes, (in muted voice) “You would have won another day off from work.”
 
-Those who think failing college exams is difficult, you always have an option – Sit behind &lt;someone from audience&rt; next time. Not with this (Take out paper). Fidgety… Trembling… I opened the sheet. ... (Wide open mouth, to exclaim) - "Aaa... Ancient Greek. Where do you find an interpreter?” Another "Free" session with the doctor.
+Those who think failing college exams is difficult, you always have an option – Sit behind {someone from audience}; next time. Not with this (Take out paper). Fidgety… Trembling… I opened the sheet. ... (Wide open mouth, to exclaim) - "Aaa... Ancient Greek. Where do you find an interpreter?” Another "Free" session with the doctor.
 
 I was scared but prepared. Twenty minutes are free. Rest I pay. The doctor pounced upon the report. (Doctor’s Voice, again with the same sheet of paper. Serious look) "Hmm… Interesting… The results look good. " (Fold paper)<br>
-&lt;sigh&rt;.<br>
+{sigh}.<br>
 "Except this one thing. (Pointing finger) You ate all my candies. You are overweight."
 
 My life flowed in front of my eyes. I had always been so thin that I fell between the cracks.(Pause) As a child, I was face to face with the manifestation of God – my fat young brother. Of course, I lost. "Oh so cute. Le Le Le Le”.<br>

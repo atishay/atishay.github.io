@@ -2,19 +2,19 @@
 date: "2017-01-29T00:00:00Z"
 description: We should never sacrifice the current time in our lives for a better
   tomorrow because now is the most important part of our lives.
-excerpt: The most important time in our lives is the present. Losing this is not worth
-  any future.
-image: /assets/img/blog/now.jpg
-attribution: Image by Gerd Altmann from [Pixabay](https://pixabay.com/en/clock-wave-period-time-fear-439147/)
 sidebar:
   - title: Now
     content: Now is the most important time of our lives. Those that have ignored
       now are the ones that suffer. In the mad rush for money we let stuff go. We shouldn't.
+  - title: attribution,
+    content: Image by Gerd Altmann from [Pixabay](https://pixabay.com/en/clock-wave-period-time-fear-439147/)
 tags:
 - toastmasters
 - thoughts
 title: Now
 youtube: _erhWZhOBDk
+categories:
+- toastmasters
 ---
 
 I have a question to start with - Anyone here prefers 5 million dollars 5 years from now over a million right now? What about 10 million in ten years? How about 20 in 20? 100 million in 100 years. Yes. That is what I want to say - there is a time value of money but it is not as huge as is the life value of money. Now is more important than 10 years from now.
