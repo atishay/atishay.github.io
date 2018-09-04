@@ -16,7 +16,7 @@ slug: deep-learning-part-6
 
 # Contracts, Options and Futures
 
-This is the fifth part of an intended multi-part series on deep learning. You should start with [Part 1]({{< ref "/blog/8-deep-1" >}}).
+This is the sixth part of an intended multi-part series on deep learning. You should start with [Part 1]({{< ref "/blog/8-deep-1" >}}).
 
 ## Recap
 In the previous posts we came up with the equation of a neuron to be `f(X) = g(Ax + b)` and talked about how we can stack one neuron over other to get a chain and make the network deep. We also talked about SGD and how we can slowly change our random parameters to get to the correct answer by going in the direction of the gradient. We also talked about how over fitting prevents us from going deeper adn also the fact that deep learning is slow and most of the difficulty is that machines are not fast enough.
@@ -81,4 +81,4 @@ print loss_and_metrics
 ## Summary
 We are a long way from the `AX + b` that we started with, but the changes are all minimal and incremental and conceptually nothing much has changed. Here we talked about some of the options that we have while starting with the model how to tweak the defaults.
 
-In the [next part]({{< ref "/blog/14-deep-6" >}}) we will figure out the way to use some of the local information in the image and get some great improvements via another of the buzzwords - Convolutional Neural Networks.
+In the [next part]({{< ref "/blog/15-deep-7" >}}) we will figure out the way to use some of the local information in the image and get some great improvements via another of the buzzwords - Convolutional Neural Networks.
