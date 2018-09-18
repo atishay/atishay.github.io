@@ -57,6 +57,9 @@
             "comments comments aside";
         main {
             grid-area: main;
+            // Needed for firefox
+            // https://stackoverflow.com/questions/43311943/
+            min-width: 0;
         }
         aside {
             grid-area: aside;
