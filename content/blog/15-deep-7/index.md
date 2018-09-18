@@ -1,13 +1,14 @@
 ---
 date: "2017-08-30T00:00:00Z"
 description: CovNets and local information can really make results better. Simple Problem - Simple Solution.
-image: /assets/img/blog/deep7.jpg
-attribution: Image by Nick Hillier from [UnSplash](https://unsplash.com/photos/aQcE3gDSSTY)
+sidebar:
+  - title: attribution
+    content: Image by Nick Hillier from [UnSplash](https://unsplash.com/photos/aQcE3gDSSTY)
 tags:
-- Deep Learning
+  - Deep Learning
 title: Easy Deep Learning Part VII
 categories:
-- deep learning
+  - deep learning
 series: ["Deep Learning"]
 slug: deep-learning-part-7
 ---
@@ -49,4 +50,4 @@ The concepts of dividing local stuff and then putting a manager onto global stuf
 ## Summary
 Here we discussed the intuition and some concepts around Convolutions and why having local information passed onto the next layer is a good idea.
 
-In the [next post]({{< ref "/blog/15-deep-7" >}}) we will apply this to the CIFAR data set and show some results from the convolutional neural networks that can really amaze us all.
+In the [next post]({{< ref "/blog/17-deep-8" >}}) we will apply this to the CIFAR data set and show some results from the convolutional neural networks that can really amaze us all.
