@@ -73,4 +73,4 @@ This code should look almost the same as the first code we wrote for MNIST apart
 ## Summary
 In this post we built a very simple convolutional neural network to classify the Cifar 10 images into various categories. We realized how simple the neural network engines make it to model a complicated piece of the network by just one function call.
 
-It came out to be a short post as we did not go through many of the optimizations. The reason why we did this will be very clear when we will in the next post use the model zoo to solve CIFAR-10.
+It came out to be a short post as we did not go through many of the optimizations. The reason why we did this will be very clear when we will in the [next post]({{< ref "/blog/18-deep-9" >}}) use the model zoo to solve CIFAR-10.
