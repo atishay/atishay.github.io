@@ -4,3 +4,4 @@ themes/jekyll
 public/
 node_modules/
 cache
+_site/
