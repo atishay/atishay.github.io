@@ -2,14 +2,15 @@
 date: "2018-07-15T00:00:00Z"
 description: An application of Darwin's theory of evolution on the discovery of bread
   by mankind - from cavemen to farmers
-excerpt: An application of Darwin's theory of evolution on the discovery of bread
-  by mankind - from cavemen to farmers
-image: /assets/img/blog/bread.jpg
-attribution: Image by Mogens Petersen  from [Pixabay](https://pixabay.com/en/bread-baker-craft-food-oven-1643951/)
+sidebar:
+  - title: attribution
+    content: Image by Mogens Petersen  from [Pixabay](https://pixabay.com/en/bread-baker-craft-food-oven-1643951/)
 tags:
 - toastmasters
 title: Bread and Charles Darwin
 youtube: v0T0ij2BdKs
+categories:
+  - toastmasters
 ---
 
 Now that you’ve enjoyed the hearty meal, I feel comfortable talking about food. It is not like it is 12 PM on a Sunday afternoon and all of you are gearing up to run for lunch. It is not like I will pick up this bread and someone will come up and snatch a quick bit. Looking at this soft piece of bread I am always amazed how mankind discovered the process of making it. The brutes that hurled stones at their prey. Look at the fine details. The delicate pores caused by just enough bubbles in the flour with so much gluten that it could still stay together and not fall through. Then these pieces of fruit sweet and savory. Yummy - just perfect. Unless you believe that god gave us these recipes, you should be wondering how the cave man discovered everything – first the grains, and then the process. From the look of it, the wheat grain is not really sumptuous, hard and tasteless. It will likely cause stomach upset if eaten raw. Yet it has been grown for thousands of years with this perfect recipe. Now without involving the historians and their learning, I will be trying to apply today Darwinism to the discovery of food and see how pure competition and natural selection can lead the cavemen to such delicacies.

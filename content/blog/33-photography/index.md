@@ -2,13 +2,14 @@
 date: "2018-07-20T00:00:00Z"
 description: A planned speech on role playing an artist and scientist on photography.
   Never used. Free for you
-excerpt: A planned speech on role playing an artist and scientist on photography.
-  Never used. Free for you
-image: /assets/img/blog/photo.jpg
-attribution: Image by PublicDomainPictures  from [Pixabay](https://pixabay.com/en/photo-camera-photography-old-retro-219958/)
+sidebar:
+  - title: attribution
+    content: Image by PublicDomainPictures  from [Pixabay](https://pixabay.com/en/photo-camera-photography-old-retro-219958/)
 tags:
 - toastmasters
 title: The art and science of Photography
+categories:
+  - toastmasters
 ---
 
 Below is an excerpt from a speech that was planned but I changed the topic. Since I had written it down, I had an obligation to share.
