@@ -2,11 +2,9 @@
 date: "2018-06-24T00:00:00Z"
 description: A popular folk lore from India about proud kings bringing down the country
   for vangeance.
-excerpt: A popular folk lore from India about proud kings bringing down the country
-  for vangeance.
-image: /assets/img/blog/vanity.jpg
-attribution: Image by Ameya Clicks from [Wikipedia](https://commons.wikimedia.org/wiki/File:Prithviraj_Chauhan_Memorial_by_Ameya_Clicks.jpg)
 sidebar:
+  - title: attribution
+    content: Image by Ameya Clicks from [Wikipedia](https://commons.wikimedia.org/wiki/File:Prithviraj_Chauhan_Memorial_by_Ameya_Clicks.jpg)
   - title: The Lore
     content: "[Prithviraj Raso](https://en.wikipedia.org/wiki/Prithviraj_Raso)
       is very popular in contemporary indian literature. Honed upon years of updates by
@@ -21,6 +19,8 @@ tags:
 - toastmasters
 title: Vanity and Vengeance
 youtube: chlIY34I28o
+categories:
+  - toastmasters
 ---
 
 Today I am going to share a popular folk lore in India, sung as a ballad with over 16000 verses. The story is historically inaccurate. Historians don't believe in the love story. According to them this was just an arrogant ruler who angered his neighbors and then suffered a shameful defeat from an enemy he had earlier let live. But the folk lore differs, and the story is definitely the one to indulge in.
