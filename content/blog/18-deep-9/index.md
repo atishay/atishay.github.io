@@ -86,4 +86,4 @@ The code is terse and clear. I don't think there is much commentary to add. The 
 ## Summary
 In this post we reused a pre-existing model and transferred the learnings into the Cifar100 model that we built and trained. The concept of transfer learning is very important in the deep learning toolkit. It provides ways to train using minimal data and get some great results.
 
-In the next post we will discuss some of the pieces of the pre-existing models so that we can learn from their tools to improve our trade.
+In the [next post]({{< ref "/blog/19-deep-10" >}})  we will discuss some of the pieces of the pre-existing models so that we can learn from their tools to improve our trade.
