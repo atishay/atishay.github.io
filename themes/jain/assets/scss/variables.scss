@@ -11,6 +11,29 @@ $text-color: #666;
     --content-padding: 15px;
 }
 
+@mixin zoomable-image($selector, $height) {
+    #{$selector} {
+        width: 100%;
+        position: relative;
+        padding-bottom: $height;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &:hover #{$selector} img {
+        transform: scale(1.1);
+    }
+}
+
 @include media(">=sm") {
     :root {
         --max-width: 540px;
@@ -132,6 +155,22 @@ $text-color: #666;
             grid-area: five;
         }
     }
+}
+
+.items-12 {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include media(">=md") {
+        grid-template-columns: 1fr 1fr;
+    }
+    @include media(">=lg") {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @include media(">=xl") {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    grid-column-gap: 20px;
 }
 
 .items-4, .items-8 {

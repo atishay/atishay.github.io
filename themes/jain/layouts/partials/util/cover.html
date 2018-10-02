@@ -3,7 +3,9 @@
     {{ $cover := . }}
     {{ $params := print $.width "x" $.height }}
     {{ if $.page.Params.coverAnchor }}
-        {{ $params = print "800x400 " $.page.Params.coverAnchor }}
+        {{ $params = print $params " " $.page.Params.coverAnchor }}
+    {{ else }}
+        {{ $params = print $params " Center" }}
     {{end}}
         {{ $cover = .Fill $params }}
     <img width="{{$.width}}" height="{{$.height}}" alt={{.Title}} role="banner" class="banner" src="{{$cover.RelPermalink}}" />
