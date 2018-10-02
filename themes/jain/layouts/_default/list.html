@@ -6,8 +6,24 @@
 <ul class="blog-posts items-{{.Paginator.PageSize}}">
     {{ range .Paginator.Pages }}
 <li class="blog-post">
-    {{- partial "util/cover.html" (dict "class" "banner-holder" "page" . "width" 440 "height" 330) -}}
-    <a href="{{.RelPermalink}}">{{.Title}}</a>
+    <a href="{{.RelPermalink}}">
+        {{- partial "util/cover.html" (dict "class" "banner-holder" "page" . "width" 440 "height" 330) -}}
+        <h3>{{.Title}}</h3>
+    </a>
+    <p>{{.Description | markdownify}}</p>
+    <hr/>
+    <div class="blog-post-footer">
+        <a href="{{.RelPermalink}}">Read More</a>
+        <span class="categories">
+{{with .Params.categories}}
+{{ $icon := resources.Get "image/line-awesome/fa-caret-square-o-right.svg" | resources.Minify }}
+{{ replace $icon.Content "<svg " " <svg width=\"20px\"" | safeHTML }}
+    {{ range . }}
+      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
+      {{end}}
+ {{end}}
+</span>
+    </div>
     </li>
     {{ end }}
 </ul>

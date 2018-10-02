@@ -117,11 +117,14 @@ $text-color: #666;
         }
     }
     grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 .items-5 {
     display: grid;
     grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
 
     @include media(">=md") {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -171,6 +174,7 @@ $text-color: #666;
     }
 
     grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 .items-4, .items-8 {
@@ -183,6 +187,7 @@ $text-color: #666;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 .items-3, .items-6, .items-9 {
@@ -192,6 +197,7 @@ $text-color: #666;
         grid-template-columns: 1fr 1fr 1fr;
     }
     grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 .items-6 {
@@ -207,6 +213,7 @@ $text-color: #666;
         grid-template-columns: 1fr 1fr;
     }
     grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }
 
 .items-1 {

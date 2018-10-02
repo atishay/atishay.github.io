@@ -23,17 +23,19 @@
         text-align: center;
         padding-bottom: 30px;
         font-style: italic;
+        text-shadow: 1px 1px 3px white;
     }
 }
 
-// We want a wrapping behavior with blog post items.
-// Therefore it is a new item type.
+.list {
+    background: transparent;
+    &:hover {
+        background: transparent;
+    }
+}
 
 .blog-posts {
-    // display: flex;
     width: 100%;
-    overflow: hidden;
-    // flex-wrap: wrap;
     align-content: center;
 }
 
@@ -42,4 +44,40 @@
     text-align: left;
     padding: 15px;
     @include zoomable-image(".banner-holder", (270/360) * 100%);
+    background: #fff;
+    box-shadow: 0 1px 1px #ddd;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+        box-shadow: 0 0 40px #ddd;
+    }
+    hr {
+        border: none;
+        border-bottom: 1px dashed #ddd;
+    }
+    h3:hover {
+        color: var(--theme-color);
+    }
+    p {
+        flex: 1;
+    }
+    .blog-post-footer {
+        display: flex;
+        a {
+            font-size: 12px;
+            padding-right: 15px;
+            color: #999;
+            &:hover {
+                color: var(--theme-color);
+            }
+        }
+        .categories {
+            svg {
+                fill: var(--theme-color);
+                vertical-align: middle;
+            }
+            text-align: right;
+            flex: 1;
+        }
+    }
 }
