@@ -63,7 +63,7 @@ author:
 
 permalinks:
   blog: "/blog/:year/:month/:day/:slug"
-Paginate: 9
+Paginate: 12
 
 sitemap:
     changefreq: "monthly"

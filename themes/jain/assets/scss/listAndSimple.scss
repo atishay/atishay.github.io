@@ -21,16 +21,16 @@
 // Therefore it is a new item type.
 
 .blog-posts {
-    display: flex;
+    // display: flex;
     width: 100%;
     overflow: hidden;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     align-content: center;
 }
 
 .blog-post {
     list-style: none;
     text-align: left;
-    width: 33%;
-    display: block;
+    padding: 15px;
+    @include zoomable-image(".banner-holder", (270/360) * 100%);
 }

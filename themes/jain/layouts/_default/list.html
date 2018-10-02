@@ -2,10 +2,10 @@
 <article class="list">
     <h1 class='title'>{{.Title}}</h1>
 <span class='subtitle'>{{- .Content | plainify -}}</span>
-<ul class="blog-posts">
+<ul class="blog-posts items-{{.Paginator.PageSize}}">
     {{ range .Paginator.Pages }}
 <li class="blog-post">
-    {{- partial "util/cover.html" (dict "class" "banner-holder" "page" . "width" 800 "height" 400) -}}
+    {{- partial "util/cover.html" (dict "class" "banner-holder" "page" . "width" 440 "height" 330) -}}
     <a href="{{.RelPermalink}}">{{.Title}}</a>
     </li>
     {{ end }}

@@ -99,21 +99,10 @@
         border-radius: 5px;
         width: 100%;
         padding-bottom: 400/800 * 100%;
+        @include zoomable-image(".banner-holder", 0);
         .banner-holder {
-            position: absolute;
-            width: 100%;
             height: 100%;
-            overflow: hidden;
-            img {
-                width: 100%;
-                height: auto;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-        &:hover .banner-holder img {
-            transform: scale(1.1);
+            position: absolute;
         }
         h1 {
             @include media('>=xs') {
@@ -292,45 +281,28 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
-    .img-container {
-            width: 100%;
-            position: relative;
-            padding-bottom: (3/4) * 100%;
-            overflow: hidden;
-            img {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
 
-        li {
-            &:hover img {
-                transform: scale(1.1);
-            }
-            border-radius: 4px;
-            overflow: hidden;
-            list-style: none;
-            &>.description {
-                font-weight: 400;
-                padding: 10px 10px;
-                display: block;
-                border: 1px solid $divider;
-                border-top-width: 0;
-                border-bottom-left-radius: 4px;
-                border-bottom-right-radius: 4px;
-                text-align: left;
-            }
+    li {
+        @include zoomable-image(".img-container", (3/4) * 100%);
+        border-radius: 4px;
+        overflow: hidden;
+        list-style: none;
+        &>.description {
+            font-weight: 400;
+            padding: 10px 10px;
+            display: block;
+            border: 1px solid $divider;
+            border-top-width: 0;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            text-align: left;
         }
-        svg {
-            vertical-align: middle;
-            fill: $text-color;
-        }
-        small {
-            color: $text-color;
-        }
+    }
+    svg {
+        vertical-align: middle;
+        fill: $text-color;
+    }
+    small {
+        color: $text-color;
+    }
 }
