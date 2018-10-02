@@ -2,7 +2,16 @@
  * Specific types for page type simple and list.
  **/
 .list, .simple {
-    @include container;
+    margin: calc(var(--header-height)/2);
+    @include container-margin;
+    padding: calc(2*var(--content-padding));
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+
+    // box-shadow: 0 0 2px #aaa;
+    &:hover {
+        background: white;
+    }
     flex: 1; // Stretch to fill space if needed.
     .title {
         text-align: center;
