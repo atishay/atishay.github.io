@@ -93,7 +93,10 @@
         background-color: #fff;
         box-shadow: 0 1px 1px $divider;
         &:hover {
+            filter: none;
             box-shadow: 0 0 40px $divider;
+            background: var(--theme-color);
+            color: #fff;
         }
         padding: 10px;
         margin: 10px;
