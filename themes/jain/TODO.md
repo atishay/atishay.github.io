@@ -5,10 +5,8 @@
 * [WebP or jp2](http://www.useragentman.com/blog/2015/01/14/using-webp-jpeg2000-jpegxr-apng-now-with-picturefill-and-modernizr/)
 * Scroll Animations
 * Scroll Progress indicator
-* Word Count and Reading time
 * Bread crumbs
 * AMP/Canonical URLs
-* Minified JSON-LD
 * Checkin PSDs
 * Move footer to data folder.
 * PostCSS and JS Uglify.
@@ -31,3 +29,4 @@
 * Youtube Videos support.
 * Math support
 * Link before each header.
+* Taxonomy collapsible.

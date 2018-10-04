@@ -36,7 +36,7 @@
   <input class="comment-email`" required type="email" autocomplete="email" placeholder="Email address" name={{.}}>
   {{- end -}}
   {{- with .post -}}
-  <input class="comment-id" name="entry.524983228" type="hidden" value="{{$ID}}">
+  <input class="comment-id" name="{{.}}" type="hidden" value="{{$ID}}">
   {{- end -}}
   {{- with .comment -}}
   <textarea rows="10" class="comment-text" name="{{.}}" placeholder="Your comment" required></textarea>

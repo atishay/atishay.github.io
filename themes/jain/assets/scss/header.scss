@@ -4,7 +4,7 @@ header {
     position: sticky;
     top: 0;
     background: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid $divider;
+    box-shadow: 0 0 1px $divider;
     display: flex;
     align-items: center;
     min-height: var(--header-height);

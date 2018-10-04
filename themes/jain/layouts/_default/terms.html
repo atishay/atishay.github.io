@@ -8,9 +8,15 @@
     {{ range $key, $value := .Data.Terms.Alphabetical }}
     {{ $name := .Name }}
     {{ $count := .Count }}
+    {{ $pages := .Pages }}
     {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
 <li>
 <h4><a href="{{ .Permalink }}">{{ $name | humanize }} </a></h4><small> ({{ $count }} post{{if gt $count 1}}s{{end}})</small>
+<ul>
+    {{ range $pages }}
+    <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+</ul>
 </li>
     {{ end }}
     {{ end }}

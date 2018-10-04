@@ -39,6 +39,12 @@ params:
         name: entry.1199094986
         post: entry.524983228
         comment: entry.8861571
+    contact:
+        form: 1FAIpQLSfmhy33Qdqwwi8nqDOxJMdCyRh6Z3CWhwE9Iosa7UKO8wNt6A
+        name: entry.830764464
+        email: emailAddress
+        subject: entry.1998641301
+        message: entry.1809318382
 
 cacheDir: cache
 enableEmoji: true
@@ -60,6 +66,9 @@ author:
     email: "contact@atishay.me"
     linkedin: "https://linkedin.com/in/atishay"
     name: "Atishay Jain"
+    location: San Francisco Bay Area, California
+    phone: On request
+    hours: "**Mon - Fri:** 9.00 AM - 6.00 PM, PST/PDT"
 
 permalinks:
   blog: "/blog/:year/:month/:day/:slug"
