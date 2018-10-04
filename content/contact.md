@@ -4,7 +4,7 @@ menu:
         name: "contact"
         weight: 100
         title: "Contact"
-type: simple
+type: contact
 ---
 
 Contact Us
