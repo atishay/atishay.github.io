@@ -1,7 +1,7 @@
 /**
  * Specific types for page type simple and list.
  **/
-.list, .simple {
+.list, .simple, .terms {
     margin: calc(var(--header-height)/2);
     @include container-margin;
     padding: calc(2*var(--content-padding));
@@ -31,6 +31,16 @@
     background: transparent;
     &:hover {
         background: transparent;
+    }
+}
+
+.terms {
+    background: rgba(255, 255, 255, 0.9);
+    &:hover {
+        background: rgba(255, 255, 255, 1.0);
+    }
+    h4 {
+        display: inline-block;
     }
 }
 
