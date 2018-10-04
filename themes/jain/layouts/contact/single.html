@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="contact">
+    <h1 class='title'>{{.Title}}</h1>
+    {{ with .Params.subtitle }}
+    <span class='subtitle'>{{.}}</span>
+    {{ end }}
+    {{- .Content -}}
+</article>
+{{ end }}
