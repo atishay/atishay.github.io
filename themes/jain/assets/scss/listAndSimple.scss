@@ -13,18 +13,6 @@
         background: white;
     }
     flex: 1; // Stretch to fill space if needed.
-    .title {
-        text-align: center;
-        color: #222;
-    }
-
-    .subtitle {
-        display: block;
-        text-align: center;
-        padding-bottom: 30px;
-        font-style: italic;
-        text-shadow: 1px 1px 3px white;
-    }
 }
 
 .list {

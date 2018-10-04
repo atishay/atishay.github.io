@@ -1,9 +1,118 @@
 {{ define "main" }}
+{{- with $.Page.Resources.GetMatch "cover.*" -}}
+<div class="contact-cover">
+<img width="1440" height="300" alt="Contact Cover" role="presentation" src="{{(.Fill "2880x600 Top").RelPermalink}}" />
+</div>
+{{- end -}}
 <article class="contact">
     <h1 class='title'>{{.Title}}</h1>
     {{ with .Params.subtitle }}
     <span class='subtitle'>{{.}}</span>
     {{ end }}
     {{- .Content -}}
+    <section>
+        <aside>
+            <section>
+                <h2>Location</h2>
+                <ul>
+                    {{- with $.Site.Author.email -}}
+                    <li>
+                        <a target="_blank" href="mailto:{{ . }}">
+                        {{ $icon := resources.Get "image/line-awesome/fa-envelope.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
+                            {{$middle := replaceRE "^.*@" "" .}}
+                            <span>{{replaceRE "@.*$" "" .}} [at] {{ replaceRE "\\..*" "" $middle }} [dot] {{ replaceRE "^.*\\." "" . }}</span>
+                        </a>
+                    </li>
+                    {{- end -}}
+                    {{- with $.Site.Author.phone -}}
+                    <li>
+                        {{ $icon := resources.Get "image/line-awesome/fa-phone.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
+                            <span>{{.}}</span>
+                    </li>
+                    {{- end -}}
+                    {{- with $.Site.Author.location -}}
+                    <li>
+                        <a target="_blank" href=""> <!-- Google maps search here -->
+                        {{ $icon := resources.Get "image/line-awesome/fa-compass.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
+                            <span>{{.}}</span>
+                        </a>
+                    </li>
+                    {{- end -}}
+                </ul>
+            </section>
+            {{- with $.Site.Author.hours -}}
+            <section>
+                <h2>Contact Hours</h2>
+                <ul>
+                    <li>
+                    <a target="_blank" href=""> <!-- Google maps search here -->
+                        {{ $icon := resources.Get "image/line-awesome/fa-clock-o.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
+                            {{$middle := replaceRE "^.*@" "" .}}
+                            <span>{{. | markdownify}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            {{- end -}}
+            <section>
+                <h2>Social Links</h2>
+                <ul>
+                    {{ with $.Site.Author.linkedin }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    {{ $icon := resources.Get "image/line-awesome/fa-linkedin.svg" | resources.Minify }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
+                    <span>{{ replaceRE "https://" "" . }}</span>
+                </a>
+            </li>
+            {{ end }} {{ with $.Site.Author.github }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    {{ $icon := resources.Get "image/line-awesome/fa-github.svg" | resources.Minify }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
+                    <span>{{ replaceRE "https://" "" . }}</span>
+                </a>
+            </li>
+            {{ end }} {{ with $.Site.Author.twitter }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    {{ $icon := resources.Get "image/line-awesome/fa-twitter.svg" | resources.Minify }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
+                    <span>{{ replaceRE "https://" "" . }}</span>
+                </a>
+            </li>
+            {{ end }} {{ with $.Site.Author.facebook }}
+            <li>
+                <a target="_blank" href="{{ . }}">
+                    {{ $icon := resources.Get "image/line-awesome/fa-facebook.svg" | resources.Minify }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
+                    <span>{{ replaceRE "https://" "" . }}</span>
+                </a>
+            </li>
+            {{ end }}
+                </ul>
+            </section>
+        </aside>
+        {{- with $.Site.Params.contact -}}
+        <form action="https://docs.google.com/forms/d/e/{{.form}}/formResponse">
+            {{- with .name -}}
+            <input class="contact-name" required type="name" autocomplete="given-name" placeholder="Name" name="{{.}}">
+            {{- end -}}
+            {{- with .email -}}
+            <input class="contact-email`" required type="email" autocomplete="email" placeholder="Email address" name={{.}}>
+            {{- end -}}
+            {{- with .subject -}}
+            <input class="contact-subject" name="{{.}}" type="text" autocomplete placeholder="Subject">
+            {{- end -}}
+            {{- with .message -}}
+            <textarea rows="10" class="contact-message" name="{{.}}" placeholder="Message" required></textarea>
+            {{- end -}}
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+{{- end -}}
+{{- with .Params.Footnote -}}
+<small>{{. | markdownify}}</small>
+{{- end -}}
 </article>
 {{ end }}
