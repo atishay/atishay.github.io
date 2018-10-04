@@ -1,3 +1,19 @@
 {{ define "main" }}
-Terms
+<img class="background" width="0" height="0" alt="Page Background" role="presentation" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
+<article class="terms">
+    <h1 class='title'>{{.Title}}</h1>
+<span class='subtitle'>The blog is organized with the following {{.Title | lower}} in alphabetical order.</span>
+<ol>
+    {{ $type := .Type }}
+    {{ range $key, $value := .Data.Terms.Alphabetical }}
+    {{ $name := .Name }}
+    {{ $count := .Count }}
+    {{ with $.Site.GetPage (printf "/%s/%s" $type $name) }}
+<li>
+<h4><a href="{{ .Permalink }}">{{ $name | humanize }} </a></h4><small> ({{ $count }} post{{if gt $count 1}}s{{end}})</small>
+</li>
+    {{ end }}
+    {{ end }}
+</ol>
+</article>
 {{ end }}
