@@ -1,0 +1,35 @@
+.contact-cover {
+    width: 100%;
+    padding-bottom: 300/1440 * 100%;
+
+    img {
+        position: fixed;
+        z-index: -1;
+    }
+}
+
+.contact {
+    background: white;
+    @include container;
+
+    &>section {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include media(">=md") {
+            grid-template-columns: 4fr 6fr;
+        }
+
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+
+    form {
+        padding: 20px 0;
+        input, textarea {
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+}
