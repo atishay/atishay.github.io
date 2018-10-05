@@ -1,7 +1,7 @@
 /**
  * Specific types for page type simple and list.
  **/
-.list, .simple, .terms {
+.list, .simple, .terms, .page404 {
     margin: calc(var(--header-height)/2);
     @include container-margin;
     padding: calc(2*var(--content-padding));
@@ -108,5 +108,14 @@
         background: #ddd;
         color: #fff;
         pointer-events: none;
+    }
+}
+
+.page404 {
+    .number{
+        font-family: cursive, serif;
+        font-size: 200px;
+        text-align: center;
+        line-height: normal;
     }
 }

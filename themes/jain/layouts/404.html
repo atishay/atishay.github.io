@@ -1,1 +1,12 @@
-404
+{{ define "head" }}
+<meta http-equiv="refresh" content="10;url=/" />
+{{ end }}
+{{- define "main" -}}
+<img class="background" width="0" height="0" alt="Page Background" role="presentation" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
+<section class="page404">
+<h1 class='title'>This page does not exist.</h1>
+<p class="number">404</p>
+<p class="center">There must be some mistake with the URL. Please <a href="/contact">contact me</a> if it is coming from a link.</p>
+<p class="center"> Will redirect to the <a href="/">home page</a>.</p>
+</section>
+{{- end -}}
