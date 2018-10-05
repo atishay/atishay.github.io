@@ -30,3 +30,28 @@
 * Math support
 * Link before each header.
 * Taxonomy collapsible.
+
+
+Submit for awards
+----------------
+
+CSS Brigit
+1Page Web Design
+Neuecss
+CSSPlayers
+WebTrain
+CSSHunt
+Computer Art, SVA Group Exhibition
+Smoke-Free Festival
+Webby Awards
+CSS Design Awards
+Website Lunchpag
+CSSWinner
+Awwwards
+CSS Downunder
+CSSluxury
+CSSChimp
+The FWA
+
+
+Home Page - npm install scrollmagic
