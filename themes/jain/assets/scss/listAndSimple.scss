@@ -1,7 +1,10 @@
 /**
  * Specific types for page type simple and list.
  **/
-.list, .simple, .terms, .page404 {
+.list,
+.simple,
+.terms,
+.page404 {
     margin: calc(var(--header-height)/2);
     @include container-margin;
     padding: calc(2*var(--content-padding));
@@ -12,11 +15,13 @@
     &:hover {
         background: white;
     }
+
     flex: 1; // Stretch to fill space if needed.
 }
 
 .list {
     background: transparent;
+
     &:hover {
         background: transparent;
     }
@@ -24,9 +29,11 @@
 
 .terms {
     background: rgba(255, 255, 255, 0.9);
+
     &:hover {
         background: rgba(255, 255, 255, 1.0);
     }
+
     h4 {
         display: inline-block;
     }
@@ -46,34 +53,43 @@
     box-shadow: 0 1px 1px #ddd;
     display: flex;
     flex-direction: column;
+
     &:hover {
         box-shadow: 0 0 40px #ddd;
     }
+
     hr {
         border: none;
         border-bottom: 1px dashed #ddd;
     }
+
     h3:hover {
         color: var(--theme-color);
     }
+
     p {
         flex: 1;
     }
+
     .blog-post-footer {
         display: flex;
+
         a {
             font-size: 12px;
             padding-right: 15px;
             color: #999;
+
             &:hover {
                 color: var(--theme-color);
             }
         }
+
         .categories {
             svg {
                 fill: var(--theme-color);
                 vertical-align: middle;
             }
+
             text-align: right;
             flex: 1;
         }
@@ -86,24 +102,29 @@
     align-content: center;
     justify-content: center;
     padding: 40px 0 0;
+
     .page-link {
         text-decoration: none;
         background-color: #fff;
         box-shadow: 0 1px 1px $divider;
+
         &:hover {
             filter: none;
             box-shadow: 0 0 40px $divider;
             background: var(--theme-color);
             color: #fff;
         }
+
         padding: 10px;
         margin: 10px;
     }
+
     .active .page-link {
         background: var(--theme-color);
         color: #fff;
         pointer-events: none;
     }
+
     .disabled .page-link {
         background: #ddd;
         color: #fff;
@@ -112,10 +133,93 @@
 }
 
 .page404 {
-    .number{
+    .number {
         font-family: cursive, serif;
         font-size: 200px;
         text-align: center;
         line-height: normal;
+    }
+
+    $drop-distance: 300px;
+    $error-animation-step: .5s;
+
+    .error-banner {
+        display: flex;
+        justify-content: center;
+        svg {
+            position: relative;
+            overflow: visible;
+            z-index: 2;
+            transform: translate3d(0, 0, 0);
+            margin: 3em;
+        }
+    }
+
+    @for $i from 1 through 12 {
+
+        [id$=cube-#{$i}],
+        [id$=cube-#{$i + 12}],
+        [id$=cube-#{$i + 24}] {
+            animation: drop-cube-#{$i} .9s cubic-bezier(0.190, 1.000, 0.320, 1.000);
+
+            path {
+                animation: fade-cube-#{$i} .9s cubic-bezier(0.190, 1.000, 0.320, 1.000);
+            }
+        }
+    }
+
+    svg:hover {
+        @for $i from 1 through 12 {
+
+            [id$=cube-#{$i}] path,
+            [id$=cube-#{$i + 12}] path,
+            [id$=cube-#{$i + 24}] path {
+                animation: fade-out-cube-#{$i} .7s cubic-bezier(0.190, 1.000, 0.320, 1.000) infinite;
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        @keyframes drop-cube-#{$i} {
+
+            0%,
+            #{7 * $i}% {
+                transform: translateY($drop-distance);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fade-cube-#{$i} {
+
+            0%,
+            #{7 * $i}% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-out-cube-#{$i} {
+            $start: 3 * $i;
+            $mid: 100 - $start;
+
+            0%,
+            #{$start}% {
+                opacity: 1;
+            }
+
+            #{$mid}% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
     }
 }
