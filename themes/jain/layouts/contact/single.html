@@ -32,7 +32,7 @@
                     {{- end -}}
                     {{- with $.Site.Author.location -}}
                     <li>
-                        <a target="_blank" href=""> <!-- Google maps search here -->
+                        <a target="_blank" href="https://www.google.com/maps/place/{{.}}"> <!-- Google maps search here -->
                         {{ $icon := resources.Get "image/line-awesome/fa-compass.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
                             <span>{{.}}</span>
                         </a>
@@ -45,7 +45,7 @@
                 <h2>Contact Hours</h2>
                 <ul>
                     <li>
-                    <a target="_blank" href=""> <!-- Google maps search here -->
+                        <a target="_blank" href="https://www.timeanddate.com/time/zone/?query={{$.Site.Author.location}}">
                         {{ $icon := resources.Get "image/line-awesome/fa-clock-o.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
                             {{$middle := replaceRE "^.*@" "" .}}
                             <span>{{. | markdownify}}</span>
