@@ -7,6 +7,11 @@
     text-align: justify;
 }
 
+html {
+    display: flex;
+    min-height: 100%;
+}
+
 body {
     font-size: 14px;
     font-weight: 300;
@@ -15,6 +20,10 @@ body {
     line-height: 25px;
     display: flex;
     flex-direction: column;
+    flex: 1;
+    &>article, &>section {
+        flex: 1;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -233,4 +242,8 @@ button, .button {
     padding-bottom: 30px;
     font-style: italic;
     text-shadow: 1px 1px 3px white;
+}
+
+.center {
+    text-align: center;
 }
