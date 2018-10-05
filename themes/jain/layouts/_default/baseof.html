@@ -5,11 +5,7 @@
     {{- block "head" . }}{{- end }}
 </head>
     <body>
-        {{- if (ne .Site.Params._topSubmenu false) -}}
         {{- partial "header.html" . -}}
-        {{ else }}
-        {{- partialCached "header.html" . .Section -}}
-        {{- end -}}
         {{- block "main" . }}{{- end }}
         {{- partialCached "footer.html" . -}}
     </body>
