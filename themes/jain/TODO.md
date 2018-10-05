@@ -54,4 +54,5 @@ CSSChimp
 The FWA
 
 
-Home Page - npm install scrollmagic
+Home Page - npm install scrollmagic,
+https://github.com/wagerfield/parallax
