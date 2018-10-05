@@ -68,7 +68,7 @@ author:
     name: "Atishay Jain"
     location: San Francisco Bay Area, California
     phone: On request
-    hours: "**Mon - Fri:** 9.00 AM - 6.00 PM, PST/PDT"
+    hours: "**Mon-Fri:** 9:00AM - 6:00PM, PST"
 
 permalinks:
   blog: "/blog/:year/:month/:day/:slug"
