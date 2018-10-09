@@ -3,5 +3,4 @@ themes/jekyll
 .DS_Store
 public/
 node_modules/
-cache
 _site/
