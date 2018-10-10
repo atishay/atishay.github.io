@@ -222,7 +222,7 @@ Note that after performing a `.catch(cb)` based special processing, you can stil
 
 ## Common Patterns
 
-1) **Wrap parallel** **code in** `**Promise.all**`. If some code is meant to be run in parallel, we should not make it sequential. [Promise.all](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) call take an array of asynchronus functions and run them in parallel. Since we can now work with array, all the array manipulation functions like `map` and `forEach` can now be used. There is also [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) for the cases where we need to wait for any one of the methods to respond and do not need to wait for all of them to continue execution.
+1) **Wrap parallel code in Promise.all**. If some code is meant to be run in parallel, we should not make it sequential. [Promise.all](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) call take an array of asynchronus functions and run them in parallel. Since we can now work with array, all the array manipulation functions like `map` and `forEach` can now be used. There is also [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) for the cases where we need to wait for any one of the methods to respond and do not need to wait for all of them to continue execution.
 
 
 **Before**

@@ -42,6 +42,24 @@
     padding: calc(2*var(--content-padding));
     background: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
+    .yt {
+        border-radius: 5px;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border:0;
+        }
+    }
+    .guitar {
+        width: 100%;
+    }
     // box-shadow: 0 0 2px #aaa;
     .i-tex {
         transform: scale(0.8);

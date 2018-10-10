@@ -17,7 +17,9 @@ A secret that I have been keeping from a lot of folks around me is that I have b
 ## Intro
 Matt helped modify the original to make it easy for me and also to help sync up with the singing:
 
-{{<guitar>}}$2.0 $1.0 $1. $1.7 $2.8 $2.7 $1.0 $1. $1. $2.0 $1.0 $1. $1.7 $2.8 $2.7 $1.0 $1. $1. $2.1 $1.0 $1. $1.3 $1.2 $1.0 $2.1 $3.2 $1.0 $1.5 $1.2 $2.4 $2.0 $2.4 $1.5 $1.7 $1.5 $2.7 $2.4 $2.0 $2.4 $1.0.$2.0.$3.0.$4.2.$5.2.$6.0{{</guitar>}}
+{{<guitar>}}$2.0 $1.0 $1. $1.7 $2.8 $2.7 $1.0 $1. $1. $2.0 $1.0 $1. $1.7 $2.8 $2.7 $1.0 $1. $1. $2.1 $1.0 $1. ||{{</guitar>}}
+Part 2 -
+{{<guitar>}}$1.3 $1.2 $1.0 $2.1 $3.2 $1.0 $1.5 $1.2 $2.4 $2.0 $2.4 $1.5 $1.7 $1.5 $2.7 $2.4 $2.0 $2.4 Em ||{{</guitar>}}
 
 The above ends with a **Em** cord.
 
@@ -68,8 +70,4 @@ I simplified the above for myself. The most common one would have 50% the symbol
 
 ### Video
 Here is the video:
-<div class="video-container">
-  <div class="videoPlayer plyr__video-embed">
-  <iframe src="https://www.youtube.com/embed/M_vkUvQWAKs?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
-  </div>
-</div>
+{{<yt id="M_vkUvQWAKs" >}}
