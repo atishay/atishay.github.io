@@ -11,6 +11,12 @@
 <h1>{{.Title}}</h1>
 </div>
 {{- .Content -}}
+{{- with .Params.youtube -}}
+<h2>Video</h2>
+<p>Here is the video:
+{{- partial "post/youtube.html" . -}}
+</p>
+{{- end -}}
 </main>
 {{- partial "post/sidebar.html" . -}}
 <section class="buttons">
