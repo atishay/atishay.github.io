@@ -10,6 +10,7 @@ title: Chura Liya
 categories:
  - guitar
 coverAnchor: Center
+youtube: M_vkUvQWAKs
 ---
 
 A secret that I have been keeping from a lot of folks around me is that I have been practicing guitar for a while and thanks to my instructor [Matthew Fish](http://matthewfishguitar.com) I think I have been getting somewhere. We have moved from nursery rhymes to songs now and therefore, I can have fun recording. Additional thanks to my wonderful wife for lending her beautiful voice to the song which would have been very boring without it. I am also adding my tabs here so that if you want to practice along you can try it:
@@ -67,7 +68,3 @@ The strumming pattern is `|↓|`.
 |:  Chura Liya :|(2)
 ```
 I simplified the above for myself. The most common one would have 50% the symbols with the strumming pattern `↓ ↓` and special casing for certain notes.
-
-### Video
-Here is the video:
-{{<yt id="M_vkUvQWAKs" >}}
