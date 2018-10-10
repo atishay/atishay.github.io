@@ -18,7 +18,8 @@ params:
     color: "#00D3F9"
     github: "https://github.com/atishay/atishay.github.io"
     CSP: true
-    Tex: "https://rocky-badlands-36202.herokuapp.com/"
+    Guitar: https://guitar2svg.herokuapp.com/
+    Tex: https://tex2svg.herokuapp.com/
     footer:
         - title: About
           content: Personal Website of Atishay Jain, Computer Scientist at Adobe Systems. I am a developer living in the San Francisco Bay area and love solving problems via technology, design, writing, talking or any other means possible.
