@@ -43,8 +43,10 @@
     background: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     // box-shadow: 0 0 2px #aaa;
-    svg {
+    .i-tex {
         transform: scale(0.8);
+    }
+    .tex, .i-tex {
         color: $text-color;
         &:hover {
             color: black;
