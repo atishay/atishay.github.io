@@ -1,0 +1,37 @@
+@import "variables.scss";
+
+//////////////////////////////////////////////////////
+// Intro and about me.
+//////////////////////////////////////////////////////
+.intro {
+    @include container;
+    display: grid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-template-columns: 1fr 4fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background: $shade;
+    grid-template-areas:
+    "pic title"
+    "pic subtitle"
+    "pic desc";
+    img {
+        grid-area: pic;
+        border: 1px solid $divider;
+        background: $divider;
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        grid-area: title;
+    }
+    h2 {
+        grid-area: subtitle;
+        padding: 0;
+        margin: 0;
+    }
+    p {
+        grid-area: desc;
+    }
+}
