@@ -22,16 +22,40 @@
         background: $divider;
         width: 100%;
         height: auto;
-    }
-    h1 {
-        grid-area: title;
-    }
-    h2 {
-        grid-area: subtitle;
-        padding: 0;
-        margin: 0;
+        border-radius: 5px;
     }
     p {
         grid-area: desc;
+    }
+    h2 {
+        grid-area: title;
+    }
+    h3 {
+        grid-area: subtitle;
+    }
+    @include media("<=xl") {
+        grid-template-columns: 1.5fr 3fr;
+    }
+    @include media(">lg") {
+        h2 {
+            padding: 0;
+            margin: 0;
+            line-height: auto;
+        }
+        h3 {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    @include media("<=lg") {
+        display: block;
+        * {
+            margin: 20px 0;
+        }
+        img {
+            margin: 0 20px 0 0;
+            width: 33%;
+            float:left;
+        }
     }
 }
