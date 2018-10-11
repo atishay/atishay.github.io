@@ -1,17 +1,28 @@
 @import "variables.scss";
 
+///////////////////////////////////////////////////////
+// Shared
+//////////////////////////////////////////////////////
+body{
+    &> section:nth-child(2n) {
+        background: $shade;
+    }
+    &> section {
+        padding: 40px 0;
+        @include container;
+    }
+}
+
+
+
 //////////////////////////////////////////////////////
 // Intro and about me.
 //////////////////////////////////////////////////////
 .intro {
-    @include container;
     display: grid;
-    padding-top: 20px;
-    padding-bottom: 20px;
     grid-template-columns: 1fr 4fr;
     grid-column-gap: 20px;
     grid-row-gap: 10px;
-    background: $shade;
     grid-template-areas:
     "pic title"
     "pic subtitle"
@@ -27,22 +38,21 @@
     p {
         grid-area: desc;
     }
-    h2 {
+    h1 {
         grid-area: title;
     }
-    h3 {
+    h2 {
         grid-area: subtitle;
     }
     @include media("<=xl") {
         grid-template-columns: 1.5fr 3fr;
     }
     @include media(">lg") {
-        h2 {
+        h1 {
             padding: 0;
             margin: 0;
-            line-height: auto;
         }
-        h3 {
+        h2 {
             padding: 0;
             margin: 0;
         }
@@ -57,5 +67,15 @@
             width: 33%;
             float:left;
         }
+    }
+}
+
+//////////////////////////////////////////////////////
+// Experience
+//////////////////////////////////////////////////////
+
+.experience {
+    h1 {
+        text-align: center;
     }
 }
