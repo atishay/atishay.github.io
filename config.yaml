@@ -30,6 +30,8 @@ params:
           recentCount: 7
         - title: Contact Us
           contact: true
+    sharedHeader:
+      - blog
     sidebar:
       - title: license
         content: The contents of this post are available under Creative Commons Shared Alike license. You are free to use them commercially given that you provide the right attribution. You can read more about the license at the [Creative Commons website](http://creativecommons.org/licenses/by-sa/4.0/). <br> ![Creative Commons Shared Alike License](/image/ccbysa.png)

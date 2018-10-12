@@ -1,0 +1,61 @@
+<header id="header">
+    {{/*
+        Checkbox Hack for pure CSS Hamburger menu
+        https://codepen.io/erikterwan/pen/EVzeRP
+
+    */}}
+    <input class="hamburger" role="button"  type="checkbox" aria-label="Menu Button" />
+    <a class="icon" aria-hidden="true">
+    {{ $hamburger := resources.Get "image/hamburger.svg" | resources.Minify }}
+        {{ $hamburger.Content | safeHTML }}
+    </a>
+    {{/* End Checkbox hack code. Uses the parallel <ul as well> */}}
+    <a role="button" class="logo" href="{{.Site.BaseURL}}">
+        {{ $logoSVG := resources.Get "image/logo.svg" | resources.Minify }}
+        <img src="{{$logoSVG.Permalink}}" alt="{{ .Site.Title }} Logo">
+    </a>
+    <ul role="menubar" class="top-menu">
+{{ $currentPage := . }}
+{{/* Finding the best category to pin the current page to. */}}
+{{ $fallback := "home" }}
+{{ range .Site.Menus.top }}
+{{ if or ($currentPage.HasMenuCurrent "top" .) ($currentPage.IsMenuCurrent "top" .) }}
+{{$fallback = .Name}}
+{{else if eq $currentPage.Section .Name}}
+{{$fallback = .Name}}
+{{end}}
+{{ end}}
+{{/* Current Category is now found. We just need to fit inside it */}}
+{{ range .Site.Menus.top }}
+<li role="menuitem" class="top-menu-item {{ if eq $fallback .Name }}active{{ end }}">
+            <a href="{{.URL}}">{{ .Title | upper }}</a>
+            {{ if .HasChildren }}
+                <ul class="sub-menu" role="menu">
+{{ range .Children }}
+                <li class="{{ if $currentPage.IsMenuCurrent "top" . }}active{{ end }}">
+                    <a href="{{ .URL }}">{{ .Title | upper }}</a>
+                </li>
+{{ end }}
+                </ul>
+            {{ end }}
+        </li>
+{{ end }}
+    </ul>
+    {{with .Site.Params.github }}
+    <a href="{{.}}" class="github-corner" aria-label="View source on Github">
+        {{ $iconSVG := resources.Get "image/octocat.svg" | resources.Minify }}
+        {{ $iconSVG.Content | safeHTML }}
+    </a>
+    {{ end }}
+</header>
+{{/* https://css-tricks.com/markup-for-breadcrumbs/
+ https://jsonld.com/breadcrumb/
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }} {{ $.Scratch.Add "path" .Site.BaseURL }}
+<nav class="breadcrumbs">
+        <a href="/">home</a>
+    {{ range $index, $element := split $url "/" }} {{ $.Scratch.Add "path" $element }} {{ if ne $element "" }}
+        <a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a>
+    {{ $.Scratch.Add "path" "/" }} {{ end }} {{ end }}
+</nav>
+    {{ $.Scratch.delete "path" }}
+    */}}

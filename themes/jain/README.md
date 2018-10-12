@@ -60,6 +60,7 @@ CSS Grids are used for column arrangements in the most logical manner.
 * `Site.Params.color` - Default theme color.
 * `Site.Params.description` - Default Description.
 * `Site.Params.sidebar` - Shared sidebar for all posts. Will be available under the post specific sidebar.
+* `Site.Params.sharedHeader` - List of sections where the header has no changes (like blogs unless we have a submenu). This cached headers to improve performance.
 
 ## Browsers
 
