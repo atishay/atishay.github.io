@@ -3,18 +3,25 @@
 ///////////////////////////////////////////////////////
 // Shared
 //////////////////////////////////////////////////////
-body{
-    &> section:nth-child(2n) {
-        background: $shade;
+
+.meta:nth-child(2n) {
+    background: $shade;
+}
+.meta {
+    padding: 40px 0;
+    @include container;
+    h1, h2 {
+        text-align: center;
     }
-    &> section {
-        padding: 40px 0;
-        @include container;
-        h1, h2 {
-            text-align: center;
-        }
+    .subtitle {
+        text-align: center;
+    }
+    .main-icon {
+        float: right;
+        margin: 20px 0 40px;
     }
 }
+
 
 
 
@@ -34,6 +41,7 @@ body{
         grid-area: pic;
         border: 1px solid $divider;
         background: $divider;
+        // OR filter: drop-shadow(0 -5px 10px rgba(0, 0, 0, 0.3));
         width: 100%;
         height: auto;
         border-radius: 5px;
