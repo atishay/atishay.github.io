@@ -8,32 +8,48 @@
       </td>
     </tr>
     <tr>
-      <th class="published" title="Published">{{ $icon := resources.Get "image/line-awesome/fa-calendar.svg" | resources.Minify }}{{ replace $icon.Content "<svg " "<svg width=\"20px\" " | safeHTML }}<span>Published</span></th>
+      <th class="published" title="Published">
+      {{- partialCached "util/icon" (dict "type" "calendar" "size" 20) "calendar-20" -}}
+        <span>Published</span>
+      </th>
       <td>
         <time datetime="{{ .PublishDate.Format " 2006-01-02T15:04:05Z07:00 " }}">{{ .PublishDate.Format "Monday, Jan 2, 2006."}}</time>
       </td>
     </tr>
-      <tr>
-  <th class="wordCount" title="Word Count">{{ $icon := resources.Get "image/line-awesome/fa-bullseye.svg" | resources.Minify }}{{ replace $icon.Content "<svg" "<svg width=\"20px\"" | safeHTML }}<span>Word Count</span></th>
+    <tr>
+      <th class="wordCount" title="Word Count">
+        {{- partialCached "util/icon" (dict "type" "bullseye" "size" 20) "bullseye-20" -}}
+        <span>Word Count</span>
+      </th>
     <td>
       {{ .WordCount }} words
     </td>
   </tr>
   <tr>
-  <th class="readingTime" title="Reading Time">{{ $icon := resources.Get "image/line-awesome/fa-hourglass-1.svg" | resources.Minify }}{{ replace $icon.Content "<svg" "<svg width=\"20px\"" | safeHTML }}<span>Reading Time</span></th>
+  <th class="readingTime" title="Reading Time">
+    {{- partialCached "util/icon" (dict "type" "hourglass-1" "size" 20) "hourglass-1-20" -}}
+    <span>Reading Time</span>
+  </th>
     <td>
       {{ .ReadingTime }} minutes
     </td>
   </tr>
   <tr>
-    <th class="tags" title="Tags">{{ $icon := resources.Get "image/line-awesome/fa-tags.svg" | resources.Minify }}{{ replace $icon.Content "<svg " "<svg width=\"20px\" " | safeHTML }}<span>Tags</span></th>
-    <td> {{ range .Params.tags }}
+  <th class="tags" title="Tags">
+    {{- partialCached "util/icon" (dict "type" "tags" "size" 20) "tags-20" -}}
+    <span>Tags</span>
+  </th>
+  <td>
+    {{- range .Params.tags -}}
       <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
-      {{ end }}</td>
+    {{- end -}}
+  </td>
   </tr>
  {{with .Params.categories}}
   <tr>
-    <th title="Category">{{ $icon := resources.Get "image/line-awesome/fa-caret-square-o-right.svg" | resources.Minify }}{{ replace $icon.Content "<svg " "<svg width=\"20px\" " | safeHTML }}<span>Category</span></th>
+<th title="Category">
+  {{- partialCached "util/icon" (dict "type" "caret-square-o-right" "size" 20) "caret-square-o-right-20" -}}
+  <span>Category</span></th>
     <td>{{ range . }}
       <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
       {{end}}

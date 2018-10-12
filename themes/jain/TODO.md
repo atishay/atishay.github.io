@@ -30,6 +30,8 @@
 * Math support
 * Link before each header.
 * Taxonomy collapsible.
+* Table of Contents
+* Analytics
 
 
 Submit for awards
