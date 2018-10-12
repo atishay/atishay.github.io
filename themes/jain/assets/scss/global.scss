@@ -183,7 +183,7 @@ table::-webkit-resizer {
     margin-bottom: 20px;
 }
 
-button, .button {
+button, .button, .button-small {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -229,6 +229,11 @@ button, .button {
         pointer-events: none;
         opacity: 0.5;
     }
+}
+
+.button-small {
+    font-size: 12px;
+    padding: 5px 13px;
 }
 
 .title {
