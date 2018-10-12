@@ -10,6 +10,9 @@ body{
     &> section {
         padding: 40px 0;
         @include container;
+        h1, h2 {
+            text-align: center;
+        }
     }
 }
 
@@ -19,54 +22,15 @@ body{
 // Intro and about me.
 //////////////////////////////////////////////////////
 .intro {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-    grid-template-areas:
-    "pic title"
-    "pic subtitle"
-    "pic desc";
     img {
-        grid-area: pic;
         border: 1px solid $divider;
         background: $divider;
-        width: 100%;
         height: auto;
         border-radius: 5px;
-    }
-    p {
-        grid-area: desc;
-    }
-    h1 {
-        grid-area: title;
-    }
-    h2 {
-        grid-area: subtitle;
-    }
-    @include media("<=xl") {
-        grid-template-columns: 1.5fr 3fr;
-    }
-    @include media(">lg") {
-        h1 {
-            padding: 0;
-            margin: 0;
-        }
-        h2 {
-            padding: 0;
-            margin: 0;
-        }
-    }
-    @include media("<=lg") {
-        display: block;
-        * {
-            margin: 20px 0;
-        }
-        img {
-            margin: 0 20px 0 0;
-            width: 33%;
-            float:left;
-        }
+        margin: 0 20px 0 0;
+        width: 33%;
+        max-width: 200px;
+        float:left;
     }
 }
 
@@ -75,7 +39,24 @@ body{
 //////////////////////////////////////////////////////
 
 .experience {
-    h1 {
-        text-align: center;
+    .adobe {
+        float: right;
+        margin: 20px 0 40px;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+        svg {
+            align-self: center;
+        }
+        span {
+            align-self: flex-end;
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            a:first-child {
+                margin-right: 10px;
+            }
+        }
     }
 }

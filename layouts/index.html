@@ -9,39 +9,38 @@
     <h1>
         Atishay Jain
     </h1>
-    <h2>Thinker | Tinkerer | Inventor | Philomath | Programmer | Senior Computer Scientist @ Adobe</h2>
+    <p class="subtitle">Thinker | Tinkerer | Inventor | Philomath | Programmer | Senior Computer Scientist @ Adobe</p>
     {{- with resources.Get "home/atishay.png" -}}
         {{ $cover := .Fill "400x500" }}
-        <img width="400" height="500" alt="Atishay Jain" src="{{$cover.RelPermalink}}" />
+        <img width="200" height="250" alt="Atishay Jain" src="{{$cover.RelPermalink}}" />
     {{- end -}}
     <p>
-        Self motivated individual striving for excellence with emphasis on experimentation, cleanliness, robustness and security in developing software applications. Part of many iconic software products from Photoshop and Illustrator to Adobe Capture. Creator of award winning augmented reality mobile apps from the IxDA Interaction Design award to the FWA App of the day. Full stack Web Development(Rails, Node.js, Angular, React), Native iOS, MacOS and Win32 - comfortable with any technology. "You define the problem. We search the solution." Available in the San Francisco Bay Area.<br><br>
-        Welcome to my website
+        Self motivated individual striving for excellence with emphasis on experimentation, cleanliness, robustness and security in developing software applications. Part of many iconic software products from Photoshop and Illustrator to Adobe Capture. Creator of award winning augmented reality mobile apps from the IxDA Interaction Design award to the FWA App of the day. Full stack Web Development(Rails, Node.js, Angular, React), Native iOS, MacOS and Win32 - comfortable with any technology. Simple work mantra - "You define the problem. We search the solution." Available in the San Francisco Bay Area.
     </p>
 </section>
 
 <section class="experience">
+    {{- $adobe := resources.Get "home/adobe.svg" | resources.Minify -}}
+    {{- $adobe.Content | safeHTML -}}
     <h1>Experience</h1>
     <p class="subtitle">Senior Computer Scientist at Adobe Systems Incorporated</p>
-    <img class="img-fluid" src="assets/img/home/adobe.svg">
     <div class="items-4">
         <div class="item">
-            <img src="assets/img/home/cc.svg">
+            {{- $cc := resources.Get "home/cc.svg" | resources.Minify -}}
+            {{- $cc.Content | safeHTML -}}
             <h2>CC Libraries</h2>
-            <p>Part of the team that develops Adobe’s flagship sync solution for ingredients. Also play role in
-                deciding the interchange formats of ingredients and methods for concept &amp; code re-use in
-                multiple diverse platforms across Adobe’s Desktop, Web and Mobile properties.
+            <p>Part of the team that develops Adobe’s flagship sync solution for ingredients. Also play role in deciding the interchange formats of ingredients and methods for concept &amp; code re-use in multiple diverse platforms across Adobe’s Desktop, Web and Mobile properties.
             </p>
-            <p>Spend considerable time understanding the diverse re-usable styles, their differences across the
-                realms of design from videos to screen illustrations and print.
+            <p>Spend considerable time understanding the diverse re-usable styles, their differences across the realms of design from videos to screen illustrations and print.
             </p>
             <span>
-                <a href="http://www.adobe.com/creativecloud/libraries.html" target="_blank"><i class="fa-link"></i>CC Libraries</a>
-                <a href="https://www.youtube.com/watch?v=76A1i9o7g6U" target="_blank"><i class="fa-youtube"></i>Demo</a>
+                <a href="http://www.adobe.com/creativecloud/libraries.html" class="button-small" target="_blank"><i class="fa-link"></i>CC Libraries</a>
+                <a href="https://www.youtube.com/watch?v=76A1i9o7g6U" class="button-small" target="_blank"><i class="fa-youtube"></i>Demo</a>
             </span>
         </div>
         <div class="item">
-            <img src="assets/img/home/shape.svg">
+            {{- $shape := resources.Get "home/shape.svg" | resources.Minify -}}
+            {{- $shape.Content | safeHTML -}}
             <h2>Adobe Shape</h2>
             <p>
                 Only engineer who participated in creation of Adobe Shape from prototype to release (Adobe Max
@@ -52,12 +51,13 @@
                 detection and augmented reality using OpenGL in mobile environments.
             </p>
             <span>
-                <a href="http://www.adobe.com/products/capture.html" target="_blank"><i class="fa-external-link"></i>Capture CC</a>
-                <a href="https://www.youtube.com/watch?v=QIasMlptd7k" target="_blank"><i class="fa-youtube"></i>Demo</a>
+                <a href="http://www.adobe.com/products/capture.html" class="button-small" target="_blank"><i class="fa-external-link"></i>Capture CC</a>
+                <a href="https://www.youtube.com/watch?v=QIasMlptd7k" class="button-small" target="_blank"><i class="fa-youtube"></i>Demo</a>
             </span>
         </div>
         <div class="item">
-            <img src="assets/img/home/color.svg">
+            {{- $color := resources.Get "home/color.svg" | resources.Minify -}}
+            {{- $color.Content | safeHTML -}}
             <h2>Adobe Color</h2>
             <p>
                 Influential member of the small member team that resurrected Adobe Kuler (800k+ registered
@@ -71,12 +71,13 @@
                 over AWS.
             </p>
             <span>
-                <a href="https://color.adobe.com" target="_blank"><i class="fa-external-link"></i>Adobe Color</a>
-                <a href="https://www.youtube.com/watch?v=nuXG-MOL6-0" target="_blank"><i class="fa-youtube"></i>Demo</a>
+                <a href="https://color.adobe.com" class="button-small" target="_blank"><i class="fa-external-link"></i>Adobe Color</a>
+                <a href="https://www.youtube.com/watch?v=nuXG-MOL6-0" class="button-small" target="_blank"><i class="fa-youtube"></i>Demo</a>
             </span>
         </div>
         <div class="item">
-            <img src="assets/img/home/id.svg">
+            {{- $id := resources.Get "home/id.svg" | resources.Minify -}}
+            {{- $id.Content | safeHTML -}}
             <h2>Adobe InDesign</h2>
             <p>
                 Managed the Adobe Creative Suite SDK which powers HTML based extensions including the Adobe Digital
@@ -88,8 +89,8 @@
                 learning the best practices of software development and maintenance.
             </p>
             <span>
-                <a href="http://www.adobe.com/products/indesign.html" target="_blank"><i class="fa-external-link"></i>Adobe InDesign</a>
-                <a href="http://www.adobe.com/devnet/creativesuite.html" target="_blank"><i class="fa-external-link"></i>CS SDK</a>
+                <a href="http://www.adobe.com/products/indesign.html" class="button-small" target="_blank"><i class="fa-external-link"></i>Adobe InDesign</a>
+                <a href="http://www.adobe.com/devnet/creativesuite.html" class="button-small" target="_blank"><i class="fa-external-link"></i>CS SDK</a>
             </span>
         </div>
     </div>
