@@ -7,7 +7,7 @@ Tested With Hugo Version: Hugo 0.48
 
 ## Layout Types
 * `Default` No neeed to enter thetype parameter. Default is a blog post.
-* `Simple` Used for pages where the content does not have a sidebar, just header, rendered markdown and footer. Supoprtted front matter additions
+* `Simple` Used for pages where the content does not have a sidebar, just header, rendered markdown and footer. Supported front matter additions
     * `subtitle` For subtitle.
 
 ## Images
@@ -47,6 +47,7 @@ CSS Grids are used for column arrangements in the most logical manner.
 * 7 - 3 4 till `xl`, 3 3 1 till `lg`, 2 2 2 1 till `md`
 * 8 - 4 4 till `xl`, 2 2 2 2 till `md`
 * 9 - 3 3 3 till `lg`
+* 12 - 4 4 4 till `xl`, 3 3 3 3 till `lg`, 2 2 2 2 2 2 till `md`
 
 8 and 9 can be further improved if needed.
 
@@ -61,10 +62,12 @@ CSS Grids are used for column arrangements in the most logical manner.
 * `Site.Params.description` - Default Description.
 * `Site.Params.sidebar` - Shared sidebar for all posts. Will be available under the post specific sidebar.
 * `Site.Params.sharedHeader` - List of sections where the header has no changes (like blogs unless we have a submenu). This cached headers to improve performance.
+* `Site.Params.Tex` - tex2svg hosted location.
+* ``Site.Params.Guitar` - guitar2svg hosted location.
 
 ## Browsers
 
-* This theme uses all modern CSS like CSS Variables, CSS Grid and flexbox. Do not expect this to support older browsers. Care has been taken to support modern browsers with polyfills where makes sense.
+* This theme uses all modern CSS like CSS Variables, CSS Grid and flexbox. Do not expect this to support older browsers.
 
 ## Posts
 * Use Hugo Page Bundles for posts. The theme expects each page to have a beautiful image.
@@ -75,3 +78,5 @@ CSS Grids are used for column arrangements in the most logical manner.
 
 ## Shortcodes
 * `fig` Same as `figure`, but added support for responsive resizing of images.
+* `tex` Renders Latex as SVG. Optional parameter `inline` for inline latex. Needs `Site.Params.Tex` for the `tex2svg` hosting.
+* `guitar` Renders guitar tabs and chords using jtab. Needs ``Site.Params.Guitar` for the `guitar2svg` hosting.
