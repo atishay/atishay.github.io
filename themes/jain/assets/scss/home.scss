@@ -51,7 +51,7 @@ body{
         grid-template-columns: 1.5fr 3fr;
     }
     @include media(">lg") {
-        h1 {
+        h1, .subtitle {
             padding: 0;
             margin: 0;
         }
