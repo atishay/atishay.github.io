@@ -9,7 +9,7 @@
     </tr>
     <tr>
       <th class="published" title="Published">
-      {{- partialCached "util/icon" (dict "type" "calendar" "size" 20) "calendar-20" -}}
+      {{- partialCached "util/icon" (dict "key" "calendar" "size" 20) "calendar-20" -}}
         <span>Published</span>
       </th>
       <td>
@@ -18,7 +18,7 @@
     </tr>
     <tr>
       <th class="wordCount" title="Word Count">
-        {{- partialCached "util/icon" (dict "type" "bullseye" "size" 20) "bullseye-20" -}}
+        {{- partialCached "util/icon" (dict "key" "bullseye" "size" 20) "bullseye-20" -}}
         <span>Word Count</span>
       </th>
     <td>
@@ -27,7 +27,7 @@
   </tr>
   <tr>
   <th class="readingTime" title="Reading Time">
-    {{- partialCached "util/icon" (dict "type" "hourglass-1" "size" 20) "hourglass-1-20" -}}
+    {{- partialCached "util/icon" (dict "key" "hourglass-1" "size" 20) "hourglass-1-20" -}}
     <span>Reading Time</span>
   </th>
     <td>
@@ -36,7 +36,7 @@
   </tr>
   <tr>
   <th class="tags" title="Tags">
-    {{- partialCached "util/icon" (dict "type" "tags" "size" 20) "tags-20" -}}
+    {{- partialCached "util/icon" (dict "key" "tags" "size" 20) "tags-20" -}}
     <span>Tags</span>
   </th>
   <td>
@@ -48,7 +48,7 @@
  {{with .Params.categories}}
   <tr>
 <th title="Category">
-  {{- partialCached "util/icon" (dict "type" "caret-square-o-right" "size" 20) "caret-square-o-right-20" -}}
+  {{- partialCached "util/icon" (dict "key" "caret-square-o-right" "size" 20) "caret-square-o-right-20" -}}
   <span>Category</span></th>
     <td>{{ range . }}
       <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
