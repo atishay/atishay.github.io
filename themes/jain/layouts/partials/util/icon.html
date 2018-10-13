@@ -1,5 +1,5 @@
-{{ $icon := resources.Get (print "image/line-awesome/fa-" $.type ".svg") | resources.Minify }}
-{{ $result := print "<svg width=\"" $.size "px\" " }}
-{{ $icon = replace $icon.Content "<svg " $result }}
-{{ $icon = replace $icon "<path " "<path fill=\"currentColor\" " }}
-{{ $icon | safeHTML }}
+{{if eq (len (findRE "\\.svg$" $.key 1)) 1}}
+{{partial "util/custom-icon" (dict "path" $.key "size" $.size "class" $.class)}}
+{{else}}
+{{partial "util/native-icon" (dict "type" $.key "size" $.size "class" $.class)}}
+{{end}}

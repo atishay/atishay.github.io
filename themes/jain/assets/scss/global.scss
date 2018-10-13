@@ -199,7 +199,7 @@ button, .button, .button-small {
     position: relative;
     overflow: hidden;
     border: 2px solid var(--theme-color);
-    transition: color .3s;
+    transition: color .1s;
     z-index: 2;
     &:focus {
         outline: none;
