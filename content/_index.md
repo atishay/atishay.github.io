@@ -8,6 +8,12 @@ content:
     - title: Atishay Jain
       subtitle: Thinker | Tinkerer | Inventor | Philomath | Programmer | Senior Computer Scientist @ Adobe
       type: left-image
+      image:
+        href: "home/atishay.png"
+        alt: Atishay Jain
+        width: 200
+        height: 250
+      content: Self motivated individual striving for excellence with emphasis on experimentation, cleanliness, robustness and security in developing software applications. Part of many iconic software products from Photoshop and Illustrator to Adobe Capture. Creator of award winning augmented reality mobile apps from the IxDA Interaction Design award to the FWA App of the day. Full stack Web Development(Rails, Node.js, Angular, React), Native iOS, MacOS and Win32 - comfortable with any technology. Simple work mantra - "You define the problem. We search the solution." Available in the San Francisco Bay Area.
     - title: Experience
       subtitle: Senior Computer Scientist at Adobe Systems Incorporated
       icon: home/adobe.svg
@@ -52,6 +58,29 @@ content:
           - href: http://www.adobe.com/devnet/creativesuite.html
             title: CS SDK
             icon: link
-
+    - title: Internships
+      type: item-icon-left
+      subtitle: During BE-CS at Thapar University
+      items:
+        - title: Microsoft Corporation
+          content: Developed a Fault Injection tool to test Windows Mobile 6 applications which could inject functions before and after any function present in a dll, including system calls like malloc and fopen (Sophomore Summer Internship 2008).
+          icon: "home/ms.svg"
+          links:
+          - icon: file-powerpoint-o
+            title: Presentation
+            href: /home/FFI 2008 - Atishay Jain.pdf
+          - icon: link
+            title: Report
+            href: /home/FFI Report 2008 - Atishay Jain.pdf
+        - title: Informatica Business Solutions
+          content: Developed a working Prototype of Informatica PowerExchange for Oracle Essbase based on a wizard based layout. Got an inside of the enterprise side of software development. (Final Year Project 2010).
+          icon: "home/infa.svg"
+          links:
+          - icon: file-powerpoint-o
+            title: Presentation
+            href: /home/PowerExchange Essbase 2010-Atishay Jain.pdf
+          - icon: link
+            title: Report
+            href: /home/PowerExchange Essbase Report 2010-Atishay Jain.pdf
 ---
 Hello World
