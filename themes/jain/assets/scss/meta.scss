@@ -23,6 +23,7 @@
     .item {
         display: flex;
         flex-direction: column;
+        padding: 20px 0 0 0;
 
         .item-icon {
             align-self: center;
@@ -33,6 +34,7 @@
             flex: 1;
             display: flex;
             align-items: flex-end;
+            justify-content: flex-end;
 
             a {
                 display: flex;
@@ -54,9 +56,9 @@
 
 
 //////////////////////////////////////////////////////
-// Intro and about me.
+// Intro and about me area with image on the left.
 //////////////////////////////////////////////////////
-.intro {
+.left-image {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-column-gap: 20px;
@@ -106,7 +108,34 @@
     }
 }
 
-//////////////////////////////////////////////////////
-// Experience
-//////////////////////////////////////////////////////
+//////////////////////////////////////////
+// Area with content icon on the left
+//////////////////////////////////////////
 
+.item-icon-left {
+    .item {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-column-gap: 20px;
+        grid-row-gap: 30px;
+        grid-template-areas: "icon title"
+            "icon desc"
+            "icon links";
+        .item-icon {
+            grid-area: icon;
+            align-self: flex-start;
+            min-height: 40px;
+        }
+        h2 {
+            grid-area: title;
+            padding: 0;
+            margin: 0;
+        }
+        .content {
+            grid-area: desc;
+        }
+        .links {
+            grid-area: links;
+        }
+    }
+}
