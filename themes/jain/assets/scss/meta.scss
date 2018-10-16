@@ -10,7 +10,7 @@
 .meta {
     padding: 40px 0;
     @include container;
-    h1, h2 {
+    h1, h2, h3, h4 {
         text-align: center;
     }
     .subtitle {
@@ -23,10 +23,25 @@
     .item {
         display: flex;
         flex-direction: column;
-        padding: 20px 0 0 0;
-
+        padding: 10px 0 0;
+        h2 {
+            padding: 8px 0;
+            margin: 0;
+            color: $text-color;
+        }
+        h3 {
+            margin: 0;
+            padding: 5px 0;
+            color: $text-color;
+        }
+        h4 {
+            margin: 0;
+            padding: 3px 0;
+            color: $text-color;
+        }
         .item-icon {
             align-self: center;
+            min-height: 65px;
         }
 
         .links {
@@ -117,8 +132,9 @@
         display: grid;
         grid-template-columns: 40px 1fr;
         grid-column-gap: 20px;
-        grid-row-gap: 30px;
         grid-template-areas: "icon title"
+            "icon subtitle"
+            "icon heading"
             "icon desc"
             "icon links";
         .item-icon {
@@ -128,8 +144,12 @@
         }
         h2 {
             grid-area: title;
-            padding: 0;
-            margin: 0;
+        }
+        h3 {
+            grid-area: subtitle;
+        }
+        h4 {
+            grid-area: heading;
         }
         .content {
             grid-area: desc;
