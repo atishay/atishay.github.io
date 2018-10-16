@@ -1,5 +1,10 @@
 {{if eq (len (findRE "\\.svg$" $.key 1)) 1}}
 {{partial "util/custom-icon" (dict "path" $.key "size" $.size "class" $.class)}}
 {{else}}
+{{if eq (len (findRE "\\.png$" $.key 1)) 1}}
+{{ $icon := resources.Get $.key }}
+<img src="{{$icon.RelPermalink}}" class="{{$.class}}" width="{{$.size}}">
+{{else}}
 {{partial "util/native-icon" (dict "type" $.key "size" $.size "class" $.class)}}
+{{end}}
 {{end}}

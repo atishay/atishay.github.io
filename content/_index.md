@@ -82,5 +82,25 @@ content:
           - icon: link
             title: Report
             href: /home/PowerExchange Essbase Report 2010-Atishay Jain.pdf
+    - title: Education
+      subtitle: Thirst for knowledge is quest forever. I am a student for life, always learning. \nThese formal courses form a major part of that learning.
+      items:
+      - title: Stanford University
+        subtitle: Graduate Certificate
+        heading: Artificial Intelligence
+        icon: home/stanford.svg
+        content: "Studied Artificial Intelligence through graduate courses as a part of Stanford's SCPD program. \n\nLoved to be a part of the strong community of dedicated students engrossed in learning a field of study that promises immense impact on mankind. From Bayesian and Markov models to SIFT and then to LSTMs and  Image Nets, it was funt to take modern AI to a spin."
+      - title: Thapar University
+        subtitle: Bachelors in Engineering
+        heading: Computer Science
+        content: "Completed engineering with CGPA of 9.84(10) and a merit scholarship from the University. \n\nDedicated, hardworking faculty and immense opportunity provided by various programming contests in North India had an immense impact in developing my skills."
+        icon: home/thapar.svg
+      - title: Brightlands School
+        subtitle: High School
+        heading: Science
+        icon: home/bls.png
+        content: "Amongst school toppers with 94.6% in Class X and 96.25% in Class XII under the ICSE/ISC board, New Delhi. Completed schooling with a merit scholarship. \n\nSchooling instills curiosity and persistence in an individual. I was blessed with some of the best teachers in North India."
+
+
 ---
 Hello World
