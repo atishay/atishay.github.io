@@ -54,7 +54,8 @@
             a {
                 display: flex;
                 align-items: center;
-                * {
+                min-height: 45px;
+                svg, .link-text {
                     margin: 0 5px;
                     transition: none;
                 }
@@ -157,5 +158,11 @@
         .links {
             grid-area: links;
         }
+    }
+}
+
+.meta.full-width {
+    .items {
+        display: block;
     }
 }
