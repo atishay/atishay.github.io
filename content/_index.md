@@ -83,7 +83,7 @@ content:
             title: Report
             href: /home/PowerExchange Essbase Report 2010-Atishay Jain.pdf
     - title: Education
-      subtitle: Thirst for knowledge is quest forever. I am a student for life, always learning. \nThese formal courses form a major part of that learning.
+      subtitle: "Thirst for knowledge is quest forever. I am a student for life, always learning. \nThese formal courses form a major part of that learning."
       items:
       - title: Stanford University
         subtitle: Graduate Certificate
@@ -100,7 +100,69 @@ content:
         heading: Science
         icon: home/bls.png
         content: "Amongst school toppers with 94.6% in Class X and 96.25% in Class XII under the ICSE/ISC board, New Delhi. Completed schooling with a merit scholarship. \n\nSchooling instills curiosity and persistence in an individual. I was blessed with some of the best teachers in North India."
-
-
+    - title: Patents & Publications
+      type: full-width
+      subtitle: "I love experimenting with emerging technology. \nMost of my experiments still await a sponsorship to be productized. Here lies the selection that could get through."
+      items:
+      - title: Generation of salient contours using live video
+        image:
+          href: home/shape capture.jpg
+          alt: Shape capture
+          width: 300
+          height: 150
+        attribution: Image from [Adobe blogs](http://blogs.adobe.com/contentcorner/2015/05/02/capture-and-its-vector-experience-magic-with-adobe-shape-cc/)
+        content: In various implementations, a computing device is configured to provide a live preview of salient contours generated on a live digital video feed. In particular, a designer can use a computing device with a camera, such as a smart phone, to view a real-time preview of salient contours generated from edges detected in frames of a live digital video feed prior to capture, thereby eliminating the unpredictability of salient contours generated from a previously captured image. In some implementations, the salient contours are overlaid on a greyscale conversion of the live digital video feed for improved processing and visual contrast. Other implementations modify aspects of edge-detecting or post-processing filters for improved performance on mobile computing devices.
+        links:
+        - icon: bookmark
+          title: "B<small>IB</small>T<sub>E</sub>X"
+          href: /home/Generation of salient contours using live video.bib
+        - icon: link
+          title: Access
+          href: http://patents.com/us-9449248.html
+      - title: Architecture for High Density RFID Inventory System in Internet of Things
+        image:
+          href: home/iot.jpg
+          alt: Internet of Things
+          width: 300
+          height: 180
+        attribution: Image from [Pixabay](https://pixabay.com/en/network-iot-internet-of-things-782707/)
+        content: This paper proposes a novel architecture of Internet of Things (IOT) implemented using RFID. Our proposed architecture solves the problem of over-loading as the load on the RFID Tag reader is the total number of changed objects rather than the actual number of objects present. Our architecture is based on EPCglobal Network with some assumptions and modifications. We have discussed in details the components and working of our model. We have also discussed the physical implementation of our model taking the examples of two sample applications one for the retail system and other for smart home applications and their performance results have been tabulated and represented graphically.
+        links:
+        - icon: bookmark
+          title: "B<small>IB</small>T<sub>E</sub>X"
+          href: /home/Architecture for High Density RFID Inventory System in Internet of Things.bib
+        - icon: link
+          title: Access
+          href: http://link.springer.com/10.1007%2F978-3-642-17878-8_62
+      - title: Impact of Coordinator Mobility on the throughput in a Zigbee Mesh Networks
+        image:
+          href: home/zigbee.png
+          alt: Zigbee
+          width: 300
+          height: 110
+        attribution: Image from [Zigbee alliance](http://www.zigbee.org/zigbee-for-developers/zigbee3-0/)
+        content: Zigbee (IEEE 802.15.4) standard interconnects simple, low power and low processing capability wireless devices. The Zigbee devices facilitate numerous applications such as pervasive computing, national security, monitoring and control etc. An effective positioning of nodes in a ZigBee network is particularly important in improving the performance (e.g., throughput) of ZigBee networks. In the wireless sensor network (WSN) literature, the use of a mobile sink is often recommended as an effective defense against the so-called hot-spot phenomenon. But the effects of mobile coordinator on the performance of the network are not given due consideration. In this paper, we perform extensive evaluation, using OPNET Modeler, to study the impact of coordinator mobility on ZigBee mesh network. The results show that the ZigBee mesh routing algorithm exhibits significant performance difference when the router are placed at different locations and the trajectories of coordinator are varied. We also show that the status of ACK in the packet also plays a critical role in deciding network performances.
+        links:
+        - icon: bookmark
+          title: "B<small>IB</small>T<sub>E</sub>X"
+          href: /home/Impact of coordinator mobility on the throughput in a ZigBee mesh networks.bib
+        - icon: link
+          title: Access
+          href: http://dx.doi.org/10.1109/IADCC.2010.5422995
+      - title: Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems
+        image:
+          href: home/smart-city.png
+          alt: Smart Home
+          width: 322
+          height: 311
+        attribution: Image from [wikipedia](https://commons.wikimedia.org/wiki/File:IoT-Enabled_Smart_City_Framework_White_Paper_Image_2.png)
+        content: This paper proposes a flexible and novel architecture of Internet of Things (IOT) in a high density and mobility environment. Our proposed architecture solves the problem of over-loading on the network by monitoring the total number of changed objects changing global location crossing the fringe boundaries rather than the actual number of objects present or those that move within the local area. We have modified the reader architecture of the EPCglobal Architecture. The components and the working of the model has been illustrated in detail. We have also discussed the physical implementation of our model taking the examples of a smart home sample application and the performance results have been tabulated and represented graphically.
+        links:
+        - icon: bookmark
+          title: "B<small>IB</small>T<sub>E</sub>X"
+          href: /home/Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems.bib
+        - icon: link
+          title: Access
+          href: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.592.6204
 ---
 Hello World

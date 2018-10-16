@@ -9,15 +9,19 @@
     {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{ end }}
     {{with .content}}<p>{{. | markdownify}}</p>{{ end }}
     {{with .items}}
-        <div class="items-{{len .}}">
+        <div class="items items-{{len .}}">
             {{- range . -}}
             <div class="item">
+{{- with .image -}}
+{{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2)) }}
+<img class="item-cover" width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
+{{- end -}}
 {{- with .icon -}}
 {{- partialCached "util/icon" (dict "key" . "size" 40 "class" "item-icon") (print . "item-icon") -}}
 {{- end -}}
 
 {{- with .title -}}
-    <h2>{{. | markdownify}}</h2>
+    <h2>{{. | markdownify }}</h2>
 {{- end -}}
 
 {{- with .subtitle -}}
@@ -39,7 +43,7 @@
                     {{- with .icon -}}
                     {{- partialCached "util/icon" (dict "key" . "size" 18 "class" "link-icon") (print . "link-icon") -}}
                     {{- end -}}
-                    <span>{{.title}}</span>
+                    <span class="link-text">{{.title | markdownify}}</span>
                 </a>
             {{- end -}}
         </div>
