@@ -152,11 +152,12 @@ content:
           href: http://dx.doi.org/10.1109/IADCC.2010.5422995
       - title: Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems
         image:
-          href: home/smart-city.png
+          href: home/smart-home.jpg
           alt: Smart Home
+          anchor: Center
           width: 300
           height: 300
-        attribution: Image from [wikipedia](https://commons.wikimedia.org/wiki/File:IoT-Enabled_Smart_City_Framework_White_Paper_Image_2.png)
+        attribution: Image by StruffelProductions on [Pixabay](https://pixabay.com/en/interior-cgi-wireframe-explanation-1944348/)
         content: This paper proposes a flexible and novel architecture of Internet of Things (IOT) in a high density and mobility environment. Our proposed architecture solves the problem of over-loading on the network by monitoring the total number of changed objects changing global location crossing the fringe boundaries rather than the actual number of objects present or those that move within the local area. We have modified the reader architecture of the EPCglobal Architecture. The components and the working of the model has been illustrated in detail. We have also discussed the physical implementation of our model taking the examples of a smart home sample application and the performance results have been tabulated and represented graphically.
         links:
         - icon: bookmark
