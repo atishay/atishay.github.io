@@ -2,7 +2,11 @@
 <section class="meta{{with .type}} {{.}}{{end}}">
     {{with .icon}}{{- partialCached "util/icon" (dict "key" . "size" 50 "class" "main-icon") (print . "main-icon") -}}{{ end }}
     {{- with .image -}}
-    {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2)) }}
+    {{$anchor := ""}}
+    {{ with .anchor }}
+    {{$anchor = .}}
+    {{ end }}
+    {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2) " " $anchor) }}
     <img width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
     {{- end -}}
     {{with .title}}<h1>{{. | markdownify}}</h1>{{ end }}
@@ -12,12 +16,17 @@
         <div class="items items-{{len .}}">
             {{- range . -}}
             <div class="item">
-{{- with .image -}}
-{{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2)) }}
-<img class="item-cover" width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
-{{- end -}}
 {{- with .icon -}}
 {{- partialCached "util/icon" (dict "key" . "size" 40 "class" "item-icon") (print . "item-icon") -}}
+{{- end -}}
+
+{{- with .image -}}
+    {{$anchor := ""}}
+    {{ with .anchor }}
+    {{$anchor = .}}
+    {{ end }}
+    {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2) " " $anchor) }}
+    <img class="item-cover" width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
 {{- end -}}
 
 {{- with .title -}}
@@ -48,6 +57,10 @@
             {{- end -}}
         </div>
 {{ end }}
+
+{{with .attribution}}
+<small class="attribution">{{. |markdownify}}</small>
+{{end}}
             </div>
             {{- end -}}
         </div>
