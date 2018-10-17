@@ -24,6 +24,10 @@
         display: flex;
         flex-direction: column;
         padding: 10px 0 0;
+        .item-cover {
+            align-self: center;
+            border-radius: 5px;
+        }
         h2 {
             padding: 8px 0;
             margin: 0;
@@ -161,8 +165,91 @@
     }
 }
 
+//////////////////////////////////////////
+// Full Width for bigger content
+//////////////////////////////////////////
+
 .meta.full-width {
+    padding: 40px 0;
     .items {
         display: block;
+        .item {
+            padding: 40px 0;
+            @include container;
+            display: block;
+            .item-cover {
+                float: left;
+                margin: 0 40px 40px 0;
+            }
+            &:nth-child(2n) {
+                background: $shade;
+                .item-cover {
+                    float: right;
+                    margin: 0 0 40px 40px;
+                }
+                .links {
+                    align-self: flex-start;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                }
+            }
+            &:after {
+                content: " ";
+                clear:both;
+                display: block;
+            }
+            .content {
+                padding: 20px 0;
+            }
+        }
+    }
+    &:nth-child(2n) {
+        .item:nth-child(2n) {
+            background: white;
+        }
+    }
+    @include media("<=md") {
+        .items .item {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "title"
+            "subtitle"
+            "image"
+            "content"
+            "links"
+            "attribution";
+            h2 {
+                grid-area: title;
+            }
+            h3 {
+                grid-area: subtitle;
+            }
+
+            .links {
+                grid-area: links;
+                &:nth-child(2n) {
+                    align-self: flex-end;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+            }
+            .attribution {
+                grid-area: attribution;
+            }
+            .item-cover {
+                grid-area: image;
+                align-self: center;
+                justify-self: center;
+                margin-top: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+
+            }
+
+            .content {
+                grid-area: content;
+            }
+        }
     }
 }
