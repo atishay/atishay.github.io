@@ -33,16 +33,30 @@
 {{ block "social" . }}
   {{- partial "core/social.html" . -}}
 {{end }}
-{{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-{{ $syntax := resources.Get "css/syntax.css" | resources.Minify }}
-{{ $main := resources.Get "scss/main.scss" | toCSS $options }}
-{{ $cssFiles := slice $main $syntax  | resources.Concat "index.css"}}
+
+{{/*  Begin CSS  */}}
+{{ $sass := resources.Get "scss/main.scss" }}
+{{ $cssOpts := cond (.Site.IsServer) (dict "enableSourceMap" true ) (dict "outputStyle" "compressed") }}
+{{ if .Site.IsServer }}
+{{ $syntax := resources.Get "css/syntax.css" }}
+<link rel="stylesheet" href="{{ $syntax.Permalink | absURL }}" media="screen">
+{{ $css := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts }}
+<link rel="stylesheet" href="{{ $css.Permalink | absURL }}" media="screen">
+{{ else }}
+{{ $syntax := resources.Get "css/syntax.css" }}
+{{ $main := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts }}
+{{ $cssFiles := slice $main $syntax | resources.Concat "index.css"}}
 {{ $css := $cssFiles | resources.Minify | resources.Fingerprint "sha512" }}
-<link rel="stylesheet" href="{{$css.Permalink}}" integrity="{{$css.Data.Integrity}}" />
+
+<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+{{ end }}
 
 {{ range .Site.Params.custom_css }}
 <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
 {{ end }}
+{{/*  End CSS  */}}
+
+
 <!-- {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
   {{ template "_internal/google_analytics_async.html" . }}
 {{ end }} -->
