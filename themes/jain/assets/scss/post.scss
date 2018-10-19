@@ -170,6 +170,22 @@
                 font-size: 0;
             }
         }
+        .tags, .category {
+            span {
+                font-weight: 700;
+                @include media("<xl", ">=lg") {
+                    display: none;
+                }
+
+                @include media("<md", ">=sm") {
+                    display: none;
+                }
+            }
+            svg {
+                vertical-align: middle;
+                margin: 0 5px 0 0;
+            }
+        }
         h2 {
             // Taken padding from section as a hack for column wrapping.
             padding-top: 20px;
