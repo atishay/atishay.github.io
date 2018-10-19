@@ -34,28 +34,26 @@
       {{ .ReadingTime }} minutes
     </td>
   </tr>
+  {{with .Params.categories}}
   <tr>
-  <th class="tags" title="Tags">
-    {{- partialCached "util/icon" (dict "key" "tags" "size" 20) "tags-20" -}}
-    <span>Tags</span>
-  </th>
-  <td>
-    {{- range .Params.tags -}}
-      <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
-    {{- end -}}
-  </td>
+   <th title="Category">
+     {{- partialCached "util/icon" (dict "key" "caret-square-o-right" "size" 20) "caret-square-o-right-20" -}}
+     <span>Category</span></th>
+       <td>{{ range . }}
+         <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
+         {{end}}
+       </td>
   </tr>
- {{with .Params.categories}}
+  {{end}}
   <tr>
-<th title="Category">
-  {{- partialCached "util/icon" (dict "key" "caret-square-o-right" "size" 20) "caret-square-o-right-20" -}}
-  <span>Category</span></th>
-    <td>{{ range . }}
-      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }}</a>
-      {{end}}
+    <td class="tags" title="Tags" colspan="2">
+      {{- partialCached "util/icon" (dict "key" "tags" "size" 20) "tags-20" -}}
+      <span>Tags<br></span>
+      {{- range .Params.tags -}}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . | humanize }} </a>
+      {{- end -}}
     </td>
-</tr>
- {{end}}
+  </tr>
 </tbody>
 </table>
 </section>

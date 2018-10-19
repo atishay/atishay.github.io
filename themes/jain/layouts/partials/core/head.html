@@ -14,7 +14,7 @@
 {{ end }}
 
 {{ if eq .Site.Params.CSP true }}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' www.gravatar.com; {{ if ne (getenv "HUGO_ENV") "production" | and (ne .Site.Params.env "production") }}connect-src ws:;{{ end }} worker-src 'none'; frame-src www.youtube-nocookie.com; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' www.gravatar.com; {{ if .Site.IsServer }}connect-src ws:;{{ end }} worker-src 'none'; frame-src www.youtube-nocookie.com; object-src 'none'">
 {{ end }}
 
 {{ block "favicon" . }}

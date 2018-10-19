@@ -26,6 +26,7 @@
   "dependencies": {
     "include-media": "^1.4.9",
     "line-awesome": "github:icons8/line-awesome",
+    "shufflejs": "^5.2.0",
     "smoothscroll-polyfill": "^0.4.3",
     "turbolinks": "^5.2.0"
   },
