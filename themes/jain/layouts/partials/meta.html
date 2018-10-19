@@ -2,10 +2,7 @@
 <section class="meta{{with .type}} {{.}}{{end}}">
     {{with .icon}}{{- partialCached "util/icon" (dict "key" . "size" 50 "class" "main-icon") (print . "main-icon") -}}{{ end }}
     {{- with .image -}}
-    {{$anchor := ""}}
-    {{ with .anchor }}
-    {{$anchor = .}}
-    {{ end }}
+    {{$anchor := .anchor | default "" }}
     {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2) " " $anchor) }}
     <img width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
     {{- end -}}
@@ -21,10 +18,7 @@
 {{- end -}}
 
 {{- with .image -}}
-    {{$anchor := ""}}
-    {{ with .anchor }}
-    {{$anchor = .}}
-    {{ end }}
+    {{$anchor := .anchor | default "" }}
     {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2) " " $anchor) }}
     <img class="item-cover" width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
 {{- end -}}
