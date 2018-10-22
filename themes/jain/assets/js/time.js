@@ -1,4 +1,8 @@
-// Time ago
+/**
+ * Converts tome from ISO 8601 to time ago.
+ *
+ * @param {String} value Timestamp in ISO-8601
+ */
 function getNewTime(value) {
     var d = new Date(value);
     var now = new Date();
@@ -33,10 +37,20 @@ function getNewTime(value) {
     }
 }
 
-Array.from(document.getElementsByTagName('time')).forEach((x) => {
-    if (x.className === 'now') {
-        x.innerText = new Date().getFullYear();
-    } else {
-        x.innerText = getNewTime(x.getAttribute('datetime'));
-    }
+
+document.addEventListener("turbolinks:load", function () {
+    Array.from(document.getElementsByTagName('time')).forEach((x) => {
+        if (x.hasAttribute('data-no-bother')) {
+            // Turbolinks has already fixed the time here.
+            console.log("Encountered fixed link");
+            return;
+        }
+        if (x.className === 'now') {
+            x.innerText = new Date().getFullYear();
+        } else {
+            x.innerText = getNewTime(x.getAttribute('datetime'));
+        }
+        x.setAttribute('data-no-bother', true);
+        // TODO: Attach event listener to update the string here.
+    });
 });

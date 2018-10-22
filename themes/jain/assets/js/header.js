@@ -1,6 +1,3 @@
-// Remove the no-js class from the html tag that is meant for the noscript mode.
-document.getElementsByTagName('html')[0].classList.remove('no-js');
-
 // Inspired by https://www.sysleaf.com/js-toggle-header-on-scroll/
 // Also puts scroll to top hiding behavior in the same JS function to reuse
 // Handing for scroll and animation frame.
@@ -73,24 +70,25 @@ document.getElementsByTagName('html')[0].classList.remove('no-js');
             eleHeader.classList.add(classes.unpinned);
         }
     }
-    window.onload = () => {
+    document.addEventListener("turbolinks:load", function () {
         eleCheckbox = document.getElementsByClassName('hamburger')[0];
         eleHeader = document.getElementById('header');
         eleScrollUp = document.getElementsByClassName('scrollUp')[0];
         document.addEventListener('scroll', onScroll, false);
         onScroll();
-    }
+    });
 })();
 
-
-// Handling clicking on scrollToTop
-// Should remove once Safari and Edge support
-// CSS Based scroll behavior: https://caniuse.com/#feat=css-scroll-behavior
-document.getElementsByClassName('scrollUp')[0].addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
+document.addEventListener("DOMContentLoaded", () => {
+    // Handling clicking on scrollToTop
+    // Should remove once Safari and Edge support
+    // CSS Based scroll behavior: https://caniuse.com/#feat=css-scroll-behavior
+    document.getElementsByClassName('scrollUp')[0].addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
     });
 });

@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+{{ .Hugo.Generator }}
+{{ if .Site.IsServer }}
+  <meta name="robots" content="index, follow">
+{{ else }}
+  <meta name="robots" content="noindex, nofollow">
+{{ end }}
+
+{{ if eq .Site.Params.CSP true }}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' www.gravatar.com; {{ if .Site.IsServer }}connect-src ws:;{{ end }} worker-src 'none'; frame-src www.youtube-nocookie.com; object-src 'none'">
+{{ end }}
+
+{{ block "favicon" . }}
+  {{ $iconSVG := resources.Get "image/favicon.svg" | resources.Minify }} {{ $icon := resources.Get "image/favicon.png" }}
+  <link rel="apple-touch-icon-precomposed" href="{{ ($icon.Resize " 180x180 ").RelPermalink }}" />
+  <link rel="icon" type="image/svg" href="{{ $iconSVG.RelPermalink }}" />
+  <link rel="icon" type="image/png" href="{{ ($icon.Resize " 196x196 ").RelPermalink }}" />
+{{ end }}
+
+{{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ end }}

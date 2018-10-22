@@ -1,15 +1,8 @@
-{{ $header := resources.Get "js/header.js" }}
-{{ $time := resources.Get "js/time.js" }}
-{{/* Remove this polyfill once Safari supports scroll behavior: https://caniuse.com/#feat=css-scroll-behavior */}}
-{{ $smoothScroll := resources.Get "js/smoothscroll/smoothscroll.min.js" }}
-{{ $main := resources.Get "js/main.js" }}
-{{ $js := slice $time $header $smoothScroll $main | resources.Concat "js/main.js" | resources.Minify |  resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
-<a href="#top" class="scrollUp">
+<a href="#top" class="scrollUp" data-turbolinks-permanent>
     {{ $icon := resources.Get "image/line-awesome/fa-angle-up.svg" | resources.Minify }}
     {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
 </a>
-<footer>
+<footer data-turbolinks-permanent>
     <div class="items-{{len .Site.Params.Footer}}">
     {{ range .Site.Params.Footer}}
     <section>
