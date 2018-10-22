@@ -1,0 +1,12 @@
+{{ $header := resources.Get "js/header.js" }}
+{{ $time := resources.Get "js/time.js" }}
+{{ $turbolinks := resources.Get "js/turbolinks/turbolinks.js" }}
+{{/* Remove this polyfill once Safari supports scroll behavior: https://caniuse.com/#feat=css-scroll-behavior */}}
+{{ $smoothScroll := resources.Get "js/smoothscroll/smoothscroll.min.js" }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $js := slice $turbolinks $time $header $smoothScroll $main | resources.Concat "js/main.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+
+<!-- {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{ end }} -->
