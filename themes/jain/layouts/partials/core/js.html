@@ -4,8 +4,16 @@
 {{/* Remove this polyfill once Safari supports scroll behavior: https://caniuse.com/#feat=css-scroll-behavior */}}
 {{ $smoothScroll := resources.Get "js/smoothscroll/smoothscroll.min.js" }}
 {{ $main := resources.Get "js/main.js" }}
+{{- if .Site.IsServer -}}
+<script type="text/javascript" src="{{ $turbolinks.Permalink }}" defer></script>
+<script type="text/javascript" src="{{ $smoothScroll.Permalink }}" defer></script>
+<script type="text/javascript" src="{{ $time.Permalink }}" defer></script>
+<script type="text/javascript" src="{{ $header.Permalink }}" defer></script>
+<script type="text/javascript" src="{{ $main.Permalink }}" defer></script>
+{{- else -}}
 {{ $js := slice $turbolinks $time $header $smoothScroll $main | resources.Concat "js/main.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- end -}}
 
 <!-- {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
   {{ template "_internal/google_analytics_async.html" . }}
