@@ -8,7 +8,12 @@
     background: $shade;
 }
 .meta {
-    padding: 40px 0;
+    & > :last-child {
+        margin-bottom: 40px;
+    }
+    & > :first-child, & > h1 {
+        margin-top: 40px;
+    }
     @include container;
     h1, h2, h3, h4 {
         text-align: center;
@@ -18,7 +23,7 @@
     }
     .main-icon {
         float: right;
-        margin: 20px 0 40px;
+        margin: 60px 0 40px;
     }
     .item {
         display: flex;
@@ -88,6 +93,7 @@
     "pic subtitle"
     "pic desc";
     img {
+        margin: 40px 0;
         grid-area: pic;
         border: 1px solid $divider;
         background: $divider;
@@ -100,6 +106,7 @@
         grid-area: desc;
     }
     h1 {
+        margin: 40px 0 0;
         grid-area: title;
     }
     .subtitle {
@@ -112,6 +119,9 @@
         h1, .subtitle {
             padding: 0;
             margin: 0;
+        }
+        h1 {
+            margin-top: 40px;
         }
     }
     @include media("<=lg") {
@@ -170,7 +180,7 @@
 //////////////////////////////////////////
 
 .meta.full-width {
-    padding: 40px 0;
+    padding: 0;
     .items {
         display: block;
         .item {
