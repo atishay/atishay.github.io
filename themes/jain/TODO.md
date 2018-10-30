@@ -58,3 +58,4 @@ Home Page - npm install scrollmagic,
 https://github.com/wagerfield/parallax
 Shadow tricks
 https://30-seconds.github.io/30-seconds-of-css/
+https://github.com/JPeer264/node-rename-css-selectors
