@@ -167,5 +167,106 @@ content:
           title: Access
           href: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.592.6204
     - title: Awards
+      subtitle: "Don't live for appreciation, but accept it humbly if given.\nHere is a selection of mine."
+      items:
+      - title: Professional Life
+        content: |+1
+          Won multiple awards at Adobe for exceptional work. Given an increasing number of responsibilities with direct impact on company performance.
+
+          * Performance Bonus (2018, 2017)
+          * Young Engineer's Award (2015)
+          * Special Contribution Award (2015)
+          * Spot Awards(2012, 2013, 2015)
+          * Adobe Kuler iOS - IxDA Interaction Design Award (2014), Communication Arts' Interactive Design Award (2014), FWA Mobile of the Day (2013).
+          * Adobe Shape - Horizon Interactive Award (2015).
+
+
+      - title: College Life
+        content: |+1
+          Multiple awards & participation at college and other places like the IITs & Corporates. Also organized a bunch of events.
+
+          * Represented Thapar University in ACM ICPC (2007-09)
+          * **Inter College** IIT-R Cognizance (2008), IIT-K Kshitij(2008), PECFest 5
+          * **Corporate** Schneider Electric Innovation Challenge (2009), IBM Great Mind Challenge (2009), Infosys Aspirations 2020, NetApp Texhibit
+          * **Intra-college**  GetSetGo 2007, Chakravyun 2006, Arithmania 2008.
+          * Created Fundoori, a Yahoo-like portal for Patiala city.
+
+
+      - title: School Life
+        content: |+1
+          Was amongst the school as well as state toppers
+
+          * NTS Scholar - NCERT Govt. of India (2004)
+          * Aptitude and Achievement Test(AAT) All India Ranks (Biology, Geography)- ICSE Board, New Delhi
+          * INCA Map Quiz (3rd) - Survey of India.
+          * School Official (2003)
+          * Multiple achievement awards during annual day.
+
+
+      - title: Hobbies
+        content: |+1
+          Miscellaneous winnings
+
+          * **Toastmasters International** - Competent Communicator, Competent Leader - Fair Oaks Toastmasters (7528) - Past Secretary, Treasurer, VP-PR(Present).
+          * **Movie Making** - Editor for short films, including Wasim that one first prize in IIT-R Thomso (2008)
+          * Organized Aranya 2008(Thapar University), developed its website as well as Shauryagaatha exhibition(2007, 2008)
+          * Multiple awards for drawing and painting during schooling.
+          * Completed Kashmir Great Lakes and Kedarkantha treks.
+
+
+
+    - title: Projects
+      subtitle: Below is a selection of some of my popular projects, their short descriptions and useful links.
+      items:
+      - title: Adobe Shape CC
+        content: |
+          Real-time raster to vector conversion. Right from your iPhone or iPad. Inity made for iPhone 4+, it was merged into Adobe Capture on iOS and Android.
+
+          Briefly after its launch, this app was selected by Apple to be a part of the demo iPhones shown to the users at the Apple Stores. With almost a million downloads, Adobe Shape made into the marquee feature of Adobe Capture.
+      - title: All Autocomplete
+        content: |
+          Open Source extensions to Visual Studio Code that provides autocompletion/intellisense items based on all open files in the editor.
+
+          FOSS extension with over 25k downloads and community driven features. Pull Requests welcome.
+      - title: Adobe Kuler
+        content: |
+          Augmented Reality Color capture application. Captures colors from video and images into themes. Also features a color wheel and color theme sliders.
+
+          Winner of multiple awards like the IxDA interaction design awards, Communication Arts interactive design awards and FWA app of th day. Had a million downloads before being merged into adobe capture.
+      - title: 26 January
+        content: |
+          Short film developed in college. A satirical piece on the state of humans and the Indian society.
+
+          Was built specifically for participating in contests. Wonderful acting by some of the veterans of the Thapar movie club.
+      - title: AOE Campaigns
+        content: |
+          Over 50 scenarios in two custom campaigns for Age Of Empires I and II.
+
+          Were created when I was 15. Published in the SKOAR game magazine in 2006. The campaigns were accompanied with introductory voice-overs.
+      - title: Wasim Mujahideen
+        content: |
+          Short film shot during college of a guy wrongly accused just because of his name.
+
+          Won IIT R Thomso 2008 in short film category but I don't have a proof for it. You can still enjoy the performance by Thapar Movie Club
+      - title: Flash Game - Ball in the Hole
+        content: |
+          Twist to the classic maze game where you control the acceleration and not the speed.
+
+          Created when I was a kid. Lost source code. It has over 30 levels with a proper dragon level in the end, bonus level on every 5 levels and clear instructions on how to play. Windows only. Relive the glorious days of simple indie flash games.
+      - title: Bond Forever
+        content: |
+          Screenplay of a children movie about Carbon Bond fighting with the evil Sulphora.
+
+          Created while learning 3D design and rendering. Was intended to be a short film but never got to real work, only a screenplay.
+      - title: Sabse Bada Rupaiya
+        content: |
+          My first short film. Wrote the screenplay, did some parts of the direction and editing.
+
+          A stupid plot producing an unexpected but genius result.
+
+
+
+
+
 ---
 Hello World
