@@ -169,7 +169,7 @@ content:
     - title: Awards
       subtitle: "Don't live for appreciation, but accept it humbly if given.\nHere is a selection of mine."
       items:
-      - title: Professional Life
+      - title: Professional
         content: |+1
           Won multiple awards at Adobe for exceptional work. Given an increasing number of responsibilities with direct impact on company performance.
 
@@ -179,9 +179,10 @@ content:
           * Spot Awards(2012, 2013, 2015)
           * Adobe Kuler iOS - IxDA Interaction Design Award (2014), Communication Arts' Interactive Design Award (2014), FWA Mobile of the Day (2013).
           * Adobe Shape - Horizon Interactive Award (2015).
+          * CCNA certified (2009-11), SCJP (2008-)
 
 
-      - title: College Life
+      - title: College
         content: |+1
           Multiple awards & participation at college and other places like the IITs & Corporates. Also organized a bunch of events.
 
@@ -192,7 +193,7 @@ content:
           * Created Fundoori, a Yahoo-like portal for Patiala city.
 
 
-      - title: School Life
+      - title: School
         content: |+1
           Was amongst the school as well as state toppers
 
