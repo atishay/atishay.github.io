@@ -229,6 +229,7 @@ content:
           anchor: Center
           width: 267
           height: 180
+        attribution: Mockup from [Graphberry](https://www.graphberry.com/item/multiple-web-screens-perspective-psd-mockup)
         links:
           - href: https://github.com/atishay/all-autocomplete
             title: Fork
@@ -273,6 +274,7 @@ content:
           anchor: Center
           width: 267
           height: 180
+        attribution: Image via [tutorial](https://naldzgraphics.net/video-game-logo-in-photoshop/)
         links:
           - href: /projects/Empires I.zip
             title: Download I
@@ -289,6 +291,7 @@ content:
           href: projects/wasim.jpg
           width: 267
           height: 180
+        attribution: Tempate from [Wegraphics](https://wegraphics.net/downloads/film-poster-psd-template/) & [Graphic Burger](https://graphicburger.com/down/?q=bus-stop-billboard-mockup)
         links:
           - href: https://vimeo.com/16035249
             title: Watch
@@ -340,9 +343,5 @@ content:
 
           A stupid plot producing an unexpected but genius result.
 
-
-
-
-
 ---
-Hello World
+
