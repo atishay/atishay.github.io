@@ -39,6 +39,10 @@
     <div class="content">{{. | markdownify}}</div>
 {{ end }}
 
+{{with .attribution}}
+<small class="attribution">{{. |markdownify}}</small>
+{{end}}
+
 {{with .links}}
         <div class="links">
             {{- range . -}}
@@ -51,10 +55,6 @@
             {{- end -}}
         </div>
 {{ end }}
-
-{{with .attribution}}
-<small class="attribution">{{. |markdownify}}</small>
-{{end}}
             </div>
             {{- end -}}
         </div>
