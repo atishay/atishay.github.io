@@ -180,8 +180,6 @@ content:
           * Adobe Kuler iOS - IxDA Interaction Design Award (2014), Communication Arts' Interactive Design Award (2014), FWA Mobile of the Day (2013).
           * Adobe Shape - Horizon Interactive Award (2015).
           * CCNA certified (2009-11), SCJP (2008-)
-
-
       - title: College
         content: |+1
           Multiple awards & participation at college and other places like the IITs & Corporates. Also organized a bunch of events.
@@ -191,8 +189,6 @@ content:
           * **Corporate** Schneider Electric Innovation Challenge (2009), IBM Great Mind Challenge (2009), Infosys Aspirations 2020, NetApp Texhibit
           * **Intra-college**  GetSetGo 2007, Chakravyun 2006, Arithmania 2008.
           * Created Fundoori, a Yahoo-like portal for Patiala city.
-
-
       - title: School
         content: |+1
           Was amongst the school as well as state toppers
@@ -202,8 +198,6 @@ content:
           * INCA Map Quiz (3rd) - Survey of India.
           * School Official (2003)
           * Multiple achievement awards during annual day.
-
-
       - title: Hobbies
         content: |+1
           Miscellaneous winnings
@@ -213,53 +207,134 @@ content:
           * Organized Aranya 2008(Thapar University), developed its website as well as Shauryagaatha exhibition(2007, 2008)
           * Multiple awards for drawing and painting during schooling.
           * Completed Kashmir Great Lakes and Kedarkantha treks.
-
-
-
     - title: Projects
       subtitle: Below is a selection of some of my popular projects, their short descriptions and useful links.
       items:
       - title: Adobe Shape CC
+        image:
+          href: projects/shape.jpg
+          width: 267
+          height: 180
+        links:
+          - href: http://blogs.adobe.com/contentcorner/2015/05/02/capture-and-its-vector-experience-magic-with-adobe-shape-cc/
+            title: Read More
+            icon: external-link
         content: |
           Real-time raster to vector conversion. Right from your iPhone or iPad. Inity made for iPhone 4+, it was merged into Adobe Capture on iOS and Android.
 
           Briefly after its launch, this app was selected by Apple to be a part of the demo iPhones shown to the users at the Apple Stores. With almost a million downloads, Adobe Shape made into the marquee feature of Adobe Capture.
       - title: All Autocomplete
+        image:
+          href: projects/all.png
+          anchor: Center
+          width: 267
+          height: 180
+        links:
+          - href: https://github.com/atishay/all-autocomplete
+            title: Fork
+            icon: code-fork
+          - href: https://marketplace.visualstudio.com/items?itemName=Atishay-Jain.All-Autocomplete
+            title: Install
+            icon: download
         content: |
           Open Source extensions to Visual Studio Code that provides autocompletion/intellisense items based on all open files in the editor.
 
           FOSS extension with over 25k downloads and community driven features. Pull Requests welcome.
       - title: Adobe Kuler
+        links:
+          - href: http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html
+            title: Read More
+            icon: external-link
+        image:
+          href: projects/kuler.jpg
+          width: 267
+          height: 180
         content: |
           Augmented Reality Color capture application. Captures colors from video and images into themes. Also features a color wheel and color theme sliders.
 
           Winner of multiple awards like the IxDA interaction design awards, Communication Arts interactive design awards and FWA app of th day. Had a million downloads before being merged into adobe capture.
       - title: 26 January
+        image:
+          href: projects/26.png
+          anchor: Center
+          width: 267
+          height: 180
+        links:
+          - href: https://vimeo.com/16069535
+            title: Watch
+            icon: film
         content: |
           Short film developed in college. A satirical piece on the state of humans and the Indian society.
 
           Was built specifically for participating in contests. Wonderful acting by some of the veterans of the Thapar movie club.
       - title: AOE Campaigns
+        image:
+          href: projects/aoe.png
+          anchor: Center
+          width: 267
+          height: 180
+        links:
+          - href: /projects/Empires I.zip
+            title: Download I
+            icon: download
+          - href: /projects/Empires II.zip
+            title: Download II
+            icon: download
         content: |
           Over 50 scenarios in two custom campaigns for Age Of Empires I and II.
 
           Were created when I was 15. Published in the SKOAR game magazine in 2006. The campaigns were accompanied with introductory voice-overs.
       - title: Wasim Mujahideen
+        image:
+          href: projects/wasim.jpg
+          width: 267
+          height: 180
+        links:
+          - href: https://vimeo.com/16035249
+            title: Watch
+            icon: film
         content: |
           Short film shot during college of a guy wrongly accused just because of his name.
 
           Won IIT R Thomso 2008 in short film category but I don't have a proof for it. You can still enjoy the performance by Thapar Movie Club
       - title: Flash Game - Ball in the Hole
+        image:
+          href: projects/ball.png
+          anchor: Center
+          width: 267
+          height: 180
+        links:
+          - href: /projects/Ball in the Hole.exe
+            title: Download
+            icon: download
         content: |
           Twist to the classic maze game where you control the acceleration and not the speed.
 
           Created when I was a kid. Lost source code. It has over 30 levels with a proper dragon level in the end, bonus level on every 5 levels and clear instructions on how to play. Windows only. Relive the glorious days of simple indie flash games.
       - title: Bond Forever
+        image:
+          href: projects/bond.jpg
+          anchor: Center
+          width: 267
+          height: 180
+        links:
+          - href: /projects/Bond forever.pdf
+            title: View
+            icon: eye
         content: |
           Screenplay of a children movie about Carbon Bond fighting with the evil Sulphora.
 
           Created while learning 3D design and rendering. Was intended to be a short film but never got to real work, only a screenplay.
       - title: Sabse Bada Rupaiya
+        image:
+          href: projects/rupee.png
+          anchor: Center
+          width: 267
+          height: 180
+        links:
+          - href: https://vimeo.com/1587575
+            title: Watch
+            icon: film
         content: |
           My first short film. Wrote the screenplay, did some parts of the direction and editing.
 

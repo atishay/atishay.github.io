@@ -16,11 +16,11 @@
 {{- with .icon -}}
 {{- partialCached "util/icon" (dict "key" . "size" 40 "class" "item-icon") (print . "item-icon") -}}
 {{- end -}}
-
+{{ $title := .title }}
 {{- with .image -}}
     {{$anchor := .anchor | default "" }}
     {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2) " " $anchor) }}
-    <img class="item-cover" width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
+    <img class="item-cover" width="{{.width}}" height="{{.height}}" alt="{{.alt | default $title}}" src="{{$cover.RelPermalink}}" />
 {{- end -}}
 
 {{- with .title -}}
