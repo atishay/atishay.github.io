@@ -264,3 +264,16 @@
         }
     }
 }
+
+//////////////////////////////////////////
+// Max-2 for only two items in a row
+//////////////////////////////////////////
+.meta.max-2 {
+    .items {
+        grid-template-areas: none;
+        grid-template-columns: 1fr 1fr;
+        @include media("<=md") {
+            grid-template-columns: 1fr;
+        }
+    }
+}
