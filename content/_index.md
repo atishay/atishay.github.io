@@ -215,6 +215,7 @@ content:
           href: projects/shape.jpg
           width: 267
           height: 180
+        attribution: Mockup from [72px Designs](http://www.72pxdesigns.com/template/12-free-iphone-6-psd-mockups/)
         links:
           - href: http://blogs.adobe.com/contentcorner/2015/05/02/capture-and-its-vector-experience-magic-with-adobe-shape-cc/
             title: Read More
@@ -246,6 +247,7 @@ content:
           - href: http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html
             title: Read More
             icon: external-link
+        attribution: Mockup from the cover on [youtube](https://youtube.com/watch?v=UTb4tfrvnG4)
         image:
           href: projects/kuler.jpg
           width: 267
@@ -260,6 +262,7 @@ content:
           anchor: Center
           width: 267
           height: 180
+        attribution: Mokcup from [Graphictwister](https://graphictwister.com/samsung-smart-tv-mockup/)
         links:
           - href: https://vimeo.com/16069535
             title: Watch
@@ -306,6 +309,7 @@ content:
           anchor: Center
           width: 267
           height: 180
+        attribution: Mockup from [Elegant Themes](https://www.elegantthemes.com/blog/freebie-of-the-week/free-thinkpad-psd-mockup-templates)
         links:
           - href: /projects/Ball in the Hole.exe
             title: Download
@@ -334,6 +338,7 @@ content:
           anchor: Center
           width: 267
           height: 180
+        attribution: Mockup from [Behance](https://www.behance.net/gallery/20133265/Free-Movie-Theater-Mockup)
         links:
           - href: https://vimeo.com/1587575
             title: Watch
