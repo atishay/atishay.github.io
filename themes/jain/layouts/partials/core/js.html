@@ -1,8 +1,8 @@
 {{ $header := resources.Get "js/header.js" }}
 {{ $time := resources.Get "js/time.js" }}
-{{ $turbolinks := resources.Get "js/turbolinks/turbolinks.js" }}
+{{ $turbolinks := resources.Get "js/turbolinks.js" }}
 {{/* Remove this polyfill once Safari supports scroll behavior: https://caniuse.com/#feat=css-scroll-behavior */}}
-{{ $smoothScroll := resources.Get "js/smoothscroll/smoothscroll.min.js" }}
+{{ $smoothScroll := resources.Get "js/smoothscroll.min.js" }}
 {{ $main := resources.Get "js/main.js" }}
 {{- if .Site.IsServer -}}
 <script type="text/javascript" src="{{ $turbolinks.Permalink }}" defer></script>
