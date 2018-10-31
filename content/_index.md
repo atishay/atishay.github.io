@@ -167,9 +167,11 @@ content:
           title: Access
           href: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.592.6204
     - title: Awards
+      type: max-2
       subtitle: "Don't live for appreciation, but accept it humbly if given.\nHere is a selection of mine."
       items:
       - title: Professional
+        icon: "home/professional.svg"
         content: |+1
           Won multiple awards at Adobe for exceptional work. Given an increasing number of responsibilities with direct impact on company performance.
 
@@ -181,6 +183,7 @@ content:
           * Adobe Shape - Horizon Interactive Award (2015).
           * CCNA certified (2009-11), SCJP (2008-)
       - title: College
+        icon: "home/college.svg"
         content: |+1
           Multiple awards & participation at college and other places like the IITs & Corporates. Also organized a bunch of events.
 
@@ -190,6 +193,7 @@ content:
           * **Intra-college**  GetSetGo 2007, Chakravyun 2006, Arithmania 2008.
           * Created Fundoori, a Yahoo-like portal for Patiala city.
       - title: School
+        icon: "home/school.svg"
         content: |+1
           Was amongst the school as well as state toppers
 
@@ -199,6 +203,7 @@ content:
           * School Official (2003)
           * Multiple achievement awards during annual day.
       - title: Hobbies
+        icon: "home/hobby.svg"
         content: |+1
           Miscellaneous winnings
 
@@ -347,6 +352,35 @@ content:
           My first short film. Wrote the screenplay, did some parts of the direction and editing.
 
           A stupid plot producing an unexpected but genius result.
-
+    - title: Proficiency
+      subtitle: "After knowing the basics of programming, one should know the assumptions and constraints of the domain. \n It doesn't matter what language or tooling is needed. You can get upto speed quickly."
+      items:
+      - title: Web
+        subtitle: Full Stack
+        content: |+1
+          * Your JS framework (React / Angular)
+          * Node.js, Ruby on Rails, Python
+          * N-API, FFI and native modules
+          * AWS or Custom deployment
+          * SEO, A/B testing, Analytics
+          * On Call experience
+          * TS, ES5, ES6, Webpack, ESLint, Babel
+      - title: Mobile
+        subtitle: Universal iOS
+        content: |+1
+          * Obj-C/C++
+          * GPGPU
+          * GCD, Threading, Networking
+          * Core Graphics, Core Animation
+          * Core Data, Migrations, Updates
+          * Inkling of Swift
+      - title: Desktop
+        subtitle: Windows, MacOS, Electron
+        content: |+1
+          * Win32, AppKit
+          * C++ / C# / ObjC / Java
+          * Installers
+          * Electron with Native Modules
+          * Your language / framework
 ---
 
