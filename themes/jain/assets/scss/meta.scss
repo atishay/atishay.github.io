@@ -78,7 +78,19 @@
     }
 }
 
+///////////////////////////////////////
+// Default type
+///////////////////////////////////////
 
+.meta.default {
+    .item-cover {
+        width: 100%;
+        height: auto;
+    }
+    .items {
+        grid-row-gap: 40px;
+    }
+}
 
 
 //////////////////////////////////////////////////////
@@ -275,5 +287,54 @@
         @include media("<=md") {
             grid-template-columns: 1fr;
         }
+    }
+}
+
+///////////////////////////////////////////
+// A carousel for testimonials
+///////////////////////////////////////////
+
+.meta.carousel {
+    .item {
+        padding: 20px;
+        border: 1px solid $divider;
+        border-radius: 4px;
+        display: grid;
+        grid-template-areas: "icon" "content" "heading";
+        justify-content: center;
+        h2 {
+            grid-area: heading;
+            font-size: 14px;
+        }
+        .item-icon {
+            grid-area: icon;
+            justify-self: center;
+        }
+        .content {
+            grid-area: "content";
+        }
+    }
+    .item-icon {
+        min-height: 60px;
+        min-width: 60px;
+        padding: 2px;
+        filter: drop-shadow(2px 3px 4px #AAA);
+        border-radius: 50%;
+    }
+    h2 {
+        &::before {
+            content: "“";
+            font-family: _serif;
+            font-size: 40px;
+            padding-right: 10px;
+            line-height: 15px;
+            vertical-align: text-bottom;
+        }
+        small {
+            font-size: 60%;
+        }
+        color: rgba(var(--theme-color-rgb), 0.9);
+        text-shadow: 0 0 0 #444, 0 0 1px #DDD;
+        text-align: right;
     }
 }
