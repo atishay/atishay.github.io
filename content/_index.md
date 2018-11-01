@@ -352,6 +352,21 @@ content:
           My first short film. Wrote the screenplay, did some parts of the direction and editing.
 
           A stupid plot producing an unexpected but genius result.
+    - title: Testimonials
+      type: carousel
+      items:
+        - title: Mosum Gaba <small> Colleague at Adobe </small>
+          content: He was the one guy in the team who stood apart due to his 'out-of-box' thinking. He is able to take up responsibilities and has the capability to deliver.
+          icon: home/mosum.jpg
+        - title: Shamit Mehta <small> Reporting Manager at Adobe</small>
+          content: (He) is widely recognized in his team and across the organization as a prolific developer. Above all he understands the business and customer needs very well.
+          icon: home/shamit.jpg
+        - title: Gaurav Dewan <small> Colleague at Adobe</small>
+          content: Methodical, precise and organized. When he takes up a task, he strives for the best and aims high. Among his notable personal traits are modesty and sincerity.
+          icon: home/gd.jpg
+        # - title: Rohan Khanna <small> Colleague at Thapar University</small>
+        #   content: One of the most skilled and knowledgeable person I had come across while in college. Can handle, with ease, all the tasks that are allotted to him.
+        #   icon: home/rohan.jpg
     - title: Proficiency
       subtitle: "After knowing the basics of programming, one should know the assumptions and constraints of the domain. \n It doesn't matter what language or tooling is needed. You can get upto speed quickly."
       items:
@@ -382,5 +397,6 @@ content:
           * Installers
           * Electron with Native Modules
           * Your language / framework
+
 ---
 
