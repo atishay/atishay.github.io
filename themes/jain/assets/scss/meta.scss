@@ -295,7 +295,17 @@
 ///////////////////////////////////////////
 
 .meta.carousel {
+    @include container-margin;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+    .items {
+        display: flex;
+    }
     .item {
+        transform: translate3d(0, 0, 0);
+        min-width: calc(var(--max-width)/2 - 40px);
+        margin: 0 20px;
         padding: 20px;
         border: 1px solid $divider;
         border-radius: 4px;
@@ -336,5 +346,76 @@
         color: rgba(var(--theme-color-rgb), 0.9);
         text-shadow: 0 0 0 #444, 0 0 1px #DDD;
         text-align: right;
+    }
+
+    // Auto-scroll for carousal
+    .items {
+        &:hover {
+            animation-play-state: paused;
+
+            .item:first-child {
+                animation-play-state: paused;
+            }
+
+            .item:nth-child(2) {
+                animation-play-state: paused;
+            }
+        }
+    }
+    // Carousel Animation
+    $interval: 4s;
+    @for $i from $min-carousal through $max-carousal {
+        .items-#{$i} {
+            @keyframes scroll-#{$i} {
+                $delta: 100%/$i;
+                $shift: 0.25 * $delta;
+                $max: $i - 1;
+                @for $j from 0 through $max {
+                    $percent: $j*$delta;
+                    $movement: $j*-0.5;
+                    $shifted: $percent + $delta - $shift;
+                    #{$percent}, #{$shifted} {
+                        transform: translateX(calc(var(--max-width) * #{$movement}));
+                    }
+                }
+                99.99% {
+                    $final: -0.5 * $i;
+                    transform: translateX(calc(var(--max-width)*#{$final}))
+                }
+            }
+            @keyframes scroll-#{$i}-end {
+                $delta: 100%/$i;
+                $shift: 0.25 * $delta;
+                $loc1: 100% -$delta - $shift;
+                $loc0: $loc1 - 0.01;
+                $final: 0.5 * $i;
+                #{$loc0}, 100% {
+                    transform: none;
+                }
+                #{$loc1}, 99.99% {
+                    transform: translateX(calc(var(--max-width)*#{$final}))
+                }
+            }
+            @keyframes scroll-#{$i}-end-2 {
+                $delta: 100%/$i;
+                $shift: 0.25 * $delta;
+                $loc1: 100% - $shift;
+                $loc0: $loc1 - 0.01;
+                $final: 0.5 * $i;
+                #{$loc0}, 100% {
+                    transform: none;
+                }
+                #{$loc1}, 99.99% {
+                    transform: translateX(calc(var(--max-width)*#{$final}))
+                }
+            }
+            .item:first-child {
+                animation: scroll-#{$i}-end $i * $interval linear infinite;
+            }
+            .item:nth-child(2) {
+                animation: scroll-#{$i}-end-2 $i * $interval linear infinite;
+            }
+            animation: scroll-#{$i} $i * $interval linear infinite;
+        }
     }
 }
