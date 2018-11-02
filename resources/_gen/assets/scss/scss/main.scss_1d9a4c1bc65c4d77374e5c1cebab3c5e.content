@@ -1830,36 +1830,6 @@ header {
       animation-play-state: paused; }
     .meta.carousel .items:hover .item:nth-child(2) {
       animation-play-state: paused; }
-  .meta.carousel .items-4 {
-    animation: scroll-4 16s linear infinite; }
-
-@keyframes scroll-4 {
-  0%, 18.75% {
-    transform: translateX(calc(var(--max-width) * 0)); }
-  25%, 43.75% {
-    transform: translateX(calc(var(--max-width) * -0.5)); }
-  50%, 68.75% {
-    transform: translateX(calc(var(--max-width) * -1)); }
-  75%, 93.75% {
-    transform: translateX(calc(var(--max-width) * -1.5)); }
-  99.99% {
-    transform: translateX(calc(var(--max-width)*-2)); } }
-
-@keyframes scroll-4-end {
-  68.74%, 100% {
-    transform: none; }
-  68.75%, 99.99% {
-    transform: translateX(calc(var(--max-width)*2)); } }
-
-@keyframes scroll-4-end-2 {
-  93.74%, 100% {
-    transform: none; }
-  93.75%, 99.99% {
-    transform: translateX(calc(var(--max-width)*2)); } }
-    .meta.carousel .items-4 .item:first-child {
-      animation: scroll-4-end 16s linear infinite; }
-    .meta.carousel .items-4 .item:nth-child(2) {
-      animation: scroll-4-end-2 16s linear infinite; }
   .meta.carousel .items-5 {
     animation: scroll-5 20s linear infinite; }
 
@@ -1892,6 +1862,40 @@ header {
       animation: scroll-5-end 20s linear infinite; }
     .meta.carousel .items-5 .item:nth-child(2) {
       animation: scroll-5-end-2 20s linear infinite; }
+  @media (max-width: 768px) {
+    .meta.carousel .item {
+      min-width: calc(var(--max-width) - 40px); }
+    @keyframes scroll-md-5 {
+      0%,
+      15% {
+        transform: translateX(calc(var(--max-width) * 0)); }
+      20%,
+      35% {
+        transform: translateX(calc(var(--max-width) * -1)); }
+      40%,
+      55% {
+        transform: translateX(calc(var(--max-width) * -2)); }
+      60%,
+      75% {
+        transform: translateX(calc(var(--max-width) * -3)); }
+      80%,
+      95% {
+        transform: translateX(calc(var(--max-width) * -4)); }
+      99.99% {
+        transform: translateX(calc(var(--max-width)*-5)); } }
+    @keyframes scroll-md-5-end {
+      74.99%,
+      100% {
+        transform: none; }
+      75%,
+      99.99% {
+        transform: translateX(calc(var(--max-width)*5)); } }
+    .meta.carousel .items-5 {
+      animation: scroll-md-5 20s infinite; }
+      .meta.carousel .items-5 .item:first-child {
+        animation: scroll-md-5-end 20s infinite; }
+      .meta.carousel .items-5 .item:nth-child(2) {
+        animation: none; } }
 
 footer {
   background: #282828;

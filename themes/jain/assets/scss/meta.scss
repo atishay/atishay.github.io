@@ -348,7 +348,7 @@
         text-align: right;
     }
 
-    // Auto-scroll for carousal
+    // Pause auto-scroll for carousal
     .items {
         &:hover {
             animation-play-state: paused;
@@ -418,4 +418,58 @@
             animation: scroll-#{$i} $i * $interval linear infinite;
         }
     }
+
+    @include media("<=md") {
+        .item {
+            min-width: calc(var(--max-width) - 40px);
+        }
+        @for $i from $min-carousal through $max-carousal {
+            @keyframes scroll-md-#{$i} {
+                $delta: 100%/$i;
+                $shift: 0.25 * $delta;
+                $max: $i - 1;
+
+                @for $j from 0 through $max {
+                    $percent: $j*$delta;
+                    $movement: $j*-1;
+                    $shifted: $percent + $delta - $shift;
+
+                    #{$percent},
+                    #{$shifted} {
+                        transform: translateX(calc(var(--max-width) * #{$movement}));
+                    }
+                }
+                99.99% {
+                    $final: -1 * $i;
+                    transform: translateX(calc(var(--max-width)*#{$final}))
+                }
+            }
+            @keyframes scroll-md-#{$i}-end {
+                $delta: 100%/$i;
+                $shift: 0.25 * $delta;
+                $loc1: 100% -$delta - $shift;
+                $loc0: $loc1 - 0.01;
+
+                #{$loc0},
+                100% {
+                    transform: none;
+                }
+
+                #{$loc1},
+                99.99% {
+                    transform: translateX(calc(var(--max-width)*#{$i}))
+                }
+            }
+            .items-#{$i} {
+                animation: scroll-md-#{$i} $i * $interval infinite;
+                .item:first-child {
+                    animation: scroll-md-#{$i}-end $i * $interval infinite;
+                }
+                .item:nth-child(2) {
+                    animation: none;
+                }
+            }
+        }
+    }
+    // End carousel animation
 }
