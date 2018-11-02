@@ -10,7 +10,7 @@
     {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{ end }}
     {{with .content}}<p>{{. | markdownify}}</p>{{ end }}
     {{with .items}}
-        <div class="items items-{{len .}}" data-items="{{len .}}">
+        <div class="items items-{{len .}}">
             {{- range . -}}
             <div class="item">
 {{- with .icon -}}

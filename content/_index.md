@@ -364,9 +364,12 @@ content:
         - title: Gaurav Dewan <small> Colleague at Adobe</small>
           content: Methodical, precise and organized. When he takes up a task, he strives for the best and aims high. Among his notable personal traits are modesty and sincerity.
           icon: home/gd.jpg
-        # - title: Rohan Khanna <small> Colleague at Thapar University</small>
-        #   content: One of the most skilled and knowledgeable person I had come across while in college. Can handle, with ease, all the tasks that are allotted to him.
-        #   icon: home/rohan.jpg
+        - title: Rohan Khanna <small> Colleague at Thapar University</small>
+          content: One of the most skilled and knowledgeable person I had come across while in college. Can handle, with ease, all the tasks that are allotted to him.
+          icon: home/rohan.jpg
+        - title: Gavin Peacock <small> Reporting Manager at Adobe</small>
+          icon: home/gavin.jpg
+          content: It was astounding to see how rapidly he came up to speed and became a key member and lead on the team. He has the ability to take on all aspects of a task, understanding everything required to get things done. He has made a great impact. I highly recommend him!
     - title: Proficiency
       subtitle: "After knowing the basics of programming, one should know the assumptions and constraints of the domain. \n It doesn't matter what language or tooling is needed. You can get upto speed quickly."
       items:
