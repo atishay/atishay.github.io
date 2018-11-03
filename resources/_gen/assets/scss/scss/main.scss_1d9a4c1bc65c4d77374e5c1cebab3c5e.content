@@ -166,6 +166,7 @@ input, textarea {
   margin-bottom: 20px; }
 
 button, .button, .button-small {
+  cursor: pointer;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -185,9 +186,12 @@ button, .button, .button-small {
   z-index: 2; }
   button:focus, .button:focus, .button-small:focus {
     outline: none; }
-  button:hover, button:focus, .button:hover, .button:focus, .button-small:hover, .button-small:focus {
+  button:checked, button:hover, button:focus, .button:checked, .button:hover, .button:focus, .button-small:checked, .button-small:hover, .button-small:focus {
     color: #fff;
     filter: none; }
+  button:checked:hover, .button:checked:hover, .button-small:checked:hover {
+    transition: filter 0.5s ease-in;
+    filter: brightness(90%); }
   button:before, .button:before, .button-small:before {
     content: "";
     position: absolute;
@@ -199,7 +203,7 @@ button, .button, .button-small {
     top: 100%;
     left: 100%;
     transition: all .5s; }
-  button:hover:before, button:focus:before, .button:hover:before, .button:focus:before, .button-small:hover:before, .button-small:focus:before {
+  button:checked:before, button:hover:before, button:focus:before, .button:checked:before, .button:hover:before, .button:focus:before, .button-small:checked:before, .button-small:hover:before, .button-small:focus:before {
     top: -30px;
     left: -30px; }
   button.disabled, .button.disabled, .button-small.disabled {
@@ -1897,12 +1901,198 @@ header {
       .meta.carousel .items-5 .item:nth-child(2) {
         animation: none; } }
 
-.meta.filter .item-cover {
-  width: 100%;
-  height: auto; }
-
-.meta.filter .items {
-  grid-row-gap: 40px; }
+.meta.filter {
+  text-align: center; }
+  .meta.filter .item-cover {
+    width: 100%;
+    height: auto; }
+  .meta.filter .filter {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 14px;
+    padding: 5px 12px;
+    border-radius: 2px; }
+    .meta.filter .filter:after {
+      content: attr(value); }
+  .meta.filter .items {
+    display: flex;
+    flex-wrap: wrap; }
+  .meta.filter .filter-0:checked ~ .items > .filter-0 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-0:checked ~ .items > .filter-0 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-0:checked ~ .items > .filter-0 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-0:checked ~ .items > .filter-0 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-0:checked ~ .items > .filter-0 small {
+      font-size: smaller; }
+  .meta.filter .filter-1:checked ~ .items > .filter-1 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-1:checked ~ .items > .filter-1 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-1:checked ~ .items > .filter-1 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-1:checked ~ .items > .filter-1 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-1:checked ~ .items > .filter-1 small {
+      font-size: smaller; }
+  .meta.filter .filter-2:checked ~ .items > .filter-2 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-2:checked ~ .items > .filter-2 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-2:checked ~ .items > .filter-2 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-2:checked ~ .items > .filter-2 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-2:checked ~ .items > .filter-2 small {
+      font-size: smaller; }
+  .meta.filter .filter-3:checked ~ .items > .filter-3 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-3:checked ~ .items > .filter-3 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-3:checked ~ .items > .filter-3 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-3:checked ~ .items > .filter-3 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-3:checked ~ .items > .filter-3 small {
+      font-size: smaller; }
+  .meta.filter .filter-4:checked ~ .items > .filter-4 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-4:checked ~ .items > .filter-4 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-4:checked ~ .items > .filter-4 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-4:checked ~ .items > .filter-4 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-4:checked ~ .items > .filter-4 small {
+      font-size: smaller; }
+  .meta.filter .filter-5:checked ~ .items > .filter-5 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-5:checked ~ .items > .filter-5 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-5:checked ~ .items > .filter-5 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-5:checked ~ .items > .filter-5 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-5:checked ~ .items > .filter-5 small {
+      font-size: smaller; }
+  .meta.filter .filter-6:checked ~ .items > .filter-6 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-6:checked ~ .items > .filter-6 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-6:checked ~ .items > .filter-6 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-6:checked ~ .items > .filter-6 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-6:checked ~ .items > .filter-6 small {
+      font-size: smaller; }
+  .meta.filter .filter-7:checked ~ .items > .filter-7 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-7:checked ~ .items > .filter-7 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-7:checked ~ .items > .filter-7 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-7:checked ~ .items > .filter-7 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-7:checked ~ .items > .filter-7 small {
+      font-size: smaller; }
+  .meta.filter .filter-8:checked ~ .items > .filter-8 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-8:checked ~ .items > .filter-8 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-8:checked ~ .items > .filter-8 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-8:checked ~ .items > .filter-8 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-8:checked ~ .items > .filter-8 small {
+      font-size: smaller; }
+  .meta.filter .filter-9:checked ~ .items > .filter-9 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-9:checked ~ .items > .filter-9 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-9:checked ~ .items > .filter-9 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-9:checked ~ .items > .filter-9 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-9:checked ~ .items > .filter-9 small {
+      font-size: smaller; }
+  .meta.filter .filter-10:checked ~ .items > .filter-10 {
+    width: calc(var(--max-width)/3 - 50px);
+    margin: 20px;
+    transform: none;
+    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
+    .meta.filter .filter-10:checked ~ .items > .filter-10 h2 {
+      font-size: 21px; }
+    .meta.filter .filter-10:checked ~ .items > .filter-10 .links {
+      font-size: 12px;
+      transition-delay: 0s; }
+    .meta.filter .filter-10:checked ~ .items > .filter-10 * {
+      font-size: 100%;
+      transition-delay: 0s; }
+    .meta.filter .filter-10:checked ~ .items > .filter-10 small {
+      font-size: smaller; }
+  .meta.filter .item {
+    width: 0;
+    transform: scale(0);
+    transform-origin: 20% 40%;
+    transition: transform 0.5s ease-in, width 0.50s ease-out 0.45s; }
+    .meta.filter .item * {
+      transition: font-size 0.1s ease-out 0s;
+      font-size: 0%; }
 
 footer {
   background: #282828;

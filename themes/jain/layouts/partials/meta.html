@@ -16,12 +16,31 @@
         {{partialCached "util/post.html" . .RelPermalink}}
         {{- end -}}
     </ul>
-
+    {{- end -}}
+    {{- $defaultFilter := .filter -}}
+    {{- $filter := false -}}
+    {{- $list := "" -}}
+    {{- $filters := newScratch }}
+    {{- if eq .type "filter" -}}
+        {{- range .items -}}
+            {{ $list = print $list " " (trim .filter " ") }}
+        {{- end -}}
+        {{- $list = uniq (split (trim $list " ") " ") -}}
+        {{- $title := .title | urlize}}
+        {{- range $index, $element := $list -}}
+            {{- $filters.Set $element $index -}}
+<input type="radio" name="{{$title}}" {{if eq $defaultFilter $element}} checked="true" {{end}} class="filter button filter-{{$index}}" value="{{$element}}">
+        {{- end -}}
     {{- end -}}
     {{with .items}}
         <div class="items items-{{len .}}">
             {{- range . -}}
-            <div class="item">
+            <div class="item {{if ne $list "" }}
+            {{- with .filter -}}
+            {{- range (split (trim . " ") " ") -}}
+                filter-{{$filters.Get .}} {{ end -}}
+            {{- end -}}
+            {{- end -}}">
 {{- with .icon -}}
 {{- partialCached "util/icon" (dict "key" . "size" 40 "class" "item-icon") (print . "item-icon") -}}
 {{- end -}}

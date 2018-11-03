@@ -479,12 +479,62 @@
 ///////////////////////////////////////
 
 .meta.filter {
+    text-align: center;
     .item-cover {
         width: 100%;
         height: auto;
     }
 
+    .filter {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &:after {
+            content: attr(value);
+        }
+        text-align: center;
+        margin: 0 5px;
+        font-size: 14px;
+        padding: 5px 12px;
+        border-radius: 2px;
+    }
+
     .items {
-        grid-row-gap: 40px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @for $i from 0 through 10 {
+        .filter-#{$i}:checked~.items>.filter-#{$i} {
+            width: calc(var(--max-width)/3 - 50px);
+            margin: 20px;
+            transform: none;
+            h2 {
+                font-size: 21px;
+            }
+            .links {
+                font-size: 12px;
+                transition-delay: 0s;
+            }
+            * {
+                font-size: 100%;
+                transition-delay: 0s;
+            }
+            small {
+                font-size: smaller;
+            }
+            transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s;
+
+        }
+    }
+    .item {
+        width: 0;
+        transform: scale(0);
+        transform-origin: 20% 40%;
+        transition: transform 0.5s ease-in, width 0.50s ease-out 0.45s;
+        * {
+            transition: font-size 0.1s ease-out 0s;
+            font-size: 0%
+        }
     }
 }
+
