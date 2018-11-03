@@ -214,11 +214,11 @@ content:
           * Completed Kashmir Great Lakes and Kedarkantha treks.
     - title: Projects
       type: filter
+      filter: all
       subtitle: Below is a selection of some of my popular projects, their short descriptions and useful links.
       items:
       - title: Adobe Shape CC
-        filters:
-        - adobe
+        filter: all adobe
         image:
           href: projects/shape.jpg
           width: 267
@@ -233,8 +233,7 @@ content:
 
           Briefly after its launch, this app was selected by Apple to be a part of the demo iPhones shown to the users at the Apple Stores. With almost a million downloads, Adobe Shape made into the marquee feature of Adobe Capture.
       - title: All Autocomplete
-        filters:
-        - code
+        filter: all code
         image:
           href: projects/all.png
           anchor: Center
@@ -253,8 +252,7 @@ content:
 
           FOSS extension with over 25k downloads and community driven features. Pull Requests welcome.
       - title: Adobe Kuler
-        filters:
-        - adobe
+        filter: all adobe
         links:
           - href: http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html
             title: Read More
@@ -269,8 +267,7 @@ content:
 
           Winner of multiple awards like the IxDA interaction design awards, Communication Arts interactive design awards and FWA app of th day. Had a million downloads before being merged into adobe capture.
       - title: 26 January
-        filters:
-        - media
+        filter: all media
         image:
           href: projects/26.png
           anchor: Center
@@ -286,8 +283,7 @@ content:
 
           Was built specifically for participating in contests. Wonderful acting by some of the veterans of the Thapar movie club.
       - title: AOE Campaigns
-        filters:
-        - games
+        filter: all games
         image:
           href: projects/aoe.png
           anchor: Center
@@ -306,8 +302,7 @@ content:
 
           Were created when I was 15. Published in the SKOAR game magazine in 2006. The campaigns were accompanied with introductory voice-overs.
       - title: Wasim Mujahideen
-        filters:
-        - media
+        filter: all media
         image:
           href: projects/wasim.jpg
           width: 267
@@ -322,8 +317,7 @@ content:
 
           Won IIT R Thomso 2008 in short film category but I don't have a proof for it. You can still enjoy the performance by Thapar Movie Club
       - title: Flash Game - Ball in the Hole
-        filters:
-        - games
+        filter: all games
         image:
           href: projects/ball.png
           anchor: Center
@@ -339,8 +333,7 @@ content:
 
           Created when I was a kid. Lost source code. It has over 30 levels with a proper dragon level in the end, bonus level on every 5 levels and clear instructions on how to play. Windows only. Relive the glorious days of simple indie flash games.
       - title: Bond Forever
-        filters:
-        - media
+        filter: all media
         image:
           href: projects/bond.jpg
           anchor: Center
@@ -355,8 +348,7 @@ content:
 
           Created while learning 3D design and rendering. Was intended to be a short film but never got to real work, only a screenplay.
       - title: Sabse Bada Rupaiya
-        filters:
-        - media
+        filter: all media
         image:
           href: projects/rupee.png
           anchor: Center

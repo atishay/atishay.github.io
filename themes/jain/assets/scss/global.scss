@@ -183,6 +183,7 @@ table::-webkit-resizer {
 }
 
 button, .button, .button-small {
+    cursor: pointer;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -203,9 +204,13 @@ button, .button, .button-small {
     &:focus {
         outline: none;
     }
-    &:hover, &:focus {
+    &:checked, &:hover, &:focus {
         color: #fff;
         filter: none;
+    }
+    &:checked:hover {
+        transition: filter 0.5s ease-in;
+        filter: brightness(90%);
     }
     &:before {
         content: "";
@@ -219,6 +224,7 @@ button, .button, .button-small {
         left: 100%;
         transition: all .5s;
     }
+    &:checked:before,
     &:hover:before,
     &:focus:before {
         top: -30px;
