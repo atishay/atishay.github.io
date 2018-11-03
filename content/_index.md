@@ -403,7 +403,6 @@ content:
     - title: Blog
       subtitle: "Read more about my thoughts at my blog. \nHere are some recent posts"
       type: blog
-      count: 3
+      count: 6
       section: blog
 ---
-
