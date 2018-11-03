@@ -313,6 +313,10 @@ button, .button, .button-small {
     .items-8 {
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
+@media (min-width: 768px) {
+  .items-6 {
+    grid-template-columns: 1fr 1fr; } }
+
 .items-3,
 .items-6,
 .items-9 {
@@ -325,10 +329,6 @@ button, .button, .button-small {
     .items-6,
     .items-9 {
       grid-template-columns: 1fr 1fr 1fr; } }
-
-@media (min-width: 768px) {
-  .items-6 {
-    grid-template-columns: 1fr 1fr; } }
 
 .items-2 {
   display: grid;

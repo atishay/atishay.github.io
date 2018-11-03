@@ -400,6 +400,10 @@ content:
           * Installers
           * Electron with Native Modules
           * Your language / framework
-
+    - title: Blog
+      subtitle: "Read more about my thoughts at my blog. \nHere are some recent posts"
+      type: blog
+      count: 3
+      section: blog
 ---
 

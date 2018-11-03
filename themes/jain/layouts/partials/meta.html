@@ -1,3 +1,4 @@
+{{$site := .Site}}
 {{- range .Params.content -}}
 <section class="meta {{.type | default "default"}}">
     {{with .icon}}{{- partialCached "util/icon" (dict "key" . "size" 50 "class" "main-icon") (print . "main-icon") -}}{{ end }}
@@ -9,6 +10,14 @@
     {{with .title}}<h1>{{. | markdownify}}</h1>{{ end }}
     {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{ end }}
     {{with .content}}<p>{{. | markdownify}}</p>{{ end }}
+    {{- if eq .type "blog" -}}
+    <ul class="items items-{{.count | default 6}}">
+        {{- range first (default .count 6) (where (where $site.Pages ".Section" .section) ".Kind" "page" ) -}}
+        {{partialCached "util/post.html" . .RelPermalink}}
+        {{- end -}}
+    </ul>
+
+    {{- end -}}
     {{with .items}}
         <div class="items items-{{len .}}">
             {{- range . -}}
