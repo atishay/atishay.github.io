@@ -251,37 +251,6 @@ content:
           Open Source extensions to Visual Studio Code that provides autocompletion/intellisense items based on all open files in the editor.
 
           FOSS extension with over 25k downloads and community driven features. Pull Requests welcome.
-      - title: Adobe Kuler
-        filter: all adobe
-        links:
-          - href: http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html
-            title: Read More
-            icon: external-link
-        attribution: Mockup from the cover on [youtube](https://youtube.com/watch?v=UTb4tfrvnG4)
-        image:
-          href: projects/kuler.jpg
-          width: 267
-          height: 180
-        content: |
-          Augmented Reality Color capture application. Captures colors from video and images into themes. Also features a color wheel and color theme sliders.
-
-          Winner of multiple awards like the IxDA interaction design awards, Communication Arts interactive design awards and FWA app of th day. Had a million downloads before being merged into adobe capture.
-      - title: 26 January
-        filter: all media
-        image:
-          href: projects/26.png
-          anchor: Center
-          width: 267
-          height: 180
-        attribution: Mokcup from [Graphictwister](https://graphictwister.com/samsung-smart-tv-mockup/)
-        links:
-          - href: https://vimeo.com/16069535
-            title: Watch
-            icon: film
-        content: |
-          Short film developed in college. A satirical piece on the state of humans and the Indian society.
-
-          Was built specifically for participating in contests. Wonderful acting by some of the veterans of the Thapar movie club.
       - title: AOE Campaigns
         filter: all games
         image:
@@ -301,21 +270,37 @@ content:
           Over 50 scenarios in two custom campaigns for Age Of Empires I and II.
 
           Were created when I was 15. Published in the SKOAR game magazine in 2006. The campaigns were accompanied with introductory voice-overs.
-      - title: Wasim Mujahideen
+      - title: 26 January
         filter: all media
         image:
-          href: projects/wasim.jpg
+          href: projects/26.png
+          anchor: Center
           width: 267
           height: 180
-        attribution: Tempate from [Wegraphics](https://wegraphics.net/downloads/film-poster-psd-template/) & [Graphic Burger](https://graphicburger.com/down/?q=bus-stop-billboard-mockup)
+        attribution: Mokcup from [Graphictwister](https://graphictwister.com/samsung-smart-tv-mockup/)
         links:
-          - href: https://vimeo.com/16035249
+          - href: https://vimeo.com/16069535
             title: Watch
             icon: film
         content: |
-          Short film shot during college of a guy wrongly accused just because of his name.
+          Short film developed in college. A satirical piece on the state of humans and the Indian society.
 
-          Won IIT R Thomso 2008 in short film category but I don't have a proof for it. You can still enjoy the performance by Thapar Movie Club
+          Was built specifically for participating in contests. Wonderful acting by some of the veterans of the Thapar movie club.
+      - title: Adobe Kuler
+        filter: all adobe
+        links:
+          - href: http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html
+            title: Read More
+            icon: external-link
+        attribution: Mockup from the cover on [youtube](https://youtube.com/watch?v=UTb4tfrvnG4)
+        image:
+          href: projects/kuler.jpg
+          width: 267
+          height: 180
+        content: |
+          Augmented Reality Color capture application. Captures colors from video and images into themes. Also features a color wheel and color theme sliders.
+
+          Winner of multiple awards like the IxDA interaction design awards, Communication Arts interactive design awards and FWA app of th day. Had a million downloads before being merged into adobe capture.
       - title: Flash Game - Ball in the Hole
         filter: all games
         image:
@@ -332,6 +317,21 @@ content:
           Twist to the classic maze game where you control the acceleration and not the speed.
 
           Created when I was a kid. Lost source code. It has over 30 levels with a proper dragon level in the end, bonus level on every 5 levels and clear instructions on how to play. Windows only. Relive the glorious days of simple indie flash games.
+      - title: Wasim Mujahideen
+        filter: all media
+        image:
+          href: projects/wasim.jpg
+          width: 267
+          height: 180
+        attribution: Tempate from [Wegraphics](https://wegraphics.net/downloads/film-poster-psd-template/) & [Graphic Burger](https://graphicburger.com/down/?q=bus-stop-billboard-mockup)
+        links:
+          - href: https://vimeo.com/16035249
+            title: Watch
+            icon: film
+        content: |
+          Short film shot during college of a guy wrongly accused just because of his name.
+
+          Won IIT R Thomso 2008 in short film category but I don't have a proof for it. You can still enjoy the performance by Thapar Movie Club
       - title: Bond Forever
         filter: all media
         image:

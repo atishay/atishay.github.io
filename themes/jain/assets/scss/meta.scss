@@ -508,33 +508,18 @@
             width: calc(var(--max-width)/3 - 50px);
             margin: 20px;
             transform: none;
-            h2 {
-                font-size: 21px;
-            }
-            .links {
-                font-size: 12px;
-                transition-delay: 0s;
-            }
-            * {
-                font-size: 100%;
-                transition-delay: 0s;
-            }
-            small {
-                font-size: smaller;
-            }
-            transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s;
-
+            transition: transform 0.50s ease-out 0.45s,
+                        width 0.50s ease-out;
         }
     }
     .item {
         width: 0;
+        margin: 0;
         transform: scale(0);
         transform-origin: 20% 40%;
-        transition: transform 0.5s ease-in, width 0.50s ease-out 0.45s;
-        * {
-            transition: font-size 0.1s ease-out 0s;
-            font-size: 0%
-        }
+        transition: transform 0.5s ease-in,
+            width 0.50s ease-out 0.45s,
+            margin 0.50s ease-out 0.45s;
     }
 }
 

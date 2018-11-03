@@ -1924,175 +1924,63 @@ header {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-0:checked ~ .items > .filter-0 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-0:checked ~ .items > .filter-0 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-0:checked ~ .items > .filter-0 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-0:checked ~ .items > .filter-0 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-1:checked ~ .items > .filter-1 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-1:checked ~ .items > .filter-1 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-1:checked ~ .items > .filter-1 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-1:checked ~ .items > .filter-1 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-1:checked ~ .items > .filter-1 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-2:checked ~ .items > .filter-2 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-2:checked ~ .items > .filter-2 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-2:checked ~ .items > .filter-2 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-2:checked ~ .items > .filter-2 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-2:checked ~ .items > .filter-2 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-3:checked ~ .items > .filter-3 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-3:checked ~ .items > .filter-3 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-3:checked ~ .items > .filter-3 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-3:checked ~ .items > .filter-3 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-3:checked ~ .items > .filter-3 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-4:checked ~ .items > .filter-4 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-4:checked ~ .items > .filter-4 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-4:checked ~ .items > .filter-4 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-4:checked ~ .items > .filter-4 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-4:checked ~ .items > .filter-4 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-5:checked ~ .items > .filter-5 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-5:checked ~ .items > .filter-5 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-5:checked ~ .items > .filter-5 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-5:checked ~ .items > .filter-5 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-5:checked ~ .items > .filter-5 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-6:checked ~ .items > .filter-6 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-6:checked ~ .items > .filter-6 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-6:checked ~ .items > .filter-6 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-6:checked ~ .items > .filter-6 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-6:checked ~ .items > .filter-6 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-7:checked ~ .items > .filter-7 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-7:checked ~ .items > .filter-7 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-7:checked ~ .items > .filter-7 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-7:checked ~ .items > .filter-7 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-7:checked ~ .items > .filter-7 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-8:checked ~ .items > .filter-8 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-8:checked ~ .items > .filter-8 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-8:checked ~ .items > .filter-8 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-8:checked ~ .items > .filter-8 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-8:checked ~ .items > .filter-8 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-9:checked ~ .items > .filter-9 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-9:checked ~ .items > .filter-9 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-9:checked ~ .items > .filter-9 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-9:checked ~ .items > .filter-9 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-9:checked ~ .items > .filter-9 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-10:checked ~ .items > .filter-10 {
     width: calc(var(--max-width)/3 - 50px);
     margin: 20px;
     transform: none;
-    transition: transform 0.50s ease-out 0.45s, width 0.25s ease-in 0s; }
-    .meta.filter .filter-10:checked ~ .items > .filter-10 h2 {
-      font-size: 21px; }
-    .meta.filter .filter-10:checked ~ .items > .filter-10 .links {
-      font-size: 12px;
-      transition-delay: 0s; }
-    .meta.filter .filter-10:checked ~ .items > .filter-10 * {
-      font-size: 100%;
-      transition-delay: 0s; }
-    .meta.filter .filter-10:checked ~ .items > .filter-10 small {
-      font-size: smaller; }
+    transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .item {
     width: 0;
+    margin: 0;
     transform: scale(0);
     transform-origin: 20% 40%;
-    transition: transform 0.5s ease-in, width 0.50s ease-out 0.45s; }
-    .meta.filter .item * {
-      transition: font-size 0.1s ease-out 0s;
-      font-size: 0%; }
+    transition: transform 0.5s ease-in, width 0.50s ease-out 0.45s, margin 0.50s ease-out 0.45s; }
 
 footer {
   background: #282828;
