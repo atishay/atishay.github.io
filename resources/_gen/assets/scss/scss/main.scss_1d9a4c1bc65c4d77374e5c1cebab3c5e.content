@@ -1897,6 +1897,13 @@ header {
       .meta.carousel .items-5 .item:nth-child(2) {
         animation: none; } }
 
+.meta.filter .item-cover {
+  width: 100%;
+  height: auto; }
+
+.meta.filter .items {
+  grid-row-gap: 40px; }
+
 footer {
   background: #282828;
   color: #7C7C7C; }

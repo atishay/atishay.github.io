@@ -473,3 +473,18 @@
     }
     // End carousel animation
 }
+
+///////////////////////////////////////
+// Filter type
+///////////////////////////////////////
+
+.meta.filter {
+    .item-cover {
+        width: 100%;
+        height: auto;
+    }
+
+    .items {
+        grid-row-gap: 40px;
+    }
+}
