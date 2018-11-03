@@ -386,6 +386,12 @@ button, .button, .button-small {
     grid-row-gap: 20px;
 }
 
+.items-6 {
+    @include media(">=md") {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .items-3,
 .items-6,
 .items-9 {
@@ -398,12 +404,6 @@ button, .button, .button-small {
 
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-}
-
-.items-6 {
-    @include media(">=md") {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 .items-2 {
