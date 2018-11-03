@@ -12,7 +12,7 @@
     {{with .content}}<p>{{. | markdownify}}</p>{{ end }}
     {{- if eq .type "blog" -}}
     <ul class="items items-{{.count | default 6}}">
-        {{- range first (default .count 6) (where (where $site.Pages ".Section" .section) ".Kind" "page" ) -}}
+        {{- range first (default 6 .count) (where (where $site.Pages ".Section" .section) ".Kind" "page" ) -}}
         {{partialCached "util/post.html" . .RelPermalink}}
         {{- end -}}
     </ul>
