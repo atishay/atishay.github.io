@@ -1982,6 +1982,36 @@ header {
     transform-origin: 20% 40%;
     transition: transform 0.5s ease-in, width 0.50s ease-out 0.45s, margin 0.50s ease-out 0.45s; }
 
+.meta.centered {
+  min-height: 50vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate3d(0, 0, 0); }
+  .meta.centered .items {
+    background: inherit; }
+  .meta.centered .item {
+    position: relative;
+    background: inherit;
+    overflow: hidden;
+    padding: 20px; }
+    .meta.centered .item:before {
+      content: " ";
+      position: absolute;
+      top: -25px;
+      left: -25px;
+      bottom: -25px;
+      right: -25px;
+      background: inherit;
+      box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.4);
+      filter: blur(10px); }
+    .meta.centered .item * {
+      z-index: 5;
+      text-align: center; }
+
 footer {
   background: #282828;
   color: #7C7C7C; }

@@ -523,3 +523,39 @@
     }
 }
 
+
+.meta.centered {
+    min-height: 50vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate3d(0, 0, 0);
+    .items {
+        background: inherit;
+    }
+    .item {
+        position: relative;
+        background: inherit;
+        overflow: hidden;
+        padding: 20px;
+        &:before {
+            content: " ";
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            bottom: -25px;
+            right: -25px;
+            background: inherit;
+            box-shadow: inset 0 0 0 200px rgba(255, 255, 255, .4);
+            filter: blur(10px);
+        }
+        * {
+            z-index: 5;
+            // position: relative;
+            text-align: center;
+        }
+    }
+}

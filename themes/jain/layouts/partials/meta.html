@@ -1,6 +1,11 @@
 {{$site := .Site}}
 {{- range .Params.content -}}
-<section class="meta {{.type | default "default"}}">
+<section class="meta {{.type | default "default"}}"
+{{- with.background -}}
+{{ $bg := resources.Get . }}
+style="background-image:url({{$bg.Permalink}})"
+{{- end -}}
+>
     {{with .icon}}{{- partialCached "util/icon" (dict "key" . "size" 50 "class" "main-icon") (print . "main-icon") -}}{{ end }}
     {{- with .image -}}
     {{$anchor := .anchor | default "" }}
