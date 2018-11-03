@@ -416,4 +416,10 @@ content:
       type: blog
       count: 6
       section: blog
+    - type: centered
+      background: home/bayarea.jpg
+      items:
+      - title: Contact Me
+        content: Leave me a message at [contact [at] atishay [dot] me](mailto:contact@atishay.me)
+      attribution: Background from [Pixabay](https://pixabay.com/en/golden-gate-bridge-san-francisco-388917/)
 ---
