@@ -76,6 +76,11 @@
             }
         }
     }
+    &>.attribution {
+        position: absolute;
+        right: 5px;
+        bottom: -40px;
+    }
 }
 
 ///////////////////////////////////////
@@ -523,16 +528,18 @@
     }
 }
 
-
+///////////////////////////////////////
+// Centered like Contact US/Quote
+///////////////////////////////////////
+// TODO: Firefox.
 .meta.centered {
-    min-height: 50vh;
+    min-height: 80vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate3d(0, 0, 0);
     .items {
         background: inherit;
     }
@@ -541,6 +548,7 @@
         background: inherit;
         overflow: hidden;
         padding: 20px;
+        border-radius: 5px;
         &:before {
             content: " ";
             position: absolute;
@@ -554,7 +562,6 @@
         }
         * {
             z-index: 5;
-            // position: relative;
             text-align: center;
         }
     }
