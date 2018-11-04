@@ -60,3 +60,8 @@ Shadow tricks
 https://30-seconds.github.io/30-seconds-of-css/
 https://github.com/JPeer264/node-rename-css-selectors
 https://github.com/purifycss/purifycss
+
+    "gaze": "^1.1.3",
+    "imageoptim": "^0.5.0",
+    "magick-cli": "^2.0.0",
+    "sqip": "^0.3.3"
