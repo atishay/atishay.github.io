@@ -43,6 +43,7 @@
 .blog-posts {
     width: 100%;
     align-content: center;
+    padding: 0;
 }
 
 .blog-post {
@@ -103,11 +104,23 @@
     align-content: center;
     justify-content: center;
     padding: 40px 0 0;
+    flex-wrap: wrap;
+    .page-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @include media("<sm") {
+        .page-item:last-child, .page-item:first-child {
+            display: none;
+        }
+    }
 
     .page-link {
         text-decoration: none;
         background-color: #fff;
         box-shadow: 0 1px 1px $divider;
+        display: block;
 
         &:hover {
             filter: none;

@@ -498,7 +498,7 @@
             content: attr(value);
         }
         text-align: center;
-        margin: 0 5px;
+        margin: 5px;
         font-size: 14px;
         padding: 5px 12px;
         border-radius: 2px;
@@ -515,6 +515,17 @@
             transform: none;
             transition: transform 0.50s ease-out 0.45s,
                         width 0.50s ease-out;
+        }
+    }
+    @include media("<lg") {
+        @for $i from 0 through 10 {
+            .filter-#{$i}:checked~.items>.filter-#{$i} {
+                width: calc(var(--max-width) - 50px);
+                margin: 10px;
+                transform: none;
+                transition: transform 0.50s ease-out 0.45s,
+                    width 0.50s ease-out;
+            }
         }
     }
     .item {

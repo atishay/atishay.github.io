@@ -8,7 +8,7 @@
 {{ else }}
 {{ $syntax := resources.Get "css/syntax.css" }}
 {{ $main := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts }}
-{{ $cssFiles := slice $main $syntax | resources.Concat "index.css"}}
+{{ $cssFiles := slice $main $syntax | resources.Concat "css/index.css"}}
 {{ $css := $cssFiles | resources.Minify | resources.Fingerprint "sha512" }}
 
 <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
