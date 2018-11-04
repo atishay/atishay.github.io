@@ -1645,6 +1645,10 @@ header {
           transition: none; }
       .meta .item .links a:not(:first-child) {
         margin-left: 10px; }
+  .meta > .attribution {
+    position: absolute;
+    right: 5px;
+    bottom: -40px; }
 
 .meta.default .item-cover {
   width: 100%;
@@ -1983,21 +1987,21 @@ header {
     transition: transform 0.5s ease-in, width 0.50s ease-out 0.45s, margin 0.50s ease-out 0.45s; }
 
 .meta.centered {
-  min-height: 50vh;
+  min-height: 80vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transform: translate3d(0, 0, 0); }
+  justify-content: center; }
   .meta.centered .items {
     background: inherit; }
   .meta.centered .item {
     position: relative;
     background: inherit;
     overflow: hidden;
-    padding: 20px; }
+    padding: 20px;
+    border-radius: 5px; }
     .meta.centered .item:before {
       content: " ";
       position: absolute;
