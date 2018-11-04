@@ -1926,57 +1926,57 @@ header {
     flex-wrap: wrap; }
   .meta.filter .filter-0:checked ~ .items > .filter-0 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-1:checked ~ .items > .filter-1 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-2:checked ~ .items > .filter-2 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-3:checked ~ .items > .filter-3 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-4:checked ~ .items > .filter-4 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-5:checked ~ .items > .filter-5 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-6:checked ~ .items > .filter-6 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-7:checked ~ .items > .filter-7 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-8:checked ~ .items > .filter-8 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-9:checked ~ .items > .filter-9 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .filter-10:checked ~ .items > .filter-10 {
     width: calc(var(--max-width)/3 - 50px);
-    margin: 20px;
+    margin: 10px;
     transform: none;
     transition: transform 0.50s ease-out 0.45s, width 0.50s ease-out; }
   .meta.filter .item {
