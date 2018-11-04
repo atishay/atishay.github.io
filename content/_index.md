@@ -260,11 +260,8 @@ content:
           height: 180
         attribution: Image via [tutorial](https://naldzgraphics.net/video-game-logo-in-photoshop/)
         links:
-          - href: /projects/Empires I.zip
-            title: Download I
-            icon: download
-          - href: /projects/Empires II.zip
-            title: Download II
+          - href: https://github.com/atishay/atishay.github.io/releases/tag/empires
+            title: Download
             icon: download
         content: |
           Over 50 scenarios in two custom campaigns for Age Of Empires I and II.
