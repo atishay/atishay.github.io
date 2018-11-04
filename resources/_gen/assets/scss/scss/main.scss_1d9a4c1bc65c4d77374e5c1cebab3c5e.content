@@ -173,6 +173,7 @@ button, .button, .button-small {
   border-radius: 0px;
   font-weight: 400;
   color: var(--theme-color);
+  background: transparent;
   font-size: 16px;
   padding: 13px 30px;
   user-select: none;
@@ -1476,6 +1477,9 @@ header {
   left: 0;
   top: 0;
   z-index: -1; }
+
+.more ul {
+  padding: 0; }
 
 @media (min-width: 768px) {
   .more ul.items-3 {

@@ -320,6 +320,9 @@
 }
 
 .more {
+    ul {
+        padding: 0;
+    }
     ul.items-3 {
         @include media(">=md") {
             grid-template-columns: 1fr 1fr 1fr;
