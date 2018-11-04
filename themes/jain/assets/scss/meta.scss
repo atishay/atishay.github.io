@@ -76,11 +76,6 @@
             }
         }
     }
-    &>.attribution {
-        position: absolute;
-        right: 5px;
-        bottom: -40px;
-    }
 }
 
 ///////////////////////////////////////
@@ -575,4 +570,23 @@
             text-align: center;
         }
     }
+    &>.attribution {
+        position: absolute;
+        margin-top: calc(40vh - 25px);
+        right: 5px;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 2px;
+        color: #000;
+    }
+}
+
+///////////////////////////////////////
+// Blog section
+///////////////////////////////////////
+
+.meta.blog {
+ &>ul {
+    padding: 0;
+ }
 }
