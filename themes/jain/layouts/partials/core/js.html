@@ -13,6 +13,6 @@
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- end -}}
 
-<!-- {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+{{ if not .Site.IsServer }}
   {{ template "_internal/google_analytics_async.html" . }}
-{{ end }} -->
+{{ end }}
