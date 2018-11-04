@@ -511,7 +511,7 @@
     @for $i from 0 through 10 {
         .filter-#{$i}:checked~.items>.filter-#{$i} {
             width: calc(var(--max-width)/3 - 50px);
-            margin: 20px;
+            margin: 10px;
             transform: none;
             transition: transform 0.50s ease-out 0.45s,
                         width 0.50s ease-out;
@@ -531,7 +531,6 @@
 ///////////////////////////////////////
 // Centered like Contact US/Quote
 ///////////////////////////////////////
-// TODO: Firefox.
 .meta.centered {
     min-height: 80vh;
     background-attachment: fixed;
