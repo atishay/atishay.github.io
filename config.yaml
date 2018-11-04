@@ -6,6 +6,7 @@ theme: "jain"
 disablePathToLower: false
 minify: true
 enableRobotsTXT: true
+googleAnalytics: UA-89338714-1
 ignoreFiles:
     - ".github/"
     - ".gitignore"
