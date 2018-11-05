@@ -1,0 +1,11 @@
+# Install the apt prerequisites
+addons:
+  apt:
+    packages:
+      - python-pygments
+
+install:
+  # Clean and don't fail
+  - rm -rf public || exit 0
+  # Install node_modules
+  - cd themes/jain && npm install
