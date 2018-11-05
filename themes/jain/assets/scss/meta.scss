@@ -550,12 +550,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (hover: none) {
-        background-attachment: scroll;
-        .items {
-            background: rgba(255, 255, 255, 0.5);
-        }
-    }
     .items {
         background: inherit;
     }
@@ -589,6 +583,19 @@
         background: rgba(255, 255, 255, 0.4);
         border-radius: 2px;
         color: #000;
+    }
+    @media (hover: none) {
+        background-attachment: scroll;
+
+        .items {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .item {
+            &:before {
+                content: none;
+            }
+            background: transparent;
+        }
     }
 }
 
