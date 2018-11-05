@@ -70,25 +70,13 @@
             eleHeader.classList.add(classes.unpinned);
         }
     }
-    document.addEventListener("turbolinks:load", function () {
+
+    document.addEventListener("DOMContentLoaded", () => {
         eleCheckbox = document.getElementsByClassName('hamburger')[0];
         eleHeader = document.getElementById('header');
         eleScrollUp = document.getElementsByClassName('scrollUp')[0];
         document.addEventListener('scroll', onScroll, false);
         onScroll();
     });
-})();
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Handling clicking on scrollToTop
-    // Should remove once Safari and Edge support
-    // CSS Based scroll behavior: https://caniuse.com/#feat=css-scroll-behavior
-    document.getElementsByClassName('scrollUp')[0].addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    });
-});
+})();

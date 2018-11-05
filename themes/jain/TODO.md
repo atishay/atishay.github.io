@@ -2,6 +2,8 @@
 * Image Preloading
 * Picture tag and image resizing
 * ImageOptim
+* Image placeholder via [SQIP](sqip)
+* [Minimize selectors](https://github.com/JPeer264/node-rename-css-selectors)
 * [WebP or jp2](http://www.useragentman.com/blog/2015/01/14/using-webp-jpeg2000-jpegxr-apng-now-with-picturefill-and-modernizr/)
 * Scroll Animations
 * Scroll Progress indicator
@@ -14,7 +16,7 @@
 * Service worker
 * Hosting solution
 * Video Tags
-* Turbolinks
+* Page Transition animations
 * Credits page
 * Emoticons Page
 * Color Switching
@@ -24,12 +26,14 @@
 * Blog archive tree.
 * https://github.com/thedaviddias/Front-End-Performance-Checklist
 * Move styles from tag cloud to CSS files.
-* Math support
 * Link before each header.
 * Taxonomy collapsible.
 * Table of Contents
-* Analytics
-
+* Analytics (Image only)
+* Use position fixed on iPad.
+* Use [Fancy Shadows](https://30-seconds.github.io/30-seconds-of-css/)
+* Remove [Ununsed CSS](https://github.com/purifycss/purifycss)
+* Build Home Page - scrollmagic, parallax
 
 Submit for awards
 ----------------
@@ -54,14 +58,5 @@ The FWA
 One Page Love
 
 
-Home Page - npm install scrollmagic,
-https://github.com/wagerfield/parallax
-Shadow tricks
-https://30-seconds.github.io/30-seconds-of-css/
-https://github.com/JPeer264/node-rename-css-selectors
-https://github.com/purifycss/purifycss
 
-    "gaze": "^1.1.3",
-    "imageoptim": "^0.5.0",
-    "magick-cli": "^2.0.0",
-    "sqip": "^0.3.3"
+

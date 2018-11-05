@@ -1,15 +1,13 @@
 {{ $header := resources.Get "js/header.js" }}
 {{ $time := resources.Get "js/time.js" }}
-{{ $turbolinks := resources.Get "js/turbolinks.js" }}
 {{/* Remove this polyfill once Safari supports scroll behavior: https://caniuse.com/#feat=css-scroll-behavior */}}
 {{ $main := resources.Get "js/main.js" }}
 {{- if .Site.IsServer -}}
-<script type="text/javascript" src="{{ $turbolinks.Permalink }}" defer></script>
 <script type="text/javascript" src="{{ $time.Permalink }}" defer></script>
 <script type="text/javascript" src="{{ $header.Permalink }}" defer></script>
 <script type="text/javascript" src="{{ $main.Permalink }}" defer></script>
 {{- else -}}
-{{ $js := slice $turbolinks $time $header $main | resources.Concat "js/main.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{ $js := slice $time $header $main | resources.Concat "js/main.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- end -}}
 

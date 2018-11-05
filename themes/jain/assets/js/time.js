@@ -36,21 +36,13 @@ function getNewTime(value) {
         return years + ' years ago';
     }
 }
-
-
-document.addEventListener("turbolinks:load", function () {
+document.addEventListener("DOMContentLoaded", () => {
     Array.from(document.getElementsByTagName('time')).forEach((x) => {
-        if (x.hasAttribute('data-no-bother')) {
-            // Turbolinks has already fixed the time here.
-            console.log("Encountered fixed link");
-            return;
-        }
         if (x.className === 'now') {
             x.innerText = new Date().getFullYear();
         } else {
             x.innerText = getNewTime(x.getAttribute('datetime'));
         }
-        x.setAttribute('data-no-bother', true);
         // TODO: Attach event listener to update the string here.
     });
 });
