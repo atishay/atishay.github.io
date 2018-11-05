@@ -550,6 +550,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (hover: none) {
+        background-attachment: scroll;
+        .items {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    }
     .items {
         background: inherit;
     }
