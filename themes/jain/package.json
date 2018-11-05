@@ -4,7 +4,7 @@
   "description": "Atishay Jain's Personal Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "cp -R ./node_modules/line-awesome/src/production ./assets/image/line-awesome"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
     "include-media": "^1.4.9",
     "line-awesome": "github:icons8/line-awesome",
     "scrollmagic": "^2.0.6",
-    "swup": "^1.7.9",
-    "turbolinks": "^5.2.0"
+    "swup": "^1.7.9"
   }
 }
