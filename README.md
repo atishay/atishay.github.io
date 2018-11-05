@@ -1,6 +1,8 @@
 Atishay.me
 -----------
 
+[![Build Status](https://travis-ci.org/atishay/atishay.github.io.svg?branch=develop)](https://travis-ci.org/atishay/atishay.github.io)
+
 Source code for my personal website: http://atishay.me.
 
 Build with ❤️ using [Hugo](https://gohugo.io), HTML and CSS. Images are attributed inline. A lot of cool css tricks from all over the internet especially, css-tricks.com.
