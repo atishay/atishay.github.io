@@ -9,3 +9,6 @@ install:
   - rm -rf public || exit 0
   # Install node_modules
   - cd themes/jain && npm install
+
+script:
+  - hugo --minify
