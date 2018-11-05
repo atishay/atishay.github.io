@@ -5,11 +5,11 @@ addons:
   apt:
     packages:
       - python-pygments
-      - hugo
 
 install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.50/hugo_0.50_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
   # Clean and don't fail
   - rm -rf public || exit 0
-
+  
 script:
   - hugo --minify
