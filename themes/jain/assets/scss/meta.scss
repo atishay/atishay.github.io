@@ -247,6 +247,9 @@
             h3 {
                 grid-area: subtitle;
             }
+            &:nth-child(2n) .item-cover {
+                margin: 0;
+            }
 
             .links {
                 grid-area: links;
@@ -489,6 +492,8 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        width: auto;
+        height: auto;
         &:after {
             content: attr(value);
         }
