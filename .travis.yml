@@ -1,3 +1,5 @@
+language: node_js
+
 # Install the apt prerequisites
 addons:
   apt:
