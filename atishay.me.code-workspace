@@ -4,5 +4,11 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"search.exclude": {
+			"cache/**": true,
+			"public/**": true,
+			"resources/**": true
+		}
+	}
 }

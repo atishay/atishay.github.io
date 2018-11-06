@@ -1,3 +1,8 @@
+<a href="#top" class="scroll-up">
+    {{ $icon := resources.Get "image/line-awesome/fa-angle-up.svg" | resources.Minify }}
+    {{ replace $icon.Content "<svg " " <svg width=\"30px\" " | safeHTML }}
+</a>
+
 <header id="header">
     {{/*
         Checkbox Hack for pure CSS Hamburger menu

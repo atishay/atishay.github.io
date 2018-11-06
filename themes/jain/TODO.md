@@ -5,7 +5,7 @@
 * Image placeholder via [SQIP](sqip)
 * [Minimize selectors](https://github.com/JPeer264/node-rename-css-selectors)
 * [WebP or jp2](http://www.useragentman.com/blog/2015/01/14/using-webp-jpeg2000-jpegxr-apng-now-with-picturefill-and-modernizr/)
-* Scroll Animations
+* Scroll Animations using [interaction observer](https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/#top)
 * Scroll Progress indicator
 * Bread crumbs
 * AMP/Canonical URLs
@@ -34,6 +34,11 @@
 * Use [Fancy Shadows](https://30-seconds.github.io/30-seconds-of-css/)
 * Remove [Ununsed CSS](https://github.com/purifycss/purifycss)
 * Build Home Page - scrollmagic, parallax
+* [scroll snap](https://webdesign.tutsplus.com/tutorials/how-to-scroll-snap-using-css--cms-30333)
+* [CSS Shapes](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Shapes)
+* SVG Background patterns
+* [Lazy Load youtube](https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743)
+* Download progress.
 
 Submit for awards
 ----------------
