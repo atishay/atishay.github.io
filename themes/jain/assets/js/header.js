@@ -1,13 +1,10 @@
 // Inspired by https://www.sysleaf.com/js-toggle-header-on-scroll/
-// Also puts scroll to top hiding behavior in the same JS function to reuse
-// Handing for scroll and animation frame.
 (() => {
     const consideredTop = 200;
     let lastKnownScrollY = 0;
     let currentScrollY = 0;
     let ticking = false;
     let eleHeader = null;
-    let eleScrollUp = null;
     let eleCheckbox = null;
     let hitCount = 0;
     const classes = {
@@ -26,12 +23,6 @@
     }
     function update() {
         ticking = false;
-        // Scroll to top hiding/showing.
-        if (currentScrollY >= consideredTop) {
-            enableScrollUp();
-        } else {
-            disableScrollUp();
-        }
         // Header hiding
         // Ignore first 2 hits for safari reload in the center of the page
         // It is good enough with 2. First is the Js load,
@@ -47,16 +38,6 @@
         }
         lastKnownScrollY = currentScrollY;
         hitCount++;
-    }
-    function enableScrollUp() {
-        if (eleScrollUp.classList.contains('hidden')) {
-            eleScrollUp.classList.remove('hidden');
-        }
-    }
-    function disableScrollUp() {
-        if (!eleScrollUp.classList.contains('hidden')) {
-            eleScrollUp.classList.add('hidden');
-        }
     }
     function pin() {
         if (eleHeader.classList.contains(classes.unpinned)) {
@@ -74,7 +55,6 @@
     document.addEventListener("DOMContentLoaded", () => {
         eleCheckbox = document.getElementsByClassName('hamburger')[0];
         eleHeader = document.getElementById('header');
-        eleScrollUp = document.getElementsByClassName('scrollUp')[0];
         document.addEventListener('scroll', onScroll, false);
         onScroll();
     });

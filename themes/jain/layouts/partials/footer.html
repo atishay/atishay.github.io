@@ -1,7 +1,3 @@
-<a href="#top" class="scrollUp">
-    {{ $icon := resources.Get "image/line-awesome/fa-angle-up.svg" | resources.Minify }}
-    {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
-</a>
 <footer>
     <div class="items-{{len .Site.Params.Footer}}">
     {{ range .Site.Params.Footer}}
