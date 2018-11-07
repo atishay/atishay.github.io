@@ -307,7 +307,7 @@ content:
           height: 180
         attribution: Mockup from [Elegant Themes](https://www.elegantthemes.com/blog/freebie-of-the-week/free-thinkpad-psd-mockup-templates)
         links:
-          - href: /projects/Ball in the Hole.exe
+          - href: https://github.com/atishay/atishay.github.io/releases/tag/ball
             title: Download
             icon: download
         content: |
