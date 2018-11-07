@@ -413,7 +413,8 @@ content:
       type: blog
       count: 6
       section: blog
-    - type: centered
+    - #title: Contact
+      type: centered
       background: home/bayarea.jpg
       items:
       - title: Contact Me

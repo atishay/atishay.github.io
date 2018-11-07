@@ -233,6 +233,9 @@ $hamburger-size: calc(8px + var(--header-height) / 2);
 
 // Hide header on scroll on mobile
 @include media("<md") {
+    #header {
+        transition: transform 0.2s ease-in;
+    }
     .header-unpin {
         transform: translateY(calc(-2px - var(--header-height)));
     }
