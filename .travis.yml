@@ -29,5 +29,4 @@ deploy:
     branch: develop
   target-branch: master
 
-after_deploy:
-  curl -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" -H "X-Auth-Email: contact@atishay.me" \ -H "X-Auth-Key: $CF_AUTH" \ -H "Content-Type: application/json" --data '{"purge_everything":true}'
+after_deploy: curl -X POST "https://api.cloudflare.com/client/v4/zones/$CF_ZONE/purge_cache" -H "X-Auth-Email: contact@atishay.me" \ -H "X-Auth-Key: $CF_AUTH" \ -H "Content-Type: application/json" --data '{"purge_everything":true}'
