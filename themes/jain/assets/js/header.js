@@ -8,6 +8,7 @@
         let ticking = false;
         let eleHeader = null;
         let eleCheckbox = null;
+        let eleScroll = null;
         let hitCount = 0;
         const classes = {
             pinned: 'header-pin',
@@ -51,18 +52,21 @@
             if (eleHeader.classList.contains(classes.unpinned)) {
                 eleHeader.classList.remove(classes.unpinned);
                 eleHeader.classList.add(classes.pinned);
+                eleScroll.classList.remove('unpin');
             }
         }
         function unpin() {
             if (eleHeader.classList.contains(classes.pinned) || !eleHeader.classList.contains(classes.unpinned)) {
                 eleHeader.classList.remove(classes.pinned);
                 eleHeader.classList.add(classes.unpinned);
+                eleScroll.classList.add('unpin');
             }
         }
 
         document.addEventListener("DOMContentLoaded", () => {
             eleCheckbox = document.getElementsByClassName('hamburger')[0];
             eleHeader = document.getElementById('header');
+            eleScroll = document.querySelector('.scroll-up');
             document.addEventListener('scroll', onScroll, false);
         });
     }

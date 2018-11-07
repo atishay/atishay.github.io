@@ -17,6 +17,11 @@
     @include container;
     h1, h2, h3, h4 {
         text-align: center;
+        transition: transform 0.2s ease-in;
+        transform-origin: 50% 50%;
+        &:hover {
+            transform: scale(1.1, 1.1);
+        }
     }
     .subtitle {
         text-align: center;
@@ -77,6 +82,11 @@
         }
     }
 }
+
+.main-icon:hover, .item-icon:hover {
+    animation: rubberBand 0.5s ease-in-out;
+}
+
 
 ///////////////////////////////////////
 // Default type
@@ -349,6 +359,9 @@
         color: rgba(var(--theme-color-rgb), 0.9);
         text-shadow: 0 0 0 #444, 0 0 1px #DDD;
         text-align: right;
+        &:hover {
+            transform: none
+        }
     }
 
     // Pause auto-scroll for carousal
@@ -607,4 +620,7 @@
  &>ul {
     padding: 0;
  }
+ h3:hover {
+    transform: none
+    }
 }
