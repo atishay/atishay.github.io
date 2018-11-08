@@ -14,7 +14,6 @@
 * PostCSS and JS Uglify.
 * PWA manifest
 * Service worker
-* Hosting solution
 * Video Tags
 * Page Transition animations
 * Credits page
@@ -22,7 +21,6 @@
 * Color Switching
 * [Lazy Load images](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/)
 * After comments stay on the same page via Javascript.
-* Underline in header.
 * Blog archive tree.
 * https://github.com/thedaviddias/Front-End-Performance-Checklist
 * Move styles from tag cloud to CSS files.
@@ -39,6 +37,7 @@
 * SVG Background patterns
 * [Lazy Load youtube](https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743)
 * Download progress.
+* Color Picker
 
 Submit for awards
 ----------------
@@ -61,7 +60,3 @@ CSSluxury
 CSSChimp
 The FWA
 One Page Love
-
-
-
-

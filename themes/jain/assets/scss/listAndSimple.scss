@@ -52,17 +52,17 @@
     padding: 15px;
     @include zoomable-image(".banner-holder", (270/360) * 100%);
     background: #fff;
-    box-shadow: 0 1px 1px #ddd;
+    box-shadow: 0 1px 1px $divider;
     display: flex;
     flex-direction: column;
 
     &:hover {
-        box-shadow: 0 0 40px #ddd;
+        box-shadow: 0 0 40px $divider;
     }
 
     hr {
         border: none;
-        border-bottom: 1px dashed #ddd;
+        border-bottom: 1px dashed $divider;
     }
 
     h3:hover {
@@ -140,7 +140,7 @@
     }
 
     .disabled .page-link {
-        background: #ddd;
+        background: $divider;
         color: #fff;
         pointer-events: none;
     }
