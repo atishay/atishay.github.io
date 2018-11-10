@@ -4,7 +4,8 @@ header {
     position: sticky;
     top: 0;
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 1px 1px #f6f6f6;
+    box-shadow: 0 1px 1px #f6f6f6,
+                0 -2px var(--theme-color);
     display: flex;
     align-items: center;
     min-height: var(--header-height);
@@ -204,6 +205,16 @@ $hamburger-size: calc(8px + var(--header-height) / 2);
         top: 0;
         border: 0;
         right: 0;
+    }
+    &:before {
+        content: " ";
+        position: absolute;
+        right: 0;
+        top: -200px;
+        height: 200px;
+        z-index: 1;
+        background: var(--theme-color);
+        width: var(--header-height);
     }
     .octo-arm {
         transform-origin: 130px 106px;

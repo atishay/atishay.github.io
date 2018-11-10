@@ -4,7 +4,7 @@
 {{ .Hugo.Generator }}
 <meta name="robots" content="index, follow">
 {{ if eq .Site.Params.CSP true }}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' www.gravatar.com www.google-analytics.com; {{ if .Site.IsServer }}connect-src ws:;{{ end }} worker-src www.google-analytics.com; frame-src www.youtube-nocookie.com; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: www.gravatar.com www.google-analytics.com; {{ if .Site.IsServer }}connect-src ws:;{{ end }} worker-src www.google-analytics.com; frame-src www.youtube-nocookie.com; object-src 'none'">
 {{ end }}
 
 {{ block "favicon" . }}
