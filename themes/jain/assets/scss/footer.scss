@@ -2,6 +2,8 @@ footer {
     $footer-color: #7C7C7C;
     background: #282828;
     color : $footer-color;
+    box-shadow: 0 150px #1D1D1D;
+    z-index:1;
     &>* {
         @include container;
             padding-top: 30px;
