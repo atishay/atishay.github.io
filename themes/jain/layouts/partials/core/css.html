@@ -11,7 +11,15 @@
 {{ $cssFiles := slice $main $syntax | resources.Concat "css/index.css"}}
 {{ $css := $cssFiles | resources.Minify | resources.Fingerprint "sha512" }}
 
+<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!='all')media='all'">
+<noscript>
 <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+</noscript>
+<style>
+  html {
+    opacity: 0;
+  }
+</style>
 {{ end }}
 
 {{ range .Site.Params.custom_css }}
