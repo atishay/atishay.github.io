@@ -12,6 +12,7 @@ html {
     background-image:
     linear-gradient(to bottom, #1d1d1d 0%, #1d1d1d 200px, #ffffff 200px, #ffffff calc(100% - 200px), transparent calc(100% - 200px), transparent calc(100% - 2px), var(--theme-color) calc(100% - 2px)),
     linear-gradient(to left, var(--theme-color) 0%, var(--theme-color) var(--header-height), transparent var(--header-height));
+    opacity: 1 !important;
 }
 
 body {
