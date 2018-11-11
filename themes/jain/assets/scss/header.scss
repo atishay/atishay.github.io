@@ -282,7 +282,8 @@ body {
     margin-bottom: calc(-200vh - 30px);
     margin-left: calc(100vw - 50px);
     z-index: 2;
-    transition: transform 0.2s ease-in;
+    transition: transform 0.2s ease-in,
+    opacity 0.2s ease-in;
     svg {
         background-color: var(--theme-color);
         padding: 5px;
@@ -295,5 +296,5 @@ body {
 }
 
 .scroll-up.unpin {
-    transform: translateX(100px);
+    opacity: 0;
 }
