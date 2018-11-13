@@ -246,6 +246,9 @@
             .content {
                 padding: 20px 0;
             }
+            small {
+                display: inline-block;
+            }
         }
     }
     &:nth-child(2n) {
@@ -648,5 +651,266 @@
  }
  h3:hover {
     transform: none
+    }
+}
+
+/////////////////////////////////////////
+// Animations
+/////////////////////////////////////////
+
+@keyframes bounceInLeftNoDelay {
+
+    0% {
+        transform: translate3d(-100vw, 0, 0) scale3d(1.1, 0.8, 1);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    60% {
+        transform: translate3d(25px, 0, 0) scale3d(0.9, 1.2, 1);
+    }
+
+    75% {
+        transform: translate3d(-10px, 0, 0) scale3d(1.05, 0.95, 1);
+    }
+
+    90% {
+        transform: translate3d(5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bounceInRightNoDelay {
+
+    0% {
+        transform: translate3d(100vw, 0, 0) scale3d(1.1, 0.8, 1);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    60% {
+        transform: translate3d(-25px, 0, 0) scale3d(0.9, 1.2, 1);
+    }
+
+    75% {
+        transform: translate3d(10px, 0, 0) scale3d(1.05, 0.95, 1);
+    }
+
+    90% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bounceInLeft {
+   0%, 20% {
+       transform: translate3d(-100vw, 0, 0) scale3d(1.1, 0.8, 1);
+   }
+
+   60% {
+       transform: translate3d(0, 0, 0);
+   }
+   68% {
+       transform: translate3d(25px, 0, 0) scale3d(0.9, 1.2, 1);
+   }
+
+   80% {
+       transform: translate3d(-10px, 0, 0) scale3d(1.05, 0.95, 1);
+   }
+
+   92% {
+       transform: translate3d(5px, 0, 0);
+   }
+
+   100% {
+       transform: translate3d(0, 0, 0);
+   }
+}
+
+@keyframes bounceInRight {
+    0%, 20% {
+        transform: translate3d(100vw, 0, 0) scale3d(1.1, 0.8, 1);
+    }
+
+    60% {
+       transform: translate3d(0, 0, 0);
+    }
+
+    68% {
+        transform: translate3d(-25px, 0, 0) scale3d(0.9, 1.2, 1);
+    }
+
+    80% {
+        transform: translate3d(10px, 0, 0) scale3d(1.05, 0.95, 1);
+    }
+
+    92% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100vw, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@for $i from 1 through 4 {
+    $percent: 100% * ($i - 1)/4;
+    $next: 100% * $i/4;
+    $before1: $percent + 20%;
+    $before2: $percent + 25%;
+    @keyframes fade-up-item-#{$i}{
+        0%, #{$percent} {
+            transform: translate3d(0, 200px, 0);
+            opacity: 0;
+        }
+        #{$before1} {
+            transform: translate3d(0, -10px, 0);
+            opacity: 0.9;
+        }
+        #{$before2} {
+            transform: translate3d(0, 5px, 0);
+            opacity: 1.0;
+        }
+        #{$next}, 100% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
+}
+
+@include media(">md") {
+    $duration: 2s;
+    .left-image {
+        &>* {
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+        }
+        &> img {
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+        }
+        &.visible, &:nth-of-type(1), &:nth-of-type(2) {
+            &>* {
+                transform-origin: center left;
+                animation: bounceInRightNoDelay 1.1s ease-in-out;
+            }
+            &>img {
+                transform-origin: center right;
+                animation: bounceInLeftNoDelay 1.1s ease-in-out;
+            }
+        }
+    }
+    $load-up-duration: 1.6s;
+    .meta.default,
+    .full-width,
+    .item-icon-left {
+        &.visible,
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+            h1,
+            .main-icon {
+                animation: fade-up-item-1 $load-up-duration ease-in-out;
+            }
+            .subtitle {
+                animation: fade-up-item-2 $load-up-duration ease-in-out;
+            }
+        }
+        h1,
+        .main-icon,
+        .subtitle {
+            transform: translate3d(0, 0, 0);
+            will-change: opacity, transform;
+        }
+    }
+
+    .full-width {
+        .item >* {
+            transform: translate3d(0, 0, 0);
+            will-change: opacity, transform;
+            backface-visibility: hidden;
+
+        }
+        &:nth-of-type(1) .item:nth-child(2n),
+        &:nth-of-type(2) .item:nth-child(2n),
+        .item.visible:nth-child(2n) {
+            &>* {
+                transform-origin: center right;
+                animation: bounceInLeft $duration ease-in-out;
+                perspective: 1000;
+            }
+            img {
+                transform-origin: center left;
+                animation: bounceInRight $duration ease-in-out;
+                perspective: 1000;
+            }
+        }
+        &:nth-of-type(1) .item:nth-child(2n - 1),
+        &:nth-of-type(2) .item:nth-child(2n - 1),
+        .item.visible:nth-child(2n - 1) {
+            &>* {
+                transform-origin: center left;
+                animation: bounceInRight $duration ease-in-out;
+            }
+
+            img {
+                transform-origin: center right;
+                animation: bounceInLeft $duration ease-in-out;
+            }
+        }
+
+    }
+
+    .meta.default,
+    .item-icon-left {
+        @for $j from 2 through 4 {
+            .items-#{$j} {
+                @for $i from 1 through $j {
+                    .item:nth-child(#{$i}) {
+                        transform-origin: top center;
+                        will-change: opacity, transform;
+                        &.visible {
+                            animation: fade-up-item-#{$i} $load-up-duration ease-in-out;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+                .items-#{$j} {
+                    @for $i from 1 through $j {
+                        animation: fade-up-item-#{$i} $load-up-duration ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (prefers-reduced-motion) {
+    .meta, .meta * {
+        animation: none !important;
     }
 }

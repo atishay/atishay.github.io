@@ -9,7 +9,7 @@ content:
       subtitle: Thinker | Tinkerer | Inventor | Philomath | Programmer | Senior Computer Scientist @ Adobe
       type: left-image
       image:
-        href: "home/atishay.png"
+        href: "home/atishay.jpg"
         alt: Atishay Jain
         width: 200
         height: 250

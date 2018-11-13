@@ -11,6 +11,7 @@ header {
     min-height: var(--header-height);
     flex-wrap: wrap;
     z-index: 10;
+    will-change: transform;
 }
 
 // Logo
@@ -284,6 +285,7 @@ body {
     z-index: 2;
     transition: transform 0.2s ease-in,
     opacity 0.2s ease-in;
+    will-change: transform;
     svg {
         background-color: var(--theme-color);
         padding: 5px;
