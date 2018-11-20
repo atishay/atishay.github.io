@@ -29,8 +29,9 @@
     });
   });
   // const currentScroll = window.pageYOffset;
-  ['.left-image', '.meta.default .item', '.item-icon-left .item', '.meta.default',
-    '.item-icon-left', '.full-width', '.full-width .item'].forEach(s => {
+  ['.left-image', '.meta.default .item', '.item-icon-left .item', '.meta.default', '.max-2', '.max-2 .item', '.filter', '.filter .item',
+  '.blog', '.blog .item', 'footer .items',
+  '.item-icon-left', '.full-width', '.full-width .item'].forEach(s => {
 
     document.querySelectorAll(s).forEach(x => {
       const rect = x.getBoundingClientRect();

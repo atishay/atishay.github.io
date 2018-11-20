@@ -146,6 +146,15 @@
     }
 }
 
+.list {
+    @for $j from 1 through 10 {
+        .blog-post:nth-of-type(#{$j}) {
+            will-change: transform, opacity;
+            animation: fade-up-item-#{$j} 2.0s ease-in-out;
+        }
+    }
+}
+
 .page404 {
     .number {
         font-family: cursive, serif;
