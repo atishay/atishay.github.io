@@ -7,12 +7,12 @@
         object-fit: cover;
         width: 100vw;
         object-position: 50% 0%;
-        z-index: -1;
     }
 }
 
 .contact {
     background: white;
+    z-index: 1;
     @include container;
 
     &>section {

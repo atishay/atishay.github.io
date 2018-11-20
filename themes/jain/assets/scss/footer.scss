@@ -43,5 +43,13 @@ footer {
         margin: 4px 10px 4px 0;
         padding: 3px;
     }
+    @for $j from 1 through 4 {
+        section:nth-of-type(#{$j}) {
+            will-change: transform, opacity;
+        }
+        .items.visible section:nth-of-type(#{$j}) {
+            animation: fade-up-item-#{$j} 2.0s ease-in-out;
+        }
+    }
 }
 

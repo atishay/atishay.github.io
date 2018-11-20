@@ -652,156 +652,17 @@
  h3:hover {
     transform: none
     }
+    .item {
+        padding: 15px;
+    }
 }
 
 /////////////////////////////////////////
 // Animations
 /////////////////////////////////////////
 
-@keyframes bounceInLeftNoDelay {
-
-    0% {
-        transform: translate3d(-100vw, 0, 0) scale3d(1.1, 0.8, 1);
-    }
-
-    50% {
-        transform: translate3d(0, 0, 0);
-    }
-
-    60% {
-        transform: translate3d(25px, 0, 0) scale3d(0.9, 1.2, 1);
-    }
-
-    75% {
-        transform: translate3d(-10px, 0, 0) scale3d(1.05, 0.95, 1);
-    }
-
-    90% {
-        transform: translate3d(5px, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes bounceInRightNoDelay {
-
-    0% {
-        transform: translate3d(100vw, 0, 0) scale3d(1.1, 0.8, 1);
-    }
-
-    50% {
-        transform: translate3d(0, 0, 0);
-    }
-
-    60% {
-        transform: translate3d(-25px, 0, 0) scale3d(0.9, 1.2, 1);
-    }
-
-    75% {
-        transform: translate3d(10px, 0, 0) scale3d(1.05, 0.95, 1);
-    }
-
-    90% {
-        transform: translate3d(-5px, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes bounceInLeft {
-   0%, 20% {
-       transform: translate3d(-100vw, 0, 0) scale3d(1.1, 0.8, 1);
-   }
-
-   60% {
-       transform: translate3d(0, 0, 0);
-   }
-   68% {
-       transform: translate3d(25px, 0, 0) scale3d(0.9, 1.2, 1);
-   }
-
-   80% {
-       transform: translate3d(-10px, 0, 0) scale3d(1.05, 0.95, 1);
-   }
-
-   92% {
-       transform: translate3d(5px, 0, 0);
-   }
-
-   100% {
-       transform: translate3d(0, 0, 0);
-   }
-}
-
-@keyframes bounceInRight {
-    0%, 20% {
-        transform: translate3d(100vw, 0, 0) scale3d(1.1, 0.8, 1);
-    }
-
-    60% {
-       transform: translate3d(0, 0, 0);
-    }
-
-    68% {
-        transform: translate3d(-25px, 0, 0) scale3d(0.9, 1.2, 1);
-    }
-
-    80% {
-        transform: translate3d(10px, 0, 0) scale3d(1.05, 0.95, 1);
-    }
-
-    92% {
-        transform: translate3d(-5px, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(0, 0, 0);
-        }
-}
-
-@keyframes slideInLeft {
-    0% {
-        opacity: 0;
-        transform: translate3d(-100vw, 0, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@for $i from 1 through 4 {
-    $percent: 100% * ($i - 1)/4;
-    $next: 100% * $i/4;
-    $before1: $percent + 20%;
-    $before2: $percent + 25%;
-    @keyframes fade-up-item-#{$i}{
-        0%, #{$percent} {
-            transform: translate3d(0, 200px, 0);
-            opacity: 0;
-        }
-        #{$before1} {
-            transform: translate3d(0, -10px, 0);
-            opacity: 0.9;
-        }
-        #{$before2} {
-            transform: translate3d(0, 5px, 0);
-            opacity: 1.0;
-        }
-        #{$next}, 100% {
-            transform: translate3d(0, 0, 0);
-            opacity: 1;
-        }
-    }
-}
-
 @include media(">md") {
-    $duration: 2s;
+    $duration: 0.8s;
     .left-image {
         &>* {
             transform: translate3d(0, 0, 0);
@@ -822,9 +683,12 @@
             }
         }
     }
-    $load-up-duration: 1.6s;
+    $load-up-duration: 2.0s;
     .meta.default,
     .full-width,
+    .max-2,
+    .blog,
+    .filter,
     .item-icon-left {
         &.visible,
         &:nth-of-type(1),
@@ -882,6 +746,26 @@
 
     }
 
+    .max-2 {
+        .item {
+            transform-origin: top center;
+            will-change: opacity, transform;
+        }
+
+        &:nth-of-type(1) .item,
+        &:nth-of-type(2) .item,
+        .item.visible {
+            &:nth-child(2n) {
+                animation: fade-up-item-2 $load-up-duration ease-in-out;
+            }
+            &:nth-child(2n - 1) {
+                animation: fade-up-item-1 $load-up-duration ease-in-out;
+            }
+        }
+    }
+
+    .filter,
+    .blog,
     .meta.default,
     .item-icon-left {
         @for $j from 2 through 4 {
@@ -903,6 +787,27 @@
                         animation: fade-up-item-#{$i} $load-up-duration ease-in-out;
                     }
                 }
+            }
+        }
+        @each $k in (6, 9) {
+            .items-#{$k} .item {
+                transform-origin: top center;
+                will-change: opacity, transform;
+            }
+            &:nth-of-type(1) .items-#{$k} .item:nth-child(3n+1),
+            &:nth-of-type(2) .items-#{$k} .item:nth-child(3n+1),
+            .items-#{$k} .item:nth-child(3n+1).visible {
+                animation: fade-up-item-1 $load-up-duration ease-in-out;
+            }
+            &:nth-of-type(1) .items-#{$k} .item:nth-child(3n+2),
+            &:nth-of-type(2) .items-#{$k} .item:nth-child(3n+2),
+            .items-#{$k} .item:nth-child(3n+2).visible {
+                animation: fade-up-item-2 $load-up-duration ease-in-out;
+            }
+            &:nth-of-type(1) .items-#{$k} .item:nth-child(3n+3),
+            &:nth-of-type(2) .items-#{$k} .item:nth-child(3n+3),
+            .items-#{$k} .item:nth-child(3n).visible {
+                animation: fade-up-item-3 $load-up-duration ease-in-out;
             }
         }
     }

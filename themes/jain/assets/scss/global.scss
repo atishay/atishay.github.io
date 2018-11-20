@@ -506,3 +506,145 @@ figcaption p {
         transform: scale3d(1, 1, 1);
     }
 }
+
+@keyframes bounceInLeftNoDelay {
+
+    0% {
+        transform: translate3d(-100vw, 0, 0) scale3d(1.1, 0.8, 1);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    60% {
+        transform: translate3d(25px, 0, 0) scale3d(0.9, 1.2, 1);
+    }
+
+    75% {
+        transform: translate3d(-10px, 0, 0) scale3d(1.05, 0.95, 1);
+    }
+
+    90% {
+        transform: translate3d(5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bounceInRightNoDelay {
+
+    0% {
+        transform: translate3d(100vw, 0, 0) scale3d(1.1, 0.8, 1);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    60% {
+        transform: translate3d(-25px, 0, 0) scale3d(0.9, 1.2, 1);
+    }
+
+    75% {
+        transform: translate3d(10px, 0, 0) scale3d(1.05, 0.95, 1);
+    }
+
+    90% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bounceInLeft {
+
+    0%,
+    20% {
+        transform: translate3d(-100vw, 0, 0) scale3d(1.1, 0.8, 1);
+    }
+
+    60% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    68% {
+        transform: translate3d(25px, 0, 0) scale3d(0.9, 1.2, 1);
+    }
+
+    80% {
+        transform: translate3d(-10px, 0, 0) scale3d(1.05, 0.95, 1);
+    }
+
+    92% {
+        transform: translate3d(5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bounceInRight {
+
+    0%,
+    20% {
+        transform: translate3d(100vw, 0, 0) scale3d(1.1, 0.8, 1);
+    }
+
+    60% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    68% {
+        transform: translate3d(-25px, 0, 0) scale3d(0.9, 1.2, 1);
+    }
+
+    80% {
+        transform: translate3d(10px, 0, 0) scale3d(1.05, 0.95, 1);
+    }
+
+    92% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@for $i from 1 through 10 {
+    $percent: 100% * ($i - 1)/10;
+    $next: 100% * $i/10;
+    $before1: $percent + 9%;
+    $before2: $percent + 10%;
+
+    @keyframes fade-up-item-#{$i} {
+
+        0%,
+        #{$percent} {
+            transform: translate3d(0, 200px, 0);
+            opacity: 0;
+        }
+
+        #{$before1} {
+            transform: translate3d(0, -10px, 0);
+            opacity: 0.9;
+        }
+
+        #{$before2} {
+            transform: translate3d(0, 5px, 0);
+            opacity: 1.0;
+        }
+
+        #{$next},
+        100% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
+}
