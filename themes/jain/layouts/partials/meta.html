@@ -1,6 +1,6 @@
 {{$site := .Site}}
 {{- range .Params.content -}}
-<section class="meta {{.type | default "default"}}"
+<section {{with .title}}id="{{. | urlize}}"{{ end }} class="meta {{.type | default "default"}}"
 {{- with.background -}}
 {{ $bg := resources.Get . }}
 style="background-image:url({{$bg.Permalink}})"

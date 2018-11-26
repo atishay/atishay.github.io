@@ -369,3 +369,28 @@
         color: $text-color;
     }
 }
+
+/////////////////////////////////////////
+// Animations
+/////////////////////////////////////////
+
+@include media(">md") {
+    aside {
+        transform-origin: top left;
+        animation: bounceInRightNoDelay 1.1s ease-in-out;
+    }
+
+    main {
+        transform-origin: top right;
+        animation: bounceInLeftNoDelay 1.1s ease-in-out;
+    }
+
+}
+
+
+@media (prefers-reduced-motion) {
+
+    .post * {
+        animation: none !important;
+    }
+}

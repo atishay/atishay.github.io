@@ -77,3 +77,40 @@
         }
     }
 }
+
+/////////////////////////////////////////
+// Animations
+/////////////////////////////////////////
+
+@include media(">md") {
+    .contact-cover img {
+        animation: zoomIn 0.8s ease-in;
+        will-change: opacity, transform;
+    }
+    .contact {
+        h1 {
+            animation: fade-up-item-1 2.0s ease-in-out;
+        }
+
+        .subtitle {
+            animation: fade-up-item-2 2.0s ease-in-out;
+        }
+        form {
+            transform-origin: center left;
+            animation: bounceInRightNoDelay 1.1s ease-in-out;
+        }
+        aside {
+            transform-origin: center right;
+            animation: bounceInLeftNoDelay 1.1s ease-in-out;
+        }
+    }
+}
+
+
+@media (prefers-reduced-motion) {
+
+    .contact * {
+        animation: none !important;
+    }
+}
+
