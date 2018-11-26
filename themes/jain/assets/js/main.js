@@ -30,7 +30,7 @@
   });
   // const currentScroll = window.pageYOffset;
   ['.left-image', '.meta.default .item', '.item-icon-left .item', '.meta.default', '.max-2', '.max-2 .item', '.filter', '.filter .item',
-  '.blog', '.blog .item', 'footer .items',
+  '.blog', '.blog .item', 'footer .items', '.contact',
   '.item-icon-left', '.full-width', '.full-width .item'].forEach(s => {
 
     document.querySelectorAll(s).forEach(x => {
