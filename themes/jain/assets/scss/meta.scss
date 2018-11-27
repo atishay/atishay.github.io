@@ -329,6 +329,7 @@
     padding-left: 0;
     padding-right: 0;
     overflow: hidden;
+    margin-bottom: 20px;
     .items {
         display: flex;
     }
@@ -343,7 +344,7 @@
         display: grid;
         grid-template-areas: "icon" "content" "heading";
         justify-content: center;
-        &:hover {
+        &:hover, &.hover {
             box-shadow: 0 0 20px $divider;
             h2 {
                 filter: none;
