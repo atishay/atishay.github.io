@@ -385,6 +385,46 @@
         animation: bounceInLeftNoDelay 1.1s ease-in-out;
     }
 
+    .more, .comments {
+        ul li {
+            transform-origin: top center;
+            will-change: opacity, transform;
+        }
+    }
+
+    .comments, .more {
+        &.visible{
+            h2 {
+                animation: fade-up-item-1 $load-up-duration ease-in-out;
+            }
+            ul {
+                @for $i from 1 through 10 {
+                    li:nth-child(#{$i}) {
+                        $j: $i + 1;
+                        animation: fade-up-item-#{$j} $load-up-duration ease-in-out;
+                    }
+                }
+            }
+            &> h3 {
+                animation: fade-up-item-1 $load-up-duration ease-in-out;
+            }
+            &>p {
+                animation: fade-up-item-2 $load-up-duration ease-in-out;
+            }
+        }
+    }
+
+    .comments form.visible {
+        input {
+            animation: fade-up-item-3 $load-up-duration ease-in-out;
+        }
+        textarea {
+            animation: fade-up-item-4 $load-up-duration ease-in-out;
+        }
+        button {
+            animation: fade-up-item-5 $load-up-duration ease-in-out;
+        }
+    }
 }
 
 
