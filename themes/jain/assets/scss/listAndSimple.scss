@@ -246,3 +246,30 @@
         }
     }
 }
+
+/////////////////////////////////////////
+// Animations
+/////////////////////////////////////////
+
+@include media(">md") {
+    .simple {
+
+        * {
+            animation: fade-up-item-3 $load-up-duration ease-in-out;
+        }
+
+        h1 {
+            animation: fade-up-item-1 $load-up-duration ease-in-out;
+        }
+
+        .subtitle {
+            animation: fade-up-item-2 $load-up-duration ease-in-out;
+        }
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .simple * {
+        animation: none !important;
+    }
+}

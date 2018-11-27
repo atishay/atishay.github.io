@@ -5,12 +5,10 @@
 * Image placeholder via [SQIP](sqip)
 * [Minimize selectors](https://github.com/JPeer264/node-rename-css-selectors)
 * [WebP or jp2](http://www.useragentman.com/blog/2015/01/14/using-webp-jpeg2000-jpegxr-apng-now-with-picturefill-and-modernizr/)
-* Scroll Animations using [interaction observer](https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/#top)
 * Scroll Progress indicator
 * Bread crumbs
 * AMP/Canonical URLs
 * Checkin PSDs
-* Move footer to data folder.
 * PostCSS and JS Uglify.
 * PWA manifest
 * Service worker
