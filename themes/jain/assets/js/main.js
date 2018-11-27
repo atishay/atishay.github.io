@@ -58,7 +58,7 @@
     }, {
       rootMargin: "-20% 0px -70% 0px"
     });
-    ['p', 'li', '.meta .content', '.meta .item-cover', '.item-icon', '.main-icon', '.banner-holder', '.img-container', '.tex', '.i-tex', '.post aside svg'].forEach(s => {
+    ['p', 'li', '.meta .content', '.meta .item-cover', '.item-icon', '.main-icon', '.banner-holder', '.img-container', '.tex', '.i-tex', '.post aside svg', '.meta.carousel .item'].forEach(s => {
       document.querySelectorAll(s).forEach(x => {
           observer.observe(x);
       });
