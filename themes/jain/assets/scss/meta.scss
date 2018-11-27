@@ -225,6 +225,8 @@
             .item-cover {
                 float: left;
                 margin: 0 40px 40px 0;
+                position: relative;
+                z-index: 2;
             }
             &:nth-child(2n) {
                 background: $shade;

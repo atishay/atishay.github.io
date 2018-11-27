@@ -364,6 +364,37 @@ content:
         - icon: link
           title: Access
           href: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.592.6204
+      - title: Answering Squad
+        image:
+          href: home/squad.jpg
+          alt: Question Answering
+          anchor: Center
+          width: 300
+          height: 300
+        attribution: Image by qimono on [Pixabay](https://pixabay.com/en/question-mark-knowledge-question-3255140/)
+        content: Question Answering is a very important cornerstone of natural language processing where a machine should be able to understand human language to an extent that an individual could ask questions to the machine in the language he/she understands and then get the answers back in the same language without the involvement of experts. In this project we evaluate a neural network based Question Answering system using a simple model and see how a very basic model performs on the StanfordQuestion Answering dataset.
+        links:
+        - icon: bookmark
+          title: "B<small>IB</small>T<sub>E</sub>X"
+          href: /home/Answering squad.bib
+        - icon: link
+          title: Access
+          href: https://web.stanford.edu/class/cs224n/reports/2761922.pdf
+      - title: Automatic 3D Reconstruction for symmetric shapes
+        image:
+          href: home/3d.png
+          alt: 3D Reconstruction
+          anchor: Center
+          width: 300
+          height: 300
+        content: Generic 3D reconstruction from a single image is a difficult problem. A lot of data loss occurs in the projection. A domain based approach to reconstruction where we solve a smaller set of problems for a particular use case lead to greater returns. The project provides a way to automatically generate full 3-D renditions of actual symmetric images that have some prior information provided in the pipeline by a recognition algorithm. We provide a critical analysis on how this can be enhanced and improved to provide a general reconstruction framework for automatic reconstruction for any symmetric shape.
+        links:
+        - icon: bookmark
+          title: "B<small>IB</small>T<sub>E</sub>X"
+          href: /home/Automatic 3D Reconstruction for symmetric shapes.bib
+        - icon: link
+          title: Access
+          href: https://arxiv.org/abs/1606.05785
     - title: Proficiency
       subtitle: "After knowing the basics of programming, one should know the assumptions and constraints of the domain. \n It doesn't matter what language or tooling is needed. You can get upto speed quickly."
       items:
