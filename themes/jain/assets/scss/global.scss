@@ -72,14 +72,14 @@ ul, ol {
 }
 
 li {
-    &:hover {
+    &:hover, &.hover {
         color: #111;
     }
 }
 
 p {
     margin-bottom: 16px;
-    &:hover {
+    &:hover, &.hover {
         color: #111;
         text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
     }

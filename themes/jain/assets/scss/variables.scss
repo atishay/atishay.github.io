@@ -34,7 +34,8 @@ $load-up-duration: 2.0s;
         }
     }
 
-    &:hover #{$selector} img {
+    &:hover #{$selector} img,
+    #{$selector}.hover img {
         transform: scale(1.1);
     }
 }
