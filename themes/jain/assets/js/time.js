@@ -4,7 +4,7 @@
  * @param {String} value Timestamp in ISO-8601
  */
 function getNewTime(value) {
-    var d = new Date(value);
+    var d = new Date(value.trim());
     var now = new Date();
     var seconds = Math.round(Math.abs((now.getTime() - d.getTime()) / 1000));
     var minutes = Math.round(Math.abs(seconds / 60));
