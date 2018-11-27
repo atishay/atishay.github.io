@@ -26,7 +26,7 @@
     .subtitle {
         text-align: center;
     }
-    .content:hover {
+    .content:hover, .content.hover {
         color: #111;
     }
     .main-icon {
@@ -44,7 +44,7 @@
             background-color: var(--theme-color);
             transition: border-radius 0.5s ease-in-out;
             border: 2px solid transparent;
-            &:hover {
+            &:hover, &.hover {
                 border-radius: 50%;
             }
         }
@@ -92,7 +92,7 @@
     }
 }
 
-.main-icon:hover, .item-icon:hover {
+.main-icon:hover, .item-icon:hover, .item-icon.hover, .main-icon.hover {
     animation: rubberBand 0.5s ease-in-out;
 }
 
@@ -258,7 +258,7 @@
             background: white;
         }
     }
-    @include media("<=md") {
+    @include media("<md") {
         .items .item {
             display: grid;
             grid-template-columns: 1fr;
@@ -314,7 +314,7 @@
     .items {
         grid-template-areas: none;
         grid-template-columns: 1fr 1fr;
-        @include media("<=md") {
+        @include media("<md") {
             grid-template-columns: 1fr;
         }
     }
@@ -462,7 +462,7 @@
         }
     }
 
-    @include media("<=md") {
+    @include media("<md") {
         .item {
             min-width: calc(var(--max-width) - 40px);
         }

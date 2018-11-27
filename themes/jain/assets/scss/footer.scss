@@ -14,7 +14,7 @@ footer {
     }
     p, li {
         color: $footer-color;
-        &:hover {
+        &:hover, &.hover {
             color: #AAA;
             text-shadow: none;
         }
