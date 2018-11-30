@@ -79,6 +79,14 @@ permalinks:
   blog: "/blog/:year/:month/:day/:slug"
 Paginate: 9
 
+caches:
+  getjson:
+    dir: ':resourceDir/_gen'
+    maxAge: -1
+  getcsv:
+    dir: ':resourceDir/_gen'
+    maxAge: -1
+
 sitemap:
     changefreq: "monthly"
     priority: 0.5
