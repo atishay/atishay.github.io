@@ -22,7 +22,6 @@
 * Blog archive tree.
 * https://github.com/thedaviddias/Front-End-Performance-Checklist
 * Move styles from tag cloud to CSS files.
-* Link before each header.
 * Taxonomy collapsible.
 * Table of Contents
 * Analytics (Image only)

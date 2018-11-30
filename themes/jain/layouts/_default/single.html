@@ -10,7 +10,7 @@
 {{- partial "util/cover.html" (dict "class" "banner-holder" "page" . "width" 800 "height" 400) -}}
 <h1>{{.Title}}</h1>
 </div>
-{{- .Content -}}
+{{- partial "util/heading-anchors.html" .Content -}}
 {{- with .Params.youtube -}}
 <h2>Video</h2>
 <p>Here is the video:
