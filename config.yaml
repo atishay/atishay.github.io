@@ -52,7 +52,6 @@ params:
         subject: entry.1998641301
         message: entry.1809318382
 
-cacheDir: cache
 enableEmoji: true
 related:
   threshold: 0

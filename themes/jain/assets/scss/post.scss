@@ -427,6 +427,22 @@
     }
 }
 
+.post main {
+    h1, h2, h3, h4, h5, h6 {
+        position: relative;
+        padding-left: 30px;
+    }
+}
+
+.heading-anchor {
+    display: inline-block;
+    color: #DDD;
+    position: absolute;
+    margin-top: calc(-1 * var(--header-height));
+    padding-top: var(--header-height);
+    left: 0;
+}
+
 
 @media (prefers-reduced-motion) {
 
