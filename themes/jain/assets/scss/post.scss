@@ -37,6 +37,7 @@
 }
 
 .post {
+    z-index: 1;
     margin: calc(var(--header-height)/2);
     @include container-margin;
     padding: calc(2*var(--content-padding));
@@ -322,7 +323,6 @@
     height: 100%;
     left: 0;
     top: 0;
-    z-index: -1;
 }
 
 .more {
