@@ -5,6 +5,7 @@
 .simple,
 .terms,
 .page404 {
+    z-index: 1;
     margin: calc(var(--header-height)/2);
     @include container-margin;
     padding: calc(2*var(--content-padding));
