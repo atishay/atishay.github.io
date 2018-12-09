@@ -228,6 +228,10 @@
                 position: relative;
                 z-index: 2;
             }
+            video.item-cover {
+                background: black;
+                border-color: var(--theme-color);
+            }
             &:nth-child(2n) {
                 background: $shade;
                 .item-cover {

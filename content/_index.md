@@ -395,6 +395,22 @@ content:
         - icon: link
           title: Access
           href: https://arxiv.org/abs/1606.05785
+      - title: Sokoban Solver
+        video:
+          href: home/Sokoban Solver.mp4
+          alt: Sokoban Solver
+          format: video/mp4
+          anchor: Center
+          width: 300
+          height: 300
+        content: Artificial Intelligence is becoming instrumental in a variety of applications. Games serve as a good breeding ground for trying and testing these algorithms in a sandbox with simpler constraints in comparison to real life. In this project, we aim to develop an AI agent that can solve the classical Japanese game of Sokoban using various algorithms and heuristics and compare their performances through standard metrics.
+        links:
+        - icon: bookmark
+          title: "B<small>IB</small>T<sub>E</sub>X"
+          href: /home/Sokoban Solver.bib
+        - icon: link
+          title: Access
+          href: https://arxiv.org/abs/1807.00049
     - title: Proficiency
       subtitle: "After knowing the basics of programming, one should know the assumptions and constraints of the domain. \n It doesn't matter what language or tooling is needed. You can get upto speed quickly."
       items:
