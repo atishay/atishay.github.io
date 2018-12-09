@@ -55,7 +55,12 @@ style="background-image:url({{$bg.Permalink}})"
     {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2) " " $anchor) }}
     <img class="item-cover" width="{{.width}}" height="{{.height}}" alt="{{.alt | default $title}}" src="{{$cover.RelPermalink}}" />
 {{- end -}}
-
+{{- with .video -}}
+<video class="item-cover" loop autoplay muted width="{{.width}}" height="{{.height}}">
+    <source src="{{.href}}" type="{{.format}}">
+    The browser does not support the video format {{.format}}.
+</video>
+{{- end -}}
 {{- with .title -}}
     <h2>{{. | markdownify }}</h2>
 {{- end -}}
