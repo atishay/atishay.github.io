@@ -541,11 +541,13 @@
         height: auto;
         &:after {
             content: attr(value);
+            padding: 5px 12px;
+            display: block;
         }
         text-align: center;
         margin: 5px;
         font-size: 14px;
-        padding: 5px 12px;
+        padding: 0;
         border-radius: 2px;
     }
 
