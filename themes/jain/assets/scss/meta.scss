@@ -23,6 +23,9 @@
             transform: scale(1.1, 1.1);
         }
     }
+    h2:hover {
+        transform: none;
+    }
     .subtitle {
         text-align: center;
     }
