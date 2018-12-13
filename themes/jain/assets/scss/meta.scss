@@ -598,6 +598,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -628,7 +629,7 @@
     }
     &>.attribution {
         position: absolute;
-        margin-top: calc(40vh - 25px);
+        bottom: -30px;
         right: 5px;
         padding: 5px;
         background: rgba(255, 255, 255, 0.4);
