@@ -18,7 +18,8 @@ content:
       subtitle: Senior Computer Scientist at Adobe Systems Incorporated
       icon: home/adobe.svg
       items:
-        - icon: "home/cc.svg"
+        - icon:
+            href: "home/cc.svg"
           title: CC Libraries
           content: "\n\nPart of the team that develops Adobe’s flagship sync solution for ingredients. Also play role in deciding the interchange formats of ingredients and methods for concept &amp; code re-use in multiple diverse platforms across Adobe’s Desktop, Web and Mobile properties. \n\nSpend considerable time understanding the diverse re-usable styles, their differences across the realms of design from videos to screen illustrations and print.\n\n"
           links:
@@ -29,7 +30,8 @@ content:
             title: Demo
             icon: youtube
         - title: Adobe Shape
-          icon: home/shape.svg
+          icon:
+            href: home/shape.svg
           content: "\n\nOnly engineer who participated in creation of Adobe Shape from prototype to release (Adobe Max 2014) involved in the entire cycle of ideation, prototyping, validation, optimization and release. The app saw over a million downloads in less than a year before being merged into Adobe Capture.\n\n Spent considerable amount of time learning complexities around image segmentation, edge detection and augmented reality using OpenGL in mobile environments.\n\n"
           links:
             - href: http://www.adobe.com/products/capture.html
@@ -39,7 +41,8 @@ content:
               title: Demo
               icon: youtube
         - title: Adobe Color
-          icon: home/color.svg
+          icon:
+            href: home/color.svg
           content: "\n\nInfluential member of the small member team that resurrected Adobe Kuler (800k+ registered users) from maintenance mode to be a part of two consecutive Adobe Max keynotes (2011, 2013). Major contributor to the architecture and implementation of the full web stack, its deployment as well as the native iOS Adobe Kuler app (now Adobe Capture). \n\nSpent considerable time designing and migrating a running service with hundreds of thousands of daily visits to a completely different architecture from Coldfusion and Flash to HTML5 &amp; nodejs over AWS.\n\n"
           links:
             - href: https://color.adobe.com
@@ -49,7 +52,8 @@ content:
               title: Demo
               icon: youtube
         - title: Adobe InDesign
-          icon: home/id.svg
+          icon:
+            href: home/id.svg
           content: "\n\nManaged the Adobe Creative Suite SDK which powers HTML based extensions including the Adobe Digital Publishing Suite into Adobe InDesign. Went through the architectural migration of a complicated multi-gigabytes code-base from Carbon to Cocoa based MacOS architecture.\n\nSpent considerable time understanding the complex architecture of InDesign and Illustrator, learning the best practices of software development and maintenance.\n\n"
           links:
           - href: http://www.adobe.com/products/indesign.html
@@ -64,7 +68,8 @@ content:
       items:
         - title: Microsoft Corporation
           content: Developed a Fault Injection tool to test Windows Mobile 6 applications which could inject functions before and after any function present in a dll, including system calls like malloc and fopen (Sophomore Summer Internship 2008).
-          icon: "home/ms.svg"
+          icon:
+            href: "home/ms.svg"
           links:
           - icon: file-powerpoint-o
             title: Presentation
@@ -74,7 +79,8 @@ content:
             href: /home/FFI Report 2008 - Atishay Jain.pdf
         - title: Informatica Business Solutions
           content: Developed a working Prototype of Informatica PowerExchange for Oracle Essbase based on a wizard based layout. Got an inside of the enterprise side of software development. (Final Year Project 2010).
-          icon: "home/infa.svg"
+          icon:
+            href: "home/infa.svg"
           links:
           - icon: file-powerpoint-o
             title: Presentation
@@ -88,17 +94,20 @@ content:
       - title: Stanford University
         subtitle: Graduate Certificate
         heading: Artificial Intelligence
-        icon: home/stanford.svg
+        icon:
+          href: home/stanford.svg
         content: "Studied Artificial Intelligence through graduate courses as a part of Stanford's SCPD program. \n\nLoved to be a part of the strong community of dedicated students engrossed in learning a field of study that promises immense impact on mankind. From Bayesian and Markov models to SIFT and then to LSTMs and  Image Nets, it was funt to take modern AI to a spin."
       - title: Thapar University
         subtitle: Bachelors in Engineering
         heading: Computer Science
         content: "Completed engineering with CGPA of 9.84(10) and a merit scholarship from the University. \n\nDedicated, hardworking faculty and immense opportunity provided by various programming contests in North India had an immense impact in developing my skills."
-        icon: home/thapar.svg
+        icon:
+          href: home/thapar.svg
       - title: Brightlands School
         subtitle: High School
         heading: Science
-        icon: home/bls.png
+        icon:
+          href: home/bls.png
         content: "Amongst school toppers with 94.6% in Class X and 96.25% in Class XII under the ICSE/ISC board, New Delhi. Completed schooling with a merit scholarship. \n\nSchooling instills curiosity and persistence in an individual. I was blessed with some of the best teachers in North India."
     - title: Patents
       type: full-width
@@ -119,12 +128,40 @@ content:
         - icon: link
           title: Access
           href: http://patents.com/us-9449248.html
+    - title: Speaking
+      type: keep-width
+      items:
+      - title: CascadiaJS 2018
+        image:
+          href: home/cascadia.jpg
+          alt: Atishay Jain at CascadiaJS 2018
+          width: 500
+          height: 333
+          anchor: Top
+        # icon:
+        #   href: home/cascadia.svg
+        #   width: 150
+        content: Ever tried calling C++ from Node or Electron. Hate native modules because of the compilation and maintenance issues. This talk is all about the solution to this problem - N-API that is stable with node 10. C++ to Node.js interop is a lot of fun.
+        links:
+          - href: https://2018.cascadiajs.com/speakers/atishay-jain/
+            icon: external-link
+            title: Official Website
+          - href: https://www.youtube.com/watch?v=E0w7Tc0f2fA
+            icon: youtube
+            title: View
+          - href: https://napi.atishay.me/
+            icon: play
+            title: Try
+          - href: https://github.com/atishay/napi
+            icon: github
+            title: code
     - title: Awards
       type: max-2
       subtitle: "Don't live for appreciation, but accept it humbly if given.\nHere is a selection of mine."
       items:
       - title: Professional
-        icon: "home/professional.svg"
+        icon:
+          href: "home/professional.svg"
         content: |+1
           Won multiple awards at Adobe for exceptional work. Given an increasing number of responsibilities with direct impact on company performance.
 
@@ -136,7 +173,8 @@ content:
           * Adobe Shape - Horizon Interactive Award (2015).
           * CCNA certified (2009-11), SCJP (2008-)
       - title: College
-        icon: "home/college.svg"
+        icon:
+          href: "home/college.svg"
         content: |+1
           Multiple awards & participation at college and other places like the IITs & Corporates. Also organized a bunch of events.
 
@@ -146,7 +184,8 @@ content:
           * **Intra-college**  GetSetGo 2007, Chakravyun 2006, Arithmania 2008.
           * Created Fundoori, a Yahoo-like portal for Patiala city.
       - title: School
-        icon: "home/school.svg"
+        icon:
+          href: "home/school.svg"
         content: |+1
           Was amongst the school as well as state toppers
 
@@ -156,7 +195,8 @@ content:
           * School Official (2003)
           * Multiple achievement awards during annual day.
       - title: Hobbies
-        icon: "home/hobby.svg"
+        icon:
+          href: "home/hobby.svg"
         content: |+1
           Miscellaneous winnings
 
@@ -411,6 +451,11 @@ content:
         - icon: link
           title: Access
           href: https://arxiv.org/abs/1807.00049
+    - title: Blog
+      subtitle: "Read more about my thoughts at my blog. \nHere are some recent posts"
+      type: blog
+      count: 6
+      section: blog
     - title: Proficiency
       subtitle: "After knowing the basics of programming, one should know the assumptions and constraints of the domain. \n It doesn't matter what language or tooling is needed. You can get upto speed quickly."
       items:
@@ -441,28 +486,28 @@ content:
           * Installers
           * Electron with Native Modules
           * Your language / framework
-    - title: Blog
-      subtitle: "Read more about my thoughts at my blog. \nHere are some recent posts"
-      type: blog
-      count: 6
-      section: blog
     - title: Testimonials
       type: carousel
       items:
         - title: Mosum Gaba <small> Colleague at Adobe </small>
           content: He was the one guy in the team who stood apart due to his 'out-of-box' thinking. He is able to take up responsibilities and has the capability to deliver.
-          icon: home/mosum.jpg
+          icon:
+            href: home/mosum.jpg
         - title: Shamit Mehta <small> Reporting Manager at Adobe</small>
           content: (He) is widely recognized in his team and across the organization as a prolific developer. Above all he understands the business and customer needs very well.
-          icon: home/shamit.jpg
+          icon:
+            href: home/shamit.jpg
         - title: Gaurav Dewan <small> Colleague at Adobe</small>
           content: Methodical, precise and organized. When he takes up a task, he strives for the best and aims high. Among his notable personal traits are modesty and sincerity.
-          icon: home/gd.jpg
+          icon:
+            href: home/gd.jpg
         - title: Rohan Khanna <small> Colleague at Thapar University</small>
           content: One of the most skilled and knowledgeable person I had come across while in college. Can handle, with ease, all the tasks that are allotted to him.
-          icon: home/rohan.jpg
+          icon:
+            href: home/rohan.jpg
         - title: Gavin Peacock <small> Reporting Manager at Adobe</small>
-          icon: home/gavin.jpg
+          icon:
+            href: home/gavin.jpg
           content: It was astounding to see how rapidly he came up to speed and became a key member and lead on the team. He has the ability to take on all aspects of a task, understanding everything required to get things done. He has made a great impact. I highly recommend him!
     - #title: Contact
       type: centered

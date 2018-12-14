@@ -47,9 +47,6 @@ style="background-image:url({{$bg.Permalink}})"
                 filter-{{$filters.Get .}} {{ end -}}
             {{- end -}}
             {{- end -}}">
-{{- with .icon -}}
-{{- partialCached "util/icon" (dict "key" . "size" 40 "class" "item-icon") (print . "item-icon") -}}
-{{- end -}}
 {{ $title := .title }}
 {{- with .image -}}
     {{$anchor := .anchor | default "" }}
@@ -61,6 +58,9 @@ style="background-image:url({{$bg.Permalink}})"
     <source src="{{.href}}" type="{{.format}}">
     The browser does not support the video format {{.format}}.
 </video>
+{{- end -}}
+{{- with .icon -}}
+{{- partialCached "util/icon" (dict "key" .href "size" (default 40 .width) "class" "item-icon") (print . "item-icon") -}}
 {{- end -}}
 {{- with .title -}}
     <h2>{{. | markdownify }}</h2>
