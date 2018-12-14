@@ -339,6 +339,8 @@
     margin-bottom: 20px;
     .items {
         display: flex;
+        grid-column-gap: 0;
+        grid-row-gap: 0;
     }
     .item {
         transform: translate3d(0, 0, 0);
