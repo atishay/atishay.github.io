@@ -15,7 +15,8 @@ style="background-image:url({{$bg.Permalink}})"
     {{with .title}}<h1>{{. | markdownify}}</h1>{{ end }}
     {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{ end }}
     {{with .content}}<p>{{. | markdownify}}</p>{{ end }}
-    {{- if eq .type "blog" -}}
+    {{ $types := split .type " " }}
+    {{- if in $types "blog" -}}
     <ul class="items items-{{.count | default 6}}">
         {{- range first (default 6 .count) (where (where $site.Pages ".Section" .section) ".Kind" "page" ) -}}
         {{partialCached "util/post.html" . .RelPermalink}}
@@ -26,7 +27,7 @@ style="background-image:url({{$bg.Permalink}})"
     {{- $filter := false -}}
     {{- $list := "" -}}
     {{- $filters := newScratch }}
-    {{- if eq .type "filter" -}}
+    {{- if in $types "filter" -}}
         {{- range .items -}}
             {{ $list = print $list " " (trim .filter " ") }}
         {{- end -}}
