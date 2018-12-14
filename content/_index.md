@@ -166,7 +166,7 @@ content:
           * Multiple awards for drawing and painting during schooling.
           * Completed Kashmir Great Lakes and Kedarkantha treks.
     - title: Projects
-      type: filter
+      type: filter gray-image
       filter: all
       subtitle: Below is a selection of some of my popular projects, their short descriptions and useful links.
       items:
