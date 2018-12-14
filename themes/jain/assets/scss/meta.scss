@@ -342,7 +342,12 @@
         grid-column-gap: 0;
         grid-row-gap: 0;
     }
+    &:nth-child(2n) {
+            box-shadow: 200px 0 0 20px #F6F6F6,
+            -200px 0 0 20px #F6F6F6;
+    }
     .item {
+        background-color: white;
         transform: translate3d(0, 0, 0);
         min-width: calc(var(--max-width)/2 - 40px);
         margin: 0 20px;
@@ -669,6 +674,28 @@
     }
     .item {
         padding: 15px;
+    }
+}
+
+/////////////////////////////////////////
+// Alternate image styles
+/////////////////////////////////////////
+
+.meta.gray-image {
+    .item-cover {
+        filter: contrast(1);
+        transition: filter 0.2s ease-in;
+        &:hover, &.hover {
+            border-radius: 5px;
+            filter: contrast(1.3) brightness(1.1);
+        }
+    }
+}
+
+meta.keep-width {
+    .item-cover {
+        max-width: 100%;
+        height: auto;
     }
 }
 
