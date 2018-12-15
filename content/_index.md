@@ -168,7 +168,7 @@ content:
           - href: https://www.youtube.com/watch?v=E0w7Tc0f2fA
             icon: youtube
             title: View
-          - href: https://napi.atishay.me/
+          - href: https://n-api.herokuapp.com/
             icon: play
             title: Try
           - href: https://github.com/atishay/napi
