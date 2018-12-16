@@ -341,6 +341,20 @@ content:
           Short film shot during college of a guy wrongly accused just because of his name.
 
           Won IIT R Thomso 2008 in short film category but I don't have a proof for it. You can still enjoy the performance by Thapar Movie Club
+      - title: Adobe Product Screens
+        links:
+          - href: https://www.adobe.com/creativecloud/plans.html
+            title: Buy CC
+            icon: shopping-cart
+        image:
+          href: projects/screens.jpg
+          width: 267
+          height: 180
+          anchor: Center
+        filter: all adobe
+        content: |
+          Home Screens of Adobe's Flagship dekstop applications - Photoshop, Illustrator, InDesign, After Effects, Premiere Pro and Dreamweaver. Provided stunning visuals to introduce new features and orient users on a A/B tested, server-controlled, offline-first, prime screen space on the machine.
+        attribution: Mockup from [Graphic Twister](https://graphictwister.com/unique-workspace-mockup/). Screenshots by self.
       - title: Bond Forever
         filter: all media
         image:
@@ -372,6 +386,20 @@ content:
           My first short film. Wrote the screenplay, did some parts of the direction and editing.
 
           A stupid plot producing an unexpected but genius result.
+      - title: Atishay.me
+        filter: all code
+        image:
+          href: projects/website.png
+          anchor: Center
+          width: 267
+          height: 180
+        attribution: Mockup by Tran Mau Tri Tam from [Behance](https://www.behance.net/gallery/42391267/The-Screens-Free-Perspective-PSD-Mockup-Template)
+        links:
+          - href: https://atishay.me
+            title: Refresh
+            icon: refresh
+        content: |
+          This website. Custom made theme. JS optional. Optimized, extremely fast to build. Performance score 100. Proper content - data separation. Super fun to extend. Great to learn from.
     - title: Publications
       type: full-width
       subtitle: "More than a blogger. I write to academic journals, websites, magazines and anywhere I can get my hands on."
