@@ -3,13 +3,13 @@ date: "2018-08-25T00:00:00Z"
 title: "From callbacks to async - await"
 description: "A step by step guide for moving from callbacks to async await in JavaScript applications."
 tags:
- - javascript
+ - web-development
 sidebar:
   - title: attribution
     content: "Image by Tomas Sobek  from [Unsplash](https://unsplash.com/photos/plwud_FPvwU)"
 slug: from-callbacks-to-async-await
 categories:
-  - javascript
+  - web-development
 ---
 
 # From callbacks to async - await - A migration guide
