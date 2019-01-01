@@ -11,7 +11,7 @@ before_install:
   - sudo apt-get install -y python-pygments
 
 install:
-  - wget https://github.com/gohugoio/hugo/releases/download/v0.52/hugo_0.52_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.deb -O /tmp/hugo.deb && sudo dpkg -i /tmp/hugo.deb
   # Clean and don't fail
   - rm -rf public || exit 0
 
