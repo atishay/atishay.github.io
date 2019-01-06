@@ -8,6 +8,6 @@
         {{ $params = print $params " Center" }}
     {{end}}
         {{ $cover = .Fill $params }}
-    <img width="{{$.width}}" height="{{$.height}}" alt={{.Title}} role="banner" class="banner" src="{{$cover.RelPermalink}}" />
+<img width="{{$.width}}" height="{{$.height}}" alt="{{$.page.Title}}" role="banner" class="banner" src="{{$cover.RelPermalink}}" />
 </div>
 {{- end -}}
