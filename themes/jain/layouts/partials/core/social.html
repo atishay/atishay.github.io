@@ -76,8 +76,9 @@
 {{- $featured := $images.GetMatch "*feature*" -}}
 {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
 {{- with $featured -}}
+{{ $img := .Fill "1024x512" }}
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="{{ $featured.Permalink }}"/>
+<meta name="twitter:image" content="{{ $img.Permalink }}"/>
 {{- else -}}
 {{- with $.Site.Params.image -}}
 <meta name="twitter:card" content="summary_large_image"/>
