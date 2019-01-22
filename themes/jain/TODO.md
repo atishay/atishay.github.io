@@ -35,6 +35,8 @@
 * [Lazy Load youtube](https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743)
 * Download progress.
 * Search
+* intrinsicsizes for images
+* CSS Contain
 
 Submit for awards
 ----------------

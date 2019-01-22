@@ -1,0 +1,18 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Site.RegularPages -}}
+    {{ $params := "750x300" }}
+    {{ $cover := ""}}
+      {{ if .Params.coverAnchor }}
+        {{ $params = print $params " " .Params.coverAnchor }}
+      {{ else }}
+        {{ $params = print $params " Center" }}
+      {{end}}
+    {{- with .Resources.GetMatch "cover.*" -}}
+        {{ $cover = (.Fill $params).RelPermalink }}
+    {{- end -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink "image" $cover) -}}
+{{- end -}}
+{{- with .Site.Home -}}
+{{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink) -}}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
