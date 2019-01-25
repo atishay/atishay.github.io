@@ -63,8 +63,12 @@
 {{ end }}
 {{- with .Params.tags }}{{ range first 6 . }}
 <meta property="article:tag" content="{{ . }}" />
-{{ end }}{{ end }}
-{{ end }}
+{{ end }}{{ end -}}
+{{ end -}}
+
+{{- with .Site.Author.pinterest }}
+<meta name="p:domain_verify" content="{{.}}" />
+{{end -}}
 
 {{ block "twitter" .}}
 
