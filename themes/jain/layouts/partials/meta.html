@@ -2,7 +2,7 @@
 {{- range .Params.content -}}
 <section {{with .title}}id="{{. | urlize}}"{{ end }} class="meta {{.type | default "default"}}"
 {{- with.background -}}
-{{ $bg := resources.Get . }}
+{{ $bg := (resources.Get .).Fill "1400x940" }}
 style="background-image:url({{$bg.Permalink}})"
 {{- end -}}
 >
