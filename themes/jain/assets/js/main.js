@@ -17,7 +17,6 @@
   ///////////////////////////////////////////
   // Scroll animations for iPad and bigger
   if (window.innerWidth >= 768) {
-    console.log("Greater");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(x => {
         if (x.isIntersecting && !x.target.classList.contains('visible')) {
@@ -44,7 +43,6 @@
         });
       });
   } else {
-    console.log("Lesser");
     // For mobile the hover animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(x => {
@@ -64,6 +62,23 @@
       });
     });
   }
+
+  class Search {
+    constructor() {
+      // Ignore errors loading search.
+      this.prepare().catch(() => {});
+    }
+
+    async prepare() {
+      const response = await fetch('/index.json');
+      const data = await response.json();
+      if (data && data.length > 0) {
+        document.querySelector('#searchbox').classList.add('visible');
+      }
+    }
+  }
+
+  const search = new Search();
 })();
 
 

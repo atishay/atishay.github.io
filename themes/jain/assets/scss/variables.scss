@@ -1,6 +1,10 @@
 @import "../../node_modules/include-media/dist/_include-media.scss";
 
-$breakpoints: (xs: 320px, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+
+$md: 768px;
+$sm: 576px;
+$search-follow: 660px;
+$breakpoints: (xs: 320px, sm: $sm, md: $md, lg: 992px, xl: 1200px);
 $divider: #e4e4e4;
 $text-color: #666;
 $shade: #F6F6F6;

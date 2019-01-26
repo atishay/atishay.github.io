@@ -37,6 +37,7 @@
 * Search
 * intrinsicsizes for images
 * CSS Contain
+* Priority hints
 
 Submit for awards
 ----------------

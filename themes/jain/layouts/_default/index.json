@@ -1,4 +1,7 @@
 {{- $.Scratch.Add "index" slice -}}
+{{- with .Site.Home -}}
+{{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink) -}}
+{{- end -}}
 {{- range .Site.RegularPages -}}
     {{ $params := "750x300" }}
     {{ $cover := ""}}
@@ -11,8 +14,5 @@
         {{ $cover = (.Fill $params).RelPermalink }}
     {{- end -}}
     {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink "image" $cover) -}}
-{{- end -}}
-{{- with .Site.Home -}}
-{{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
