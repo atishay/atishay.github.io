@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{- with $.Page.Resources.GetMatch "cover.*" -}}
 <div class="contact-cover">
-<img width="1440" height="300" alt="Contact Cover" role="presentation" src="{{(.Fill "2880x600 Top").RelPermalink}}" />
+<img width="1440" height="300" intrinsicsize="2880x600" alt="Contact Cover" role="presentation" src="{{(.Fill "2880x600 Top").RelPermalink}}" />
 </div>
 {{- end -}}
 <article class="contact">
