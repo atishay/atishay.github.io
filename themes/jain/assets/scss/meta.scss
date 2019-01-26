@@ -47,6 +47,7 @@
             background-color: var(--theme-color);
             transition: border-radius 0.5s ease-in-out;
             border: 2px solid transparent;
+            box-sizing: content-box; // Using this to maintain image aspect ratios set in code.
             &:hover, &.hover {
                 border-radius: 50%;
             }

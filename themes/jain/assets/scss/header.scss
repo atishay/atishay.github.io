@@ -1,7 +1,6 @@
 header {
     @include container;
-    position: -webkit-sticky; // Remove once PostCSS is configured.
-    position: sticky;
+    position: fixed;
     top: 0;
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 1px 1px #f6f6f6,
@@ -270,7 +269,7 @@ $hamburger-size: calc(8px + var(--header-height) / 2);
 }
 
 body {
-    padding-top: 200vh;
+    padding-top: calc(200vh + var(--header-height));
 }
 
 .scroll-up {
