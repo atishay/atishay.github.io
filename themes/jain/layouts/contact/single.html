@@ -17,7 +17,7 @@
                 <ul>
                     {{- with $.Site.Author.email -}}
                     <li>
-                        <a target="_blank" href="mailto:{{ . }}">
+                        <a target="_blank" href="mailto:{{ . }}" rel="noopener">
                         {{ $icon := resources.Get "image/line-awesome/fa-envelope.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
                             {{$middle := replaceRE "^.*@" "" .}}
                             <span>{{replaceRE "@.*$" "" .}} [at] {{ replaceRE "\\..*" "" $middle }} [dot] {{ replaceRE "^.*\\." "" . }}</span>
@@ -32,7 +32,7 @@
                     {{- end -}}
                     {{- with $.Site.Author.location -}}
                     <li>
-                        <a target="_blank" href="https://www.google.com/maps/place/{{.}}"> <!-- Google maps search here -->
+                        <a target="_blank" href="https://www.google.com/maps/place/{{.}}" rel="noopener"> <!-- Google maps search here -->
                         {{ $icon := resources.Get "image/line-awesome/fa-compass.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
                             <span>{{.}}</span>
                         </a>
@@ -45,7 +45,7 @@
                 <h2>Contact Hours</h2>
                 <ul>
                     <li>
-                        <a target="_blank" href="https://www.timeanddate.com/time/zone/?query={{$.Site.Author.location}}">
+                        <a target="_blank" href="https://www.timeanddate.com/time/zone/?query={{$.Site.Author.location}}" rel="noopener">
                         {{ $icon := resources.Get "image/line-awesome/fa-clock-o.svg" | resources.Minify }} {{ replace $icon.Content "<svg" "<svg width=\"30px\""  | safeHTML }}
                             {{$middle := replaceRE "^.*@" "" .}}
                             <span>{{. | markdownify}}</span>
@@ -59,7 +59,7 @@
                 <ul class="social">
                     {{ with $.Site.Author.linkedin }}
             <li>
-                <a target="_blank" href="{{ . }}">
+                <a target="_blank" href="{{ . }}" rel="noopener">
                     {{ $icon := resources.Get "image/line-awesome/fa-linkedin.svg" | resources.Minify }}
                     {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
@@ -67,7 +67,7 @@
             </li>
             {{ end }} {{ with $.Site.Author.github }}
             <li>
-                <a target="_blank" href="{{ . }}">
+                <a target="_blank" href="{{ . }}" rel="noopener">
                     {{ $icon := resources.Get "image/line-awesome/fa-github.svg" | resources.Minify }}
                     {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
@@ -75,7 +75,7 @@
             </li>
             {{ end }} {{ with $.Site.Author.twitter }}
             <li>
-                <a target="_blank" href="{{ . }}">
+                <a target="_blank" href="{{ . }}" rel="noopener">
                     {{ $icon := resources.Get "image/line-awesome/fa-twitter.svg" | resources.Minify }}
                     {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
@@ -83,7 +83,7 @@
             </li>
             {{ end }} {{ with $.Site.Author.facebook }}
             <li>
-                <a target="_blank" href="{{ . }}">
+                <a target="_blank" href="{{ . }}" rel="noopener">
                     {{ $icon := resources.Get "image/line-awesome/fa-facebook.svg" | resources.Minify }}
                     {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
@@ -96,16 +96,20 @@
         {{- with $.Site.Params.contact -}}
         <form action="https://docs.google.com/forms/d/e/{{.form}}/formResponse">
             {{- with .name -}}
-            <input class="contact-name" required type="name" autocomplete="given-name" placeholder="Name" name="{{.}}">
+            <label class="sr-only" for="contact-name">Name</label>
+            <input id="contact-name" class="contact-name" required type="name" autocomplete="given-name" placeholder="Name" name="{{.}}">
             {{- end -}}
             {{- with .email -}}
-            <input class="contact-email`" required type="email" autocomplete="email" placeholder="Email address" name={{.}}>
+            <label for="contact-email" class="sr-only">Email</label>
+            <input id="contact-email" class="contact-email`" required type="email" autocomplete="email" placeholder="Email address" name={{.}}>
             {{- end -}}
             {{- with .subject -}}
-            <input class="contact-subject" name="{{.}}" type="text" autocomplete placeholder="Subject">
+            <label for="contact-subject" class="sr-only">Subject</label>
+            <input id="contact-subject" class="contact-subject" name="{{.}}" type="text" autocomplete placeholder="Subject">
             {{- end -}}
             {{- with .message -}}
-            <textarea rows="10" class="contact-message" name="{{.}}" placeholder="Message" required></textarea>
+            <label for="contact-message" class="sr-only">Message</label>
+            <textarea id="contact-message" rows="10" class="contact-message" name="{{.}}" placeholder="Message" required></textarea>
             {{- end -}}
             <button type="submit">Submit</button>
         </form>

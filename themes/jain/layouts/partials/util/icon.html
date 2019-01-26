@@ -3,7 +3,7 @@
 {{else}}
 {{if eq (len (findRE "\\.(png|jpg)$" $.key 1)) 1}}
 {{ $icon := resources.Get $.key }}
-<img src="{{$icon.RelPermalink}}" class="{{$.class}}" width="{{$.size}}">
+<img src="{{$icon.RelPermalink}}" class="{{$.class}}" width="{{$.size}}" alt="{{$.alt}}">
 {{else}}
 {{partial "util/native-icon" (dict "type" $.key "size" $.size "class" $.class)}}
 {{end}}
