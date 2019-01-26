@@ -11,10 +11,11 @@
 </div>
 <h1>{{.Title}}</h1>
 {{- partial "util/heading-anchors.html" .Content -}}
+{{- $title := default .Title "" -}}
 {{- with .Params.youtube -}}
 <h2>Video</h2>
 <p>Here is the video:
-{{- partial "post/youtube.html" . -}}
+{{- partial "post/youtube.html" (dict "id" . "title" $title) -}}
 </p>
 {{- end -}}
 </main>
