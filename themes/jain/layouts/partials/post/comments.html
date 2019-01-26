@@ -10,7 +10,7 @@
   {{ $hasComment := true }}
   <li class="comment">
     {{ $time := index $r 0}}
-    <img width="100px" height="100px" src="https://www.gravatar.com/avatar/{{ md5 (index $r 1) }}?s=100&d=identicon" alt="{{ index $r 2 }}">
+    <img intrinsicsize="100x100" width="100px" height="100px" src="https://www.gravatar.com/avatar/{{ md5 (index $r 1) }}?s=100&d=identicon" alt="{{ index $r 2 }}">
     <span class="commenter-name">{{ index $r 2 }}</span>
     {{ $icon := resources.Get "image/line-awesome/fa-calendar.svg" | resources.Minify }}
     {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}

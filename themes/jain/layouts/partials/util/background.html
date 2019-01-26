@@ -1,0 +1,2 @@
+{{ $cover := (resources.Get "image/desktop.jpg").Fill "1920x1080" }}
+<img class="background" intrinsicsize="1920x1080" width="0" height="0" alt="Page Background" role="presentation" src="{{$cover.RelPermalink}}" />

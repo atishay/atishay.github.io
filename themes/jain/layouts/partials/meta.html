@@ -14,7 +14,7 @@ style="background-image:url({{$bg.Permalink}})"
     {{- with .image -}}
     {{$anchor := .anchor | default "" }}
     {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2) " " $anchor) }}
-    <img width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
+    <img intrinsicsize="{{print (mul .width 2) "x" (mul .height 2)}}" width="{{.width}}" height="{{.height}}" alt="{{.alt}}" src="{{$cover.RelPermalink}}" />
     {{- end -}}
     {{with .title}}<h1>{{. | markdownify}}</h1>{{ end }}
     {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{ end }}
@@ -57,7 +57,7 @@ style="background-image:url({{$bg.Permalink}})"
 {{- with .image -}}
     {{$anchor := .anchor | default "" }}
     {{ $cover := (resources.Get .href).Fill (print (mul .width 2) "x" (mul .height 2) " " $anchor) }}
-    <img class="item-cover" width="{{.width}}" height="{{.height}}" alt="{{.alt | default $title}}" src="{{$cover.RelPermalink}}" />
+<img class="item-cover" intrinsicsize="{{print (mul .width 2) "x" (mul .height 2)}}" width="{{.width}}" alt="{{.alt | default $title}}" src="{{$cover.RelPermalink}}" />
 {{- end -}}
 {{- with .video -}}
 <video class="item-cover" loop autoplay muted width="{{.width}}" height="{{.height}}">
