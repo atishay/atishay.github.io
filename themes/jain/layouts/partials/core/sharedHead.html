@@ -8,16 +8,16 @@
 <meta name="robots" content="index, follow">
 {{ if eq .Site.Params.CSP true }}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: www.gravatar.com www.google-analytics.com stats.g.doubleclick.net www.google.com; {{ if .Site.IsServer }}connect-src ws:;{{ end }} worker-src www.google-analytics.com; frame-src www.youtube-nocookie.com; object-src 'none'">
-{{ end }}
+{{- end -}}
 
-{{ block "favicon" . }}
-  {{ $iconSVG := resources.Get "image/favicon.svg" | resources.Minify }} {{ $icon := resources.Get "image/favicon.png" }}
-  <link rel="apple-touch-icon-precomposed" href="{{ ($icon.Resize " 180x180 ").RelPermalink }}" />
-  <link rel="icon" type="image/svg" href="{{ $iconSVG.RelPermalink }}" />
-  <link rel="icon" type="image/png" href="{{ ($icon.Resize " 196x196 ").RelPermalink }}" />
-{{ end }}
+{{- block "favicon" . }}
+  {{- $iconSVG := resources.Get "image/favicon.svg" | resources.Minify }}{{ $icon := resources.Get "image/favicon.png" -}}
+<link rel="apple-touch-icon-precomposed" href="{{ ($icon.Resize " 180x180 ").RelPermalink }}" />
+<link rel="icon" type="image/svg" href="{{ $iconSVG.RelPermalink }}" />
+<link rel="icon" type="image/png" href="{{ ($icon.Resize " 196x196 ").RelPermalink }}" />
+{{- end -}}
 
-{{ if .RSSLink }}
+{{- if .RSSLink }}
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-{{ end }}
+{{- end -}}
