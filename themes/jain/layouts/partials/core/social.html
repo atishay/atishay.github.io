@@ -1,15 +1,17 @@
- {{ block "meta" . }}
- {{/* General SEO */}}
+{{- block "meta" . -}}
 <link rel="canonical" href="{{.Permalink}}" />
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
 />
-{{with .Site.Author.name}}
+{{- with .Site.Author.name}}
 <meta name="author" content="{{ . }}">
-{{end}}
+{{- end -}}
+{{- $manifest := resources.Get "json/manifest.json" -}}
+{{- $manifest = $manifest | resources.ExecuteAsTemplate "manifest.json" . }}
+<link rel="manifest" href="{{$manifest.RelPermalink}}">
 {{ end }}
 
-{{ block "opengraph" . }}
-{{/* Open Graph */}}
+{{- block "opengraph" . -}}
+{{- /* Open Graph */ -}}
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"
@@ -18,19 +20,19 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 {{- with .Params.audio }}
 <meta property="og:audio" content="{{ . }}" />
-{{ end }}
+{{- end -}}
 
 {{- with .Params.locale }}
 <meta property="og:locale" content="{{ . }}" />
-{{ end }}
+{{- end -}}
 
 {{- with .Params.video }}
 <meta property="og:video" content="{{ . }}" />
-{{ end }}
+{{- end -}}
 
 {{- with .Params.image }}
 <meta property="og:image" content="{{ . }}" />
-{{ end }}
+{{- end -}}
 {{- if .IsPage }}
 {{- if not .PublishDate.IsZero }}<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"/>
 {{ else if not .Date.IsZero }}<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"/>
@@ -49,28 +51,28 @@
   {{- $series := index $siteSeries $name }}
   {{- range $page := first 6 $series.Pages }}
     {{- if ne $page.Permalink $permalink }}<meta property="og:see_also" content="{{ $page.Permalink }}" />{{ end }}
-  {{- end }}
-{{ end }}{{ end }}
+  {{- end -}}
+{{- end }}{{ end -}}
 
 
-{{ with .Site.Author.facebook }}
+{{- with .Site.Author.facebook }}
 <meta property="article:author" content="https://www.facebook.com/{{ . }}" />
 <meta property="article:publisher" content="https://www.facebook.com/{{ . }}" />
-{{ end }}
+{{- end -}}
 
-{{ with .Section }}
+{{- with .Section }}
 <meta property="article:section" content="{{ . }}" />
-{{ end }}
-{{- with .Params.tags }}{{ range first 6 . }}
+{{- end -}}
+{{- with .Params.tags -}}{{- range first 6 . }}
 <meta property="article:tag" content="{{ . }}" />
-{{ end }}{{ end -}}
-{{ end -}}
+{{- end }}{{ end -}}
+{{- end -}}
 
 {{- with .Site.Author.pinterest }}
 <meta name="p:domain_verify" content="{{.}}" />
 {{end -}}
 
-{{ block "twitter" .}}
+{{- block "twitter" . -}}
 
 {{- with .Params.image -}}
 <meta name="twitter:card" content="summary_large_image"/>
@@ -87,14 +89,14 @@
 {{- with $.Site.Params.image -}}
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ . | absURL }}"/>
-{{ else -}}
+{{- else -}}
 <meta name="twitter:card" content="summary"/>
 {{- end -}}
 {{- end -}}
 {{- end }}
 <meta name="twitter:title" content="{{ .Title }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
-{{ with .Site.Author.twitter }}
+{{- with .Site.Author.twitter }}
 <meta name="twitter:site" content="@{{ . }}" />
 <meta name="twitter:creator" content="@{{ . }}" />
 {{- end -}}
@@ -105,7 +107,7 @@
   <meta name="news_keywords" content="{{ range $i, $kw := first 10 . }}{{ if $i }},{{ end }}{{ $kw }}{{ end }}" />
 {{- end }}{{ end -}}
 
-{{ block "jsonld" . }}
+{{- block "jsonld" . }}
 <script type="application/ld+json">
 {
     "headline": "{{ .Title }}",
@@ -200,7 +202,7 @@
 </script>
 */}}
 
-{{if isset .Params "video" }}
+{{- if isset .Params "video" }}
 <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -216,5 +218,5 @@
         */}}
     }
 </script>
-{{ end }}
-{{ end }}
+{{- end -}}
+{{- end -}}

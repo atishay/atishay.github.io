@@ -1,4 +1,5 @@
-<a href="#top" class="scroll-up">
+<a href="#top" class="scroll-up" role="button">
+    <span class="sr-only">Scroll to top</span>
     {{ $icon := resources.Get "image/line-awesome/fa-angle-up.svg" | resources.Minify }}
     {{ replace $icon.Content "<svg " " <svg width=\"30px\" " | safeHTML }}
 </a>
@@ -18,6 +19,7 @@
     <a role="button" class="logo" href="{{.Site.BaseURL}}">
         {{ $logoSVG := resources.Get "image/logo.svg" | resources.Minify }}
         <img src="{{$logoSVG.Permalink}}" alt="{{ .Site.Title }} Logo">
+        <span class="sr-only">Logo</span>
     </a>
     <ul role="menubar" class="top-menu">
 {{ $currentPage := . }}

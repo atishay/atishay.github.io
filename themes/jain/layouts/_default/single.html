@@ -3,18 +3,19 @@
 {{ end }}
 
 {{ define "main" }}
-<img class="background" width="0" height="0" alt="Page Background" role="presentation" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
+{{- partialCached "util/background.html" "bg" -}}
 <div class="post">
 <main>
 <div class="post-anchor">
 {{- partial "util/cover.html" (dict "class" "banner-holder" "page" . "width" 800 "height" 400) -}}
-<h1>{{.Title}}</h1>
 </div>
+<h1>{{.Title}}</h1>
 {{- partial "util/heading-anchors.html" .Content -}}
+{{- $title := default .Title "" -}}
 {{- with .Params.youtube -}}
 <h2>Video</h2>
 <p>Here is the video:
-{{- partial "post/youtube.html" . -}}
+{{- partial "post/youtube.html" (dict "id" . "title" $title) -}}
 </p>
 {{- end -}}
 </main>

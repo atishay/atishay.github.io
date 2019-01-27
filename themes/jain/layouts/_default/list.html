@@ -1,5 +1,5 @@
 {{ define "main" }}
-<img class="background" width="0" height="0" alt="Page Background" role="presentation" src="{{(resources.Get "image/desktop.jpg").RelPermalink}}" />
+{{- partialCached "util/background.html" "bg" -}}
 <article class="list">
     <h1 class='title'>{{.Title}}</h1>
 <span class='subtitle'>{{- .Content | plainify -}}</span>

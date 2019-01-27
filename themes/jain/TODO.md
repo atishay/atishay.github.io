@@ -21,6 +21,7 @@
 * After comments stay on the same page via Javascript.
 * Blog archive tree.
 * https://github.com/thedaviddias/Front-End-Performance-Checklist
+* https://www.smashingmagazine.com/2019/01/front-end-performance-checklist-2019-pdf-pages/
 * Move styles from tag cloud to CSS files.
 * Taxonomy collapsible.
 * Table of Contents

@@ -28,7 +28,7 @@
         <ul class="contact-us">
             {{ with $.Site.Author.email }}
             <li>
-                <a target="_blank" href="mailto:{{ . }}">
+                <a target="_blank" href="mailto:{{ . }}" rel="noopener">
  {{ $icon := resources.Get "image/line-awesome/fa-envelope.svg" | resources.Minify }} {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
                     {{$middle := replaceRE "^.*@" "" .}}
                     <span>{{replaceRE "@.*$" "" .}} [at] {{ replaceRE "\\..*" "" $middle }} [dot] {{ replaceRE "^.*\\." "" . }}</span>
@@ -36,7 +36,7 @@
             </li>
             {{ end }} {{ with $.Site.Author.linkedin }}
             <li>
-                <a target="_blank" href="{{ . }}">
+                <a target="_blank" href="{{ . }}" rel="noopener">
                     {{ $icon := resources.Get "image/line-awesome/fa-linkedin.svg" | resources.Minify }}
                     {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
@@ -44,7 +44,7 @@
             </li>
             {{ end }} {{ with $.Site.Author.github }}
             <li>
-                <a target="_blank" href="{{ . }}">
+                <a target="_blank" href="{{ . }}" rel="noopener">
                     {{ $icon := resources.Get "image/line-awesome/fa-github.svg" | resources.Minify }}
                     {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
@@ -52,7 +52,7 @@
             </li>
             {{ end }} {{ with $.Site.Author.twitter }}
             <li>
-                <a target="_blank" href="{{ . }}">
+                <a target="_blank" href="{{ . }}" rel="noopener">
                     {{ $icon := resources.Get "image/line-awesome/fa-twitter.svg" | resources.Minify }}
                     {{ replace $icon.Content "<svg " "<svg width=\"30px\" "  | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
@@ -60,7 +60,7 @@
             </li>
             {{ end }} {{ with $.Site.Author.facebook }}
             <li>
-                <a target="_blank" href="{{ . }}">
+                <a target="_blank" href="{{ . }}" rel="noopener">
                     {{ $icon := resources.Get "image/line-awesome/fa-facebook.svg" | resources.Minify }}
                     {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
                     <span>{{ replaceRE "https://" "" . }}</span>
