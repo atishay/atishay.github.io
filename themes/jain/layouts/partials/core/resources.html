@@ -49,5 +49,5 @@
 {{- end -}}
 
 {{- $sw := resources.Get "js/sw.js" -}}
-{{- $sw = $sw | resources.ExecuteAsTemplate "js/service-worker.js" (dict "page" . "res" $res) | resources.Minify -}}
+{{- $sw = $sw | resources.ExecuteAsTemplate "sw.js" (dict "page" . "res" $res) | resources.Minify -}}
 {{- $sw = $sw.Permalink -}}

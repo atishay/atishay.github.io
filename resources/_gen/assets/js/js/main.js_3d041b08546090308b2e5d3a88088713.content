@@ -80,4 +80,4 @@ async prepare(){const response=await fetch('/index.json');const data=await respo
 handleKeyPress(){}
 showSearchResults(){let results=[];if(this.input.value.length===0){results=this.data.sort((a,b)=>new Date(a.date).getTime()-new Date(b.date).getTime());}else{results=this.fuse.search(this.input.value);}}
 hideSearchResults(){}}
-const search=new Search();})();
+const search=new Search();if('serviceWorker'in navigator){navigator.serviceWorker.register('/sw.min.js',{scope:'/'}).then(function(registration){console.log('Service Worker Registered');});navigator.serviceWorker.ready.then(function(registration){console.log('Service Worker Ready');})}})();

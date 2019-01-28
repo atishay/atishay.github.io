@@ -2,22 +2,26 @@
 (function () {
 
   // Update 'version' if you need to refresh the cache
-  var staticCacheName = 'static';
-  var version = 'v1::';
+  const staticCacheName = 'static';
+  const version = 'v1::';
 
   // Store core files in a cache (including a page to display when offline)
+  // {{- $cover:= (resources.Get "image/desktop.jpg").Fill "1400x787" }}
   function updateStaticCache() {
     return caches.open(version + staticCacheName)
-      .then(function (cache) {
-        return cache.addAll([
-          '/',
-          {{- range $.res }}
+      .then((cache) =>  cache.addAll([
+        '/',
+        '/manifest.json',
+          /*{{- range $.res }} /**/
           '{{.}}',
-          {{ end }}
+          /* {{ end }} /**/
+          '{{$cover.Permalink}}',
           '/offline',
-        ].map(x => new URL(x).pathname));
-      });
-  };
+          '{{ (resources.Get "image/logo.svg" | resources.Minify).Permalink }}',
+          '/index.json',
+          '/sw.min.js'
+      ].map(x =>  x.indexOf('http') === 0 ? new URL(x).pathname : x)));
+  }
 
   self.addEventListener('install', function (event) {
     event.waitUntil(updateStaticCache());
@@ -29,32 +33,27 @@
         .then(function (keys) {
           // Remove caches whose name is no longer valid
           return Promise.all(keys
-            .filter(function (key) {
-              return key.indexOf(version) !== 0;
-            })
-            .map(function (key) {
-              return caches.delete(key);
-            })
+            .filter((key) => key.indexOf(version) !== 0)
+            .map((key) => caches.delete(key))
           );
         })
     );
   });
 
   self.addEventListener('fetch', function (event) {
-    var request = event.request;
+    const request = event.request;
     // Always fetch non-GET requests from the network
     if (request.method !== 'GET') {
       event.respondWith(
         fetch(request)
-          .catch(function () {
-            return caches.match('/offline');
-          })
+          .catch(() => caches.match('/offline'))
       );
       return;
     }
 
     // For HTML requests, try the network first, fall back to the cache, finally the offline page
     if (request.headers.get('Accept').indexOf('text/html') !== -1) {
+      // return event.respondWith(caches.match('/offline'));
       // Fix for Chrome bug: https://code.google.com/p/chromium/issues/detail?id=573937
       if (request.mode != 'navigate') {
         request = new Request(request.url, {
@@ -69,7 +68,7 @@
         fetch(request)
           .then(function (response) {
             // Stash a copy of this page in the cache
-            var copy = response.clone();
+            const copy = response.clone();
             caches.open(version + staticCacheName)
               .then(function (cache) {
                 cache.put(request, copy);
