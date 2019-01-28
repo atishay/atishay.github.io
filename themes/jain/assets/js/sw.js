@@ -11,8 +11,11 @@
       .then(function (cache) {
         return cache.addAll([
           '/',
-          '/offline'
-        ]);
+          {{- range $.res }}
+          '{{.}}',
+          {{ end }}
+          '/offline',
+        ].map(x => new URL(x).pathname));
       });
   };
 

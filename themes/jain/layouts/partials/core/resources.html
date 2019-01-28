@@ -1,4 +1,4 @@
-{{- $res := slice "" -}}
+{{- $res := slice -}}
   {{- $sass := resources.Get "scss/main.scss" -}}
   {{- $cssOpts := cond (.Site.IsServer) (dict "enableSourceMap" true ) (dict "outputStyle" "compressed") -}}
   {{- if .Site.IsServer -}}
