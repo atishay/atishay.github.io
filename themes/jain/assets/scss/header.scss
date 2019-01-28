@@ -300,6 +300,14 @@ body {
     opacity: 0;
 }
 
+.noscrollup body {
+    padding-top: var(--header-height);
+
+    .scroll-up {
+        display: none;
+    }
+}
+
 #searchbox {
     &.visible {
         opacity: 1;

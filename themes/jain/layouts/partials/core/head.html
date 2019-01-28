@@ -7,14 +7,9 @@
   {{- partial "core/social.html" . -}}
 {{- end -}}
 
-{{- block "css" . -}}
-  {{- partialCached "core/css.html" . -}}
+{{- block "resources" . -}}
+  {{- partialCached "core/resources.html" . -}}
 {{- end -}}
-
-{{ block "js" . }}
-{{- partialCached "core/js.html" . -}}
-{{- end -}}
-
 
 {{ block "preload" . }}
 <link rel="preload" href="/index.json" as="fetch" crossorigin importance="low">
