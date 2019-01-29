@@ -129,6 +129,11 @@
       } else {
         results = this.fuse.search(this.input.value);
       }
+      results.forEach(x => {
+        document.querySelector('#searchbox').appendChild(`
+        <div>${x.title}</div>
+      `);
+      });
     }
 
     hideSearchResults() {
@@ -137,11 +142,11 @@
 
   const search = new Search();
 
-  /*{{ if not .Site.IsServer  }}*/
+  /**/
   if ('serviceWorker' in navigator && window.location.pathname !== '/offline') {
     navigator.serviceWorker.register('/sw.min.js', { scope: '/' });
   }
-  /*{{ end }}*/
+  /**/
 })();
 
 
