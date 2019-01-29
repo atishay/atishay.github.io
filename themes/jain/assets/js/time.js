@@ -1,8 +1,3 @@
-/**
- * Converts tome from ISO 8601 to time ago.
- *
- * @param {String} value Timestamp in ISO-8601
- */
 function getNewTime(value) {
     var d = new Date(value.trim());
     var now = new Date();
