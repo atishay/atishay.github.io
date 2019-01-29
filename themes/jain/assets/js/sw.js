@@ -7,18 +7,22 @@
   // Store core files in a cache (including a page to display when offline)
   // {{- $cover:= (resources.Get "image/desktop.jpg").Fill "1400x787" }}
   function updateStaticCache() {
+    const urls = [
+      '{{"/" | absURL}}',
+      '{{"/manifest.json" | absURL}}',
+      /*{{- range $.res }} /**/
+      '{{.}}',
+      /* {{ end }} /**/
+      '{{$cover.Permalink}}',
+      '{{"/offline" | absURL }}',
+      '{{ (resources.Get "image/logo.svg" | resources.Minify).Permalink }}',
+      '{{"/index.json" | absURL}}'
+    ];
     return caches.open(version + staticCacheName)
-      .then((cache) =>  cache.addAll([
-        '{{"/" | absURL}}',
-        '{{"/manifest.json" | absURL}}',
-          /*{{- range $.res }} /**/
-          '{{.}}',
-          /* {{ end }} /**/
-          '{{$cover.Permalink}}',
-          '{{"/offline" | absURL }}',
-          '{{ (resources.Get "image/logo.svg" | resources.Minify).Permalink }}',
-          '{{"/index.json" | absURL}}'
-      ]));
+      .then((cache) =>  cache.addAll(urls)).catch(e => {
+        console.log("Error = ", e);
+        console.log(e.stack);
+      });
   }
 
   self.addEventListener('install', (event) => event.waitUntil(updateStaticCache()));
