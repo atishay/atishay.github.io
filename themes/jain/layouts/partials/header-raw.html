@@ -49,7 +49,8 @@
 {{ end }}
     </ul>
     <div id="searchbox">
-        <input type="search" placeholder="Search" spellcheck="true">
+        <label class="sr-only" for="search">Search</label>
+        <input id="search" type="search" placeholder="Search" spellcheck="true">
         {{- partialCached "util/icon" (dict "key" "search" "size" 20) "search-20" -}}
     </div>
     {{with .Site.Params.github }}
