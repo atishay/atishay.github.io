@@ -299,3 +299,90 @@ body {
 .scroll-up.unpin {
     opacity: 0;
 }
+
+.noscrollup body {
+    padding-top: var(--header-height);
+
+    .scroll-up {
+        display: none;
+    }
+}
+
+#searchbox {
+    &.visible {
+        opacity: 1;
+    }
+    opacity: 0;
+    position: relative;
+    margin-left: auto;
+    svg {
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        color: rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+        @include media(">=lg") {
+            top: 10px;
+        }
+    }
+    input{
+        height: calc(var(--header-height)/2);
+        line-height: calc(var(--header-height)/2);
+        font-size: calc(var(--header-height)/5);
+        width: 170px;
+        border-radius: 50px;
+        padding: 7px 10px 7px 30px;
+        background: none;
+        &:focus {
+            width: 300px;
+            &~svg {
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+        transition: all .2s ease-in-out;
+    }
+    @include media("<md") {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        right: calc(50vw - var(--max-width)/2);
+        background: white;
+        padding-top: calc(var(--header-height)/4);
+        height: var(--header-height);
+        svg {
+            top: calc(7px + var(--header-height)/4)
+        }
+        input:focus {
+            width: calc(var(--max-width));
+        }
+    }
+    @media(max-width: $search-follow) {
+        right: var(--header-height);
+        input:focus {
+            width: calc(100vw - 2*var(--header-height));
+            margin-left: 20px;
+        }
+        input:focus~svg {
+            left:27px;
+        }
+    }
+    @include media("<sm") {
+        input:focus {
+            margin-left: 0;
+        }
+        input:focus~svg {
+            left: 7px;
+        }
+        input:not(:focus) {
+            width: 0px;
+            padding-left: 25px;
+            border-radius: 0;
+            background: var(--theme-color);
+            border:none;
+            &~svg {
+                color: white;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 ---
+title: Atishay Jain - Home Page
 menu:
     top:
         name: "home"

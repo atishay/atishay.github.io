@@ -1,18 +1,19 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- range .Site.RegularPages -}}
-    {{ $params := "750x300" }}
-    {{ $cover := ""}}
-      {{ if .Params.coverAnchor }}
-        {{ $params = print $params " " .Params.coverAnchor }}
-      {{ else }}
-        {{ $params = print $params " Center" }}
-      {{end}}
-    {{- with .Resources.GetMatch "cover.*" -}}
-        {{ $cover = (.Fill $params).RelPermalink }}
-    {{- end -}}
-    {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink "image" $cover) -}}
-{{- end -}}
 {{- with .Site.Home -}}
-{{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink) -}}
+{{- $.Scratch.Add "index" (dict "title" .Title "description" .Description "date" (.Date.Format "2006-01-02T15:04:05-07:00") "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink) -}}
+{{- end -}}
+{{- range where .Site.RegularPages "Section" "blog" -}}
+    {{- $params := "100x100" -}}
+    {{- $cover := "" -}}
+      {{- if .Params.coverAnchor -}}
+        {{- $params = print $params " " .Params.coverAnchor -}}
+      {{- else -}}
+        {{- $params = print $params " Center" -}}
+      {{- end -}}
+    {{- $images := .Resources.ByType "image" -}}
+    {{- $featured := $images.GetMatch "*feature*" -}}
+    {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
+    {{- $cover = ($featured.Fill $params).RelPermalink -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "description" .Description "date" (.Date.Format "2006-01-02T15:04:05-07:00") "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink "image" $cover) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

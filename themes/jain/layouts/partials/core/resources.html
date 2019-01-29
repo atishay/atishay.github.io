@@ -1,0 +1,53 @@
+{{- $res := slice -}}
+  {{- $sass := resources.Get "scss/main.scss" -}}
+  {{- $cssOpts := cond (.Site.IsServer) (dict "enableSourceMap" true ) (dict "outputStyle" "compressed") -}}
+  {{- if .Site.IsServer -}}
+      {{- $syntax := resources.Get "css/syntax.css" }}
+<link rel="stylesheet" href="{{ $syntax.Permalink | absURL }}" media="screen">
+      {{- $css := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts }}
+<link rel="stylesheet" href="{{ $css.Permalink | absURL }}" media="screen">
+    {{ $res = $res | append $syntax.Permalink $css.Permalink }}
+  {{- else -}}
+    {{- $syntax := resources.Get "css/syntax.css" -}}
+    {{- $main := $sass | resources.ExecuteAsTemplate "main.scss" . | toCSS $cssOpts -}}
+    {{- $cssFiles := slice $main $syntax | resources.Concat "css/index.css" -}}
+    {{- $css := $cssFiles | resources.Minify | resources.Fingerprint "sha512" }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="none" onload="if(media!='all')media='all'">
+    {{- $res = $res | append $css.Permalink }}
+<noscript>
+  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+</noscript>
+<style>
+  html {
+    opacity: 0;
+  }
+</style>
+  {{- end -}}
+  {{- range .Site.Params.custom_css -}}
+    {{- $res = $res | append . }}
+<link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
+  {{- end -}}
+
+{{- $header := resources.Get "js/header.js" -}}
+{{- $time := resources.Get "js/time.js" -}}
+{{- $fuse := resources.Get "js/fuse.js" -}}
+{{- $main := resources.Get "js/main.js" | resources.ExecuteAsTemplate "js/main.js" . -}}
+{{- if .Site.IsServer }}
+<script type="text/javascript" src="{{ $time.Permalink }}" defer></script>
+<script type="text/javascript" src="{{ $header.Permalink }}" defer></script>
+<script type="text/javascript" src="{{ $fuse.Permalink }}" defer></script>
+<script type="text/javascript" src="{{ $main.Permalink }}" defer></script>
+{{- $res = $res | append $time.Permalink $header.Permalink $fuse.Permalink $main.Permalink -}}
+{{- else -}}
+{{- $js := slice $fuse $time $header $main | resources.Concat "index.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- $res = $res | append $js.Permalink -}}
+{{- end -}}
+
+{{- if not .Site.IsServer }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{- end -}}
+
+{{- $sw := resources.Get "js/sw.js" -}}
+{{- $sw = $sw | resources.ExecuteAsTemplate "sw.js" (dict "page" . "res" $res) | resources.Minify -}}
+{{- $sw = $sw.Permalink -}}
