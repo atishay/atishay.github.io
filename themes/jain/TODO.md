@@ -11,7 +11,6 @@
 * Checkin PSDs
 * PostCSS and JS Uglify.
 * PWA manifest
-* Service worker
 * Video Tags
 * Page Transition animations
 * Credits page
@@ -35,8 +34,9 @@
 * SVG Background patterns
 * [Lazy Load youtube](https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743)
 * Download progress.
-* Search
-* CSS Contain
+* variables into sass.
+* intrinsicsizes for images
+* Priority hints
 
 Submit for awards
 ----------------

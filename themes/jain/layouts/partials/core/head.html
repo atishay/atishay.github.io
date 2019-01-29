@@ -3,14 +3,14 @@
 {{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
 <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 
-{{ block "social" . }}
+{{- block "social" . -}}
   {{- partial "core/social.html" . -}}
-{{end }}
+{{- end -}}
 
-{{ block "css" . }}
-  {{- partialCached "core/css.html" . -}}
-{{end }}
+{{- block "resources" . -}}
+  {{- partialCached "core/resources.html" . -}}
+{{- end -}}
 
-{{ block "js" . }}
-{{- partialCached "core/js.html" . -}}
-{{end }}
+{{ block "preload" . }}
+<link rel="preload" href="/index.json" as="fetch" crossorigin importance="low">
+{{- end -}}

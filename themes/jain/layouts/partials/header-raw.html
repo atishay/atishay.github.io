@@ -48,6 +48,10 @@
         </li>
 {{ end }}
     </ul>
+    <div id="searchbox">
+        <input type="search" placeholder="Search" spellcheck="true">
+        {{- partialCached "util/icon" (dict "key" "search" "size" 20) "search-20" -}}
+    </div>
     {{with .Site.Params.github }}
     <a href="{{.}}" class="github-corner" aria-label="View source on Github">
         {{ $iconSVG := resources.Get "image/octocat.svg" | resources.Minify }}

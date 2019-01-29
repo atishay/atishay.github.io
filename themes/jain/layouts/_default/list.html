@@ -4,7 +4,7 @@
     <h1 class='title'>{{.Title}}</h1>
 <span class='subtitle'>{{- .Content | plainify -}}</span>
 <ul class="blog-posts items-{{.Paginator.PageSize}}">
-    {{ range .Paginator.Pages }}
+    {{ range where .Paginator.Pages "Section" "blog"}}
 {{- partialCached "util/post.html" . .RelPermalink -}}
     {{ end }}
 </ul>
