@@ -11,6 +11,55 @@
   console.info(`%c Welcome to ${document.location.hostname}`, "padding:20px;  font: 38px Impact, sans-serif; color: #ddd; text-shadow: 0 1px 1px #bbb,0 2px 0 #999, 0 3px 0 #888, 0 4px 0 #777, 0 5px 0 #666, 0 6px 0 #555, 0 7px 0 #444, 0 8px 0 #333, 0 9px 7px #302314;");
   console.info("If you find something cool and would like to learn more, please contact me using the contact page. Will love to hear from a fellow developer");
 
+  ///////////////////////////////////////////
+  // Convert date to hours from now
+  ///////////////////////////////////////////
+  function getNewTime(value) {
+    if (!value) { return ""; }
+    const d = new Date(value.trim());
+    const now = new Date();
+    const seconds = Math.round(Math.abs((now.getTime() - d.getTime()) / 1000));
+    const minutes = Math.round(Math.abs(seconds / 60));
+    const hours = Math.round(Math.abs(minutes / 60));
+    const days = Math.round(Math.abs(hours / 24));
+    const months = Math.round(Math.abs(days / 30.416));
+    const years = Math.round(Math.abs(days / 365));
+    if (seconds <= 45) {
+      return 'a few seconds ago';
+    } else if (seconds <= 90) {
+      return 'a minute ago';
+    } else if (minutes <= 45) {
+      return minutes + ' minutes ago';
+    } else if (minutes <= 90) {
+      return 'an hour ago';
+    } else if (hours <= 22) {
+      return hours + ' hours ago';
+    } else if (hours <= 36) {
+      return 'a day ago';
+    } else if (days <= 25) {
+      return days + ' days ago';
+    } else if (days <= 45) {
+      return 'a month ago';
+    } else if (days <= 345) {
+      return months + ' months ago';
+    } else if (days <= 545) {
+      return 'a year ago';
+    } else { // (days > 545)
+      return years + ' years ago';
+    }
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    Array.from(document.getElementsByTagName('time')).forEach((x) => {
+      if (x.className === 'now') {
+        x.innerText = new Date().getFullYear();
+      } else {
+        x.innerText = getNewTime(x.getAttribute('datetime'));
+      }
+      // TODO: Attach event listener to update the string here.
+    });
+  });
+
+
 
   ///////////////////////////////////////////
   // Intersection Observer for animations
@@ -62,7 +111,9 @@
     });
   }
 
-
+  ///////////////////////////////////////////
+  // Search
+  ///////////////////////////////////////////
   class Search {
     constructor() {
       // Ignore errors loading search.
@@ -125,10 +176,17 @@
     showSearchResults() {
       let results = [];
       if (this.input.value.length === 0) {
-        results = this.data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        results = this.data.sort((b, a) => new Date(a.date).getTime() - new Date(b.date).getTime());
       } else {
         results = this.fuse.search(this.input.value);
       }
+      document.querySelectorAll("#searchbox .results>div").forEach((div, index) => {
+        if (!results[index]) {
+          div.style.display = "none";
+        }
+        div.querySelector('img').src = results[index].image;
+        div.querySelector('h2').innerText = results[index].title;
+      });
     }
 
     hideSearchResults() {
@@ -137,6 +195,9 @@
 
   const search = new Search();
 
+  ///////////////////////////////////////////
+  // Service Worker
+  ///////////////////////////////////////////
   /*{{ if not .Site.IsServer  }}*/
   if ('serviceWorker' in navigator && window.location.pathname !== '/offline') {
     navigator.serviceWorker.register('/sw.min.js', { scope: '/' });

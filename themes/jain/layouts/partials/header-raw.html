@@ -52,6 +52,15 @@
         <label class="sr-only" for="search">Search</label>
         <input id="search" type="search" placeholder="Search" spellcheck="true">
         {{- partialCached "util/icon" (dict "key" "search" "size" 20) "search-20" -}}
+        <section class="results">
+            {{- range seq 5}}
+            <div class="hidden">
+                <img src="data:image/svg+xml;utf8,<svg width='50' height='50' xmlns='http://www.w3.org/2000/svg'/>" width="50" intrinsicsize="100x100" alt="Result"/>
+                <h2></h2>
+                <time></time>
+            </div>
+            {{- end }}
+        </section>
     </div>
     {{with .Site.Params.github }}
     <a href="{{.}}" class="github-corner" aria-label="View source on Github">
