@@ -9,17 +9,16 @@
   function updateStaticCache() {
     return caches.open(version + staticCacheName)
       .then((cache) =>  cache.addAll([
-        '/',
-        '/manifest.json',
+        '{{"/" | absURL}}',
+        '{{"/manifest.json" | absURL}}',
           /*{{- range $.res }} /**/
           '{{.}}',
           /* {{ end }} /**/
           '{{$cover.Permalink}}',
-          '/offline',
+          '{{"/offline" | absURL }}',
           '{{ (resources.Get "image/logo.svg" | resources.Minify).Permalink }}',
-          '/index.json',
-          '/sw.min.js'
-      ].map(x =>  x.indexOf('http') === 0 ? new URL(x).pathname : x)));
+          '{{"/index.json" | absURL}}'
+      ]));
   }
 
   self.addEventListener('install', (event) => event.waitUntil(updateStaticCache()));
