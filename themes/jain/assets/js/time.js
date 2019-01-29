@@ -1,3 +1,4 @@
+// Convert date to hours from now
 function getNewTime(value) {
     var d = new Date(value.trim());
     var now = new Date();
