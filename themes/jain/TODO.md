@@ -11,7 +11,6 @@
 * Checkin PSDs
 * PostCSS and JS Uglify.
 * PWA manifest
-* Service worker
 * Video Tags
 * Page Transition animations
 * Credits page
@@ -37,7 +36,6 @@
 * Download progress.
 * variables into sass.
 * intrinsicsizes for images
-* CSS Contain
 * Priority hints
 
 Submit for awards
