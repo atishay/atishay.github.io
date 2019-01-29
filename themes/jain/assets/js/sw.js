@@ -3,7 +3,7 @@
   // Update 'version' if you need to refresh the cache
   const staticCacheName = 'static';
   const version = 'v1::';
-  const OFFLINE_URL = '{{"/offline" | absURL }}';
+  const OFFLINE_URL = '{{"/offline/" | absURL }}';
 
   // Store core files in a cache (including a page to display when offline)
   // {{- $cover:= (resources.Get "image/desktop.jpg").Fill "1400x787" }}
@@ -15,13 +15,13 @@
       '{{.}}',
       /* {{ end }} /**/
       '{{$cover.Permalink}}',
-      OFFLINE_URL,
+      '{{"/offline" | absURL }}',
       '{{ (resources.Get "image/logo.svg" | resources.Minify).Permalink }}',
       '{{"/index.json" | absURL}}'
     ];
     return caches.open(version + staticCacheName)
       .then((cache) =>  cache.addAll(urls)).catch(e => {
-        console.log("Error = ", e, urls);
+        console.log("Error = ", e);
         console.log(e.stack);
       });
   }
