@@ -1,7 +1,7 @@
 ---
 date: "2018-09-28T00:00:00Z"
 title: "Confessions of a Credit Card-o-holic"
-description: "Humorous piece on Credit Cards - getting an using them"
+description: "Humorous piece on Credit Cards - getting and using them"
 tags:
     - toastmasters
 categories:

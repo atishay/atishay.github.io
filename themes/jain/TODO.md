@@ -37,6 +37,17 @@
 * variables into sass.
 * intrinsicsizes for images
 * Priority hints
+* Add some spice to images on about page -
+    * Stack Linear gradients. At angles See if blend modes help
+    * CSS Outline, logo in divider
+    * clip path polygon on images on the home page.
+    * variable width font.
+    * Shape outside.
+    * Text shadow
+    * Blend mode for cutout text.
+    * Filter for images in projects
+    * writing mode
+
 
 Submit for awards
 ----------------

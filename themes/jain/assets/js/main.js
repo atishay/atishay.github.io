@@ -14,7 +14,7 @@
   ///////////////////////////////////////////
   // Convert date to hours from now
   ///////////////////////////////////////////
-  function getNewTime(value) {
+  function getAgoTime(value) {
     if (!value) { return ""; }
     const d = new Date(value.trim());
     const now = new Date();
@@ -53,7 +53,7 @@
       if (x.className === 'now') {
         x.innerText = new Date().getFullYear();
       } else {
-        x.innerText = getNewTime(x.getAttribute('datetime'));
+        x.innerText = getAgoTime(x.getAttribute('datetime'));
       }
       // TODO: Attach event listener to update the string here.
     });
@@ -122,9 +122,17 @@
 
     get resultTemplate() {
       return `<div>
-                <img src="data:image/svg+xml;utf8,<svg width='50' height='50' xmlns='http://www.w3.org/2000/svg'/>" width="50" intrinsicsize="100x100" alt="Result"/>
+                <img src="data:image/svg+xml;utf8,<svg width='50' height='50' xmlns='http://www.w3.org/2000/svg'/>" width="50" height="50" intrinsicsize="100x100" alt="Result"/>
                 <h2></h2>
-                <time></time>
+                <div class="description"></div>
+                <span>
+                  {{- partialCached "util/icon" (dict "key" "calendar" "size" 12) "calendar-12" -}}
+                  <time></time>
+                  {{- partialCached "util/icon" (dict "key" "hourglass-1" "size" 12) "hourglass-1-12" -}}
+                  <span class="readingTime"></span>
+                  {{- partialCached "util/icon" (dict "key" "caret-square-o-right" "size" 12) "caret-square-o-right-12" -}}
+                  <span class="category"></span>
+                </span>
             </div>`;
     }
 
@@ -184,7 +192,10 @@
       }
       document.querySelector('#searchbox .results').innerHTML = data;
       const divs = Array.from(document.querySelectorAll("#searchbox .results>div"));
-      divs.forEach(x => x.addEventListener('mousedown', this.handleClick));
+      divs.forEach(x => {
+        x.addEventListener('mousedown', this.handleClick);
+        x.addEventListener('mouseover', () => this.selected = x);
+      });
       return divs;
     }
 
@@ -236,18 +247,25 @@
         results = this.fuse.search(this.input.value);
       }
       this.resultDivs.forEach((div, index) => {
+        const result = results[index];
         if (index === 0) {
           this.selected = div;
         }
-        if (!results[index]) {
+        if (!result) {
           div.style.display = "none";
           return;
         }
-        div.dataset['href'] = results[index].permalink;
+        const ago = getAgoTime(result.date);
         div.style.display = "static";
-        div.querySelector('img').alt = results[index].title;
-        div.querySelector('img').src = results[index].image;
-        div.querySelector('h2').innerText = results[index].title;
+        div.dataset['href'] = result.permalink;
+        div.querySelector('img').alt = result.title;
+        div.querySelector('img').src = result.image;
+        div.querySelector('h2').innerText = result.title;
+        div.querySelector('time').innerText = ago.substr(0, ago.indexOf(" ago"));
+        div.querySelector('time').datetime = result.date;
+        div.querySelector('.description').innerText = result.description;
+        div.querySelector('.readingTime').innerText = result.readingTime + 'm';
+        div.querySelector('.category').innerText = result.categories ? result.categories.join("") : "" ;
       });
     }
 
