@@ -265,7 +265,7 @@
         div.querySelector('time').datetime = result.date;
         div.querySelector('.description').innerText = result.description;
         div.querySelector('.readingTime').innerText = result.readingTime + 'm';
-        div.querySelector('.category').innerText = result.categories ? result.categories.join("") : "" ;
+        div.querySelector('.category').innerText = result.category;
       });
     }
 
