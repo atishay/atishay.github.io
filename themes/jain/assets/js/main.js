@@ -165,12 +165,48 @@
         this.input.addEventListener('focus', this.showSearchResults.bind(this));
         this.input.addEventListener('blur', this.hideSearchResults.bind(this));
         this.input.addEventListener('input', this.showSearchResults.bind(this));
-        this.input.addEventListener('keypress', this.handleKeyPress.bind(this));
+        this.input.addEventListener('keyup', this.handleKeyPress.bind(this));
+        this.resultDivs = Array.from(document.querySelectorAll("#searchbox .results>div"));
+        this.resultDivs.forEach(x => x.addEventListener('mousedown', this.handleClick));
       }
     }
 
-    handleKeyPress() {
+    handleClick(e) {
+      window.location = e.currentTarget.dataset['href'];
+    }
 
+    set selected(element) {
+      if (this._selected !== element) {
+        this._selected && this._selected.classList.remove('selected');
+        element.classList.add('selected');
+        this._selected = element;
+      }
+    }
+
+    get selected() {
+      return this._selected;
+    }
+
+    handleKeyPress(key) {
+      const x = this.resultDivs.indexOf(this.selected);
+      switch (key.code) {
+        case 'ArrowDown':
+          if (this.resultDivs.length > x + 1 && this.resultDivs[x + 1].style.display !== 'none') {
+            this.selected = this.resultDivs[x + 1];
+          }
+          break;
+        case 'ArrowUp':
+          if (x > 0) {
+            this.selected = this.resultDivs[x - 1];
+          }
+          break;
+        case 'Escape':
+          this.input.blur();
+          break;
+        case 'Enter':
+          window.location = this.selected.dataset['href'];
+          break;
+      }
     }
 
     showSearchResults() {
@@ -180,10 +216,16 @@
       } else {
         results = this.fuse.search(this.input.value);
       }
-      document.querySelectorAll("#searchbox .results>div").forEach((div, index) => {
+      this.resultDivs.forEach((div, index) => {
+        if (index === 0) {
+          this.selected = div;
+        }
         if (!results[index]) {
           div.style.display = "none";
+          return;
         }
+        div.dataset['href'] = results[index].permalink;
+        div.style.display = "static";
         div.querySelector('img').src = results[index].image;
         div.querySelector('h2').innerText = results[index].title;
       });
