@@ -120,6 +120,14 @@
       this.prepare().catch(() => { });
     }
 
+    get resultTemplate() {
+      return `<div>
+                <img src="data:image/svg+xml;utf8,<svg width='50' height='50' xmlns='http://www.w3.org/2000/svg'/>" width="50" intrinsicsize="100x100" alt="Result"/>
+                <h2></h2>
+                <time></time>
+            </div>`;
+    }
+
     async prepare() {
       const response = await fetch('/index.json');
       const data = await response.json();
@@ -160,15 +168,24 @@
         };
         this.data = data;
         this.fuse = new Fuse(data, options);
-        // document.querySelector('#searchbox').classList.add('visible');
+        document.querySelector('#searchbox').classList.add('visible');
         this.input = document.querySelector('#searchbox input');
         this.input.addEventListener('focus', this.showSearchResults.bind(this));
         this.input.addEventListener('blur', this.hideSearchResults.bind(this));
         this.input.addEventListener('input', this.showSearchResults.bind(this));
         this.input.addEventListener('keyup', this.handleKeyPress.bind(this));
-        this.resultDivs = Array.from(document.querySelectorAll("#searchbox .results>div"));
-        this.resultDivs.forEach(x => x.addEventListener('mousedown', this.handleClick));
       }
+    }
+
+    createResultDivs() {
+      let data = '';
+      for (var i = 0; i < 5; ++i) {
+        data += this.resultTemplate;
+      }
+      document.querySelector('#searchbox .results').innerHTML = data;
+      const divs = Array.from(document.querySelectorAll("#searchbox .results>div"));
+      divs.forEach(x => x.addEventListener('mousedown', this.handleClick));
+      return divs;
     }
 
     handleClick(e) {
@@ -210,6 +227,8 @@
     }
 
     showSearchResults() {
+      this.resultDivs = this.resultDivs || this.createResultDivs();
+
       let results = [];
       if (this.input.value.length === 0) {
         results = this.data.sort((b, a) => new Date(a.date).getTime() - new Date(b.date).getTime());
@@ -226,6 +245,7 @@
         }
         div.dataset['href'] = results[index].permalink;
         div.style.display = "static";
+        div.querySelector('img').alt = results[index].title;
         div.querySelector('img').src = results[index].image;
         div.querySelector('h2').innerText = results[index].title;
       });
