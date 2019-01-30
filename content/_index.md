@@ -1,5 +1,9 @@
 ---
 title: Atishay Jain - Home Page
+date: "2016-01-01T00:00:00Z"
+description: "Atishay Jain home page"
+categories:
+- general
 menu:
     top:
         name: "home"

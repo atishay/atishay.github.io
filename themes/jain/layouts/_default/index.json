@@ -1,7 +1,7 @@
 {{- $.Scratch.Add "index" slice -}}
 {{$icon := (resources.Get "image/favicon.svg" | resources.Minify).RelPermalink}}
 {{- with .Site.Home -}}
-{{- $.Scratch.Add "index" (dict "title" .Title "description" .Description "date" (.Date.Format "2006-01-02T15:04:05-07:00") "tags" .Params.tags "categories" .Params.series "image" $icon "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink) -}}
+{{- $.Scratch.Add "index" (dict "title" .Title "description" .Description "date" (.Date.Format "2006-01-02T15:04:05-07:00") "tags" .Params.tags "categories" .Params.categories "image" $icon "series" .Params.series "contents" .Plain "meta" .Params.content "permalink" .Permalink "readingTime" .ReadingTime) -}}
 {{- end -}}
 {{- range where .Site.RegularPages "Section" "blog" -}}
     {{- $params := "100x100" -}}
@@ -15,6 +15,6 @@
     {{- $featured := $images.GetMatch "*feature*" -}}
     {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
     {{- $cover = ($featured.Fill $params).RelPermalink -}}
-    {{- $.Scratch.Add "index" (dict "title" .Title "description" .Description "date" (.Date.Format "2006-01-02T15:04:05-07:00") "tags" .Params.tags "categories" .Params.series "series" .Params.categories "contents" .Plain "meta" .Params.content "permalink" .Permalink "image" (default $icon $cover)) -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "description" .Description "date" (.Date.Format "2006-01-02T15:04:05-07:00") "tags" .Params.tags "categories"  .Params.categories "series" .Params.series "contents" .Plain "meta" .Params.content "permalink" .Permalink "image" (default $icon $cover)  "readingTime" .ReadingTime) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
