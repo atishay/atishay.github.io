@@ -312,7 +312,7 @@ body {
     &.visible {
         opacity: 1;
     }
-    // opacity: 0;
+    opacity: 0;
     position: relative;
     margin-left: auto;
     max-height: var(--header-height);
@@ -342,7 +342,9 @@ body {
             width: 300px;
             &~.results{
                 width: 260px;
-                height: auto;
+                max-height: 500px;
+                transition: width .2s ease-in-out,
+                max-height 0.5s ease-in-out;
             }
             &~svg {
                 color: rgba(0, 0, 0, 0.6);
@@ -351,7 +353,7 @@ body {
         transition: all .2s ease-in-out;
     }
     .results {
-        height: 0;
+        max-height: 0;
         overflow: hidden;
         background: white;
         border-bottom-right-radius: 5px;
@@ -390,7 +392,7 @@ body {
                 clear: both;
             }
         }
-        transition: width .2s ease-in-out, height 1s ease-in-out;
+        transition: width .2s ease-in-out;
     }
     @include media("<md") {
         margin: 0;
