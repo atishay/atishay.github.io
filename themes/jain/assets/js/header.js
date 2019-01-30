@@ -9,6 +9,7 @@
         let eleHeader = null;
         let eleCheckbox = null;
         let eleScroll = null;
+        let eleSearch = null;
         let hitCount = 0;
         const classes = {
             pinned: 'header-pin',
@@ -19,7 +20,7 @@
             requestTick();
         }
         function requestTick() {
-            if (eleCheckbox.checked) {
+            if (eleCheckbox.checked || eleSearch === document.activeElement) {
                 return;
             }
             if (!ticking) {
@@ -65,6 +66,7 @@
 
         document.addEventListener("DOMContentLoaded", () => {
             eleCheckbox = document.getElementsByClassName('hamburger')[0];
+            eleSearch = document.querySelector('#searchbox input');
             eleHeader = document.getElementById('header');
             eleScroll = document.querySelector('.scroll-up');
             document.addEventListener('scroll', onScroll, false);
