@@ -350,22 +350,6 @@ body {
         }
         transition: all .2s ease-in-out;
     }
-    @include media("<md") {
-        margin: 0;
-        position: absolute;
-        top: 0;
-        z-index: 3;
-        right: calc(50vw - var(--max-width)/2);
-        background: white;
-        padding-top: calc(var(--header-height)/4);
-        height: var(--header-height);
-        svg {
-            top: calc(7px + var(--header-height)/4)
-        }
-        input:focus {
-            width: calc(var(--max-width));
-        }
-    }
     .results {
         height: 0;
         overflow: hidden;
@@ -377,6 +361,9 @@ body {
         div {
             &.hidden {
                 display: none;
+            }
+            &.selected {
+                background: rgba(var(--theme-color-rgb), 0.1);
             }
             border-bottom: 1px solid #eee;
             padding: 5px;
@@ -405,16 +392,38 @@ body {
         }
         transition: width .2s ease-in-out, height 1s ease-in-out;
     }
+    @include media("<md") {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        right: calc(50vw - var(--max-width)/2);
+        background: white;
+        padding-top: calc(var(--header-height)/4);
+        height: var(--header-height);
+        svg {
+            top: calc(7px + var(--header-height)/4)
+        }
+        .results {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        input:focus {
+            width: calc(var(--max-width));
+            &~.results {
+                width: calc(var(--max-width) - 20px);
+            }
+        }
+    }
     @media(max-width: $search-follow) {
         right: var(--header-height);
         input:focus {
+            margin-left: 20px;
             width: calc(100vw - 2*var(--header-height));
             &~.results {
-                width: calc(100vw - 2*var(--header-height) - 40px);
+                margin-left: 30px;
+                width: calc(100vw - 2*var(--header-height) - 20px);
             }
-        }
-        input:focus {
-            margin-left: 20px;
         }
         input:focus~svg {
             left:27px;
@@ -423,6 +432,9 @@ body {
     @include media("<sm") {
         input:focus {
             margin-left: 0;
+            &~.results {
+                margin-left: 10px;
+            }
         }
         input:focus~svg {
             left: 7px;
@@ -435,6 +447,9 @@ body {
             border:none;
             &~svg {
                 color: white;
+            }
+            &~.results {
+                width: 0;
             }
         }
     }
