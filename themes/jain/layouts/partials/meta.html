@@ -44,7 +44,7 @@ style="background-image:url({{$bg.Permalink}})"
     {{end}} class="filter button filter-{{$index}}" value="{{$element}}">
         {{- end -}}
     {{- end -}}
-    {{with .items}}
+    {{- with .items}}
         <div class="items items-{{len .}}">
             {{- range . -}}
             <div class="item {{if ne $list "" }}
@@ -82,15 +82,15 @@ style="background-image:url({{$bg.Permalink}})"
     <h4>{{. | markdownify}}</h4>
 {{- end -}}
 
-{{with .content}}
+{{- with .content}}
     <div class="content">{{. | markdownify}}</div>
-{{ end }}
+{{- end -}}
 
-{{with .attribution}}
+{{- with .attribution}}
 <small class="attribution">{{. |markdownify}}</small>
-{{end}}
-{{$title := default .title ""}}
-{{with .links}}
+{{- end -}}
+{{- $title := default .title "" -}}
+{{- with .links}}
         <div class="links">
             {{- range . -}}
                 <a href="{{.href}}" class="button-small" target="_blank" rel="noopener">
@@ -101,13 +101,13 @@ style="background-image:url({{$bg.Permalink}})"
                 </a>
             {{- end -}}
         </div>
-{{ end }}
+{{- end }}
             </div>
-            {{- end -}}
+            {{- end }}
         </div>
-    {{end}}
-{{with .attribution}}
+    {{- end -}}
+{{- with .attribution }}
 <small class="attribution">{{. |markdownify}}</small>
-{{end}}
+{{- end }}
 </section>
 {{- end -}}
