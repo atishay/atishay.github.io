@@ -140,49 +140,19 @@
       const response = await fetch('/index.json');
       const data = await response.json();
       if (data && data.length > 0) {
-        // Search via Fuse.js
-        const options = {
-          shouldSort: true,
-          tokenize: true,
-          threshold: 0.6,
-          location: 0,
-          distance: 100,
-          maxPatternLength: 32,
-          minMatchCharLength: 1,
-          keys: [
-            {
-              name: 'title',
-              weight: 0.6
-            }, {
-              name: 'description',
-              weight: 0.4
-            }, {
-              name: 'contents',
-              weight: 0.1
-            }, {
-              name: 'tags',
-              weight: 0.3
-            }, {
-              name: 'series',
-              weight: 0.3
-            }, {
-              name: 'categories',
-              weight: 0.3
-            }, {
-              name: 'meta',
-              weight: 0.1
-            }
-          ]
-        };
         this.data = data;
-        this.fuse = new Fuse(data, options);
         document.querySelector('#searchbox').classList.add('visible');
         this.input = document.querySelector('#searchbox input');
-        this.input.addEventListener('focus', this.showSearchResults.bind(this));
-        this.input.addEventListener('blur', this.hideSearchResults.bind(this));
-        this.input.addEventListener('input', this.showSearchResults.bind(this));
+        this.input.addEventListener('focus', this.triggerResults.bind(this));
+        this.input.addEventListener('input', this.triggerResults.bind(this));
         this.input.addEventListener('keyup', this.handleKeyPress.bind(this));
       }
+    }
+
+    triggerResults() {
+      // We are delaying calculations but that's not a big performance issues.
+      // If you type too fast on a slow browser, we won't get an animation frame.
+      window.requestAnimationFrame(this.showSearchResults.bind(this));
     }
 
     createResultDivs() {
@@ -237,6 +207,56 @@
       }
     }
 
+    get indexedData() {
+      return this.index = this.index || this.data.map(x => {
+        let index = {};
+        for (let y in x) {
+          index[y] = JSON.stringify(x[y]).toLowerCase()
+        }
+        x._index = index;
+        return x;
+      });
+    }
+
+    search(key) {
+      key = key.toLowerCase();
+      const fields = {
+        'title': 1,
+        'description': 0.3,
+        'series': 0.5,
+        'category': 0.5,
+        'tags': 0.5,
+        'contents': 0.1,
+        'meta': 0.1
+      }
+      let data = this.indexedData;
+      let results = [];
+      if (this.lastKnownResults) {
+        if (key.indexOf(this.lastKnownResults.key) === 0) {
+          data = this.lastKnownResults.results;
+        }
+      }
+
+      // Search algorithm
+      results = data.map(x => ({
+        data: x,
+        score: Object.keys(fields)
+          .map(y => x._index[y].indexOf(key) !== -1 ? fields[y] : 0)
+          .reduce((a, b) => a + b)
+      }))
+        .filter(x => x.score > 0)
+        .sort((a, b) =>
+          b.score - a.score !== 0 ? b.score - a.score : new Date(b.data.date) - new Date(a.data.date)
+        )
+        .map(x => x.data);
+
+      this.lastKnownResults = {
+        key,
+        results
+      };
+      return results;
+    }
+
     showSearchResults() {
       this.resultDivs = this.resultDivs || this.createResultDivs();
 
@@ -244,7 +264,7 @@
       if (this.input.value.length === 0) {
         results = this.data.sort((b, a) => new Date(a.date).getTime() - new Date(b.date).getTime());
       } else {
-        results = this.fuse.search(this.input.value);
+        results = this.search(this.input.value);
       }
       this.resultDivs.forEach((div, index) => {
         const result = results[index];
@@ -256,7 +276,7 @@
           return;
         }
         const ago = getAgoTime(result.date);
-        div.style.display = "static";
+        div.style.display = "block";
         div.dataset['href'] = result.permalink;
         div.querySelector('img').alt = result.title;
         div.querySelector('img').src = result.image;
@@ -267,9 +287,6 @@
         div.querySelector('.readingTime').innerText = result.readingTime + 'm';
         div.querySelector('.category').innerText = result.category;
       });
-    }
-
-    hideSearchResults() {
     }
   }
 

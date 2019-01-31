@@ -24,12 +24,9 @@
   },
   "homepage": "https://github.com/atishay/atishay.github.io#readme",
   "dependencies": {
-    "fuse.js": "^3.3.0",
     "include-media": "^1.4.9",
     "line-awesome": "github:icons8/line-awesome",
     "scrollmagic": "^2.0.6",
-    "swup": "^1.7.9",
-    "virtual-list": "^1.0.1",
-    "wade": "^0.3.3"
+    "swup": "^1.7.9"
   }
 }
