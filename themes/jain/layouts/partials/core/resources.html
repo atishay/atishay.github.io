@@ -29,15 +29,13 @@
   {{- end -}}
 
 {{- $header := resources.Get "js/header.js" -}}
-{{- $fuse := resources.Get "js/fuse.js" -}}
 {{- $main := resources.Get "js/main.js" | resources.ExecuteAsTemplate "js/main.js" . -}}
 {{- if .Site.IsServer }}
 <script type="text/javascript" src="{{ $header.Permalink }}" defer></script>
-<script type="text/javascript" src="{{ $fuse.Permalink }}" defer></script>
 <script type="text/javascript" src="{{ $main.Permalink }}" defer></script>
-{{- $res = $res | append $header.Permalink $fuse.Permalink $main.Permalink -}}
+{{- $res = $res | append $header.Permalink $main.Permalink -}}
 {{- else -}}
-{{- $js := slice $fuse $header $main | resources.Concat "index.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{- $js := slice $header $main | resources.Concat "index.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- $res = $res | append $js.Permalink -}}
 {{- end -}}
