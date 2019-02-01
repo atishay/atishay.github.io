@@ -23,7 +23,7 @@ Now that we know these symptoms lets turn for some help from our friend Charles 
 
 Darwin was not studying humans on the stage. He was studying animals in front of the predator. That is where this reaction comes from. We as humans are just slightly sophisticated, a little better mannered animals and our animal instincts still rule us. The cave man lived in small groups. At any time he was out in the open surrounded by others was when a pack of lions or wolves was after him. There is one thing scarier than death. That is death by a pack of lions tearing apart you and your legacy. And that is what feels on the stage. The audience feels like wolves. Fangs growing out on all your faces. Those teeth growing sharper. Your nails turning into claws ready to pounce. I am mortally afraid. Feel like running.
 
-{{<fig alt="Fight or Flight" width="2000" height="4373" src="response.png" title="Fight or Flight Response" class="float-3" >}}
+{{<fig alt="Fight or Flight" width="400" height="974" src="response.png" title="Fight or Flight Response" class="float-3" >}}
 
 
 Darwin talked extensively about the fight or flight response in animals what I call the freight response. When in danger the hypothalamus in the brain causes the pituitary gland to release adrenaline, the emergency hormone. And adrenaline can cause all these symptoms. We are in the adrenaline rush all the time on the stage. This heightens our senses and prepares us to run. We notice our mistakes more - did I just step on a twig and we want to run for our lives because when a pack of lions is after us, we rarely do recover.
