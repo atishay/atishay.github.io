@@ -81,8 +81,14 @@
 {{- $images := $.Resources.ByType "image" -}}
 {{- $featured := $images.GetMatch "*feature*" -}}
 {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
+{{- $params := "1024x512" -}}
+{{- if .Params.coverAnchor -}}
+    {{- $params = print $params " " .Params.coverAnchor -}}
+  {{- else -}}
+    {{- $params = print $params " Center" -}}
+  {{- end -}}
 {{- with $featured -}}
-{{ $img := .Fill "1024x512" }}
+{{ $img := .Fill $params }}
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="{{ $img.Permalink }}"/>
 {{- else -}}
