@@ -1,6 +1,6 @@
 ---
 date: "2019-02-03T00:00:00Z"
-description: Table topics questions used at a themed meeting around spring.
+description: Table topics questions used at a themed meeting around taxes.
 sidebar:
 - title: attribution
   content: Image by rawpixel from [Unsplash](https://unsplash.com/photos/BB7gHAsnQY8)
