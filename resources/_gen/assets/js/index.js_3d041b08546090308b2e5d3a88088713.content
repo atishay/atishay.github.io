@@ -44,4 +44,8 @@ showSearchResults(){this.resultDivs=this.resultDivs||this.createResultDivs();let
 this.resultDivs.forEach((div,index)=>{const result=results[index];if(index===0){this.selected=div;}
 if(!result){div.style.display="none";return;}
 const ago=getAgoTime(result.date);div.style.display="block";div.dataset['href']=result.permalink;div.querySelector('img').alt=result.title;div.querySelector('img').src=result.image;div.querySelector('h2').innerText=result.title;div.querySelector('time').innerText=ago.substr(0,ago.indexOf(" ago"));div.querySelector('time').datetime=result.date;div.querySelector('.description').innerText=result.description;div.querySelector('.readingTime').innerText=result.readingTime+'m';div.querySelector('.category').innerText=result.category;});}}
-const search=new Search();if('serviceWorker'in navigator&&window.location.pathname!=='/offline'){navigator.serviceWorker.register('/sw.min.js',{scope:'/'});}})();
+const search=new Search();if('serviceWorker'in navigator&&window.location.pathname!=='/offline'){navigator.serviceWorker.register('/sw.min.js',{scope:'/'});}
+Array.from(document.querySelectorAll('a')).forEach((link)=>{let prefetchComplete=false;const prefetch=()=>{if(prefetchComplete){return;}
+prefetchComplete=true;if(link.href.includes('http')&&new URL(link.href).host!==new URL(window.location.href).host){return;}
+if(link.href===window.location.href){return;}
+const loader=document.createElement("link");loader.rel="prefetch";loader.as="document";loader.type="text/html";loader.href=link.href;document.head.appendChild(loader);};link.addEventListener("mouseenter",prefetch);link.addEventListener("touchstart",prefetch);});})();

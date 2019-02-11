@@ -300,6 +300,34 @@
     navigator.serviceWorker.register('/sw.min.js', { scope: '/' });
   }
   /*{{ end }}*/
+
+  ////////////////////////////////////////////////////////
+  // Link Pre-fetching to improve perceptible load times.
+  ////////////////////////////////////////////////////////
+  Array.from(document.querySelectorAll('a')).forEach((link) => {
+    let prefetchComplete = false;
+
+    const prefetch = () => {
+      if (prefetchComplete) {
+        return;
+      }
+      prefetchComplete = true;
+      if (link.href.includes('http') && new URL(link.href).host !== new URL(window.location.href).host) {
+        return;
+      }
+      if (link.href === window.location.href) {
+        return;
+      }
+      const loader = document.createElement("link");
+      loader.rel = "prefetch";
+      loader.as = "document";
+      loader.type = "text/html";
+      loader.href = link.href;
+      document.head.appendChild(loader);
+    };
+    link.addEventListener("mouseenter", prefetch);
+    link.addEventListener("touchstart", prefetch);
+  });
 })();
 
 
