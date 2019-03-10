@@ -11,6 +11,8 @@ tags:
 title: First Time - Table Topics
 categories:
   - toastmasters
+aliases:
+  - /blog/2018/01/07/First-Time
 ---
 
 Welcome to 2018! A new year is a great way to mark a checkpoint in your life. It is also the best time remember the last year and the years before that, recalibrate your dreams and head onwards with life.
