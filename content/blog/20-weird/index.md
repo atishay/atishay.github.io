@@ -11,6 +11,8 @@ tags:
 title: Weird Situations in life - Table Topics
 categories:
   - toastmasters
+aliases:
+  - /blog/2017/10/20/Weird-Situations
 ---
 
 Toastmasters' table topics are fun. You are picked up unprepared and told to speak on things you never thought you would speak on. We have been working hard to make it more interesting - getting people to really think on the fly by not letting them tapping into their speeches and past table topics by providing interesting situations to speak about. Here are some sample questions I created for a session I hosted. Enjoy.
