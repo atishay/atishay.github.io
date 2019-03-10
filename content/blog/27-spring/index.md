@@ -10,6 +10,8 @@ tags:
 title: Spring Time - Table Topics
 categories:
   - toastmasters
+aliases:
+  - /blog/2018/03/11/Spring
 ---
 
 ## Introduction
