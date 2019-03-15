@@ -60,57 +60,6 @@
   });
 
 
-
-  ///////////////////////////////////////////
-  // Intersection Observer for animations
-  ///////////////////////////////////////////
-  // Scroll animations for iPad and bigger
-  if (window.innerWidth >= 768) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(x => {
-        if (x.isIntersecting && !x.target.classList.contains('visible')) {
-          x.target.classList.add('visible');
-        }
-        if (x.target.classList.contains('visible')) {
-          observer.unobserve(x.target);
-        }
-      });
-    });
-    ['.left-image', '.meta.default .item', '.item-icon-left .item', '.meta.default', '.max-2', '.max-2 .item', '.filter', '.filter .item',
-      '.blog', '.blog .item', 'footer .items', '.contact', '.more', '.comments', '.comments form',
-      '.item-icon-left', '.full-width', '.full-width .item'].forEach(s => {
-
-        document.querySelectorAll(s).forEach(x => {
-          const rect = x.getBoundingClientRect();
-          // All elements above the scroll are visible by default.
-          //  We only animate and scroll down.
-          if (rect.y < 0) {
-            x.classList.add('visible');
-          } else {
-            observer.observe(x);
-          }
-        });
-      });
-  } else {
-    // For mobile the hover animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(x => {
-        if (x.isIntersecting && !x.target.classList.contains('hover')) {
-            x.target.classList.add('hover');
-        } else if (!x.isIntersecting && x.target.classList.contains('hover')) {
-          x.target.classList.remove('hover')
-        }
-      });
-    }, {
-      rootMargin: "-20% 0px -70% 0px"
-    });
-    ['p', 'li', '.meta .content', '.meta .item-cover', '.item-icon', '.main-icon', '.banner-holder', '.img-container', '.tex', '.i-tex', '.post aside svg', '.meta.carousel .item'].forEach(s => {
-      document.querySelectorAll(s).forEach(x => {
-          observer.observe(x);
-      });
-    });
-  }
-
   ///////////////////////////////////////////
   // Search
   ///////////////////////////////////////////
@@ -328,6 +277,56 @@
     link.addEventListener("mouseenter", prefetch);
     link.addEventListener("touchstart", prefetch);
   });
+
+  ///////////////////////////////////////////
+  // Intersection Observer for animations
+  ///////////////////////////////////////////
+  // Scroll animations for iPad and bigger
+  if (window.innerWidth >= 768) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(x => {
+        if (x.isIntersecting && !x.target.classList.contains('visible')) {
+          x.target.classList.add('visible');
+        }
+        if (x.target.classList.contains('visible')) {
+          observer.unobserve(x.target);
+        }
+      });
+    });
+    ['.left-image', '.meta.default .item', '.item-icon-left .item', '.meta.default', '.max-2', '.max-2 .item', '.filter', '.filter .item',
+      '.blog', '.blog .item', 'footer .items', '.contact', '.more', '.comments', '.comments form',
+      '.item-icon-left', '.full-width', '.full-width .item'].forEach(s => {
+
+        document.querySelectorAll(s).forEach(x => {
+          const rect = x.getBoundingClientRect();
+          // All elements above the scroll are visible by default.
+          //  We only animate and scroll down.
+          if (rect.y < 0) {
+            x.classList.add('visible');
+          } else {
+            observer.observe(x);
+          }
+        });
+      });
+  } else {
+    // For mobile the hover animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(x => {
+        if (x.isIntersecting && !x.target.classList.contains('hover')) {
+          x.target.classList.add('hover');
+        } else if (!x.isIntersecting && x.target.classList.contains('hover')) {
+          x.target.classList.remove('hover')
+        }
+      });
+    }, {
+        rootMargin: "-20% 0px -70% 0px"
+      });
+    ['p', 'li', '.meta .content', '.meta .item-cover', '.item-icon', '.main-icon', '.banner-holder', '.img-container', '.tex', '.i-tex', '.post aside svg', '.meta.carousel .item'].forEach(s => {
+      document.querySelectorAll(s).forEach(x => {
+        observer.observe(x);
+      });
+    });
+  }
 })();
 
 
