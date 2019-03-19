@@ -88,9 +88,9 @@ We could simplify some of these wrappers using decorators if you are using babel
 ```JavaScript
 // Convert to decorators
 function Time(key) {
-	return function (target, functionName) {
+	return function (target, functionName, descriptor) {
     const x = target[functionName];
-		target[functionName] = async (...args) =>
+		descriptor.value = async (...args) =>
     await time(key, async () =>
       await x.apply(target, args)
     );
