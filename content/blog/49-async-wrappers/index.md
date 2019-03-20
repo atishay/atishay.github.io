@@ -27,7 +27,7 @@ Wrapping methods is not very common in day to day programming but it is a very u
 The global `console` object comes with two methods `time` and `timeEnd`. They are meant to be used as points to mark  time to measure in the console. For each `console.time`, it is meaningful to have only one `console.timeEnd`. Without the `timeEnd` call, the `time` call is not useful. These methods were implemented before async and therefore such a situation arises. A better option would be to have a wrapper that would take a `async` function and time it.
 
 
-```JavaScript
+```js
 async function time(name, method) {
   console.time(name);
   return await method().finally(() => console.timeEnd(name));
@@ -45,7 +45,7 @@ The power of `async` is extremely clear in this case. We know the return value i
 
 The approach is extensible to add more features on need:
 
-```JavaScript
+```js
 async function time(name, method) {
   console.time(name);
   const start = Date.now();
@@ -59,7 +59,7 @@ async function time(name, method) {
 
 This code adds calling to the server. We can also add checkpoint support easily.
 
-```JavaScript
+```js
 class CheckpointBuilder {
   ...
 }
@@ -85,7 +85,7 @@ Here we created a class to handle all the communication with the server with sup
 
 We could simplify some of these wrappers using decorators if you are using babel/typescript.
 
-```JavaScript
+```js
 // Convert to decorators
 function Time(key) {
 	return function (target, functionName, descriptor) {

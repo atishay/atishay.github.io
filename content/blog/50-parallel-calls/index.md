@@ -1,7 +1,7 @@
 ---
 date: "2019-03-19T00:00:00Z"
 title: "Method wrappers in Async Await - Part II"
-description: "Making cases for creating wrappers around asynchronous methods to perform additional tasks"
+description: "Using async wrappers with memoize to solve the parallel calls problem"
 tags:
 - javascript
 - async-await
@@ -17,7 +17,7 @@ In the [previous post]({{< ref "/blog/49-async-wrappers" >}}) we discussed about
 # Parallel calls problem
 The parallel calls problem is a very common problem in software development. Suppose you have an asynchronous method get that gets the data from the server. This data is not always needed and therefore one would want to delay the call for this data until the need arises. The data can be used at multiple places and they do not have a common ancestor or flow that you could call from. The desired behavior that we would like to achieve is that this method is called from multiple places but should only fetch from the server once. If a fetch is pending the new call should also wait for the same fetch and if the fetch is complete, the data should be returned as is. Unless new parameters are required to be sent to the server in which case this should be refreshed. Here is an attempt at creating the code with a simplified problem where there are no arguments:
 
-```Javascript
+```js
 let data = null;
 function get(cb) {
     if (data) {
@@ -36,9 +36,9 @@ function get(cb) {
 Implementing such a system in callbacks is so complicated that the JavaScript developers gave up on using this behavior at all. We got into the worlds of state stores in frontend development which are not really storing the program state but the data that we get from the server. Here we have support for updating all the watchers/user interface when the data changes. Then we have one call that calls the server and populates the data. That call is where we check if a call is needed.
 
 # Solution with async await
-With the async guarantees, the parallel calls problem becomes a lot simpler to solve and we can build a wrapper that can work in all cases. That wrapper will perform all the tracking and will be a lot less code than we need to write to get a basic version up and running. The code to perform this task is not something we need to write from scratch. We have been using this for years. The code that we need is the `memoize` function. Here is the implementation of memoize from Lodash.
+With the async guarantees, the parallel calls problem becomes a lot simpler to solve and we can build a wrapper that can work in all cases. That wrapper will perform all the tracking and will be a lot less code than we need to write to get a basic version up and running. The code to perform this task is not something we need to write from scratch. We have been using this for years. The code that we need is the `memoize` function. Here is the implementation of memoize from [Lodash](https://www.npmjs.com/package/lodash.memoize).
 
-```Javascript
+```js
 function memoize(func, resolver) {
   const memoized = function(...args) {
     const key = resolver ? resolver.apply(this, args) : args[0]
@@ -79,4 +79,4 @@ After the promises are resolved, when `D` calls the get method, the resolved pro
 # Wrap Up
 With the help of the async guarantees the regular memoize method that we have been using for so many years becomes very powerful and for asynchronous code, it can do proper memoization for them. There is no code change needed between synchronous and asynchronous code to achieve memoization.
 
-In the next post, we will extend the memoize method to do a better job with rejections and also solve a little more complicated save problem in our wrapper.
+In the [next post]({{< ref "/blog/51-dirty-saves" >}}), we will extend the memoize method to do a better job with rejections and also solve a little more complicated save problem in our wrapper.
