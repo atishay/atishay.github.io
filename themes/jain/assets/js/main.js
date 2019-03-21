@@ -112,8 +112,8 @@
       document.querySelector('#searchbox .results').innerHTML = data;
       const divs = Array.from(document.querySelectorAll("#searchbox .results>div"));
       divs.forEach(x => {
-        x.addEventListener('mousedown', this.handleClick);
-        x.addEventListener('mouseover', () => this.selected = x);
+        x.addEventListener('mousedown', this.handleClick, { passive: true });
+        x.addEventListener('mouseover', () => this.selected = x, { passive: true });
       });
       return divs;
     }
@@ -274,8 +274,8 @@
       loader.href = link.href;
       document.head.appendChild(loader);
     };
-    link.addEventListener("mouseenter", prefetch);
-    link.addEventListener("touchstart", prefetch);
+    link.addEventListener("mouseenter", prefetch, { passive: true });
+    link.addEventListener("touchstart", prefetch, { passive: true });
   });
 
   ///////////////////////////////////////////
