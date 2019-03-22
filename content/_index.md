@@ -153,18 +153,18 @@ content:
             href: /home/Architecture for low overhead customizable routing with pluggable components.bib
         attribution: Image by ninita on [Pixabay](https://pixabay.com/en/post-letter-mail-box-letter-boxes-2828146/)
     - title: Speaking
-      type: keep-width
+      type: keep-width max-2
       items:
       - title: CascadiaJS 2018
         image:
           href: home/cascadia.jpg
           alt: Atishay Jain at CascadiaJS 2018
           width: 500
-          height: 333
+          height: 282
           anchor: Top
-        # icon:
-        #   href: home/cascadia.svg
-        #   width: 150
+        icon:
+          href: home/cascadia.svg
+          width: 150
         content: Ever tried calling C++ from Node or Electron. Hate native modules because of the compilation and maintenance issues. This talk is all about the solution to this problem - N-API that is stable with node 10. C++ to Node.js interop is a lot of fun.
         links:
           - href: https://2018.cascadiajs.com/speakers/atishay-jain/
@@ -179,6 +179,24 @@ content:
           - href: https://github.com/atishay/napi
             icon: github
             title: code
+      - title: Byteconf JS 2019
+        image:
+          href: home/byteconf.jpg
+          alt: Atishay Jain at Byteconf 2019
+          width: 500
+          height: 282
+          anchor: Top
+        content: Async-await even though is called as syntactic sugar, is much more. It enables many of the classic design pattern which were reserved for synchronous code not with async ones. Some ideas that were too complicated to implement with synchronous code are very easy with async. It has given new definitions to methods like memoize and also to wrapping methods for performance measurement. In this talk Atishay will discuss the new design patterns enabled by async-await. This talk is about the tricks that are too complicated to write with traditional JS code but are extremely easy to write with async. Open your eyes to modern JS - things that we were missing from right under our nose because we did not see async await the way it should have been - but instead as syntactic sugar.
+        icon:
+          href: home/byteconf-logo.jpg
+          width: 65
+        links:
+          - href: https://www.byteconf.com/js-2019
+            icon: external-link
+            title: Official Website
+          - href: home/Falling in love with async await.pdf
+            icon: file-powerpoint-o
+            title: Slides
     - title: Awards
       type: max-2
       subtitle: "Don't live for appreciation, but accept it humbly if given.\nHere is a selection of mine."
