@@ -71,6 +71,7 @@
         .item-icon {
             align-self: center;
             min-height: 65px;
+            margin: 5px 0;
         }
 
         .links {
@@ -79,11 +80,14 @@
             display: flex;
             align-items: flex-end;
             justify-content: flex-end;
+            flex-wrap: wrap;
+            margin: 5px;
 
             a {
                 display: flex;
                 align-items: center;
                 min-height: 45px;
+                margin: 5px 0;
                 svg, .link-text {
                     margin: 0 5px;
                     transition: none;
@@ -694,7 +698,7 @@
     }
 }
 
-meta.keep-width {
+.meta.keep-width {
     .item-cover {
         max-width: 100%;
         height: auto;
