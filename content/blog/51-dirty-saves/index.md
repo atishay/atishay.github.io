@@ -10,6 +10,7 @@ sidebar:
   content: Cover by Chris Yang on [Unsplash](https://unsplash.com/photos/zpG3x9pXS_8)
 categories:
 - javascript
+series: ["Async Await"]
 ---
 
 In the [previous post ]({{< ref "/blog/50-parallel-calls" >}}) we used memoize to prevent the parallel calls to a function. In this post we will be extending the memoize implementation to handle more of the situations that may arise with asynchronous functions and extending memoize to handle those additional cases.

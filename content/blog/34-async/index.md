@@ -11,6 +11,7 @@ sidebar:
 slug: from-callbacks-to-async-await
 categories:
   - javascript
+series: ["Async Await"]
 ---
 
 # From callbacks to async - await - A migration guide

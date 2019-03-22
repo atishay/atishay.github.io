@@ -7,9 +7,10 @@ tags:
 - async-await
 sidebar:
 - title: attribution
-  content: Cover by Hans on [Pixabay](https://pixabay.com/photos/skiing-departure-wag-trace-curves-16260/)
+  content: Cover by Jonathan Pendleton on [Unsplash](https://unsplash.com/photos/rewyZqUwAqY)
 categories:
 - javascript
+series: ["Async Await"]
 ---
 
 In the [previous post]({{< ref "/blog/49-async-wrappers" >}}) we discussed about creating wrappers over asynchronous methods to provide some extra functionality. In this post we will be discussing creating a more complicated wrapper that uses the promises that the `async` function returns to solve a very common parallel calls problem.

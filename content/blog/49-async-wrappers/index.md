@@ -11,6 +11,7 @@ sidebar:
 categories:
 - javascript
 coverAnchor: Top
+series: ["Async Await"]
 ---
 
 Wrapping methods is not very common in day to day programming but it is a very useful concept. We could abstract out shared functionality over methods with a defined signature in a wrapper and not have to repeat the same tasks again and again. The semantics of methods having return values that need to be returned sometime makes regular use cases of calling methods without wrappers cumbersome. In the world of JavaScript, methods like debounce and throttle have been popular since the very beginning of the programming language. These utility methods provide code that can take an existing method and provide additional functionality without interfering with the functionality. Async-await provides more avenues where this abstraction can be used to add more functionality to methods which otherwise takes a lot more effort to add. In this post we will discuss some advantages of async that makes wrapping easier as well as some common methods that make sense wrapped.
