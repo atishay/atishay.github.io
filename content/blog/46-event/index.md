@@ -10,6 +10,7 @@ sidebar:
     content: Image by Brother UK from [Flickr](https://www.flickr.com/photos/brother-uk/33064183161)
 categories:
   - javascript
+series: ["Async Await"]
 ---
 
 ## Fundamental Operators

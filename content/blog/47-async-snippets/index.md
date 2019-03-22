@@ -10,6 +10,7 @@ sidebar:
     content: Cover created using [Word Clouds](https://www.wordclouds.com/)
 categories:
   - javascript
+series: ["Async Await"]
 ---
 
 The `async-await` feature in modern JavaScript is very powerful and can provide a lot of functionality with very little code. The more we get into using async-await, the more we realize that it is not just syntactic sugar, it is a way of thinking. The more we use async await, the more we feel liberated and empowered. Here are some of the snippets in the order of increasing develop power and productivity and not necessarily the increase in code size.
