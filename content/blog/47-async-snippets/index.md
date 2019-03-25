@@ -137,8 +137,8 @@ In most cases when we call the server, we would like to use the value at multipl
 ```JavaScript
 // Convert to ES6 Decorator
 function Memoize() {
-	return function (target, functionName) {
-		target[functionName] = _.memoize(target[functionName]);
+	return function (target, functionName, descriptor) {
+		descriptor.value = _.memoize(descriptor.value);
 	};
 }
 @Memoize
@@ -149,8 +149,8 @@ async get() {
 
 ```
 
-This method will only call the server once for any get call and all callers will get the response as quickly as possible. We are using an off the shelf memoize from lodash in this case and ESCA decorators making the code fun to read.
+This method will only call the server once for any get call and all callers will get the response as quickly as possible. We are using an off the shelf memoize from lodash in this case and ECMA decorators making the code fun to read.
 
-We can also create decorator wrappers for method like `console.time`, the sope of which discussion is beyond this post.
+We can also create decorator wrappers for method like `console.time`, the scope of which discussion is beyond this post.
 
 Hope you find these useful and are able to use these in everyday life.
