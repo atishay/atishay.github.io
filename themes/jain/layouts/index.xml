@@ -33,7 +33,7 @@
   {{- end -}}
 {{- with $featured -}}
 {{ $img := .Fill $params }}
-<media:content url="{{$img.Permalink}}" medium="image" />
+<media:content xmlns:media="http://search.yahoo.com/mrss/" url="{{$img.Permalink}}" medium="image" width="1024" height="512"/>
 {{- end -}}
 </item>
     {{ end }}
