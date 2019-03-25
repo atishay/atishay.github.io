@@ -34,9 +34,7 @@
   {{- end -}}
 {{- with $featured -}}
 {{ $img := .Fill $params }}
-<image>
-  <url>{{$img.Permalink}}</url>
-</image>
+<media:content url="{{$img.Permalink}}" medium="image">
 {{- end -}}
 </item>
     {{ end }}
