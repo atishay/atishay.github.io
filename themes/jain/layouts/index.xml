@@ -22,7 +22,6 @@
       <guid>{{ .Permalink }}</guid>
 <description>{{ .Params.description  }}</description>
 <category>{{range .Params.categories}}{{. | humanize}}{{ end -}}</category>
-<content>{{.Summary | html}}</content>
 {{- $images := .Resources.ByType "image" -}}
 {{- $featured := $images.GetMatch "*feature*" -}}
 {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
