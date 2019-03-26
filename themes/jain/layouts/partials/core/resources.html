@@ -28,14 +28,12 @@
 <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
   {{- end -}}
 
-{{- $header := resources.Get "js/header.js" -}}
 {{- $main := resources.Get "js/main.js" | resources.ExecuteAsTemplate "js/main.js" . -}}
 {{- if .Site.IsServer }}
-<script type="text/javascript" src="{{ $header.Permalink }}" defer></script>
 <script type="text/javascript" src="{{ $main.Permalink }}" defer></script>
-{{- $res = $res | append $header.Permalink $main.Permalink -}}
+{{- $res = $res | append $main.Permalink -}}
 {{- else -}}
-{{- $js := slice $header $main | resources.Concat "index.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{- $js := slice $main | resources.Concat "index.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 {{- $res = $res | append $js.Permalink -}}
 {{- end -}}
