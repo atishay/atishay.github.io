@@ -61,7 +61,18 @@
         {{ $iconSVG.Content | safeHTML }}
     </a>
     {{ end }}
+    <div id="color-picker">
+        <div class="theme">
+            <span>Theme Color: </span>
+            {{- range .Site.Params.colorVariations -}}
+            <div class="theme-choice" data-color="{{.color}}" style="--color: #{{.color}}" title="{{.name}}"></div>
+            {{- end -}}
+            <a class="custom-color" href="#">custom</a>
+        </div>
+        {{- partialCached "util/icon" (dict "key" "gear" "size" 20 "class" "picker" ) "gear-20" -}}
+    </div>
 </header>
+</div>
 {{/* https://css-tricks.com/markup-for-breadcrumbs/
  https://jsonld.com/breadcrumb/
 {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }} {{ $.Scratch.Add "path" .Site.BaseURL }}

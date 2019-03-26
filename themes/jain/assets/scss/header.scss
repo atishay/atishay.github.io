@@ -258,29 +258,33 @@ $hamburger-size: calc(8px + var(--header-height) / 2);
 @include media("<md") {
     #header {
         transition: transform 0.2s ease-in;
+        #color-picker {
+            transition: opacity 0.2s ease-in;
+        }
     }
     .header-unpin {
         transform: translateY(calc(-2px - var(--header-height)));
+        #color-picker {
+            opacity: 0;
+        }
     }
 
     .header-pin {
         transform: translateY(0);
+        #color-picker {
+            opacity: 1;
+        }
     }
 }
 
-body {
-    padding-top: calc(200vh + var(--header-height));
-}
 
 .scroll-up {
-    position: -webkit-sticky;
-    position: sticky;
-    top: calc(100vh - 58px);
-    display: block;
+    opacity: 0;
     width: 30px;
     height: 30px;
-    margin-bottom: calc(-200vh - 30px);
-    margin-left: calc(100vw - 50px);
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
     z-index: 2;
     transition: transform 0.2s ease-in,
     opacity 0.2s ease-in;
@@ -294,19 +298,16 @@ body {
         transform: scale(1.1, 1.1);
         filter: none;
     }
-}
-
-.scroll-up.unpin {
-    opacity: 0;
-}
-
-.noscrollup body {
-    padding-top: var(--header-height);
-
-    .scroll-up {
-        display: none;
+    &.visible {
+        opacity: 1;
+        @include media("<md") {
+            &.unpin {
+                opacity: 0;
+            }
+        }
     }
 }
+
 
 #searchbox {
     position: relative;
@@ -489,4 +490,60 @@ body {
             }
         }
     }
+}
+
+.no-js #color-picker {
+    display: none;
+}
+
+// Color Picker
+#color-picker {
+    position: absolute;
+    top: calc(var(--header-height) + 20px);
+    right: 10px;
+    z-index: 10;
+    .theme {
+        display: none
+    }
+    &:hover {
+        background: white;
+        border-radius: 20px;
+        border: 1px solid var(--theme-color);
+        .theme {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 20px;
+            height: 20px;
+            div {
+                margin: 0 5px;
+                width: 20px;
+                height: 20px;
+                background-color: var(--color);
+                border-radius: 3px;
+                cursor: pointer;
+                box-shadow: 1px 1px 1px 0 #000;
+            }
+            a {
+                margin: 0 5px;
+            }
+        }
+        .picker {
+            vertical-align: middle;
+            color: white;
+            background: var(--theme-color);
+        }
+    }
+    .picker {
+        height: 30px;
+        width: 30px;
+        padding: 5px;
+        border-radius: 50%;
+        color: var(--theme-color);
+        border: 1px solid var(--theme-color);
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.8);
+    }
+
 }
