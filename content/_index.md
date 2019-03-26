@@ -194,6 +194,9 @@ content:
           - href: https://www.byteconf.com/js-2019
             icon: external-link
             title: Official Website
+          - href: http://www.youtube.com/watch?v=E2dqX0TlI50&t=155m6s
+            icon: youtube
+            title: view
           - href: home/Falling in love with async await.pdf
             icon: file-powerpoint-o
             title: Slides
