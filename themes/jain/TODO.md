@@ -15,7 +15,6 @@
 * Page Transition animations
 * Credits page
 * Emoticons Page
-* Color Switching
 * [Lazy Load images](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/)
 * After comments stay on the same page via Javascript.
 * Blog archive tree.
@@ -34,7 +33,6 @@
 * SVG Background patterns
 * [Lazy Load youtube](https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743)
 * Download progress.
-* variables into sass.
 * intrinsicsizes for images
 * Priority hints
 * Add some spice to images on about page -

@@ -63,7 +63,6 @@
   // Header
   ///////////////////////////////////////////
   // Inspired by https://www.sysleaf.com/js-toggle-header-on-scroll/
-  if (window.innerWidth < 768) {
     const consideredTop = 200;
     const height = document.documentElement.clientHeight;
     let lastKnownScrollY = 0;
@@ -95,6 +94,16 @@
       ticking = false;
       if (eleCheckbox.checked) {
         return;
+      }
+      // Scroll to top hiding.
+      if (currentScrollY > 2 * height) {
+        if (!eleScroll.classList.contains('visible')) {
+          eleScroll.classList.add('visible');
+        }
+      } else {
+        if (eleScroll.classList.contains('visible')) {
+          eleScroll.classList.remove('visible');
+        }
       }
       // Header hiding
       // Ignore first 2 hits for safari reload in the center of the page
@@ -134,9 +143,33 @@
       eleScroll = document.querySelector('.scroll-up');
       document.addEventListener('scroll', onScroll, false);
     });
+
+  ///////////////////////////////////////////
+  // Color Picker
+  ///////////////////////////////////////////
+  let color = window.localStorage.color || '{{- $.Site.Params.color -}}';
+  function setColor(hex) {
+    color = hex;
+    window.localStorage.color = color;
+    document.documentElement.style.setProperty("--theme-color", hex);
   }
+  document.querySelectorAll('.theme-choice').forEach(s => {
+    s.addEventListener('click', e => {
+      const color = e.target.getAttribute('data-color');
+      setColor("#" + color);
+    });
+  });
 
-
+  document.querySelector('.custom-color').addEventListener('click', evt => {
+    evt.preventDefault();
+    const x = document.createElement("input");
+    x.setAttribute("type", "color");
+    x.value = color;
+    x.click();
+    x.addEventListener('input', () => {
+      setColor(x.value);
+    })
+  })
   ///////////////////////////////////////////
   // Search
   ///////////////////////////////////////////
