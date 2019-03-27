@@ -20,12 +20,20 @@ params:
     description: "Personal website of Atishay Jain, developer at Adobe Systems with over 8 years of experience developing a wide range of Adobe products, right from your favorite desktop apps and websites(full stack) to mobile. I have worked on a variety of platforms and technology domains. I love solving problems and believe in searching for the best way to solve a problem before diving in."
     color: "#00D3F9"
     colorVariations:
-      - name: red
-        color: ff6060
+      - name: violet
+        color: 9400D3
+      - name: indigo
+        color: 1d48e1
       - name: blue
         color: 00D3F9
       - name: green
-        color: 9Acd34
+        color: 50d617
+      - name: yellow
+        color: edc166
+      - name: orange
+        color: ee6d45
+      - name: red
+        color: c92744
     github: "https://github.com/atishay/atishay.github.io"
     CSP: true
     Guitar: https://guitar2svg.herokuapp.com/

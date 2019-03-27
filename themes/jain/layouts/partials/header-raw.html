@@ -63,11 +63,13 @@
     {{ end }}
     <div id="color-picker">
         <div class="theme">
-            <span>Theme Color: </span>
+            <h3>Select Theme Color </h3>
+            <div class="colors">
             {{- range .Site.Params.colorVariations -}}
             <div class="theme-choice" data-color="{{.color}}" style="--color: #{{.color}}" title="{{.name}}"></div>
             {{- end -}}
-            <a class="custom-color" href="#">custom</a>
+            </div>
+            <a class="custom-color" href="#">Custom Color</a>
         </div>
         {{- partialCached "util/icon" (dict "key" "gear" "size" 20 "class" "picker" ) "gear-20" -}}
     </div>
