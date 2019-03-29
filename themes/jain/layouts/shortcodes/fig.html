@@ -7,7 +7,7 @@
         {{ if gt (.Get "width" ) 0}}
             {{ if gt (.Get "height") 0 }}
             {{ $k := $.Page.Resources.GetMatch $url }}
-            {{ $k = $k.Fill (print (.Get "width" ) "x" (.Get "height")) }}
+            {{ $k = $k.Fill (print (.Get "width" ) "x" (.Get "height") " " (default (.Get "anchor") "Center")) }}
             {{ $url = $k.RelPermalink }}
             {{ end }}
         {{end}}

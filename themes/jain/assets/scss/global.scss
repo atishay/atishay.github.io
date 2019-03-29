@@ -10,8 +10,9 @@ html {
     display: flex;
     min-height: 100%;
     background-image:
-    linear-gradient(to bottom, #1d1d1d 0%, #1d1d1d 200px, #ffffff 200px, #ffffff calc(100% - 200px), transparent calc(100% - 200px), transparent calc(100% - 2px), var(--theme-color) calc(100% - 2px)),
+    linear-gradient(to bottom, #1d1d1d 0%, #1d1d1d 200px, var(--background-color) 200px, var(--background-color) calc(100% - 200px), transparent calc(100% - 200px), transparent calc(100% - 2px), var(--theme-color) calc(100% - 2px)),
     linear-gradient(to left, var(--theme-color) 0%, var(--theme-color) var(--header-height), transparent var(--header-height));
+    background-color: var(--background-color);
     opacity: 1 !important;
     overflow-x: hidden;
     width: 100vw;
@@ -19,11 +20,11 @@ html {
 
 body {
     border-bottom: 2px solid #1d1d1d;
-    background: #fff;
+    background: var(--background-color);
     font-size: 14px;
     font-weight: 300;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: $text-color;
+    color: var(--text-color);
     line-height: 25px;
     display: flex;
     flex-direction: column;
@@ -32,14 +33,14 @@ body {
     overflow-x:hidden;
     &>article, &>section {
         flex: 1;
-        background: white;
+        background: var(--background-color);
     }
     padding-top: var(--header-height);
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
-    color: #444;
+    color: $headingColor;
 }
 
 h1 {
@@ -76,15 +77,15 @@ ul, ol {
 
 li {
     &:hover, &.hover {
-        color: #111;
+        color: $hover-color;
     }
 }
 
 p {
     margin-bottom: 16px;
     &:hover, &.hover {
-        color: #111;
-        text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+        color: $hover-color;
+        text-shadow: 0 0 2px rgba(var(--background-color-rgb), 0.5);
     }
 }
 
@@ -123,21 +124,22 @@ blockquote:before {
 
 ::selection {
     background: var(--theme-color);
-    color: #FFF;
+    color: var(--background-color);
     text-shadow: none;
 }
 
 
 input, textarea {
-    background: #f2f2f2 none repeat scroll 0 0;
-    color: #333;
+    background: rgba(var(--text-color-rgb), 0.05) none repeat scroll 0 0;
+    color: var(--text-color);
     font-size: 15px;
     padding: 12px;
     touch-action: manipulation;
     box-shadow: none;
     border:none;
     background-image:none;
-    border: 1px solid rgba(0,0,0,0.15);
+    border: 1px solid rgba(var(--text-color-rgb),0.15);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     &:focus {
         border-color: var(--theme-color);
         outline: none;
@@ -267,7 +269,7 @@ button, .button, .button-small {
 
 .title {
     text-align: center;
-    color: #222;
+    color: var(--text-color-rgb, 0.95);
 }
 
 .subtitle {
@@ -275,7 +277,7 @@ button, .button, .button-small {
     text-align: center;
     padding-bottom: 30px;
     font-style: italic;
-    text-shadow: 1px 1px 3px white;
+    text-shadow: 1px 1px 3px var(--background-color);
 }
 
 .center {

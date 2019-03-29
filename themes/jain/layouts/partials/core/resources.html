@@ -49,4 +49,10 @@
   if (window.localStorage.color) {
     document.documentElement.style.setProperty("--theme-color", window.localStorage.color);
   }
+  if(window.localStorage.dark === "true") {
+    document.documentElement.classList.add("dark");
+  }
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches && window.localStorage.dark !== "false") {
+    document.documentElement.classList.add("dark");
+  }
 </script>
