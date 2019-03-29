@@ -11,7 +11,7 @@
 }
 
 .contact {
-    background: white;
+    background: var(--background-color);
     z-index: 1;
     @include container;
 
@@ -32,7 +32,7 @@
             width: 32px;
             height: 32px;
             vertical-align: middle;
-            fill: #fff;
+            fill: var(--background-color);
             background: var(--theme-color);
             border-radius: 4px;
             margin: 4px 10px 4px 0;
@@ -46,7 +46,7 @@
             list-style: none;
             text-align: left;
             a {
-                color: $text-color;
+                color: var(--text-color);
                 &:hover {
                     color: var(--theme-color);
                 }

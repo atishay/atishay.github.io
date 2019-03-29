@@ -169,7 +169,19 @@
     x.addEventListener('input', () => {
       setColor(x.value);
     })
-  })
+  });
+
+  const checkbox = document.querySelector('#color-switch');
+  checkbox.checked = document.documentElement.classList.contains("dark");
+  const handler = () => {
+    if (checkbox.checked) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    window.localStorage.dark = checkbox.checked ? "true" : "false";
+  };
+  checkbox.addEventListener("change", handler);
   ///////////////////////////////////////////
   // Search
   ///////////////////////////////////////////

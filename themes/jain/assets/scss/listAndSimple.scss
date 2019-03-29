@@ -9,12 +9,12 @@
     margin: calc(var(--header-height)/2);
     @include container-margin;
     padding: calc(2*var(--content-padding));
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(var(--text-color), 0.1);
     border-radius: 5px;
 
     // box-shadow: 0 0 2px #aaa;
     &:hover {
-        background: white;
+        background: var(--background-color);
     }
 
     flex: 1; // Stretch to fill space if needed.
@@ -29,10 +29,10 @@
 }
 
 .terms {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(var(--text-color), 0.1);
 
     &:hover {
-        background: rgba(255, 255, 255, 1.0);
+        background: var(--background-color);
     }
 
     h4 {
@@ -53,7 +53,7 @@
     text-align: left;
     padding: 15px;
     @include zoomable-image(".banner-holder", (270/360) * 100%);
-    background: #fff;
+    background: var(--background-color);
     box-shadow: 0 1px 1px $divider;
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@
         a {
             font-size: 12px;
             padding-right: 15px;
-            color: $text-color;
+            color: var(--text-color);
 
             &:hover {
                 color: var(--theme-color);
@@ -120,7 +120,7 @@
 
     .page-link {
         text-decoration: none;
-        background-color: #fff;
+        background-color: var(--background-color);
         box-shadow: 0 1px 1px $divider;
         display: block;
 
@@ -128,7 +128,7 @@
             filter: none;
             box-shadow: 0 0 40px $divider;
             background: var(--theme-color);
-            color: #fff;
+            color: var(--text-color);
         }
 
         padding: 10px;
@@ -137,13 +137,13 @@
 
     .active .page-link {
         background: var(--theme-color);
-        color: #fff;
+        color: var(--background-color);
         pointer-events: none;
     }
 
     .disabled .page-link {
         background: $divider;
-        color: #fff;
+        color: var(--text-color);
         pointer-events: none;
     }
 }

@@ -41,7 +41,7 @@
     margin: calc(var(--header-height)/2);
     @include container-margin;
     padding: calc(2*var(--content-padding));
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(var(--background-color-rgb), 0.9);
     border-radius: 5px;
     .yt {
         border-radius: 5px;
@@ -66,13 +66,13 @@
         transform: scale(0.8);
     }
     .tex, .i-tex {
-        color: $text-color;
+        color: var(--text-color);
         &:hover, &.hover {
             color: black;
         }
     }
     &:hover {
-        background: white;
+        background: var(--background-color);
     }
     @include media('>=lg') {
         display: grid;
@@ -164,6 +164,9 @@
         * {
             text-align: left;
         }
+        svg {
+            fill: var(--theme-color);
+        }
         svg:hover, svg.hover {
             animation: rubberBand 0.5s linear;
         }
@@ -226,7 +229,7 @@
         }
         .tag-cloud>a {
             white-space: nowrap;
-            color: $text-color;
+            color: var(--text-color);
             padding: 2px;
             border-radius: 2px;
             &:hover {
@@ -300,7 +303,7 @@
         float: left;
     }
     svg {
-        fill: $text-color;
+        fill: var(--text-color);
         vertical-align: middle;
         width: 20px;
         height: 20px;
@@ -323,12 +326,17 @@
 }
 
 .background {
-    object-fit: cover;
+    // object-fit: cover;
     position: fixed;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
+    background-image: url($cover);
+    background-size: cover;
+}
+.dark .background {
+    background-image: url($coverDark);
 }
 
 .more {
@@ -369,10 +377,10 @@
     }
     svg {
         vertical-align: middle;
-        fill: $text-color;
+        fill: var(--text-color);
     }
     small {
-        color: $text-color;
+        color: var(--text-color);
     }
 }
 

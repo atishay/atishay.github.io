@@ -17,8 +17,8 @@
     </a>
     {{/* End Checkbox hack code. Uses the parallel <ul as well> */}}
     <a role="button" class="logo" href="{{.Site.BaseURL}}">
-        {{ $logoSVG := resources.Get "image/logo.svg" | resources.Minify }}
-        <img src="{{$logoSVG.Permalink}}" alt="{{ .Site.Title }} Logo">
+        {{ $logoSVG := resources.Get "image/logo.svg" }}
+        {{ $logoSVG.Content | safeHTML }}
         <span class="sr-only">Logo</span>
     </a>
     <ul role="menubar" class="top-menu">
@@ -70,6 +70,13 @@
             {{- end -}}
             </div>
             <a class="custom-color" href="#">Custom Color</a>
+            <div class="bg">
+                <span>Background:</span>
+                <input type="checkbox" id="color-switch" name="" value="">
+                <div class="toggle">
+                    <label for="color-switch"><i></i></label>
+                </div>
+            </div>
         </div>
         {{- partialCached "util/icon" (dict "key" "gear" "size" 20 "class" "picker" ) "gear-20" -}}
     </div>
