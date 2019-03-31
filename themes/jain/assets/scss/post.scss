@@ -441,6 +441,35 @@
     }
 }
 
+.honeypot {
+    position: absolute;
+    left: -5000px;
+}
+
+.newsletter {
+    min-width: 220px;
+    width: 100%;
+    .email {
+        width: calc(100% - 50px);
+        display: inline-block;
+    }
+    button {
+        display: inline-block;
+        width: 50px;
+        padding: 0;
+        text-align: center;
+        background: var(--theme-color);
+        color: var(--background-color);
+        &:hover {
+            filter: brightness(95%);
+        }
+    }
+    button, .email {
+        height: 42px;
+        vertical-align: middle;
+    }
+}
+
 .post main {
     h1, h2, h3, h4, h5, h6 {
         position: relative;

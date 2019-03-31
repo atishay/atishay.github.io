@@ -1,22 +1,18 @@
 * SQIP
-* Image Preloading
 * Picture tag and image resizing
-* ImageOptim
 * Image placeholder via [SQIP](sqip)
 * [Minimize selectors](https://github.com/JPeer264/node-rename-css-selectors)
-* [WebP or jp2](http://www.useragentman.com/blog/2015/01/14/using-webp-jpeg2000-jpegxr-apng-now-with-picturefill-and-modernizr/)
 * Scroll Progress indicator
 * Bread crumbs
 * AMP/Canonical URLs
 * Checkin PSDs
 * PostCSS and JS Uglify.
-* PWA manifest
 * Video Tags
 * Page Transition animations
 * Credits page
 * Emoticons Page
 * [Lazy Load images](https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/)
-* After comments stay on the same page via Javascript.
+* After comments/newsletter stay on the same page via Javascript.
 * Blog archive tree.
 * https://github.com/thedaviddias/Front-End-Performance-Checklist
 * https://www.smashingmagazine.com/2019/01/front-end-performance-checklist-2019-pdf-pages/

@@ -1,4 +1,5 @@
 {{/* Social Links https://www.mrcooper.com/blog/2018/05/14/5-outdoor-space-ideas-youll-love/ */}}
+<section class="sidebar">
 <h2>Share this Post</h2>
 <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ .Permalink }}" rel="noopener">
   {{ $icon := resources.Get "image/line-awesome/fa-facebook.svg" | resources.Minify }}
@@ -18,3 +19,4 @@
   {{ $icon := resources.Get "image/line-awesome/fa-pinterest.svg" | resources.Minify }}
   {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
 </a>
+</section>

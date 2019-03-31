@@ -1,15 +1,20 @@
 <footer>
     <div class="items-{{len .Site.Params.Footer}} items">
-    {{ range .Site.Params.Footer}}
+    {{- $RSS := .RSSLink -}}
+    {{- range .Site.Params.Footer -}}
     <section>
         <h2>
         {{ .title }}
         </h2>
-        {{ with .content }}
+        {{- with .content -}}
         <p>
         {{ . | markdownify }}
         </p>
-        {{ end }}
+        {{- end -}}
+        {{- if isset . "newsletter" -}}
+            <h2>{{.newsletter}}</h2>
+            {{- partialCached "util/newsletter" . -}}
+        {{- end -}}
         {{$page := .}}
         {{$count := 100}}
         {{ if gt .recentCount -1 }}
@@ -67,6 +72,14 @@
                 </a>
             </li>
             {{ end }}
+            <li>
+                <h2>Updates</h2>
+                <a target="_blank" href="{{ $RSS }}" rel="noopener">
+                    {{ $icon := resources.Get "image/line-awesome/fa-rss.svg" | resources.Minify }}
+                    {{ replace $icon.Content "<svg " "<svg width=\"30px\" " | safeHTML }}
+                    <span>RSS Feed</span>
+                </a>
+            </li>
         </ul>
         {{ end }}
     </section>
