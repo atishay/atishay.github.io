@@ -1,6 +1,6 @@
 <footer>
     <div class="items-{{len .Site.Params.Footer}} items">
-    {{- $RSS := .RSSLink -}}
+    {{- $RSS := (.OutputFormats.Get "RSS").RelPermalink -}}
     {{- range .Site.Params.Footer -}}
     <section>
         <h2>
