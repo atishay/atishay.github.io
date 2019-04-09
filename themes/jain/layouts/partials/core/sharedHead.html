@@ -4,7 +4,7 @@
 {{- with .Site.Params.color}}
 <meta name="theme-color" content="{{.}}">
 {{- end -}}
-{{- .Hugo.Generator }}
+{{- hugo.Generator }}
 <meta name="robots" content="index, follow">
 {{- if eq .Site.Params.CSP true }}
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: www.gravatar.com www.google-analytics.com stats.g.doubleclick.net www.google.com; connect-src {{ if .Site.IsServer }}ws:{{ end }} 'self'; worker-src 'self' www.google-analytics.com; frame-src www.youtube-nocookie.com; object-src 'none'">
@@ -17,7 +17,8 @@
 <link rel="icon" type="image/png" href="{{ ($icon.Resize " 196x196 ").RelPermalink }}" />
 {{- end -}}
 
-{{- if .RSSLink }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{- $title := .Site.Title -}}
+{{- with .OutputFormats.Get "RSS" -}}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
+  <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $title }}" />
 {{- end -}}

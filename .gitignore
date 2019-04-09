@@ -1,6 +1,5 @@
-themes/ananke
-themes/jekyll
 .DS_Store
 public/
 node_modules/
 _site/
+themes/jain/assets/image/line-awesome
