@@ -135,7 +135,7 @@ content:
           href: http://patents.com/us-9449248.html
       - title: Architecture for low overhead customizable routing with pluggable components
         content: |+1
-          *US Patent Filed*:  A modular IOT enabled router with user controllable and pluggable modules. The architecture of the router and plugins allow users to install packet level and application level modules at real time without affecting the latency and router performance. The installed modules are executed in parallel in their own executing unit and in the predefined or user-specified order. The leveled architecture allows fine-grain control of the routing and forwarding internals like QOS, deep packet inspection, encryption, traffic flow control, and traffic filtering via packet level modules. At the same time, it allows running service like a proxy, firewall, web acceleration, ad blocking via application level modules. The full control provides an easy interface for a developer to write plugins for new protocols, SDN, IOT, and user applications and run them in separate controlled execution engine without affecting the core router engine that is running security.
+          A modular IOT enabled router with user controllable and pluggable modules. The architecture of the router and plugins allow users to install packet level and application level modules at real time without affecting the latency and router performance. The installed modules are executed in parallel in their own executing unit and in the predefined or user-specified order. The leveled architecture allows fine-grain control of the routing and forwarding internals like QOS, deep packet inspection, encryption, traffic flow control, and traffic filtering via packet level modules. At the same time, it allows running service like a proxy, firewall, web acceleration, ad blocking via application level modules. The full control provides an easy interface for a developer to write plugins for new protocols, SDN, IOT, and user applications and run them in separate controlled execution engine without affecting the core router engine that is running security.
 
           Also have multiple patents in the same field in [Indian Patent Office](http://ipindiaservices.gov.in/PublicSearch/) -
 
@@ -151,6 +151,9 @@ content:
           - icon: bookmark
             title: "B<small>IB</small>T<sub>E</sub>X"
             href: /home/Architecture for low overhead customizable routing with pluggable components.bib
+          - icon: link
+            title: Access
+            href: https://patents.google.com/patent/US20190109782A1/
         attribution: Image by ninita on [Pixabay](https://pixabay.com/en/post-letter-mail-box-letter-boxes-2828146/)
     - title: Speaking
       type: keep-width max-2
