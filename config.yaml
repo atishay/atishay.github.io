@@ -2,7 +2,7 @@ baseURL: "https://atishay.me"
 disablePathToLower: true
 languageCode: "en-us"
 title: "Atishay Jain"
-theme: "jain"
+theme: "eclectic"
 disablePathToLower: false
 minify: true
 enableRobotsTXT: true
