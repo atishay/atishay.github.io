@@ -19,6 +19,8 @@ ignoreFiles:
 params:
     description: "Personal website of Atishay Jain, developer at Adobe Systems with over 8 years of experience developing a wide range of Adobe products, right from your favorite desktop apps and websites(full stack) to mobile. I have worked on a variety of platforms and technology domains. I love solving problems and believe in searching for the best way to solve a problem before diving in."
     color: "#00D3F9"
+    colorPickerEnabled: true
+    copyright: "&copy; 2016-{now} Atishay Jain. All rights reserved."
     colorVariations:
       - name: violet
         color: 9400D3
