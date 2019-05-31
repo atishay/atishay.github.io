@@ -10,6 +10,7 @@ sidebar:
     content: Image from [Pexels](https://www.pexels.com/photo/reflection-playstation-pad-gaming-18174/)
 tags:
 - toastmasters
+type: post
 title: Games are good
 coverAnchor: Bottom
 youtube: mIxu6DQDa0U

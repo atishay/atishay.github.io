@@ -12,6 +12,7 @@ sidebar:
       the better.
 tags:
 - toastmasters
+type: post
 title: Delhi Driving
 youtube: XOlXuXrhKaM
 categories:

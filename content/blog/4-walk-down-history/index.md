@@ -12,6 +12,7 @@ sidebar:
     content: Image background from [Freepik](http://www.freepik.com/free-vector/balloon-party-background_780957.htm)
 tags:
 - life
+type: post
 title: 100 years - Happy birthday
 categories:
 - thoughts

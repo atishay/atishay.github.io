@@ -11,6 +11,7 @@ tags:
 - MNIST
 - handwriting recognition
 - tensorflow
+type: post
 title: Easy Deep Learning Part IV
 categories:
 - deep learning

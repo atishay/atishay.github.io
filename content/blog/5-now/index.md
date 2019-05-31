@@ -11,6 +11,7 @@ sidebar:
 tags:
 - toastmasters
 - thoughts
+type: post
 title: Now
 youtube: _erhWZhOBDk
 categories:

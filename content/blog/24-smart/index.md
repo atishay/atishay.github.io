@@ -7,6 +7,7 @@ sidebar:
     content: Image by Estée Janssens from [Unsplash](https://unsplash.com/photos/zEqkUMiMxMI)
 tags:
 - toastmasters
+type: post
 title: SMART
 youtube: ijqGqD0qfUw
 categories:

@@ -7,6 +7,7 @@ sidebar:
     content: Image by Morgan4uall from [Pixabay](https://pixabay.com/en/bulb-light-energy-strand-penumbra-2287759/)
 tags:
 - toastmasters
+type: post
 title: Powerless
 youtube: oiV6FnM68A8
 categories:

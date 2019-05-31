@@ -6,6 +6,7 @@ sidebar:
     content: Image by Nick Hillier from [UnSplash](https://unsplash.com/photos/aQcE3gDSSTY)
 tags:
   - Deep Learning
+type: post
 title: Easy Deep Learning Part VII
 categories:
   - deep learning

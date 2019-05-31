@@ -6,6 +6,7 @@ sidebar:
     content: Image by freestocks-photos from [Pixabay](https://pixabay.com/en/audio-concert-mic-microphone-music-2941753/)
 tags:
 - toastmasters
+type: post
 title: Toastmasters should be banned
 youtube: 84U5Uwx8yLY
 categories:

@@ -1,5 +1,6 @@
 ---
 date: "2018-12-15T00:00:00Z"
+type: post
 title: "Getting cozy with WebViews"
 description: "A case for extending the use of web views in applications. Web can be fast an easy."
 tags:

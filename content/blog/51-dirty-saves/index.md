@@ -1,5 +1,6 @@
 ---
 date: "2019-03-20T00:00:00Z"
+type: post
 title: "Method wrappers in Async Await - Part III"
 description: "Extending memoize for async wrappers to solve the multiple save problem"
 tags:

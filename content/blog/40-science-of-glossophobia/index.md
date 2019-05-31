@@ -1,5 +1,6 @@
 ---
 date: "2019-01-05T00:00:00Z"
+type: post
 title: "Science of Glossophobia"
 description: "Understanding why we fear public speaking."
 tags:

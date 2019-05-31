@@ -7,6 +7,7 @@ sidebar:
     content: Image by Jesse Orrico from [UnSplash](https://unsplash.com/photos/rmWtVQN5RzU)
 tags:
 - Deep Learning
+type: post
 title: Easy Deep Learning II
 series: ["Deep Learning"]
 slug: deep-learning-part-2

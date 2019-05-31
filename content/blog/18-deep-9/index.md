@@ -6,6 +6,7 @@ sidebar:
     content: Image by StockSnap from [Pixabay](https://pixabay.com/en/architecture-building-infrastructure-2602013/)
 tags:
 - Deep Learning
+type: post
 title: Easy Deep Learning Part IX
 categories:
 - deep learning

@@ -6,6 +6,7 @@ sidebar:
     content: Image by Josué González from [Pixabay](https://pixabay.com/en/guitar-landscape-wood-musician-3373539/)
 tags:
 - Guitar
+type: post
 title: Tujhe Dekha
 categories:
  - guitar

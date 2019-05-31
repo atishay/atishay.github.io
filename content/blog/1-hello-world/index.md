@@ -17,6 +17,7 @@ tags:
 - blogging
 categories:
   - thoughts
+type: post
 title: Hello World
 ---
 

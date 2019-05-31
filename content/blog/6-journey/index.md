@@ -11,6 +11,7 @@ sidebar:
     content: Self Taken - Thank you Shubham Jain.
 tags:
 - toastmasters
+type: post
 title: A journey through heaven
 youtube: 0UD96RvqgGc
 categories:

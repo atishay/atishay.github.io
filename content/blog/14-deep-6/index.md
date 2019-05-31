@@ -7,6 +7,7 @@ sidebar:
     content: Image by Arek Socha from [Pixabay](https://pixabay.com/en/doors-choices-choose-open-decision-1767563/)
 tags:
 - Deep Learning
+type: post
 title: Easy Deep Learning Part VI
 categories:
 - deep learning

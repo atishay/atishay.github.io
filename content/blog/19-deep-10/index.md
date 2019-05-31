@@ -7,6 +7,7 @@ sidebar:
     content: Image by Jarosław Igras [Pixabay](https://pixabay.com/en/the-intersection-way-investment-2683894/)
 tags:
 - Deep Learning
+type: post
 title: Easy Deep Learning Part X
 categories:
 - deep learning

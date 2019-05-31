@@ -1,5 +1,6 @@
 ---
 date: "2019-04-14T00:00:00Z"
+type: post
 title: "Evaluate to motivate"
 description: "Successful club series: Evaluations should help not hamper progress."
 tags:

@@ -8,6 +8,7 @@ sidebar:
 tags:
 - toastmasters
 - Deep Learning
+type: post
 title: The gooey stuff inside of your head
 categories:
 - toastmasters

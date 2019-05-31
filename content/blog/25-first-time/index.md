@@ -8,6 +8,7 @@ sidebar:
 tags:
 - toastmasters
 - tabletopic
+type: post
 title: First Time - Table Topics
 categories:
   - toastmasters

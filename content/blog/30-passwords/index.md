@@ -9,6 +9,7 @@ sidebar:
     content: The famous [XKCD](https://xkcd.com/936/) piece about bad passwords.
 tags:
 - toastmasters
+type: post
 title: Passwords
 youtube: y0L5Qeqnedk
 categories:

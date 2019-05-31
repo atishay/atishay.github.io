@@ -1,5 +1,6 @@
 ---
 date: "2019-03-20T10:00:00Z"
+type: post
 title: "Shared data with Async Await - Part I"
 description: "Handling stateful APIs with shared data in async await based node.js with locks"
 tags:
