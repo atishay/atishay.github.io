@@ -1,5 +1,6 @@
 ---
 date: "2018-09-08T00:00:00Z"
+type: post
 title: "Making a non profit more professional"
 description: "Description of the changes to update Fair Oaks Toastmasters online identity for the modern times."
 tags:

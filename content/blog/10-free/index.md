@@ -12,6 +12,7 @@ sidebar:
 tags:
 - toastmasters
 - life
+type: post
 title: Free
 youtube: VMTouI-bgWk
 categories:

@@ -1,5 +1,6 @@
 ---
 date: "2019-03-14T00:00:00Z"
+type: post
 title: "Snippets for success with Async Await"
 description: "A set of code snippets showing various design patterns to be successful in the world of async await"
 tags:

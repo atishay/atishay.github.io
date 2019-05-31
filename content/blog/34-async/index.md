@@ -1,5 +1,6 @@
 ---
 date: "2018-08-25T00:00:00Z"
+type: post
 title: "From callbacks to async - await"
 description: "A step by step guide for moving from callbacks to async await in JavaScript applications."
 tags:

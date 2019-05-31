@@ -1,5 +1,6 @@
 ---
 date: "2019-03-21T00:00:00Z"
+type: post
 title: "Shared data with Async Await - Part II"
 description: "Reader-Writer problem in Javascript with async await"
 tags:

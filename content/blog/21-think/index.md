@@ -7,6 +7,7 @@ sidebar:
   content: Image by Steve Buissinne from [Pixabay](https://pixabay.com/en/wallet-cash-credit-card-pocket-1013789/)
 tags:
 - toastmasters
+type: post
 title: Think this November
 categories:
   - toastmasters

@@ -9,6 +9,7 @@ sidebar:
     content: Image by Damir Belavić from [Pixabay](https://pixabay.com/en/search-math-x-unknown-1975707/)
 tags:
 - Deep Learning
+type: post
 title: Easy Deep Learning Part I
 series: ["Deep Learning"]
 slug: deep-learning-part-1

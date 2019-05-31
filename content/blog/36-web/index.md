@@ -1,5 +1,6 @@
 ---
 date: "2018-09-16T00:00:00Z"
+type: post
 title: "New Website and Mailing List"
 description: "New website and mailing lists for Fair Oaks Toastmasters."
 tags:

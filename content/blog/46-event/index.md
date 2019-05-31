@@ -1,5 +1,6 @@
 ---
 date: "2019-03-13T00:00:00Z"
+type: post
 title: "Understanding the event driven nature of Node.js"
 description: "A figurative explanation for the event driven model that is present in node.js"
 tags:

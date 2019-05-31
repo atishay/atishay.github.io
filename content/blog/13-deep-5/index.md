@@ -7,6 +7,7 @@ sidebar:
     content: Image by mh-grafik from [Pixabay](https://pixabay.com/en/the-well-the-depth-of-the-bricked-1378979/)
 tags:
 - Deep Learning
+type: post
 title: Easy Deep Learning Part V
 categories:
 - deep learning

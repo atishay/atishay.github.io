@@ -1,5 +1,6 @@
 ---
 date: "2019-04-21T00:00:00Z"
+type: post
 title: "Meeting Roles and Responsibilities"
 description: "Successful club series: Team involved in successfully running a meeting."
 tags:

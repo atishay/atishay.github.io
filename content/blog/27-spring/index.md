@@ -7,6 +7,7 @@ sidebar:
 tags:
 - toastmasters
 - tabletopic
+type: post
 title: Spring Time - Table Topics
 categories:
   - toastmasters

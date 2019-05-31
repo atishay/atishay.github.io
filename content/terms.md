@@ -1,7 +1,6 @@
 ---
 title: Terms of Use
 subtitle: Please use in good faith.
-type: simple
 ---
 
 ## Terms

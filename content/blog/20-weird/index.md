@@ -8,6 +8,7 @@ sidebar:
 tags:
   - toastmasters
   - tabletopic
+type: post
 title: Weird Situations in life - Table Topics
 categories:
   - toastmasters

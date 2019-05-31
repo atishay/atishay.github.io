@@ -1,5 +1,6 @@
 ---
 date: "2019-03-19T00:00:00Z"
+type: post
 title: "Method wrappers in Async Await - Part II"
 description: "Using async wrappers with memoize to solve the parallel calls problem"
 tags:

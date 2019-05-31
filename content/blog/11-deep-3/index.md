@@ -6,6 +6,7 @@ sidebar:
     content: Image by Gerd Altmann from [Pixabay](https://pixabay.com/en/smartphone-hand-photo-montage-faces-1445489/)
 tags:
 - Deep Learning
+type: post
 title: Easy Deep Learning Part III
 categories:
 - deep learning

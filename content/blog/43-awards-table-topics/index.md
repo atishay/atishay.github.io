@@ -7,6 +7,7 @@ sidebar:
 tags:
 - toastmasters
 - tabletopic
+type: post
 title: Awards - Table Topics
 categories:
   - toastmasters

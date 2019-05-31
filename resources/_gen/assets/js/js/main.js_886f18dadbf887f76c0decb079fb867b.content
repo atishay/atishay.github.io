@@ -388,6 +388,9 @@
         return;
       }
       prefetchComplete = true;
+      if (link.href.includes('mailto')) {
+        return;
+      }
       if (link.href.includes('http') && new URL(link.href).host !== new URL(window.location.href).host) {
         return;
       }

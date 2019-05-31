@@ -7,6 +7,7 @@ sidebar:
     content: Image by Mogens Petersen  from [Pixabay](https://pixabay.com/en/bread-baker-craft-food-oven-1643951/)
 tags:
 - toastmasters
+type: post
 title: Bread and Charles Darwin
 youtube: v0T0ij2BdKs
 categories:

@@ -7,6 +7,7 @@ sidebar:
 tags:
 - toastmasters
 - tabletopic
+type: post
 title: Table Topics - Daylight Savings Time
 categories:
   - toastmasters

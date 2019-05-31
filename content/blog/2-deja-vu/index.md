@@ -12,6 +12,7 @@ sidebar:
     content: Image by Mystics Art Design from [Pixabay](https://pixabay.com/en/book-old-clouds-tree-birds-bank-863418/)
 tags:
 - toastmasters
+type: post
 title: Déjà vu
 youtube: LV738Xq4cJ0
 categories:

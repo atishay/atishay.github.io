@@ -7,6 +7,7 @@ sidebar:
 tags:
 - toastmasters
 - tabletopic
+type: post
 title: Tax Season - Table Topics
 categories:
   - toastmasters

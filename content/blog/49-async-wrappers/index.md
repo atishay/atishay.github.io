@@ -1,5 +1,6 @@
 ---
 date: "2019-03-16T00:00:00Z"
+type: post
 title: "Method wrappers in Async Await - Part I"
 description: "Making cases for creating wrappers around asynchronous methods to perform additional tasks"
 tags:

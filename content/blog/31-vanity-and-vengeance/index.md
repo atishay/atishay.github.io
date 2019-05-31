@@ -17,6 +17,7 @@ sidebar:
       needless vengeance."
 tags:
 - toastmasters
+type: post
 title: Vanity and Vengeance
 youtube: chlIY34I28o
 categories:

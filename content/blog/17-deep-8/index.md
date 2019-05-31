@@ -7,6 +7,7 @@ sidebar:
     content: Image by skeeze from [Pixabay](https://pixabay.com/en/collage-africa-big-5-animals-lion-1803066/)
 tags:
 - Deep Learning
+type: post
 title: Easy Deep Learning Part VIII
 categories:
 - deep learning

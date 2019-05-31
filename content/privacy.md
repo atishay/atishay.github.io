@@ -1,7 +1,6 @@
 ---
 title: Privacy Policy
 subtitle: We take privacy seriously.
-type: simple
 ---
 
 Effective date: August 18, 2018

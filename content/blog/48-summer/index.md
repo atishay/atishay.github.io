@@ -7,6 +7,7 @@ sidebar:
 tags:
 - toastmasters
 - tabletopic
+type: post
 title: Summer - Table Topics questions
 categories:
   - toastmasters

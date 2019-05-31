@@ -7,6 +7,7 @@ sidebar:
 tags:
 - toastmasters
 - tabletopic
+type: post
 title: American Culture - Table Topics
 categories:
   - toastmasters

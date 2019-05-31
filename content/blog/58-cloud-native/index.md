@@ -1,5 +1,6 @@
 ---
 date: 2019-05-09T08:06:22-07:00
+type: post
 title: "Performance - the one feature that you need to do early."
 description: "Performance is not something that can built as a feature later. Segue into Hugo's performance"
 tags:
@@ -10,6 +11,7 @@ sidebar:
     content: "Image by Pexels from [Pixabay]([Link](https://pixabay.com/photos/fast-speed-racing-speedway-1281628/))"
 categories:
   - hugo
+draft: true
 ---
 
 Hello everyone. My name is Atishay and I am a JavaScript developer. A few years back, if I said this, someone would have thought - what's this guy doing in a Cisco conference. Will he be going to a lawyer's conference next to preach them to convert from legalese. The web developer community has changed a lot from the cult of people copying and pasting scripts from google. We have matured to a package manager. Jokes apart, the modern JavaScript looks nothing like the one from the 90s and the programming paradigm built from ground up to be asynchronous has a lot to offer. With node.js having a serious footprint on the server, especially in the serverless world, no one needs to defend the language. I'm not here today to sell you JS. I am here to talk about a unique style of designing cloud native applications getting popular in the JavaScript world. The entire programming community needs to take a note of this.

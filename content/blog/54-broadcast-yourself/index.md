@@ -1,5 +1,6 @@
 ---
 date: "2019-03-30T00:00:00Z"
+type: post
 title: "Broadcast yourself"
 description: "Urging everyone to promote their own brand."
 tags:

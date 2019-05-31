@@ -7,6 +7,7 @@ sidebar:
     content: Image by PublicDomainPictures  from [Pixabay](https://pixabay.com/en/photo-camera-photography-old-retro-219958/)
 tags:
 - toastmasters
+type: post
 title: The art and science of Photography
 categories:
   - toastmasters

@@ -14,6 +14,7 @@ sidebar:
 tags:
 - toastmasters
 - life
+type: post
 title: Indian Schooling
 youtube: Q3SUUumNODE
 categories:

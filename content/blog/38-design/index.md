@@ -1,5 +1,6 @@
 ---
 date: "2018-12-02T00:00:00Z"
+type: post
 title: "Democratized Design"
 description: "A lesson on making posters for amateurs - getting to above average in 5 minutes"
 tags:
