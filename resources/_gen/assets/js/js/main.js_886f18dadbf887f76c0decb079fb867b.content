@@ -160,28 +160,33 @@
     });
   });
 
-  document.querySelector('.custom-color').addEventListener('click', evt => {
-    evt.preventDefault();
-    const x = document.createElement("input");
-    x.setAttribute("type", "color");
-    x.value = color;
-    x.click();
-    x.addEventListener('input', () => {
-      setColor(x.value);
-    })
-  });
+  const colorSelector = document.querySelector('.custom-color');
+  if (colorSelector) {
+    colorSelector.addEventListener('click', evt => {
+      evt.preventDefault();
+      const x = document.createElement("input");
+      x.setAttribute("type", "color");
+      x.value = color;
+      x.click();
+      x.addEventListener('input', () => {
+        setColor(x.value);
+      })
+    });
+  }
 
   const checkbox = document.querySelector('#color-switch');
-  checkbox.checked = document.documentElement.classList.contains("dark");
-  const handler = () => {
-    if (checkbox.checked) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    window.localStorage.dark = checkbox.checked ? "true" : "false";
-  };
-  checkbox.addEventListener("change", handler);
+  if (checkbox) {
+    checkbox.checked = document.documentElement.classList.contains("dark");
+    const handler = () => {
+      if (checkbox.checked) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+      window.localStorage.dark = checkbox.checked ? "true" : "false";
+    };
+    checkbox.addEventListener("change", handler);
+  }
   ///////////////////////////////////////////
   // Search
   ///////////////////////////////////////////

@@ -1,6 +1,6 @@
 ---
 menu:
-    top:
+    main:
         name: "contact"
         weight: 100
         title: "Contact"

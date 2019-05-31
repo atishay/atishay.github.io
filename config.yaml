@@ -21,6 +21,7 @@ params:
     color: "#00D3F9"
     colorPickerEnabled: true
     copyright: "&copy; 2016-{now} Atishay Jain. All rights reserved."
+    checksDarkMode: true
     colorVariations:
       - name: violet
         color: 9400D3

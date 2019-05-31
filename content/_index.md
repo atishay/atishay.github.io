@@ -5,7 +5,7 @@ description: "Atishay Jain home page"
 categories:
 - general
 menu:
-    top:
+    main:
         name: "home"
         weight: 1
         title: "Home"
