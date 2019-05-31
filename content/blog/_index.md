@@ -1,7 +1,7 @@
 ---
 title: My Blog
 menu:
-    top:
+    main:
         name: "blog"
         weight: 90
         title: "Blog"
