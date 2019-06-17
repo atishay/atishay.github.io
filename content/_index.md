@@ -203,6 +203,24 @@ content:
           - href: home/Falling in love with async await.pdf
             icon: file-powerpoint-o
             title: Slides
+      - title: DevNet Create 2019
+        image:
+          href: home/devnet.jpg
+          alt: Atishay Jain at Cisco DevNet Create 2019
+          width: 500
+          height: 281
+          anchor: Center
+        content: When we think of node - we think of the server. Node is much more. It is the best solution for any I/O bound operations - even background processes running on customer machines. In this talk, Atishay will present the architecture of a unique node based application - a background process that acts like the browser’s “service worker” - downloading and caching resources even before the page is requested. Getting consistent, fast and effective performance based on network based data where the user can be offline is tricky - this talk will show how it is done. This talk will present the key components of the API that can provide cloud native experiences successfully at scale. Atishay works on Adobe’s CCXProcess, a unique application that is a node reverse proxy server, providing data driven by the server onto machines that can be offline for major parts of the day.
+        icon:
+          href: home/devnet-logo.jpg
+          width: 116
+        links:
+          - href: https://developer.cisco.com/devnetcreate/2019/speaker
+            icon: external-link
+            title: Official Website
+          - href: home/Running node.js on customer machines.pdf
+            icon: file-powerpoint-o
+            title: Slides
     - title: Awards
       type: max-2
       subtitle: "Don't live for appreciation, but accept it humbly if given.\nHere is a selection of mine."
