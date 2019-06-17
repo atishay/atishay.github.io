@@ -1,11 +1,12 @@
 ---
-date: 2019-05-09T08:06:22-07:00
 type: post
-title: "Performance - the one feature that you need to do early."
-description: "Performance is not something that can built as a feature later. Segue into Hugo's performance"
+title: "Cloud Native - for the User"
+description: "Cloud Native for the user is native performance and cloud features - Presented at Cisco DevNet create 2019."
 tags:
- - hugo
+ - cloud-native
  - performance
+ - cloud
+ - native
 sidebar:
   - title: attribution
     content: "Image by Pexels from [Pixabay]([Link](https://pixabay.com/photos/fast-speed-racing-speedway-1281628/))"
