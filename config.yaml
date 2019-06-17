@@ -138,3 +138,4 @@ blackfriday:
 pygmentsCodefences: true
 pygmentsUseClasses: true
 pygmentsOptions: "linenos=true"
+enableGitInfo: true
