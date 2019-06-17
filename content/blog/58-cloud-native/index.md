@@ -1,6 +1,7 @@
 ---
 type: post
-title: "Cloud Native - for the User"
+date: 2019-05-12T00:00:00Z
+title: "Running node.js on customer machines."
 description: "Cloud Native for the user is native performance and cloud features - Presented at Cisco DevNet create 2019."
 tags:
  - cloud-native
@@ -9,10 +10,7 @@ tags:
  - native
 sidebar:
   - title: attribution
-    content: "Image by Pexels from [Pixabay]([Link](https://pixabay.com/photos/fast-speed-racing-speedway-1281628/))"
-categories:
-  - hugo
-draft: true
+    content: "Image by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) from [Pixabay](https://pixabay.com/)"
 ---
 
 Hello everyone. My name is Atishay and I am a JavaScript developer. A few years back, if I said this, someone would have thought - what's this guy doing in a Cisco conference. Will he be going to a lawyer's conference next to preach them to convert from legalese. The web developer community has changed a lot from the cult of people copying and pasting scripts from google. We have matured to a package manager. Jokes apart, the modern JavaScript looks nothing like the one from the 90s and the programming paradigm built from ground up to be asynchronous has a lot to offer. With node.js having a serious footprint on the server, especially in the serverless world, no one needs to defend the language. I'm not here today to sell you JS. I am here to talk about a unique style of designing cloud native applications getting popular in the JavaScript world. The entire programming community needs to take a note of this.
