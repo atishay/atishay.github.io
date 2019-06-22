@@ -1,0 +1,71 @@
+baseURL: "https://atishay.me"
+disablePathToLower: true
+languageCode: "en-us"
+title: "Atishay Jain"
+theme: "eclectic"
+disablePathToLower: false
+minify: true
+enableRobotsTXT: true
+googleAnalytics: UA-89338714-1
+ignoreFiles:
+    - ".github/"
+    - ".gitignore"
+    - "LICENSE.md"
+    - "README.md"
+    - "atishay.me.code-workspace"
+    - ".gitattributes"
+    - "src"
+
+enableEmoji: true
+related:
+  threshold: 0
+  includeNewer: true
+  toLower: true
+  indices:
+  - name: categories
+    weight: 100
+  - name: tags
+    weight: 50
+  - name: date
+    weight: 10
+
+permalinks:
+  blog: "/blog/:year/:month/:day/:slug"
+Paginate: 9
+
+caches:
+  getjson:
+    dir: ':resourceDir/_gen'
+    maxAge: -1
+  getcsv:
+    dir: ':resourceDir/_gen'
+    maxAge: -1
+
+sitemap:
+    changefreq: "monthly"
+    priority: 0.5
+    filename: "sitemap.xml"
+taxonomies:
+  category: categories
+  tag: tags
+  series: series
+
+outputs:
+  home:
+  - html
+  - rss
+  - json
+canonifyURLs: true
+blackfriday:
+  # Fix after https://github.com/gohugoio/hugo/issues/2424
+  # Verify inline links and use canonifyURLs as false;
+  # hrefTargetBlank: true
+  # nofollowLinks: true
+  # noreferrerLinks: true
+  extensions:
+    - hardLineBreak
+
+pygmentsCodefences: true
+pygmentsUseClasses: true
+pygmentsOptions: "linenos=true"
+enableGitInfo: true
