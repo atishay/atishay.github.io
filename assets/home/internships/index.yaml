@@ -1,0 +1,26 @@
+title: Internships
+type: item-icon-left
+subtitle: During BE-CS at Thapar University
+items:
+  - title: Microsoft Corporation
+    content: Developed a Fault Injection tool to test Windows Mobile 6 applications which could inject functions before and after any function present in a dll, including system calls like malloc and fopen (Sophomore Summer Internship 2008).
+    icon:
+      href: "home/internships/ms.svg"
+    links:
+    - icon: file-powerpoint-o
+      title: Presentation
+      href: /home/FFI 2008 - Atishay Jain.pdf
+    - icon: link
+      title: Report
+      href: /home/FFI Report 2008 - Atishay Jain.pdf
+  - title: Informatica Business Solutions
+    content: Developed a working Prototype of Informatica PowerExchange for Oracle Essbase based on a wizard based layout. Got an inside of the enterprise side of software development. (Final Year Project 2010).
+    icon:
+      href: "home/internships/infa.svg"
+    links:
+    - icon: file-powerpoint-o
+      title: Presentation
+      href: /home/PowerExchange Essbase 2010-Atishay Jain.pdf
+    - icon: link
+      title: Report
+      href: /home/PowerExchange Essbase Report 2010-Atishay Jain.pdf

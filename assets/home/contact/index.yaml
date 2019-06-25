@@ -1,0 +1,7 @@
+#title: Contact
+type: centered
+background: home/contact/bayarea.jpg
+items:
+- title: Contact Me
+  content: Leave me a message at [contact [at] atishay [dot] me](mailto:contact@atishay.me)
+attribution: Background from [Pixabay](https://pixabay.com/en/golden-gate-bridge-san-francisco-388917/)

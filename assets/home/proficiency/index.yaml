@@ -1,0 +1,30 @@
+title: Proficiency
+subtitle: "After knowing the basics of programming, one should know the assumptions and constraints of the domain. \n It doesn't matter what language or tooling is needed. You can get upto speed quickly."
+items:
+- title: Web
+  subtitle: Full Stack
+  content: |+1
+    * Your JS framework (React / Angular)
+    * Node.js, Ruby on Rails, Python
+    * N-API, FFI and native modules
+    * AWS or Custom deployment
+    * SEO, A/B testing, Analytics
+    * On Call experience
+    * TS, ES5, ES6, Webpack, ESLint, Babel
+- title: Mobile
+  subtitle: Universal iOS
+  content: |+1
+    * Obj-C/C++
+    * GPGPU
+    * GCD, Threading, Networking
+    * Core Graphics, Core Animation
+    * Core Data, Migrations, Updates
+    * Inkling of Swift
+- title: Desktop
+  subtitle: Windows, MacOS, Electron
+  content: |+1
+    * Win32, AppKit
+    * C++ / C# / ObjC / Java
+    * Installers
+    * Electron with Native Modules
+    * Your language / framework
