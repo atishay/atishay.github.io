@@ -77,8 +77,15 @@
       pinned: 'header-pin',
       unpinned: 'header-unpin',
     };
+    function updateScrollPosition() {
+      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("scroll-indicator").style.width = scrolled + "%";
+    }
     function onScroll() {
       currentScrollY = window.pageYOffset;
+      requestAnimationFrame(updateScrollPosition);
       requestTick();
     }
     function requestTick() {
