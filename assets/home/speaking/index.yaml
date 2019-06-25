@@ -1,0 +1,66 @@
+title: Speaking
+type: keep-width max-2
+items:
+- title: CascadiaJS 2018
+  image:
+    href: home/speaking/cascadia.jpg
+    alt: Atishay Jain at CascadiaJS 2018
+    width: 500
+    height: 282
+    anchor: Top
+  icon:
+    href: home/speaking/cascadia.svg
+    width: 150
+  content: Ever tried calling C++ from Node or Electron. Hate native modules because of the compilation and maintenance issues. This talk is all about the solution to this problem - N-API that is stable with node 10. C++ to Node.js interop is a lot of fun.
+  links:
+    - href: https://2018.cascadiajs.com/speakers/atishay-jain/
+      icon: external-link
+      title: Official Website
+    - href: https://www.youtube.com/watch?v=E0w7Tc0f2fA
+      icon: youtube
+      title: View
+    - href: https://n-api.herokuapp.com/
+      icon: play
+      title: Try
+    - href: https://github.com/atishay/napi
+      icon: github
+      title: code
+- title: Byteconf JS 2019
+  image:
+    href: home/speaking/byteconf.jpg
+    alt: Atishay Jain at Byteconf 2019
+    width: 500
+    height: 282
+    anchor: Top
+  content: Async-await even though is called as syntactic sugar, is much more. It enables many of the classic design pattern which were reserved for synchronous code not with async ones. Some ideas that were too complicated to implement with synchronous code are very easy with async. It has given new definitions to methods like memoize and also to wrapping methods for performance measurement. In this talk Atishay will discuss the new design patterns enabled by async-await. This talk is about the tricks that are too complicated to write with traditional JS code but are extremely easy to write with async. Open your eyes to modern JS - things that we were missing from right under our nose because we did not see async await the way it should have been - but instead as syntactic sugar.
+  icon:
+    href: home/speaking/byteconf-logo.jpg
+    width: 65
+  links:
+    - href: https://www.byteconf.com/js-2019
+      icon: external-link
+      title: Official Website
+    - href: http://www.youtube.com/watch?v=E2dqX0TlI50&t=155m6s
+      icon: youtube
+      title: view
+    - href: home/Falling in love with async await.pdf
+      icon: file-powerpoint-o
+      title: Slides
+- title: DevNet Create 2019
+  image:
+    href: home/speaking/devnet.jpg
+    alt: Atishay Jain at Cisco DevNet Create 2019
+    width: 500
+    height: 281
+    anchor: Center
+  content: When we think of node - we think of the server. Node is much more. It is the best solution for any I/O bound operations - even background processes running on customer machines. In this talk, Atishay will present the architecture of a unique node based application - a background process that acts like the browser’s “service worker” - downloading and caching resources even before the page is requested. Getting consistent, fast and effective performance based on network based data where the user can be offline is tricky - this talk will show how it is done. This talk will present the key components of the API that can provide cloud native experiences successfully at scale. Atishay works on Adobe’s CCXProcess, a unique application that is a node reverse proxy server, providing data driven by the server onto machines that can be offline for major parts of the day.
+  icon:
+    href: home/speaking/devnet-logo.jpg
+    width: 116
+  links:
+    - href: https://developer.cisco.com/devnetcreate/2019/speaker
+      icon: external-link
+      title: Official Website
+    - href: home/Running node.js on customer machines.pdf
+      icon: file-powerpoint-o
+      title: Slides

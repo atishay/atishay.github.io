@@ -375,6 +375,10 @@
   // Service Worker
   ///////////////////////////////////////////
   /**/
+  if ('serviceWorker' in navigator && window.location.pathname !== '/offline') {
+    navigator.serviceWorker.register('/sw.min.js', { scope: '/' });
+  }
+  /**/
 
   ////////////////////////////////////////////////////////
   // Link Pre-fetching to improve perceptible load times.
