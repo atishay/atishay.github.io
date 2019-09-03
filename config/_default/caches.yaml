@@ -1,0 +1,6 @@
+getjson:
+  dir: ':resourceDir/_gen'
+  maxAge: -1
+getcsv:
+  dir: ':resourceDir/_gen'
+  maxAge: -1
