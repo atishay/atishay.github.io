@@ -1,0 +1,22 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: www.gravatar.com www.google-analytics.com stats.g.doubleclick.net www.google.com; connect-src  'self'; worker-src 'self' www.google-analytics.com; frame-src www.youtube-nocookie.com; object-src 'none'"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Cache-Control = '''
+    max-age=2592000,
+    public
+    '''
+    Strict-Transport-Security = "max-age=2592000"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Feature-Policy = "microphone 'none'; geolocation 'none'; ambient-light-sensor 'none'; accelerometer 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'; wake-lock 'none'; webauthn 'none'; vr 'none'"
+    Access-Control-Allow-Origin = null
+  for = '/manifest.json'
+  [headerrs.values]
+    Cache-Control = '''
+	max-age=0,
+	no-cache,
+	no-store,
+	must-revalidate'''
