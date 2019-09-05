@@ -154,7 +154,7 @@
   ///////////////////////////////////////////
   // Color Picker
   ///////////////////////////////////////////
-  let color = window.localStorage.color || '#00D3F9';
+  let color = window.localStorage.color || '#2962FF';
   function setColor(hex) {
     color = hex;
     window.localStorage.color = color;
