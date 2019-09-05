@@ -3,7 +3,7 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: www.gravatar.com www.google-analytics.com stats.g.doubleclick.net www.google.com; connect-src  'self'; worker-src 'self' www.google-analytics.com; frame-src www.youtube-nocookie.com; object-src 'none'"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: www.gravatar.com www.google-analytics.com stats.g.doubleclick.net www.google.com; connect-src  'self' www.google-analytics.com; worker-src 'self' www.google-analytics.com; frame-src www.youtube-nocookie.com; object-src 'none'"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
     Cache-Control = '''
