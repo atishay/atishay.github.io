@@ -1,3 +1,5 @@
+[build]
+  command = "hugo --minify --baseURL $DEPLOY_PRIME_URL"
 [[headers]]
   for = "/*"
   [headers.values]
@@ -12,7 +14,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Feature-Policy = "microphone 'none'; geolocation 'none'; ambient-light-sensor 'none'; accelerometer 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'; wake-lock 'none'; webauthn 'none'; vr 'none'"
-    Access-Control-Allow-Origin = null
+    Access-Control-Allow-Origin = "null"
   for = '/manifest.json'
   [headerrs.values]
     Cache-Control = '''
