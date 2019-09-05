@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --minify --baseURL $DEPLOY_PRIME_URL"
+  command = "hugo --minify --baseURL $URL"
   [build.environment]
   HUGO_VERSION="0.57.2"
 [[headers]]
