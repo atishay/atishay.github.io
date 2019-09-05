@@ -48,3 +48,6 @@ newsletter:
   action: https://atishay.us20.list-manage.com/subscribe/post?u=5a8e4f4c993f2eae750b5922e&amp;id=72ec4151d0
   email: EMAIL
   honeypot: b_5a8e4f4c993f2eae750b5922e_72ec4151d0
+contact:
+  response: Thank you for contacting atishay. Your message has been sent. You will hear back soon.
+  action: /contact-thanks/
