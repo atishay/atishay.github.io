@@ -1,7 +1,7 @@
 Atishay.me
 -----------
 
-[![Build Status](https://travis-ci.org/atishay/atishay.github.io.svg?branch=develop)](https://travis-ci.org/atishay/atishay.github.io)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6461928-d4a1-42d0-bc51-265f26651673/deploy-status)](https://app.netlify.com/sites/atishay/deploys)
 
 Source code for my personal website: http://atishay.me.
 
