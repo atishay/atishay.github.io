@@ -12,7 +12,7 @@
     max-age=2592000,
     public
     '''
-    # Strict-Transport-Security = "max-age=2592000"
+    Strict-Transport-Security = "max-age=2592000"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Feature-Policy = "microphone 'none'; geolocation 'none'; ambient-light-sensor 'none'; accelerometer 'none'; camera 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'; vr 'none'"
