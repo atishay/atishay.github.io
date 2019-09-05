@@ -17,10 +17,8 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Feature-Policy = "microphone 'none'; geolocation 'none'; ambient-light-sensor 'none'; accelerometer 'none'; camera 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'; vr 'none'"
     Access-Control-Allow-Origin = "null"
-  for = '/manifest.json'
-  [headerrs.values]
+  for = '/*.(jpg|png|svg|mov)'
+  [headers.values]
     Cache-Control = '''
-	max-age=0,
-	no-cache,
-	no-store,
-	must-revalidate'''
+	max-age=31536000,
+	public'''
