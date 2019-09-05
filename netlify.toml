@@ -22,3 +22,9 @@
 	no-cache,
 	no-store,
 	must-revalidate'''
+
+[[redirects]]
+  from="http://atishay.netlify.com/*"
+  to="http://atishay.me/:splat"
+  status=302
+  force=true
