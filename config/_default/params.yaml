@@ -1,5 +1,5 @@
 description: "Personal website of Atishay Jain, developer at Adobe Systems with over 8 years of experience developing a wide range of Adobe products, right from your favorite desktop apps and websites(full stack) to mobile. I have worked on a variety of platforms and technology domains. I love solving problems and believe in searching for the best way to solve a problem before diving in."
-color: "#00D3F9"
+color: "#2962FF"
 colorPickerEnabled: true
 copyright: "&copy; 2016-{now} Atishay Jain. All rights reserved."
 checksDarkMode: true
@@ -19,7 +19,6 @@ colorVariations:
   - name: red
     color: c92744
 github: "https://github.com/atishay/atishay.github.io"
-CSP: true
 Guitar: https://guitar2svg.herokuapp.com/
 Tex: https://tex2svg.herokuapp.com/
 footer:
@@ -37,7 +36,7 @@ sharedHeader:
   - blog
 sidebar:
   - title: license
-    content: The contents of this post are available under Creative Commons Shared Alike license. You are free to use them commercially given that you provide the right attribution. You can read more about the license at the [Creative Commons website](http://creativecommons.org/licenses/by-sa/4.0/). <br> ![Creative Commons Shared Alike License](/image/ccbysa.png)
+    content: The contents of this post are available under Creative Commons Shared Alike license. You are free to use them commercially given that you provide the right attribution. Please maintain judgement as to usage - ripping off the whole website or post is not a great idea. You can read more about the license at the [Creative Commons website](http://creativecommons.org/licenses/by-sa/4.0/). <br> ![Creative Commons Shared Alike License](/image/ccbysa.png)
 comment:
     sheet: 1gzXCakB9twLVlni9yuSZtQBNyp1ae_q_F1eqmPYekVc
     form: 1FAIpQLSdjkSleb2kSkQGWebNU7ZTPT7osqjj0EPc0g6Zl4Qud--jAaw
@@ -49,9 +48,3 @@ newsletter:
   action: https://atishay.us20.list-manage.com/subscribe/post?u=5a8e4f4c993f2eae750b5922e&amp;id=72ec4151d0
   email: EMAIL
   honeypot: b_5a8e4f4c993f2eae750b5922e_72ec4151d0
-contact:
-    form: 1FAIpQLSfmhy33Qdqwwi8nqDOxJMdCyRh6Z3CWhwE9Iosa7UKO8wNt6A
-    name: entry.830764464
-    email: emailAddress
-    subject: entry.1998641301
-    message: entry.1809318382
