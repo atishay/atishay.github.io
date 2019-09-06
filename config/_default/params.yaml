@@ -50,4 +50,5 @@ newsletter:
   honeypot: b_5a8e4f4c993f2eae750b5922e_72ec4151d0
 contact:
   response: Thank you for contacting atishay. Your message has been sent. You will hear back soon.
+  responseError: Something is wrong with our servers. Please contact me directly via email.
   # action: /contact-thanks/
