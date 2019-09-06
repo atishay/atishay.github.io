@@ -51,4 +51,3 @@ newsletter:
 contact:
   response: Thank you for contacting atishay. Your message has been sent. You will hear back soon.
   responseError: Something is wrong with our servers. Please contact me directly via email.
-  # action: /contact-thanks/
