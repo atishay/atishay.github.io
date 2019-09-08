@@ -24,3 +24,8 @@
     Cache-Control = '''
 	max-age=31536000,
 	public'''
+
+[build.processing]
+  skip_processing = false
+[build.processing.js]
+  minify = true
