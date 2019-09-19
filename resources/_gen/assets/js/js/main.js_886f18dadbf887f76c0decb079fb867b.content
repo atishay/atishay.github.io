@@ -66,14 +66,18 @@
   if (contact) {
     contact.addEventListener("submit", (e) => {
       e.preventDefault();
-      fetch(contact.getAttribute("action"), {
+      fetch(contact.getAttribute("action") || window.location.pathname, {
         method: 'POST',
-        body: new URLSearchParams(new FormData(contact)).toString()
-      }).then(() => {
+        body: new FormData(contact)
+      }).then(response => {
         // Remove contact and add Thank You.
         const div = document.createElement('div');
         div.className = "contact-response";
-        div.innerHTML = 'Thank you for contacting atishay. Your message has been sent. You will hear back soon.';
+        if (response.ok) {
+          div.innerHTML = 'Thank you for contacting atishay. Your message has been sent. You will hear back soon.';
+        } else {
+          div.innerHTML = 'Something is wrong with our servers. Please contact me directly via email.'
+        }
         contact.parentNode && contact.parentNode.replaceChild(div, contact);
       })
     })

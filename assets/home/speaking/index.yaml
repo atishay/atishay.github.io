@@ -64,3 +64,21 @@ items:
     - href: home/Running node.js on customer machines.pdf
       icon: file-powerpoint-o
       title: Slides
+- title: JAMstackconf SF 2019
+  image:
+    href: home/speaking/jamstackconf.jpg
+    alt: Coming Soon
+    width: 500
+    height: 281
+    anchor: Center
+  content: By definition, a static website does not have a server. Then how, with the JAM stack can we really have a good shopping cart. This talk will have a demo of a system where no dynamic code is written on the server and a fully functional e-commerce website is presented using a static site builder, some APIs and JavaScript. Not every e-commerce system needs to be as dynamic as Amazon, and therefore should not use the same stack. You can avoid on-call work, constant updates and maintenance efforts when you use a CDN to host your shopping cart and get great performance to go along with it.
+  icon:
+    href: home/speaking/jamstackconf.svg
+    width: 116
+  links:
+    - href: https://jamstackconf.com/sf/
+      icon: external-link
+      title: Official Website
+    # - href: home/Running node.js on customer machines.pdf
+    #   icon: file-powerpoint-o
+    #   title: Slides
