@@ -13,9 +13,10 @@ content:
     - file: home/about/index.yaml
     - file: home/experience/index.yaml
     - file: home/internships/index.yaml
-    - file: home/education/index.yaml
+    - file: home/authoring/index.yaml
     - file: home/patents/index.yaml
     - file: home/speaking/index.yaml
+    - file: home/education/index.yaml
     - file: home/awards/index.yaml
     - file: home/projects/index.yaml
     - file: home/publications/index.yaml
