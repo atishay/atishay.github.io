@@ -79,6 +79,6 @@ items:
     - href: https://jamstackconf.com/sf/
       icon: external-link
       title: Official Website
-    # - href: home/Running node.js on customer machines.pdf
-    #   icon: file-powerpoint-o
-    #   title: Slides
+    - href: home/Ecommerce using static websites.pdf
+      icon: file-powerpoint-o
+      title: Slides
