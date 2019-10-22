@@ -42,7 +42,7 @@ items:
       title: Official Website
     - href: https://www.youtube.com/watch?v=8rwOJfBcJ9c
       icon: youtube
-      title: view
+      title: View
     - href: home/Falling in love with async await.pdf
       icon: file-powerpoint-o
       title: Slides
@@ -82,3 +82,6 @@ items:
     - href: home/Ecommerce using static websites.pdf
       icon: file-powerpoint-o
       title: Slides
+    - href: https://www.youtube.com/watch?v=JO48ooTpOOA
+      icon: youtube
+      title: View
