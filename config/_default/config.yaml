@@ -15,6 +15,10 @@ ignoreFiles:
     - "atishay.me.code-workspace"
     - ".gitattributes"
     - "src"
+    - "package.json"
+    - "build.js"
+    - "node_modules"
+    - "package-lock.json"
 
 enableEmoji: true
 related:
