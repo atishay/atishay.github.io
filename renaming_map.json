@@ -28,7 +28,7 @@
 	"#scroll-indicator": "th",
 	".logo": "tp",
 	".hamburger": "td",
-	".hamburger~": "tv",
+	".hamburger~": "td~",
 	".icon": "tm",
 	".bar": "tg",
 	".top-menu": "ty",
