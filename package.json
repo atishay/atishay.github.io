@@ -21,6 +21,11 @@
   },
   "homepage": "https://atishay.me",
   "dependencies": {
-    "rename-css-selectors": "^3.2.5"
+    "glob": "^7.1.6",
+    "htmlnano": "^0.2.5",
+    "posthtml": "^0.12.0",
+    "posthtml-webp": "^1.4.0",
+    "rename-css-selectors": "^3.2.5",
+    "terser": "^4.4.0"
   }
 }
