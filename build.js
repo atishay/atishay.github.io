@@ -28,11 +28,11 @@ const posthtml = require("posthtml");
         }
       }).code)
     ));
-  // glob("public/index.html", (err, matches) =>
-  //   matches.forEach(m =>
-  //     posthtml([require('htmlnano')({}, require('htmlnano').presets.max)]).process(fs.readFileSync(m, 'utf-8')).then(r => fs.writeFileSync(m, r.html)).catch(e => console.log(e, e.stack))
-  //   )
-  // );
+  glob("public/**/*.html", (err, matches) =>
+    matches.forEach(m =>
+      posthtml([require('htmlnano')({}, require('htmlnano').presets.safe)]).process(fs.readFileSync(m, 'utf-8')).then(r => fs.writeFileSync(m, r.html)).catch(e => console.log(m, e, e.stack))
+    )
+  );
 })();
 
 
