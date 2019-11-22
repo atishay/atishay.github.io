@@ -1,0 +1,26 @@
+{
+  "name": "atishay.me",
+  "version": "0.0.1",
+  "description": "Personal website for Atishay Jain",
+  "main": "public/index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atishay/atishay.github.io.git"
+  },
+  "keywords": [
+    "Personal",
+    "Website",
+    "Hugo",
+    "Atishay",
+    "Jain"
+  ],
+  "author": "Atishay Jain <contact@atishay.me>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/atishay/atishay.github.io/issues"
+  },
+  "homepage": "https://atishay.me",
+  "dependencies": {
+    "rename-css-selectors": "^3.2.5"
+  }
+}

@@ -12,6 +12,7 @@ sidebar:
 categories:
   - javascript
 series: ["Async Await"]
+slug: understanding-the-event-driven-nature-of-node-js
 ---
 
 ## Fundamental Operators
