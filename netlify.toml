@@ -1,7 +1,7 @@
 [build]
   command = "hugo --minify --baseURL $URL"
   [build.environment]
-  HUGO_VERSION="0.57.2"
+  HUGO_VERSION="0.60.0"
 [[headers]]
   for = "/*"
   [headers.values]
