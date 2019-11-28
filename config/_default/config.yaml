@@ -48,16 +48,9 @@ outputs:
   - rss
   - json
 canonifyURLs: true
-blackfriday:
-  # Fix after https://github.com/gohugoio/hugo/issues/2424
-  # Verify inline links and use canonifyURLs as false;
-  # hrefTargetBlank: true
-  # nofollowLinks: true
-  # noreferrerLinks: true
-  extensions:
-    - hardLineBreak
-
-pygmentsCodefences: true
-pygmentsUseClasses: true
-pygmentsOptions: "linenos=true"
+markup:
+  renderer:
+    hardWraps: true
+  highlight:
+    lineNos: true
 enableGitInfo: true
