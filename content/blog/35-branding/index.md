@@ -18,7 +18,7 @@ categories:
 
 Fair Oaks Toastmasters has had a gargantuan change in its online identity and the team wanted to share th updates with all its members. I have a speech that I gave impromptu to discuss these updates. I don't have this one written but here it is for your enjoyment.
 
-The presentation is present [here]({{ "/assets/img/blog/brand.pdf" | relative_url }})
+The presentation is present [here]("brand.pdf")
 
 The content is mostly youtube's automatic transcription.
 
