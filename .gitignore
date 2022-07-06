@@ -3,3 +3,4 @@ public/
 node_modules/
 _site/
 themes/jain/assets/image/line-awesome
+*.lock
