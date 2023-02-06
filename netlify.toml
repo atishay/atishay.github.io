@@ -1,7 +1,7 @@
 [build]
   command = "hugo --minify --baseURL $URL"
   [build.environment]
-  HUGO_VERSION="0.101.0"
+  HUGO_VERSION="0.110.0"
 [[headers]]
   for = "/*"
   [headers.values]
@@ -19,7 +19,7 @@
     Access-Control-Allow-Origin = "null"
 
 [[headers]]
-  for = '/*.(jpg|png|svg|mov)'
+  for = '/*.(jpg|png|svg|mov|webp|avif)'
   [headers.values]
     Cache-Control = '''
 	max-age=31536000,
