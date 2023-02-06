@@ -85,14 +85,14 @@ items:
     - href: https://www.youtube.com/watch?v=JO48ooTpOOA
       icon: youtube
       title: View
-- title: Frankfurt Rhein-Main Gophers
+- title: Frankfurt Gophers 2021
   image:
     href: home/speaking/gofrm.jpeg
     alt: Atishay at Frankfurt Gophers Group 2021
     width: 500
     height: 281
     anchor: Center
-  content: Hugo is interesting to Go developers as despite being ageneric tool that you don't need to learn Go for, it does some things very Go like. From using the Go terminology (e.g. slice) to the Go modules there is a lot of familiarity that a Go developer will find in the Hugo world. This talks interroduces Hugo to the Go developers and talks about how Go and Hugo are close. If you know Go, take a look at the source code. You will find some real hidden gems.
+  content: Hugo is interesting to Go developers as despite being ageneric tool that you don't need to learn Go for, it does some things very Go like. From using the Go terminology (e.g. slice) to the Go modules there is a lot of familiarity that a Go developer will find in the Hugo world. This talk at Frankfurt Rhein-Main Gophers introduces Hugo to the Go developers and talks about how Go and Hugo are close. If you know Go, take a look at the source code. You will find some real hidden gems.
   icon:
     href: home/speaking/gofrm-icon.png
     width: 60
