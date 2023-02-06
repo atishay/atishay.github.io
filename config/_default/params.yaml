@@ -26,6 +26,9 @@ footer:
     - title: About
       content: Personal Website of Atishay Jain, Computer Scientist at Adobe Systems. I am a developer living in the San Francisco Bay area and love solving problems via technology, design, writing, talking or any other means possible.
       newsletter: Join the newsletter
+      action: https://atishay.us20.list-manage.com/subscribe/post?u=5a8e4f4c993f2eae750b5922e&amp;id=72ec4151d0
+      email: EMAIL
+      honeypot: b_5a8e4f4c993f2eae750b5922e_72ec4151d0
     - title: Disclaimer
       content: The content of this website is mine and mine alone. It is not affiliated with any of my present or past employers, institutes or acquaintances. If you find anything offensive or any copyright infringements, please report them to me. I apologize in advance for any such errors. For more details please refer to the [Privacy Policy](/privacy) and [Terms of Use](/terms).
     - title: Recent Blog Posts
@@ -45,10 +48,6 @@ comment:
     name: entry.1199094986
     post: entry.524983228
     comment: entry.8861571
-newsletter:
-  action: https://atishay.us20.list-manage.com/subscribe/post?u=5a8e4f4c993f2eae750b5922e&amp;id=72ec4151d0
-  email: EMAIL
-  honeypot: b_5a8e4f4c993f2eae750b5922e_72ec4151d0
 contact:
   response: Thank you for contacting atishay. Your message has been sent. You will hear back soon.
   responseError: Something is wrong with our servers. Please contact me directly via email.
