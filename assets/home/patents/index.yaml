@@ -9,7 +9,7 @@ items:
     anchor: Top
     width: 300
     height: 300
-  content: In various implementations, a computing device is configured to provide a live preview of salient contours generated on a live digital video feed. In particular, a designer can use a computing device with a camera, such as a smart phone, to view a real-time preview of salient contours generated from edges detected in frames of a live digital video feed prior to capture, thereby eliminating the unpredictability of salient contours generated from a previously captured image. In some implementations, the salient contours are overlaid on a greyscale conversion of the live digital video feed for improved processing and visual contrast. Other implementations modify aspects of edge-detecting or post-processing filters for improved performance on mobile computing devices.
+  content: "_**US-9449248**_ In various implementations, a computing device is configured to provide a live preview of salient contours generated on a live digital video feed. In particular, a designer can use a computing device with a camera, such as a smart phone, to view a real-time preview of salient contours generated from edges detected in frames of a live digital video feed prior to capture, thereby eliminating the unpredictability of salient contours generated from a previously captured image. In some implementations, the salient contours are overlaid on a greyscale conversion of the live digital video feed for improved processing and visual contrast. Other implementations modify aspects of edge-detecting or post-processing filters for improved performance on mobile computing devices."
   links:
   - icon: bookmark
     title: "B<small>IB</small>T<sub>E</sub>X"
