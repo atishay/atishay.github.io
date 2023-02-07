@@ -2135,6 +2135,9 @@ header {
   font-weight: 400;
   padding: 0 20px 0 0; }
 
+.commenter-id {
+  display: none; }
+
 .background {
   position: fixed;
   width: 100%;
