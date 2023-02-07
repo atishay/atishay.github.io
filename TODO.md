@@ -1,3 +1,4 @@
+* Print CSS
 * SQIP
 * Picture tag and image resizing
 * Image placeholder via [SQIP](sqip)
