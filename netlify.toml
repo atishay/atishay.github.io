@@ -29,3 +29,5 @@
   skip_processing = false
 [build.processing.js]
   minify = true
+[functions]
+  directory = "api"

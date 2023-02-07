@@ -1,0 +1,10 @@
+{
+  "name": "atishay.me",
+  "license": "MIT",
+  "version": "1.0.0",
+  "dependencies": {
+    "jtag": "^1.0.0",
+    "mathjax": "^3.2.2",
+    "puppeteer": "^19.6.3"
+  }
+}

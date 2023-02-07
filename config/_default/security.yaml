@@ -1,3 +1,4 @@
 funcs:
   getenv:
     - COMMENTS_TOKEN
+    - API_PASSWORD
