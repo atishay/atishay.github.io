@@ -1,12 +1,14 @@
 title: Authoring
-type: keep-width
+type: single
 items:
 - title: Hugo In Action
-  image:
-    href: home/authoring/hia.png
-    width: 360
-    height: 450
-  content: _**ISBN Print 9781617297007 &amp; eBook 9781638350811**_ A complete working guide to be successful with one of the fastest, popular, open-source, community-maintained static-site builder. Hugo in Action teaches you to build and host your own fully customizable static website with the Hugo engine. This friendly tutorial teaches you step-by-step how to use Hugo as a Content Management System and as a  web development environment. With a complete company example website and source code, you’ll get to grips with using markup for content tagging, moving off-template to build your own Hugo themes, and creating custom pages. Next, you’ll push further than you thought was possible with a static site, using JavaScript and the Jamstack (JavaScript, APIs, and Markup) to add functionality like eCommerce and your own APIs. When you’re done, you’ll have the skills to build a stable but feature-rich website without relying on third-party server code.
+  subtitle: Static sites and dynamic Jamstack apps
+  book:
+      left: home/authoring/left.png
+      right: home/authoring/right.png
+      front: home/authoring/front.jpg
+  attribution: Flipping book effect by [dhanishgajjar](https://codepen.io/dhanishgajjar/pen/bjaYYo)
+  content: Hugo in Action is a hands-on guide to using the Hugo static site engine to render these websites in milliseconds. Working with a complete example website and source code samples, you'll learn how to build and host a site that will wow users and stay stable without a third-party server. Full coverage of the Jamstack (Javascript, APIs, Markdown) shows how easy it is to add complex features to super-simple sites, including eCommerce shopping carts, dynamic forms, and multilingual options. This website is built using Hugo. _**ISBN Print 9781617297007 &amp; eBook 9781638350811**_
   links:
   - href: https://www.manning.com/books/hugo-in-action
     title: Official Website
