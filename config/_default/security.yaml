@@ -1,0 +1,3 @@
+funcs:
+  getenv:
+    - COMMENTS_TOKEN

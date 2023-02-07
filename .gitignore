@@ -4,3 +4,5 @@ node_modules/
 _site/
 themes/jain/assets/image/line-awesome
 *.lock
+# Comments cache for local use.
+resources/_gen/getjson/8d255d102a4970a898b438771264047e
