@@ -1,0 +1,3 @@
+<!-- guitar -->
+<!-- {{.Inner}} -->
+{{- (resources.GetRemote (print site.Params.Guitar "?" (querify "q" .Inner) "&password=" (getenv "API_PASSWORD")) | resources.Minify).Content -}}

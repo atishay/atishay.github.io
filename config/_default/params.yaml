@@ -20,7 +20,7 @@ colorVariations:
   - name: red
     color: c92744
 github: "https://github.com/atishay/atishay.github.io"
-Guitar: https://guitar2svg.herokuapp.com/
+Guitar: https://atishay.me/.netlify/functions/guitar2svg
 Tex: https://atishay.me/.netlify/functions/latex2svg
 footer:
     - title: About
