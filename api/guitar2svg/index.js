@@ -52,7 +52,7 @@ module.exports = {
       x.style.maxWidth = "100%";
       x.classList.add('guitar');
       return document.getElementById('builder_0').innerHTML;
-    }, search.q);
+    }, event.queryStringParameters.q);
 
 
     await browser.close();
