@@ -2,7 +2,7 @@
 {{ $inline := "" }}
 {{- if eq (.Get 0) "inline" -}}
 {{ $inline = "&inline=true" }}
-{{.Inner}}
+<!-- {{.Inner}} -->
 {{- end -}}
 {{- (resources.GetRemote (print site.Params.Tex "?" (querify "tex" .Inner) "&password=" (getenv "API_PASSWORD") $inline) | resources.Minify).Content -}}
 
