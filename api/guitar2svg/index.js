@@ -39,13 +39,7 @@ module.exports = {
       headless: chromium.headless
     });
     const page = await browser.newPage();
-    await page.setContent(`<html>
-<script src="../../node_modules/jtab/dist/jtab.js"></script>
-<body>
-  <span id="jtab"></span>
-</body>
-</html>`);
-    // await page.goto("file://" + __dirname + "/index.html");
+    await page.goto("file://" + __dirname + "/index.html");
 
     // Get the "viewport" of the page, as reported by the page.
     const dimensions = await page.evaluate((q) => {
