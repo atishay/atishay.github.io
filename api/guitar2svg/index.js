@@ -1,4 +1,5 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
+const chromium = require('chrome-aws-lambda');
 
 module.exports = {
   /**
@@ -28,7 +29,15 @@ module.exports = {
       };
     }
 
-    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+    const browser = await puppeteer.launch({
+      // Required
+      executablePath: await chromium.executablePath,
+
+      // Optional
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      headless: chromium.headless
+    });
     const page = await browser.newPage();
     await page.goto("file://" + __dirname + "/index.html");
 

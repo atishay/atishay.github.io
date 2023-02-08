@@ -3,8 +3,9 @@
   "license": "MIT",
   "version": "1.0.0",
   "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
     "jtag": "^1.0.0",
     "mathjax": "^3.2.2",
-    "puppeteer": "^19.6.3"
+    "puppeteer-core": "^19.6.3"
   }
 }
