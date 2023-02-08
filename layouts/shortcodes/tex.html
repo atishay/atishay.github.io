@@ -4,5 +4,5 @@
 {{ $inline = "&inline=true" }}
 <!-- {{.Inner}} -->
 {{- end -}}
-{{- (resources.GetRemote (print site.Params.Tex "?" (querify "tex" .Inner) "&password=" (getenv "API_PASSWORD") $inline) | resources.Minify).Content -}}
+{{- (resources.GetRemote (print site.Params.Tex "?" (querify "tex" .Inner) "&password=" (getenv "API_PASSWORD") $inline) | resources.Minify).Content | safeHTML-}}
 
