@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer-core');
-const chromium = require('chrome-aws-lambda');
+const chromium = require('@sparticuz/chrome-aws-lambda');
 
 module.exports = {
   /**
