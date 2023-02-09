@@ -27,7 +27,7 @@ items:
     height: 180
   attribution: Mockup from [Graphberry](https://www.graphberry.com/item/multiple-web-screens-perspective-psd-mockup)
   links:
-    - href: https://github.com/atishay/all-autocomplete
+    - href: https://github.com/atishay/vscode-allautocomplete
       title: Fork
       icon: code-fork
     - href: https://marketplace.visualstudio.com/items?itemName=Atishay-Jain.All-Autocomplete
