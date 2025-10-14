@@ -31,7 +31,10 @@ Technical Leader with 15+ years in software development representing technology 
 ##### Creative Cloud Experience Desktop
 * Lead developer of in-app systems, leading the development of the home screen, the entry point into Cloud Documents for Photoshop, Illustrator, InDesign, Premiere, After Effects and Dreamweaver.
 * Provided the first client implementation, with full stack debugging to smoothen the rough edges of the migration of Adobe's Extensibility Platform from Chromium to a custom React Native like solution (Adobe's Unified Extensibility Platform).
-* Representative for the Desktop applications in the planning for the rewrite of Adobe's Licensing stack (Next Generation Licensing) for better handling the nuances of the SAAS migration of the business.
+* Representative for the Desktop applications in the planning for the rewrite of Adobe's Licensing stack (Next Generation Licensing) for the SAAS migration of the business.
+
+----------------------
+----------------------
 
 ##### 2015-17{.right}
 ##### Creative Cloud Libraries
@@ -45,9 +48,6 @@ Technical Leader with 15+ years in software development representing technology 
 * Primary Inventor (US Patent US-9449248) and the only developer involved from the conceptualization to a stable release of award-winning augmented application - Adobe Shape CC (in Adobe Max keynote, 2014).
 * Worked in a small, cross-functional team with members of Adobe Design, Product Management and Research doing rapid experimentation, prototyping and development to release a stable product with over half a million app store downloads in under six months of launch.
 * Led the effort for the development of the augmented reality application, in close collaboration with Adobe Research on advanced imaging algorithms, enabling them to run via GPGPU processing on nascent iPhone 4 hardware.
-
-------------------------
-------------------------
 
 ##### 2012-15{.right}
 ##### Adobe Kuler (Now Adobe Color)
@@ -72,6 +72,9 @@ Technical Leader with 15+ years in software development representing technology 
 #### Wharton Executive Education – CTO Program
 Focused on the intersection of business and technology, learned from esteemed Wharton professor the various facets of the role of the technical leader.
 
+----------------------
+----------------------
+
 ##### 2016-18{.right}
 #### Stanford University – Graduate Certificate in Artificial Intelligence (AI)
 Completed masters level courses on machine learning and artificial intelligence building projects in the then nascent field of deep learning.
@@ -92,12 +95,14 @@ Completed with 100% merit scholarship having a GPA of 9.82(10).
 * Guest Speaker at multiple conferences including JamstackConf 2019, Cisco DevNet Create 2019 and CascadiaJS 2018.
 * Hyperlinking Beyond the Web – CSS Tricks a top 100 developer resource.
 * Architecture for High Density RFID Inventory System in Internet of Things, Communications in Computer and Information, Vol 132, pp 617-626, Springer
-
-------------------------
-------------------------
-
 * Impact of coordinator mobility on the throughput in a ZigBee mesh networks, Advance Computing Conference (IACC) 2010 IEEE 2nd International, pp. 279-284, 2010
 * Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems, Proceedings of International Conference on Advances in Computer Science, 2010.
+
+### Certificates
+* Management Accelerator Program - McKinsey in 2025.
+* Mastering Generative AI for Product Innovation - Stanford University in 2024.
+* CCNA – Cisco Certified Network Associate – Certified by Cisco Systems in 2009.
+* SCJP – Sun Certified Java Programmer – Certified by Sun Microsystems in 2008.
 
 ### Awards
 * EB1 – Extraordinary Ability Green Card (popularly called the Einstein Visa) by the USCIS.
