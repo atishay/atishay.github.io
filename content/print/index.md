@@ -8,7 +8,7 @@ Atishay Jain
 ## http://atishay.me, http://github.com/atishay, https://www.linkedin.com/in/atishay{.subtitle}
 
 ### Summary
-Technical Leader with 15+ years in software development representing technology to business executives for 3+ years. 10+ years of lead architectural ownership for multiple cross-product frameworks and SDKs across Mobile, Web and Desktop platforms. Full stack development experience across the breadth software technology from desktop, mobile to server and client on the web along with widgets and extensions. Active developer spending 50% time writing/reviewing code. Speaker at multiple technology conferences, author of Hugo in Action (ISBN: 9781617297007).
+Technical Leader with 15+ years in software development representing technology to business executives for 3+ years. 10+ years of lead architectural ownership for multiple cross-product frameworks and SDKs across Mobile, Web and Desktop platforms. Full stack development experience across the breadth software technology from desktop, mobile to server and client on the web along with widgets and extensions. Active developer spending 50% time writing/reviewing code alongside project and people duties. Speaker at multiple technology conferences, author of Hugo in Action (ISBN: 9781617297007).
 
 ### Experience
 #### Principal Computer Scientist – Adobe Inc
@@ -70,7 +70,7 @@ Technical Leader with 15+ years in software development representing technology 
 ### Education
 ##### 2024{.right}
 #### Wharton Executive Education – CTO Program
-Focused on the intersection of business and technology, learned from esteemed Wharton professor the various facets of the role of the technical leader.
+Focused on the intersection of business and technology, learned from esteemed Wharton faculty the various facets of the role of the technical leader.
 
 ----------------------
 ----------------------
