@@ -1,57 +1,72 @@
 title: Experience
-subtitle: Senior Computer Scientist at Adobe Inc.
+subtitle: Principal Scientist at Adobe Inc.
 icon: home/experience/adobe.svg
 items:
-- icon:
-    href: "home/experience/cc.png"
-  title: CC Experience Platform
-  content: "\n\nArchitect providing technical guidance and help the leadership in experimenting, planning, implementing, and managing the roadmap for multiple teams. Lead taking care of complicated architectural and engineering challenges, acting as the last line of defense for any technical problems arising within my purview of teams. Hands on developer working on breakthrough ideas, innovative concepts and experiments that form the foundations of the next version of our tools.
-\n\n"
-  links:
-  - href: https://www.adobe.com/creativecloud.html
-    title: Creative Cloud
-    icon: link
-- icon:
-    href: "home/experience/cc-folder.svg"
-  title: CC Libraries
-  content: "\n\nMember of the influential team owning the cloud transformation of Adobe’s desktop products with its flagship ingredient synchronization solution. Prepared CC Libraries for the enterprise, enabling the proliferation of the technology from a single product demo to a scalable solution across imaging, publishing, video and 3D segments of the Adobe business. Expertise at design systems, diverse re-usable styles, their differences across the realms of design from videos to screen illustrations and print.\n\n"
-  links:
-  - href: http://www.adobe.com/creativecloud/libraries.html
+  - icon:
+      href: "home/experience/aep.png"
+    title: Adobe Growth SDK
+    content: "\n\nTechnical owner of the migration of Creative Cloud and Document Cloud's data collection and marketing stack to Adobe Experience Platform, acting as the expert technical liaison between the two organizations. Built from scratch the AEP SDK for desktop with customizations for optimizing the use within CC apps as well as the architecture to enable cross-platform extensions in C++ usable across desktop, iOS and android AEP SDKs (in C++, swift and Kotlin respectively). Migrated all 800M Adobe's active users to the platform, ahead of time, spanning 30+ products across multiple platforms, architectures and integration approaches in a variety of markets with different types of use cases. Enabled new use cases like Monthly Active Use measurement over this new stack..\n\n"
+    links:
+      - href: https://business.adobe.com/products/experience-platform/adobe-experience-platform.html
+        title: Adobe Experience Platform
+        icon: link
+  - icon:
+      href: "home/experience/ccx.png"
+    title: CC Experience Platform
+    content: "\n\nArchitect owning the technical direction and helping the leadership in experimenting, planning, implementing, and managing the roadmap for multiple teams in the Creative Cloud Engagement and Experience organization focused on in product personalization. The last line of defense for any technical problems arising within my purview of these teams. Developed the Engagement SDK for all Adobe mobile apps for handing experimentation within Paywalls, InAppMessages and Push Notifications, to the tune of $200M ARR in 2023.\n\n"
+    links:
+      - href: https://www.adobe.com/products/photoshop/app.html
+        title: Photoshop Mobile
+        icon: link
+  - icon:
+      href: "home/experience/cc.png"
+    title: CC Experience Desktop
+    content: "\n\nLead developer of in-app systems, leading the development of the home screen, the entry point into Cloud Documents for Photoshop, Illustrator, InDesign, Premiere, After Effects and Dreamweaver. Provided the first client implementation, with full stack debugging to smoothen the rough edges of the migration of Adobe's Extensibility Platform from Chromium to a custom React Native like solution (Adobe's Unified Extensibility Platform). Representative for the Desktop applications in the planning for the rewrite of Adobe's Licensing stack (Next Generation Licensing) for better handling the nuances of the SAAS migration of the business.\n\n"
+    links:
+      - href: https://www.adobe.com/creativecloud.html
+        title: Creative Cloud
+        icon: link
+  - icon:
+      href: "home/experience/cc-folder.svg"
     title: CC Libraries
-    icon: link
-  - href: https://www.youtube.com/watch?v=76A1i9o7g6U
-    title: Demo
-    icon: youtube
-- title: Adobe Shape
-  icon:
-    href: home/experience/shape.svg
-  content: "\n\nPrimary Inventor of Adobe Shape. Participated in creation of Adobe Shape from prototype to release (Adobe Max 2014) involved in the entire cycle of ideation, prototyping, validation, optimization and release. The app saw over a million downloads in less than a year before being merged into Adobe Capture.\n\n Led the effort for the development of the augmented reality application, in close collaboration with Adobe Research on advanced imaging algorithms, enabling them to run via GPGPU (OpenGL) processing on nascent iPhone 4 hardware.\n\n"
-  links:
-    - href: http://www.adobe.com/products/capture.html
-      title: Capture
-      icon: link
-    - href: https://www.youtube.com/watch?v=QIasMlptd7k
-      title: Demo
-      icon: youtube
-- title: Adobe Color
-  icon:
-    href: home/experience/color.svg
-  content: "\n\nInfluential member of the small member team that resurrected Adobe Kuler from maintenance mode to be a part of two consecutive Adobe Max keynotes (2011, 2013). Major contributor to the architecture and implementation of the full web stack, its deployment as well as the native iOS Adobe Kuler app (now Adobe Capture). \n\nMigrated the entire app from Coldfusion and Flash to HTML5 &amp; nodejs over AWS alongside creating its native ObjC iOS app.\n\n"
-  links:
-    - href: https://color.adobe.com
-      title: Adobe Color
-      icon: link
-    - href: https://www.youtube.com/watch?v=nuXG-MOL6-0
-      title: Demo
-      icon: youtube
-- title: Adobe InDesign
-  icon:
-    href: home/experience/id.svg
-  content: "\n\nManaged the Adobe Creative Suite SDK which powers HTML based extensions including the Adobe Digital Publishing Suite into Adobe InDesign. Went through the architectural migration of a complicated multi-gigabytes code-base from Carbon to Cocoa based MacOS architecture.\n\nKnowledgeable with the COM based architecture of applications like InDesign and suite-based Illustrator.\n\n"
-  links:
-  - href: http://www.adobe.com/products/indesign.html
-    title: Adobe InDesign
-    icon: link
-  - href: http://www.adobe.com/devnet/creativesuite.html
-    title: CS SDK
-    icon: link
+    content: "\n\nMember of the influential team owning the cloud transformation of Adobe’s desktop products with its flagship ingredient synchronization solution. Prepared CC Libraries for the enterprise, enabling the proliferation of the technology from a single product demo to a scalable solution across imaging, publishing, video and 3D segments of the Adobe business. Expertise at design systems, diverse re-usable styles, their differences across the realms of design from videos to screen illustrations and print.\n\nExtended this beyond Adobe with demos into Microsoft Office (eventually productized)\n\n"
+    links:
+      - href: http://www.adobe.com/creativecloud/libraries.html
+        title: CC Libraries
+        icon: link
+      - href: https://www.youtube.com/watch?v=76A1i9o7g6U
+        title: Demo
+        icon: youtube
+  - title: Adobe Shape
+    icon:
+      href: home/experience/shape.svg
+    content: "\n\nP•	Primary Inventor and the only developer involved from the conceptualization to a stable release of award-winning augmented application - Adobe Shape CC (in Adobe Max keynote, 2014). Over half a million app store downloads  in under six months of launch, tons of awards and great app store rating.\n\n Worked in a small, cross-functional team with members of Adobe Design, Product Management and Research doing rapid experimentation, prototyping and development to release, in close collaboration with Adobe Research on advanced imaging algorithms, enabling them to run via GPGPU (OpenGL) processing on nascent iPhone 4 hardware.\n\n"
+    links:
+      - href: http://www.adobe.com/products/capture.html
+        title: Capture
+        icon: link
+      - href: https://www.youtube.com/watch?v=QIasMlptd7k
+        title: Demo
+        icon: youtube
+  - title: Adobe Color
+    icon:
+      href: home/experience/color.svg
+    content: "\n\nInfluential member of the small member team that resurrected Adobe Kuler from maintenance mode to be a part of two consecutive Adobe Max keynotes (2011, 2013). Major contributor to the architecture and implementation of the full web stack, its deployment as well as the native iOS Adobe Kuler app (now Adobe Capture). \n\nMigrated the entire app from Coldfusion and Flash to HTML5 &amp; nodejs over AWS alongside creating its native ObjC iOS app.\n\n"
+    links:
+      - href: https://color.adobe.com
+        title: Adobe Color
+        icon: link
+      - href: https://www.youtube.com/watch?v=nuXG-MOL6-0
+        title: Demo
+        icon: youtube
+  - title: Adobe InDesign
+    icon:
+      href: home/experience/id.svg
+    content: "\n\nManaged the Adobe Creative Suite SDK which powers HTML based extensions including the Adobe Digital Publishing Suite into Adobe InDesign. Went through the architectural migration of a complicated multi-gigabytes code-base from Carbon to Cocoa based MacOS architecture.\n\nKnowledgeable with the COM based architecture of applications like InDesign and suite-based Illustrator.\n\n"
+    links:
+      - href: http://www.adobe.com/products/indesign.html
+        title: Adobe InDesign
+        icon: link
+      - href: http://www.adobe.com/devnet/creativesuite.html
+        title: CS SDK
+        icon: link
