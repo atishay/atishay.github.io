@@ -11,7 +11,6 @@ items:
       * Building for flexibility
       * When and where to use AI and LLMs
   - title: AI and LLMs
-    icon: brain
     subtitle: Prompt Engineering and Agentic Loops
     content: |1+
       * The text completion and mesaging APIs with tool calls
