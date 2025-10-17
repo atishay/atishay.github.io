@@ -67,6 +67,6 @@ items:
       - href: http://www.adobe.com/products/indesign.html
         title: Adobe InDesign
         icon: link
-      - href: http://www.adobe.com/devnet/creativesuite.html
+      - href: /home/cs.html
         title: CS SDK
-        icon: link
+        icon: archive
