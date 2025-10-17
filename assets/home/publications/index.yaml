@@ -2,97 +2,94 @@ title: Publications
 type: full-width
 subtitle: "More than a blogger. I write to academic journals, websites, magazines and anywhere I can get my hands on."
 items:
-- title: Architecture for High Density RFID Inventory System in Internet of Things
-  image:
-    href: home/publications/iot.jpg
-    alt: Internet of Things
-    width: 300
-    height: 300
-    anchor: Center
-  attribution: Image from [Pixabay](https://pixabay.com/en/network-iot-internet-of-things-782707/)
-  content: This paper proposes a novel architecture of Internet of Things (IOT) implemented using RFID. Our proposed architecture solves the problem of over-loading as the load on the RFID Tag reader is the total number of changed objects rather than the actual number of objects present. Our architecture is based on EPCglobal Network with some assumptions and modifications. We have discussed in details the components and working of our model. We have also discussed the physical implementation of our model taking the examples of two sample applications one for the retail system and other for smart home applications and their performance results have been tabulated and represented graphically.
-  links:
-  - icon: bookmark
-    title: "B<small>IB</small>T<sub>E</sub>X"
-    href: /home/Architecture for High Density RFID Inventory System in Internet of Things.bib
-  - icon: link
-    title: Access
-    href: http://link.springer.com/10.1007%2F978-3-642-17878-8_62
-- title: Impact of Coordinator Mobility on the throughput in a Zigbee Mesh Networks
-  image:
-    href: home/publications/zigbee.png
-    alt: Zigbee
-    width: 300
-    height: 300
-  attribution: Image from [Zigbee alliance](http://www.zigbee.org/zigbee-for-developers/zigbee3-0/)
-  content: Zigbee (IEEE 802.15.4) standard interconnects simple, low power and low processing capability wireless devices. The Zigbee devices facilitate numerous applications such as pervasive computing, national security, monitoring and control etc. An effective positioning of nodes in a ZigBee network is particularly important in improving the performance (e.g., throughput) of ZigBee networks. In the wireless sensor network (WSN) literature, the use of a mobile sink is often recommended as an effective defense against the so-called hot-spot phenomenon. But the effects of mobile coordinator on the performance of the network are not given due consideration. In this paper, we perform extensive evaluation, using OPNET Modeler, to study the impact of coordinator mobility on ZigBee mesh network. The results show that the ZigBee mesh routing algorithm exhibits significant performance difference when the router are placed at different locations and the trajectories of coordinator are varied. We also show that the status of ACK in the packet also plays a critical role in deciding network performances.
-  links:
-  - icon: bookmark
-    title: "B<small>IB</small>T<sub>E</sub>X"
-    href: /home/Impact of coordinator mobility on the throughput in a ZigBee mesh networks.bib
-  - icon: link
-    title: Access
-    href: http://dx.doi.org/10.1109/IADCC.2010.5422995
-- title: Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems
-  image:
-    href: home/publications/smart-home.jpg
-    alt: Smart Home
-    anchor: Center
-    width: 300
-    height: 300
-  attribution: Image by StruffelProductions on [Pixabay](https://pixabay.com/en/interior-cgi-wireframe-explanation-1944348/)
-  content: This paper proposes a flexible and novel architecture of Internet of Things (IOT) in a high density and mobility environment. Our proposed architecture solves the problem of over-loading on the network by monitoring the total number of changed objects changing global location crossing the fringe boundaries rather than the actual number of objects present or those that move within the local area. We have modified the reader architecture of the EPCglobal Architecture. The components and the working of the model has been illustrated in detail. We have also discussed the physical implementation of our model taking the examples of a smart home sample application and the performance results have been tabulated and represented graphically.
-  links:
-  - icon: bookmark
-    title: "B<small>IB</small>T<sub>E</sub>X"
-    href: /home/Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems.bib
-  - icon: link
-    title: Access
-    href: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.592.6204
-- title: Answering Squad
-  image:
-    href: home/publications/squad.jpg
-    alt: Question Answering
-    anchor: Center
-    width: 300
-    height: 300
-  attribution: Image by qimono on [Pixabay](https://pixabay.com/en/question-mark-knowledge-question-3255140/)
-  content: Question Answering is a very important cornerstone of natural language processing where a machine should be able to understand human language to an extent that an individual could ask questions to the machine in the language he/she understands and then get the answers back in the same language without the involvement of experts. In this project we evaluate a neural network based Question Answering system using a simple model and see how a very basic model performs on the StanfordQuestion Answering dataset.
-  links:
-  - icon: bookmark
-    title: "B<small>IB</small>T<sub>E</sub>X"
-    href: /home/Answering squad.bib
-  - icon: link
-    title: Access
-    href: https://web.stanford.edu/class/cs224n/reports/2761922.pdf
-- title: Automatic 3D Reconstruction for symmetric shapes
-  image:
-    href: home/publications/3d.png
-    alt: 3D Reconstruction
-    anchor: Center
-    width: 300
-    height: 300
-  content: Generic 3D reconstruction from a single image is a difficult problem. A lot of data loss occurs in the projection. A domain based approach to reconstruction where we solve a smaller set of problems for a particular use case lead to greater returns. The project provides a way to automatically generate full 3-D renditions of actual symmetric images that have some prior information provided in the pipeline by a recognition algorithm. We provide a critical analysis on how this can be enhanced and improved to provide a general reconstruction framework for automatic reconstruction for any symmetric shape.
-  links:
-  - icon: bookmark
-    title: "B<small>IB</small>T<sub>E</sub>X"
-    href: /home/Automatic 3D Reconstruction for symmetric shapes.bib
-  - icon: link
-    title: Access
-    href: https://arxiv.org/abs/1606.05785
-- title: Sokoban Solver
-  video:
-    href: home/Sokoban Solver.mp4
-    alt: Sokoban Solver
-    format: video/mp4
-    anchor: Center
-    width: 300
-    height: 300
-  content: Artificial Intelligence is becoming instrumental in a variety of applications. Games serve as a good breeding ground for trying and testing these algorithms in a sandbox with simpler constraints in comparison to real life. In this project, we aim to develop an AI agent that can solve the classical Japanese game of Sokoban using various algorithms and heuristics and compare their performances through standard metrics.
-  links:
-  - icon: bookmark
-    title: "B<small>IB</small>T<sub>E</sub>X"
-    href: /home/Sokoban Solver.bib
-  - icon: link
-    title: Access
-    href: https://arxiv.org/abs/1807.00049
+  - title: Hyperlinking Beyond the Web
+    image:
+      href: home/publications/link.jpg
+      alt: Hyperlinking Beyond the Web
+      width: 300
+      height: 300
+      anchor: Center
+    attribution: Image from [Pixabay](https://pixabay.com/illustrations/backlinks-seo-link-building-7791387/)
+    content: Hyperlinks are the oldest and the most popular feature of the web. The word hypertext (which is the ht in http/s) means text having hyperlinks. The ability to link to other people’s hypertext made the web, a web — a set of connected pages. This fundamental feature has made the web a very powerful platform and it is obvious that the world of apps needs this feature. All modern platforms support a way for apps to register a URI (custom protocol) and also have universal links (handling web links in an app).
+    links:
+      - icon: link
+        title: Access
+        href: https://css-tricks.com/hyperlinking-beyond-the-web/
+  - title: Impact of Coordinator Mobility on the throughput in a Zigbee Mesh Networks
+    image:
+      href: home/publications/zigbee.png
+      alt: Zigbee
+      width: 300
+      height: 300
+    attribution: Image from [Zigbee alliance](http://www.zigbee.org/zigbee-for-developers/zigbee3-0/)
+    content: Zigbee (IEEE 802.15.4) standard interconnects simple, low power and low processing capability wireless devices. The Zigbee devices facilitate numerous applications such as pervasive computing, national security, monitoring and control etc. An effective positioning of nodes in a ZigBee network is particularly important in improving the performance (e.g., throughput) of ZigBee networks. In the wireless sensor network (WSN) literature, the use of a mobile sink is often recommended as an effective defense against the so-called hot-spot phenomenon. But the effects of mobile coordinator on the performance of the network are not given due consideration. In this paper, we perform extensive evaluation, using OPNET Modeler, to study the impact of coordinator mobility on ZigBee mesh network. The results show that the ZigBee mesh routing algorithm exhibits significant performance difference when the router are placed at different locations and the trajectories of coordinator are varied. We also show that the status of ACK in the packet also plays a critical role in deciding network performances.
+    links:
+      - icon: bookmark
+        title: "B<small>IB</small>T<sub>E</sub>X"
+        href: /home/Impact of coordinator mobility on the throughput in a ZigBee mesh networks.bib
+      - icon: link
+        title: Access
+        href: http://dx.doi.org/10.1109/IADCC.2010.5422995
+  - title: Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems
+    image:
+      href: home/publications/smart-home.jpg
+      alt: Smart Home
+      anchor: Center
+      width: 300
+      height: 300
+    attribution: Image by StruffelProductions on [Pixabay](https://pixabay.com/en/interior-cgi-wireframe-explanation-1944348/)
+    content: This paper proposes a flexible and novel architecture of Internet of Things (IOT) in a high density and mobility environment. Our proposed architecture solves the problem of over-loading on the network by monitoring the total number of changed objects changing global location crossing the fringe boundaries rather than the actual number of objects present or those that move within the local area. We have modified the reader architecture of the EPCglobal Architecture. The components and the working of the model has been illustrated in detail. We have also discussed the physical implementation of our model taking the examples of a smart home sample application and the performance results have been tabulated and represented graphically.
+    links:
+      - icon: bookmark
+        title: "B<small>IB</small>T<sub>E</sub>X"
+        href: /home/Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems.bib
+      - icon: link
+        title: Access
+        href: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.592.6204
+  - title: Answering Squad
+    image:
+      href: home/publications/squad.jpg
+      alt: Question Answering
+      anchor: Center
+      width: 300
+      height: 300
+    attribution: Image by qimono on [Pixabay](https://pixabay.com/en/question-mark-knowledge-question-3255140/)
+    content: Question Answering is a very important cornerstone of natural language processing where a machine should be able to understand human language to an extent that an individual could ask questions to the machine in the language he/she understands and then get the answers back in the same language without the involvement of experts. In this project we evaluate a neural network based Question Answering system using a simple model and see how a very basic model performs on the StanfordQuestion Answering dataset.
+    links:
+      - icon: bookmark
+        title: "B<small>IB</small>T<sub>E</sub>X"
+        href: /home/Answering squad.bib
+      - icon: link
+        title: Access
+        href: https://web.stanford.edu/class/cs224n/reports/2761922.pdf
+  - title: Automatic 3D Reconstruction for symmetric shapes
+    image:
+      href: home/publications/3d.png
+      alt: 3D Reconstruction
+      anchor: Center
+      width: 300
+      height: 300
+    content: Generic 3D reconstruction from a single image is a difficult problem. A lot of data loss occurs in the projection. A domain based approach to reconstruction where we solve a smaller set of problems for a particular use case lead to greater returns. The project provides a way to automatically generate full 3-D renditions of actual symmetric images that have some prior information provided in the pipeline by a recognition algorithm. We provide a critical analysis on how this can be enhanced and improved to provide a general reconstruction framework for automatic reconstruction for any symmetric shape.
+    links:
+      - icon: bookmark
+        title: "B<small>IB</small>T<sub>E</sub>X"
+        href: /home/Automatic 3D Reconstruction for symmetric shapes.bib
+      - icon: link
+        title: Access
+        href: https://arxiv.org/abs/1606.05785
+  - title: Sokoban Solver
+    video:
+      href: home/Sokoban Solver.mp4
+      alt: Sokoban Solver
+      format: video/mp4
+      anchor: Center
+      width: 300
+      height: 300
+    content: Artificial Intelligence is becoming instrumental in a variety of applications. Games serve as a good breeding ground for trying and testing these algorithms in a sandbox with simpler constraints in comparison to real life. In this project, we aim to develop an AI agent that can solve the classical Japanese game of Sokoban using various algorithms and heuristics and compare their performances through standard metrics.
+    links:
+      - icon: bookmark
+        title: "B<small>IB</small>T<sub>E</sub>X"
+        href: /home/Sokoban Solver.bib
+      - icon: link
+        title: Access
+        href: https://arxiv.org/abs/1807.00049
