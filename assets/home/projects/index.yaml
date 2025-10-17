@@ -11,12 +11,14 @@ items:
       height: 180
     attribution: Mockup from [72px Designs](http://www.72pxdesigns.com/template/12-free-iphone-6-psd-mockups/)
     links:
-      - href: http://blogs.adobe.com/contentcorner/2015/05/02/capture-and-its-vector-experience-magic-with-adobe-shape-cc/
+      - href: https://www.behance.net/gallery/20310717/Adobe-Shape-CC-Capture-vectors-from-the-real-world?locale=en_US
+       # http://blogs.adobe.com/contentcorner/2015/05/02/capture-and-its-vector-experience-magic-with-adobe-shape-cc/
         title: Read More
-        icon: external-link
-      - href: https://web.archive.org/web/20150212020128/https://itunes.apple.com/us/app/id919014644?mt=8
-        title: App Store (archive)
-        icon: external-link
+        icon: behance
+      - href: /projects/itunes-shape.html
+        # href: https://web.archive.org/web/20150212020128/https://itunes.apple.com/us/app/id919014644?mt=8
+        title: App Store
+        icon: archive
     content: |
       Real-time raster to vector conversion. Right from your iPhone or iPad. Inity made for iPhone 4+, it was merged into Adobe Capture on iOS and Android.
 
@@ -75,12 +77,14 @@ items:
   - title: Adobe Kuler
     filter: all adobe
     links:
-      - href: https://web.archive.org/web/20140409074504/https://itunes.apple.com/us/app/adobe-kuler/id632313714
-        title: App Store (Wayback Machine)
-        icon: external-link
-      - href: http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html
+      - href: /projects/itunes-kuler.html
+        # https://web.archive.org/web/20140409074504/https://itunes.apple.com/us/app/adobe-kuler/id632313714
+        title: App Store
+        icon: archive
+      - href: /projects/kuler.html
+        # http://blogs.adobe.com/jnack/2013/05/adobe-kuler-arrives-for-iphone.html
         title: Read More
-        icon: external-link
+        icon: archive
     attribution: Mockup from the cover on [youtube](https://youtube.com/watch?v=UTb4tfrvnG4)
     image:
       href: home/projects/kuler.jpg

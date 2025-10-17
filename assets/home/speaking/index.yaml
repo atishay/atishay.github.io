@@ -19,9 +19,6 @@ items:
     - href: https://www.youtube.com/watch?v=E0w7Tc0f2fA
       icon: youtube
       title: View
-    - href: https://n-api.herokuapp.com/
-      icon: play
-      title: Try
     - href: https://github.com/atishay/napi
       icon: github
       title: code
@@ -37,9 +34,10 @@ items:
     href: home/speaking/byteconf-logo.jpg
     width: 65
   links:
-    - href: https://www.byteconf.com/js-2019
-      icon: external-link
-      title: Official Website
+    - href: /home/byteconf.html
+      # https://www.byteconf.com/js-2019
+      icon: archive
+      title: Website
     - href: https://www.youtube.com/watch?v=8rwOJfBcJ9c
       icon: youtube
       title: View
@@ -76,9 +74,10 @@ items:
     href: home/speaking/jamstackconf.svg
     width: 116
   links:
-    - href: https://jamstackconf.com/sf/
-      icon: external-link
-      title: Official Website
+      # https://jamstackconf.com/sf/
+    - href: /home/jamstackconf.html
+      icon: Archive
+      title: Website
     - href: home/Ecommerce using static websites.pdf
       icon: file-powerpoint-o
       title: Slides
