@@ -6,7 +6,6 @@ theme: "eclectic"
 disablePathToLower: false
 minify: true
 enableRobotsTXT: true
-googleAnalytics: UA-89338714-1
 ignoreFiles:
     - ".github/"
     - ".gitignore"
@@ -31,7 +30,8 @@ related:
 
 permalinks:
   blog: "/blog/:year/:month/:day/:slug"
-Paginate: 9
+pagination:
+  pagerSize: 9
 
 sitemap:
     changefreq: "monthly"
@@ -49,8 +49,10 @@ outputs:
   - json
 canonifyURLs: true
 markup:
-  renderer:
-    hardWraps: true
+  goldmark:
+    renderer:
+      hardWraps: true
+      unsafe: true
   highlight:
     lineNos: true
 enableGitInfo: true

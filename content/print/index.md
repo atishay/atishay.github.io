@@ -6,62 +6,86 @@ Atishay Jain
 
 ## San Francisco Bay Area, contact@atishay.me,{.subtitle}
 ## http://atishay.me, http://github.com/atishay, https://www.linkedin.com/in/atishay{.subtitle}
+## US GREEN CARD- EB1 (EINSTEIN VISA){.subtitle}
 
 ### Summary
-Software Architect with 12+ years of software development experience including 5+ years of lead architectural ownership for multiple cross-product frameworks and SDKs across Mobile, Web and Desktop platforms. Full stack development experience across the breadth software technology. A thought leader in the developer landscape. Speaker at multiple technology conferences, author of Hugo in Action (ISBN: 9781617297007).
+Technical strategist and principal-level engineering leader with 15+ years of experience architecting multi-surface software platforms across mobile, web, and desktop. Proven track record of setting long-term technical direction, driving platform strategy, and influencing product roadmaps and business outcomes across organizations. Over a decade of ownership of cross-product frameworks and SDKs adopted company-wide. Operate comfortably at both the architectural vision and hands-on execution - actively writing and reviewing code (~50%) while leading architectural strategy, platform evolution, and cross-functional alignment with product and business leadership. Speaker at multiple industry conferences, author of Hugo in Action, and inventor of Adobe Shape (US Patent US-9449248, IxDA Interaction Design Award 2014).
 
 ### Experience
+#### Principal Computer Scientist – Adobe Inc
+##### Present{.right}
+##### Data and Growth Platform
+* Architect and strategic technical liaison between Adobe Experience Platform (AEP) and Creative Cloud / Document Cloud, adapting AEP technology to meet the scale, performance, and integration needs of CC/DC products.
+* Designed and built the AEP SDK for desktop from scratch and architected cross-platform extensions on web, desktop, iOS, and Android SDKs.
+* Successfully migrated 800M+ active Adobe users to the new platform ahead of schedule, spanning 30+ products, multiple architectures, and diverse market-specific use cases.
+* Pioneered agentic and LLM-based integrations within the marketing stack, enabling intelligent automation and advanced data processing.
+* Enabled new analytics capabilities, including Monthly Active Use (MAU) measurement, over the unified stack.
+* Member of the Creative Cloud Architectural Council and Adobe Principal Group, guiding company-wide technical strategy and long-term platform evolution.
+* Provide technical vision and guidance to developers and advise VP staff on strategy and technical recommendations.
+
+
 #### Sr. Computer Scientist (Architect) – Adobe Inc
-##### 2019-Present{.right}
+##### 2019-2023{.right}
 ##### Creative Cloud Experience Platform
-* Provide technical guidance and help the leadership in experimenting, planning, implementing, and managing the roadmap for multiple teams.
-* Facilitating cross-team alignment for roadmap, software architectural patterns and implementation details.
-* Lead taking care of complicated architectural and engineering challenges, acting as the last line of defense for any technical problems arising within my purview of teams.
-* Hands on developer working on breakthrough ideas, innovative concepts and experiments that form the foundations of the next version of our tools.
+* Architect driving technical direction and shaping the roadmap for multiple teams within the Creative Cloud Engagement and Experience organization, focused on in-product personalization.
+* Serve as the final escalation point for complex technical challenges across my teams’ scope.
+* Developed the Engagement SDK for all Adobe mobile apps, enabling experimentation in Paywalls, In-App Messages, and Push Notifications, contributing to $200M ARR in 2023.
 
 ##### 2017-19{.right}
-##### Creative Cloud Experience Desktop                                                                                        
-* Technical lead for the team that manages the cloud-first, personalized interfaces in across multiple touch points within most Adobe applications including Photoshop and Illustrator with prime focus on performant cloud integration.
-* Primary owner of the synchronization technology, forming the bedrock of the personalization efforts within the Creative Cloud desktop ecosystem.
-* Participant in the lead discussions on the rewrite of Creative Cloud’s licensing architecture.
+##### Creative Cloud Experience Desktop
+* Lead developer of in-app systems, leading the development of the home screen, the entry point into Cloud Documents for Photoshop, Illustrator, InDesign, Premiere, After Effects and Dreamweaver.
+* Provided the first client implementation, with full stack debugging to smoothen the rough edges of the migration of Adobe's Extensibility Platform from Chromium to a custom React Native like solution (Adobe's Unified Extensibility Platform).
+* Representative for the Desktop applications in the planning for the rewrite of Adobe's Licensing stack (Next Generation Licensing) for the SAAS migration of the business.
 
+----------------------
+----------------------
+
+#### Computer Scientist – Adobe Inc
 ##### 2015-17{.right}
-##### Creative Cloud Libraries                                                                                                           
-* Member of the influential team owning the cloud transformation of Adobe’s desktop products with its flagship component synchronization solution.
-* Prepared CC Libraries for the enterprise, enabling the proliferation of the technology from a single product demo to a scalable solution across imaging, publishing, video and 3D segments of the Adobe business.
+##### Creative Cloud Libraries
+* Member of the senior team owning the cloud transformation of Adobe’s desktop products with its flagship ingredient synchronization solution - Creative Cloud Libraries.
+* Productized CC Libraries making it enterprise ready, expanding beyond the mobile to desktop initial demo to support a uniform design system across imaging, publishing, video and 3D segments of the Adobe business.
+* Extended this beyond Adobe with demos into Microsoft Office (eventually productized). Worked on extending CC Libraries into Adobe XD's 1.0 launch including the offline sync daemon, the UI and the extensible communication layer with the application.
+
 
 ##### 2013-15{.right}
-##### Adobe Shape (Now Adobe Capture)                                                                                         
-* Primary Inventor of Adobe Shape (US Patent US-9449248), leading the technical effort from inception to release.
+##### Adobe Shape (Now Adobe Capture)
+* Primary Inventor (US Patent US-9449248) and the only developer involved from the conceptualization to a stable release of award-winning augmented application - Adobe Shape CC (in Adobe Max keynote, 2014).
+* Worked in a small, cross-functional team with members of Adobe Design, Product Management and Research doing rapid experimentation, prototyping and development to release a stable product with over half a million app store downloads in under six months of launch.
 * Led the effort for the development of the augmented reality application, in close collaboration with Adobe Research on advanced imaging algorithms, enabling them to run via GPGPU processing on nascent iPhone 4 hardware.
 
-------------------------
-------------------------
-
 ##### 2012-15{.right}
-##### Adobe Kuler (Now Adobe Color)                                                                                              
-* Influential member of the small member team that resurrected Adobe Kuler from maintenance mode to be a part of two consecutive Adobe Max keynotes (2011, 2013).
-* Major contributor to the architecture and implementation of the full web stack, its deployment as well as the award-winning native iOS Adobe Kuler app (now Adobe Capture).
+##### Adobe Kuler (Now Adobe Color)
+* Influential member of the 4-member team that resurrected Adobe Kuler(https://color.adobe.com) to be a part of two consecutive Adobe Max keynotes.
+* Major contributor to the architecture, AWS migration and reimplementation of the full web stack website, its deployment as well as the award-winning native iOS5+ Adobe Kuler® app (Rated 4.5/5).
+
 
 ##### 2010-12{.right}
-##### Adobe Illustrator/ InDesign                                                                                                      
-* Developer managing the Creative Suite SDK powering HTML & Flash based extensions inside of Adobe InDesign and Adobe Illustrator.
+##### Adobe Illustrator/ InDesign
+* Services integration in Adobe InDesign® & Illustrator® responsible for smooth working of the creative suite SDK which powers InDesign® extensions like the Adobe Digital Publishing Suite.
 
 ##### 2010{.right}
-#### Intern – Informatica Corporation                                                                                           
+#### Intern – Informatica Corporation
 * Developed a working Prototype of Informatica PowerExchange for Oracle Essbase
 
 ##### 2008{.right}
-#### Intern – Microsoft Corporation                                                                                               
+#### Intern – Microsoft Corporation
 * Developed a Fault Injection tool for Windows Mobile 6 applications.
 
 ### Education
+##### 2024{.right}
+#### Wharton Executive Education – CTO Program
+Focused on the intersection of business and technology, learned from esteemed Wharton faculty the various facets of the role of the technical leader.
+
+----------------------
+----------------------
+
 ##### 2016-18{.right}
-#### Stanford University – Graduate Certificate in Artificial Intelligence (AI)                         
+#### Stanford University – Graduate Certificate in Artificial Intelligence (AI)
 Completed masters level courses on machine learning and artificial intelligence building projects in the then nascent field of deep learning.
 
 ##### 2006-10{.right}
-#### Thapar University – Bachelor of Engineering in Computer Science                                 
+#### Thapar University – Bachelor of Engineering in Computer Science
 Completed with 100% merit scholarship having a GPA of 9.82(10).
 
 
@@ -76,12 +100,14 @@ Completed with 100% merit scholarship having a GPA of 9.82(10).
 * Guest Speaker at multiple conferences including JamstackConf 2019, Cisco DevNet Create 2019 and CascadiaJS 2018.
 * Hyperlinking Beyond the Web – CSS Tricks a top 100 developer resource.
 * Architecture for High Density RFID Inventory System in Internet of Things, Communications in Computer and Information, Vol 132, pp 617-626, Springer
-  
-------------------------
-------------------------
-
 * Impact of coordinator mobility on the throughput in a ZigBee mesh networks, Advance Computing Conference (IACC) 2010 IEEE 2nd International, pp. 279-284, 2010
 * Modified Epc Global Network Architecture of Internet of Things for High Load Rfid Systems, Proceedings of International Conference on Advances in Computer Science, 2010.
+
+### Certificates
+* Management Accelerator Program - McKinsey in 2025.
+* Mastering Generative AI for Product Innovation - Stanford University in 2024.
+* CCNA – Cisco Certified Network Associate – Certified by Cisco Systems in 2009.
+* SCJP – Sun Certified Java Programmer – Certified by Sun Microsystems in 2008.
 
 ### Awards
 * EB1 – Extraordinary Ability Green Card (popularly called the Einstein Visa) by the USCIS.
