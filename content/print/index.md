@@ -1,5 +1,11 @@
 ---
 type: print
+menu:
+    main:
+        name: "Resume"
+        url: "/print/"
+        weight: 95
+        title: "Resume"
 ---
 Atishay Jain
 ===========

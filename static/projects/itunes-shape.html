@@ -13,6 +13,75 @@
 <style id=supportsThreeDStyle>@media (transform-3d),(-o-transform-3d),(-moz-transform-3d),(-ms-transform-3d),(-webkit-transform-3d){#supportsThreeD{height:3px}}</style><meta name=referrer content=no-referrer><style>.sf-hidden{display:none!important}</style><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
  
  <body class="software geo-us lang-en-us lang-en vsc-initialized no-action">
+<div id="archive-notification" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 10000; background: #FFF9C4; border: 2px solid #F0C952; border-radius: 4px; padding: 12px 24px; margin-top: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); opacity: 1; transition: opacity 0.5s ease; pointer-events: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; font-size: 14px; color: #333; text-align: center;">
+  This is an archive of the real page that is not present on the internet any more.
+</div>
+<script>
+  (function() {
+    var notification = document.getElementById('archive-notification');
+    if (notification) {
+      // Auto-hide after 5 seconds
+      setTimeout(function() {
+        notification.style.opacity = '0';
+        notification.style.pointerEvents = 'none';
+        // Remove from DOM after fade out
+        setTimeout(function() {
+          notification.remove();
+        }, 500);
+      }, 5000);
+    }
+  })();
+</script>
+
+<div id="floating-logo" style="position: fixed; top: 20px; left: 20px; z-index: 9999; opacity: 1; transition: opacity 0.3s ease; pointer-events: auto; background: #ffffff; border: 2px solid #e0e0e0; border-radius: 8px; padding: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+  <a href="/" style="display: block;">
+    <img src="/image/logo.svg" alt="Home" style="width: 180px; height: 64px; display: block;">
+  </a>
+</div>
+<style>
+  #floating-logo.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>
+<script>
+  (function() {
+    var logo = document.getElementById('floating-logo');
+    var lastScrollY = window.scrollY;
+    var ticking = false;
+    
+    function updateLogo() {
+      var currentScrollY = window.scrollY;
+      
+      // Show when scrolling up, hide when scrolling down
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        // Scrolling up or near top
+        logo.classList.remove('hidden');
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and not near top
+        logo.classList.add('hidden');
+      }
+      
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+    
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(updateLogo);
+        ticking = true;
+      }
+    });
+    
+    // Show on hover near top area
+    document.addEventListener('mousemove', function(e) {
+      if (e.clientY < 100) {
+        logo.classList.remove('hidden');
+      }
+    });
+  })();
+</script>
+
 <div id=wm-ipp-base lang=en style=display:block;direction:ltr;height:1px toolbar-mode=auto><template shadowrootmode=closed><div id=wm-ipp style=position:fixed;left:0;top:0;right:0>
 <div id=donato style=position:relative;width:100%;height:0>
  <div id=donato-base>
