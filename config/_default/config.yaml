@@ -1,10 +1,8 @@
 baseURL: "https://atishay.me"
-disablePathToLower: true
 languageCode: "en-us"
 title: "Atishay Jain"
 theme: "eclectic"
 disablePathToLower: false
-minify: true
 enableRobotsTXT: true
 ignoreFiles:
     - ".github/"
@@ -16,6 +14,8 @@ ignoreFiles:
     - "src"
 
 enableEmoji: true
+minify:
+  minifyOutput: true
 related:
   threshold: 0
   includeNewer: true
