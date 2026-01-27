@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
+const { installSVGPolyfills } = require('./svg-polyfills');
+const { postProcessSVG } = require('./svg-postprocess');
 
 // Cache the HTML content
 let cachedJTabScript = null;
@@ -12,14 +14,14 @@ function getJTabScript() {
   if (cachedJTabScript) {
     return cachedJTabScript;
   }
-  
+
   const htmlPath = path.join(__dirname, 'index.html');
   const htmlContent = fs.readFileSync(htmlPath, 'utf8');
   
-  // Extract the script content between <script> and </script>
-  const scriptMatch = htmlContent.match(/<script>([\s\S]*?)<\/script>/);
+  // Extract the script content between <script> tags
+  const scriptMatch = htmlContent.match(/<script[^>]*>([\s\S]*?)<\/script>/);
   if (!scriptMatch) {
-    throw new Error('Could not extract JTab script from index.html');
+    throw new Error('Could not find JTab script in index.html');
   }
   
   cachedJTabScript = scriptMatch[1];
@@ -28,9 +30,11 @@ function getJTabScript() {
 
 /**
  * Render guitar tablature to SVG using JTab library in JSDOM
+ * @param {string} tabString - Guitar tab notation string
+ * @returns {string} - SVG markup as string
  */
-function renderGuitarTab(query) {
-  // Create a JSDOM instance with runScripts enabled
+function renderGuitarTab(tabString) {
+  // Create a minimal HTML document with JSDOM
   const dom = new JSDOM(`
     <!DOCTYPE html>
     <html>
@@ -49,41 +53,8 @@ function renderGuitarTab(query) {
   const { document } = window;
 
   try {
-    // Add SVG method polyfills that JSDOM doesn't provide but Raphael.js needs
-    if (window.SVGSVGElement && !window.SVGSVGElement.prototype.createSVGMatrix) {
-      window.SVGSVGElement.prototype.createSVGMatrix = () => ({
-        a: 1, b: 0, c: 0, d: 1, e: 0, f: 0,
-        multiply() { return this; },
-        inverse() { return this; },
-        translate() { return this; },
-        scale() { return this; },
-        rotate() { return this; },
-        skewX() { return this; },
-        skewY() { return this; }
-      });
-    }
-
-    if (window.SVGSVGElement && !window.SVGSVGElement.prototype.createSVGRect) {
-      window.SVGSVGElement.prototype.createSVGRect = () => ({ x: 0, y: 0, width: 0, height: 0 });
-    }
-
-    if (window.SVGSVGElement && !window.SVGSVGElement.prototype.createSVGPoint) {
-      window.SVGSVGElement.prototype.createSVGPoint = () => ({ x: 0, y: 0 });
-    }
-
-    if (window.SVGSVGElement && !window.SVGSVGElement.prototype.createSVGTransform) {
-      window.SVGSVGElement.prototype.createSVGTransform = () => ({
-        type: 0,
-        matrix: { a: 1, b: 0, c: 0, d: 1, e: 0, f: 0 },
-        angle: 0,
-        setMatrix() {},
-        setTranslate() {},
-        setScale() {},
-        setRotate() {},
-        setSkewX() {},
-        setSkewY() {}
-      });
-    }
+    // Install all SVG polyfills for JSDOM
+    installSVGPolyfills(window);
 
     // Load and execute the JTab library script
     const jtabScript = getJTabScript();
@@ -102,61 +73,41 @@ function renderGuitarTab(query) {
     // Get the target element
     const targetElement = document.getElementById('jtab');
     if (!targetElement) {
-      throw new Error('Target element #jtab not found');
+      throw new Error('Target element not found');
     }
 
-    // Render the guitar tab
-    jtab.render(targetElement, query);
+    // Render the tab notation
+    jtab.render(targetElement, tabString);
 
-    // Get the SVG element
-    const svgElement = document.querySelector('svg');
+    // Get the SVG content from builder_0 (where JTab puts the SVG)
+    const builder = document.getElementById('builder_0');
+    if (!builder) {
+      throw new Error('Builder element not found');
+    }
+
+    // Find the SVG element that was created
+    const svgElement = builder.querySelector('svg');
     if (!svgElement) {
-      throw new Error('No SVG element generated');
+      throw new Error('SVG element not created');
     }
 
     // Get dimensions for viewBox
-    const width = svgElement.getAttribute('width') || 0;
-    const height = svgElement.getAttribute('height') || 0;
+    const width = svgElement.getAttribute('width');
+    const height = svgElement.getAttribute('height');
     
-    // Calculate adjusted height (add 5 pixels as in original)
-    const adjustedHeight = parseInt(height) + 5;
+    // Add viewBox attribute
+    if (width && height) {
+      svgElement.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    }
 
-    // Set viewBox and height attributes
-    svgElement.setAttribute('viewBox', `0 0 ${width} ${adjustedHeight}`);
-    svgElement.setAttribute('height', adjustedHeight);
-    
     // Add styling
     svgElement.setAttribute('style', 'overflow: hidden; position: relative; height: auto; max-width: 100%;');
     
     // Add the guitar class
     svgElement.setAttribute('class', 'guitar');
 
-    // Get the SVG content from builder_0
-    const builder = document.getElementById('builder_0');
-    if (!builder) {
-      throw new Error('Builder element not found');
-    }
-
-    // Post-process the SVG to fix issues with JSDOM's SVG handling
-    let svgContent = builder.innerHTML;
-    
-    // Fix stroke colors - use currentColor instead of hardcoded black for dark mode support
-    // This allows CSS to control the color based on light/dark mode
-    svgContent = svgContent.replace(/stroke="none"/g, 'stroke="currentColor"');
-    
-    // Also fix text fill colors to use currentColor
-    svgContent = svgContent.replace(/fill="none"/g, 'fill="currentColor"');
-    
-    // Fix dy values in tspan - JSDOM sets them to match y coordinate instead of being small offsets
-    // Expected pattern: dy="4" for notes (to match Raphael output exactly)
-    // Expected pattern: dy="10" for empty tspans (spacing)
-    svgContent = svgContent.replace(/<tspan([^>]*)dy="(\d+)"([^>]*)>/g, (match, before, dy, after) => {
-      const dyValue = parseInt(dy);
-      // For dy=10, keep it (used for empty tspans)
-      // For large dy values (>15), use 4 to match expected Raphael output
-      const newDy = dyValue === 10 ? '10' : (dyValue > 15 ? '4' : dy);
-      return `<tspan${before}dy="${newDy}"${after}>`;
-    });
+    // Post-process the SVG for dark mode support and chord text contrast
+    const svgContent = postProcessSVG(builder.innerHTML);
 
     return svgContent;
   } catch (error) {
@@ -196,25 +147,25 @@ async function handler(event) {
     };
   }
 
-  try {
-    // Render the guitar tab
-    const svgOutput = renderGuitarTab(event.queryStringParameters.q);
+  const tab = event.queryStringParameters.q;
 
+  try {
+    const svg = renderGuitarTab(tab);
+    
     return {
       statusCode: 200,
       headers: { "Content-Type": "image/svg+xml" },
-      body: svgOutput,
+      body: svg,
     };
   } catch (error) {
     return {
       statusCode: 500,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        error: "Failed to render guitar tab.",
-        details: error.message,
+        error: error.message,
       }),
     };
   }
 }
 
-module.exports = { handler, renderGuitarTab };
+module.exports = { renderGuitarTab, handler };

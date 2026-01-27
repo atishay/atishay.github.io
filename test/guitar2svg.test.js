@@ -298,5 +298,49 @@ describe('guitar2svg API', () => {
       const expectedTexts = (expectedSvg.match(/<text/g) || []).length;
       expect(ourTexts).toBe(expectedTexts);
     });
+
+    test('should match dy values for blog 41-tujhe-dekha intro 1', () => {
+      const expectedFile = path.join(__dirname, '../resources/_gen/getjson/2e43754954c04799be6d8faf2a9e714d');
+      const expectedData = JSON.parse(fs.readFileSync(expectedFile, 'utf8'));
+      const query = expectedData.query;
+      
+      const svg = renderGuitarTab(query);
+      const expectedSvg = expectedData.svg;
+      
+      // Verify query
+      expect(query).toBe('$1 0 0 0 7 5 7 3 5 8 7 ||');
+      
+      // Check dy values match exactly
+      const expectedDy = [...new Set(expectedSvg.match(/dy="[^"]+"/g))].sort();
+      const generatedDy = [...new Set(svg.match(/dy="[^"]+"/g))].sort();
+      expect(JSON.stringify(generatedDy)).toBe(JSON.stringify(expectedDy));
+      
+      // Check tspan count
+      const expectedTspanCount = (expectedSvg.match(/<tspan/g) || []).length;
+      const generatedTspanCount = (svg.match(/<tspan/g) || []).length;
+      expect(generatedTspanCount).toBe(expectedTspanCount);
+    });
+
+    test('should match dy values for blog 41-tujhe-dekha intro 2', () => {
+      const expectedFile = path.join(__dirname, '../resources/_gen/getjson/339f301e69ede590fcf6b6fb9b33bc03');
+      const expectedData = JSON.parse(fs.readFileSync(expectedFile, 'utf8'));
+      const query = expectedData.query;
+      
+      const svg = renderGuitarTab(query);
+      const expectedSvg = expectedData.svg;
+      
+      // Verify query
+      expect(query).toBe('$1 0 0 0 7 5 7 3 5 3 2 ||');
+      
+      // Check dy values match exactly
+      const expectedDy = [...new Set(expectedSvg.match(/dy="[^"]+"/g))].sort();
+      const generatedDy = [...new Set(svg.match(/dy="[^"]+"/g))].sort();
+      expect(JSON.stringify(generatedDy)).toBe(JSON.stringify(expectedDy));
+      
+      // Check tspan count
+      const expectedTspanCount = (expectedSvg.match(/<tspan/g) || []).length;
+      const generatedTspanCount = (svg.match(/<tspan/g) || []).length;
+      expect(generatedTspanCount).toBe(expectedTspanCount);
+    });
   });
 });
