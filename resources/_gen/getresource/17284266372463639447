@@ -1,0 +1,23 @@
+HTTP/2.0 200 OK
+Age: 0
+Alt-Svc: h3=":443"; ma=86400
+Cache-Control: no-cache
+Cache-Status: "Netlify Durable"; fwd=bypass
+Cache-Status: "Netlify Edge"; fwd=miss
+Cf-Cache-Status: DYNAMIC
+Cf-Ray: 9d5b0f316a0f89cc-SJC
+Content-Type: image/svg+xml
+Date: Sun, 01 Mar 2026 20:54:52 GMT
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Netlify-Vary: query
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=FO3OA1NYpM5l4223m8u7bIYf3lO4TLmI0WPO53g4vWkie%2FGYQg00RvYXNUta3yFb4ZDvY%2BejiT%2FqtEx1zpL1HMTUs4Nl0GP4SfzM%2BZzXV9Ih87%2BmFgE%3D"}]}
+Server: cloudflare
+Server-Timing: cfCacheStatus;desc="DYNAMIC"
+Server-Timing: cfEdge;dur=2,cfOrigin;dur=110
+Strict-Transport-Security: max-age=31536000
+Vary: Accept-Encoding
+X-Etags-1: 5decc7d436690816f9f50954ecc3115c
+X-Etags-2: 5decc7d436690816f9f50954ecc3115c
+X-Nf-Request-Id: 01KJNJXEQ1744TTN2EWXRD33KD
+
+<mjx-container class="MathJax" jax="SVG" display="true"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.119ex" height="2ex" role="img" focusable="false" viewBox="0 -883.9 936.6 883.9" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-5-TEX-N-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path id="MJX-5-TEX-N-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mn"><use data-c="32" xlink:href="#MJX-5-TEX-N-32"></use></g><g data-mml-node="mn" transform="translate(533,413) scale(0.707)"><use data-c="30" xlink:href="#MJX-5-TEX-N-30"></use></g></g></g></g></svg></mjx-container>

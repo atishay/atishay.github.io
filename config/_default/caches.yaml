@@ -1,6 +1,24 @@
-getjson:
-  dir: ':resourceDir/_gen'
+# Cache output in resources/_gen (uses :resourceDir token)
+# https://gohugo.io/configuration/caches/
+# Filename caches.yaml becomes the "caches" config key
+assets:
+  dir: ":resourceDir/_gen"
   maxAge: -1
-getcsv:
-  dir: ':resourceDir/_gen'
+getresource:
+  dir: ":resourceDir/_gen"
+  maxAge: -1
+images:
+  dir: ":resourceDir/_gen"
+  maxAge: -1
+misc:
+  dir: ":resourceDir/_gen"
+  maxAge: -1
+modulegitinfo:
+  dir: ":cacheDir/modules"
+  maxAge: 24h
+modulequeries:
+  dir: ":cacheDir/modules"
+  maxAge: 24h
+modules:
+  dir: ":cacheDir/modules"
   maxAge: -1
