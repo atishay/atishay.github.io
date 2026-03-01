@@ -57,7 +57,8 @@ html {
   background-color: var(--background-color);
   opacity: 1 !important;
   overflow-x: hidden;
-  width: 100vw; }
+  width: 100vw;
+  -webkit-overflow-scrolling: touch; }
 
 body {
   min-height: 100vh;
