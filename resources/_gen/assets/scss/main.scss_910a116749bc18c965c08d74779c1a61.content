@@ -2511,6 +2511,7 @@ header {
 .meta.default .item.visible {
   animation: fade-up-item-3 2s ease-in-out; }
 
+/* oval: taller than wide */
 .left-image {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -2527,7 +2528,7 @@ header {
     border-radius: 50%; }
     .left-image img:hover {
       box-shadow: 0 0 10px rgba(var(--text-color-rgb), 0.1); }
-  .left-image p {
+  .left-image p, .left-image .items {
     grid-area: desc; }
   .left-image h1 {
     margin: 40px 0 0;
@@ -2538,21 +2539,42 @@ header {
     .left-image {
       grid-template-columns: 1.5fr 3fr; } }
   @media (min-width: 993px) {
-    .left-image h1, .left-image .subtitle {
-      padding: 0;
-      margin: 0; }
-    .left-image h1 {
-      margin-top: 40px; } }
+    .left-image {
+      display: block;
+      contain: none; }
+      .left-image img {
+        float: left;
+        width: 160px;
+        height: 200px;
+        margin: 40px 1.25rem 1rem 0;
+        object-fit: cover;
+        shape-outside: ellipse(50% 50% at 50% 50%);
+        -webkit-shape-outside: ellipse(50% 50% at 50% 50%);
+        shape-margin: 0.6rem;
+        -webkit-shape-margin: 0.6rem; }
+      .left-image h1, .left-image .subtitle {
+        margin: 0;
+        padding: 0; }
+      .left-image h1 {
+        margin-top: 40px;
+        margin-bottom: 0.75rem; }
+      .left-image .subtitle {
+        margin-bottom: 0.75rem; }
+      .left-image .items .item {
+        display: block; } }
   @media (max-width: 992px) {
     .left-image {
-      display: block; }
-      .left-image * {
+      display: block;
+      /* don't reset h1/subtitle so .meta defaults (e.g. margin-top 40px) apply */ }
+      .left-image > *:not(h1):not(.subtitle) {
         margin: 20px 0; }
       .left-image img {
         margin: 0 20px 0 0;
         width: 33%;
         max-width: 200px;
-        float: left; } }
+        float: left; }
+      .left-image .items {
+        clear: both; } }
 .item-icon-left .item {
   display: grid;
   grid-template-columns: 40px 1fr;
