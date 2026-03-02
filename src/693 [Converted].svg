@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 779.93 550.27">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 -72 779.93 622">
   <!-- Generator: Adobe Illustrator 30.3.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 127)  -->
   <defs>
     <style>
@@ -341,7 +341,37 @@
         30% { transform: rotate(-4.5deg); }
         70% { transform: rotate(3.5deg); }
       }
-
+      /* Leaves: parallax – each moves at different time and speed */
+      @keyframes leaf-parallax-1 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        25% { transform: translateY(-2px) rotate(3deg); }
+        50% { transform: translateY(1px) rotate(-2deg); }
+        75% { transform: translateY(-1px) rotate(2deg); }
+      }
+      @keyframes leaf-parallax-2 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        33% { transform: translateY(2px) rotate(-3.5deg); }
+        66% { transform: translateY(-1.5px) rotate(2.5deg); }
+      }
+      @keyframes leaf-parallax-3 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        40% { transform: translateY(-2.5px) rotate(2deg); }
+        70% { transform: translateY(1.5px) rotate(-3deg); }
+      }
+      @keyframes leaf-parallax-4 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        20% { transform: translateY(1px) rotate(-4deg); }
+        60% { transform: translateY(-2px) rotate(3deg); }
+      }
+      @keyframes leaf-parallax-5 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(2px) rotate(3.5deg); }
+      }
+      @keyframes leaf-parallax-6 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        35% { transform: translateY(-1.5px) rotate(-2.5deg); }
+        75% { transform: translateY(2px) rotate(2deg); }
+      }
       .anim-bulb-pulse { animation: bulb-pulse 3.2s ease-in-out infinite; }
       .anim-light-cone { animation: light-cone 3.2s ease-in-out infinite; }
       .anim-steam { animation: steam-rise 4.5s ease-out infinite; }
@@ -359,6 +389,12 @@
       .anim-seat-sway { animation: seat-sway 4s ease-in-out infinite; }
       .anim-leaf-wiggle { animation: leaf-wiggle 5s ease-in-out infinite; }
       .anim-leaf-wiggle-2 { animation: leaf-wiggle-2 5.5s ease-in-out 0.5s infinite; }
+      .anim-leaf-parallax-1 { animation: leaf-parallax-1 4.2s ease-in-out 0s infinite; }
+      .anim-leaf-parallax-2 { animation: leaf-parallax-2 5.5s ease-in-out 0.9s infinite; }
+      .anim-leaf-parallax-3 { animation: leaf-parallax-3 4.8s ease-in-out 1.6s infinite; }
+      .anim-leaf-parallax-4 { animation: leaf-parallax-4 5.2s ease-in-out 0.3s infinite; }
+      .anim-leaf-parallax-5 { animation: leaf-parallax-5 6s ease-in-out 1.2s infinite; }
+      .anim-leaf-parallax-6 { animation: leaf-parallax-6 4.5s ease-in-out 2s infinite; }
       @keyframes bg-pulse {
         0%, 100% { opacity: 0.5; }
         50% { opacity: 1; }
@@ -463,8 +499,8 @@
   </defs>
   <g class="st5">
     <g id="Layer_11">
-      <rect class="scene-bg" x="0" y="0" width="779.93" height="550.27" rx="24" ry="24"/>
-      <rect class="scene-bg scene-bg-pulse anim-bg-pulse" x="0" y="0" width="779.93" height="550.27" rx="24" ry="24"/>
+      <rect class="scene-bg" x="0" y="-72" width="779.93" height="622" rx="24" ry="24"/>
+      <rect class="scene-bg scene-bg-pulse anim-bg-pulse" x="0" y="-72" width="779.93" height="622" rx="24" ry="24"/>
       <g id="wooden-floor" aria-label="Wooden floor">
         <!-- Grainy floor in three bands (overlap slightly to avoid visible seam between bands) -->
         <rect class="floor-texture-far" x="0" y="340" width="779.93" height="57" rx="0" ry="0"/>
@@ -893,7 +929,7 @@
         <!-- Hand (bottom), then sleeve cuff, then arm/coat on top -->
         <path class="st31" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
         <path class="st39" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
-        <path class="st42" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-36.5-78.98,29.82-13.78,36.5,78.98c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5Z"/>
+        <path class="st42" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-52.71-91.91,5.6-2.59c13.38-6.18,29.23-.35,35.42,13.03l41.51,67.69c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5,0Z"/>
       </g>
       <g id="red-mug">
         <!-- Steam: more prominent + lighter wisps going higher -->
@@ -962,9 +998,9 @@
       </g>
       <g>
         <g>
-          <path class="st44 anim-leaf-wiggle" style="transform-origin: 760px 315px" d="M764.23,297.31c-11.1,15.11-33.36,17.62-33.36,17.62,0,0-4.27-21.99,6.83-37.11,11.1-15.11,33.36-17.62,33.36-17.62,0,0,4.27,21.99-6.83,37.11h0Z"/>
-          <path class="st0 anim-leaf-wiggle-2" style="transform-origin: 710px 295px" d="M717.63,288.27c10.17,10.03,9.62,27.09,9.62,27.09,0,0-17.05.8-27.22-9.22-10.17-10.03-9.62-27.09-9.62-27.09,0,0,17.05-.8,27.22,9.22Z"/>
-          <path class="st55 anim-leaf-wiggle" style="transform-origin: 738px 305px" d="M742.84,280.69c2.07,18.64-12.62,35.56-12.62,35.56,0,0-18.04-13.29-20.1-31.93-2.07-18.64,12.62-35.56,12.62-35.56,0,0,18.04,13.29,20.1,31.93Z"/>
+          <path class="st44 anim-leaf-parallax-4" style="transform-origin: 760px 315px" d="M764.23,297.31c-11.1,15.11-33.36,17.62-33.36,17.62,0,0-4.27-21.99,6.83-37.11,11.1-15.11,33.36-17.62,33.36-17.62,0,0,4.27,21.99-6.83,37.11h0Z"/>
+          <path class="st0 anim-leaf-parallax-5" style="transform-origin: 710px 295px" d="M717.63,288.27c10.17,10.03,9.62,27.09,9.62,27.09,0,0-17.05.8-27.22-9.22-10.17-10.03-9.62-27.09-9.62-27.09,0,0,17.05-.8,27.22,9.22Z"/>
+          <path class="st55 anim-leaf-parallax-6" style="transform-origin: 738px 305px" d="M742.84,280.69c2.07,18.64-12.62,35.56-12.62,35.56,0,0-18.04-13.29-20.1-31.93-2.07-18.64,12.62-35.56,12.62-35.56,0,0,18.04,13.29,20.1,31.93Z"/>
         </g>
         <g>
           <polygon class="st32" points="741.47 367.73 702.85 367.73 690.18 311.39 754.13 311.39 741.47 367.73"/>
