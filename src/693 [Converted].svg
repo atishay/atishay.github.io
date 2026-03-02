@@ -297,8 +297,8 @@
         100% { transform: translateY(-78px); }
       }
       @keyframes laptop-scroll {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-68px); }
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(21px, -65px); }
       }
       @keyframes hand-type {
         0%, 90%, 100% { transform: translate(0, 0); }
@@ -364,7 +364,7 @@
       <rect x="314" y="109" width="198" height="92"/>
     </clipPath>
     <clipPath id="laptop-scroll-clip">
-      <rect x="489" y="181" width="103" height="68"/>
+      <use href="#laptop-screen"/>
     </clipPath>
   </defs>
   <g class="st5">
@@ -722,7 +722,7 @@
                 <polygon class="st49" points="498.05 244.5 512.82 244.5 513.51 242.31 498.75 242.31 498.05 244.5"/>
               </g>
             </g>
-            <g transform="translate(0,68)">
+            <g transform="translate(-21, 65)">
               <g>
                 <polygon class="st19" points="541.09 183.66 509.9 183.66 510.6 181.46 541.78 181.46 541.09 183.66"/>
                 <polygon class="st29" points="569.38 183.66 554.61 183.66 555.31 181.46 570.07 181.46 569.38 183.66"/>
