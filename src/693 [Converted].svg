@@ -366,25 +366,15 @@
       .anim-bg-pulse { animation: bg-pulse 8s ease-in-out infinite; }
       .scene-bg { fill: url(#bg-radial-light); }
       .scene-bg-pulse { fill: url(#bg-radial-light-pulse); }
-      .floor-wood { fill: url(#floor-wood-light); }
       .floor-texture-far { fill: url(#floor-texture-light-far); }
       .floor-texture-mid { fill: url(#floor-texture-light-mid); }
       .floor-texture-near { fill: url(#floor-texture-light-near); }
-      .floor-plank { stroke: #3d3025; stroke-opacity: 0.5; }
-      .floor-plank-far { stroke: #3d3025; stroke-opacity: 0.5; stroke-width: 0.35; }
-      .floor-plank-mid { stroke: #3d3025; stroke-opacity: 0.5; stroke-width: 0.5; }
-      .floor-plank-near { stroke: #3d3025; stroke-opacity: 0.55; stroke-width: 0.75; }
       @media (prefers-color-scheme: dark) {
         .scene-bg { fill: url(#bg-radial-dark); }
         .scene-bg-pulse { fill: url(#bg-radial-dark-pulse); }
-        .floor-wood { fill: url(#floor-wood-dark); }
         .floor-texture-far { fill: url(#floor-texture-dark-far); }
         .floor-texture-mid { fill: url(#floor-texture-dark-mid); }
         .floor-texture-near { fill: url(#floor-texture-dark-near); }
-        .floor-plank { stroke: #151210; stroke-opacity: 0.6; }
-        .floor-plank-far { stroke: #151210; stroke-opacity: 0.6; stroke-width: 0.35; }
-        .floor-plank-mid { stroke: #151210; stroke-opacity: 0.6; stroke-width: 0.5; }
-        .floor-plank-near { stroke: #151210; stroke-opacity: 0.65; stroke-width: 0.75; }
       }
     </style>
     <clipPath id="code-scroll-clip">
@@ -426,56 +416,48 @@
       <stop offset="50%" stop-color="#1f1a14"/>
       <stop offset="100%" stop-color="#151210"/>
     </linearGradient>
-    <!-- Floor grain content (reused for perspective scale variants) -->
+    <!-- Floor grain: horizontal lines only, clearly visible on wood -->
     <g id="floor-grain-light" stroke-linecap="round">
-      <line x1="0" y1="0" x2="52" y2="1.2" stroke="#482812" stroke-width="0.35" opacity="0.55"/>
-      <line x1="-2" y1="3" x2="50" y2="4" stroke="#56351c" stroke-width="0.3" opacity="0.45"/>
-      <line x1="0" y1="6" x2="52" y2="7.5" stroke="#5d3a1f" stroke-width="0.4" opacity="0.5"/>
-      <line x1="1" y1="9" x2="51" y2="10.2" stroke="#482812" stroke-width="0.3" opacity="0.5"/>
-      <line x1="0" y1="12" x2="52" y2="13" stroke="#6b4628" stroke-width="0.35" opacity="0.45"/>
-      <line x1="-1" y1="15" x2="50" y2="16.5" stroke="#5c3a1f" stroke-width="0.3" opacity="0.5"/>
-      <line x1="0" y1="18" x2="52" y2="19.2" stroke="#4a2c13" stroke-width="0.35" opacity="0.55"/>
-      <line x1="0" y1="21" x2="52" y2="22" stroke="#56351c" stroke-width="0.3" opacity="0.45"/>
-      <line x1="1" y1="24" x2="51" y2="25.5" stroke="#482812" stroke-width="0.4" opacity="0.5"/>
-      <line x1="-2" y1="27" x2="50" y2="28" stroke="#5d3a1f" stroke-width="0.3" opacity="0.5"/>
-      <line x1="0" y1="30" x2="52" y2="31" stroke="#6b4628" stroke-width="0.35" opacity="0.45"/>
-      <line x1="12" y1="0" x2="12" y2="32" stroke="#371d09" stroke-width="0.4" opacity="0.5"/>
-      <line x1="24" y1="0" x2="24" y2="32" stroke="#41240f" stroke-width="0.35" opacity="0.45"/>
-      <line x1="36" y1="0" x2="36" y2="32" stroke="#371d09" stroke-width="0.4" opacity="0.5"/>
+      <line x1="0" y1="0" x2="60" y2="1" stroke="#2d2218" stroke-width="0.65" opacity="0.7"/>
+      <line x1="-1" y1="5" x2="61" y2="6" stroke="#352a20" stroke-width="0.55" opacity="0.65"/>
+      <line x1="0" y1="10" x2="60" y2="11" stroke="#2d2218" stroke-width="0.6" opacity="0.7"/>
+      <line x1="0" y1="15" x2="60" y2="16" stroke="#3d3025" stroke-width="0.55" opacity="0.65"/>
+      <line x1="0" y1="20" x2="60" y2="21" stroke="#2d2218" stroke-width="0.65" opacity="0.7"/>
+      <line x1="-1" y1="25" x2="61" y2="26" stroke="#352a20" stroke-width="0.55" opacity="0.65"/>
+      <line x1="0" y1="30" x2="60" y2="31" stroke="#2d2218" stroke-width="0.6" opacity="0.7"/>
     </g>
     <g id="floor-grain-dark" stroke-linecap="round">
-      <line x1="0" y1="0" x2="52" y2="1.2" stroke="#1b1109" stroke-width="0.35" opacity="0.6"/>
-      <line x1="-2" y1="3" x2="50" y2="4" stroke="#21140b" stroke-width="0.3" opacity="0.55"/>
-      <line x1="0" y1="6" x2="52" y2="7.5" stroke="#271203" stroke-width="0.4" opacity="0.6"/>
-      <line x1="1" y1="9" x2="51" y2="10.2" stroke="#1b1109" stroke-width="0.3" opacity="0.55"/>
-      <line x1="0" y1="12" x2="52" y2="13" stroke="#2d1a0d" stroke-width="0.35" opacity="0.5"/>
-      <line x1="-1" y1="15" x2="50" y2="16.5" stroke="#21140b" stroke-width="0.3" opacity="0.55"/>
-      <line x1="0" y1="18" x2="52" y2="19.2" stroke="#160d06" stroke-width="0.35" opacity="0.6"/>
-      <line x1="0" y1="21" x2="52" y2="22" stroke="#1b1109" stroke-width="0.3" opacity="0.5"/>
-      <line x1="1" y1="24" x2="51" y2="25.5" stroke="#271203" stroke-width="0.4" opacity="0.55"/>
-      <line x1="-2" y1="27" x2="50" y2="28" stroke="#21140b" stroke-width="0.3" opacity="0.55"/>
-      <line x1="0" y1="30" x2="52" y2="31" stroke="#2d1a0d" stroke-width="0.35" opacity="0.5"/>
-      <line x1="12" y1="0" x2="12" y2="32" stroke="#0d0804" stroke-width="0.4" opacity="0.55"/>
-      <line x1="24" y1="0" x2="24" y2="32" stroke="#110a06" stroke-width="0.35" opacity="0.5"/>
-      <line x1="36" y1="0" x2="36" y2="32" stroke="#0d0804" stroke-width="0.4" opacity="0.55"/>
+      <line x1="0" y1="0" x2="60" y2="1" stroke="#0a0806" stroke-width="0.65" opacity="0.75"/>
+      <line x1="-1" y1="5" x2="61" y2="6" stroke="#110d0a" stroke-width="0.55" opacity="0.7"/>
+      <line x1="0" y1="10" x2="60" y2="11" stroke="#0a0806" stroke-width="0.6" opacity="0.75"/>
+      <line x1="0" y1="15" x2="60" y2="16" stroke="#151210" stroke-width="0.55" opacity="0.7"/>
+      <line x1="0" y1="20" x2="60" y2="21" stroke="#0a0806" stroke-width="0.65" opacity="0.75"/>
+      <line x1="-1" y1="25" x2="61" y2="26" stroke="#110d0a" stroke-width="0.55" opacity="0.7"/>
+      <line x1="0" y1="30" x2="60" y2="31" stroke="#0a0806" stroke-width="0.6" opacity="0.75"/>
     </g>
-    <!-- Perspective: smaller scale (farther) → larger scale (closer) for vanishing point -->
-    <pattern id="floor-texture-light-far" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.52)">
+    <!-- Floor = wood color + grain only (no separate solid floor); perspective by scale -->
+    <pattern id="floor-texture-light-far" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.4)">
+      <rect x="0" y="0" width="48" height="32" fill="#4a3a2e"/>
       <use href="#floor-grain-light"/>
     </pattern>
-    <pattern id="floor-texture-light-mid" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.82)">
+    <pattern id="floor-texture-light-mid" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.75)">
+      <rect x="0" y="0" width="48" height="32" fill="#4a3a2e"/>
       <use href="#floor-grain-light"/>
     </pattern>
-    <pattern id="floor-texture-light-near" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(1.28)">
+    <pattern id="floor-texture-light-near" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(1.4)">
+      <rect x="0" y="0" width="48" height="32" fill="#3d3025"/>
       <use href="#floor-grain-light"/>
     </pattern>
-    <pattern id="floor-texture-dark-far" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.52)">
+    <pattern id="floor-texture-dark-far" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.4)">
+      <rect x="0" y="0" width="48" height="32" fill="#1f1a14"/>
       <use href="#floor-grain-dark"/>
     </pattern>
-    <pattern id="floor-texture-dark-mid" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.82)">
+    <pattern id="floor-texture-dark-mid" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.75)">
+      <rect x="0" y="0" width="48" height="32" fill="#1f1a14"/>
       <use href="#floor-grain-dark"/>
     </pattern>
-    <pattern id="floor-texture-dark-near" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(1.28)">
+    <pattern id="floor-texture-dark-near" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(1.4)">
+      <rect x="0" y="0" width="48" height="32" fill="#151210"/>
       <use href="#floor-grain-dark"/>
     </pattern>
   </defs>
@@ -484,15 +466,10 @@
       <rect class="scene-bg" x="0" y="0" width="779.93" height="550.27" rx="24" ry="24"/>
       <rect class="scene-bg scene-bg-pulse anim-bg-pulse" x="0" y="0" width="779.93" height="550.27" rx="24" ry="24"/>
       <g id="wooden-floor" aria-label="Wooden floor">
-        <rect class="floor-wood" x="0" y="340" width="779.93" height="220" rx="0" ry="0"/>
-        <!-- Texture in depth bands: smaller (farther) → larger (closer) for vanishing point -->
-        <rect class="floor-texture-far" x="0" y="340" width="779.93" height="55" rx="0" ry="0"/>
-        <rect class="floor-texture-mid" x="0" y="395" width="779.93" height="78" rx="0" ry="0"/>
-        <rect class="floor-texture-near" x="0" y="473" width="779.93" height="97" rx="0" ry="0"/>
-        <!-- Plank seams: thinner far, thicker near (vanishing point) -->
-        <line class="floor-plank-far" x1="0" y1="400" x2="779.93" y2="398"/>
-        <line class="floor-plank-mid" x1="0" y1="460" x2="779.93" y2="458"/>
-        <line class="floor-plank-near" x1="0" y1="520" x2="779.93" y2="518"/>
+        <!-- Grainy floor in three bands (overlap slightly to avoid visible seam between bands) -->
+        <rect class="floor-texture-far" x="0" y="340" width="779.93" height="57" rx="0" ry="0"/>
+        <rect class="floor-texture-mid" x="0" y="394" width="779.93" height="82" rx="0" ry="0"/>
+        <rect class="floor-texture-near" x="0" y="471" width="779.93" height="100" rx="0" ry="0"/>
       </g>
       <g id="whiteboard-area">
         <rect class="st28" x="112.88" y="131.34" width="66.12" height="142.22"/>
