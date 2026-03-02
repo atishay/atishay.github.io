@@ -359,6 +359,33 @@
       .anim-seat-sway { animation: seat-sway 4s ease-in-out infinite; }
       .anim-leaf-wiggle { animation: leaf-wiggle 5s ease-in-out infinite; }
       .anim-leaf-wiggle-2 { animation: leaf-wiggle-2 5.5s ease-in-out 0.5s infinite; }
+      @keyframes bg-pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+      .anim-bg-pulse { animation: bg-pulse 8s ease-in-out infinite; }
+      .scene-bg { fill: url(#bg-radial-light); }
+      .scene-bg-pulse { fill: url(#bg-radial-light-pulse); }
+      .floor-wood { fill: url(#floor-wood-light); }
+      .floor-texture-far { fill: url(#floor-texture-light-far); }
+      .floor-texture-mid { fill: url(#floor-texture-light-mid); }
+      .floor-texture-near { fill: url(#floor-texture-light-near); }
+      .floor-plank { stroke: #3d3025; stroke-opacity: 0.5; }
+      .floor-plank-far { stroke: #3d3025; stroke-opacity: 0.5; stroke-width: 0.35; }
+      .floor-plank-mid { stroke: #3d3025; stroke-opacity: 0.5; stroke-width: 0.5; }
+      .floor-plank-near { stroke: #3d3025; stroke-opacity: 0.55; stroke-width: 0.75; }
+      @media (prefers-color-scheme: dark) {
+        .scene-bg { fill: url(#bg-radial-dark); }
+        .scene-bg-pulse { fill: url(#bg-radial-dark-pulse); }
+        .floor-wood { fill: url(#floor-wood-dark); }
+        .floor-texture-far { fill: url(#floor-texture-dark-far); }
+        .floor-texture-mid { fill: url(#floor-texture-dark-mid); }
+        .floor-texture-near { fill: url(#floor-texture-dark-near); }
+        .floor-plank { stroke: #151210; stroke-opacity: 0.6; }
+        .floor-plank-far { stroke: #151210; stroke-opacity: 0.6; stroke-width: 0.35; }
+        .floor-plank-mid { stroke: #151210; stroke-opacity: 0.6; stroke-width: 0.5; }
+        .floor-plank-near { stroke: #151210; stroke-opacity: 0.65; stroke-width: 0.75; }
+      }
     </style>
     <clipPath id="code-scroll-clip">
       <rect x="314" y="109" width="198" height="92"/>
@@ -366,10 +393,107 @@
     <clipPath id="laptop-scroll-clip">
       <use href="#laptop-screen"/>
     </clipPath>
+    <!-- Scene background: soft white to light yellow (like soft white bulb) -->
+    <radialGradient id="bg-radial-light" cx="50%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#fffefc"/>
+      <stop offset="50%" stop-color="#fffdf5"/>
+      <stop offset="100%" stop-color="#fff9e6"/>
+    </radialGradient>
+    <radialGradient id="bg-radial-light-pulse" cx="50%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#fffdf5"/>
+      <stop offset="50%" stop-color="#fffce8"/>
+      <stop offset="100%" stop-color="#fff5d4"/>
+    </radialGradient>
+    <radialGradient id="bg-radial-dark" cx="50%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#3d3520"/>
+      <stop offset="60%" stop-color="#2d2618"/>
+      <stop offset="100%" stop-color="#1f1a10"/>
+    </radialGradient>
+    <radialGradient id="bg-radial-dark-pulse" cx="50%" cy="25%" r="75%">
+      <stop offset="0%" stop-color="#4a4030"/>
+      <stop offset="60%" stop-color="#352d20"/>
+      <stop offset="100%" stop-color="#252018"/>
+    </radialGradient>
+    <!-- Wooden floor -->
+    <linearGradient id="floor-wood-light" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6b5344"/>
+      <stop offset="30%" stop-color="#5c4638"/>
+      <stop offset="60%" stop-color="#4a3a2e"/>
+      <stop offset="100%" stop-color="#3d3025"/>
+    </linearGradient>
+    <linearGradient id="floor-wood-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2218"/>
+      <stop offset="50%" stop-color="#1f1a14"/>
+      <stop offset="100%" stop-color="#151210"/>
+    </linearGradient>
+    <!-- Floor grain content (reused for perspective scale variants) -->
+    <g id="floor-grain-light" stroke-linecap="round">
+      <line x1="0" y1="0" x2="52" y2="1.2" stroke="#482812" stroke-width="0.35" opacity="0.55"/>
+      <line x1="-2" y1="3" x2="50" y2="4" stroke="#56351c" stroke-width="0.3" opacity="0.45"/>
+      <line x1="0" y1="6" x2="52" y2="7.5" stroke="#5d3a1f" stroke-width="0.4" opacity="0.5"/>
+      <line x1="1" y1="9" x2="51" y2="10.2" stroke="#482812" stroke-width="0.3" opacity="0.5"/>
+      <line x1="0" y1="12" x2="52" y2="13" stroke="#6b4628" stroke-width="0.35" opacity="0.45"/>
+      <line x1="-1" y1="15" x2="50" y2="16.5" stroke="#5c3a1f" stroke-width="0.3" opacity="0.5"/>
+      <line x1="0" y1="18" x2="52" y2="19.2" stroke="#4a2c13" stroke-width="0.35" opacity="0.55"/>
+      <line x1="0" y1="21" x2="52" y2="22" stroke="#56351c" stroke-width="0.3" opacity="0.45"/>
+      <line x1="1" y1="24" x2="51" y2="25.5" stroke="#482812" stroke-width="0.4" opacity="0.5"/>
+      <line x1="-2" y1="27" x2="50" y2="28" stroke="#5d3a1f" stroke-width="0.3" opacity="0.5"/>
+      <line x1="0" y1="30" x2="52" y2="31" stroke="#6b4628" stroke-width="0.35" opacity="0.45"/>
+      <line x1="12" y1="0" x2="12" y2="32" stroke="#371d09" stroke-width="0.4" opacity="0.5"/>
+      <line x1="24" y1="0" x2="24" y2="32" stroke="#41240f" stroke-width="0.35" opacity="0.45"/>
+      <line x1="36" y1="0" x2="36" y2="32" stroke="#371d09" stroke-width="0.4" opacity="0.5"/>
+    </g>
+    <g id="floor-grain-dark" stroke-linecap="round">
+      <line x1="0" y1="0" x2="52" y2="1.2" stroke="#1b1109" stroke-width="0.35" opacity="0.6"/>
+      <line x1="-2" y1="3" x2="50" y2="4" stroke="#21140b" stroke-width="0.3" opacity="0.55"/>
+      <line x1="0" y1="6" x2="52" y2="7.5" stroke="#271203" stroke-width="0.4" opacity="0.6"/>
+      <line x1="1" y1="9" x2="51" y2="10.2" stroke="#1b1109" stroke-width="0.3" opacity="0.55"/>
+      <line x1="0" y1="12" x2="52" y2="13" stroke="#2d1a0d" stroke-width="0.35" opacity="0.5"/>
+      <line x1="-1" y1="15" x2="50" y2="16.5" stroke="#21140b" stroke-width="0.3" opacity="0.55"/>
+      <line x1="0" y1="18" x2="52" y2="19.2" stroke="#160d06" stroke-width="0.35" opacity="0.6"/>
+      <line x1="0" y1="21" x2="52" y2="22" stroke="#1b1109" stroke-width="0.3" opacity="0.5"/>
+      <line x1="1" y1="24" x2="51" y2="25.5" stroke="#271203" stroke-width="0.4" opacity="0.55"/>
+      <line x1="-2" y1="27" x2="50" y2="28" stroke="#21140b" stroke-width="0.3" opacity="0.55"/>
+      <line x1="0" y1="30" x2="52" y2="31" stroke="#2d1a0d" stroke-width="0.35" opacity="0.5"/>
+      <line x1="12" y1="0" x2="12" y2="32" stroke="#0d0804" stroke-width="0.4" opacity="0.55"/>
+      <line x1="24" y1="0" x2="24" y2="32" stroke="#110a06" stroke-width="0.35" opacity="0.5"/>
+      <line x1="36" y1="0" x2="36" y2="32" stroke="#0d0804" stroke-width="0.4" opacity="0.55"/>
+    </g>
+    <!-- Perspective: smaller scale (farther) → larger scale (closer) for vanishing point -->
+    <pattern id="floor-texture-light-far" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.52)">
+      <use href="#floor-grain-light"/>
+    </pattern>
+    <pattern id="floor-texture-light-mid" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.82)">
+      <use href="#floor-grain-light"/>
+    </pattern>
+    <pattern id="floor-texture-light-near" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(1.28)">
+      <use href="#floor-grain-light"/>
+    </pattern>
+    <pattern id="floor-texture-dark-far" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.52)">
+      <use href="#floor-grain-dark"/>
+    </pattern>
+    <pattern id="floor-texture-dark-mid" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(0.82)">
+      <use href="#floor-grain-dark"/>
+    </pattern>
+    <pattern id="floor-texture-dark-near" patternUnits="userSpaceOnUse" width="48" height="32" patternTransform="scale(1.28)">
+      <use href="#floor-grain-dark"/>
+    </pattern>
   </defs>
   <g class="st5">
     <g id="Layer_11">
-      <line class="st25" y1="534.44" x2="779.93" y2="534.44"/>
+      <rect class="scene-bg" x="0" y="0" width="779.93" height="550.27" rx="24" ry="24"/>
+      <rect class="scene-bg scene-bg-pulse anim-bg-pulse" x="0" y="0" width="779.93" height="550.27" rx="24" ry="24"/>
+      <g id="wooden-floor" aria-label="Wooden floor">
+        <rect class="floor-wood" x="0" y="340" width="779.93" height="220" rx="0" ry="0"/>
+        <!-- Texture in depth bands: smaller (farther) → larger (closer) for vanishing point -->
+        <rect class="floor-texture-far" x="0" y="340" width="779.93" height="55" rx="0" ry="0"/>
+        <rect class="floor-texture-mid" x="0" y="395" width="779.93" height="78" rx="0" ry="0"/>
+        <rect class="floor-texture-near" x="0" y="473" width="779.93" height="97" rx="0" ry="0"/>
+        <!-- Plank seams: thinner far, thicker near (vanishing point) -->
+        <line class="floor-plank-far" x1="0" y1="400" x2="779.93" y2="398"/>
+        <line class="floor-plank-mid" x1="0" y1="460" x2="779.93" y2="458"/>
+        <line class="floor-plank-near" x1="0" y1="520" x2="779.93" y2="518"/>
+      </g>
       <g id="whiteboard-area">
         <rect class="st28" x="112.88" y="131.34" width="66.12" height="142.22"/>
         <g>
@@ -651,12 +775,6 @@
           </g>
         </g>
         <path class="st9" d="M507,187.77l-5.81,32.47-4.08,22.74c-2.26,1.06-4.79,1.65-7.45,1.65h-55c5.22-5.4,13.98-14.47,23.41-24.39,14.69-15.44,31.02-32.93,38.26-41.81l10.67,9.34h0Z"/>
-        <g class="anim-hand-move" style="transform-origin: 415px 268px">
-          <!-- Hand (bottom), then sleeve cuff, then arm/coat on top -->
-          <path class="st31" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
-          <path class="st39" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
-          <path class="st42" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-36.5-78.98,29.82-13.78,36.5,78.98c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5Z"/>
-        </g>
       </g>
       <g id="laptop">
         <path class="st33" d="M476.77,271.73h108.86c.61-.87,1.08-1.85,1.37-2.91l24.36-87.92c1.17-4.19-1.98-8.34-6.33-8.34h-95.78c-2.95,0-5.54,1.98-6.33,4.82l-26.15,94.36h0Z"/>
@@ -793,6 +911,12 @@
             <rect class="st36" x="526.74" y="265.36" width="7.46" height="3.09"/>
           </g>
         </g>
+      </g>
+      <g id="arm-on-laptop" class="anim-hand-move" style="transform-origin: 415px 268px" aria-label="Arm typing on laptop">
+        <!-- Hand (bottom), then sleeve cuff, then arm/coat on top -->
+        <path class="st31" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
+        <path class="st39" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
+        <path class="st42" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-36.5-78.98,29.82-13.78,36.5,78.98c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5Z"/>
       </g>
       <g id="red-mug">
         <!-- Steam: more prominent + lighter wisps going higher -->
