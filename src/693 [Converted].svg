@@ -385,13 +385,13 @@
       .anim-steam-tall-2 { animation: steam-rise-tall 5.5s ease-out 2.8s infinite; }
       .anim-code-scroll { animation: code-scroll 14s linear infinite; }
       .anim-laptop-scroll { animation: laptop-scroll 14s linear infinite; }
-      .anim-hand-type { animation: hand-type 2.4s ease-in-out infinite; }
-      .anim-hand-move { animation: hand-move 3s ease-in-out infinite; }
-      .anim-other-arm-up { animation: other-arm-up 4s ease-in-out infinite; }
-      .anim-eye-twitch { animation: eye-twitch 2.8s ease-in-out infinite; }
-      .anim-hair-sway { animation: hair-sway 6s ease-in-out infinite; }
-      .anim-seat-sway { animation: seat-sway 4s ease-in-out infinite; }
-      .anim-chair-lean { animation: chair-lean 5.5s ease-in-out infinite; }
+.anim-hand-type { animation: hand-type 4.2s ease-in-out infinite; }
+  .anim-hand-move { animation: hand-move 5.5s ease-in-out infinite; }
+  .anim-other-arm-up { animation: other-arm-up 7.5s ease-in-out infinite; }
+  .anim-eye-twitch { animation: eye-twitch 2.8s ease-in-out infinite; }
+  .anim-hair-sway { animation: hair-sway 6s ease-in-out infinite; }
+  .anim-seat-sway { animation: seat-sway 4s ease-in-out infinite; }
+  .anim-chair-lean { animation: chair-lean 10s ease-in-out infinite; }
       .anim-leaf-wiggle { animation: leaf-wiggle 5s ease-in-out infinite; }
       .anim-leaf-wiggle-2 { animation: leaf-wiggle-2 5.5s ease-in-out 0.5s infinite; }
       .anim-leaf-parallax-1 { animation: leaf-parallax-1 4.2s ease-in-out 0s infinite; }
@@ -436,14 +436,14 @@
       <stop offset="100%" stop-color="#fff5d4"/>
     </radialGradient>
     <radialGradient id="bg-radial-dark" cx="50%" cy="25%" r="75%">
-      <stop offset="0%" stop-color="#3d3520"/>
-      <stop offset="60%" stop-color="#2d2618"/>
-      <stop offset="100%" stop-color="#1f1a10"/>
+      <stop offset="0%" stop-color="#6a6230"/>
+      <stop offset="60%" stop-color="#4a4430"/>
+      <stop offset="100%" stop-color="#363218"/>
     </radialGradient>
     <radialGradient id="bg-radial-dark-pulse" cx="50%" cy="25%" r="75%">
-      <stop offset="0%" stop-color="#4a4030"/>
-      <stop offset="60%" stop-color="#352d20"/>
-      <stop offset="100%" stop-color="#252018"/>
+      <stop offset="0%" stop-color="#7a7240"/>
+      <stop offset="60%" stop-color="#5a5240"/>
+      <stop offset="100%" stop-color="#423a28"/>
     </radialGradient>
     <!-- Wooden floor -->
     <linearGradient id="floor-wood-light" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -553,7 +553,7 @@
         </g>
         <polygon class="st7" points="218.09 78.09 152.4 219.8 80.16 219.8 145.33 78.09 218.09 78.09"/>
       </g>
-      <g id="character-head" aria-label="Character head">
+      <g id="character-head" class="anim-chair-lean" aria-label="Character head" style="transform-origin: 248px 388px">
         <path id="character-hair-main" class="st62 anim-hair-sway" style="transform-origin: 255px 12px" d="M265.54,7.55l10.67,8.4c7.73,6.09,10.49,18.7,6.37,29-.82,2.05-1.33,3.37-1.23,3.22.4-.59-16.35-40.45-16.35-40.45"/>
         <path id="character-hair-stray" class="st2 anim-hair-sway" style="transform-origin: 266px 10px" d="M268,11 l3,2 -1,10 -2,1 -1,-11 z" fill="#2c1810" opacity=".88"/>
         <rect id="character-ear" class="st31" x="211.62" y="80.93" width="30.45" height="56.44" rx="11.72" ry="11.72"/>
@@ -578,7 +578,8 @@
           </g>
         </g>
         <path id="desk" class="st10" d="M289.1,80.56v.59c-.07,2.47-2.21,4.43-7.5,4.27l.74-19.26c4.3,6.55,6.38,10.36,6.77,14.39h0Z"/>
-        <g>
+      </g>
+      <g>
           <rect class="st36" x="141.08" y="350.31" width="92.6" height="17.07"/>
           <rect class="st27" x="495.15" y="351.75" width="84.82" height="17.07"/>
           <rect class="st27" x="566.33" y="293.69" width="19.29" height="240.46"/>
@@ -761,7 +762,9 @@
               <rect class="st39" x="298.58" y="257.99" width="8.21" height="26.69"/>
             </g>
             <path class="st59" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/>
-            <path class="st42" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
+            <g class="anim-chair-lean" style="transform-origin: 248px 388px">
+              <path class="st42" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
+            </g>
             <g>
               <g>
                 <rect class="st57" x="210.12" y="406.5" width="16.61" height="95.37"/>
@@ -790,12 +793,14 @@
             <g class="anim-chair-lean" style="transform-origin: 248px 388px">
               <path class="st34" d="M192,371.04h112.87c9.66,0,17.5,7.84,17.5,17.5h0c0,9.66-7.84,17.5-17.5,17.5h-112.87c-9.66,0-17.5-7.84-17.5-17.5h0c0-9.66,7.84-17.5,17.5-17.5Z"/>
             </g>
-            <path class="st59" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
-            <polygon class="st39" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98"/>
+            <g class="anim-chair-lean" style="transform-origin: 248px 388px">
+              <path class="st59" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
+              <polygon class="st39" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98"/>
+              <path class="st59" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
+            </g>
             <g class="anim-chair-lean" style="transform-origin: 248px 388px">
               <path class="st34" d="M173.04,383.94l-23.58-164.71c-1.05-7.34,4.46-14.15,12.24-15.14h0c7.78-.99,15.01,4.2,16.06,11.54l23.58,164.71c1.05,7.34-4.46,14.15-12.24,15.14h0c-7.78.99-11.81,6.49-16.06-11.54Z"/>
             </g>
-            <path class="st59" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
           </g>
         </g>
         <path class="st9" d="M507,187.77l-5.81,32.47-4.08,22.74c-2.26,1.06-4.79,1.65-7.45,1.65h-55c5.22-5.4,13.98-14.47,23.41-24.39,14.69-15.44,31.02-32.93,38.26-41.81l10.67,9.34h0Z"/>
@@ -1019,5 +1024,5 @@
         </g>
       </g>
     </g>
-  </g>
 </svg>
+
