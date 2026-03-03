@@ -268,9 +268,16 @@
         fill: #7c4b39;
       }
 
+      .st63 {
+        fill: #6B1E0A;
+      }
+      .st64 {
+        fill: #4A1508;
+      }
+
       .st9 {
         mix-blend-mode: multiply;
-        opacity: .32;
+        opacity: .4;
       }
 
       /* Looping animations – slow, subtle (GitHub Pages compatible) */
@@ -416,6 +423,25 @@
         .floor-texture-far { fill: url(#floor-texture-dark-far); }
         .floor-texture-mid { fill: url(#floor-texture-dark-mid); }
         .floor-texture-near { fill: url(#floor-texture-dark-near); }
+      }
+      /* Outfit: 0–10s red (casual), 10–11.2s blue (formal) fades in, then 11.2s+ red fades out so no blank */
+      @keyframes outfit-casual-fade-out {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+      @keyframes outfit-formal-fade-in {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      .outfit-casual { opacity: 1; animation: outfit-casual-fade-out 0.8s 11.2s forwards; }
+      .outfit-formal { opacity: 0; animation: outfit-formal-fade-in 1.2s 10s forwards; }
+      /* Keep motion when outfit and motion classes are on same element (animation shorthand overwrites) */
+      .outfit-casual.anim-chair-lean { animation: outfit-casual-fade-out 0.8s 11.2s forwards, chair-lean 10s ease-in-out infinite; }
+      .outfit-formal.anim-chair-lean { animation: outfit-formal-fade-in 1.2s 10s forwards, chair-lean 10s ease-in-out infinite; }
+      .outfit-casual.anim-hand-move { animation: outfit-casual-fade-out 0.8s 11.2s forwards, hand-move 5.5s ease-in-out infinite; }
+      .outfit-formal.anim-hand-move { animation: outfit-formal-fade-in 1.2s 10s forwards, hand-move 5.5s ease-in-out infinite; }
+      @media (prefers-color-scheme: dark) {
+        #character-shadow { opacity: 0.55; }
       }
     </style>
     <clipPath id="code-scroll-clip">
@@ -567,7 +593,7 @@
         <ellipse id="glasses-lens-highlight" class="st40" cx="280.6" cy="59.9" rx="1.5" ry="1"/>
         <path id="glasses-bridge" class="st24" d="M273.6,64l-35.6,3.7"/>
         <path id="character-neck" class="st4" d="M227.8,92.86c-4.88,5.13-10.59,9.48-16.93,12.79,0,0-26.58-15.8-26.58-51.89,0-2.87.17-5.86.52-8.98.34-2.81.8-5.42,1.42-7.87,1.17,6.87,4.27,17.27,12.18,30.12,12.04,19.55,25.1,24.64,29.39,25.83Z"/>
-        <path id="character-collar" class="st31" d="M244.46,57.07c1.63,0,2.94,1.34,2.93,2.96l-.07,10.03-.07,8.76-3.44-.02c-.25,0-.5,0-.74-.05-5.76-.44-10.3-5.47-10.27-11.22,0-2.99,1.28-5.53,3.3-7.5,1.81-1.76,4.25-2.77,6.95-2.92h.02c.31-.05.58-.06.89-.04h.51,0Z"/>
+        <path id="character-ear-path" class="st31" d="M244.46,57.07c1.63,0,2.94,1.34,2.93,2.96l-.07,10.03-.07,8.76-3.44-.02c-.25,0-.5,0-.74-.05-5.76-.44-10.3-5.47-10.27-11.22,0-2.99,1.28-5.53,3.3-7.5,1.81-1.76,4.25-2.77,6.95-2.92h.02c.31-.05.58-.06.89-.04h.51,0Z" aria-label="Ear (not part of dress)"/>
         <!-- Facial hair: moustache (upper lip) and beard (goatee) -->
         <g id="character-facial-hair" aria-label="Facial hair">
           <g id="moustache" aria-label="Moustache">
@@ -753,16 +779,30 @@
             <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
               <g>
                 <g>
-                  <path class="st31" d="M310.61,264.34l24.33-3.89c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-24.33,3.89c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71h0Z"/>
-                  <path class="st31" d="M318.36,270.92l19.54-3.12c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-19.54,3.12c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
-                  <path class="st31" d="M313.85,279.45l23.12-3.7c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-23.12,3.7c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
+                  <path class="st31 outfit-formal" d="M310.61,264.34l24.33-3.89c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-24.33,3.89c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71h0Z"/>
+                  <path class="st31 outfit-formal" d="M318.36,270.92l19.54-3.12c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-19.54,3.12c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
+                  <path class="st31 outfit-formal" d="M313.85,279.45l23.12-3.7c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-23.12,3.7c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
                 </g>
-                <path class="st31" d="M321.12,258.05c-.26.03-3.25,0-6.48-.06-5.58-.09-11.11,1.15-16.12,3.61l-9.6,4.72s5.5,16.31,6.25,16.45c18.5,3.34,24.85-5.06,24.85-5.06l1.1-19.66h0Z"/>
+                <path class="st31 outfit-formal" d="M321.12,258.05c-.26.03-3.25,0-6.48-.06-5.58-.09-11.11,1.15-16.12,3.61l-9.6,4.72s5.5,16.31,6.25,16.45c18.5,3.34,24.85-5.06,24.85-5.06l1.1-19.66h0Z"/>
               </g>
-              <rect class="st39" x="298.58" y="257.99" width="8.21" height="26.69"/>
+              <rect class="st39 outfit-formal" x="298.58" y="257.99" width="8.21" height="26.69"/>
             </g>
-            <path class="st59" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/>
-            <g class="anim-chair-lean" style="transform-origin: 248px 388px">
+            <g class="outfit-formal"><path class="st59" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/></g>
+            <g class="outfit-casual anim-chair-lean" style="transform-origin: 248px 388px">
+              <path class="st63" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
+              <polygon class="st63" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98" aria-label="Collar (casual, red)"/>
+              <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
+                <path class="st63" d="M310.61,264.34l24.33-3.89c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-24.33,3.89c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71h0Z"/>
+                <path class="st63" d="M318.36,270.92l19.54-3.12c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-19.54,3.12c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
+                <path class="st63" d="M313.85,279.45l23.12-3.7c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-23.12,3.7c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
+                <path class="st10" d="M321.12,258.05c-.26.03-3.25,0-6.48-.06-5.58-.09-11.11,1.15-16.12,3.61l-9.6,4.72s5.5,16.31,6.25,16.45c18.5,3.34,24.85-5.06,24.85-5.06l1.1-19.66h0Z"/>
+                <rect class="st63" x="298.58" y="257.99" width="8.21" height="26.69"/>
+              </g>
+              <path class="st64" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/>
+              <path class="st64" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
+              <path class="st64" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
+            </g>
+            <g class="anim-chair-lean outfit-formal" style="transform-origin: 248px 388px">
               <path class="st42" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
             </g>
             <g>
@@ -793,7 +833,7 @@
             <g class="anim-chair-lean" style="transform-origin: 248px 388px">
               <path class="st34" d="M192,371.04h112.87c9.66,0,17.5,7.84,17.5,17.5h0c0,9.66-7.84,17.5-17.5,17.5h-112.87c-9.66,0-17.5-7.84-17.5-17.5h0c0-9.66,7.84-17.5,17.5-17.5Z"/>
             </g>
-            <g class="anim-chair-lean" style="transform-origin: 248px 388px">
+            <g class="anim-chair-lean outfit-formal" style="transform-origin: 248px 388px">
               <path class="st59" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
               <polygon class="st39" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98"/>
               <path class="st59" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
@@ -803,7 +843,7 @@
             </g>
           </g>
         </g>
-        <path class="st9" d="M507,187.77l-5.81,32.47-4.08,22.74c-2.26,1.06-4.79,1.65-7.45,1.65h-55c5.22-5.4,13.98-14.47,23.41-24.39,14.69-15.44,31.02-32.93,38.26-41.81l10.67,9.34h0Z"/>
+        <path id="character-shadow" class="st9" d="M507,187.77l-5.81,32.47-4.08,22.74c-2.26,1.06-4.79,1.65-7.45,1.65h-55c5.22-5.4,13.98-14.47,23.41-24.39,14.69-15.44,31.02-32.93,38.26-41.81l10.67,9.34h0Z"/>
       </g>
       <g id="laptop">
         <path class="st33" d="M476.77,271.73h108.86c.61-.87,1.08-1.85,1.37-2.91l24.36-87.92c1.17-4.19-1.98-8.34-6.33-8.34h-95.78c-2.95,0-5.54,1.98-6.33,4.82l-26.15,94.36h0Z"/>
@@ -941,7 +981,12 @@
           </g>
         </g>
       </g>
-      <g id="arm-on-laptop" class="anim-hand-move" style="transform-origin: 415px 268px" aria-label="Arm typing on laptop">
+      <g class="outfit-casual anim-hand-move" style="transform-origin: 415px 268px" aria-label="Arm on laptop (casual)">
+        <path class="st10" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
+        <path class="st63" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
+        <path class="st63" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-52.71-91.91,5.6-2.59c13.38-6.18,29.23-.35,35.42,13.03l41.51,67.69c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5,0Z"/>
+      </g>
+      <g id="arm-on-laptop" class="anim-hand-move outfit-formal" style="transform-origin: 415px 268px" aria-label="Arm typing on laptop">
         <!-- Hand (bottom), then sleeve cuff, then arm/coat on top -->
         <path class="st31" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
         <path class="st39" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
@@ -1025,4 +1070,3 @@
       </g>
     </g>
 </svg>
-
