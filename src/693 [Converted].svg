@@ -274,6 +274,9 @@
       .st64 {
         fill: #4A1508;
       }
+      .st65 {
+        fill: #5D8AA8;
+      }
 
       .st9 {
         mix-blend-mode: multiply;
@@ -448,7 +451,7 @@
         .floor-texture-mid { fill: url(#floor-texture-dark-mid); }
         .floor-texture-near { fill: url(#floor-texture-dark-near); }
       }
-      /* Outfit: 0–10s red (casual), 10–11.2s blue (formal) fades in, then 11.2s+ red fades out so no blank */
+      /* Outfit: 0–10s red/jeans (casual), then 10–11.2s shirt and jeans crossfade together to blue (formal) */
       @keyframes outfit-casual-fade-out {
         0% { opacity: 1; }
         100% { opacity: 0; }
@@ -457,13 +460,13 @@
         0% { opacity: 0; }
         100% { opacity: 1; }
       }
-      .outfit-casual { opacity: 1; animation: outfit-casual-fade-out 0.8s 11.2s forwards; }
-      .outfit-formal { opacity: 0; animation: outfit-formal-fade-in 1.2s 10s forwards; }
+      .outfit-casual { opacity: 1; animation: outfit-casual-fade-out 0.25s 10s forwards; }
+      .outfit-formal { opacity: 0; animation: outfit-formal-fade-in 0.25s 10s forwards; }
       /* Keep motion when outfit and motion classes are on same element (animation shorthand overwrites) */
-      .outfit-casual.anim-chair-lean { animation: outfit-casual-fade-out 0.8s 11.2s forwards, chair-lean 10s ease-in-out infinite; }
-      .outfit-formal.anim-chair-lean { animation: outfit-formal-fade-in 1.2s 10s forwards, chair-lean 10s ease-in-out infinite; }
-      .outfit-casual.anim-hand-move { animation: outfit-casual-fade-out 0.8s 11.2s forwards, hand-move 5.5s ease-in-out infinite; }
-      .outfit-formal.anim-hand-move { animation: outfit-formal-fade-in 1.2s 10s forwards, hand-move 5.5s ease-in-out infinite; }
+      .outfit-casual.anim-chair-lean { animation: outfit-casual-fade-out 0.25s 10s forwards, chair-lean 10s ease-in-out infinite; }
+      .outfit-formal.anim-chair-lean { animation: outfit-formal-fade-in 0.25s 10s forwards, chair-lean 10s ease-in-out infinite; }
+      .outfit-casual.anim-hand-move { animation: outfit-casual-fade-out 0.25s 10s forwards, hand-move 5.5s ease-in-out infinite; }
+      .outfit-formal.anim-hand-move { animation: outfit-formal-fade-in 0.25s 10s forwards, hand-move 5.5s ease-in-out infinite; }
       #laptop-glare { opacity: 0.32; }
       @media (prefers-color-scheme: dark) {
         #character-shadow { opacity: 0.55; }
@@ -794,7 +797,7 @@
                 <line class="st24" x1="316.71" y1="532.29" x2="324.04" y2="524.5"/>
                 <line class="st24" x1="321.83" y1="535.32" x2="330.08" y2="526.5"/>
               </g>
-              <path class="st59" d="M276.16,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
+              <path id="left-leg" class="st59 outfit-formal" d="M276.16,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z" aria-label="Left leg"/>
               <g>
                 <path class="st43" d="M333.65,545.9l62.19.43c3.71.03,6.74-2.96,6.76-6.67h0c.02-2.86-1.77-5.41-4.46-6.37l-30.7-10.95-33.64.59-.16,22.97h.01Z"/>
                 <path class="st36" d="M397.08,548.06l-63.96.03v-4.51l68.47-.03h0c0,2.49-2.02,4.51-4.51,4.51h0Z"/>
@@ -804,9 +807,9 @@
                 <line class="st24" x1="372.05" y1="533.69" x2="379.35" y2="525.88"/>
                 <line class="st24" x1="377.17" y1="536.71" x2="385.39" y2="527.85"/>
               </g>
-              <path class="st59" d="M331.41,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
+              <path id="right-leg" class="st59 outfit-formal" d="M331.41,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z" aria-label="Right leg"/>
             </g>
-            <path class="st59" d="M278.19,344.34c0,6.79-2.42,13.02-6.44,17.87-5.14,6.23-12.93,10.2-21.65,10.2h-47.2c-1.4,0-2.78-.1-4.12-.31-3.46-.49-6.72-1.64-9.65-3.3-.52-.28-1.03-.6-1.52-.93-7.69-5-12.78-13.68-12.78-23.53l.87-14.98,101.68-.88.82,15.86h-.01Z"/>
+            <path id="hip" class="st59 outfit-formal" d="M278.19,344.34c0,6.79-2.42,13.02-6.44,17.87-5.14,6.23-12.93,10.2-21.65,10.2h-47.2c-1.4,0-2.78-.1-4.12-.31-3.46-.49-6.72-1.64-9.65-3.3-.52-.28-1.03-.6-1.52-.93-7.69-5-12.78-13.68-12.78-23.53l.87-14.98,101.68-.88.82,15.86h-.01Z" aria-label="Hip"/>
             <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
               <g>
                 <g>
@@ -832,6 +835,9 @@
               <path class="st64" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/>
               <path class="st64" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
               <path class="st64" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
+              <path class="st65" d="M276.16,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
+              <path class="st65" d="M331.41,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
+              <path class="st65" d="M278.19,344.34c0,6.79-2.42,13.02-6.44,17.87-5.14,6.23-12.93,10.2-21.65,10.2h-47.2c-1.4,0-2.78-.1-4.12-.31-3.46-.49-6.72-1.64-9.65-3.3-.52-.28-1.03-.6-1.52-.93-7.69-5-12.78-13.68-12.78-23.53l.87-14.98,101.68-.88.82,15.86h-.01Z"/>
             </g>
             <g class="anim-chair-lean outfit-formal" style="transform-origin: 248px 388px">
               <path class="st42" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
