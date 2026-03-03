@@ -365,6 +365,11 @@
         30% { transform: rotate(-4.5deg); }
         70% { transform: rotate(3.5deg); }
       }
+      @keyframes whiteboard-content-shade {
+        0%, 100% { filter: hue-rotate(0deg); }
+        50% { filter: hue-rotate(35deg); }
+      }
+      .anim-whiteboard-content { animation: whiteboard-content-shade 4s ease-in-out infinite; }
       /* Leaves: parallax – each moves at different time and speed */
       @keyframes leaf-parallax-1 {
         0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -583,32 +588,34 @@
         </g>
         <path class="st23" d="M111.22,274.11h88.63c2.72,0,4.92-2.2,4.92-4.92h0c0-2.72-2.2-4.92-4.92-4.92h-88.63c-2.72,0-4.92,2.2-4.92,4.92h0c0,2.72,2.2,4.92,4.92,4.92Z"/>
         <g>
-          <rect class="st49" x="64.74" y="95.65" width="179.55" height="15.42" rx="2.63" ry="2.63"/>
-          <path class="st29" d="M78.34,103.12c0,1.86-1.47,3.37-3.29,3.37s-3.29-1.51-3.29-3.37,1.47-3.37,3.29-3.37,3.29,1.51,3.29,3.37Z"/>
-          <ellipse class="st41" cx="87.04" cy="103.12" rx="3.29" ry="3.37"/>
-          <ellipse class="st51" cx="99.04" cy="103.12" rx="3.29" ry="3.37"/>
-          <path class="st13" d="M65.86,117.2h58.25c.87,0,1.58.71,1.58,1.58v17.77c0,.87-.71,1.58-1.58,1.58h-58.25c-.87,0-1.58-.71-1.58-1.58v-17.77c0-.87.71-1.58,1.58-1.58Z"/>
-          <path class="st15" d="M137.36,143.64h58.25c.87,0,1.58.71,1.58,1.58v17.77c0,.87-.71,1.58-1.58,1.58h-58.25c-.87,0-1.58-.71-1.58-1.58v-17.77c0-.87.71-1.58,1.58-1.58h0Z"/>
-          <path class="st15" d="M207.48,117.2h35.23c.87,0,1.58.71,1.58,1.58v17.77c0,.87-.71,1.58-1.58,1.58h-35.23c-.87,0-1.58-.71-1.58-1.58v-17.77c0-.87.71-1.58,1.58-1.58h0Z"/>
-          <rect class="st29" x="205.9" y="144.05" width="38.39" height="20.93" rx="1.58" ry="1.58"/>
-          <g>
-            <rect class="st28" x="136.23" y="133.96" width="61.41" height="1.5"/>
-            <rect class="st28" x="136.23" y="128.62" width="61.41" height="1.5"/>
-            <rect class="st28" x="136.23" y="123.28" width="61.41" height="1.5"/>
-            <rect class="st28" x="136.23" y="117.93" width="61.41" height="1.5"/>
-          </g>
-          <rect class="st29" x="64.28" y="169.67" width="61.41" height="20.93" rx="1.58" ry="1.58"/>
-          <g>
-            <rect class="st28" x="136.23" y="186.43" width="61.41" height="1.5"/>
-            <rect class="st28" x="136.23" y="181.09" width="61.41" height="1.5"/>
-            <rect class="st28" x="136.23" y="175.74" width="61.41" height="1.5"/>
-            <rect class="st28" x="136.23" y="170.4" width="61.41" height="1.5"/>
-          </g>
-          <g>
-            <rect class="st28" x="64.05" y="159.57" width="61.41" height="1.5"/>
-            <rect class="st28" x="64.05" y="154.23" width="61.41" height="1.5"/>
-            <rect class="st28" x="64.05" y="148.89" width="61.41" height="1.5"/>
-            <rect class="st28" x="64.05" y="143.55" width="61.41" height="1.5"/>
+          <rect id="browser-chrome" class="st49" x="64.74" y="95.65" width="179.55" height="15.42" rx="2.63" ry="2.63" aria-label="Browser chrome"/>
+          <path id="browser-btn-close" class="st29" d="M78.34,103.12c0,1.86-1.47,3.37-3.29,3.37s-3.29-1.51-3.29-3.37,1.47-3.37,3.29-3.37,3.29,1.51,3.29,3.37Z" aria-label="Close button"/>
+          <ellipse id="browser-btn-minimize" class="st41" cx="87.04" cy="103.12" rx="3.29" ry="3.37" aria-label="Minimize button"/>
+          <ellipse id="browser-btn-maximize" class="st51" cx="99.04" cy="103.12" rx="3.29" ry="3.37" aria-label="Maximize button"/>
+          <g id="whiteboard-content" class="anim-whiteboard-content" aria-label="Content">
+            <path class="st13" d="M65.86,117.2h58.25c.87,0,1.58.71,1.58,1.58v17.77c0,.87-.71,1.58-1.58,1.58h-58.25c-.87,0-1.58-.71-1.58-1.58v-17.77c0-.87.71-1.58,1.58-1.58Z"/>
+            <path class="st15" d="M137.36,143.64h58.25c.87,0,1.58.71,1.58,1.58v17.77c0,.87-.71,1.58-1.58,1.58h-58.25c-.87,0-1.58-.71-1.58-1.58v-17.77c0-.87.71-1.58,1.58-1.58h0Z"/>
+            <path class="st15" d="M207.48,117.2h35.23c.87,0,1.58.71,1.58,1.58v17.77c0,.87-.71,1.58-1.58,1.58h-35.23c-.87,0-1.58-.71-1.58-1.58v-17.77c0-.87.71-1.58,1.58-1.58h0Z"/>
+            <rect class="st29" x="205.9" y="144.05" width="38.39" height="20.93" rx="1.58" ry="1.58"/>
+            <g>
+              <rect class="st28" x="136.23" y="133.96" width="61.41" height="1.5"/>
+              <rect class="st28" x="136.23" y="128.62" width="61.41" height="1.5"/>
+              <rect class="st28" x="136.23" y="123.28" width="61.41" height="1.5"/>
+              <rect class="st28" x="136.23" y="117.93" width="61.41" height="1.5"/>
+            </g>
+            <rect class="st29" x="64.28" y="169.67" width="61.41" height="20.93" rx="1.58" ry="1.58"/>
+            <g>
+              <rect class="st28" x="136.23" y="186.43" width="61.41" height="1.5"/>
+              <rect class="st28" x="136.23" y="181.09" width="61.41" height="1.5"/>
+              <rect class="st28" x="136.23" y="175.74" width="61.41" height="1.5"/>
+              <rect class="st28" x="136.23" y="170.4" width="61.41" height="1.5"/>
+            </g>
+            <g>
+              <rect class="st28" x="64.05" y="159.57" width="61.41" height="1.5"/>
+              <rect class="st28" x="64.05" y="154.23" width="61.41" height="1.5"/>
+              <rect class="st28" x="64.05" y="148.89" width="61.41" height="1.5"/>
+              <rect class="st28" x="64.05" y="143.55" width="61.41" height="1.5"/>
+            </g>
           </g>
         </g>
         <polygon class="st7" points="218.09 78.09 152.4 219.8 80.16 219.8 145.33 78.09 218.09 78.09"/>
