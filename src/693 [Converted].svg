@@ -289,6 +289,16 @@
         0%, 100% { opacity: .08; }
         50% { opacity: .14; }
       }
+      @keyframes lamp-cone-glow {
+        0%, 100% { opacity: 0.82; }
+        50% { opacity: 0.42; }
+      }
+      .anim-lamp-cone { animation: lamp-cone-glow 5s ease-in-out infinite; }
+      @keyframes bulb-color-fade {
+        0%, 100% { fill: #ffe066; }
+        50% { fill: #ffffff; }
+      }
+      .anim-bulb-glow { animation: bulb-color-fade 5s ease-in-out infinite; }
       @keyframes steam-rise {
         0% { opacity: 0; transform: translateY(0) scale(1); }
         35% { opacity: .6; transform: translateY(-12px) scale(1.02); }
@@ -407,6 +417,20 @@
       .anim-leaf-parallax-4 { animation: leaf-parallax-4 5.2s ease-in-out 0.3s infinite; }
       .anim-leaf-parallax-5 { animation: leaf-parallax-5 6s ease-in-out 1.2s infinite; }
       .anim-leaf-parallax-6 { animation: leaf-parallax-6 4.5s ease-in-out 2s infinite; }
+      /* Pens: slight parallax relative to each other */
+      @keyframes pen-parallax-1 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        40% { transform: translateY(-1.2px) rotate(1.5deg); }
+        70% { transform: translateY(0.8px) rotate(-1deg); }
+      }
+      @keyframes pen-parallax-2 {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        25% { transform: translateY(1px) rotate(-1.2deg); }
+        55% { transform: translateY(-1px) rotate(1.8deg); }
+        85% { transform: translateY(0.5px) rotate(-0.8deg); }
+      }
+      .anim-pen-parallax-1 { animation: pen-parallax-1 5s ease-in-out 0s infinite; }
+      .anim-pen-parallax-2 { animation: pen-parallax-2 5.5s ease-in-out 0.7s infinite; }
       @keyframes bg-pulse {
         0%, 100% { opacity: 0.5; }
         50% { opacity: 1; }
@@ -440,6 +464,7 @@
       .outfit-formal.anim-chair-lean { animation: outfit-formal-fade-in 1.2s 10s forwards, chair-lean 10s ease-in-out infinite; }
       .outfit-casual.anim-hand-move { animation: outfit-casual-fade-out 0.8s 11.2s forwards, hand-move 5.5s ease-in-out infinite; }
       .outfit-formal.anim-hand-move { animation: outfit-formal-fade-in 1.2s 10s forwards, hand-move 5.5s ease-in-out infinite; }
+      #laptop-glare { opacity: 0.32; }
       @media (prefers-color-scheme: dark) {
         #character-shadow { opacity: 0.55; }
       }
@@ -450,6 +475,12 @@
     <clipPath id="laptop-scroll-clip">
       <use href="#laptop-screen"/>
     </clipPath>
+    <!-- Light cone: matches bulb – warmer yellow at lamp, transparent white at long edge (same 5s cycle as bulb) -->
+    <linearGradient id="light-cone-gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#ffe066" stop-opacity="0.28"/>
+      <stop offset="50%" stop-color="#fff9c4" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
     <!-- Scene background: soft white to light yellow (like soft white bulb) -->
     <radialGradient id="bg-radial-light" cx="50%" cy="25%" r="75%">
       <stop offset="0%" stop-color="#fffefc"/>
@@ -971,7 +1002,7 @@
         </g>
         <polygon class="st23" points="582.21 253.25 577.93 268.25 474.06 268.25 478.33 253.25 582.21 253.25"/>
         <path class="st23" d="M526.27,272.75h-124.43c-2.91,0-5.29-2.38-5.29-5.29h0c0-2.91,2.38-5.29,5.29-5.29h124.43c2.91,0,5.29,2.38,5.29,5.29h0c0,2.91-2.38,5.29-5.29,5.29Z"/>
-        <polygon class="st6" points="575.2 169.43 573.15 173.92 536.93 253.25 533.19 261.43 494.06 261.43 497.8 253.25 534.02 173.92 536.07 169.43 575.2 169.43"/>
+        <polygon id="laptop-glare" class="st6" points="575.2 169.43 573.15 173.92 536.93 253.25 533.19 261.43 494.06 261.43 497.8 253.25 534.02 173.92 536.07 169.43 575.2 169.43" aria-label="Laptop glare"/>
         <polygon class="st6" points="460.11 95.27 406.28 213.13 348.72 213.13 402.55 95.27 460.11 95.27"/>
         <g>
           <path class="st33" d="M573.44,272.43h-72.02c-2.91,0-5.29-2.38-5.29-5.29h0c0-2.91,2.38-5.29,5.29-5.29h72.02c2.91,0,5.29,2.38,5.29,5.29h0c0,2.91-2.38,5.29-5.29,5.29Z"/>
@@ -1011,14 +1042,14 @@
           <rect class="st60" x="29.83" y="218.36" width="57.14" height="4.14" transform="translate(-168.84 239.5) rotate(-79.96)"/>
           <rect class="st60" x="53.65" y="196.15" width="17.18" height="6.42" transform="translate(-144.92 225.88) rotate(-79.96)"/>
         </g>
-        <polygon class="st22" points="48.66 256.1 44.53 255.75 49.31 198.81 51.81 195.17 53.43 199.16 48.66 256.1"/>
-        <polygon class="st54" points="42.93 259.01 38.86 259.8 27.94 203.71 29.35 199.53 32.01 202.92 42.93 259.01"/>
+        <polygon id="pen-1" class="st22 anim-pen-parallax-1" style="transform-origin: 50px 228px" points="48.66 256.1 44.53 255.75 49.31 198.81 51.81 195.17 53.43 199.16 48.66 256.1" aria-label="Pen 1"/>
+        <polygon id="pen-2" class="st54 anim-pen-parallax-2" style="transform-origin: 38px 228px" points="42.93 259.01 38.86 259.8 27.94 203.71 29.35 199.53 32.01 202.92 42.93 259.01" aria-label="Pen 2"/>
         <g>
           <polygon class="st37" points="52.06 272.05 34.37 272.05 28.56 225.21 57.86 225.21 52.06 272.05"/>
           <polygon class="st52" points="58.73 272.05 41.04 272.05 38.43 225.21 64.54 225.21 58.73 272.05"/>
         </g>
       </g>
-      <g id="desk-lamp">
+      <g id="stack-of-books">
         <g>
           <path class="st34" d="M605.02,342.65v25.78h90.03c5.59,0,10.36-3.57,12.15-8.56.48-1.35.75-2.81.75-4.34,0-3.55-1.44-6.77-3.77-9.11-2.34-2.33-5.57-3.77-9.13-3.77h-90.03Z"/>
           <path class="st8" d="M625.17,359.87v8.56h69.88c5.59,0,10.36-3.57,12.15-8.56h-82.03Z"/>
@@ -1039,15 +1070,16 @@
           <path class="st39" d="M575.06,321.76v16.53h50.55c4.57,0,8.27-3.7,8.27-8.27,0-2.28-.93-4.35-2.42-5.85-1.5-1.49-3.57-2.42-5.85-2.42h-50.55Z"/>
         </g>
       </g>
-      <g>
-        <g id="stack-of-books">
+      <g id="lamp-group">
+        <path id="Light_cone" class="anim-lamp-cone" fill="url(#light-cone-gradient)" d="M578.16,163.77l-237.53,108.2h253.86l15.85-73.88s5.99-25.54-32.17-34.31h-.01Z" mix-blend-mode="screen" aria-label="Lamp light cone"/>
+        <g id="lamp">
           <g>
             <path class="st36" d="M612.52,165.93h0c-4.31-4.59-3.93-11.68.83-15.83l.54-.47c4.77-4.15,12.12-3.79,16.43.8h0c4.31,4.59,3.93,11.68-.83,15.83l-.54.47c-4.77,4.15-12.13,3.79-16.43-.8h0Z"/>
             <path class="st14" d="M621.66,188.22l-11.33,9.86-32.17-34.31,11.33-9.86c7.85-6.83,19.11-7.74,27.85-3,2.21,1.19,4.25,2.74,6.04,4.66,4.44,4.73,6.47,10.76,6.17,16.67-.32,5.92-2.97,11.71-7.88,15.99h0Z"/>
             <path class="st41" d="M611.43,177.31l-11.33,9.86-21.94-23.4,11.33-9.86c7.85-6.83,19.11-7.74,27.85-3,1.5,3.31,2.16,6.88,1.97,10.41-.32,5.92-2.97,11.71-7.88,15.99h0Z"/>
           </g>
           <path class="st23" d="M610.92,197.95c-3.42,3.05-13.52-2.05-22.56-11.41s-13.61-19.43-10.19-22.49c2.7-2.42,9.58.26,16.82,6.12,1.91,1.56,3.85,3.33,5.74,5.28,2.21,2.29,4.15,4.61,5.77,6.87,5.04,6.99,7.01,13.32,4.43,15.63h-.01Z"/>
-          <path class="st39" d="M606.49,182.33c-2.62,2.88-7.07,3.71-10.68,1.74-4.12-2.24-5.58-7.3-3.25-11.28.62-1.06,1.46-1.95,2.42-2.62,1.91,1.56,3.85,3.33,5.74,5.28,2.21,2.29,4.15,4.61,5.77,6.87h0Z"/>
+          <path id="lamp-bulb" class="st39 anim-bulb-glow" d="M606.49,182.33c-2.62,2.88-7.07,3.71-10.68,1.74-4.12-2.24-5.58-7.3-3.25-11.28.62-1.06,1.46-1.95,2.42-2.62,1.91,1.56,3.85,3.33,5.74,5.28,2.21,2.29,4.15,4.61,5.77,6.87h0Z" aria-label="Lamp bulb"/>
         </g>
         <polyline class="st26" points="669.74 276.89 699.11 182.08 639.63 142.46 627.15 153.07"/>
         <g>
