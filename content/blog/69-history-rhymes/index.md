@@ -1,7 +1,7 @@
 ---
 date: "2026-05-12T19:25:15Z"
 type: post
-title: "History Rhymes: RAG and Skills Will Eventually Land at Hierarchical Organization of Knowledge"
+title: "From RAG to the Library: History Rhymes"
 description: "RAG and skills aren't new ideas — they mirror how humans have always retrieved knowledge. History suggests the destination: the library, with its hierarchical organization built for navigation at scale."
 tags:
 - ai
