@@ -1,5 +1,5 @@
 baseURL: "https://atishay.me"
-languageCode: "en-us"
+locale: "en-us"
 title: "Atishay Jain"
 theme: "eclectic"
 disablePathToLower: false
