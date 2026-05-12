@@ -716,6 +716,41 @@ figcaption p {
     opacity: 1;
     transform: scale3d(1, 1, 1); } }
 
+.video-popup-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center; }
+  .video-popup-overlay:target {
+    display: flex; }
+
+.video-popup-inner {
+  position: relative;
+  width: 90%;
+  max-width: 960px; }
+
+.video-popup-close {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-decoration: none;
+  opacity: 0.8; }
+  .video-popup-close:hover {
+    opacity: 1;
+    filter: none; }
+
+.video-popup-inner video {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  background: #000; }
+
 header {
   width: 100%;
   padding-left: calc( (100% - var(--max-width)) /2 + var(--content-padding));
@@ -2426,8 +2461,7 @@ header {
   transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   padding-left: calc( (100% - var(--max-width)) /2 + var(--content-padding));
-  padding-right: calc( (100% - var(--max-width)) /2 + var(--content-padding));
-  contain: content; }
+  padding-right: calc( (100% - var(--max-width)) /2 + var(--content-padding)); }
   .meta:not(:last-of-type)::after {
     content: "";
     display: block;

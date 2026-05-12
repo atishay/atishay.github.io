@@ -3,6 +3,28 @@ type: filter gray-image
 filter: all
 subtitle: Below is a selection of some of my popular projects, their short descriptions and useful links.
 items:
+  - title: CCLibraries for Office
+    filter: all adobe
+    image:
+      href: home/projects/cclib-office.jpg
+      anchor: Center
+      width: 267
+      height: 180
+    links:
+      - href: https://marketplace.microsoft.com/en-us/product/office365/wa200000729?tab=overview
+        title: Get Add-in
+        icon: download
+      - video: /home/projects/cclib-office-yt.mp4
+        title: Watch Demo
+        icon: film
+      - video: /home/projects/cclib-powerpoint.mp4
+        title: PowerPoint Demo
+        icon: film
+    attribution: Image by [DC Studio](https://www.magnific.com/free-photo/professional-interactive-board-empty-conference-room-used-meetings_414767000.htm) on Magnific
+    content: |
+      Brought Adobe Creative Cloud Libraries directly into Microsoft Office — Word, PowerPoint, and Excel. Users can access and place their CC assets (colors, character styles, graphics) without leaving their Office workflow.
+
+      Created the original proof of concept that was productized five years later and shipped as an official Adobe add-in on the Microsoft AppSource marketplace.
   - title: Adobe Shape CC
     filter: all adobe
     image:
