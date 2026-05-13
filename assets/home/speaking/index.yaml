@@ -16,8 +16,8 @@ items:
     - href: https://2018.cascadiajs.com/speakers/atishay-jain/
       icon: external-link
       title: Official Website
-    - href: https://www.youtube.com/watch?v=E0w7Tc0f2fA
-      icon: youtube
+    - youtube: E0w7Tc0f2fA
+      icon: film
       title: View
     - href: https://github.com/atishay/napi
       icon: github
@@ -81,8 +81,8 @@ items:
     - href: home/Ecommerce using static websites.pdf
       icon: file-powerpoint-o
       title: Slides
-    - href: https://www.youtube.com/watch?v=JO48ooTpOOA
-      icon: youtube
+    - youtube: JO48ooTpOOA
+      icon: film
       title: View
 - title: Frankfurt Gophers 2021
   image:
@@ -91,7 +91,7 @@ items:
     width: 500
     height: 281
     anchor: Center
-  content: Hugo is interesting to Go developers as despite being ageneric tool that you don't need to learn Go for, it does some things very Go like. From using the Go terminology (e.g. slice) to the Go modules there is a lot of familiarity that a Go developer will find in the Hugo world. This talk at Frankfurt Rhein-Main Gophers introduces Hugo to the Go developers and talks about how Go and Hugo are close. If you know Go, take a look at the source code. You will find some real hidden gems.
+  content: Hugo is interesting to Go developers as despite being a generic tool that you don't need to learn Go for, it does some things very Go like. From using the Go terminology (e.g. slice) to the Go modules there is a lot of familiarity that a Go developer will find in the Hugo world. This talk at Frankfurt Rhein-Main Gophers introduces Hugo to the Go developers and talks about how Go and Hugo are close. If you know Go, take a look at the source code. You will find some real hidden gems.
   icon:
     href: home/speaking/gofrm-icon.png
     width: 60

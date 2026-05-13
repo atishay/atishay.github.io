@@ -87,9 +87,10 @@ items:
       anchor: Center
       width: 267
       height: 180
-    attribution: Mokcup from [Graphictwister](https://graphictwister.com/samsung-smart-tv-mockup/)
+    attribution: Mockup from [Graphictwister](https://graphictwister.com/samsung-smart-tv-mockup/)
     links:
-      - href: https://vimeo.com/16069535
+      - vimeo: "16069535"
+        thumbnail: home/projects/vimeo-16069535.jpg
         title: Watch
         icon: film
     content: |
@@ -115,7 +116,7 @@ items:
     content: |
       Augmented Reality Color capture application. Captures colors from video and images into themes. Also features a color wheel and color theme sliders.
 
-      Winner of multiple awards like the IxDA interaction design awards, Communication Arts interactive design awards and FWA app of th day. Had a million downloads before being merged into adobe capture.
+      Winner of multiple awards like the IxDA interaction design awards, Communication Arts interactive design awards and FWA app of the day. Had a million downloads before being merged into Adobe Capture.
   - title: Flash Game - Ball in the Hole
     filter: all games
     image:
@@ -140,7 +141,8 @@ items:
       height: 180
     attribution: Tempate from [Wegraphics](https://wegraphics.net/downloads/film-poster-psd-template/) & [Graphic Burger](https://graphicburger.com/down/?q=bus-stop-billboard-mockup)
     links:
-      - href: https://vimeo.com/16035249
+      - vimeo: "16035249"
+        thumbnail: home/projects/vimeo-16035249.jpg
         title: Watch
         icon: film
     content: |
@@ -159,7 +161,7 @@ items:
       anchor: Center
     filter: all adobe
     content: |
-      Home Screens of Adobe's Flagship dekstop applications - Photoshop, Illustrator, InDesign, After Effects, Premiere Pro and Dreamweaver. Provided stunning visuals to introduce new features and orient users on a A/B tested, server-controlled, offline-first, prime screen space on the machine.
+      Home Screens of Adobe's Flagship desktop applications - Photoshop, Illustrator, InDesign, After Effects, Premiere Pro and Dreamweaver. Provided stunning visuals to introduce new features and orient users on a A/B tested, server-controlled, offline-first, prime screen space on the machine.
     attribution: Mockup from [Graphic Twister](https://graphictwister.com/unique-workspace-mockup/). Screenshots by self.
   - title: Bond Forever
     filter: all media
@@ -185,7 +187,8 @@ items:
       height: 180
     attribution: Mockup from [Behance](https://www.behance.net/gallery/20133265/Free-Movie-Theater-Mockup)
     links:
-      - href: https://vimeo.com/1587575
+      - vimeo: "1587575"
+        thumbnail: home/projects/vimeo-1587575.jpg
         title: Watch
         icon: film
     content: |

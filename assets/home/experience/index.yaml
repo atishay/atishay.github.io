@@ -34,9 +34,9 @@ items:
       - href: http://www.adobe.com/creativecloud/libraries.html
         title: CC Libraries
         icon: link
-      - href: https://www.youtube.com/watch?v=76A1i9o7g6U
+      - youtube: 76A1i9o7g6U
         title: Demo
-        icon: youtube
+        icon: film
   - title: Adobe Shape
     icon:
       href: home/experience/shape.svg
@@ -45,9 +45,9 @@ items:
       - href: http://www.adobe.com/products/capture.html
         title: Capture
         icon: link
-      - href: https://www.youtube.com/watch?v=QIasMlptd7k
+      - youtube: QIasMlptd7k
         title: Demo
-        icon: youtube
+        icon: film
   - title: Adobe Color
     icon:
       href: home/experience/color.svg
@@ -56,9 +56,9 @@ items:
       - href: https://color.adobe.com
         title: Adobe Color
         icon: link
-      - href: https://www.youtube.com/watch?v=nuXG-MOL6-0
+      - youtube: nuXG-MOL6-0
         title: Demo
-        icon: youtube
+        icon: film
   - title: Adobe InDesign
     icon:
       href: home/experience/id.svg

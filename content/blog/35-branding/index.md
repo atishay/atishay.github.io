@@ -10,6 +10,9 @@ sidebar:
     content: "Image by Free-Photos from [Pixabay](https://pixabay.com/en/tie-necktie-adjust-adjusting-man-690084/)"
 slug: branding
 youtube: MT_ALAfBfq8
+localvideo:
+  - /blog/branding-1.mp4
+  - /blog/branding-2.mp4
 categories:
  - toastmasters
 ---
