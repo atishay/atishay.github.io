@@ -1,9 +1,0 @@
-# {{ .Site.Title }}
-
-> {{ .Site.Params.description }}
-
-## Blog
-
-{{ range (where .Site.RegularPages ".Section" "blog").ByDate.Reverse -}}
-- [{{ .Title }}]({{ .Permalink }}): {{ with .Description }}{{ . }}{{ else }}{{ .Summary | truncate 120 "..." }}{{ end }}
-{{ end }}
