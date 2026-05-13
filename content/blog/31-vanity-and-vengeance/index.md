@@ -1,7 +1,7 @@
 ---
 date: "2018-06-24T00:00:00Z"
 description: A popular folk lore from India about proud kings bringing down the country
-  for vangeance.
+  for vengeance.
 sidebar:
   - title: attribution
     content: Image by Ameya Clicks from [Wikipedia](https://commons.wikimedia.org/wiki/File:Prithviraj_Chauhan_Memorial_by_Ameya_Clicks.jpg)

@@ -30,7 +30,7 @@ Wrappers (Swift/Kotlin/.NET/C++) validate with the same schema, serialize native
 
 ## Async callbacks provide memory safety
 
-A pragmatic C ABI can use an async callback with a context handle. The caller owns the memory for the duration of the call. Everything is transfered and can be copied and processed asynchronously if needed. No need for allocate and free APIs.
+A pragmatic C ABI can use an async callback with a context handle. The caller owns the memory for the duration of the call. Everything is transferred and can be copied and processed asynchronously if needed. No need for allocate and free APIs.
 
 ```c
 typedef void (*sdk_callback_t)(void* context, const char* response_json);

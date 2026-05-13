@@ -32,7 +32,7 @@ For the sake of understanding lets pick up a problem of classifying an image. He
 
 ## What is an image?
 The question for you - mathematically - What is an image? An image is a set of pixels. A pixel is a box of color. A 1 megapixel image contains 1 million pixels. Now what is a pixel - A pixel is a set of three colors - Red, Green and Blue. Remember your art classes - Primary Colors. All colors can be made by mixing by various amounts of these primary colors. Due to the way computers are designed each color is represented by a number between 0-255. No other reason - just limitations of the machine. So a 1 megapixel image would be 3 million numbers between 0 and 255.
-Now thinking a mathematical equation with 3 million number is a little two difficult. So instead let us put them in a variable `X`(we will later see how `X` is 3 billion numbers).
+Now thinking a mathematical equation with 3 million number is a little too difficult. So instead let us put them in a variable `X`(we will later see how `X` is 3 billion numbers).
 
 ## Basic Mathematics
 Now with the `X` we just defined, we need an equation to find `y` given `X`. Lets start with the simplest equation possible.

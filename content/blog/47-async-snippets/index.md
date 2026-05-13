@@ -45,7 +45,7 @@ In cases like loops and callbacks, tracking function calls in callbacks is diffi
 *Caveat* `array.forEach` cannot have `await`. Since it returns nothing, we cannot wait for anything. In modern JS, there is little reason to use `array.forEach`. A `for..of` loop is better in almost all cases where foreach has been used earlier.
 
 ## 2. Fire and forget
-Is is not necesary to use `await` with async. We can just call and async method and not use `await`. This way the method would complete when it wants.
+It is not necessary to use `await` with async. We can just call and async method and not use `await`. This way the method would complete when it wants.
 ```JavaScript
   fetch("analytics/activity?userId=100");
 ```
@@ -133,7 +133,7 @@ await Promise.race([fetch(...), timeout(2000)]);
 The first line is wrapper over setTimeout to make this async-await compatible. In the next line we race `fetch` and `timeout`. The one that completes first returns. If fetch returns first we get the response object. If fetch fails, it would reject immediately and we can catch the error in a `try...catch` or a `.catch(() => ...)` block. If fetch succeeds under 2 seconds, its return value is present, otherwise timeout would win the race which would resolve to `undefined`. We could change this to an error or reject it in case of the timeout.
 
 ## 8. Memoization and solving parallel calls
-In most cases when we call the server, we would like to use the value at multiple places but would not want to call the server multiple times. Traditionally this ahs been solved by keeping this output value in a variable (most likely in a store like mobx or redux) and calling a method once to fetch it. Such an approach is needlessly verbose and it prevents us from making the components independent as they depend on someone else to do server fetch. One solution to this is to use memoization - caching the return value from the function if it is called with the same parameterd. The challenge here is that the async functions can take a long time while the download is in progress, there is no data to cache. This problem is not there in `async` methods as we can cache and reuse promises easily.
+In most cases when we call the server, we would like to use the value at multiple places but would not want to call the server multiple times. Traditionally this has been solved by keeping this output value in a variable (most likely in a store like mobx or redux) and calling a method once to fetch it. Such an approach is needlessly verbose and it prevents us from making the components independent as they depend on someone else to do server fetch. One solution to this is to use memoization - caching the return value from the function if it is called with the same parameters. The challenge here is that the async functions can take a long time while the download is in progress, there is no data to cache. This problem is not there in `async` methods as we can cache and reuse promises easily.
 
 ```JavaScript
 // Convert to ES6 Decorator

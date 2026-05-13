@@ -2,7 +2,7 @@
 date: "2024-04-15T10:00:00-07:00"
 type: post
 title: "Bring your own database"
-description: "An alternate universe where web was built around customers bringing their own database insetad of being held hostage to every service provider's ownership of their own data."
+description: "An alternate universe where web was built around customers bringing their own database instead of being held hostage to every service provider's ownership of their own data."
 tags:
 - database
 - wishlist

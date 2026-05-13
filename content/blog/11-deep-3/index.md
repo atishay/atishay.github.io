@@ -47,7 +47,7 @@ The phase of training where we push the error back into the equation is called *
 There is one more term that I would like to introduce. Now images come in all shape and sizes. It might happen that outliers(one weird test image) throw the equation in a weird direction. What we want is a slow and gradual learning so that we get to the conclusion that most images follow. We might not get to 100% accuracy but we will not be jumping around forever. And we can stop when we do not get better results any more. Therefore we multiply the loss with a number called the **learning rate** before we go onto modify our variables. And to get the best results we decrease the learning rate over time. Because closer to the results we do not want to lose the accuracy that was gained by so many images earlier.
 
 ## Over Fitting
-There will be one problem we have to deal with and that is over-fitting. With 3 billion variables, these is a possibility to tie in too tightly to the known cases. Eg if image 1 then this else that kind of solutions. We won't notice it but somewhere that might happen. The solution to this is to reduce the number of variables or force using different variables each time. No need to think too much about this, just wanted to introduce the term. We will talk about solutions when we get to more complicated networks.
+There will be one problem we have to deal with and that is over-fitting. With 3 billion variables, there is a possibility to tie in too tightly to the known cases. Eg if image 1 then this else that kind of solutions. We won't notice it but somewhere that might happen. The solution to this is to reduce the number of variables or force using different variables each time. No need to think too much about this, just wanted to introduce the term. We will talk about solutions when we get to more complicated networks.
 
 
 ## Generalization
@@ -55,7 +55,7 @@ The logic that I defined for back propagation of taking the log and subtracting 
 
 ## Regression
 For the statistics lovers, the logic is same as regression that we use to get a equation to fit a set of number in 2D space. Indeed deep learning is just a generalized version of
-linear regression where we have a lot more features and inputs and more vague and complicated. The loss has been replaces from L2 loss to cross entropy (which to some extent the same thing just with the scores).
+linear regression where we have a lot more features and inputs and more vague and complicated. The loss has been replaced from L2 loss to cross entropy (which to some extent the same thing just with the scores).
 
 For common folks who don't understand statistics, congratulations you just learnt your stats 101. This is exactly the method to divide a set of inputs into two groups by a straight line(you might have heard about the method of least squares). In stats, you use the same equation without the logs (as we started with) and use the loss as the difference in scores or mean square root difference (as loses of -5 and +5 end up being 0, but if we really want some better scores).
 

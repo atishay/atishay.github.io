@@ -46,9 +46,10 @@ This is a very biased topic. I don't want to go in the benefits and disadvantage
 For the sake of simplicity, I use [keras](http://www.keras.io). This is one of the simplest to use libraries with the minimal amount of code you need to write. The library is built over CNTK, tensorflow and theano and therefore you can go deep into lower level if you so desire. This library also enables me to export models that you can visualize in Javascript. Since it is built over tensorflow, you can export its models to mobile and run them there.
 
 ## MNIST
-The MNIST data set is a data set of black and white (saves us the RGB channels) images of handwritten numbers(not cat pictures) from 0-9 all labelled correctly. They are available as 28x28 pixel images (not 1 megapixel). It is a very popular data set for tring out complicated networks as the problem is just perfect - not too heavy to require huge amount of processing time, not simple to be solvable easily by other means and not too complicated so that it can be solved by the simplest of neural networks.
+The MNIST data set is a data set of black and white (saves us the RGB channels) images of handwritten numbers(not cat pictures) from 0-9 all labelled correctly. They are available as 28x28 pixel images (not 1 megapixel). It is a very popular data set for trying out complicated networks as the problem is just perfect - not too heavy to require huge amount of processing time, not simple to be solvable easily by other means and not too complicated so that it can be solved by the simplest of neural networks.
 
 ## Installation
+
 From the python website install python. Remember to enable pip(or use get-pip.py to download pip). Then run `pip install keras` to get keras.
 You can now run python files by `python filename`. Google is your friend here (better than me) and you can always go to [keras.io](http://keras.io) to find the latest installation instructions.
 
@@ -67,7 +68,7 @@ import numpy as np
 (x_train2d, y_train), (x_test2d, y_test) = mnist.load_data()
 ```
 
-3. **Fit the data to our equation** We do not use the fact that the image is 2 dimensional. we just create a flat list of 784 numbers. The -1 in the reshape is to keep the first dimension with the remaining dimension. We create 1 matrix of size [1x784] for each image and put all the images one under the other. Also the output is written as a single number. We convert that to categories, i.e. 1 row per output. This is because we want the probabilities of each number (0, 1, 2..9) separately. This type of encoding is called **categorical** or **one hot encoding**. In a more advanced network, we can also keeo this as a single number where the equation outputs between 0 & 0.1 for 1, 0.1 & 0.2 for 2 and so on. Probabilities are easier to understand and therefore we like the one hot output.
+3. **Fit the data to our equation** We do not use the fact that the image is 2 dimensional. we just create a flat list of 784 numbers. The -1 in the reshape is to keep the first dimension with the remaining dimension. We create 1 matrix of size [1x784] for each image and put all the images one under the other. Also the output is written as a single number. We convert that to categories, i.e. 1 row per output. This is because we want the probabilities of each number (0, 1, 2..9) separately. This type of encoding is called **categorical** or **one hot encoding**. In a more advanced network, we can also keep this as a single number where the equation outputs between 0 & 0.1 for 1, 0.1 & 0.2 for 2 and so on. Probabilities are easier to understand and therefore we like the one hot output.
 ```python
 x_train = x_train2d.reshape(-1, 784)
 x_test = x_test2d.reshape(-1, 784)

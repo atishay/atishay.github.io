@@ -14,7 +14,7 @@ categories:
 - toastmasters
 ---
 
-This speech went with a slide show that you can view [here](gooey.pdf). This one was a very technical topic to be presented to average individuals uninitiated to the world of technology and code. The biggest challenge for ths speech was to get some content across and still make sure everyone understands it.
+This speech went with a slide show that you can view [here](gooey.pdf). This one was a very technical topic to be presented to average individuals uninitiated to the world of technology and code. The biggest challenge for this speech was to get some content across and still make sure everyone understands it.
 
 Aristotle believed, as many of us still do - the heart is the seat of love, kidney is of fear and liver of anger. Neurologists have found that the most complicated organ, the one protected by the hardest layers of bones in our body, the brain is the seat of all emotions. We have been trying to understand it for centuries and after years of research we have started to map parts of it into code. I have been studying this now for almost a year. Fellow toastmasters, citizens of the silicon valley and dear guests - Deep learning is a direct result of messing up with the gooey stuff inside of the head. We are now living in a world where the machines have a true brain - they can see & hear, read and write, speak and understand the world around them just like us. I am to show you today how it works.
 

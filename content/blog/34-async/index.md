@@ -28,7 +28,7 @@ I _originally wrote this article for [Morning Cup of Coding](https://www.humanre
 
 ## Why do we have callbacks?
 
-JavaScript was built for the web where everything requires network requests to work. When the CPU executes a JavaScript statement like `XMLHttpRequest.send()` if it waits for the response to come over, the UI would hang as it takes significant time for the request to be sent over to the server, be processed and the response to come back. Therefore it made sense to take a function as an argument that would be called when the response is available, freeing the CPU for other things while we wait for the response. With Node.js, this was taken one step further as even requests to the database or to the hard disk, are also slower in comparison to the CPU, and waiting for them even in a background thread is a waste of resources. That is why in Node.js almost every call is asynchronous and after the success of Node.js, other languages also brought in asynchronous constructs int heir core.
+JavaScript was built for the web where everything requires network requests to work. When the CPU executes a JavaScript statement like `XMLHttpRequest.send()` if it waits for the response to come over, the UI would hang as it takes significant time for the request to be sent over to the server, be processed and the response to come back. Therefore it made sense to take a function as an argument that would be called when the response is available, freeing the CPU for other things while we wait for the response. With Node.js, this was taken one step further as even requests to the database or to the hard disk, are also slower in comparison to the CPU, and waiting for them even in a background thread is a waste of resources. That is why in Node.js almost every call is asynchronous and after the success of Node.js, other languages also brought in asynchronous constructs into their core.
 
 
 ## Problems with callbacks
@@ -225,7 +225,7 @@ Note that after performing a `.catch(cb)` based special processing, you can stil
 
 ## Common Patterns
 
-1) **Wrap parallel code in Promise.all**. If some code is meant to be run in parallel, we should not make it sequential. [Promise.all](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) call take an array of asynchronus functions and run them in parallel. Since we can now work with array, all the array manipulation functions like `map` and `forEach` can now be used. There is also [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) for the cases where we need to wait for any one of the methods to respond and do not need to wait for all of them to continue execution.
+1) **Wrap parallel code in Promise.all**. If some code is meant to be run in parallel, we should not make it sequential. [Promise.all](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) call take an array of asynchronous functions and run them in parallel. Since we can now work with array, all the array manipulation functions like `map` and `forEach` can now be used. There is also [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) for the cases where we need to wait for any one of the methods to respond and do not need to wait for all of them to continue execution.
 
 
 **Before**

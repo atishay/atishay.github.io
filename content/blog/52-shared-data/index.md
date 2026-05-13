@@ -72,7 +72,7 @@ async function take(amt) {
 }
 ```
 
-This solves the shared data problem by ensuring that only instance even of `take` or `pay` could access the data at a time. While logically this solution has no issues, there is a subtle problem that this introduces which is not in the code but in the structure. In case of an exception or rejection, the unlock would never happen. While we are writing this code as a single function, no one prevents a programmer from refactoring it and making mistakes. The big rule of programming is to be safe by default and allow going to the unsafe versio only if it is essential for a certain use case. Here is a mistake that could happen:
+This solves the shared data problem by ensuring that only instance even of `take` or `pay` could access the data at a time. While logically this solution has no issues, there is a subtle problem that this introduces which is not in the code but in the structure. In case of an exception or rejection, the unlock would never happen. While we are writing this code as a single function, no one prevents a programmer from refactoring it and making mistakes. The big rule of programming is to be safe by default and allow going to the unsafe version only if it is essential for a certain use case. Here is a mistake that could happen:
 
 ```js
 async function work() {

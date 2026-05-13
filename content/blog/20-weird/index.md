@@ -32,7 +32,7 @@ Today's topic is around weird situations in life. Our speakers will be told abou
 * You take a sick leave for a game and your boss shows up at the stadium.
 * Your FB account gets hacked and the hacker offends your significant other.
 * You are caught sleeping in a meeting that was supposed to decide your promotion.
-* You are running late to an important flight and and see a cop car flashing its lights behind you.
+* You are running late to an important flight and see a cop car flashing its lights behind you.
 * You just moved to a new place and come to know that it is supposed to be haunted.
 * You are caught by a casino security team who thinks that you cheated in your winnings.
 * You are on board a 10 hour flight and you fear the guy sitting next to you has some wrong intentions.

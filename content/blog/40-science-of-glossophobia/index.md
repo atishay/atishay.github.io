@@ -18,7 +18,7 @@ I have some pamphlets distributed. No need to look at them right now.
 
 According to most studies, people’s number one fear is public speaking. Number two is death. Death is number two. Does that seem right? That means to the average person, if you have to go to a funeral, you’re better off in the casket than doing the eulogy.
 
-This was said by the comedian Jerry Seinfeld in 1993. 3 out of 4 Americans suffer from Glossophobia or the fear of public speaking. It leads to a 10% impairment of wages and 15% impairment in your promotion. This thing is very real. That is why we are all here right. Lets try and understand it. Glossophobia is a disease. It has its symptoms. As toastmasters all of us have given speeches. Lets discuss some symptoms of extreme stage freight out - raise your hand if you can state some.
+This was said by the comedian Jerry Seinfeld in 1993. 3 out of 4 Americans suffer from Glossophobia or the fear of public speaking. It leads to a 10% impairment of wages and 15% impairment in your promotion. This thing is very real. That is why we are all here right. Lets try and understand it. Glossophobia is a disease. It has its symptoms. As toastmasters all of us have given speeches. Lets discuss some symptoms of extreme stage fright out - raise your hand if you can state some.
 
 Now that we know these symptoms lets turn for some help from our friend Charles Darwin. Have a look at the bottom left of the pamphlet that I just gave you. You see this list. That's exactly what we feel on the stage right. Increased heart rate - you can hear it pounding, bladder relaxation - happens to some, tunnel vision - you are stuck frozen on the stage, shaking, dilated pupils - see the stars in broad daylight, flushed sweaty faces, dry mouth, slowed digestion - butterflies and hearing loss.
 
@@ -27,7 +27,7 @@ Darwin was not studying humans on the stage. He was studying animals in front of
 {{<fig alt="Fight or Flight" width="400" height="974" src="response.png" title="Fight or Flight Response" class="float-3" >}}
 
 
-Darwin talked extensively about the fight or flight response in animals what I call the freight response. When in danger the hypothalamus in the brain causes the pituitary gland to release adrenaline, the emergency hormone. And adrenaline can cause all these symptoms. We are in the adrenaline rush all the time on the stage. This heightens our senses and prepares us to run. We notice our mistakes more - did I just step on a twig and we want to run for our lives because when a pack of lions is after us, we rarely do recover.
+Darwin talked extensively about the fight or flight response in animals what I call the fright response. When in danger the hypothalamus in the brain causes the pituitary gland to release adrenaline, the emergency hormone. And adrenaline can cause all these symptoms. We are in the adrenaline rush all the time on the stage. This heightens our senses and prepares us to run. We notice our mistakes more - did I just step on a twig and we want to run for our lives because when a pack of lions is after us, we rarely do recover.
 
 Our lives are not at stake on the stage, but studies have shown that humans overestimate them. The social animals are scared of their credibility, their position in society and their legacy. Being ousted from the community is worse for the cave man than being killed. Because not only him, but his family would also suffer. The odds are much bigger. There is something worse than death - death of all you care for.
 
@@ -37,7 +37,7 @@ Glossophobia is a natural reaction that happens to everyone. We need to prepare 
 
 ## References:
 -	3 out of 4 Americans suffer from Glossophobia - Communicating for Results, a Guide for Business and the Professions (eighth edition). Belmont, CA: Thomson Wadsworth.
--	Symptoms of Stage Freight - Treating… social anxiety disorder https://www.academia.edu/2632777/ Garcia-Lopez (2013)
+-	Symptoms of Stage Fright - Treating… social anxiety disorder https://www.academia.edu/2632777/ Garcia-Lopez (2013)
 -	Fight or Flight - The Expression of the Emotions in Man and Animals – Charles Darwin (1872)
 -	Fear of public speaking has 10% impairment on your wages & 15% impairment on your promotion - Peter Khoury (Magnetic Speaking)
 -	Image from [Wikipedia](https://commons.wikimedia.org/wiki/File:The_Fight_or_Flight_Response.png)

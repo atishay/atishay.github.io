@@ -34,7 +34,7 @@ f(X) = AX + b
 Here `X` is an array of a huge set of numbers (3 million for a 1 megapixel image) and therefore A is also a huge array.
 
 ## Outputting probability
-You might have noticed once issue with the equation above. The value y needs to be between 0 & 1 as it is a probability. You never say you have a -10% confidence or are 200% sure. (We do say it but that doesn't make mathematical sense). But the maths needs a way to make sure that happens. Therefore we have to slightly change our equation to:
+You might have noticed one issue with the equation above. The value y needs to be between 0 & 1 as it is a probability. You never say you have a -10% confidence or are 200% sure. (We do say it but that doesn't make mathematical sense). But the maths needs a way to make sure that happens. Therefore we have to slightly change our equation to:
 
 ```
 f(X) = g(AX + b)
