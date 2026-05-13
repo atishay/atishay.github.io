@@ -42,11 +42,19 @@ taxonomies:
   tag: tags
   series: series
 
+outputFormats:
+  llmstxt:
+    mediaType: text/plain
+    baseName: llms
+    isPlainText: true
+    notAlternative: true
+
 outputs:
   home:
   - html
   - rss
   - json
+  - llmstxt
 canonifyURLs: true
 markup:
   goldmark:
