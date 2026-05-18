@@ -456,29 +456,97 @@
         .floor-texture-mid { fill: url(#floor-texture-dark-mid); }
         .floor-texture-near { fill: url(#floor-texture-dark-near); }
       }
-      /* Outfit: 0–10s red/jeans (casual), then 10–11.2s shirt and jeans crossfade together to blue (formal) */
-      @keyframes outfit-casual-fade-out {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-      @keyframes outfit-formal-fade-in {
-        0% { opacity: 0; }
+      /* 4-persona outfit cycle: 10s total. Each phase ~2.5s with 0.5s crossfade overlap at transitions */
+      @keyframes outfit-show-1 {
+        0%   { opacity: 1; }
+        20%  { opacity: 1; }
+        30%  { opacity: 0; }
+        95%  { opacity: 0; }
         100% { opacity: 1; }
       }
-      .outfit-casual { opacity: 1; animation: outfit-casual-fade-out 0.25s 10s forwards; }
-      .outfit-formal { opacity: 0; animation: outfit-formal-fade-in 0.25s 10s forwards; }
-      /* Keep motion when outfit and motion classes are on same element (animation shorthand overwrites) */
-      .outfit-casual.anim-chair-lean { animation: outfit-casual-fade-out 0.25s 10s forwards, chair-lean 10s ease-in-out infinite; }
-      .outfit-formal.anim-chair-lean { animation: outfit-formal-fade-in 0.25s 10s forwards, chair-lean 10s ease-in-out infinite; }
-      .outfit-casual.anim-hand-move { animation: outfit-casual-fade-out 0.25s 10s forwards, hand-move 5.5s ease-in-out infinite; }
-      .outfit-formal.anim-hand-move { animation: outfit-formal-fade-in 0.25s 10s forwards, hand-move 5.5s ease-in-out infinite; }
+      @keyframes outfit-show-2 {
+        0%   { opacity: 0; }
+        20%  { opacity: 0; }
+        30%  { opacity: 1; }
+        45%  { opacity: 1; }
+        55%  { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      @keyframes outfit-show-3 {
+        0%   { opacity: 0; }
+        45%  { opacity: 0; }
+        55%  { opacity: 1; }
+        70%  { opacity: 1; }
+        80%  { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      @keyframes outfit-show-4 {
+        0%   { opacity: 0; }
+        70%  { opacity: 0; }
+        80%  { opacity: 1; }
+        95%  { opacity: 1; }
+        100% { opacity: 0; }
+      }
+      .outfit-programmer { opacity: 1; animation: outfit-show-1 10s linear infinite; }
+      .outfit-architect  { opacity: 0; animation: outfit-show-2 10s linear infinite; }
+      .outfit-business   { opacity: 0; animation: outfit-show-3 10s linear infinite; }
+      .outfit-author     { opacity: 0; animation: outfit-show-4 10s linear infinite; }
+      .outfit-programmer.anim-chair-lean { animation: outfit-show-1 10s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-architect.anim-chair-lean  { animation: outfit-show-2 10s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-business.anim-chair-lean   { animation: outfit-show-3 10s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-author.anim-chair-lean     { animation: outfit-show-4 10s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-programmer.anim-hand-move  { animation: outfit-show-1 10s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-architect.anim-hand-move   { animation: outfit-show-2 10s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-business.anim-hand-move    { animation: outfit-show-3 10s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-author.anim-hand-move      { animation: outfit-show-4 10s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      /* Screen content cycling (synced with outfit phases) */
+      .screen-programmer { opacity: 1; animation: outfit-show-1 10s linear infinite; }
+      .screen-architect  { opacity: 0; animation: outfit-show-2 10s linear infinite; }
+      .screen-business   { opacity: 0; animation: outfit-show-3 10s linear infinite; }
+      .screen-author     { opacity: 0; animation: outfit-show-4 10s linear infinite; }
+      /* Combined: screen phase + monitor scroll (shorthand overwrites, so must list both) */
+      .screen-programmer.anim-code-scroll   { animation: outfit-show-1 10s linear infinite, code-scroll 14s linear infinite; }
+      .screen-programmer.anim-laptop-scroll { animation: outfit-show-1 10s linear infinite, laptop-scroll 14s linear infinite; }
+      /* PPT slide page-flip animation (8s per slide during business phase) */
+      @keyframes ppt-page-flip-1 {
+        0%   { opacity: 1; }
+        38%  { opacity: 1; }
+        45%  { opacity: 0; }
+        93%  { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @keyframes ppt-page-flip-2 {
+        0%   { opacity: 0; }
+        38%  { opacity: 0; }
+        45%  { opacity: 1; }
+        88%  { opacity: 1; }
+        95%  { opacity: 0; }
+        100% { opacity: 0; }
+      }
+      .ppt-slide-1 { animation: ppt-page-flip-1 3s ease-in-out infinite; }
+      .ppt-slide-2 { animation: ppt-page-flip-2 3s ease-in-out infinite; }
+      .role-programmer { opacity: 1; animation: outfit-show-1 10s linear infinite; }
+      .role-architect  { opacity: 0; animation: outfit-show-2 10s linear infinite; }
+      .role-business   { opacity: 0; animation: outfit-show-3 10s linear infinite; }
+      .role-author     { opacity: 0; animation: outfit-show-4 10s linear infinite; }
+      /* Seamless content scrolling for architect and author screen phases */
+      @keyframes flowchart-scroll {
+        0%   { transform: translateY(0); }
+        100% { transform: translateY(-78px); }
+      }
+      @keyframes doc-text-scroll {
+        0%   { transform: translateY(0); }
+        100% { transform: translateY(-62px); }
+      }
+      .anim-flowchart-scroll { animation: flowchart-scroll 20s linear infinite; }
+      .anim-doc-scroll       { animation: doc-text-scroll 18s linear infinite; }
       #laptop-glare { opacity: 0.32; }
       @media (prefers-color-scheme: dark) {
         #character-shadow { opacity: 0.55; }
       }
     </style>
     <clipPath id="code-scroll-clip">
-      <rect x="314" y="109" width="198" height="92"/>
+      <rect x="314" y="109" width="184" height="92"/>
     </clipPath>
     <clipPath id="laptop-scroll-clip">
       <use href="#laptop-screen"/>
@@ -567,8 +635,13 @@
       <use href="#floor-grain-dark"/>
     </pattern>
   </defs>
+  <!-- ============================================================ -->
+  <!-- SECTION 2: SCENE — background, floor, whiteboard, desk,     -->
+  <!--            character (4 outfits), laptop, accessories        -->
+  <!-- ============================================================ -->
   <g class="st5">
     <g id="Layer_11">
+      <!-- 2a: Scene background -->
       <rect class="scene-bg" x="0" y="-72" width="779.93" height="622" rx="24" ry="24"/>
       <rect class="scene-bg scene-bg-pulse anim-bg-pulse" x="0" y="-72" width="779.93" height="622" rx="24" ry="24"/>
       <g id="wooden-floor" aria-label="Wooden floor">
@@ -577,6 +650,42 @@
         <rect class="floor-texture-mid" x="0" y="394" width="779.93" height="82" rx="0" ry="0"/>
         <rect class="floor-texture-near" x="0" y="471" width="779.93" height="100" rx="0" ry="0"/>
       </g>
+      <!-- Wall nameplate: Atishay Jain + cycling persona role -->
+      <g id="wall-nameplate">
+        <!-- Drop shadow -->
+        <rect x="292" y="3" width="232" height="54" rx="5" ry="5" fill="rgba(0,0,0,0.10)" transform="translate(2,3)"/>
+        <!-- Plate body -->
+        <rect x="292" y="3" width="232" height="54" rx="5" ry="5" fill="#f0e8d8" stroke="rgba(80,55,30,0.20)" stroke-width="1"/>
+        <!-- Inner border -->
+        <rect x="297" y="8" width="222" height="44" rx="3" ry="3" fill="none" stroke="rgba(80,55,30,0.12)" stroke-width="0.8"/>
+        <!-- Name text (dark ink) -->
+        <text x="408" y="30" text-anchor="middle"
+              font-family="Georgia,'Times New Roman',serif"
+              font-size="19" font-weight="bold" letter-spacing="0.5"
+              fill="#1a2535">Atishay Jain</text>
+        <!-- Role subtitle cycling per persona -->
+        <g class="role-programmer">
+          <text x="408" y="46" text-anchor="middle"
+                font-family="'Courier New',Courier,monospace"
+                font-size="9" letter-spacing="3.5" fill="#2a6a3a">DEVELOPER</text>
+        </g>
+        <g class="role-architect">
+          <text x="408" y="46" text-anchor="middle"
+                font-family="'Courier New',Courier,monospace"
+                font-size="9" letter-spacing="3.5" fill="#1e4a8e">ARCHITECT</text>
+        </g>
+        <g class="role-business">
+          <text x="408" y="46" text-anchor="middle"
+                font-family="'Courier New',Courier,monospace"
+                font-size="9" letter-spacing="3.5" fill="#8a5800">STRATEGIST</text>
+        </g>
+        <g class="role-author">
+          <text x="408" y="46" text-anchor="middle"
+                font-family="'Courier New',Courier,monospace"
+                font-size="9" letter-spacing="3.5" fill="#7a3010">AUTHOR</text>
+        </g>
+      </g>
+      <!-- 2b: Whiteboard (left panel) -->
       <g id="whiteboard-area">
         <rect class="st28" x="112.88" y="131.34" width="66.12" height="142.22"/>
         <g>
@@ -620,6 +729,7 @@
         </g>
         <polygon class="st7" points="218.09 78.09 152.4 219.8 80.16 219.8 145.33 78.09 218.09 78.09"/>
       </g>
+      <!-- 2d: Character — head, hair, facial features -->
       <g id="character-head" class="anim-chair-lean" aria-label="Character head" style="transform-origin: 248px 388px">
         <path id="hair-front" class="st62 anim-hair-sway" style="transform-origin: 255px 12px" d="M265.54,7.55l10.67,8.4c7.73,6.09,10.49,18.7,6.37,29-.82,2.05-1.33,3.37-1.23,3.22.4-.59-16.35-40.45-16.35-40.45"/>
         <path id="hair-stray" class="st2 anim-hair-sway" style="transform-origin: 266px 10px" d="M268,11 l3,2 -1,10 -2,1 -1,-11 z" fill="#2c1810" opacity=".88"/>
@@ -655,6 +765,7 @@
           <rect class="st27" x="32.49" y="351.75" width="84.82" height="17.07"/>
           <rect class="st27" x="103.66" y="293.69" width="19.29" height="240.46"/>
           <rect class="st27" x="26.19" y="292.25" width="19.29" height="241.9"/>
+          <!-- 2c: Desk monitors + screen content per persona -->
           <g id="desk-monitors" aria-label="Desk monitors">
             <rect id="small-monitor-screen" class="st12" x="383.14" y="132.17" width="63.67" height="136.96"/>
             <g id="main-monitor">
@@ -666,7 +777,7 @@
                 <path class="st53" d="M507.3,220.24v6.75c0,7.08-4.17,13.19-10.19,15.99-2.26,1.06-4.79,1.65-7.45,1.65h-173.99c-9.74,0-17.63-7.9-17.63-17.64v-6.75h209.26Z"/>
               </g>
               <g id="monitor-code-area" clip-path="url(#code-scroll-clip)">
-                <g id="monitor-code-scroll" class="anim-code-scroll" style="transform-origin: 400px 140px">
+                <g id="monitor-code-scroll" class="anim-code-scroll screen-programmer" style="transform-origin: 400px 140px">
                   <g>
                     <rect class="st49" x="316.86" y="109.63" width="65.03" height="2.25"/>
                     <rect class="st33" x="410.09" y="109.63" width="30.79" height="2.25"/>
@@ -771,6 +882,119 @@
                   </g>
                 </g>
               </g>
+              <!-- Architect: architecture flowchart on dark screen -->
+              <!-- Architect: scrolling architecture flowchart (seamless loop) -->
+              <g id="screen-content-architect" class="screen-architect" clip-path="url(#code-scroll-clip)">
+                <rect fill="#0e1820" x="314" y="109" width="184" height="92"/>
+                <g class="anim-flowchart-scroll">
+                  <!-- Copy 1: y=109–187, centered at x=413 (47px margins each side) -->
+                  <!-- Node 1 (blue process box) -->
+                  <rect fill="#1a4060" stroke="#4a9eed" stroke-width="0.8" x="371" y="109" width="84" height="16" rx="2"/>
+                  <rect fill="#4a9eed" x="377" y="112" width="44" height="4" rx="1"/>
+                  <rect fill="#3a82cc" x="377" y="118" width="28" height="3" rx="1"/>
+                  <!-- Arrow down -->
+                  <line x1="413" y1="125" x2="413" y2="131" stroke="#6aadee" stroke-width="0.8"/>
+                  <polygon fill="#6aadee" points="410,130 413,134 416,130"/>
+                  <!-- Diamond decision -->
+                  <polygon fill="#0e2438" stroke="#4a9eed" stroke-width="0.8" points="413,134 437,144 413,154 389,144"/>
+                  <rect fill="#9ac4e8" x="399" y="141" width="28" height="3" rx="1"/>
+                  <!-- Arrow down from diamond -->
+                  <line x1="413" y1="154" x2="413" y2="160" stroke="#6aadee" stroke-width="0.8"/>
+                  <polygon fill="#6aadee" points="410,159 413,163 416,159"/>
+                  <!-- Node 2 (green result box) -->
+                  <rect fill="#1a3828" stroke="#4aee88" stroke-width="0.8" x="371" y="163" width="84" height="16" rx="2"/>
+                  <rect fill="#4aee88" x="377" y="166" width="44" height="4" rx="1"/>
+                  <rect fill="#3acc70" x="377" y="172" width="28" height="3" rx="1"/>
+                  <!-- Continuation dash -->
+                  <line x1="413" y1="179" x2="413" y2="187" stroke="#6aadee" stroke-width="0.7" stroke-dasharray="2,2"/>
+
+                  <!-- Copy 2: +78px — seamless loop -->
+                  <rect fill="#1a4060" stroke="#4a9eed" stroke-width="0.8" x="371" y="187" width="84" height="16" rx="2"/>
+                  <rect fill="#4a9eed" x="377" y="190" width="44" height="4" rx="1"/>
+                  <rect fill="#3a82cc" x="377" y="196" width="28" height="3" rx="1"/>
+                  <line x1="413" y1="203" x2="413" y2="209" stroke="#6aadee" stroke-width="0.8"/>
+                  <polygon fill="#6aadee" points="410,208 413,212 416,208"/>
+                  <polygon fill="#0e2438" stroke="#4a9eed" stroke-width="0.8" points="413,212 437,222 413,232 389,222"/>
+                  <rect fill="#9ac4e8" x="399" y="219" width="28" height="3" rx="1"/>
+                  <line x1="413" y1="232" x2="413" y2="238" stroke="#6aadee" stroke-width="0.8"/>
+                  <polygon fill="#6aadee" points="410,237 413,241 416,237"/>
+                  <rect fill="#1a3828" stroke="#4aee88" stroke-width="0.8" x="371" y="241" width="84" height="16" rx="2"/>
+                  <rect fill="#4aee88" x="377" y="244" width="44" height="4" rx="1"/>
+                  <rect fill="#3acc70" x="377" y="250" width="28" height="3" rx="1"/>
+                  <line x1="413" y1="257" x2="413" y2="265" stroke="#6aadee" stroke-width="0.7" stroke-dasharray="2,2"/>
+                </g>
+              </g>
+              <!-- Business: PowerPoint slides with bar chart and pie chart (page flip) -->
+              <g id="screen-content-business" class="screen-business" clip-path="url(#code-scroll-clip)">
+                <!-- Slide 1: bar chart -->
+                <g class="ppt-slide-1">
+                  <rect fill="#1e2a3e" x="314" y="109" width="184" height="92"/>
+                  <rect fill="#2c4a8e" x="314" y="109" width="184" height="18"/>
+                  <rect fill="#ffffff" x="322" y="112" width="88" height="7" rx="1"/>
+                  <rect fill="rgba(255,255,255,0.4)" x="322" y="121" width="55" height="4" rx="1"/>
+                  <line x1="326" y1="193" x2="480" y2="193" stroke="#5a6a8a" stroke-width="0.8"/>
+                  <rect fill="#4a9eed" x="330" y="155" width="22" height="38"/>
+                  <rect fill="#ea5444" x="360" y="163" width="22" height="30"/>
+                  <rect fill="#ffbe62" x="390" y="158" width="22" height="35"/>
+                  <rect fill="#65b15b" x="420" y="161" width="22" height="32"/>
+                  <rect fill="#9b59b6" x="450" y="149" width="22" height="44"/>
+                  <rect fill="rgba(74,158,237,0.3)" x="330" y="153" width="22" height="2"/>
+                  <rect fill="rgba(234,84,68,0.3)" x="360" y="161" width="22" height="2"/>
+                  <rect fill="rgba(255,190,98,0.3)" x="390" y="156" width="22" height="2"/>
+                  <rect fill="rgba(101,177,91,0.3)" x="420" y="159" width="22" height="2"/>
+                  <rect fill="rgba(155,89,182,0.3)" x="450" y="147" width="22" height="2"/>
+                </g>
+                <!-- Slide 2: pie chart / metrics -->
+                <g class="ppt-slide-2">
+                  <rect fill="#1e2a3e" x="314" y="109" width="184" height="92"/>
+                  <rect fill="#8e2c2c" x="314" y="109" width="184" height="18"/>
+                  <rect fill="#ffffff" x="322" y="112" width="75" height="7" rx="1"/>
+                  <rect fill="rgba(255,255,255,0.4)" x="322" y="121" width="50" height="4" rx="1"/>
+                  <circle cx="375" cy="165" r="26" fill="none" stroke="#4a9eed" stroke-width="12" stroke-dasharray="40 44" stroke-dashoffset="0"/>
+                  <circle cx="375" cy="165" r="26" fill="none" stroke="#ea5444" stroke-width="12" stroke-dasharray="24 60" stroke-dashoffset="-40"/>
+                  <circle cx="375" cy="165" r="26" fill="none" stroke="#65b15b" stroke-width="12" stroke-dasharray="20 64" stroke-dashoffset="-64"/>
+                  <circle cx="375" cy="165" r="12" fill="#1e2a3e"/>
+                  <rect fill="#4a9eed" x="415" y="140" width="8" height="8" rx="1"/>
+                  <rect fill="#aac8e8" x="426" y="142" width="60" height="4" rx="1"/>
+                  <rect fill="#ea5444" x="415" y="155" width="8" height="8" rx="1"/>
+                  <rect fill="#aac8e8" x="426" y="157" width="50" height="4" rx="1"/>
+                  <rect fill="#65b15b" x="415" y="170" width="8" height="8" rx="1"/>
+                  <rect fill="#aac8e8" x="426" y="172" width="55" height="4" rx="1"/>
+                  <rect fill="#aac8e8" x="415" y="185" width="75" height="4" rx="1"/>
+                  <rect fill="#aac8e8" x="415" y="191" width="55" height="4" rx="1"/>
+                </g>
+              </g>
+              <!-- Author: seamless scrolling manuscript (two copies stacked 62px apart) -->
+              <g id="screen-content-author" class="screen-author" clip-path="url(#code-scroll-clip)">
+                <!-- Fixed background + title bar -->
+                <rect fill="#f5f0e8" x="314" y="109" width="184" height="92"/>
+                <rect fill="#e0d8c8" x="314" y="109" width="184" height="11"/>
+                <rect fill="#3a3020" x="338" y="112" width="62" height="4" rx="1"/>
+                <rect fill="#8a7a60" x="406" y="112" width="40" height="4" rx="1"/>
+                <!-- Scrolling text – two copies, 62px apart for seamless loop -->
+                <g class="anim-doc-scroll">
+                  <!-- Copy 1: y=121 to y=183 -->
+                  <rect fill="#3a3a3a" x="320" y="121" width="168" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="129" width="150" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="137" width="162" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="145" width="136" height="4" rx="1"/>
+                  <rect fill="#c8c0a8" x="320" y="152" width="168" height="1"/>
+                  <rect fill="#3a3a3a" x="320" y="155" width="164" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="163" width="145" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="171" width="160" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="179" width="90" height="4" rx="1"/>
+                  <!-- Copy 2: exactly +62px for seamless loop -->
+                  <rect fill="#3a3a3a" x="320" y="183" width="152" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="191" width="168" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="199" width="140" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="207" width="160" height="4" rx="1"/>
+                  <rect fill="#c8c0a8" x="320" y="214" width="168" height="1"/>
+                  <rect fill="#3a3a3a" x="320" y="217" width="168" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="225" width="148" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="233" width="158" height="4" rx="1"/>
+                  <rect fill="#3a3a3a" x="320" y="241" width="95" height="4" rx="1"/>
+                </g>
+              </g>
             </g>
             <path class="st20" d="M359.99,263.25h85.35c2.62,0,4.74,2.12,4.74,4.74h0c0,2.62-2.12,4.74-4.74,4.74h-85.35c-2.62,0-4.74-2.12-4.74-4.74h0c0-2.62,2.12-4.74,4.74-4.74Z"/>
           </g>
@@ -804,7 +1028,7 @@
                 <line class="st24" x1="316.71" y1="532.29" x2="324.04" y2="524.5"/>
                 <line class="st24" x1="321.83" y1="535.32" x2="330.08" y2="526.5"/>
               </g>
-              <path id="left-leg" class="st59 outfit-formal" d="M276.16,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z" aria-label="Left leg"/>
+              <path id="left-leg" class="st59 outfit-business" d="M276.16,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z" aria-label="Left leg"/>
               <g>
                 <path class="st43" d="M333.65,545.9l62.19.43c3.71.03,6.74-2.96,6.76-6.67h0c.02-2.86-1.77-5.41-4.46-6.37l-30.7-10.95-33.64.59-.16,22.97h.01Z"/>
                 <path class="st36" d="M397.08,548.06l-63.96.03v-4.51l68.47-.03h0c0,2.49-2.02,4.51-4.51,4.51h0Z"/>
@@ -814,22 +1038,22 @@
                 <line class="st24" x1="372.05" y1="533.69" x2="379.35" y2="525.88"/>
                 <line class="st24" x1="377.17" y1="536.71" x2="385.39" y2="527.85"/>
               </g>
-              <path id="right-leg" class="st59 outfit-formal" d="M331.41,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z" aria-label="Right leg"/>
+              <path id="right-leg" class="st59 outfit-business" d="M331.41,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z" aria-label="Right leg"/>
             </g>
-            <path id="hip" class="st59 outfit-formal" d="M278.19,344.34c0,6.79-2.42,13.02-6.44,17.87-5.14,6.23-12.93,10.2-21.65,10.2h-47.2c-1.4,0-2.78-.1-4.12-.31-3.46-.49-6.72-1.64-9.65-3.3-.52-.28-1.03-.6-1.52-.93-7.69-5-12.78-13.68-12.78-23.53l.87-14.98,101.68-.88.82,15.86h-.01Z" aria-label="Hip"/>
+            <path id="hip" class="st59 outfit-business" d="M278.19,344.34c0,6.79-2.42,13.02-6.44,17.87-5.14,6.23-12.93,10.2-21.65,10.2h-47.2c-1.4,0-2.78-.1-4.12-.31-3.46-.49-6.72-1.64-9.65-3.3-.52-.28-1.03-.6-1.52-.93-7.69-5-12.78-13.68-12.78-23.53l.87-14.98,101.68-.88.82,15.86h-.01Z" aria-label="Hip"/>
             <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
               <g>
                 <g>
-                  <path class="st31 outfit-formal" d="M310.61,264.34l24.33-3.89c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-24.33,3.89c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71h0Z"/>
-                  <path class="st31 outfit-formal" d="M318.36,270.92l19.54-3.12c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-19.54,3.12c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
-                  <path class="st31 outfit-formal" d="M313.85,279.45l23.12-3.7c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-23.12,3.7c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
+                  <path class="st31 outfit-business" d="M310.61,264.34l24.33-3.89c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-24.33,3.89c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71h0Z"/>
+                  <path class="st31 outfit-business" d="M318.36,270.92l19.54-3.12c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-19.54,3.12c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
+                  <path class="st31 outfit-business" d="M313.85,279.45l23.12-3.7c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-23.12,3.7c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
                 </g>
-                <path id="other-hand-formal" class="st31 outfit-formal" d="M321.12,258.05c-.26.03-3.25,0-6.48-.06-5.58-.09-11.11,1.15-16.12,3.61l-9.6,4.72s5.5,16.31,6.25,16.45c18.5,3.34,24.85-5.06,24.85-5.06l1.1-19.66h0Z" aria-label="Other hand"/>
+                <path id="other-hand-formal" class="st31 outfit-business" d="M321.12,258.05c-.26.03-3.25,0-6.48-.06-5.58-.09-11.11,1.15-16.12,3.61l-9.6,4.72s5.5,16.31,6.25,16.45c18.5,3.34,24.85-5.06,24.85-5.06l1.1-19.66h0Z" aria-label="Other hand"/>
               </g>
-              <rect class="st39 outfit-formal" x="298.58" y="257.99" width="8.21" height="26.69"/>
+              <rect class="st39 outfit-business" x="298.58" y="257.99" width="8.21" height="26.69"/>
             </g>
-            <g class="outfit-formal"><path class="st59" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/></g>
-            <g class="outfit-casual anim-chair-lean" style="transform-origin: 248px 388px">
+            <g class="outfit-business"><path class="st59" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/></g>
+            <g class="outfit-programmer anim-chair-lean" style="transform-origin: 248px 388px">
               <!-- Other hand (casual) drawn first so it appears behind the other arm -->
               <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
                 <path id="other-hand-casual" class="st10" d="M321.12,258.05c-.26.03-3.25,0-6.48-.06-5.58-.09-11.11,1.15-16.12,3.61l-9.6,4.72s5.5,16.31,6.25,16.45c18.5,3.34,24.85-5.06,24.85-5.06l1.1-19.66h0Z" aria-label="Other hand (behind other arm)"/>
@@ -850,8 +1074,53 @@
               <path class="st65" d="M331.41,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
               <path class="st65" d="M278.19,344.34c0,6.79-2.42,13.02-6.44,17.87-5.14,6.23-12.93,10.2-21.65,10.2h-47.2c-1.4,0-2.78-.1-4.12-.31-3.46-.49-6.72-1.64-9.65-3.3-.52-.28-1.03-.6-1.52-.93-7.69-5-12.78-13.68-12.78-23.53l.87-14.98,101.68-.88.82,15.86h-.01Z"/>
             </g>
-            <g class="anim-chair-lean outfit-formal" style="transform-origin: 248px 388px">
+            <!-- 2e: Outfits (4 personas cycling every 10s) -->
+            <!-- ===== ARCHITECT outfit: blue polo + khaki pants ===== -->
+            <g class="outfit-architect anim-chair-lean" style="transform-origin: 248px 388px">
+              <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
+                <path class="st10" d="M321.12,258.05c-.26.03-3.25,0-6.48-.06-5.58-.09-11.11,1.15-16.12,3.61l-9.6,4.72s5.5,16.31,6.25,16.45c18.5,3.34,24.85-5.06,24.85-5.06l1.1-19.66h0Z"/>
+              </g>
+              <path fill="#1D4D7E" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/>
+              <path fill="#2E6DA4" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
+              <polygon fill="#2E6DA4" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98"/>
+              <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
+                <path fill="#2E6DA4" d="M310.61,264.34l24.33-3.89c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-24.33,3.89c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71h0Z"/>
+                <path fill="#2E6DA4" d="M318.36,270.92l19.54-3.12c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-19.54,3.12c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
+                <rect fill="#2E6DA4" x="298.58" y="257.99" width="8.21" height="26.69"/>
+              </g>
+              <path fill="#1D4D7E" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
+              <path fill="#1D4D7E" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
+              <path fill="#BFA980" d="M276.16,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
+              <path fill="#BFA980" d="M331.41,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
+              <path fill="#BFA980" d="M278.19,344.34c0,6.79-2.42,13.02-6.44,17.87-5.14,6.23-12.93,10.2-21.65,10.2h-47.2c-1.4,0-2.78-.1-4.12-.31-3.46-.49-6.72-1.64-9.65-3.3-.52-.28-1.03-.6-1.52-.93-7.69-5-12.78-13.68-12.78-23.53l.87-14.98,101.68-.88.82,15.86h-.01Z"/>
+            </g>
+            <!-- ===== AUTHOR outfit: warm brown sweater + blue jeans ===== -->
+            <g class="outfit-author anim-chair-lean" style="transform-origin: 248px 388px">
+              <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
+                <path class="st10" d="M321.12,258.05c-.26.03-3.25,0-6.48-.06-5.58-.09-11.11,1.15-16.12,3.61l-9.6,4.72s5.5,16.31,6.25,16.45c18.5,3.34,24.85-5.06,24.85-5.06l1.1-19.66h0Z"/>
+              </g>
+              <path fill="#5C3520" d="M244.76,287.58c-19.36,0-37.07-11.3-45.2-28.91l-.4-.87-25.35-77.4,31.22-10.22,24.7,75.42c2.93,5.63,8.82,9.19,15.2,9.12l53.84-.53.33,32.85-53.84.53h-.5Z"/>
+              <path fill="#7A4A2C" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
+              <polygon fill="#7A4A2C" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98"/>
+              <g class="anim-other-arm-up" style="transform-origin: 310px 270px">
+                <path fill="#7A4A2C" d="M310.61,264.34l24.33-3.89c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-24.33,3.89c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71h0Z"/>
+                <path fill="#7A4A2C" d="M318.36,270.92l19.54-3.12c1.78-.28,3-1.97,2.71-3.75h0c-.28-1.78-1.97-3-3.75-2.71l-19.54,3.12c-1.78.28-3,1.97-2.71,3.75h0c.28,1.78,1.97,3,3.75,2.71Z"/>
+                <rect fill="#7A4A2C" x="298.58" y="257.99" width="8.21" height="26.69"/>
+              </g>
+              <path fill="#5C3520" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
+              <path fill="#5C3520" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
+              <path fill="#8B6942" d="M276.16,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
+              <path fill="#8B6942" d="M331.41,523.92c3.61-60.67,2.64-116.75-2.09-128.11-4.85-7.05-42.63-22.34-80.39-23.99l17.67-38.58c49.53,2.49,84.93,21.07,97.31,42.31,5.23,8.96,9.77,27.05,7.32,88.91-1.28,32.4-2.86,57.78-2.86,57.78l-36.96,1.68h0Z"/>
+              <path fill="#8B6942" d="M278.19,344.34c0,6.79-2.42,13.02-6.44,17.87-5.14,6.23-12.93,10.2-21.65,10.2h-47.2c-1.4,0-2.78-.1-4.12-.31-3.46-.49-6.72-1.64-9.65-3.3-.52-.28-1.03-.6-1.52-.93-7.69-5-12.78-13.68-12.78-23.53l.87-14.98,101.68-.88.82,15.86h-.01Z"/>
+            </g>
+            <g class="anim-chair-lean outfit-business" style="transform-origin: 248px 388px">
               <path class="st42" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
+            </g>
+            <g class="anim-chair-lean outfit-architect" style="transform-origin: 248px 388px">
+              <path fill="#2E6DA4" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
+            </g>
+            <g class="anim-chair-lean outfit-author" style="transform-origin: 248px 388px">
+              <path fill="#7A4A2C" d="M286.89,180.21l-.61,68.96-.77,87.8s-1.89,2.12-7.54,5.08c-4.9,2.58-12.59,5.8-24.32,8.85-13.67,3.55-32.91,4.1-49.35,3.69-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,2.78-.48,5.63-.73,8.56-.73h16.64c27.18,0,49.22,22.04,49.22,49.22h-.01Z"/>
             </g>
             <g>
               <g>
@@ -881,10 +1150,20 @@
             <g class="anim-chair-lean" style="transform-origin: 248px 388px">
               <path class="st34" d="M192,371.04h112.87c9.66,0,17.5,7.84,17.5,17.5h0c0,9.66-7.84,17.5-17.5,17.5h-112.87c-9.66,0-17.5-7.84-17.5-17.5h0c0-9.66,7.84-17.5,17.5-17.5Z"/>
             </g>
-            <g class="anim-chair-lean outfit-formal" style="transform-origin: 248px 388px">
+            <g class="anim-chair-lean outfit-business" style="transform-origin: 248px 388px">
               <path class="st59" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
               <polygon class="st39" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98"/>
               <path class="st59" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
+            </g>
+            <g class="anim-chair-lean outfit-architect" style="transform-origin: 248px 388px">
+              <path fill="#1D4D7E" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
+              <polygon fill="#2E6DA4" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98"/>
+              <path fill="#1D4D7E" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
+            </g>
+            <g class="anim-chair-lean outfit-author" style="transform-origin: 248px 388px">
+              <path fill="#5C3520" d="M198.41,175.03c-2.19,31.66,3.98,145.85,5.89,179.58-18.14-.45-32.86-2.04-32.86-2.04l.38-172.35c0-24.25,17.56-44.43,40.66-48.49,0,0-11.5,6.01-14.07,43.3h0Z"/>
+              <polygon fill="#7A4A2C" points="255 133.98 204.23 133.98 204.23 119.79 255 125.79 255 133.98"/>
+              <path fill="#5C3520" d="M286.28,249.17l-.77,87.8s-1.89,2.12-7.54,5.08l-11.69-132.33s10.72,26.78,20,39.44h0Z"/>
             </g>
             <g class="anim-chair-lean" style="transform-origin: 248px 388px">
               <path class="st34" d="M173.04,383.94l-23.58-164.71c-1.05-7.34,4.46-14.15,12.24-15.14h0c7.78-.99,15.01,4.2,16.06,11.54l23.58,164.71c1.05,7.34-4.46,14.15-12.24,15.14h0c-7.78.99-11.81,6.49-16.06-11.54Z"/>
@@ -893,12 +1172,13 @@
         </g>
         <path id="character-shadow" class="st9" d="M507,187.77l-5.81,32.47-4.08,22.74c-2.26,1.06-4.79,1.65-7.45,1.65h-55c5.22-5.4,13.98-14.47,23.41-24.39,14.69-15.44,31.02-32.93,38.26-41.81l10.67,9.34h0Z"/>
       </g>
+      <!-- 2f: Laptop -->
       <g id="laptop">
         <path class="st33" d="M476.77,271.73h108.86c.61-.87,1.08-1.85,1.37-2.91l24.36-87.92c1.17-4.19-1.98-8.34-6.33-8.34h-95.78c-2.95,0-5.54,1.98-6.33,4.82l-26.15,94.36h0Z"/>
         <path class="st23" d="M606.16,177.76l-24.34,87.84c-1.13,4.09-4.85,6.92-9.1,6.92h-102.14l27.24-98.28c.79-2.84,3.37-4.81,6.32-4.81h95.69c4.35,0,7.49,4.14,6.33,8.33h0Z"/>
         <path class="st16" id="laptop-screen" d="M600.78,181.62l-19.89,71.63-4.17,15h-101.33l4.16-15,20.81-74.89c.73-2.63,3.13-4.45,5.87-4.45h88.7c4.02,0,6.94,3.84,5.87,7.71h-.02Z"/>
         <g id="laptop-code-area" clip-path="url(#laptop-scroll-clip)">
-          <g id="laptop-code-scroll" class="anim-laptop-scroll" style="transform-origin: 540px 215px">
+          <g id="laptop-code-scroll" class="anim-laptop-scroll screen-programmer" style="transform-origin: 540px 215px">
             <g>
               <g>
                 <polygon class="st19" points="541.09 183.66 509.9 183.66 510.6 181.46 541.78 181.46 541.09 183.66"/>
@@ -1016,6 +1296,67 @@
               </g>
             </g>
           </g>
+          <!-- Laptop: Architect phase — terminal-style flowchart diagram -->
+          <g class="screen-architect" style="transform: skewX(-15.64deg); transform-origin: 540px 217px">
+            <rect fill="#0e1a28" x="488" y="178" width="108" height="75"/>
+            <rect fill="#1e4a6e" stroke="#4a9eed" stroke-width="0.7" x="506" y="185" width="52" height="11" rx="2"/>
+            <rect fill="#4a9eed" x="510" y="187" width="30" height="4" rx="1"/>
+            <rect fill="#4a9eed" x="510" y="192" width="18" height="3" rx="1"/>
+            <line x1="532" y1="196" x2="532" y2="202" stroke="#6aadee" stroke-width="0.7"/>
+            <polygon fill="#0e2a40" stroke="#4a9eed" stroke-width="0.7" points="532,202 544,208 532,214 520,208"/>
+            <rect fill="#aac8e8" x="522" y="205" width="20" height="3" rx="1"/>
+            <line x1="544" y1="208" x2="556" y2="208" stroke="#6aadee" stroke-width="0.7"/>
+            <rect fill="#1e4a6e" stroke="#4a9eed" stroke-width="0.7" x="556" y="203" width="36" height="11" rx="2"/>
+            <rect fill="#4a9eed" x="559" y="205" width="22" height="4" rx="1"/>
+            <line x1="532" y1="214" x2="532" y2="220" stroke="#6aadee" stroke-width="0.7"/>
+            <rect fill="#1e4a6e" stroke="#6aadee" stroke-width="0.7" x="506" y="220" width="52" height="11" rx="2"/>
+            <rect fill="#6aadee" x="510" y="222" width="34" height="4" rx="1"/>
+            <rect fill="#4a9eed" x="510" y="227" width="22" height="3" rx="1"/>
+          </g>
+          <!-- Laptop: Business phase — mini dashboard / spreadsheet -->
+          <g class="screen-business" style="transform: skewX(-15.64deg); transform-origin: 540px 217px">
+            <rect fill="#10172a" x="488" y="178" width="108" height="75"/>
+            <rect fill="#2c4a8e" x="488" y="178" width="108" height="13"/>
+            <rect fill="#ffffff" x="492" y="181" width="55" height="5" rx="1"/>
+            <rect fill="#4a9eed" x="494" y="196" width="12" height="30"/>
+            <rect fill="#ea5444" x="510" y="203" width="12" height="23"/>
+            <rect fill="#ffbe62" x="526" y="199" width="12" height="27"/>
+            <rect fill="#65b15b" x="542" y="201" width="12" height="25"/>
+            <rect fill="#9b59b6" x="558" y="193" width="12" height="33"/>
+            <line x1="492" y1="226" x2="582" y2="226" stroke="#5a6a8a" stroke-width="0.6"/>
+            <rect fill="#aac8e8" x="494" y="229" width="50" height="4" rx="1"/>
+            <rect fill="#aac8e8" x="550" y="229" width="30" height="4" rx="1"/>
+          </g>
+          <!-- Laptop: Author phase — warm document scroll (seamless) -->
+          <g class="screen-author" style="transform: skewX(-15.64deg); transform-origin: 540px 217px">
+            <rect fill="#f2ede4" x="488" y="178" width="108" height="75"/>
+            <rect fill="#e0d8c8" x="488" y="178" width="108" height="10"/>
+            <rect fill="#3a3a3a" x="506" y="180" width="52" height="5" rx="1"/>
+            <g class="anim-doc-scroll">
+              <!-- Copy 1: 9 lines, y=190 to y=251 (61px) -->
+              <rect fill="#4a4a4a" x="492" y="190" width="98" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="197" width="85" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="204" width="93" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="211" width="78" height="3" rx="1"/>
+              <rect fill="#c8c0a8" x="492" y="217" width="98" height="1"/>
+              <rect fill="#4a4a4a" x="492" y="220" width="90" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="227" width="80" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="234" width="95" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="241" width="70" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="248" width="94" height="3" rx="1"/>
+              <!-- Copy 2: +62px offset -->
+              <rect fill="#4a4a4a" x="492" y="252" width="88" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="259" width="98" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="266" width="78" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="273" width="92" height="3" rx="1"/>
+              <rect fill="#c8c0a8" x="492" y="279" width="98" height="1"/>
+              <rect fill="#4a4a4a" x="492" y="282" width="83" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="289" width="96" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="296" width="75" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="303" width="90" height="3" rx="1"/>
+              <rect fill="#4a4a4a" x="492" y="310" width="86" height="3" rx="1"/>
+            </g>
+          </g>
         </g>
         <polygon class="st23" points="582.21 253.25 577.93 268.25 474.06 268.25 478.33 253.25 582.21 253.25"/>
         <path class="st23" d="M526.27,272.75h-124.43c-2.91,0-5.29-2.38-5.29-5.29h0c0-2.91,2.38-5.29,5.29-5.29h124.43c2.91,0,5.29,2.38,5.29,5.29h0c0,2.91-2.38,5.29-5.29,5.29Z"/>
@@ -1029,17 +1370,28 @@
           </g>
         </g>
       </g>
-      <g class="outfit-casual anim-hand-move" style="transform-origin: 415px 268px" aria-label="Arm on laptop (casual)">
+      <g class="outfit-programmer anim-hand-move" style="transform-origin: 415px 268px" aria-label="Arm on laptop (casual)">
         <path class="st10" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
         <path class="st63" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
         <path class="st63" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-52.71-91.91,5.6-2.59c13.38-6.18,29.23-.35,35.42,13.03l41.51,67.69c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5,0Z"/>
       </g>
-      <g id="arm-on-laptop" class="anim-hand-move outfit-formal" style="transform-origin: 415px 268px" aria-label="Arm typing on laptop">
+      <g id="arm-on-laptop" class="anim-hand-move outfit-business" style="transform-origin: 415px 268px" aria-label="Arm typing on laptop">
         <!-- Hand (bottom), then sleeve cuff, then arm/coat on top -->
         <path class="st31" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
         <path class="st39" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
         <path class="st42" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-52.71-91.91,5.6-2.59c13.38-6.18,29.23-.35,35.42,13.03l41.51,67.69c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5,0Z"/>
       </g>
+      <g class="outfit-architect anim-hand-move" style="transform-origin: 415px 268px" aria-label="Arm on laptop (architect)">
+        <path class="st10" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
+        <path fill="#2E6DA4" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
+        <path fill="#2E6DA4" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-52.71-91.91,5.6-2.59c13.38-6.18,29.23-.35,35.42,13.03l41.51,67.69c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5,0Z"/>
+      </g>
+      <g class="outfit-author anim-hand-move" style="transform-origin: 415px 268px" aria-label="Arm on laptop (author)">
+        <path class="st10" d="M420.43,255.67c-2.01-3.59-5.04-6.52-8.73-8.34-.03,0-.06-.03-.09-.04-5.02-2.45-10.55-3.67-16.13-3.56l-10.69.21s-2.71,23.2-2.57,22.44c.28-1.51,26.14-1.12,37.99-.86,2.57.06,4.22-2.7,2.96-4.94l-2.75-4.9h.01Z"/>
+        <path fill="#7A4A2C" d="M381.32 242.18 L385.52 242.18 Q388.52 242.18 388.52 244.68 L388.52 266.84 Q388.52 269.52 385.52 269.52 L381.32 269.52 Q378.32 269.52 378.32 266.84 L378.32 244.68 Q378.32 242.18 381.32 242.18 Z"/>
+        <path fill="#7A4A2C" d="M328.38,272.64c-19.36,0-37.07-11.3-45.2-28.91l-52.71-91.91,5.6-2.59c13.38-6.18,29.23-.35,35.42,13.03l41.51,67.69c2.79,6.04,8.83,9.91,15.55,9.83l53.84-.53.33,32.85-53.84.53h-.5,0Z"/>
+      </g>
+      <!-- 2g: Accessories — mug, pencil holder, books, lamp, plants -->
       <g id="red-mug">
         <!-- Steam: more prominent + lighter wisps going higher -->
         <path class="anim-steam" fill="none" stroke="#fff" stroke-width="1.8" stroke-opacity="0.65" d="M454,228 Q452,222 455,216 Q458,210 454,204" style="transform-box:fill-box;transform-origin:454px 228px"/>
