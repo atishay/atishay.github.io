@@ -456,79 +456,83 @@
         .floor-texture-mid { fill: url(#floor-texture-dark-mid); }
         .floor-texture-near { fill: url(#floor-texture-dark-near); }
       }
-      /* 4-persona outfit cycle: 10s total. Each phase ~2.5s with 0.5s crossfade overlap at transitions */
+      /* 4-persona outfit cycle: 10s total.
+         Incoming outfit fades in (0→1) while outgoing holds at 1, so body is never transparent.
+         Outgoing fades out only after incoming is fully opaque and covering it. */
       @keyframes outfit-show-1 {
         0%   { opacity: 1; }
-        20%  { opacity: 1; }
-        30%  { opacity: 0; }
+        23%  { opacity: 1; }   /* holds while outfit2 fades in 20→25% */
+        28%  { opacity: 0; }   /* fades out under fully-opaque outfit2 */
         95%  { opacity: 0; }
         100% { opacity: 1; }
       }
       @keyframes outfit-show-2 {
         0%   { opacity: 0; }
         20%  { opacity: 0; }
-        30%  { opacity: 1; }
-        45%  { opacity: 1; }
-        55%  { opacity: 0; }
+        25%  { opacity: 1; }   /* fully in while outfit1 still at 1 */
+        48%  { opacity: 1; }   /* holds while outfit3 fades in 45→50% */
+        53%  { opacity: 0; }   /* fades out under fully-opaque outfit3 */
         100% { opacity: 0; }
       }
       @keyframes outfit-show-3 {
         0%   { opacity: 0; }
         45%  { opacity: 0; }
-        55%  { opacity: 1; }
-        70%  { opacity: 1; }
-        80%  { opacity: 0; }
+        50%  { opacity: 1; }   /* fully in while outfit2 still at 1 */
+        75%  { opacity: 1; }   /* holds until outfit4 is fully in at 75% */
+        80%  { opacity: 0; }   /* fades out under fully-opaque outfit4 */
         100% { opacity: 0; }
       }
       @keyframes outfit-show-4 {
         0%   { opacity: 0; }
         70%  { opacity: 0; }
-        80%  { opacity: 1; }
-        95%  { opacity: 1; }
-        100% { opacity: 0; }
+        75%  { opacity: 1; }   /* fully in while outfit3 still at 1 */
+        100% { opacity: 1; }   /* stays — outfit1 fades in underneath 95→100% */
       }
-      .outfit-programmer { opacity: 1; animation: outfit-show-1 10s linear infinite; }
-      .outfit-architect  { opacity: 0; animation: outfit-show-2 10s linear infinite; }
-      .outfit-business   { opacity: 0; animation: outfit-show-3 10s linear infinite; }
-      .outfit-author     { opacity: 0; animation: outfit-show-4 10s linear infinite; }
-      .outfit-programmer.anim-chair-lean { animation: outfit-show-1 10s linear infinite, chair-lean 10s ease-in-out infinite; }
-      .outfit-architect.anim-chair-lean  { animation: outfit-show-2 10s linear infinite, chair-lean 10s ease-in-out infinite; }
-      .outfit-business.anim-chair-lean   { animation: outfit-show-3 10s linear infinite, chair-lean 10s ease-in-out infinite; }
-      .outfit-author.anim-chair-lean     { animation: outfit-show-4 10s linear infinite, chair-lean 10s ease-in-out infinite; }
-      .outfit-programmer.anim-hand-move  { animation: outfit-show-1 10s linear infinite, hand-move 5.5s ease-in-out infinite; }
-      .outfit-architect.anim-hand-move   { animation: outfit-show-2 10s linear infinite, hand-move 5.5s ease-in-out infinite; }
-      .outfit-business.anim-hand-move    { animation: outfit-show-3 10s linear infinite, hand-move 5.5s ease-in-out infinite; }
-      .outfit-author.anim-hand-move      { animation: outfit-show-4 10s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-programmer { opacity: 1; animation: outfit-show-1 12s linear infinite; }
+      .outfit-architect  { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .outfit-business   { opacity: 0; animation: outfit-show-3 12s linear infinite; }
+      .outfit-author     { opacity: 0; animation: outfit-show-4 12s linear infinite; }
+      .outfit-programmer.anim-chair-lean { animation: outfit-show-1 12s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-architect.anim-chair-lean  { animation: outfit-show-2 12s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-business.anim-chair-lean   { animation: outfit-show-3 12s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-author.anim-chair-lean     { animation: outfit-show-4 12s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-programmer.anim-hand-move  { animation: outfit-show-1 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-architect.anim-hand-move   { animation: outfit-show-2 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-business.anim-hand-move    { animation: outfit-show-3 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-author.anim-hand-move      { animation: outfit-show-4 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
       /* Screen content cycling (synced with outfit phases) */
-      .screen-programmer { opacity: 1; animation: outfit-show-1 10s linear infinite; }
-      .screen-architect  { opacity: 0; animation: outfit-show-2 10s linear infinite; }
-      .screen-business   { opacity: 0; animation: outfit-show-3 10s linear infinite; }
-      .screen-author     { opacity: 0; animation: outfit-show-4 10s linear infinite; }
+      .screen-programmer { opacity: 1; animation: outfit-show-1 12s linear infinite; }
+      .screen-architect  { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .screen-business   { opacity: 0; animation: outfit-show-3 12s linear infinite; }
+      .screen-author     { opacity: 0; animation: outfit-show-4 12s linear infinite; }
       /* Combined: screen phase + monitor scroll (shorthand overwrites, so must list both) */
-      .screen-programmer.anim-code-scroll   { animation: outfit-show-1 10s linear infinite, code-scroll 14s linear infinite; }
-      .screen-programmer.anim-laptop-scroll { animation: outfit-show-1 10s linear infinite, laptop-scroll 14s linear infinite; }
-      /* PPT slide page-flip animation (8s per slide during business phase) */
-      @keyframes ppt-page-flip-1 {
+      .screen-programmer.anim-code-scroll   { animation: outfit-show-1 12s linear infinite, code-scroll 14s linear infinite; }
+      .screen-programmer.anim-laptop-scroll { animation: outfit-show-1 12s linear infinite, laptop-scroll 14s linear infinite; }
+      /* Wall color per persona */
+      .wall-programmer { opacity: 1; animation: outfit-show-1 12s linear infinite; }
+      .wall-architect  { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .wall-business   { opacity: 0; animation: outfit-show-3 12s linear infinite; }
+      .wall-author     { opacity: 0; animation: outfit-show-4 12s linear infinite; }
+      /* PPT slide crossfade – synced to 12s persona cycle.
+         Business phase: 45–80%. Flip at midpoint ~60%, away from persona transitions. */
+      @keyframes ppt-slide-show-1 {
         0%   { opacity: 1; }
-        38%  { opacity: 1; }
-        45%  { opacity: 0; }
-        93%  { opacity: 0; }
-        100% { opacity: 1; }
+        57%  { opacity: 1; }   /* hold until midpoint of business phase */
+        63%  { opacity: 0; }   /* 0.72s crossfade out */
+        100% { opacity: 1; }   /* reset for next cycle */
       }
-      @keyframes ppt-page-flip-2 {
+      @keyframes ppt-slide-show-2 {
         0%   { opacity: 0; }
-        38%  { opacity: 0; }
-        45%  { opacity: 1; }
-        88%  { opacity: 1; }
-        95%  { opacity: 0; }
-        100% { opacity: 0; }
+        57%  { opacity: 0; }   /* hidden until midpoint */
+        63%  { opacity: 1; }   /* 0.72s crossfade in */
+        100% { opacity: 1; }   /* parent opacity handles hiding at phase end */
       }
-      .ppt-slide-1 { animation: ppt-page-flip-1 3s ease-in-out infinite; }
-      .ppt-slide-2 { animation: ppt-page-flip-2 3s ease-in-out infinite; }
-      .role-programmer { opacity: 1; animation: outfit-show-1 10s linear infinite; }
-      .role-architect  { opacity: 0; animation: outfit-show-2 10s linear infinite; }
-      .role-business   { opacity: 0; animation: outfit-show-3 10s linear infinite; }
-      .role-author     { opacity: 0; animation: outfit-show-4 10s linear infinite; }
+      .ppt-slide-1 { animation: ppt-slide-show-1 12s linear infinite; }
+      .ppt-slide-2 { animation: ppt-slide-show-2 12s linear infinite; }
+      .role-programmer { opacity: 1; animation: outfit-show-1 12s linear infinite; }
+      .role-architect  { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .role-business   { opacity: 0; animation: outfit-show-3 12s linear infinite; }
+      .role-author     { opacity: 0; animation: outfit-show-4 12s linear infinite; }
       /* Seamless content scrolling for architect and author screen phases */
       @keyframes flowchart-scroll {
         0%   { transform: translateY(0); }
@@ -538,8 +542,8 @@
         0%   { transform: translateY(0); }
         100% { transform: translateY(-62px); }
       }
-      .anim-flowchart-scroll { animation: flowchart-scroll 20s linear infinite; }
-      .anim-doc-scroll       { animation: doc-text-scroll 18s linear infinite; }
+      .anim-flowchart-scroll { animation: flowchart-scroll 4s linear infinite; }
+      .anim-doc-scroll       { animation: doc-text-scroll 4s linear infinite; }
       #laptop-glare { opacity: 0.32; }
       @media (prefers-color-scheme: dark) {
         #character-shadow { opacity: 0.55; }
@@ -644,47 +648,57 @@
       <!-- 2a: Scene background -->
       <rect class="scene-bg" x="0" y="-72" width="779.93" height="622" rx="24" ry="24"/>
       <rect class="scene-bg scene-bg-pulse anim-bg-pulse" x="0" y="-72" width="779.93" height="622" rx="24" ry="24"/>
+      <!-- Wall color tint per persona (wall only, above floor at y=340) -->
+      <rect class="wall-programmer" x="0" y="-72" width="779.93" height="412" fill="#b8ccec"/>
+      <rect class="wall-architect"  x="0" y="-72" width="779.93" height="412" fill="#b0d4b8"/>
+      <rect class="wall-business"   x="0" y="-72" width="779.93" height="412" fill="#eecf7a"/>
+      <rect class="wall-author"     x="0" y="-72" width="779.93" height="412" fill="#e4b0c4"/>
       <g id="wooden-floor" aria-label="Wooden floor">
         <!-- Grainy floor in three bands (overlap slightly to avoid visible seam between bands) -->
         <rect class="floor-texture-far" x="0" y="340" width="779.93" height="57" rx="0" ry="0"/>
         <rect class="floor-texture-mid" x="0" y="394" width="779.93" height="82" rx="0" ry="0"/>
         <rect class="floor-texture-near" x="0" y="471" width="779.93" height="100" rx="0" ry="0"/>
       </g>
+      <!-- Full-SVG click target: clicking anywhere navigates to atishay.me -->
+      <a href="https://atishay.me" target="_blank">
+        <rect x="0" y="-72" width="779.93" height="622" fill="none" cursor="pointer"/>
+      </a>
       <!-- Wall nameplate: Atishay Jain + cycling persona role -->
-      <g id="wall-nameplate">
-        <!-- Drop shadow -->
-        <rect x="292" y="3" width="232" height="54" rx="5" ry="5" fill="rgba(0,0,0,0.10)" transform="translate(2,3)"/>
-        <!-- Plate body -->
-        <rect x="292" y="3" width="232" height="54" rx="5" ry="5" fill="#f0e8d8" stroke="rgba(80,55,30,0.20)" stroke-width="1"/>
-        <!-- Inner border -->
-        <rect x="297" y="8" width="222" height="44" rx="3" ry="3" fill="none" stroke="rgba(80,55,30,0.12)" stroke-width="0.8"/>
-        <!-- Name text (dark ink) -->
-        <text x="408" y="30" text-anchor="middle"
+      <a href="https://atishay.me" target="_blank">
+      <g id="wall-nameplate" cursor="pointer">
+        <!-- Deep cast shadow -->
+        <rect x="292" y="-21" width="232" height="58" rx="5" ry="5" fill="rgba(0,0,0,0.32)" transform="translate(5,7)"/>
+        <!-- Plate body: warm cream with dark wood-style frame -->
+        <rect x="292" y="-21" width="232" height="58" rx="5" ry="5" fill="#faf6ee" stroke="#1a0a02" stroke-width="3"/>
+        <!-- Inner frame inset -->
+        <rect x="298" y="-15" width="220" height="46" rx="3" ry="3" fill="none" stroke="#3a1a08" stroke-width="1" opacity="0.5"/>
+        <text x="410" y="8" text-anchor="middle"
               font-family="Georgia,'Times New Roman',serif"
-              font-size="19" font-weight="bold" letter-spacing="0.5"
-              fill="#1a2535">Atishay Jain</text>
+              font-size="23" font-weight="bold" letter-spacing="1.5"
+              fill="#1a0a02">Atishay Jain</text>
         <!-- Role subtitle cycling per persona -->
         <g class="role-programmer">
-          <text x="408" y="46" text-anchor="middle"
+          <text x="410" y="26" text-anchor="middle"
                 font-family="'Courier New',Courier,monospace"
-                font-size="9" letter-spacing="3.5" fill="#2a6a3a">DEVELOPER</text>
+                font-size="10" letter-spacing="4" fill="#1a6030">DEVELOPER</text>
         </g>
         <g class="role-architect">
-          <text x="408" y="46" text-anchor="middle"
+          <text x="410" y="26" text-anchor="middle"
                 font-family="'Courier New',Courier,monospace"
-                font-size="9" letter-spacing="3.5" fill="#1e4a8e">ARCHITECT</text>
+                font-size="10" letter-spacing="4" fill="#0e3a8a">ARCHITECT</text>
         </g>
         <g class="role-business">
-          <text x="408" y="46" text-anchor="middle"
+          <text x="410" y="26" text-anchor="middle"
                 font-family="'Courier New',Courier,monospace"
-                font-size="9" letter-spacing="3.5" fill="#8a5800">STRATEGIST</text>
+                font-size="10" letter-spacing="4" fill="#7a4a00">STRATEGIST</text>
         </g>
         <g class="role-author">
-          <text x="408" y="46" text-anchor="middle"
+          <text x="410" y="26" text-anchor="middle"
                 font-family="'Courier New',Courier,monospace"
-                font-size="9" letter-spacing="3.5" fill="#7a3010">AUTHOR</text>
+                font-size="10" letter-spacing="4" fill="#6a2008">AUTHOR</text>
         </g>
       </g>
+      </a>
       <!-- 2b: Whiteboard (left panel) -->
       <g id="whiteboard-area">
         <rect class="st28" x="112.88" y="131.34" width="66.12" height="142.22"/>
@@ -978,7 +992,6 @@
                   <rect fill="#3a3a3a" x="320" y="129" width="150" height="4" rx="1"/>
                   <rect fill="#3a3a3a" x="320" y="137" width="162" height="4" rx="1"/>
                   <rect fill="#3a3a3a" x="320" y="145" width="136" height="4" rx="1"/>
-                  <rect fill="#c8c0a8" x="320" y="152" width="168" height="1"/>
                   <rect fill="#3a3a3a" x="320" y="155" width="164" height="4" rx="1"/>
                   <rect fill="#3a3a3a" x="320" y="163" width="145" height="4" rx="1"/>
                   <rect fill="#3a3a3a" x="320" y="171" width="160" height="4" rx="1"/>
@@ -988,7 +1001,6 @@
                   <rect fill="#3a3a3a" x="320" y="191" width="168" height="4" rx="1"/>
                   <rect fill="#3a3a3a" x="320" y="199" width="140" height="4" rx="1"/>
                   <rect fill="#3a3a3a" x="320" y="207" width="160" height="4" rx="1"/>
-                  <rect fill="#c8c0a8" x="320" y="214" width="168" height="1"/>
                   <rect fill="#3a3a3a" x="320" y="217" width="168" height="4" rx="1"/>
                   <rect fill="#3a3a3a" x="320" y="225" width="148" height="4" rx="1"/>
                   <rect fill="#3a3a3a" x="320" y="233" width="158" height="4" rx="1"/>
@@ -1296,36 +1308,69 @@
               </g>
             </g>
           </g>
-          <!-- Laptop: Architect phase — terminal-style flowchart diagram -->
+          <!-- Laptop: Architect phase — scrolling flowchart (78px span, same as main monitor) -->
           <g class="screen-architect" style="transform: skewX(-15.64deg); transform-origin: 540px 217px">
             <rect fill="#0e1a28" x="488" y="178" width="108" height="75"/>
-            <rect fill="#1e4a6e" stroke="#4a9eed" stroke-width="0.7" x="506" y="185" width="52" height="11" rx="2"/>
-            <rect fill="#4a9eed" x="510" y="187" width="30" height="4" rx="1"/>
-            <rect fill="#4a9eed" x="510" y="192" width="18" height="3" rx="1"/>
-            <line x1="532" y1="196" x2="532" y2="202" stroke="#6aadee" stroke-width="0.7"/>
-            <polygon fill="#0e2a40" stroke="#4a9eed" stroke-width="0.7" points="532,202 544,208 532,214 520,208"/>
-            <rect fill="#aac8e8" x="522" y="205" width="20" height="3" rx="1"/>
-            <line x1="544" y1="208" x2="556" y2="208" stroke="#6aadee" stroke-width="0.7"/>
-            <rect fill="#1e4a6e" stroke="#4a9eed" stroke-width="0.7" x="556" y="203" width="36" height="11" rx="2"/>
-            <rect fill="#4a9eed" x="559" y="205" width="22" height="4" rx="1"/>
-            <line x1="532" y1="214" x2="532" y2="220" stroke="#6aadee" stroke-width="0.7"/>
-            <rect fill="#1e4a6e" stroke="#6aadee" stroke-width="0.7" x="506" y="220" width="52" height="11" rx="2"/>
-            <rect fill="#6aadee" x="510" y="222" width="34" height="4" rx="1"/>
-            <rect fill="#4a9eed" x="510" y="227" width="22" height="3" rx="1"/>
+            <g class="anim-flowchart-scroll">
+              <!-- Copy 1: y=178–256 (78px) -->
+              <rect fill="#1a4060" stroke="#4a9eed" stroke-width="0.7" x="502" y="178" width="80" height="14" rx="2"/>
+              <rect fill="#4a9eed" x="508" y="181" width="40" height="4" rx="1"/>
+              <rect fill="#3a82cc" x="508" y="186" width="26" height="3" rx="1"/>
+              <line x1="542" y1="192" x2="542" y2="198" stroke="#6aadee" stroke-width="0.7"/>
+              <polygon fill="#0e2438" stroke="#4a9eed" stroke-width="0.7" points="542,198 562,207 542,216 522,207"/>
+              <rect fill="#9ac4e8" x="530" y="204" width="24" height="3" rx="1"/>
+              <line x1="542" y1="216" x2="542" y2="222" stroke="#6aadee" stroke-width="0.7"/>
+              <rect fill="#1a3828" stroke="#4aee88" stroke-width="0.7" x="502" y="222" width="80" height="14" rx="2"/>
+              <rect fill="#4aee88" x="508" y="225" width="40" height="4" rx="1"/>
+              <rect fill="#3acc70" x="508" y="230" width="26" height="3" rx="1"/>
+              <line x1="542" y1="236" x2="542" y2="256" stroke="#6aadee" stroke-width="0.7" stroke-dasharray="2,2"/>
+              <!-- Copy 2: y+78 -->
+              <rect fill="#1a4060" stroke="#4a9eed" stroke-width="0.7" x="502" y="256" width="80" height="14" rx="2"/>
+              <rect fill="#4a9eed" x="508" y="259" width="40" height="4" rx="1"/>
+              <rect fill="#3a82cc" x="508" y="264" width="26" height="3" rx="1"/>
+              <line x1="542" y1="270" x2="542" y2="276" stroke="#6aadee" stroke-width="0.7"/>
+              <polygon fill="#0e2438" stroke="#4a9eed" stroke-width="0.7" points="542,276 562,285 542,294 522,285"/>
+              <rect fill="#9ac4e8" x="530" y="282" width="24" height="3" rx="1"/>
+              <line x1="542" y1="294" x2="542" y2="300" stroke="#6aadee" stroke-width="0.7"/>
+              <rect fill="#1a3828" stroke="#4aee88" stroke-width="0.7" x="502" y="300" width="80" height="14" rx="2"/>
+              <rect fill="#4aee88" x="508" y="303" width="40" height="4" rx="1"/>
+              <rect fill="#3acc70" x="508" y="308" width="26" height="3" rx="1"/>
+              <line x1="542" y1="314" x2="542" y2="334" stroke="#6aadee" stroke-width="0.7" stroke-dasharray="2,2"/>
+            </g>
           </g>
-          <!-- Laptop: Business phase — mini dashboard / spreadsheet -->
+          <!-- Laptop: Business phase — mini PPT slides (synced to main monitor) -->
           <g class="screen-business" style="transform: skewX(-15.64deg); transform-origin: 540px 217px">
             <rect fill="#10172a" x="488" y="178" width="108" height="75"/>
-            <rect fill="#2c4a8e" x="488" y="178" width="108" height="13"/>
-            <rect fill="#ffffff" x="492" y="181" width="55" height="5" rx="1"/>
-            <rect fill="#4a9eed" x="494" y="196" width="12" height="30"/>
-            <rect fill="#ea5444" x="510" y="203" width="12" height="23"/>
-            <rect fill="#ffbe62" x="526" y="199" width="12" height="27"/>
-            <rect fill="#65b15b" x="542" y="201" width="12" height="25"/>
-            <rect fill="#9b59b6" x="558" y="193" width="12" height="33"/>
-            <line x1="492" y1="226" x2="582" y2="226" stroke="#5a6a8a" stroke-width="0.6"/>
-            <rect fill="#aac8e8" x="494" y="229" width="50" height="4" rx="1"/>
-            <rect fill="#aac8e8" x="550" y="229" width="30" height="4" rx="1"/>
+            <!-- Slide 1: bar chart -->
+            <g class="ppt-slide-1">
+              <rect fill="#2c4a8e" x="488" y="178" width="108" height="13"/>
+              <rect fill="#ffffff" x="492" y="181" width="55" height="5" rx="1"/>
+              <rect fill="#4a9eed" x="494" y="196" width="12" height="30"/>
+              <rect fill="#ea5444" x="510" y="203" width="12" height="23"/>
+              <rect fill="#ffbe62" x="526" y="199" width="12" height="27"/>
+              <rect fill="#65b15b" x="542" y="201" width="12" height="25"/>
+              <rect fill="#9b59b6" x="558" y="193" width="12" height="33"/>
+              <line x1="492" y1="226" x2="578" y2="226" stroke="#5a6a8a" stroke-width="0.6"/>
+              <rect fill="#aac8e8" x="494" y="229" width="50" height="4" rx="1"/>
+              <rect fill="#aac8e8" x="550" y="229" width="28" height="4" rx="1"/>
+            </g>
+            <!-- Slide 2: donut chart -->
+            <g class="ppt-slide-2">
+              <rect fill="#8e2c2c" x="488" y="178" width="108" height="13"/>
+              <rect fill="#ffffff" x="492" y="181" width="45" height="5" rx="1"/>
+              <circle cx="514" cy="212" r="16" fill="none" stroke="#4a9eed" stroke-width="8" stroke-dasharray="40 61" stroke-dashoffset="0"/>
+              <circle cx="514" cy="212" r="16" fill="none" stroke="#ea5444" stroke-width="8" stroke-dasharray="25 76" stroke-dashoffset="-40"/>
+              <circle cx="514" cy="212" r="16" fill="none" stroke="#65b15b" stroke-width="8" stroke-dasharray="22 79" stroke-dashoffset="-65"/>
+              <circle cx="514" cy="212" r="8" fill="#10172a"/>
+              <rect fill="#4a9eed" x="536" y="198" width="5" height="5" rx="1"/>
+              <rect fill="#aac8e8" x="543" y="200" width="44" height="3" rx="1"/>
+              <rect fill="#ea5444" x="536" y="208" width="5" height="5" rx="1"/>
+              <rect fill="#aac8e8" x="543" y="210" width="36" height="3" rx="1"/>
+              <rect fill="#65b15b" x="536" y="218" width="5" height="5" rx="1"/>
+              <rect fill="#aac8e8" x="543" y="220" width="40" height="3" rx="1"/>
+              <rect fill="#aac8e8" x="536" y="230" width="52" height="3" rx="1"/>
+              <rect fill="#aac8e8" x="536" y="236" width="38" height="3" rx="1"/>
+            </g>
           </g>
           <!-- Laptop: Author phase — warm document scroll (seamless) -->
           <g class="screen-author" style="transform: skewX(-15.64deg); transform-origin: 540px 217px">
@@ -1338,7 +1383,6 @@
               <rect fill="#4a4a4a" x="492" y="197" width="85" height="3" rx="1"/>
               <rect fill="#4a4a4a" x="492" y="204" width="93" height="3" rx="1"/>
               <rect fill="#4a4a4a" x="492" y="211" width="78" height="3" rx="1"/>
-              <rect fill="#c8c0a8" x="492" y="217" width="98" height="1"/>
               <rect fill="#4a4a4a" x="492" y="220" width="90" height="3" rx="1"/>
               <rect fill="#4a4a4a" x="492" y="227" width="80" height="3" rx="1"/>
               <rect fill="#4a4a4a" x="492" y="234" width="95" height="3" rx="1"/>
@@ -1349,7 +1393,6 @@
               <rect fill="#4a4a4a" x="492" y="259" width="98" height="3" rx="1"/>
               <rect fill="#4a4a4a" x="492" y="266" width="78" height="3" rx="1"/>
               <rect fill="#4a4a4a" x="492" y="273" width="92" height="3" rx="1"/>
-              <rect fill="#c8c0a8" x="492" y="279" width="98" height="1"/>
               <rect fill="#4a4a4a" x="492" y="282" width="83" height="3" rx="1"/>
               <rect fill="#4a4a4a" x="492" y="289" width="96" height="3" rx="1"/>
               <rect fill="#4a4a4a" x="492" y="296" width="75" height="3" rx="1"/>
