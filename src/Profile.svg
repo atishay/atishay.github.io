@@ -488,29 +488,29 @@
         75%  { opacity: 1; }   /* fully in while outfit3 still at 1 */
         100% { opacity: 1; }   /* stays — outfit1 fades in underneath 95→100% */
       }
-      .outfit-programmer { opacity: 1; animation: outfit-show-1 12s linear infinite; }
-      .outfit-architect  { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .outfit-programmer { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .outfit-architect  { opacity: 1; animation: outfit-show-1 12s linear infinite; }
       .outfit-business   { opacity: 0; animation: outfit-show-3 12s linear infinite; }
       .outfit-author     { opacity: 0; animation: outfit-show-4 12s linear infinite; }
-      .outfit-programmer.anim-chair-lean { animation: outfit-show-1 12s linear infinite, chair-lean 10s ease-in-out infinite; }
-      .outfit-architect.anim-chair-lean  { animation: outfit-show-2 12s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-programmer.anim-chair-lean { animation: outfit-show-2 12s linear infinite, chair-lean 10s ease-in-out infinite; }
+      .outfit-architect.anim-chair-lean  { animation: outfit-show-1 12s linear infinite, chair-lean 10s ease-in-out infinite; }
       .outfit-business.anim-chair-lean   { animation: outfit-show-3 12s linear infinite, chair-lean 10s ease-in-out infinite; }
       .outfit-author.anim-chair-lean     { animation: outfit-show-4 12s linear infinite, chair-lean 10s ease-in-out infinite; }
-      .outfit-programmer.anim-hand-move  { animation: outfit-show-1 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
-      .outfit-architect.anim-hand-move   { animation: outfit-show-2 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-programmer.anim-hand-move  { animation: outfit-show-2 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
+      .outfit-architect.anim-hand-move   { animation: outfit-show-1 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
       .outfit-business.anim-hand-move    { animation: outfit-show-3 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
       .outfit-author.anim-hand-move      { animation: outfit-show-4 12s linear infinite, hand-move 5.5s ease-in-out infinite; }
       /* Screen content cycling (synced with outfit phases) */
-      .screen-programmer { opacity: 1; animation: outfit-show-1 12s linear infinite; }
-      .screen-architect  { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .screen-programmer { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .screen-architect  { opacity: 1; animation: outfit-show-1 12s linear infinite; }
       .screen-business   { opacity: 0; animation: outfit-show-3 12s linear infinite; }
       .screen-author     { opacity: 0; animation: outfit-show-4 12s linear infinite; }
       /* Combined: screen phase + monitor scroll (shorthand overwrites, so must list both) */
-      .screen-programmer.anim-code-scroll   { animation: outfit-show-1 12s linear infinite, code-scroll 14s linear infinite; }
-      .screen-programmer.anim-laptop-scroll { animation: outfit-show-1 12s linear infinite, laptop-scroll 14s linear infinite; }
+      .screen-programmer.anim-code-scroll   { animation: outfit-show-2 12s linear infinite, code-scroll 14s linear infinite; }
+      .screen-programmer.anim-laptop-scroll { animation: outfit-show-2 12s linear infinite, laptop-scroll 14s linear infinite; }
       /* Wall color per persona */
-      .wall-programmer { opacity: 1; animation: outfit-show-1 12s linear infinite; }
-      .wall-architect  { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .wall-programmer { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .wall-architect  { opacity: 1; animation: outfit-show-1 12s linear infinite; }
       .wall-business   { opacity: 0; animation: outfit-show-3 12s linear infinite; }
       .wall-author     { opacity: 0; animation: outfit-show-4 12s linear infinite; }
       /* PPT slide crossfade – synced to 12s persona cycle.
@@ -529,8 +529,8 @@
       }
       .ppt-slide-1 { animation: ppt-slide-show-1 12s linear infinite; }
       .ppt-slide-2 { animation: ppt-slide-show-2 12s linear infinite; }
-      .role-programmer { opacity: 1; animation: outfit-show-1 12s linear infinite; }
-      .role-architect  { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .role-programmer { opacity: 0; animation: outfit-show-2 12s linear infinite; }
+      .role-architect  { opacity: 1; animation: outfit-show-1 12s linear infinite; }
       .role-business   { opacity: 0; animation: outfit-show-3 12s linear infinite; }
       .role-author     { opacity: 0; animation: outfit-show-4 12s linear infinite; }
       /* Seamless content scrolling for architect and author screen phases */
