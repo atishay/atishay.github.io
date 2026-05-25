@@ -1,8 +1,4 @@
-<!-- tex -->
-{{ $inline := "" }}
-{{- if eq (.Get 0) "inline" -}}
-{{ $inline = "&inline=true" }}
-<!-- {{.Inner}} -->
-{{- end -}}
-{{- (resources.GetRemote (print site.Params.Tex "?" (querify "tex" .Inner) "&password=" (getenv "API_PASSWORD") $inline) | resources.Minify).Content | safeHTML -}}
-
+{{- /* Hugo native math rendering via transform.ToMath */ -}}
+{{- $inline := eq (.Get 0) "inline" -}}
+{{- $latex := trim .Inner "\n\r " -}}
+{{- transform.ToMath $latex (dict "displayMode" (not $inline)) }}
