@@ -15,7 +15,24 @@
   --content-padding: 15px;
   --heading-color: #444;
   --shade-color: #f6f6f6;
-  --hover-color: #111; }
+  --hover-color: #111;
+  /* HSL color system — JS updates these on color picker change */
+  --h: 355;
+  --s: 94;
+  --l: 57;
+  --ha1: 25;
+  --ha2: 330;
+  --hc: 175;
+  --ht1: 115;
+  --ht2: 235; }
+
+/* Gradient presets using HSL system */
+:root {
+  --g-accent: linear-gradient(135deg, hsl(var(--h), 90%, 55%), hsl(var(--ha1), 85%, 48%));
+  --g-triadic: linear-gradient(135deg, hsl(var(--ht1), 80%, 55%), hsl(var(--ht2), 80%, 55%));
+  --g-cool: linear-gradient(135deg, #667eea, #764ba2);
+  --g-warm: linear-gradient(135deg, #f093fb, #f5576c);
+  --g-ocean: linear-gradient(135deg, #4facfe, #00f2fe); }
 
 @media (min-width: 576px) {
   :root {
@@ -2033,6 +2050,20 @@ header {
   100% {
     opacity: 1; } }
 
+/* MathML / KaTeX styling for transform.ToMath */
+math, .katex {
+  font-size: 1.1em; }
+
+math[display="block"], .katex-display {
+  display: block;
+  margin: 1em 0;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden; }
+
+.dark math {
+  color: #ddd; }
+
 .post {
   z-index: 1;
   margin: calc(var(--header-height)/2);
@@ -2508,7 +2539,24 @@ header {
   --content-padding: 15px;
   --heading-color: #444;
   --shade-color: #f6f6f6;
-  --hover-color: #111; }
+  --hover-color: #111;
+  /* HSL color system — JS updates these on color picker change */
+  --h: 355;
+  --s: 94;
+  --l: 57;
+  --ha1: 25;
+  --ha2: 330;
+  --hc: 175;
+  --ht1: 115;
+  --ht2: 235; }
+
+/* Gradient presets using HSL system */
+:root {
+  --g-accent: linear-gradient(135deg, hsl(var(--h), 90%, 55%), hsl(var(--ha1), 85%, 48%));
+  --g-triadic: linear-gradient(135deg, hsl(var(--ht1), 80%, 55%), hsl(var(--ht2), 80%, 55%));
+  --g-cool: linear-gradient(135deg, #667eea, #764ba2);
+  --g-warm: linear-gradient(135deg, #f093fb, #f5576c);
+  --g-ocean: linear-gradient(135deg, #4facfe, #00f2fe); }
 
 @media (min-width: 576px) {
   :root {

@@ -1,24 +1,24 @@
 HTTP/2.0 200 OK
-Age: 1
+Age: 0
 Alt-Svc: h3=":443"; ma=86400
 Cache-Control: no-cache
 Cache-Status: "Netlify Durable"; fwd=bypass
 Cache-Status: "Netlify Edge"; fwd=miss
 Cf-Cache-Status: DYNAMIC
-Cf-Ray: 9d5b0f40b87489cc-SJC
+Cf-Ray: a0117077ed8dfa82-SJC
 Content-Type: image/svg+xml
-Date: Sun, 01 Mar 2026 20:54:55 GMT
+Date: Mon, 25 May 2026 03:26:34 GMT
 Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
 Netlify-Vary: query
-Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Lt2uMmZjKrjDaEQhdy9SYJ1Ys%2FVkttNEBEUW%2B19LhTCWqXYa5USMg%2FW32N7%2BtpEpGLt3WthBiTaXc84xBGT0qqsKOhoXOAY2njUbVA8x05nuU3TtGng%3D"}]}
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=iSvAKYWHuK%2FJV1Vc9FRvGquv4F2KG3MfeHJREbEgdB%2BfvCRbLa6BxZNs%2B1Py9xl0gW%2FgW0b913g%2FU8E9YJrrVNv1QrEn3lEO2N%2FINyLWmb4oK58S8Pza%2BSPS%2BHmDGCxNoO7ROEIJ4M9N"}]}
 Server: cloudflare
 Server-Timing: cfCacheStatus;desc="DYNAMIC"
-Server-Timing: cfEdge;dur=1,cfOrigin;dur=351
+Server-Timing: cfEdge;dur=4,cfOrigin;dur=356
 Strict-Transport-Security: max-age=31536000
 Vary: Accept-Encoding
 X-Etags-1: 2b6f598045d2885b079485bbe4b9d56f
 X-Etags-2: 2b6f598045d2885b079485bbe4b9d56f
-X-Nf-Request-Id: 01KJNJXH3REGGG4PT5NJ7B56PV
+X-Nf-Request-Id: 01KSEJQ1QS5G37TJSPWHE852DN
 
 <svg style="overflow: hidden; position: relative; height: auto; max-width: 100%;" height="65" version="1.1" width="357" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 357 65" class="guitar"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.2.0</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><style type="text/css"><![CDATA[
     /* Light mode: inline fill="#ffffff" works naturally */
