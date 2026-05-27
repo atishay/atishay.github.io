@@ -2584,14 +2584,6 @@ math[display="block"], .katex-display {
   width: 100%;
   padding-left: calc( (100% - var(--max-width)) /2 + var(--content-padding));
   padding-right: calc( (100% - var(--max-width)) /2 + var(--content-padding)); }
-  .meta:not(:last-of-type)::after {
-    content: "";
-    display: block;
-    height: 1px;
-    margin: 0 auto 0;
-    max-width: 60%;
-    background: linear-gradient(to right, transparent 0%, rgba(var(--text-color-rgb), 0.1) 20%, rgba(var(--text-color-rgb), 0.1) 80%, transparent 100%);
-    opacity: 0.8; }
   .meta > :last-child {
     margin-bottom: 40px; }
   .meta > :first-child, .meta > h1 {
@@ -2682,18 +2674,98 @@ math[display="block"], .katex-display {
   animation: fade-up-item-3 2s ease-in-out; }
 
 /* oval: taller than wide */
-body > .meta:first-of-type.left-image h1 {
-  letter-spacing: 0.02em; }
+body > .meta:first-of-type.left-image {
+  position: relative;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+  transition: color 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important; }
+  @media (min-width: 993px) {
+    body > .meta:first-of-type.left-image h1 {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-top: 0 !important; }
+    body > .meta:first-of-type.left-image .subtitle {
+      font-size: clamp(0.95rem, 1.3vw, 1.15rem); } }
+  body > .meta:first-of-type.left-image h1 {
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    padding-bottom: 0.25em;
+    color: hsl(var(--h), 60%, 38%); }
+  body > .meta:first-of-type.left-image .subtitle {
+    opacity: 0.85;
+    color: hsl(var(--h), 20%, 38%); }
+  body > .meta:first-of-type.left-image .content > p:first-child {
+    font-size: 1.05em;
+    line-height: 1.75; }
+    body > .meta:first-of-type.left-image .content > p:first-child em {
+      font-style: normal; }
+    body > .meta:first-of-type.left-image .content > p:first-child strong {
+      color: hsl(var(--h), 60%, 38%);
+      -webkit-text-fill-color: hsl(var(--h), 60%, 38%); }
+  body > .meta:first-of-type.left-image img {
+    animation: hero-blob-morph 14s ease-in-out infinite;
+    box-shadow: 0 16px 48px hsla(var(--h), 50%, 40%, 0.18); }
+  body > .meta:first-of-type.left-image .hero-scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0.6;
+    animation: hero-chevron-bounce 2.2s ease-in-out infinite;
+    transition: opacity 0.4s;
+    pointer-events: none;
+    font-size: 32px;
+    line-height: 1;
+    color: hsl(var(--h), 50%, 45%);
+    filter: drop-shadow(0 2px 6px hsla(var(--h), 40%, 40%, 0.25)); }
+    body > .meta:first-of-type.left-image .hero-scroll-hint::after {
+      content: "⌄";
+      display: block; }
+  body > .meta:first-of-type.left-image.scrolled-past .hero-scroll-hint {
+    opacity: 0; }
 
-body > .meta:first-of-type.left-image .subtitle {
-  opacity: 0.92; }
+.dark body > .meta:first-of-type.left-image h1 {
+  color: hsl(var(--h), 60%, 68%); }
+
+.dark body > .meta:first-of-type.left-image .subtitle {
+  color: hsl(var(--h), 15%, 65%); }
+
+@keyframes hero-orbs-drift {
+  0% {
+    background-position: 0% 0%,   100% 100%, 60% 20%; }
+  50% {
+    background-position: 30% 40%, 70% 60%,   40% 70%; }
+  100% {
+    background-position: 10% 20%, 90% 80%,   55% 45%; } }
+
+@keyframes hero-blob-morph {
+  0%, 100% {
+    border-radius: 50%; }
+  25% {
+    border-radius: 40% 60% 65% 35% / 45% 40% 60% 55%; }
+  50% {
+    border-radius: 55% 45% 40% 60% / 55% 60% 40% 45%; }
+  75% {
+    border-radius: 45% 55% 55% 45% / 35% 55% 45% 65%; } }
+
+@keyframes hero-chevron-bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0); }
+  50% {
+    transform: translateX(-50%) translateY(8px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  body > .meta:first-of-type.left-image,
+  body > .meta:first-of-type.left-image img {
+    animation: none !important; } }
 
 .left-image {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-column-gap: 20px;
   grid-row-gap: 10px;
-  grid-template-areas: "pic title" "pic subtitle" "pic desc"; }
+  grid-template-areas: "pic title" "pic subtitle" "pic desc";
+  align-content: center; }
   .left-image img {
     margin: 40px 0;
     grid-area: pic;

@@ -1,0 +1,23 @@
+HTTP/2.0 401 Unauthorized
+Connection: close
+Age: 2
+Alt-Svc: h3=":443"; ma=86400
+Cache-Control: no-cache
+Cache-Status: "Netlify Durable"; fwd=bypass
+Cache-Status: "Netlify Edge"; fwd=miss
+Cf-Cache-Status: DYNAMIC
+Cf-Ray: a016c40de8948075-SJC
+Content-Type: application/json
+Date: Mon, 25 May 2026 18:57:28 GMT
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Netlify-Vary: query
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=i1q3uaDgiGx9ZYMubyWM%2F1d2J6468OoKnST8TPt9xqUaZGpLhonBVZQsPL6%2FhovF76DmH6PXC60wJu60TL6obX3bG%2ByHao7VMR6IJ2xodvxRsYk4AbVwrgU4w0Zfl5j06gitt7vS0pa4"}]}
+Server: cloudflare
+Server-Timing: cfCacheStatus;desc="DYNAMIC"
+Server-Timing: cfEdge;dur=14,cfOrigin;dur=1490
+Strict-Transport-Security: max-age=31536000
+X-Etags-1: 69c5d221306738bb31c13a88e6a93780
+X-Etags-2: 69c5d221306738bb31c13a88e6a93780
+X-Nf-Request-Id: 01KSG7ZH85ZXAKZH790Z7R8Z9S
+
+{"error":"Access Denied."}

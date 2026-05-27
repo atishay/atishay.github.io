@@ -1,5 +1,5 @@
 title: Atishay Jain
-subtitle: Thinker | Tinkerer | Inventor | US Green Card Holder | Leader | Author | Programmer | Speaker | Principal Scientist @ Adobe
+subtitle: Principal Scientist @ Adobe · Author · Inventor · Speaker
 type: left-image
 image:
   href: "home/about/atishay.jpg"
@@ -7,7 +7,7 @@ image:
   width: 200
   height: 250
 items:
-  - content: "_**Technical strategist**_ and principal-level engineering leader with 15+ years of experience architecting multi-surface software platforms across mobile, web, and desktop. Proven track record of setting long-term technical direction, driving platform strategy, and influencing product roadmaps and business outcomes across organizations. Over a decade of ownership of cross-product frameworks and SDKs adopted company-wide. Operate comfortably at both the architectural vision and hands-on execution - actively writing and reviewing code (~50%) while leading architectural strategy, platform evolution, and cross-functional alignment with product and business leadership. Speaker at multiple industry conferences, author of Hugo in Action, and inventor of Adobe Shape (US Patent US-9449248, IxDA Interaction Design Award 2014)."
+  - content: "**Platforms** that ship to millions. **Books** that teach developers to build blazing-fast websites. **Patents** that changed how people interact with creative tools.\n\nPrincipal Scientist at Adobe, leading cross-product platform strategy — staying hands-on with code while aligning engineering, product, and business around long-horizon technical bets. Author of **[Hugo in Action](https://www.manning.com/books/hugo-in-action)** (Manning). Inventor of Adobe Shape (US Patent US-9449248, IxDA Interaction Design Award 2014). Regular speaker on platform engineering and developer experience."
     links:
     - href: /print
       title: Print CV
